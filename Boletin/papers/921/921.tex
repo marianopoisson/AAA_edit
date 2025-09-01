@@ -1,0 +1,384 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex,hyperfootnotes=false]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\renewcommand{\thefootnote}{\textit{\alph{footnote}}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{20 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Multimodal analysis of astrophysical data}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Multimodal analysis of astrophysical data}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+J. Casado\inst{1,2}
+\&
+B. Garc\'{i}a\inst{1,3}
+}
+
+\authorrunning{Casado et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{johanna.casado@um.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Tecnologías en Detección y Astropartículas, CNEA–CONICET–UNSAM, Argentina \and   
+Instituto de Bioingenier\'{i}a, Facultad de Ingenier\'{i}a, Universidad de Mendoza, Argentina \and
+Universidad Tecnol\'{o}gica Nacional, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El análisis de datos y la comunicación de resultados en astronomía se realiza, en general, de forma visual. Es común encontrarnos con gráficos estadísticos, curvas con ejes cartesianos como por ejemplo curvas de luz de estrellas variables, curvas de velocidad radial, espectros de estrellas o galaxias e imágenes en diferentes rangos del espectro electromagnético. Por otro lado, la astronomía también es una de las ciencias que más promueve la inclusión a través de numerosos proyectos que producen material accesible para difusión y, en los últimos años, se ha evidenciado un gran crecimiento de los programas de sonorización que permiten traducir datos presentados en tablas a sonido. Teniendo en cuenta lo mencionado, durante la tesis doctoral de J. Casado, se investigó sobre el acceso y exploración de datos astrofísicos a través de la sonorización con el objetivo de que personas con discapacidad puedan trabajar en ciencia. Se desarrolló en dicho marco el software sonoUno, de acceso abierto, multiplataforma y con un diseño centrado en el usuario desde el inicio. En este trabajo se describirán los desafíos que presentó la construcción de esta herramienta y ejemplos de uso, por parte de astrónomos profesionales y estudiantes de ciencias, en una aproximación multisensorial para el estudio de la naturaleza.}
+
+\abstract{Data analysis and communication of results in astronomy are generally done visually. It is common to find statistical graphs, curves with cartesian axes such as light curves of variable stars, radial velocity curves, spectra of stars or galaxies, and images in different ranges of the electromagnetic spectrum. On the other hand, astronomy is also one of the sciences that most promotes inclusion through numerous projects that produce accessible material for outreach, and, in recent years, there has been great growth in sonification programs that allow data to be translated into sound. Taking into account the above, during J. Casado's doctoral thesis, the access and exploration of astrophysical data through sound was investigated, to enable people with disabilities to work in science. The software sonoUno was developed within this framework, as open access, multi-platform, and with a user-centered design from the beginning. This work will describe the challenges presented by the construction of this tool and examples of use, by professional astronomers and science students, in a multi-sensory approach to the study of nature.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{methods: data analysis --- galaxies: general --- stars: general}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+\label{sec:intro}
+
+Over the past 50 years, the terms ``disability'' and ``accessibility'' have shifted from focusing on disability as a medical problem to a more social approach. A distinction is made between disability as a physical or biological condition and as a social and environmental construction. The work with a new software \textsc{sonoUno} \citep{casadoJOSS2024}, which gave rise to Casado's \citep{thesiscasado} doctoral thesis, focuses on this last definition of disability, considering all of a person's capabilities and seeking to minimize limitations, especially in access to a human-computer interface. The objective is to investigate new ways of accessing reliable and usable data for all scientists.
+
+Regarding the work reality of people with disabilities in Argentina, different norms seek to regulate and promote inclusion. However, data from the National Institute of Statistics and Censuses of the Argentine Republic \citep{indec2018} show a worrying reality: only 32\% of people over 14 years of age who suffer from one or more disabilities have a job. Another problem for people with disabilities is the access to education; 20\% of people with disabilities 15 year old or older have left their studies as incomplete primary level. Of those who managed to finish primary school, 46\% did not manage to finish secondary school, 20\% managed to finish it, and only 13\% accessed some type of higher education. It is considered that for both the academic and work spheres, one of the fundamental problems is the lack of tools and modalities for presenting information that promotes and generates inclusion.
+
+Pointing out the view on tools, the majority of them with applications in astronomy were developed after 2017 (the beginning of \textsc{sonoUno}). Before 2017, there were some projects of sonification born from a specific dataset and some desktop software, like \textsc{xSonify}, \textsc{Sonification Sandbox}, and \textsc{MathTrax}. Since then, the offer has grown to duplicate the number in 2021 \citep{zanella2022}. Nowadays, some web tools that allow data opening to produce sonification are available to anyone. This scenario makes visible the importance of this new way of representing the data sets.
+
+In particular, the object-oriented \textsc{sonoUno} tool, centred on the user from the beginning, distinguishing from the others by the Graphic User Interface (GUI) tested by users and developed with a framework based on accessibility for the visually impaired (VI), but not excluding anyone in the process (a focus group session with sighted and VI people was conducted in the city of Southampton, UK, during April 2019 \citep{casadoFG2022}). The following section reviews the major milestones achieved during the completion of the work and the main problems encountered.
+
+\section{Challenges faced}
+
+The methodology used for software development was based on agile methodologies, a modular and collaborative design. GitHub has been used for version control ({GitHub \textsc{sonoUno} workspace}\footnote[1]{\url{https://github.com/sonoUnoTeam}}) and \textsc{Python}, along with several of its libraries, for programming. Then, for the web version, tools such as \textsc{HTML}, \textsc{CSS} (Cascading Style Sheets), and \textsc{JavaScript} were used, along with the \textsc{ARIA} (Accessible Rich Internet Applications) protocol, to improve accessibility. To evaluate the latter in all developments and documentation, screen readers were used.
+
+Standard analysis and user testing were also carried out to ensure user-centric development. In these cases, the technique of Focus Groups (FG) was applied in 2019, and email exchanges were used during the time of confinement due to COVID 19. It was very difficult to form groups to test the interface with the FG technique; professionals in activity with low vision or visual impairment are few around the globe, but luckily one person could carry out this first test, completing the nine people in the total group \citep{casadoFG2022}. Regarding the email exchanges, the real challenge was to engage people to install the software different versions and test astronomical data sets on it. Besides, some professionals answered the email with feedback about the interface and the software capabilities. In addition, some groups started using \textsc{sonoUno} to do their own research, promoting its use to other people. The feedback obtained has been favorable, demonstrating that the program presents a user-centered and inclusive framework. Further, installation and user guides, and documentation on accessibility recommendations have been prepared and are available on the \textsc{sonoUno} website\footnote[2]{\url{https://reinforce.sonouno.org.ar/}}.
+
+Some of the challenges related to the multisensory deployment were the time added to the display by synchronization between the position mark on the graphic and each sonified note. On the other hand, the communication between \textsc{wxPython} labels and the three screen readers (SR) used (\textsc{NVDA}, \textsc{Voice Over}, and \textsc{Orca}) sometimes worked badly and presents significant differences between each one of the SR. Further, there is no clear path to generate/reproduce sound on the fly in \textsc{Python}, keeping the GUI active to respond in case the user presses a button. In this case, the event handling facility of \textsc{wxPython} was used to generate and reproduce each note at the same time that the GUI library looked if a button was pressed; the counterpart was that the total reproduction time of a galaxy spectrum, for example (around 3000 rows), takes a lot of time (around 2 minutes).
+
+Despite all the disadvantages, a functional desktop (Figure \ref{fig:guidesk}) and web (Figure \ref{fig:guiweb}) sonification tool were achieved, that also allowed including basic mathematical functions, like smooth, and a \textsc{GNU Octave} programming language interface. In addition, both sound and graphic settings can be adjusted. From the beginning, we have worked with real data, either downloaded from large databases (such as the Sloan Digital Sky Survey, SDSS\footnote[3]{\url{https://www.sdss.org/}}) or provided by major astrophysical facilities (Virgo\footnote[4]{\url{https://www.zooniverse.org/projects/reinforce/gwitchhunters}}, the European Nuclear Research Centre, CERN\footnote[5]{\url{https://www.zooniverse.org/projects/reinforce/new-particle-search-at-cern}}, and the Institute of Physics of the 2 Infinities, IP2I\footnote[6]{\url{https://www.zooniverse.org/projects/reinforce/cosmic-muon-images}}).
+
+
+\begin{figure}[!t]
+\centering
+    \includegraphics[width=0.75\columnwidth]{gui-desktop.png}
+    \caption{Screenshot of the \textsc{sonoUno}$^{g}$ desktop interface with a galaxy spectrum downloaded from SDSS and the sonoUno gallery$^{h}$.}
+    \label{fig:guidesk}
+\end{figure}
+
+
+\footnotetext[7]{\url{https://skyserver.sdss.org/dr18/VisualTools/quickobj?id=1237648720693755918}}
+\footnotetext[8]{\url{https://www.sonouno.org.ar/galaxy-sdss-j115845-43-002715-7/}}
+\footnotetext[9]{\url{https://skyserver.sdss.org/dr14/en/tools/quicklook/summary.aspx?}}
+\footnotetext[10]{\url{https://www.sonouno.org.ar/galaxies/}}
+
+\begin{figure}[!t]
+\centering
+    \includegraphics[width=0.75\columnwidth]{gui-web.png}
+    \caption{Screenshot of the \textsc{sonoUno}$^{i}$ web interface with a galaxy spectrum downloaded from {SDSS} ({\textsc{sonoUno} gallery}$^{j}$).}
+    \label{fig:guiweb}
+\end{figure}
+
+
+
+
+Concerning the astrophysical facilities mentioned, some specific data sonification scripts were developed to sonify events from the Large Hadron Collider (LHC), muongraphy data, and gravitational wave glitches (GWs). Figure \ref{fig:particle} shows the particle sonification results. Finding a way to represent the trace and energy deposition that allows people to classify particles through sound was very challenging. Figure \ref{fig:muons} shows the muongraphy sonification results; the same plot as the IP2I group was generated, and the sound was based on 16 piano keys assigned to the channels of the detector layer. The two processes summarized here were achieved after numerous meetings with each group to ensure the representation of each feature of the data through sonification.
+
+\begin{figure}[!t]
+\centering
+    \includegraphics[width=0.85\columnwidth]{particles.png}
+    \caption{Screenshot of LHC particles classification with {\textsc{Hypatia}}$^{a}$ Atlas events (\emph{top}). Screenshot of a particle file opened with \textsc{sonoUno} ({video}$^{b}$ with particle sonification) (\emph{bottom}).}
+    \label{fig:particle}
+\end{figure}
+
+\footnotetext[1]{ \url{https://hypatia-app.iasa.gr/Hypatia/?layout=cs2}}
+\footnotetext[2]{\url{https://www.youtube.com/watch?v=XMaYIJkJIHg\&feature=youtu.be}}
+\footnotetext[3]{\url{https://www.youtube.com/watch?v=88nKeGJ9two\&feature=youtu.be}}
+
+\begin{figure}[!t]
+\centering
+    \includegraphics[width=\columnwidth]{muons.png}
+    \caption{Image of a muongraphy detection shared by the IP2I team in the framework of project REINFORCE (\emph{right}). A screenshot of the same data opened with \textsc{sonoUno} ({video}$^{c}$ with its sonification) (\emph{left}).}
+    \label{fig:muons}
+\end{figure}
+
+Considering the growth of the project in its six years of development, the need to gather information in the same place was evident, ensuring accessibility for users with different sensory styles. For this reason, the development of a website dedicated to the \textsc{sonoUno} project began in 2020 (access \url{https://www.sonouno.org.ar/}). The project information is displayed there, and the different tools are made available, from manuals and instructions to access a gallery of resources (data, images, audio, and videos) and a news section. This website has a \textsc{WordPress} format with a simple view; the content is displayed in a single column without buttons or side elements. At the top right, there is a button that allows a user to change the language. The background color is white with black font. After the title, a banner is shown with all the logos corresponding to the institutions related to the development, and then the brief description of the sonification begins.
+
+This website has been successfully tested with screen readers and has been used by blind and sighted users to access \textsc{sonoUno} material. A user recommendation that was repeated over time was to make the web page more visually attractive, for this reason a parallel version was developed, following more sophisticated web designs (access \url{https://reinforce.sonouno.org.ar/}).
+
+\subsection{Training program}
+
+In addition to the formal user testing and taking advantage of the materials organized on the \textsc{sonoUno} web page, some sonification workshops were conducted during the last few years. During these meetings, the sonification technique was explained, tactile material was shown, and the sonification tool was used (Figure \ref{fig:galaxy}).
+
+\begin{figure}[!t]
+\centering
+    \includegraphics[width=\columnwidth]{galaxy.png}
+    \caption{Image with the different material created from the object SDSS J115845.43-002715.7. \emph{At the top} is the image and the spectrum from the database. \emph{At the bottom} is a 3D print from the image and the spectrum from \textsc{sonoUno}.}
+    \label{fig:galaxy}
+\end{figure}
+
+The {sonification workshop}\footnote[4]{\url{https://zenodo.org/records/7717030}} and the {Research Infrastructures FOR Citizens in Europe (REINFORCE) 2022 training course}\footnote[5]{\url{https://www.reinforceeu.eu/international-citizen-science-training-course}} allowed us to obtain important results and evaluate the performance of an audience using the new tool, applied to four demonstrators of the project REINFORCE ({GWitchHunters}\footnote[1]{\url{https://www.zooniverse.org/projects/reinforce/gwitchhunters}}; {New Particle Search at CERN}\footnote[2]{\url{https://www.zooniverse.org/projects/reinforce/new-particle-search-at-cern}}; {Cosmic Muon Images}\footnote[3]{\url{https://www.zooniverse.org/projects/reinforce/cosmic-muon-images}}; {Deep Sea Explorers}\footnote[4]{\url{https://www.zooniverse.org/projects/reinforce/deep-sea-explorers}}), which are deployed on the \textsc{Zooniverse} platform and consist of activities where citizen scientists classify the different data provided by each facility. In particular, the training course used data from the demonstrators and showed it to the participants in a multimodal way. The activity counted with 13 participants. Regarding sonification, approximately 77\% of the participants expressed having been able to extract information from the sonified data, and only 7\% of them found difficulty in muon sonification (see Figure \ref{fig:workshop}). In general, regarding access to the program and data, participants commented on the need for help or a recognition period, but after that, they found it `easy', `good', and `effective' (those were some of the words they used to describe it).
+
+\begin{figure}[!t]
+\centering
+    \includegraphics[width=0.49\columnwidth]{workshop1.png}
+    \includegraphics[width=0.49\columnwidth]{workshop2.png}
+    \caption{Answer to the question: Were you able to extract information from the data provided using sonification?}
+    \label{fig:workshop}
+\end{figure}
+
+Respecting the usability of the technique and the program, 76.9\% of the participants answered that they consider that sonification would improve their work, the remaining 23.1\% responded that they did not know if it would have an effect, and no participant considered that the technique would not be useful. Among the comments about data sonification, they mentioned greater efficiency, a different perspective, greater access, more fun, and highlighted the need to know more about sound. The latter would be related to the need to delve into perception studies and prepare training courses.
+
+\section{Sonification as a research field}
+
+Given that the field of data sonification is in a stage of expansion in which year after year the number of tools grows exponentially \citep{zanella2022}, it has been a priority to maintain scientific communications throughout the years of development, showing advances permanently and practically at the moment in which they occurred. This effort, together with the trajectory of the workspace where this thesis was developed (CONICET), allowed \textsc{sonoUno} to position itself as a data sonification software for research. \textsc{sonoUno} has been recognized in different scientific meetings where the working group has been invited to participate as exhibitors. One of these has been ``The Audible Universe'' in its two meetings ({2021}\footnote[5]{\url{https://www.lorentzcenter.nl/the-audible-universe.html}} and {2022}\footnote[6]{\url{https://www.lorentzcenter.nl/the-audible-universe-2.html}}). It is worth mentioning that this event is dedicated to sonification tools applied to astronomy, seeking to establish a common framework and specific guidelines for the development of these resources.
+
+Despite all, researchers dedicated to this investigation field continue working and the first formal studies using sonification in astronomy were made in recent years \citep{MNRAStucker2022, trayford2023}. The tools used in these cases were \textsc{Astronify} and \textsc{Strauss}; two of them are \textsc{Python} packages to produce sonification of astronomical data sets.
+
+Beyond all the efforts, sonification has not been considered a reliable technique for data analysis yet. The latter entails great difficulty in terms of making publications in high-impact journals, one dedicated to this field of research has not yet been created and in many cases, it is not enough just to describe or use the technique to publish in current journals. All this added to the small number of reviewers who knows the technique to carry out the revision.
+
+\section{Conclusion}
+\label{sec:conclusion}
+
+Since the beginning of this research in 2017, there has been an exponential growth in programs and techniques for the sonification of astronomical and astrophysical data, among others, marking the pulse of these times in which the multimodal approach to the study of nature is emerging as a highly impactful topic in the scientific and social sphere. However, the focus of the research conducted and the ongoing commitment to inclusion and user-centered design has enabled \textsc{sonoUno} to differentiate itself from its peers and have the work team recognized in the international scientific community as a reference \citep{zanella2022}.
+
+During the work presented here \citep{thesiscasado}, the development of new data access modes through sonification was achieved, allowing the graphical display to be shown in the same way as in other programs or databases, accompanied by the novelty of data sonification. It should be noted that all sonifications produced faithfully represent the data, without applying any kind of ``make-up'' to make it sound nice but to detect features in the data, which made it clear that this is a development aimed at being integrated into the scientific field.
+
+Based on continuous exchanges with users, the development of a web graphical interface began, which reached a high level of functionality, matching and improving some aspects of the initial desktop development.
+
+In addition, \textsc{sonoUno} counts with some documented cases of use (link {here}\footnote[7]{\url{https://linktr.ee/sonouno.casesofuse}}). From the surveys conducted in recent years, the majority of scientists who have used the software would be willing to use it in their research, as long as the program is kept in development and continues to improve. Based on this last premise, the need for training was highlighted for a better and deeper understanding of this new modality of multisensory data display.
+
+Finally, with a focus on accessibility and taking into account the recommendations of the United Nations and the {Factsheet on Persons with Disabilities}\footnote[8]{\url{https://www.un.org/development/desa/disabilities/resources/factsheet-on-persons-with-disabilities.html}}, this technique presents the potential to extend equity and reinforce the principle that the functional diversities of individuals should not be a limiting factor for their professional development.
+
+\begin{acknowledgement}
+
+This work was funded by the National Council of Scientific Research of Argentina (CONICET) and has been performed partially under Project REINFORCE (GA 872859) with the support of the EC Research Innovation Action under the H2020 Programme SwafS-2019-1.
+The support from the IBIO-UM and the UTN-FRM is also appreciated, as well as the contribution of the people who participated in testing and using \textsc{sonoUno} in their research.  
+
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

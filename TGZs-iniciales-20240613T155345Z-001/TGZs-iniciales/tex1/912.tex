@@ -1,0 +1,369 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sellión 3 "Idioma" para mas información                        %
+%  -Selellione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Selellione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Selellione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{On the morphology of open clusters probed by ASteCA using Gaia data}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Selellione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{On the morphology of open clusters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sellión 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.S. Pera\inst{1, 3},
+G.I. Perr\'en\inst{2, 3},
+H.D. Navone\inst{1, 3}
+\&
+R.A. V\'azquez\inst{2}
+}
+
+\authorrunning{Pera et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA direllión de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{msolpera@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sellión 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de F{\'\i}sica de Rosario, CONICET--UNR, Argentina
+\and
+Instituto de F{\'\i}sica de La Plata, CONICET--UNLP, Argentina
+\and
+Facultad de Ciencias Exactas, Ingenier{\'\i}a y Agrimensura, UNR, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sellión 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{
+Analizamos la morfología de más de 1000 cúmulos abiertos dispersos en el tercer y cuarto cuadrante de la Galaxia, obteniendo estimaciones de sus elipticidades bidimensionales proyectadas y ángulos de rotación. Ambos parámetros están muy ligados al proceso de formación y evolución dinámica de estos objetos. Empleamos un método de inferencia bayesiana combinado con un modelo de perfil de King generalizado a través de nuestra herramienta de Análisis Automatizado de Cúmulos Estelares (ASteCA). Los datos provienen de la última versión de Gaia hasta la fecha (DR3) hasta una magnitud de G=19. El análisis de cientos de cúmulos sintéticos indica que nuestro enfoque es considerablemente más preciso y robusto que el método habitual de ajustar una elipse a un subconjunto de miembros seleccionados a través del método de descomposición de valores singulares.}
+
+\abstract{We analyze the morphology of over 1000 open clusters scattered in the third and fourth quadrants of the Galaxy, obtaining estimates for their projected two-dimensional ellipticities and rotation angles. Both parameters are closely linked to the formation process and dynamical evolution of these objects. We employed a Bayesian inference method combined with a generalized King profile model through our Automated Stellar Cluster Analysis (ASteCA) tool. The data come from the latest Gaia release to date (DR3), up to a magnitude of G=19. Analysis of hundreds of synthetic clusters indicates that our approach is considerably more precise and robust than the usual method of fitting an ellipse to a subset of selected members using the singular value decomposition method.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Selellione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{methods: statistical ---  galaxies: star clusters: general ---  open clusters and associations: general ---  techniques: photometric --- parallaxes ---  proper motions}
+
+\begin{document}
+\maketitle
+\section{Introduction}
+
+Open clusters (OCs) are gravitationally bound stellar systems characterized by containing from tens to thousands of members. The analysis of these objects is essential in the research of the structure and dynamic evolution of galaxies, as well as in the study of the stellar evolutionary process. 
+
+
+The morphology of star clusters is intricately linked to the internal gravitational interactions among their member stars . In their early stages, young OCs often retain traces of substructures inherited from their parent molecular clouds \citep{Alves_2020}. As OCs age, the equilibration of kinetic energy through two-body relaxation has a direct consequence on the distribution of stars within a cluster \citep{Kroupa_1995, deLaFuente_1996}. These interactions shape the spatial distribution of stars within the cluster, influencing its density and radial distribution. Additionally, external factors such as stellar evaporation and disturbances like the Galactic tidal force, differential rotation, and encounters with molecular clouds can further influence the external spatial structure of the cluster and, in some cases, lead to its dissolution \citep{Dinnbier_Kroupa_2020,2022A&A...659A..59T}.
+
+In this work, we analyze the morphology of 1037 open clusters scattered throughout the third and fourth galactic quadrants, obtaining estimates of their projected two-dimensional ellipticities and rotation angles. Both parameters are closely related to the formation process and dynamic evolution of these objects. To do this, we employ a Bayesian inference method combined with a generalized King profile model through our Automated Stellar Cluster Analysis (\texttt{ASteCA}) tool \citep{2015A&A...576A...6P}. The data come from the latest Gaia release to date (DR3, \cite{2023A&A...674A...1G}) up to a magnitude of G=19.
+
+To evaluate the results of this study, a comparative analysis was carried out by cross-matching the data obtained with the results of \cite{2021A&A...656A..49H} for 639 OCs in common. The results of the Bayesian method employed in this work were compared with the results obtained by these authors through an analysis of hundreds of synthetic clusters.
+
+
+\section{Methods}
+\begin{figure*}[h!]
+    \centering
+    \includegraphics[scale=0.32]{haffner9.png}
+    \caption{Results of applying ASteCA to the open cluster Haffner 9, with detailed plot descriptions provided on the body of the article.}
+    \label{haffner8}
+\end{figure*}
+
+To estimate the parameters of the King Profile \citep{1962AJ.....67..471K}, we applied the maximum likelihood estimation method used in \cite{2016MNRAS.461..519P} and extended by us to process elliptical and rotated clusters. In the mentioned article, the probability that star $i$ belongs to the complete model (King profile) with radii $r_c$\footnote{Core radius, degree of concentration in the core of the cluster} and $r_t$\footnote{Tidal radius, limit of the cluster where stars are lost due to the gravitational pull of the host galaxy} and centered at ($x_c, y_c$) is expressed as follows:
+\begin{align}
+    l_i = \rho_{cl}(r_i) + \rho_{fl}
+\end{align}
+where $\rho_{fl}$ is the field density value and $\rho_{cl}(r_i)$ is the surface density profile at a distance $r_i$ from the cluster center:
+\begin{align}
+    \rho_{cl}(r_i)=
+    k\left(\frac{1}{\left[1+(r_i/r_c)^2\right]^{1/2}} + \frac{1}{\left[1+(r_t/r_c)^2\right]^{1/2}}\right)
+    \label{2}
+\end{align}
+
+In the case of elliptical clusters, $r_i$ is equivalent to the major semi-axis of a rotated ellipse with a given ellipticity $(ell)$ and rotation angle $(\theta)$:
+
+\begin{eqnarray}
+    r_i(ell,\theta)=& \left( \frac{[(x_i-x_c)\cos{\theta} + (y_i-y_c)\sin{\theta}]^2}{1-ell^2} \right. \nonumber \\
+    & + \left. \frac{[(x_i-x_c)\sin{\theta} - (y_i-y_c)\cos{\theta}]^2}{1-ell^2} \right)^{\frac{1}{2}}
+\end{eqnarray}
+
+To estimate the parameters $r_c$, $r_t$, $ell$ and $\theta$ we use Bayesian inference on the model represented by the log-likelihood sum over all stars.
+
+
+
+The ASteCA package first uses a two-dimensional Gaussian kernel density estimator to determine the center coordinates of the cluster. After this step, the \textit{emcee package} \citep{2013PASP..125..306F} is employed to explore the $\left[r_c, r_t, ell, \theta\right]$ parameters space and estimate the distribution of each parameter.
+
+\section{Results}
+
+
+Figure \ref{haffner8} shows the result of applying ASteCA on the open cluster Haffner 9. The plot on \emph{the top panel} shows the elliptical radial density profile of the cluster region. The dashed green line represents the King profile fit, while the shaded green area indicates its 16th–84th uncertainty region. The core radius ($r_c$) is denoted by a dashed green line, and the tidal radius ($r_t$) is shown as a solid green line. Additionally, the red vertical line represents the radius $r_{cl}$ obtained through fitting a circular density profile (Eq. \ref{2}). The values of these parameters, along with their 16th-84th uncertainties, are displayed in the top right corner of this panel.
+
+
+\emph{The bottom panels} show: in the left plot, the coordinate space of the cluster, and in the right plot a density map. The green ellipse corresponds to the ellipse of the fitted parameters $[r_c, r_t, ell, \theta]$, and the red circle represents the fit of a circular density profile.
+\begin{figure}
+    \centering
+    \includegraphics[scale=0.55]{comp.png}
+    \caption{Ellipticity and rotation angle estimated by ASteCA (cyan) and \cite{2021A&A...656A..49H} (orange)}
+    \label{comp}
+\end{figure}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[scale=0.5]{outliers.jpg}
+    \caption{An example of a synthetic cluster used to analyze how the presence of outliers affects ellipticity estimation in ASteCA and the SVD method. }
+    \label{out}
+\end{figure}
+
+\begin{figure*}[ht!]
+    \centering
+    \includegraphics[scale=0.54]{svd.jpg}
+    \caption{Differences between real and estimated values of $\theta$ and ellipticity for SVD (top) and ASteCA (bottom) methods, presented against King’s concentration (kc). Red lines indicate mean values, and dots are colored by real ellipticity.}
+    \label{svd}
+\end{figure*}
+
+To evaluate the results of this study regarding the ellipticity ($ell$) and position angle ($\theta$) parameters, a comparative analysis was conducted by cross-matching our obtained data with the findings of a previous study by \cite{2021A&A...656A..49H}. In this study, the authors conducted a detailed analysis of the structure of 1256 OCs distributed throughout the Galaxy. They utilized the database provided by \cite{Cantat-Gaudin_2020}, considering all stars with membership probability greater than 0 for each cluster. Using density estimation techniques and ellipse fitting with the Singular Value Decomposition (SVD) method, they characterized the spatial distribution and shape of OCs in the Galactic coordinate system.
+
+
+
+Figure \ref{comp} presents the results of the comparative analysis for $ell$ and $\theta$ parameters of the 639 OCs in common between \cite{2021A&A...656A..49H} and our work. In cyan, values obtained using ASteCA are displayed, and superimposed in orange are those obtained by \cite{2021A&A...656A..49H}. Each OC is positioned on the graph based on its galactic coordinates and is represented by inclined lines, where the slopes align with the obtained orientation, and the length indicates the magnitude of the ellipticity estimated in each study. Additionally, the OCs from the cross-match are divided into four ascending age ranges, with the youngest ones in the first row and the oldest ones in the last row.
+
+Most OCs present a more elongated shape in the direction parallel to the Galactic plane than in the direction perpendicular to the Galactic plane, which is in agreement with what has been found in other studies \citep{2001A&A...377..462B, 2017AJ....153...57Z, 2021ApJ...912..162P}.
+On the other hand, while the cluster population according to their ages is not homogeneous, it is possible to observe that the ellipticity is generally higher in young clusters than in clusters of advanced ages. This aligns with findings from other studies \citep{2004AJ....128.2306C, 2017AJ....153...57Z} regarding the morphology of OC cores. As clusters age, they become increasingly influenced by internal dynamic effects where low-mass stars reach the outer regions of the cluster, while simultaneously, the cluster core contracts. Since in this study, ASteCA conducts an analysis based on radial density, the more dispersed stars are excluded from the structural analysis, and therefore, the obtained results are more related to the core morphology rather than the entirety of the cluster.
+
+
+Comparing the results of the fit performed by \cite{2021A&A...656A..49H} using the SVD method with those obtained in this work through ASteCA's Bayesian inference, significant differences in ellipticity and rotation angle are observed for some OCs. For this reason, a comparative analysis of both methods was carried out using a set of 250 synthetic clusters. These synthetic clusters contain between 10-25\% of non-member stars (outliers) that replace the member stars and are distributed in a wider region around the cluster, up to 1.5 times the tidal radius. The objective of this comparison was to analyze how the presence of outliers affects the ellipticity estimation in both methods (SVD vs ASteCA's Bayesian inference).
+
+
+An example of a synthetic cluster is shown in Fig. \ref{out}. The green dots represent the real members, the red dots correspond to the outliers, and the gray dots represent the field stars. In the SVD method used by \cite{2021A&A...656A..49H} only the green and red dots are fitted, i.e., without considering the field stars. 
+In this case, the red ellipse shown in the figure is the fitted ellipse.  
+In contrast, in the ASteCA method, King's profile models both field stars and cluster members, taking them into account during the fitting. For this method, the fitted ellipse corresponds to the ellipse marked in black.
+
+
+
+It can be observed that the SVD method is considerably affected by the presence of outliers in its ellipticity estimation. In addition, it is evident that OC with higher ellipticities are more susceptible to this influence compared to those with lower ellipticities. From these results we can assure that the method used in this work is more precise than the method used in \cite{2021A&A...656A..49H}. This is true even for OCs with almost all their members correctly identified.
+
+
+Figure \ref{svd} shows the results obtained from this comparative analysis. \emph{The top panels} corresponds to the SVD method, while \emph{the bottom panels} corresponds to ASteCA. \emph{The left panels} shows the difference between the real and estimated values of $\theta$, while \emph{the right panels} represents the difference between the real and estimated values of ellipticity. All the plots are presented as a function of King's concentration ($\mathrm{kc}$), expressed as the logarithm of the ratio of the tidal radius to the core radius $(r_t/r_c)$. The red line indicates the mean value of each quantity and the dots are colored according to the real ellipticity.
+
+\section{Conclusions}
+We analyze the morphology of more than 1037 open clusters scattered throughout the Galaxy, obtaining estimates of their two-dimensional ellipticities and projected rotation angles. We employ a Bayesian Bayesian inference method combined with a generalized King profile model through our ASteCA tool. Analysis of hundreds of synthetic clusters indicate that our approach is considerably more accurate and robust than the usual method of fitting an ellipse to a subset of selected members by singular value decomposition.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sellión 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

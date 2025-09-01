@@ -1,0 +1,448 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Efecto Neupert\\ Análisis para fulguraciones del Ciclo Solar 24}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Efecto Neupert - Ciclo Solar 24}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\author{G. Cristiani\inst{1} \& C.H. Mandrini\inst{1}}
+
+\authorrunning{Cristiani \& Mandrini}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{gcristiani@iafe.uba.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El efecto Neupert representa el resultado emp\'irico que indica que en muchas de las fulguraciones 
+solares la derivada temporal de la emisi\'on en rayos X blandos (SXR) muestra concordancia con 
+el perfil temporal en rayos X duros (HXR) o en microondas. Esta relaci\'on simple entre las emisiones 
+a diferentes frecuencias da sustento a los modelos de fulguraci\'on en los cuales los HXR son 
+producidos por bremsstrahlung no t\'ermico de electrones energ\'eticos al termalizarse en la baja corona 
+y crom\'osfera, y los SXR corresponden al bremsstrahlung t\'ermico del plasma calentado por los mismos electrones.
+ Analizamos este efecto para las fulguraciones m\'as 
+energ\'eticas (clasificadas como M o X) pertenecientes al Ciclo Solar 24, usando observaciones en SXR y en 
+el rango de las microondas (MW), bajo la hip\'otesis de que los electrones energ\'eticos responsables de la 
+emisi\'on en HXR al arribar a la crom\'osfera son los mismos que generan radiaci\'on en microondas por 
+emisi\'on girosincrotr\'onica en la baja corona. Observamos, por primera vez, que cuanto mayor es la frecuencia 
+en MW considerada, mayor es el acuerdo con el efecto Neupert.  }
+
+\abstract{The Neupert effect empirically states that, for many solar flares, the soft X-ray (SXR) 
+time derivative nearly fits the hard X-ray (HXR) or microwave time profiles. This simple relationship supports 
+flare models in which the HXR emission is non-thermal bremsstrahlung by accelerated electrons as 
+they gradually lose their energy in the lower corona and chromosphere, and the SXR emission is 
+thermal bremsstrahlung from plasma heated by the same electrons. We analize this effect for the most 
+energetic flares (classified as M or X) during the Solar Cycle 24, using SXR observations and microwave data (MW), 
+taking into account that the energetic electrons responsible for HXR emission at chromospheric levels are the same 
+that, at low corona levels, produce MW radiation by gyrosynchrotron emission. We observe for the first time 
+that, at higher MW frequencies, the Neupert effect works better. }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ Sun: flares --- Sun: activity --- Sun: radio radiation --- Sun: X-rays, gamma rays}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducci\'on}\label{S_intro}
+Las fulguraciones solares son eventos s\'ubitos de liberaci\'on de energ\'ia ocasionados 
+por un proceso de reconexi\'on magn\'etica, en el que se aceleran part\'iculas cargadas 
+(principalmente electrones) en l\'aminas de corriente. Estas part\'iculas 
+quedan atrapadas en arcos magn\'eticos coronales, donde producen emisi\'on en el rango 
+de las microondas por girosincrotr\'on, pero paulatinamente van precipitando 
+hacia la crom\'osfera donde, debido a su mayor densidad, se termalizan produciendo 
+emisi\'on en rayos X duros por bremsstrahlung de blanco grueso (thick--target bremsstrahlung). Por otro lado se produce 
+emisi\'on en rayos X blandos por bremsstrahlung t\'ermico del plasma calentado debido a 
+la p\'erdida de energ\'ia de los electrones termalizados. El efecto Neupert \citep{Neupert:1968,Hudson:1991} establece que, 
+para la mayor\'ia de las fulguraciones, los flujos integrados temporalmente en el rango 
+de las microondas o en rayos X duros ajusta, en forma bastante cercana, las regiones 
+crecientes de las curvas de emisi\'on en rayos X blandos o, dicho de otra forma, que el flujo en rayos X 
+duros $F_{HXR}(t)$ est\'a relacionado al n\'umero instant\'aneo de electrones mientras que el flujo en rayos X blandos 
+$F_{SXR}(t)$ est\'a conectado con la energ\'ia acumulada por estos mismos electrones no t\'ermicos
+\begin{equation}F_{HXR}(t)\propto \frac{{\rm d}}{{\rm d}t}F_{SXR}(t)\quad,\end{equation}
+donde en nuestro caso usamos el flujo en microondas $F_{MW}$ en lugar de la emisi\'on en rayos X duros. 
+Es decir que el efecto Neupert sugiere una relaci\'on causal entre las emisiones t\'ermica 
+y no t\'ermica de una fulguraci\'on, relaci\'on que puede explicarse a partir de un mode\-lo de 
+fulguraci\'on en que la energ\'ia liberada, en primer t\'ermino, se transforma  en la aceleraci\'on 
+de electrones, dichos electrones al precipitarse a la crom\'osfera generan emisi\'on no t\'ermica en rayos X duros y 
+calentamiento del plasma cromosf\'erico que luego da lugar al proceso de evaporaci\'on cromosf\'erica, es decir, el llenado de los arcos coronales por un plasma m\'as denso y caliente que origina la emisi\'on t\'ermica en rayos X 
+blandos.
+
+ \begin{figure*}[h]
+\centering
+\includegraphics[width=17.5cm]{fig1.pdf}
+\caption{\emph{Panel izquierdo:} Curvas de emisi\'on para la fulguraci\'on del 25/02/2014 00:39 TU, catalogada como X4.9 
+seg\'un GOES. El gr\'afico superior muestra la emisi\'on registrada por GOES entre 1 y 8~\AA, el gr\'afico medio 
+representa su derivada temporal (agrupada cada 8 segundos para reducir el ruido debido al proceso de derivaci\'on) y el 
+gr\'afico inferior reproduce la emisi\'on en 2.695 GHz registrada por RSTN. \emph{Panel central:} Lo mismo que en el anterior 
+para el evento del 08/05/2014  09:50 TU, catalogado como M5.3 por GOES, pero la emisi\'on en microondas corresponde a 8.8 GHz. 
+\emph{Panel derecho:} Lo mismo que en los anteriores para el evento del 29/03/2014  17:35 TU, catalogado como X1 por GOES, 
+pero  la emisi\'on en microondas corresponde a 15.4 GHz. N\'otese en los tres casos la similitud entre las curvas correspondientes 
+a la derivada de la emisi\'on en rayos X blandos con las curvas de densidad de flujo en microondas.}
+\label{Figura1}
+\end{figure*}
+Como trabajos previos en que se hace un estudio estad\'istico del efecto Neupert podemos mencionar a 
+\citet{Veronigetal:2002} quienes, utilizando datos en rayos X blandos de los Geostationary Operational Evironmental Satellites (GOES) y en rayos X duros del Burst and Transient Source Experiment \citep[BATSE,][]{Harmonetal:2004}, estudiaron fulguraciones de parte del Ciclo Solar 23. Por otro lado, \citet{Effenbergeretal:2017} y \citet{Yuetal:2021} estudiaron el efecto Neupert usando 
+observaciones de GOES y datos en rayos X duros del Reuven Ramaty High-Energy Solar Spectroscopic Imager \citep[RHESSI,][]{Linetal:2002}. 
+Los primeros se restringieron al estudio de fulguraciones parcialmente ocultas por el limbo (fuentes exclusivamente coronales) 
+durante el Ciclo Solar 23, mientras que los \'ultimos analizaron eventos entre 2002 y 2013, lo que abarca parte de los Ciclos 23 y 24.
+
+En este trabajo analizamos la pertinencia o no del efecto Neupert para las fulguraciones del Ciclo Solar 24 
+catalogadas como M o X seg\'un la clasificaci\'on de GOES. Se utilizan los datos en microondas con frecuencias 
+entre 2.695 y 15.4 GHz obtenidos por la Radio Solar Telescope Network \citep[RSTN,][]{Guidiceetal:1981} y las 
+observaciones en rayos X blandos (1 -- 8~{\AA}) de los GOES-14 y GOES-15. La RSTN posee antenas en Sagamore Hill 
+(Massachusetts -- EEUU), San Vito (Italia), Learmonth (Australia) y Palehua (Hawaii -- EEUU) lo que le permite disponer 
+de una cobertura continua del Sol en frecuencias desde 245 MHz a 15.4 GHz. Este es el primer trabajo estad\'istico de an\'alisis del efecto Neupert usando datos en rayos X blandos junto con datos en microondas en diferentes frecuencias. 
+
+
+\section{M\'etodo}
+Para el an\'alisis del efecto Neupert de un evento en particular, generalmente se comparan las curvas de emisi\'on 
+en rayos X duros o microondas con la derivada temporal del flujo en rayos X blandos 
+\citep{DennisandZarro:1993,McTiernanetal:1999,Veronig:2003b,NingandCao:2010}. En esta comparaci\'on se analiza la 
+conicidencia temporal de los picos de dichas curvas, aunque no necesariamente los tama\~nos relativos de los picos 
+se preservan de una curva a otra. Como ejemplo de este tipo de comparaciones, en la Fig. 1 se puede 
+apreciar la similitud de las curvas de la derivada de la emisi\'on en rayos X blandos (GOES 1 -- 8~\AA) con la 
+densidad de flujo en microondas para las frecuencias de 2.695, 8.8 y 15.4 GHz (RSTN), para algunos eventos seleccionados.
+
+
+\begin{figure*}[h]
+\centering
+\includegraphics[width=17.5cm]{fig2.pdf}
+\caption{Diagramas de dispersi\'on. En el eje vertical se tiene la intensidad m\'axima del flujo en rayos X blandos 
+y en el horizontal el flujo en microondas integrado. La recta en rojo corresponde al ajuste lineal. El panel superior izquierdo 
+corresponde a la frecuencia de 2.695 GHz, el panel superior derecho a la frecuencia de 4.995 GHz, el panel inferior 
+izquierdo a la frecuencia de 8.8 GHz y el panel inferior derecho a la frecuencia de 15.4 GHz.}
+\label{Figura2}
+\end{figure*}
+Esta similitud en las curvas representa la evidencia gr\'afica del efecto Neupert y tambi\'en el hecho 
+de que la emisi\'on en rayos X blandos es de origen t\'ermico mientras que la emisi\'on en microondas se debe 
+principalmente a procesos no t\'ermicos (emisi\'on girosincrotr\'on  de una poblaci\'on acelerada de electrones). 
+ Sin embargo, la emisi\'on en radio (microondas y frecuencias mayores) no siempre puede asociarse a procesos de 
+emisi\'on no t\'ermicos, siendo en ciertas ocasiones el aporte de los procesos t\'ermicos no despreciable en la 
+emisi\'on total, o incluso pasando a ser la componente principal de emisi\'on. Un ejemplo de esto lo dan 
+Valle Silva et al. [2019]\nocite{ValleSilvaetal:2019} quienes analizan un evento en que la emisi\'on en 
+radio en el submilim\'etrico a la frecuencia de 212 GHz representa la componente t\'ermica en el efecto 
+Neupert.
+
+En este trabajo de todos los eventos en rayos X blandos observados por GOES en el Ciclo Solar 24 
+(m\'as de 8000) nos quedamos s\'olo con los clasificados como M (flujo entre $10^{-5}$ y $10^{-4}$~W/m$^2$) 
+o X (flujo mayor a $10^{-4}$~W/m$^2$), es decir los m\'as energ\'eticos (representan alrededor de un 8 \% del total) 
+y para los cuales la determinaci\'on  de su contraparte en microondas es m\'as factible. En rigor de verdad, tambi\'en 
+se incluyeron unos pocos eventos clasificados como C (flujo entre $10^{-6}$ y $10^{-5}$~W/m$^2$) cuya asociaci\'on 
+con eventos en microondas result\'o evidente al momento de analizar las curvas de flujo en microondas para los eventos 
+M y X. Esta asociaci\'on se logr\'o en alrededor de un 70\% de los casos, siendo los casos con asociaci\'on fallida 
+debidos a que no se observ\'o un incremento significativo en la emisi\'on en radio o a la existencia de vac\'ios 
+observacionales en los datos de RSTN. La asociaci\'on de los eventos se realiz\'o en forma manual, es decir, 
+observando la emisi\'on en microondas en el rango temporal establecido por cada evento GOES. Al trabajar con fulguraciones  X y M, la mayor\'ia de las veces la asociaci\'on en microondas era inequ\'ivoca; en los casos en que la asociaci\'on no era tan evidente (la mayor\'ia de las veces por observarse una emisi\'on ruidosa) recurrimos al 
+criterio de $3\sigma$: consideramos el 
+incremento en radio como relevante si el pico de la emisi\'on superaba el valor medio de la emisi\'on en el rango temporal considerado 
+m\'as tres veces la desviaci\'on est\'andar. Este criterio se aplic\'o a la emisi\'on en cada frecuencia, teni\'endose en general el 
+caso que un evento result\'o detectado en cierta/s frecuencia/s mientras que en otra/s no. 
+
+
+Una vez establecido nuestro conjunto de eventos procedimos a integrar el flujo 
+en radio tomando como per\'iodo de integraci\'on el tiempo que va desde el comienzo hasta el pico del evento en 
+rayos X blandos informado por GOES. Para la integraci\'on se utiliz\'o una rutina basada en la suma de trapezoides que adem\'as 
+tiene en cuenta la posibilidad de que los datos temporales no se encuentren igualmente espaciados, detalle que es relevante 
+para los datos del RSTN, ya que es habitual que las series temporales registradas por este conjunto de radiotelescopios presenten 
+falta de regularidad en la toma de datos, aunque nominalmente deber\'ia corresponder a una cadencia de un registro por 
+segundo. El flujo integrado se calcul\'o extrayendo el fondo, el cual siempre se consider\'o como el valor m\'as bajo 
+de la emisi\'on en microondas en el per\'iodo de integraci\'on correspondiente, y el cual, en la gran mayor\'ia de los casos, 
+coincidi\'o con el valor del flujo en el momento inicial del per\'iodo. En definitiva, cada evento de nuestro conjunto 
+qued\'o caracterizado por la diferencia del flujo en rayos X blandos entre el inicio y el m\'aximo y el flujo integrado en radio, 
+durante el dado intervalo de tiempo, para cada una de las cuatro frecuencias en que el evento fue efectivamente detectado. 
+Cabe aclarar que en cada evento determinado no siempre fue posible observar la emisi\'on en las cuatro diferentes frecuencias 
+de RSTN, ya sea porque no se observ\'o un incremento efectivo de la emisi\'on o porque no se registraron observaciones 
+en alguna de las frecuencias. En consecuencia, el n\'umero de eventos en cada frecuencia difiere de un caso a otro.
+
+
+\section{Resultados preliminares}
+
+Para cada frecuencia de RSTN hicimos un diagrama de dispersi\'on, los cuales se muestran en la Fig. 2. 
+El eje de las ordenadas representa la intensidad del evento en rayos X blandos mientras que el eje de las abscisas da 
+el flujo integrado en radio para las cuatro frecuencias analizadas de RSTN. Se hizo 
+un ajuste lineal de los datos (trazo rojo), obteni\'endose un coeficiente de correlaci\'on lineal   $r=0.55$ para 
+2.695 GHz, $r=0.6$ para 4.995 GHz, $r=0.64$ para 8.8 GHz y $r=0.70$ para 15.4 GHz. Este \'ultimo valor es similar 
+al valor obtenido por Veronig [2003], $r=0.71$, en su estudio del efecto Neupert en el que compar\'o intensidad en 
+rayos X blandos con la fluencia en rayos X duros.
+
+
+
+Si comparamos los valores de correlaci\'on mencionados con los que se obtienen al correlacionar 
+el pico en rayos X blandos con los valores pico de la emisi\'on en microondas, podemos notar que estos \'ultimos son 
+notoriamente menores ($0.3<r<0.4$). Esto indicar\'ia que la correlaci\'on es debida principalmente a la relaci\'on 
+pico en rayos X blandos -- flujo integrado en microondas, como predice el efecto Neupert, y no al hecho que fulguraciones 
+con mayo\-res flujos en rayos X blandos tambi\'en tienden a tener contrapartes en microondas m\'as intensas. 
+ 
+
+\section{Conclusiones y trabajo a futuro}
+A partir del an\'alisis del efecto Neupert para los eventos M y X del Ciclo Solar 24 (y unos pocos eventos C), 
+u\-san\-do datos en 
+rayos X blandos y en microondas, podemos concluir que cuanto mayor es la frecuencia en microondas considerada  
+mejor es el acuerdo con lo predicho por el efecto Neupert, resultado que se evidencia con el valor creciente con la 
+frecuencia del coeficiente de correlaci\'on lineal. Este estudio estad\'istico del efecto Neupert utilizando diferentes 
+frecuencias en microondas es abordado por primera vez en este trabajo, por lo que puede decirse que el resultado 
+obtenido es novedoso. El marco te\'orico del efecto Neupert supone que la emisi\'on en 
+microondas se debe a electrones energ\'eticos ``espiralando'' alrededor de las l\'ineas de campo magn\'etico de la baja corona 
+y produciendo emisi\'on girosincrotr\'on, mientras que la emisi\'on en rayos X blandos se produce como respuesta al 
+calentamiento del plasma que originan esos mismos electrones cuando precipitan hacia la crom\'osfera. Que el efecto 
+Neupert sea m\'as ostensible a las frecuencias mayores de microondas que a las menores podr\'ia indicar que 
+para las frecuencias menores los mecanismos de emisi\'on t\'ermicos son m\'as relevantes, en un sentido estad\'istico, 
+que para las frecuencias mayores.
+
+Como trabajo a realizar se podr\'ia tratar de incorporar un mayor n\'umero de eventos C a la estad\'istica, 
+tratando de hallar la contraparte en microondas para estos eventos observados en rayos X blandos. Esto implica un volumen 
+de trabajo considerable, teniendo en cuenta que los eventos C son mucho m\'as numerosos que los M y los X, aunque 
+probablemente un bajo porcentaje de ellos muestren una contraparte claramente detectada en microondas. Por otro lado,  
+la clasificaci\'on de los eventos por tipo impulsivo o gradual, la cual para eventos particulares en ocasiones no suele 
+ser tan clara, nos permitir\'ia hacer un estudio discriminando por tipo de evento y constatar si esta separaci\'on lleva 
+a resultados notoriamente diferentes, o no, en cuanto al an\'alisis del efecto Neupert.
+
+En un trabajo reciente Kazachenko [2023]\nocite{Kazachenko:2023} correlaciona distintos par\'ametros de las 
+fulguraciones del Ciclo Solar 24, las cuales cataloga en confinadas y eruptivas, de acuerdo a su asociaci\'on 
+con las eyecciones coronales de masa (CMEs): en una fulguraci\'on eruptiva se eyecta plasma hacia el espacio 
+interplanetario, el cual es observado posteriormente como una CME en im\'agenes coronogr\'aficas en luz blanca, aunque 
+su visibilidad depende en gran medida de la intensidad de la fulguraci\'on; en una fulguraci\'on compacta, de haber plasma 
+eyectado este cae nuevamente hacia el Sol y no se produce CME. En dicho trabajo, una de las conclusiones a las que se arriba 
+es que las fulguraciones confinadas son más eficientes en la aceleraci\'on de part\'iculas. Esta es otra forma en la que se 
+podr\'ian discriminar los eventos para analizar si esta separaci\'on es relevante al momento de evaluar el efecto Neupert. 
+
+
+
+%\begin{acknowledgement}
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+%\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{referencias868}
+ 
+\end{document}

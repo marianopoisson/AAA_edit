@@ -1,0 +1,330 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{6}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Spatial orientation of planetary nebulae in the Milky Way}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Spatial orientation of planetary nebulae in the Milky Way}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+J.C. Rapoport\inst{1,2}
+          ,
+P.C. Colazo
+          \inst{1,3,4}
+          \&
+N. Padilla
+          \inst{1,3,4}
+           }
+
+\authorrunning{Rapoport et al.}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{juana.rapoport@mi.unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Matemática, Astronomía, Física y Computación, UNC, Argentina\and   
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Instituto de Astronom\'ia Te\'orica y Experimental, CONICET--UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En este trabajo, utilizamos simulaciones Monte Carlo para estudiar posibles alineaciones de una muestra de nebulosas planetarias distribuidas con el perfil de densidad de un disco delgado,l imitadas por un corte en distancia al observador. Investigamos cómo varía la señal bajo diferentes escenarios de alineación y comparamos los resultados con datos observacionales. Descubrimos que, con los datos actuales, aún no puede descartarse por completo el escenario orientado, y que un bajo grado de alineación podría ser posible.
+}
+
+\abstract{In this work we used Monte Carlo simulations to study the alignment signal given by a distance limited sample of planetary nebulae distributed with the density profile of a thin disk. We investigated how the signal varies under different alignment scenarios and compared the results with observational data. We discovered that, with the current data, the oriented scenario cannot yet be completely ruled out, and a low degree of aligment might yet be posible.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{planetary nebulae: general --- Galaxy: structure --- galaxies: individual (Milky Way)}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+\label{S_intro}
+
+Planetary nebulae (PNe) are the remnants of intermediate-mass stars, characterized by their expanding envelopes of low-density ionized gas. Their evolution could be influenced by electromagnetic phenomena within galaxies, such as the magnetic field of the Milky Way, interactions with the interstellar medium, or interactions with charged dark matter particles. These interactions could lead to galaxy-scale alignments.  Given the range of morphologies presented by PNe, often exhibiting mostly ellipsoidal shapes, this allows for the determination of an angle between their major axis and a reference point within our Galaxy. 
+
+However, studying the spatial orientation of PNe poses a significant challenge due to the inherent limitations of astronomical observations, which provide two-dimensional projections of three-dimensional shapes on the celestial sphere. Consequently, distinguishing between a truly oriented distribution and a random one is non-trivial. Moreover, there is a notable lack of consensus regarding the spatial orientation exhibited by PNe. The resulting distributions are highly sensitive to the methodologies employed, the size of the catalogs utilized, and the galactic regions observed. Consequently, various distributions with differing trends have been reported in the literature \citep{1968IAUS...34..287G,1975MNRAS.171..441M,1998MNRAS.297..617C,2008PASP..120..380W,2012A&A...541A..98A}.
+
+The main motivation of this work is not to resolve the tension regarding whether
+orientation exists or not, but primarily to ascertain if the physical feasibility of such orientation is
+distinguishable due to the effects of angle projections, no matter how weak they are.
+
+In this study, we adopt a novel approach to investigate the issue of PNe orientations. Rather than relying solely on observational or statistical methods, we employ Monte Carlo simulations to replicate the distribution of PNe observed in the Milky Way. This approach enables us to model their positions while considering the constraints imposed by observational data. By progressively refining the complexity of the model, we gain understanding and can effectively extract valuable insights from the observational data. We start by exploring the orientations of a sample of PNe distributed according to an exponential disk profile. We examine samples exhibiting varying degrees of orientation relative to the center of the Galaxy, measuring how the signal varies across different scenarios. Our analysis aims to shed light on the relationship between simulated distributions and observational data, offering insights into the spatial orientation of PNe within the Milky Way. 
+
+In the Sec. 2, we explain the algorithm applied to simulate the PNe, the projection of their major axes and the subsequent measurement of the projected angle. In Sec. 3, we analyze the results obtained and compare those to observational data. We delve into the conclusions that can be extracted from the work.
+
+\section{Methodology}
+
+We used Monte Carlo simulations to study the orientation of a sample of PNe with different degrees of alignment towards the center of the galactic disk, whose three-dimensional spatial distribution is given by the exponential density profile for a thin disk:
+
+\begin{equation}
+    \Sigma(R,z) = \Sigma_0 \exp\left(-\frac{R}{R_\textnormal{d}}\right),
+\end{equation}
+where $R_\textnormal{d}$ represents the characteristic sizes of the Milky Way and $\Sigma_0 =  \frac{M_\textnormal{MW} }{2 \pi {R_\textnormal{d}}^2 }$ \citep{mo}. For the $z$-coordinate, we choose a small interval within galactic latitude of $\theta = (-30^\circ, 30^\circ)$. 
+
+The distribution of our samples was taken so that the PNe are contained within a circle of radius 3 Kpc, centered in the observer situated at a distance of 8 kpc from the galactic disk's center. This approach allows us to consider the limit in observational distance and the Earth's position relative to the Galaxy's center, both factors influence the final projection of angles. The size of the samples was chosen to match the number of objects in the reference catalog \citep{2008yCat..61200380W}. 
+ 
+Each nebula was assigned a particular orientation. To do so we defined a major axis given by a realization of a vector of unitary length within an oriented spherical cone, characterized by an aperture angle $\Theta$ centered on the galactic center, which represents the range of alignment for the sample. Essentially, $\Theta$ denotes the maximum angle that the cone can encompass. When the cone aperture is $90^\circ$, we are effectively simulating random orientations. We systematically adjusted the cone's aperture angle from $10^\circ$ to $90^\circ$ in $10^\circ$ increments, analyzing the resulting signal at each step. This approach allowed us to smoothly transition from fully oriented scenarios to random ones.
+
+After assigning each nebula a spatial orientation, given by $\Theta$, we projected the major axis onto the plane perpendicular to the line of sight to the nebula, as observed from Earth. 
+The resulting angle was subsequently employed to calculate the position angle of the projected major axis, following the methodology outlined in \citep{2008PASP..120..380W}. This facilitated the replication of the angle provided in the catalog, thereby enabling a comparison of our model's outcomes with those derived from their statistical approach.
+
+To assess the accuracy of our measurements, we used the bootstrap resampling method to estimate its variance. Finally, we compared the distributions obtained from our models with those from the reference catalog.
+
+In order to see how the signal varied for different parts of the galaxy, we divided the samples in regions given by galactic longitude. An inner region for those PNe with $0^\circ< b <90^\circ$ and $270^\circ< b <360^\circ$ and an outer region for $90^\circ< b < 270^\circ$.The division into inner and outer regions is motivated by a desire to gain insights into how the projection effects differ between regions and their respective impacts on the observed distribution.
+
+To determine which angular apertures could be discarded using the information from the measured data, the reduced chi-squared test was employed.
+
+\section{Results and Conclusions}
+
+In Fig. \ref{Figure 1}, we can see the projected angle $\phi$ for the aligned sample, the panel in the left corresponds to a high degree of alignment with $\Theta \leq 10^\circ$, whereas the one on the right corresponds to a low alignment, with  $\Theta \leq 50^\circ$. Both of them are compared to the observations from the reference catalog. In the latter case, we can see that the presence of noise in the observations obscures any discernible trend within the sample, in order to reduce this noise a larger sample of observed nebula's must be obtained. 
+
+In Fig. \ref{Figure 2}, we used the reduced chi-squared test and found that for the outer nebulae the data is compatible with an orientation with an opening angle $\Theta$ between $40^\circ$ and $90^\circ$ with respect to the center of the Galaxy. For the nebulae belonging to the inner galactic disk, the opening angle can be further restricted to angles larger than $50^\circ$. These results suggest that the nebulae are not strongly oriented with respect to the galactic center. 
+
+We conclude that despite the loss of information due to projection, this effect still enables the distinction between samples. Upon comparing observations to our model, we find no compelling evidence of a strong alignment. However, a weak alignment cannot be ruled out, which could leave room for interactions, such that models of charged dark matter or galactic magnetic field effects could be restricted. Our results are consistent with those obtained by \cite{2008PASP..120..380W}, although we identify fewer alignment present in the inner region. To improve the study, a larger sample size is needed to yield more precise constraints. The latest generation of telescopes such as Vera Rubin Telescope, and information
+produced by the Gaia mission, will contribute data on new nebulae, better mapping the distribution
+of PNe in the Milky Way, which will be crucial for this issue, thereby increasing the number of
+objects available for studies like these. Furthermore, with a broader dataset, there is potential for refining our modeling techniques to better replicate their observed distribution and phenomena and to improve our understanding of how three dimensional information is lost through projection.
+
+\begin{figure*}[!h]
+\centering
+\includegraphics[width=\columnwidth]{sample1.png}
+\includegraphics[width=\columnwidth]{sample2.png}
+\caption{Distributions of the relative frequency for the measured projected angle $\phi$ between the Galactic North Pole and the semi-major axis of the PNe. Blue one corresponds to the random sample, orange to the aligned one, black is for the observations from the reference catalog.  \textit{Left panel}: corresponds to an aligned sample with an aperture angle $\Theta \leq10^\circ $. \textit{Right panel}: aligned sample with an aperture angle of $\Theta \leq 50^\circ $.}
+\label{Figure 1}
+\end{figure*}
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{chi.png}
+\caption{The reduced chi-squared test applied to the inner and outer PNe distributions.The limit corresponds to the reduced chi-squared for one degree of freedom and a $68\%$ level of confidence. This test rejects alignments of up to $50^\circ$ and $35^\circ$ with respect to the center of the Galaxy, for PNe in the inner and outer galaxy disc, respectively.
+}
+\label{Figure 2}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

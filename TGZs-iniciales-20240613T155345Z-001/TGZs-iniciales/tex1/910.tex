@@ -1,0 +1,540 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Caracterización de imágenes obtenidas desde la Estación Astrofísica de Bosque Alegre}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Caracterización de imágenes EABA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A. Martinez-Bezoky\inst{1,2},
+A.R. Callen \inst{1,2},
+J.C. Rapoport\inst{1,2},
+C. Cerdosino\inst{1,3,4},
+I. Bustos-Fierro\inst{2}
+\&
+L.R. Vega\inst{3,4}
+}
+
+\authorrunning{Martinez-Bezoky et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{alejandra.martinez.bezoky@mi.unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Matem\'atica, Astronom\'ia, F\'isica y Computaci\'on, UNC, Argentina\and   
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Instituto de Astronom\'ia Te\'orica y Experimental, CONICET--UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{ Conocer el proceso de observación y procesamiento de imágenes astronómicas es uno de los objetivos fundamentales de la enseñanza universitaria de la astronomía. Es por ello que se presenta, dentro del marco de la materia Astrometría General (FAMAF, UNC), un trabajo de adquisición y reducción de imágenes realizadas en la Estación Astrofísica de Bosque Alegre, de tres objetos:  NGC 6316, MCG -06-30-15 y WR 40. Posteriormente, utilizando fotometría de apertura, se calculan las magnitudes instrumentales de ocho estrellas pertenecientes a NGC 6316. Finalmente, se comparan los datos fotométricos obtenidos con los existentes en la literatura.}
+
+\abstract{Knowing the process of observing and processing of astronomical images is one of the fundamental goals of teaching of astronomy. That is why, within the framework of the subject General Astrometry (FAMAF, UNC), a work of acquisition and reduction of images carried out at the Bosque Alegre Astrophysical Station, of three objects: NGC 6316, MCG -06-30-15 and WR 40 is presented. Using aperture photometry, the instrumental magnitudes of eight stars belonging to NGC 6316 are calculated. Finally, the photometric data obtained are compared to those existing in the literature.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{globular clusters: individual (NGC 6316) --- galaxies: individual (MCG -06-30-15) --- stars: Wolf--Rayet --- stars: individual (WR 40) --- techniques: image processing
+}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+La utilización de telescopios argentinos en la realización de observaciones astronómicas emerge como una herramienta poderosa para la  enseñanza universitaria de la Astronomía. Integrar su uso en el currículo académico posibilita la introducción de los estudiantes en las labores de observación e investigación, promoviendo una comprensión más profunda del proceso involucrado en la adquisición y procesamiento de imágenes astronómicas.
+
+En este contexto, se realizaron observaciones astronómicas como parte de los prácticos de la materia Astrometría General, correspondiente al cuarto año de la Licenciatura en Astronomía de la Facultad de Matemática, Astronomía, Física y Computación (FAMAF) de la Universidad Nacional de Córdoba (UNC). Las observaciones fueron realizadas desde la Estación Astrofísica de Bosque Alegre (EABA) dependiente del Observatorio Astronómico de Córdoba. Los objetos seleccionados formaban parte de los prácticos de la materia durante el primer cuatrimestre de 2023, y resultaron todos observables desde EABA en dicho cuatrimestre. Los tres objetos astronómicos son: NGC 6316, MCG -06-30-15 y WR 40. Las observaciones consistieron en imágenes en los filtros V, R e I de los objetos de programa, además de las imágenes de calibración Bias, Flats y Darks.
+
+% hablar cada una de su objeto
+NGC 6316 es un cúmulo globular antiguo ($\sim$ 13.1 ± 0.5) Gyr perteneciente a la Vía Láctea, ubicado en la constelación de Ofiuco, a una distancia D = (11.3 ± 0.3)kpc del Sol, en las coordenadas J2000 ${\alpha}$: 17h 13m 28.6s, ${\delta}$: -28° 05' 08".4 (\citep{2023ApJ...942..104D}).
+
+MCG -06-30-15 es una galaxia espiral de tipo temprano que contiene un núcleo activo del tipo Seyfert 1.2, y se encuentra ubicada a una distancia D = (25.5 ± 3.5) Mpc, según los datos de la Extragalactic Distance Database \footnote{\url{https://edd.ifa.hawaii.edu/}}.  Sus coordenadas J2000 son ${\alpha}$: 13h 33m 01.8s, ${\delta}$: -34° 02' 25".7. 
+
+
+HD 96548, también conocida como WR 40, es una estrella Wolf-Rayet de tipo WN8h \citep{1996MNRAS.281..163S} ubicada en la constelación de Carina a una distancia D = (2.80 ± 0.13)kpc, en las coordenadas J2000 ${\alpha}$: 11h 06m 17.2s, ${\delta}$: -65° 30' 35".2 \citep{2022AAS...24011101I}.
+
+\
+
+De los 3 objetos observados, sólo en el campo de NGC 6316 se llevó a cabo un análisis multibanda, obteniendo magnitudes instrumentales en cada filtro para algunas estrellas. Estas magnitudes se compararon con datos fotométricos disponibles en la literatura especializada.
+
+Este estudio tiene como objetivo resaltar el valor educativo y científico que aporta la utilización de telescopios argentinos en la enseñanza universitaria, al tiempo que fomenta una mayor comprensión de la Astronomía a través de la experiencia práctica en la observación y procesamiento de imágenes astronómicas.
+                                                            
+
+\section{Observaciones}
+
+% lugar y teslecopio
+Las observaciones fueron realizadas el 13 de Mayo de 2023 con el telescopio principal de la EABA en el modo observación remota. Este telescopio se encuentra ubicado sobre montura ecuatorial y tiene una configuración óptica newtoniana con un espejo primario de 1.54m de diámetro, f/ 4.9. El detector es un CCD Alta U9, con un campo de 12.7'×8.5' y una escala de placa de 0.74”/px  (binning 3×3). Fueron utilizados para las observaciones los filtros V, R e I correspondientes al sistema Johnson-Cousins. El seeing de la noche fue de 2.0” a 2.6”, el cual fue medido a partir de las imágenes tomadas durante la noche de observación.
+
+% como lo hicieron, filtros, tiempos
+Los tiempos de exposición, filtros utilizados y número de imágenes por filtro para cada objeto se especifican en la Tabla \ref{Tabla 1}. Los tiempos de exposición fueron seleccionados de acuerdo a un análisis de la relación señal-a-ruido de cada objeto. Se buscó la mayor señal posible pero cuidando de no llegar a la saturación, siendo esta de 55 para los objetos estelares y 33 para la galaxia.
+
+
+\begin{table}[!t]
+\centering
+\caption{Tiempos de exposición, filtros utilizados y número de imágenes por filtro para cada objeto.}
+\begin{tabular}{lcccc}
+\hline\hline\noalign{\smallskip}
+\!\!\textbf{Objeto} & \!\!\!\!\textbf{Exp. I}&\!\!\!\!\textbf{Exp. R}& \!\!\!\!\textbf{Exp. V}& \!\!\!\! \textbf{n$^\circ$ de} \!\!\!\!\\
+& \!\!\!\![s] & \!\!\!\![s] & \!\!\!\![s]&\!\!\!\! \textbf{ imágenes} \\
+\hline\noalign{\smallskip}
+\!\! NGC 6316 &120 &120 &120& 10  \\
+\!\! MCG -06-30-15 &180 &180 &180& 10  \\
+\!\! WR 40 &15 &30	&120& 20 \\
+
+\hline
+\end{tabular}
+\label{Tabla 1}
+\end{table}
+
+
+\subsection{Reducción}
+ % contar sobre la reduccion de las imagenes y todo ese proceso 
+El procesamiento de las imágenes fue realizado con el software IRAF\footnote{\url{https://www.iraf.net/}} (Image Reduction and Analysis Facility), utilizándose las tareas usuales.
+
+%\textbf{ACÁ ENUMERAR LAS TAREAS QUE USARON: imcombine, zerocombine, ccdproc, etc.}
+
+Para reducir las imagénes de calibración, se cargaron los paquetes IMRED y CCDRED. Dentro de este último se utilizó:
+
+ \begin{itemize}
+     \item \textsc{ZEROCOMBINE}, combina los bias en una sola imagen, el master bias.
+     \item \textsc{FLATCOMBINE}, corrige cada flat por el master bias y luego combina los flats corregidos en un master flat    
+ \end{itemize}
+
+ Luego, para procesar las imágenes de ciencia se utilizó \textsc{CCDPROC}, la tarea responsable de corregir dichas imágenes con las imágenes de calibración combinadas. 
+ Finalmente, se utilizó \textsc{IMCOMBINE} para combinar todas las imágenes de ciencia corregidas, obteniendo una sola imagen para cada objeto en cada filtro. 
+ 
+ Se obtuvieron imágenes promedio de los diferentes Bias y correspondientes Flats, estos últimos para cada filtro fotométrico utilizado. Luego de evaluar las contribuciones de los ruidos involucrados en cada paso de reducción, se tomó la decisión de no corregir las imágenes por corriente de oscuridad (dark) ya que al aplicar la corrección se incrementaba significativamente el ruido.
+
+Posteriormente, a fin de aumentar la relación señal/ruido de cada objeto, se realizaron combinaciones de todas las imágenes tomadas. Para cada objeto se tuvo el cuidado de alinear las imágenes individuales antes de la combinación correspondiente, haciendo uso de las tareas \textsc{IMSHIFT} e \textsc{IMALIGN}.
+
+En la figura \ref{imagenes procesadas}, se pueden observar en el panel superior las imágenes sin procesar, siendo la columna izquierda correspondiente a WR 40 (filtro I), la columna central a MCG -06-30-15 (filtro R) y la columna derecha a NGC 6316 (filtro V). En el panel inferior se presentan las imágenes procesadas y combinadas, permitiendo de este modo comparar los resultados obtenidos luego de la reducción de estas imágenes.
+
+
+
+\begin{figure*}
+    
+  \begin{center}
+    \subfigure{
+        \includegraphics[width=0.65\columnwidth]{wr_40_1.png}
+        }
+    \subfigure{
+        \includegraphics[width=0.65\columnwidth]{mcg antes.png}
+       }
+    \subfigure{
+        \includegraphics[width=0.65\columnwidth]{ngc6316_v_antes.png}
+        }
+    \subfigure{
+        \includegraphics[width=0.65\columnwidth]{WR_40_corregido.png}
+        }
+    \subfigure{
+        \includegraphics[width=0.65\columnwidth]{mcg después.png}
+        }
+    \subfigure{
+        \includegraphics[width=0.65\columnwidth]{ngc6316_v_después.png}
+        }
+
+        
+    \caption{Imágenes tomadas el 13/5/23 con el telescopio principal de la EABA. Norte arriba, Este a la derecha.\emph{Panel superior}: Imágenes sin procesar. \emph{Panel inferior}: imágenes procesadas y combinadas. \emph{Columna izquierda}: WR 40, filtro I. \emph{Columna central}: MCG -06-30-15, filtro R. \emph{Columna derecha}: NGC 6316, filtro V.}
+    \label{imagenes procesadas}
+  \end{center}
+\end{figure*}
+
+
+\subsection{Determinación de magnitudes de NGC 6316}
+
+Se realizó la fotometría en las estrellas de campo de NGC 6316 para los filtros V e I. La fotometría de apertura consiste en sumar el flujo medido procedente del objeto de estudio (en nuestro caso las estrellas seleccionadas) en un área centrada en el mismo. Para ello es necesario determinar el centro del objeto, el radio de apertura, el flujo del fondo de cielo en la región de apertura, y finalmente calcular la magnitud instrumental del objeto a partir del flujo medido.
+
+El radio de apertura se estableció teniendo en cuenta el seeing de la imagen, de forma tal que, asumiendo una excentricidad 0, nos aseguramos que el área de fotometría abarque completamente la mayor parte de la luz emitida por el objeto de estudio. Es importante escoger bien dichos radios, ya que si son pequeños podemos dejar de medir parte del flujo de la estrella e introducir errores sistemáticos, y si son demasiado grandes perderemos precisión en la medición de dichos flujos al estar abarcando parte del cielo y posible contaminación por objetos cercanos. 
+
+A las estrellas pertenecientes a NGC 6316 que se señalan en la figura \ref{Cúmulo}, a excepción de la estrella 4, se les realizó fotometría de apertura para el cálculo de su magnitud instrumental en los filtros V e I. Sin embargo, en el caso del filtro R no se llevó a cabo dicho procedimiento ya que no se encontraron datos en la literatura respecto a estas magnitudes con los que se pueda realizar una comparación posteriormente. La decisión de excluir la estrella 4 fue basada en el hecho de que se encuentra muy cercana a otra estrella, lo que contamina la fotometría de apertura. En la tabla \ref{Coordenadas de las estrellas} se presentan las coordenadas de las estrellas utilizadas. 
+
+%Figura A: cúmulo con las estrellas señaladas
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{ngc6316_i(bis) (1).png}
+\caption{NGC 6316, identificación de las estrellas utilizadas para el cálculo de magnitudes instrumentales. Imagen tomada el 13/5/23 con el telescopio principal de la EABA. Norte arriba, Este a la izquierda.}
+\label{Cúmulo}
+\end{figure}
+
+%Tabla A: Coordenadas de las estrellas
+
+\begin{table}[!t]
+\centering
+\caption{Coordenadas J2000 de las estrellas de NGC 6316 utilizadas para el cálculo de magnitud instrumental.}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+\!\!\textbf{Estrella} & \!\!\!\!$\boldsymbol{\alpha}$& \!\!\!\!$\boldsymbol{\delta}$ & \!\!\!\!\\
+& \!\!\!\! [h m s] & \!\!\!\![° ' \ "] \\
+\hline\noalign{\smallskip}
+\!\! 1 & 17 16 38.8	& -28 09 12.9  \\
+\!\! 2 & 17 16 41.4	& -28 07 54.8  \\
+\!\! 3 & 17 16 39.0	& -28 07 21.2  \\
+\!\! 5 & 17 16 39.6	& -28 09 43.9  \\
+\!\! 6 & 17 16 35.5	& -28 06 55.5 \\
+\!\! 7 & 17 16 31.5	& -28 07 29.1  \\
+\!\! 8 & 17 16 41.6 & -28 10 23.5 \\
+\!\! 9 & 17 16 30.6	& -28 06 35.7 \\
+\hline
+\end{tabular}
+\label{Coordenadas de las estrellas}
+\end{table}
+
+Se utilizaron las tareas de IRAF del paquete APPHOT (Aperture Photometry), correspondientes a fotometría de apertura. Este paquete se encarga, entre otras cosas, de calcular el flujo del fondo del cielo alrededor de cada estrella seleccionada, considerando los píxeles en un anillo centrado en la misma. Se tomaron radios de 2.5, 3 y 4 píxeles, para realizar luego una comparación entre ellos y determinar cual brinda un mejor resultado. A través de estas tareas se calcularon las magnitudes instrumentales de cada estrella indicada anteriormente, en los filtros V e I.
+
+Por último, realizamos un ajuste lineal entre las magnitudes V e I de \citep{2016A&A...590A...9D}, y las magnitudes instrumentales que se calcularon con IRAF, con el fin de evaluar la calidad de nuestro trabajo. Los datos del ajuste se presentan en la tabla \ref{Datos del ajuste}, y las rectas correspondientes a éste, en la figura \ref{Rectas}. 
+
+%Tabla B: Datos del ajuste
+
+\begin{table}[!t]
+\centering
+\caption{Parámetros de Ajuste}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+\!\!\textbf{Parámetros} & \!\!\!\!\textbf{Radio 2.5} & \!\!\!\!\textbf{Radio 3} & \!\!\!\!\textbf{Radio 4} \!\!\!\!\\
+\textbf{de ajuste} & \!\!\!\!  & \!\!\!\! & \!\!\!\!  \\
+\hline\noalign{\smallskip}
+\!\! & \textbf{Filtro I} &  &   \\
+\hline\noalign{\smallskip}
+\!\!Correlación & 0.991 & 0.993 & 0.995 \\
+\!\!Desviación Estándar & 0.060 & 0.053 & 0.045\\
+\hline\noalign{\smallskip}
+\!\! & \textbf{Filtro V} &  &   \\
+\hline\noalign{\smallskip}
+\!\!Correlación & 0.9645 & 0.9652 & 0.9311  \\
+\!\!Desviación Estándar & 0.0897 & 0.0867 & 0.1154 \\
+\hline
+\end{tabular}
+\label{Datos del ajuste}
+\end{table}
+
+
+%Figura B: Rectas
+
+\begin{figure*}
+		\centering
+		\subfigure{
+		%\label{Figura}
+		      \includegraphics[width=0.9\columnwidth]{Poster_gráfico_i.png}
+        }
+		\subfigure{
+        %\label{Figura}
+            \includegraphics[width=0.9\columnwidth]{imagen_final1.png}
+        }
+        
+		\caption{Ajuste lineal de las magnitudes instrumentales en función de las magnitudes encontradas en la literatura, para los tres diafragmas utilizados. \emph{Panel izquierdo:} filtro I. \emph{Panel derecho:} filtro V}
+		\label{Rectas}
+		
+\end{figure*}
+
+
+
+
+
+\section{Resultados}\label{sec:guia}
+
+%Resultados reducción de imágenes (lo del poster)
+
+
+En la Figura \ref{imagenes procesadas} podemos observar que luego de realizar las correcciones las imágenes
+presentan una mejoría apreciable, desapareciendo la mayor parte de los efectos asociados al CCD. Ciertos casos, como las líneas observadas en el panel central, no pudieron ser completamente eliminados.
+
+
+
+%Resultados de la determinación de magnitudes 
+
+En la determinación de magnitudes instrumentales de las estrellas de NGC 6316, utilizando fotometría de apertura, se obtuvo para el caso del filtro I que el radio de 4 píxeles $(I_{4})$ nos brinda mejores parámetros de ajuste, mientras que en el filtro V, los mejores resultados se obtuvieron con el radio de 3 píxeles $(V_{3})$. Los valores correspondientes se muestran en la tabla \ref{Magnitudes}.
+Cabe mencionar que al tratarse de una comparación entre magnitudes estándar y magnitudes instrumentales, no es de esperar que los valores calculados sean iguales a los encontrados en la literatura, sino que nos interesa comprobar la relación lineal y evaluar su dispersión.
+
+
+%Tabla C: magnitudes de paper, magnitudes instrumentales.
+
+\begin{table}[!t]
+\centering
+\caption{Magnitudes $I_{mag}$ y $V_{mag}$ de Dias et al.(2016), comparadas con las magnitudes instrumentales para el mejor radio en cada filtro.  }
+\begin{tabular}{lcccc}
+\hline\hline\noalign{\smallskip}
+\!\!\textbf{Estrella} & \!\!\!\! \boldmath{$I_{mag}$} & \!\!\!\! \boldmath{$I_{4}$} & \!\!\!\! \boldmath{$V_{mag}$} & \!\!\!\! \boldmath{$V_{3}$}  \\
+\hline\noalign{\smallskip}
+\!\! 1 & 15.03 & 15.25 & 16.86  & 24.96 \\
+\!\! 2 & 14.62 & 14.74 & 16.46 & 24.48\\
+\!\! 3 & 13.63 & 13.73 & 15.83 & 23.74 \\
+\!\! 5 & 14.44 & 14.67 & 16.45 & 24.54\\
+\!\! 6 & 14.53 & 14.65 & 16.39 & 24.78\\
+\!\! 7 & 14.74 & 14.86 & 16.51 & 24.39\\
+\!\! 8 & 14.82 & 14.93  & 16.59 & 24.57\\
+\!\! 9 & 15.10 & 15.24 & 16.83 & 24.69 \\
+\hline
+\end{tabular}
+\label{Magnitudes}
+\end{table}
+
+
+
+%\textbf{EL TRABAJO ES DE CORTE INSTRUMENTAL, POR LO QUE ME PARECE QUE HAY QUE INCLUIR UNA CONCLUSIÓN DE ESE TENOR, POR EJEMPLO: }
+\section{Conclusiones}
+ Con esta práctica hemos comprobado que utilizando el preprocesamiento estándar y posterior combinación de imágenes CCD adquiridas en la EABA, empleando las tareas usuales de IRAF, es posible hacer fotometría de apertura de estrellas en campos poco densos con una incerteza de 0.05mag en I y 0.09mag en V.
+
+ 
+ Finalmente, es importante que se conozcan las posibilidades de la imagen directa con el telescopio de 1.54m de la EABA, ya que cualquier miembro de la comunidad astronómica nacional puede solicitar tiempo en esta facilidad observacional en modo remoto, con los filtros actualmente disponibles: U, B, V, R, I, H-alfa y H-beta.
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=\columnwidth]{ejemplo_figura_Hough_etal.pdf}
+%\caption{El tamaño de letra en el texto y en los valores numéricos de los ejes es similar al tamaño de letra de este epígrafe. Si utiliza más de un panel, explique cada uno de ellos; ej.: \emph{Panel superior:} explicación del panel superior. Figura reproducida con permiso de \cite{Hough_2020}.}
+%\label{Figura}
+%\end{figure}
+
+
+
+%\begin{acknowledgement}
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+%\end{acknowledgement}
+
+%Creo que irían así
+
+\begin{acknowledgement}
+{Los autores agradecen a la FaMAF, al OAC y al COL por hacer posible la participación en la 65° RAAA}.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

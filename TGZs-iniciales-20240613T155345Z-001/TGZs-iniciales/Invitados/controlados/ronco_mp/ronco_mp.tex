@@ -1,0 +1,416 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{16 February 2024}
+\accepted{03 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Progenitores de planetas: evoluci\'on de discos protoplanetarios en diferentes ambientes estelares }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Macro BAAA65 con instrucciones de estilo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.P.Ronco\inst{1}
+}
+
+\authorrunning{Ronco}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mpronco@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astrof\'{\i}sica de La Plata, CONICET--UNLP, Argentina}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En este art\'{\i}culo presentamos un resumen sobre las caracter\'{\i}sticas m\'as importantes de los discos protoplanetarios, tanto desde un punto de vista observacional como te\'orico. Discutimos sobre los principales mecanismos f\'{\i}sicos que dan lugar a la evoluci\'on de su componente gaseosa, y su final disipaci\'on. Por \'ultimo comentamos c\'omo diferentes ambientes estelares pueden afectar a la evoluci\'on de estos objetos y sobre las implicancias que estos puedan tener en los procesos de formaci\'on planetaria.}
+
+\abstract{In this article, we present a summary of the most important characteristics of protoplanetary disks, both from an observational and theoretical point of view. We discuss the primary physical mechanisms that lead to the evolution of their gaseous components, as well as their eventual dissipation. Finally, we comment on how different stellar environments can impact the evolution of these objects and the implications they may have on planetary formation processes.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ protoplanetary disks --- accretion, accretion disks --- planets and satellites: formation }
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+Desde el descubrimiento del primer exoplaneta orbitando a una estrella de tipo solar en 1995 \citep{Mayor1995}, logro que le valió el premio Nobel a Michel Mayor y Didier Queloz en 2019, la b\'usqueda de exoplanetas más all\'a de nuestro Sistema Solar se ha convertido en uno de los objetivos m\'as importantes y ambiciosos de la astronom\'{\i}a moderna. En la actualidad, gracias a las diferentes t\'ecnicas de detecci\'on y a los esfuerzos de la comunidad cient\'{\i}fica por desarrollar instrumentaci\'on para tal fin, hemos sido capaces de confirmar la existencia de 5638 exoplanetas, que forman parte de 4153 sistemas planetarios, 895 de los cuales forman parte de sistemas planetarios m\'ultiples (\url{https://exoplanet.eu}).
+
+La existencia planetaria no queda restringida pura y exclusivamente a estrellas simples o aisladas. Tambi\'en se ha confirmado la existencia de planetas en sistemas estelares binarios, triples e incluso m\'ultiples, orbitando a una o m\'as estrellas de dichos sistemas. La cantidad conocida de este tipo de exoplanetas \citep[unos 217 ejemplares, ver][]{Schwarz2016}) es, sin embargo, baja a\'un respecto a la cantidad de exoplanetas conocidos que orbitan estrellas simples. Esta diferencia se debe principalmente a que las estrellas binarias han sido exclu\'{\i}das sistem\'aticamente de los m\'as grandes surveys de b\'usqueda de exoplanetas por las complicaciones t\'ecnicas que presentan. 
+
+Por otro lado, si bien las t\'ecnicas de observaci\'on favorecen la detecci\'on de exoplanetas alrededor de estrellas de masa solar o baja masa (F, G, K y M preferentemente), tambi\'en se ha logrado confirmar la existencia de exoplanetas alrededor de estrellas m\'as masivas, de tipo Herbig Ae/Be \citep{Borgniet2019,Berger2020,Wagner2022}. La detecci\'on planetaria alrededor de estas estrellas en secuencia principal es compleja por dos motivos: Por un lado, al ser m\'as masivas y m\'as grandes, la raz\'on de radios entre el planeta y la estrella puede ser muy peque\~na como para lograr ser detectada por el m\'etodo de tr\'ansito. Por otro lado, al ser m\'as calientes, presentan pocas l\'ineas de absorci\'on que adem\'as pueden verse ensanchadas debido a la alta rotaci\'on estelar. Estos efectos hacen casi imposible la detecci\'on de exoplanetas por el m\'etodo de velocidades radiales \citep{Lagrange2009}. Sin embargo estos problemas disminuyen cuando las estrellas son evolucionadas. Al ser m\'as fr\'{\i}as presentan un mayor n\'umero de l\'ineas de absorci\'on, y al ser rotadores lentos dichas l\'{\i}neas ya no sufren de ensanchamiento \citep{Johnson2008}.
+
+Por último, pero no menos importante, se han detectado recientemente los primeros exoplanetas alrededor de estrellas enanas blancas \citep{Gansicke2019,Vandenburg2020,Blackman2021} que ya han sufrido los efectos de la evoluci\'on estelar. El or\'{\i}gen general de este tipo de planetas es a\'un incierto. Algunos trabajos sugieren que pueden ser planetas de segunda generaci\'on \citep{BearSoker2015}, o que se formaron por procesos de envoltura com\'un \citep{Lagos2021}, o que alcanzaron esas posiciones cercanas a la enana blanca central por medio de diferentes mecanismos din\'amicos \citep[ver][y las referencias all\'{\i} mencionadas]{Veras2021Rev}. 
+
+En definitiva, la evidencia observacional nos muestra entonces que la formaci\'on planetaria es un proceso frecuente, mucho m\'as com\'un de lo que alguna vez imaginamos. Pero ¿c\'omo y d\'onde se forman los planetas?
+
+Los planetas se forman en discos de gas y polvo alrededor de estrellas j\'ovenes. La formaci\'on de estos discos es tambi\'en un proceso com\'un y un sub-producto de la formaci\'on estelar. Debido a su rol como progenitores de planetas es que los llamamos usualmente ``discos protoplanetarios''. Las caracter\'{\i}sticas f\'{\i}sicas y orbitales de los exoplanetas est\'an \'{\i}ntimamente vinculadas a los discos protoplanetarios en los que se forman. Discos de diferente masa, tama\~no, composici\'on, tipo de evoluci\'on y escalas de tiempo de disipaci\'on formar\'an arquitecturas planetarias muy diversas. Comprender con detalle estos escenarios es entonces fundamental no s'olo para mejorar las condiciones iniciales y parámetros f\'{\i}sicos necesarios en los modelos de formaci\'on planetaria, si no tambi\'en para lograr, a partir de ellos, reproducir con \'exito las poblaciones planetarias observadas.
+
+El objetivo de este resumen es el de describir las caracter\'{\i}sticas m\'as importantes de los discos protoplanetarios, sus procesos evolutivos y c\'omo estos pueden cambiar en diversos escenarios estelares, para dar lugar luego a los procesos de formaci\'on planetaria.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{¿ Qu\'e nos dicen las observaciones sobre los discos protoplanetarios ?}\label{S_intro}
+
+Las primeras observaciones de discos protoplanetarios se remontan a la d\'ecada del 80. En aquellos momentos, la tecnolog\'{\i}a disponible era insuficiente para resolver el material del disco y por lo tanto los estudios sobre estos objetos eran limitados y basados \'unicamente en la forma de su distribuci\'on espectral de energ\'{\i}a (SED por sus siglas en ingl\'es) que mide la distribuci\'on de flujo en funci\'on de la longitud de onda. Sin embargo, gracias tanto al Telescopio Espacial Hubble que permiti\'o en 1992 resolver por primera vez discos protoplanetarios alrededor de estrellas en la Nebulosa de Orión \citep{ODellll1993}, como m\'as recientemente a ALMA (Atacama Large
+Millimeter/submillimeter Array) \citep{ALMA2015} y al instrumento SPHERE, en el VLT \citep{Garufi2017}, el conocimiento en el área se ha revolucionado debido a la resoluci\'on sin precedentes con la que podemos observar estos objetos.
+
+La figura \ref{Figura1} muestra una combinaci\'on de tres im\'agenes diferentes del mismo disco TW Hya. Cada tercio de la im\'agen compuesta sigue un trazador diferente que a su vez nos habla sobre una componente diferente del disco: la luz dispersada \citep{vanBoekel2017}, la emisi\'on t\'ermica del cont\'{\i}nuo \citep{Andrews2016} y la emisi\'on de la l\'{\i}nea espectral del CO \citep{Huang2018}. La luz dispersada representa la luz de la estrella reflejada por los granos de polvo m\'as peque\~nos, de tama\~no microm\'etrico, que se encuentran suspendidos en la superficie de la componente gaseosa del disco. La luz proveniente de la emisi\'on cont\'{\i}nua representa a las part\'{\i}culas de polvo m\'as grandes, de tama\~nos entre el mil\'{\i}metro y el cent\'{\i}metro, que se encuentran ya asentadas al plano medio del disco. Finalmente, la emisi\'on de algunas l\'{\i}neas espectrales de mol\'eculas poco comunes, como el CO por ejemplo, nos ayudan a entender el comportamiento de la componente gaseosa del disco. Las estructuras, sus tama\~nos y otras caracter\'{\i}sticas que provee cada trazador son diferentes y complementarias para poder entender con mayor detalle al disco protoplanetario de manera global.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Disco-Completo-Texto.pdf}
+\caption{Esquema de la estructura transversal de un disco protoplanetario. Las zonas sombreadas verde, amarilla y azul denotan aproximadamente las regiones donde se generan trazadores como la emisión térmica, la luz dispersada y las l\'{\i}neas de emisi\'on molecular. Las im\'agenes se corresponden a observaciones del disco TW Hya en emisi\'on térmica proveniente de part\'{\i}culas milim\'etricas \citep{Andrews2016}, de luz dispersada \citep{vanBoekel2017}, y de la emisi\'on de la l\'{\i}nea espectral de CO \citep{Huang2018}. Figuras similares pueden verse en los art\'{\i}culos de revisi\'on \citet{Andrews2020} y \citet{Birnstiel2023}.}
+\label{Figura1}
+\end{figure}
+
+\subsection{Clasificaci\'on}\label{Clasificacion}
+
+Convencionalmente, los objetos estelares j\'ovenes (YSOs por sus siglas en ingl\'es) se clasifican desde hace d\'ecadas seg\'un c\'omo es la forma de su SED en la regi\'on infrarroja, en cuatro clases principales. Los objetos de Clase 0 y I que representan a la estrella en formaci\'on y/o con un disco masivo, pero en donde aún estos objetos no son distinguibles uno del otro. Los objetos Clase II que representan a las cl\'asicas estrellas T-Tauri donde podemos ver la fase o etapa de disco protoplanetario, y finalmente los objetos de Clase III que representan la etapa final de la vida del disco, cuando el mismo se ha disipado.
+
+\subsection{Determinaci\'on de edades}\label{Edades}
+
+Las edades de los discos protoplanetarios son particularmente importantes porque restringen fuertemente los procesos de formaci\'on planetaria. Dado que los planetas gigantes gaseosos se forman inmersos en estos discos de gas y polvo, para poder lograrlo, deben ser capaces de hacerlo en escalas de tiempo m\'as cortas o acordes a las escalas de tiempo de disipaci\'on de sus discos anfitriones. 
+Las edades de los discos se asocian a la edad estelar, particularmente a la edad del c\'umulo al cual la estrella pertenece, y pueden determinarse observacionalmente de dos formas diferentes que est\'an vinculadas tambi\'en a la manera en la cual se los clasifica (ver sec. \ref{Clasificacion}). La primera es midiendo el exceso en el infrarrojo de la emisi\'on cont\'{\i}nua (SED) de la estrella j\'oven, que indica la presencia de polvo de tama\~no m\'aximo del orden del cent\'{\i}metro. Esta emisi\'on infrarroja decae exponencialmente con la edad estelar y ha mostrado que las escalas de tiempo t\'{\i}picas de disipaci\'on var\'{\i}an entre 1 a 10 millones de a\~nos con una media en ~3 millones de a\~nos \citep{Mamajek2009,Ribas2015}. Es importante destacar sin embargo que muchas de estas estimaciones pueden estar sesgadas observacionalmente debido a que son dominadas por c\'umulos j\'ovenes y distantes. \citet{Pfalzner2014} y \citet{Pfalzner2022} sugieren que en estos casos puede haber una sobre-representaci\'on de estrellas de alta masa, cuyos discos disipan m\'as r\'apidamente. En cambio, cuando se tienen en cuenta c\'umulos cercanos, con distancias menores a los 200 pc, y en los cuales pueden medirse las edades de una mayor cantidad de estrellas de baja masa, este efecto se minimiza aumentando la vida media de los discos.
+
+La segunda forma de estimar edades es teniendo en cuenta la acreci\'on de gas por parte de la estrella central debido a la evoluci\'on viscosa del disco protoplanetario y las estimaciones observacionales de la masa de dichos discos. Durante la acreci\'on se libera energ\'{\i}a que puede ser detectada en el espectro ultravioleta de la estrella. Combinando estas mediciones, que en general arrojan tasas t\'{\i}picas de acreci\'on del orden de $10^{-8}M_\odot$/a\~no en estrellas j\'ovenes, y las masas estimadas de los discos, que rondan valores t\'{\i}picos de $\sim0.01M_\odot$, las escalas de tiempo de disipaci\'on son del orden de los $10^6$ a\~nos. 
+
+Es importante mencionar que, dado el fuerte acople entre el polvo y el gas, las estimaciones de edades de los discos a partir de la medici\'on del exceso en el infrarrojo tambi\'en indican o representan, de manera indirecta, las escalas de tiempo de disipaci\'on del disco de gas. En general, ambas formas de estimar las edades tienen buen acuerdo \citep[ver la fig. 4 de][]{Fedele2010}.
+
+\section{Formación de discos protoplanetarios}\label{Formacion}
+
+Los discos protoplanetarios, o tambi\'en usualmente denominados discos de acreci\'on (ver Sec. \ref{Evolucion}), se forman alrededor de estrellas j\'ovenes como consecuencia natural del colapso gravitatorio de una nube de gas molecular, para conservar el momento angular. Generalmente y considerando las condiciones t\'{\i}picas del medio interestelar, se asume que estos discos est\'an formados por un 1\% de su masa en forma de part\'{\i}culas submilim\'etricas de silicatos y/o hielos, y un 99\% en forma de gas compuesto principalmente por H$_2$ y He \citep{Armitage2010}. Sin embargo estas proporciones pueden cambiar dependiendo de las caracter\'{\i}sticas de la estrella anfitriona. En escalas de tiempo cortas, de unos 1000 a 10000 a\~nos, el polvo se asienta al plano medio del disco y comienza a crecer, dando lugar primero a la formaci\'on de pebbles (part\'{\i}culas del tama\~no del orden del cm) \citep{Weidenschilling1977,Brauer2008}. Debido a las diferencias relativas entre la velocidad azimutal del gas, que al ser soportada por presi\'on es sub-kepleriana, y la velocidad azimutal de las pebbles, que es kepleriana, las pebbles sufren un fuerte decaimiento orbital hacia la estrella central que complica significativamente la formaci\'on de cuerpos m\'as masivos \citep{Weidenschilling1977}. 
+
+Procesos f\'{\i}sicos como el Streaming Instability \citep{YoudinGoodman2005,Johansen2007}, bastante aceptado por la comunidad cient\'{\i}fica en la actualidad como el mecanismo que mejor resuelve el gran problema de las barreras de crecimiento, las pebbles pueden acumularse en ciertas regiones del disco y formar de manera espont\'anea cuerpos kilométricos conocidos como planetesimales. Estos objetos contin\'uan creciendo para formar embriones planetarios, los cuales crecen por la acreci\'on de pebbles \citep{Ormel10,JohansenLambrechts2017}, planetesimales \citep{Mordasini2009, Ronco2017} o ambos tipos de s\'olidos \citep{Alibert2018, Guilera2020}, hasta alcanzar masas suficientes para ligar grandes cantidades de gas, en el marco del mecanismo de la acreci\'on del n\'ucleo \citep{Pollack1996, Guilera2010, Guilera2020}. 
+
+En este resumen nos dedicaremos a detallar \'unicamente la evoluci\'on de la componente gaseosa del disco. Para una descripci\'on pormenorizada sobre la evoluci\'on y la din\'amica del polvo y las pebbles referimos al lector al reciente trabajo de revisi\'on \citet{Birnstiel2023}.
+
+\section{Evoluci\'on de un disco circumestelar}\label{Evolucion}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Evolucion-de-Discos.pdf}
+\caption{Esquema sobre las morfolog\'{\i}as t\'{\i}picas que presenta un disco protoplanetario de Clase II que evoluciona por acreci\'on viscosa y fotoevaporaci\'on hacia un disco de Clase III. Inicialmente y durante el primer mill\'on de a\~nos, la p\'erdida de masa del disco de gas est\'a dominada por la acreci\'on viscosa (arriba). Cuando la fotoevaporaci\'on se hace efectiva, abre un gap en el disco y lo separa en dos. El disco interno se pierde r\'apidamente porque es acretado por la estrella central mientras el externo contin\'ua perdiendo masa por fotoevaporaci\'on (medio). Finalmente, el disco externo disipa por completo afectado por fotoevaporaci\'on directa de la estrella central.}
+\label{Evolucion}
+\end{figure}
+
+Los modelos est\'andar que intentan reproducir la evoluci\'on de los discos protoplanetarios se basan en la teor\'{\i}a cl\'asica de los discos de acreci\'on \citep[ej.][]{Pringle1981}, y por tal motivo los discos protoplanetarios son tambi\'en usualmente denominados discos de acreci\'on. En estos discos, el principal mecanismo de transporte de momento angular es la viscosidad turbulenta, la cual puede ser generada ya sea por inestabilidades magnetohidrodin\'amicas, como la inestabilidad magnetorotacional \citep[MRI por sus siglas en ingl\'es,][]{Balbus1991}, o por inestabilidades hidrodinámicas \citep[ver por ejemplo el trabajo de][]{Lyra2019}. En general, y dada la complejidad del problema, los modelos globales de evoluci\'on de discos protoplanetarios adoptan que la viscosidad turbulenta $\nu$ est\'a caracterizada a trav\'es de un par\'ametro adimensional $\alpha$ \citep{Shakura1973}, con $\nu= \alpha c_{\text{s}} H$ y donde  $c_s$ es la velocidad del s\'onido y $H$ la escala de altura del disco. 
+
+Considerando que el disco es axisim\'etrico (y adoptando simetr\'{\i}a cil\'{\i}ndrica), puede mostrarse que las ecuaciones de Navier-Stokes --que involucran la conservaci\'on de la masa y del momento angular para el fluido-- se reducen a una ecuaci\'on de difusi\'on unidimensional para la densidad superficial de gas dada por \citep{Pringle1981, Frank1992} 
+\begin{equation}
+\dfrac{\partial\Sigma}{\partial t}- \dfrac{3}{r}\dfrac{\partial}{\partial r}\left[r^{1/2}\dfrac{\partial}{\partial r}(r^{1/2}\,\nu\,\Sigma)\right] = 0 %\dot{\Sigma}_{\rm PW}, 
+\label{eq:diff-gas}
+\end{equation}
+en donde $t$ es el tiempo, $r$ representa a la coordenada radial, y $\Sigma$ es la densidad superficial de gas.
+
+Si bien el modelo de acreci\'on viscosa es el m\'as utilizado para estudiar la evoluci\'on de un disco protoplanetario, no es capaz de reproducir por s\'{\i} solo ni la transici\'on entre discos de Clase II a Clase III, ni las escalas de tiempo de disipaci\'on de los discos observados (ver sec. \ref{Edades}) que son mucho m\'as cortas que las de la evoluci\'on viscosa. Para lograrlo es necesario introducir un segundo mecanismo de p\'erdida de masa, y el m\'as plausible es la fotoevaporaci\'on del disco por parte de la estrella central. La fotoevaporaci\'on es el proceso por el cual la radiaci\'on ultravioleta o de rayos X calienta la superficie del disco hasta que el gas se vuelve lo suficientemente caliente como para escapar del potencial gravitatorio como un viento impulsado t\'ermicamente. Se modela incluyendo un sumidero en la ec. \ref{eq:diff-gas}. Es decir, en vez de igualar la ecuaci\'on a cero, se la iguala a un t\'ermino $\dot{\Sigma}_{\rm PW}$, que representa la p\'erdida de densidad superficial (o equivalentemente, p\'erdida de masa del disco) por fotoevaporaci\'on interna.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\columnwidth]{Evol-Ec-Difusion-Disco-Gas.pdf}
+\caption{Capturas de la evoluci\'on temporal de la densidad superficial de gas de un disco protoplanetario que evoluciona por acreci\'on viscosa y fotoevaporaci\'on por parte de la estrella central (eq. \ref{eq:diff-gas}) en tiempos que representan las etapas descriptas por la figura \ref{Figura1}. Disco completo (panel superior), disco Pre-transicional (panel medio) y disco de Transici\'on (panel inferior).}
+\label{Perfiles}
+\end{figure}
+
+La figura \ref{Evolucion} representa esquem\'aticamente las etapas de un disco que evoluciona por acreci\'on viscosa y fotoevaporaci\'on. Inicialmente el disco est\'a completo y evoluciona predominantemente por acreci\'on viscosa (arriba). Parte del material cae a la estrella central y parte se expande hacia las zonas externas mientras la fotoevaporaci\'on remueve poca masa. Esta etapa tiene una duraci\'on aproximada de un mill\'on de a\~nos. Cuando la fotoevaporaci\'on es lo suficientemente fuerte, es capaz de abrir una brecha en el disco de gas y de dividirlo en dos (medio). La parte interna es r\'apidamente acretada por la estrella central mientras que la externa se expande viscosamente hacia afuera y pierde masa por fotoevaporaci\'on. Generalmente denominamos esta estructura disco pre-transicional o de pre-transici\'on. Finalmente, una vez que el disco interno disipó, el externo contin\'ua perdiendo masa debido ahora a la fotoevaporaci\'on directa por parte de la estrella central (abajo). Usualmente se denomina a estos discos, discos de transici\'on. La figura \ref{Perfiles} muestra capturas  de la evoluci\'on temporal de la densidad superficial de gas de un disco protoplanetario t\'{\i}pico que evoluciona por acreci\'on viscosa y fotoevaporaci\'on (soluciones de la ec. \ref{eq:diff-gas}, computadas con el c\'odigo PlanetaLP \citep{Ronco2017,Guilera2020}). El panel superior representa la etapa inicial donde vemos el disco completo, el panel del medio representa la etapa en la que el gap se abre en el disco debido a que la fotoevaporaci\'on se hace eficiente y se forma un disco pre-transicional, y el panel inferior muestra la etapa final, de disco de transici\'on, en la que la fotoevaporaci\'on act\'ua de manera directa sobre el disco externo. La evoluci\'on reci\'en descripta suele denominarse evoluci\'on \textit{de adentro hacia afuera} o \textit{inside-out evolution} en ingl\'es \citep{Gorti2009,Owen2010,Kunitomo2021}.
+
+Adem\'as, el proceso de fotoevaporaci\'on no s\'olo depende de la fuente que lo provoca sino tambi\'en de la energ\'{\i}a de los fotones involucrados en el mismo \citep{Hollenbach1994} y de d\'onde \'estos se originan. La radiación puede provenir de la fot\'osfera estelar y ser ultravioleta lejana (FUV) (6 eV $<$ E $<$ 13.6 eV) o ultravioleta extrema (EUV) (13.6 eV $<$ E $<$ 100 eV), o puede deberse a rayos-X (E $>$ 100 eV) generados en la corona  estelar. \citet{Kunitomo2021} mostr\'o que para estrellas con masas menores a las $~2~\text{M}_{\odot}$, la radiaci\'on de rayos-X es la componente principal de la fotoevaporaci\'on interna \citep[ej.][]{Owen2012, Picogna2019}, mientras que para estrellas de masas mayores a las $~2~\text{M}_{\odot}$ la irradiaci\'on FUV de la estrella central es la componente dominante \citep[ej.][]{Gorti2009, Kunitomo2021}.
+
+ \subsection{Discos que evolucionan por vientos magn\'eticos}
+
+Si bien los modelos de discos de acreci\'on viscosa pueden reproducir muchos de los observables actuales asociados a los discos protoplanetarios \citep[ver][]{Manara2023}, resultados recientes sugieren que las viscosidades bajas podrían ser la norma \citep[ver][y las referencias all\'{\i} mencionadas]{Rosotti2023}. De ser as\'{\i}, esto significa que la viscosidad turbulenta puede no ser la \'unica fuente involucrada en la dispersi\'on de los discos. En los últimos a\~nos, ha emergido una nueva teor\'{\i}a que vincula la evoluci\'on de los discos protoplanetarios y los vientos asociados a sus campos magn\'eticos. En el contexto de la evolución impulsada por vientos magn\'eticos, la evoluci\'on del disco est\'a gobernada por la eliminaci\'on del momento angular en lugar de por el transporte, como ocurre con la viscosidad. El viento es lanzado por el campo magn\'etico que media el intercambio de momento angular entre el material que queda en el disco y el viento. De esta manera, el viento magn\'etico se caracteriza por la tasa a la cual elimina masa y por la tasa a la cual elimina momento angular \citep{Suziki2016}. 
+
+\section{Discos en sistemas estelares binarios y/o m\'ultiples}
+
+M\'as del 50\% de las estrellas de tipo solar forman parte de sistemas estelar binarios \citep{Raghavan2010}. Resultados observacionales \citep{Duchene2013} como te\'oricos y num\'ericos \citep{Bate2018} nos han mostrado que la multiplicidad estelar es un resultado com\'un del proceso de formaci\'on estelar. Particularmente sabemos que cuanto m\'as j\'oven es un objeto estelar, mayor es la probabilidad de que forme parte de un sistema estelar m\'ultiple \citep{Reipurth2014}. En consecuencia, tambi\'en es un proceso com\'un la formaci\'on de discos protoplanetarios en estos escenarios, aunque sus propiedades, evoluci\'on y escalas de tiempo de disipaci\'on difieren de aquellos que s\'olo orbitan a una \'unica estrella.
+
+Los discos protoplanetarios en sistemas estelares binarios pueden clasificarse en dos tipos. Por un lado est\'an los discos tipo S que son los que se encuentran orbitando a una de las estrellas de un sistema estelar binario. Estos sistemas son lo progenitores de planetas tipo S \citep{Dvorak1982}. El disco puede estar orbitando a la estrella primaria (disco circumprimario) o a la estrella secundaria (disco circumsecundario), o puede haber casos en donde cada estrella posea un disco. Por otro lado est\'an los discos tipo P, o discos circumbinarios, progenitores de planetas tipo P o circumbinarios \citep{Dvorak1984}, los cuales orbitan a ambas estrellas de un sistema estelar binario. 
+
+En sistemas estelares jer\'arquicos triples o cu\'adruples, los discos son en general circumbinarios, siendo orbitados por una estrella o un sistema binario externo, respectivamente. Ejemplos t\'{\i}picos de estos casos son los discos en el sistema triple TWA3 \citep{Czekala2021} y en el sistema cu\'adruple HD 98800 \citep{Soderblom1996, Ribas2018,Kennedy2019,Zuniga2021}. La figura \ref{Multiples} muestra una representaci\'on esquem\'atica de estos escenarios.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Evolucion-de-Discos-Binarios.pdf}
+\caption{Esquema que representa posibles configuraciones entre los discos protoplanetarios y los sistemas estelares binarios. Discos tipo P (arriba) son discos protoplanetarios que orbitan a ambas estrellas de un sistema estelar binario. Discos tipo S (medio) en los cuales el disco orbita a una de las estrellas del sistema estelar binario. Discos en un sistema estelar jer\'arquico triple (abajo), donde se tiene un disco circumbinario orbitado a su vez por una tercer estrella (o un sistema estelar binario en el caso de un sistema jer\'arquico cu\'adruple). }
+\label{Multiples}
+\end{figure}
+
+A pesar de la complejidad en la detecci\'on debido a las grandes distancias a las regiones cercanas de formaci\'on estelar (mayores a los 140 pc), a las limitaciones t\'ecnicas en los actuales telescopios para poder resolver sistemas estelares binarios, y al hecho de que en general los discos son m\'as peque\~nos y menos masivos en estos escenarios, conocemos un gran n\'umero de discos en sistemas estelares binarios y/o m\'ultiples \citep[ver detalles en el reciente art\'iculo de revisi\'on][]{Zurlo2023}.
+
+La evoluci\'on de los discos en estos escenarios estelares y sus escalas de tiempo de disipaci\'on son diferentes respecto a las de discos protoplanetarios alrededor de estrellas simples. Los discos tipo S son en general m\'as peque\~nos y menos masivos que los cl\'asicos circumestelares debido a los efectos de truncamiento por los torques tidales que genera la compa\~nera estelar externa \citep{ArtymowiczLubow1994}. Estos torques evitan que el disco se expanda viscosamente m\'as all\'a del radio de truncamiento, que se estima es del orden de un tercio de la separaci\'on entre las estrellas (medido desde la posici\'on de la estrella central) \citep{PapaloizouPringle1977}, y por lo tanto, disipan m\'as r\'apidamente que los discos circumestelares. 
+
+Los discos tipo P se ven afectados por los torques tidales generados por la binaria central pero principalmente en su regi\'on interna. Se produce una competencia entre los torques ejercidos por la binaria, que empujan el borde interno del disco hacia afuera, y la evoluci\'on viscosa que intenta lograr lo opuesto. Esta competencia da lugar a la formaci\'on de una cavidad entre la binaria y el borde interno del disco cuyo tama\~no se estima es de aproximadamente tres veces la separaci\'on de ambas estrellas \citep{ArtymowiczLubow1994,ArtymowiczLubow1996}. El efecto directo y m\'as importante de esta cavidad es el de evitar o disminuir la acreci\'on viscosa, lo que aumenta las escalas de tiempo de disipaci\'on respecto a los casos circumestelares.
+
+Al igual que en discos circumestelares (ver secci\'on \ref{Evolucion}), la fotoevaporaci\'on tambi\'en juega un rol crucial en los discos en sistemas estelares binarios. \citet{Rosotti2018} mostraron que en discos tipo S afectados por fotoevaporaci\'on interna por rayos-X y por los torques de la compa\~nera estelar externa, la evoluci\'on del disco puede ser de tipo \textit{de adentro hacia afuera} (ver fig. \ref{Evolucion}) o de \textit{afuera hacia adentro} dependiendo de la separaci\'on de ambas estrellas. Para un estudio de la din\'amica del polvo en estos escenarios referimos al lector al trabajo de \citet{Zagaria2023}.
+
+Por otro lado, \citet{Alexander2012} estudi\'o la evoluci\'on de discos tipo P o circumbinarios teniendo en cuenta los torques tidales y la fotoevaporaci\'on generada por la binaria. Encontr\'o que es justamente la fotoevaporaci\'on quien determina las escalas de tiempo de disipaci\'on de los discos, y que el proceso de disipaci\'on deja una huella en la distribuci\'on de las duraciones de vida de los discos circumbinarios, con un aumento notable en las edades de discos con separaciones entre ambas estrellas de entre $\sim$0.3 y 1 ua.
+
+M\'as recientemente, \citet{Ronco2021} estudiaron los efectos de los torques tidales y la fotoevaporaci\'on en la evoluci\'on de discos protoplanetarios en sistemas estelares jer\'arquicos triples. Dichos autores lograron mostrar que debido a la cavidad interna del disco generada por la binaria interna, y el truncamiento externo del disco generado por el torque de la estrella externa, los discos en estos escenarios evolucionan de manera confinada, no pudiendo as\'{\i} expandirse hacia adentro o afuera. De esta manera pierden masa \'unicamente por efectos de la fotoevaporaci\'on de la binaria central y no por acreci\'on/evoluci\'on viscosa. El resultado interesante es que, a pesar de ser escenarios extremadamente hostiles, permiten extender la vida de sus discos por varios millones de a\~nos. 
+
+\section{Discos en estrellas de masa intermedia}
+
+Las estrellas m\'as masivas que el Sol, tipo Herbig Ae/Be tambi\'en exhiben discos protoplanetarios. Muchos de ellos presentan estructuras de gas y polvo, como asimetr\'{\i}as, espirales y anillos que podr\'{\i}an estar asociadas a la existencia de planetas masivos \citep{Dong2015,Pinte2018}. 
+Sin embargo, diversos estudios, tanto observacionales como te\'oricos apuntan a que los procesos de formaci\'on planetaria pueden verse desfavorecidos en estos escenarios debido a la aparentemente r\'apida evoluci\'on (y por ende disipaci\'on) que presentan frente a otros que evolucionan alrededor de estrellas menos masivas \citep{KennedyKenyon2009,Ribas2015,Kunitomo2021,Luhman2022}. 
+
+Las estrellas de masa intermedia evolucionan m\'as r\'apido que las estrellas de baja masa. Los cambios que estas estrellas sufren en su estructura interna y temperatura efectiva durante los primeros millones de a\~nos de vida pueden resultar cruciales en la evoluci\'on de sus discos protoplanetarios. \citet{Kunitomo2021} fueron los primeros en estudiar la evoluci\'on de discos protoplanetarios alrededor de estrellas de masa intermedia, teniendo en cuenta los efectos de la evoluci\'on estelar. Estos autores mostraron que los cambios en las luminosidades de rayos-X y FUV que sufren las estrellas m\'as masivas debido a que se vuelven radiativas r\'apidamente, afectan y cambian las tasas de fotoevaporaci\'on de los discos, y por ende a sus escalas de tiempo de disipaci\'on. El resultado m\'as importante es que, considerando los efectos de la evoluci\'on estelar, las escalas de tiempo de disipaci\'on de los discos disminuye con la masa estelar, en acuerdo con trabajos previos. Sin embargo, no encuentran entre sus resultados cambios significativos en la forma en la que evolucionan estos discos, que lo hacen como es usual, de adentro hacia afuera.
+
+M\'as recientemente, y con el objetivo de estudiar a futuro los procesos de formaci\'on planetaria en estrellas de masa intermedia, \citet{Ronco2024} extendieron el trabajo de \citet{Kunitomo2021} haciendo un estudio m\'as minucioso de los par\'ametros del disco involucrados. Si bien estos autores encontraron escalas de tiempo de disipaci\'on de los discos muy similares a las halladas por \citet{Kunitomo2021}, encontraron que la forma en la que evolucionan tambi\'en cambia con el aumento de la masa estelar siendo de tipo \textit{de adentro hacia afuera} para estrellas de $1M_\odot$ pero siendo de tipo \textit{de afuera hacia adentro} para estrellas de $3M_\odot$. Estos cambios en la forma en la que evoluciona el disco de gas puede ser crucial para los procesos de formaci\'on planetaria.
+
+\section{Discos afectados por fotoevaporaci\'on externa}
+
+La fotoevaporaci\'on de lo discos protoplanetarios puede ser tambi\'en externa, y se vuelve relevante cuando el campo de radiación UV de las estrellas masivas cercanas es significativo \citep[ver por ejemplo][]{Andrews2022}. Este fen\'omeno, como se ha mostrado previamente, juega un rol importante en la evoluci\'on de la masa, radio y en las escalas de tiempo de vida de los discos \citep{Ansdell2017,Eisner2018, Winter2020}.
+
+La evoluci\'on de discos circumestelares afectados tanto por fotoevaporaci\'on interna y externa fue estudiada por diferentes autores. Particularmente, y dependiendo del grado de viscosidad del disco, \citet{Coleman2022} encontr\'o que la forma en la que los discos evolucionan no es siempre la t\'{\i}pica 'de adentro hacia afuera', si no que puede haber otros escenarios intermedios hasta alcanzar la evoluci\'on 'de afuera hacia adentro'. Los cambios significativos en la forma en la que evolucionan los discos son de crucial importancia y pueden cambiar las reglas de juego a la hora de estudiar procesos de formaci\'on planetaria.
+
+\section{Efectos sobre los procesos de formaci\'on planetaria}
+
+Los planetas se forman a partir del polvo y del gas que poseen los discos protoplanetarios. Es por tal motivo que las caracter\'{i}sticas de estos objetos, como ser sus masas, tama\~nos, cavidades, truncamientos, sus viscosidades y la forma en la que evolucionan, son cruciales a la hora de dar lugar o no a los procesos de formaci\'on planetaria que determinar\'an las diferentes arquitecturas posibles de sistemas planetarios. 
+
+Discos que evolucionan \textit{de adentro hacia afuera} formar\'an arquitecturas planetarias muy diferentes a discos que evolucionan \textit{de afuera hacia adentro} simplemente porque es diferente la cantidad disponible de gas y polvo en las distintas regiones del disco. 
+
+En el caso de sistemas estelares binarios, ser\'{\i}a por ejemplo de esperar que discos tipo S, poco masivos y que disipan r\'apidamente,  formen planetas menos masivos que los que pueden formarse en sus hom\'ologos circumestelares. Sin embargo, es de esperar que discos tipo P, con mayor masa y que disipan m\'as lentamente, formen planetas m\'as masivos. 
+
+Los discos que sufren los efectos de la fotoevaporaci\'on externa tambi\'en tendr\'an consecuencias importantes en los procesos de formaci\'on planetaria pues en general, tambi\'en disipan m\'as r\'apidamente, lo que va en detrimento particularmente de la formaci\'on de planetas gigantes gaseosos. 
+
+De manera similar, la formaci\'on planetaria alrededor de estrellas m\'as masivas puede cambiar si los discos no evolucionan de adentro hacia afuera. 
+
+En definitiva, para poder hacer estudios detallados sobre los procesos de formaci\'on planetaria y determinar las diferentes arquitecturas y caracter\'{\i}sticas que cada escenario estelar dar\'a a lugar, es de vital importancia modelar de la manera m\'as realista posible la evoluci\'on de los discos de gas y polvo en los distintos ambientes.
+
+
+\section{Conclusiones finales}
+
+En este art\'{\i}culo introdujimos algunas de las caracter\'{\i}sticas m\'as importantes de los discos protoplanetarios en general, ya sea desde un punto de vista te\'orico como observacional. Mencionamos cu\'ales son sus escalas de tiempo de disipaci\'on y mencionamos la importancia que \'estas tienen en los procesos de formaci\'on planetaria.
+Detallamos las particularidades de los procesos f\'{\i}sicos de evoluci\'on enfoc\'andonos principalmente en la evoluci\'on viscosa y la fotoevaporaci\'on, pero mencionando tambi\'en que la evoluci\'on por vientos magn\'eticos est\'a ganando terreno r\'apidamente, y que no podemos determinar a\'un cu\'al de los dos mecanismos es el dominante en la evoluci\'on temporal de estos objetos. Finalmente, describimos cualitativamente las caracter\'{\i}ticas de los discos en escenarios diversos, como ser en sistemas estelares binarios y/o m\'ultiples, inmersos en c\'umulos estelares masivos donde la fotoevaporaci\'on externa puede ser relevante, o hasta en estrellas m\'as masivas que el Sol, donde los efectos de la evoluci\'on estelar no deben ser despreciados.
+Por \'ultimo mencionamos algunos potenciales efectos sobre la formaci\'on planetaria.
+
+
+
+\begin{acknowledgement}
+M.P.R. agradece profundamente a las y los organizadores de la 65 Reuni\'on Anual de la Asociaci\'on Argentina de
+Astronom\'{\i}a, tanto al Comit\'e Organizador Local como al Comit\'e Cient\'{\i}fico, por su invitaci\'on a presentar una charla invitada y por la ayuda econ\'omica brindada, sin la cual no hubiese sido posible su participaci\'on. Tambi\'en agradece al Dr. Hernan Muriel, parte del comité editorial, por la revisi\'on de este art\'{\i}culo y por su paciencia con los tiempos de la autora. Por \'ultimo agradece a Octavio Guilera por las discusiones y comentarios sobre el resumen. 
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

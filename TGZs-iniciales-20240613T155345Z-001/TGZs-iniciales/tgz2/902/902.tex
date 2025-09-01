@@ -1,0 +1,525 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{24 May 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Curvas de luz de supernovas con el telescopio HSH}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Curvas de luz de Supernovas con el telescopio HSH}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A. Mendez Llorca\inst{1,2},
+G. Folatelli\inst{1,2},
+L. Martinez\inst{2,3},
+K. Ertini\inst{1,2}
+\&
+L. Ferrari\inst{1,2}
+}
+
+\authorrunning{Mendez Llorca et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mendez.ll.axel@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina \and Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+\and
+Universidad Nacional de Río Negro, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El estudio de las curvas de luz de supernovas (SNs) es fundamental para poder comprender las propiedades de las estrellas progenitoras y estimar distancias cosmológicas. En este trabajo presentamos los datos obtenidos en la primera campaña de observación hecha por el grupo SOS (Simulaciones y Observaciones de Supernovas) utilizando el telescopio de 60 cm Helen Sawyer Hogg (HSH) del Complejo Astronómico El Leoncito (CASLEO) en el año 2021. Los principales objetivos de esta campaña fueron: I) determinar la viabilidad de utilizar este telescopio para el seguimiento de SNs, II) adquirir fotometría de objetos transitorios dentro de las primeras horas/días luego de su descubrimiento, III) obtener curvas de luz multi-banda de SNs seleccionadas. En las 37 noches consecutivas que duró la campaña, se observaron 70 objetos transitorios, siendo 27 de estos confirmados como SNs. El grupo SOS realizó tres anuncios sobre la confirmación del descubrimiento temprano para 5 de las SNs. La diferencia de tiempo media entre el descubrimiento y nuestra primera observación fue de 31 horas. A las tres SNs Tipo Ia con mayor cobertura temporal de la muestra se les estimaron sus distancias hacia su galaxia anfitriona, el enrojecimiento producido por su galaxia y el parámetro de decaimiento del brillo $\Delta m_{15}$. Las distancias de luminosidad obtenidas tienen incertezas típicas de $\sim 10\%$. Los resultados muestran un buen acuerdo con las distancias determinadas mediante un modelo cosmológico de expansión.
+}
+
+\abstract{The study of supernova (SN) light curves is crucial to understand the properties of the progenitor stars and to estimate cosmological distances. In this work we present the data obtained in the first observation campaign performed by the SOS (Supernova Observations and Simulations) group using the 60 cm Helen Sawyer Hogg (HSH) telescope at CASLEO in 2021. The main goals of this campaign were: I) to determine the feasibility of using this telescope for SNe follow-up, II) to acquire photometry of transients within hours/days from discovery, and III) to obtain multi-band light curves of selected SNe. During 37 consecutive nights, 70 transients were observed, 27 of them confirmed as SNe. The SOS group made three announcements with the early discovery confirmation of 5 SNe. The average delay between the discovery and our first observation was 31 hours. For the three Type Ia SNe with the best coverage within our sample, we estimated the distances to their host galaxy, the reddening of the host and the decline rate parameter $\Delta m_{15}$. The obtained luminosity distances have typical uncertainties of $\sim 10\%$. The results are in good agreement with the distances determined by a cosmological expansion model. }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{supernovae: general --- supernovae: individual (SN 2021vtq, SN 2021wjb, SN 2021xju) --- galaxies: distances and redshifts}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+Las supernovas (SNs) son eventos explosivos que suceden al final de la vida evolutiva de ciertos tipos de estrellas. El estudio de las curvas de luz durante los momentos iniciales de las SNs tiene gran valor para poder inferir ciertos parámetros de la estructura externa de los progenitores, tales como su radio y perfil de densidad \citep{2012Bersten}. Dado que las SNs se producen de forma inesperada y son muy complicadas de prever, los datos fotométricos tempranos eran difíciles de obtener con las tecnologías de antaño. En la actualidad, los relevamientos se encuentran a la vanguardia para detectar y descubrir cientos de nuevos objetos transitorios cada noche (\citealp[]{Pan-starrs,DLT40,2019.ZTF}, por mencionar algunos). Estos descubrimientos tempranos motivan campañas de seguimiento exhaustivo de SNs desde etapas muy tempranas. Es por ello que por parte del grupo SOS \footnote{\url{{https://sos.fcaglp.unlp.edu.ar/}}} (Simulaciones y Observaciones de Supernovas) del Instituto de Astrofísica de La Plata, se propuso llevar a cabo una de estas campañas en el año 2021 para recolectar curvas de luz tempranas de SNs haciendo uso del telescopio Helen Sawyer Hogg (HSH) en CASLEO.
+\begin{figure*}[!t]
+ \centering
+   \label{f:vtq}
+    \includegraphics[width=0.25\textwidth]{vtq_imagen.pdf}
+   \label{f:wjb}
+    \includegraphics[width=0.26\textwidth]{wjb_imagen.pdf}
+       \label{f:wjb}
+    \includegraphics[width=0.25\textwidth]{xju_imagen.pdf}
+ \caption{Imágenes en banda \textit{R} obtenidas por el grupo SOS de la campaña de observación del 2021 con el telescopio HSH donde se muestran las SNs Ia (circulo rojo) analizadas en este trabajo y sus galaxias anfitrionas (flechas). {\em Panel izquierdo}: SN 2021vtq. {\em Panel central}: SN 2021wjb. {\em Panel derecho}: SN 2021xju.}
+ \label{f:imagenes.SNs}
+\end{figure*}
+
+Luego de una breve descripción de los alcances de la campaña de observación (Sección \ref{sec:campaña}), en este trabajo nos centraremos en el análisis de tres SNs Tipo Ia (SNs Ia) con las que determinaremos distancias (Sección \ref{sec:resultados}). Este tipo de SNs está ampliamente estudiado y es conocido por ser un "faro estándar" para la estimación de distancias extragalácticas. Esto se debe a que se trata de la explosión de una enana blanca en condiciones relativamente uniformes en todos los casos. Es por eso que muestran curvas de luz homogéneas y alcanzan luminosidades similares. En detalle, existe una relación empírica entre el ancho de las curvas de luz y el máximo de luminosidad. Las SNs Ia más luminosas tienen curvas de luz más anchas y las más débiles presentan curvas de luz más angostas. \cite{Philips1993} estableció el parámetro $\Delta m_{15}(B)$, la diferencia en magnitud en la banda $B$ entre el máximo y los 15 días posteriores, para cuantificar la relación. Este método lo aplicaremos a nuestras tres SNs Ia y así obtendremos las distancias a sus galaxias anfitrionas.
+\begin{table}[t]
+\centering
+\caption{Magnitud límite alcanzada en la campaña de observación en cada banda para diferentes intervalos de FWHM.}
+\begin{tabular}{cccc}
+\hline\hline\noalign{\smallskip}
+\begin{tabular}[c]{@{}c@{}}FWHM\\ {[}arcsec{]}\end{tabular} & 2 a 3.5    & 3.5 a 4.5  & 4.5        \\ \hline
+m$_{\textit{B}} $ [mag]                                                        & 17.5 $\pm$ 0.32  & 17.06 $\pm$ 0.53 & 16.68 $\pm$ 0.43 \\
+m$_{\textit{V}} $ [mag]                                                        & 17.19 $\pm$ 0.42 & 16.77 $\pm$ 0.55 & 16.3 $\pm$ 0.4   \\
+m$_{\textit{R}} $ [mag]                                                        & 17.55 $\pm$ 0.61 & 17.07 $\pm$ 0.58 & 16.45 $\pm$ 0.81 \\
+m$_{\textit{I}} $ [mag]                                                        & 16.83 $\pm$ 0.39 & 16.47 $\pm$ 0.39 & 15.91 $\pm$ 0.5  \\ \hline
+\end{tabular}
+\end{table}
+
+\section{Campaña y observaciones} \label{sec:campaña}
+La campaña de observación del grupo SOS tuvo una duración de 37 noches consecutivas asignadas previamente entre los meses de agosto y septiembre de 2021. Se llevó a cabo utilizando el telescopio de 60 cm HSH de CASLEO. Las imágenes fueron obtenidas en los filtros \textit{BVRI}. Debido a problemas con el seguimiento del telescopio, fue necesario tomar imágenes individuales para luego combinarlas y generar la imagen final. Para cada época se tomaron 20 imágenes individuales y los tiempos de exposición de cada una fueron de: $60 \, \mathrm{s}$ para las bandas \textit{VRI} y $90 \, \mathrm{s}$ para $B$, llegando a un total de $1 \, 200 \, \mathrm{s}$ y $1 \, 800 \, \mathrm{s}$, respectivamente. 
+
+Los objetos a observar fueron seleccionados mediante las alertas diarias de ALeRCE\footnote{https://alerce.science/services/sn-hunter/} \citep{ALERCE} y TNS (\textit{Transient Name Server})\footnote{https://www.wis-tns.org/}. Las primeras noches se priorizaron eventos nuevos para armar las listas de seguimiento. Cada día se agregaban nuevos objetos y se realizaba el seguimiento de los anteriores. En caso de que algún objeto fuese muy débil, mayor a 18 $\mathrm{mag}$, o se confirmaba espectroscopicamente que no era SN, se dejaba de hacer su seguimiento. A partir del décimo día de la campaña el 80$\%$ del tiempo se dedicó al seguimiento de las SNs que cumplian las condiciones mencionadas y el resto del tiempo a nuevos eventos con la posibilidad de agragarlos a la lista de seguimiento. Se observaron un total de 70 objetos transitorios, de los cuales 27 ($39 \%$) fueron catalogados como SNs, siendo 17 Tipo Ia, 2 Tipo Ib/c, 2 Tipo Ic y 6 Tipo II. El intervalo de tiempo medio entre el descubrimiento y nuestra primera observación fue de 31 horas, por lo que se pudo recolectar datos muy tempranos de los objetos. Gracias a esto pudimos publicar tres anuncios con la confirmación del descubrimiento de cinco SNs \citep{2021Ertini,2021Martinez,2021Pessi}. La calidad de imagen, medida como el ancho a mitad de altura ({\em full width half maximum}, FWHM) de los objetos puntuales fluctuó entre 2.2 y 7 $\mathrm{arcsec}$, con un valor promedio de 3.3 $\mathrm{arcsec}$. Estos altos valores se deben a la sumatoria de factores como {\em seeing}, problemas de seguimiento y foco.
+
+\begin{table*}[t]
+\centering
+\fontsize{9}{10}\selectfont
+\caption{Características de las SNs Ia analizadas.}
+
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+SN                                                                               & 2021vtq         & 2021wjb         & 2021xju         \\ \hline
+R.A.                                                                             & $0^h 47^m 38^s.94$     & $20^h0^m49^s.92$     & $20^h22^m30^s.96$    \\
+Dec.                                                                             & -20°31'24''.46 & -38°34'38''.03 & -53°16'44''.15 \\
+$E(B-V)_{\mathrm{MW}}$ $[\mathrm{mag}]$ & 0.016 & 0.063  &  0.043 \\
+Época de descubrimiento {[}JD{]}                                                 & 2459438.91      & 2459444.59      & 2459457.68      \\
+Primera observación {[}JD{]} & 2459440.25      & 2459450.03      & 2459458.1       \\
+Galaxia anfitriona                                                                  & ESO 540-G025    & IC 4931         & ESO 186-G037    \\
+Redshit Heliocéntrico                                                            & 0.02089 $\pm$ 0.00015 & 0.02004 $\pm$ 0.00002 & 0.01558 $\pm$ 0.00015 \\
+Redshift CMB                                                                     & 0.01988 $\pm$ 0.00015 & 0.01948 $\pm$ 0.00004 & 0.01514 $\pm$ 0.0015  \\ \hline
+\end{tabular}
+
+\label{t:SNs}
+\end{table*}
+\subsection{Procesado de imágenes y fotometría} \label{sec:fotometria}
+Todas las imágenes individuales obtenidas en la campaña fueron reducidas usando {\sc IRAF} \citep{IRAF}. La solución astrométrica se realizó con {\em Astrometry.net} \citep{Astrometry}. Luego, todas las imágenes fueron combinadas para generar la imagen final. Estos procesos fueron llevados a cabo mediante códigos desarrollados por los miembros del grupo SOS.
+
+La fotometría de las imágenes se hizo con el programa {\sc AutoPhOT} ({\em Automated Photometry Of Transients}; \citealp[]{Autophot}), el cual está diseñado en {\sc PYTHON}. El método utilizado fue de fotometría diferencial de PSF ({\em point spread function}). Solamente para la SN 2021wjb, que se encontraba muy contaminada por su galaxia anfitriona, fue necesario recurrir al método de sustracción de galaxia. Para restar la contribución de la galaxia se tomaron imágenes plantilla de {\em Skymapper} \citep{Skymapper...36...33O} en las bandas \textit{gri}, siendo las mejores disponibles para esta galaxia. Aunque las bandas a restar no fueron las mismas que las de nuestras imágenes, se pudieron recuperar muchas épocas donde el análisis fotométrico no era capaz de realizarse y también incrementar la precisión de las magnitudes ya calculadas.
+
+Mediante estos datos fue posible determinar la magnitud límite alcanzada en la campaña, es decir, la magnitud para una relación señal-ruido de 5; y se la separó en tres intervalos respecto del FWHM (ver Tabla \ref{t:mag.lim}). El objetivo, que está en proceso, es crear una calculadora de tiempo de integración para el telescopio HSH. 
+
+\begin{figure*}[t]
+ \centering
+   \label{f:vtq}
+    \includegraphics[width=0.18\textwidth]{vtq_LC_1.pdf}
+   \label{f:wjb}
+    \includegraphics[width=0.18\textwidth]{LCwjb_1.pdf}
+       \label{f:wjb}
+    \includegraphics[width=0.19\textwidth]{xju_LC_1.pdf}
+ \caption{Curvas de luz de las SNs Ia analizadas: SN 2021vtq ({\em panel izquierdo}), SN 2021wjb ({\em panel central}) y SN 2021xju ({\em panel derecho}). Se muestran las magnitudes estimadas para cada SN calculadas con {\sc AutoPhOT} (puntos) y los ajustes de curvas de luz patrón de {\sc SNooPy} (líneas sólidas) para las bandas \textit{BVRI}.}
+ \label{f:LC.SNs}
+\end{figure*}
+
+\begin{table*}[t]
+\centering
+\fontsize{9}{10}\selectfont
+\caption{Parámetros de las SNs derivados por {\sc SNooPy} y distancias mediante diferentes métodos.}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+SN                 & 2021vtq                    & 2021wjb                     & 2021xju                      \\ \hline
+$\Delta m_{15}$ [mag]    & 1.093 $\pm$ 0.02 $\pm$ 0.06      & 1.207 $\pm$ 0.02 $\pm$ 0.06       & 1.282 $\pm$ 0.01 $\pm$ 0.06        \\
+$t_\mathrm{max}$ [JD]            & 245955.83 $\pm$ 0.161 $\pm$ 0.34 & 2459451.15 $\pm$ 0.336 $\pm$ 0.34 & 2459470.683 $\pm$ 0.162 $\pm$ 0.34 \\
+$E(B-V)_\mathrm{host}$ [$\mathrm{mag}$]            & 0.037 $\pm$ 0.014 $\pm$ 0.06     & 0.119 $\pm$ 0.016 $\pm$ 0,06      & -0.023 $\pm$ 0.01 $\pm$ 0.06       \\
+$\mu$ & 34.650 $\pm$ 0.016 $\pm$ 0.124   & 34.712 $\pm$ 0.026 $\pm$ 0.143    & 33.724 $\pm$ 0.017 $\pm$ 0.313     \\
+D$_L$ [$\mathrm{Mpc}$]               & 85.11 $\pm$ 0.63 $\pm$ 4.86      & 87.58 $\pm$ 1.05 $\pm$ 5.77       & 55.56 $\pm$ 0.43 $\pm$ 8.01        \\
+D$_z$ [$\mathrm{Mpc}$]              & 84.1 $\pm$ 4.2                & 82.4 $\pm$ 4.2                 & 63.8 $\pm$ 4.2                  \\
+D$_\mathrm{T-F}$ [$\mathrm{Mpc}$]             & -                          & 81.1 $\pm$ 5.2                 & -                            \\
+\hline
+\end{tabular}
+\label{t:distancias}
+\end{table*}
+
+
+
+\begin{figure*}[t]
+ \centering
+   \label{f:vtq}
+    \includegraphics[width=0.25\textwidth]{color_BV.pdf}
+   \label{f:wjb}
+    \includegraphics[width=0.25\textwidth]{color_VR.pdf}
+       \label{f:wjb}
+    \includegraphics[width=0.25\textwidth]{color_RI.pdf}
+ \caption{Curvas de color de las SNs Ia estudiadas y la SN 2011fe, corregidas por la extinción galáctica y de la galaxia anfitriona. {\em Panel izquierdo}: Color $B-V$. {\em Panel central}: Color $V-R$. {\em Panel derecho}: Color $R-I$. }
+ \label{f:colores.SNs}
+\end{figure*}
+
+
+\begin{figure}[t]
+ \centering
+   \label{f:vtq}
+    \includegraphics[width=0.3\textwidth]{Mag_Abs_B_2.pdf}
+ \caption{Curvas de luz absoluta en la banda $B$  de las SNs Ia corregidas por extinción galáctica y de la galaxia huésped.}
+ \label{f:LC.abs}
+\end{figure}
+
+\section{Resultados}\label{sec:resultados}
+
+Este trabajo hace énfasis en las tres SNs Ia con la mayor cobertura temporal de la campaña: SN 2021vtq, SN 2021wjb y SN 2021xju (Fig. \ref{f:imagenes.SNs}). En la Tabla \ref{t:SNs} se presentan datos de las mismas. Los valores de enrojecimiento de la Vía Láctea ($E(B-V)_\mathrm{MW}$; \citealp[]{extincion}) y los {\em redshift} fueron extraidos de {\em NASA/IPAC Extragalactic Database (NED)} \footnote{\url{http://ned.ipac.caltech.edu/}}.
+En la Fig. \ref{f:LC.SNs} se presentan las curvas de luz multi-banda de estas SNs, que se corresponden a las típicas curvas de luz de las SNs Ia. Para el eje temporal utilizamos la época en reposo respecto del máximo en la banda $B$ para hacer comparaciones de SNs Ia a distintos {\em redshifts}. Para las tres SNs tenemos datos de los máximos en todas las bandas. De la SN 2021vtq y la SN 2021xju obtuvimos datos muy tempranos, más de 10 días antes del máximo, con intervalos de tiempo desde la detección hasta nuestra primera observación de 1.3 y 0.4 días, respectivamente.
+
+Para la estimación de las distancias usamos el programa {\sc SNooPy} \citep{2011.Burns}, el cual ajusta curvas de luz patrón de SNs Ia a los datos fotométricos. Los parámetros que deriva el programa son: $\Delta m_{15}$, la época del máximo en la banda $B$, el enrojecimiento de la galaxia anfitriona ($E(B-V)_\mathrm{host}$), y el módulo de distancia ($\mu$). En la Tabla \ref{t:distancias} se muestran los resultados obtenidos y, además, la distancia de luminosidad ($D_L$), la distancia en base a un modelo cosmológico de expansión ($D_z$) y una distancia calculada por el método de Tully-Fisher ($D_\mathrm{T-F}$). $D_L$ fue estimada con el módulo de distancia. $D_z$ fue inferida con el uso de una calculadora online \footnote{\url{https://astro.ucla.edu/~wright/CosmoCalc.html}} aplicando la ley de Hubble, tomando $H_0 = 72 ~ \mathrm{km\, s^{-1} \, Mpc^{-1}}$ y el {\em redshift} respecto del CMB con un error de 0.001 por efectos dinámicos de las galaxias. Los errores corresponden a los errores estadísticos de los datos y errores sistemáticos del programa, respectivamente. En todos los valores calculados el error que domina es el sistemático, y entendemos que se debe a transformaciones fotométricas que realiza el programa para llevar las bandas \textit{BVRI} a las bandas predeterminadas \textit{BVgri} que utiliza. La SN 2021xju es la que mayor error sistemático presenta, debiéndose a la poca cantidad de datos pasado el máximo. Para que estos errores diminuyan sería necesario obtener las magnitudes en las bandas que usa el programa y tener una mayor cobertura temporal postmáximo, ya que el programa toma plantillas que están entre -10 a 80 días respecto del máximo en la banda $B$.
+
+Las distancias calculadas con el método de las curvas de luz se encuentran en buen acuerdo con las inferidas mediate un modelo cosmológico. Las diferencias entre éstas se encuentran por debajo del $13 \%$. Además, para la SN 2021wjb tenemos para comparar una distancia de Tully-Fisher a su galaxia  \citep{1999.Dale}, que también está en concordancia.
+
+La SN 2021wjb es la que presentó un valor más alto de $E(B-V)_\mathrm{host}$ de las tres SNs, posiblemente se deba a que también es la que se encuentra más embebida en su galaxia anfitriona de las SNs estudiadas. En cambio, la SN 2021xju presenta un valor negativo, pero se encuentra debajo de su incerteza, siendo compatible con un valor nulo de enrojecimiento y para el trabajo se lo tomó como cero.
+
+En la Fig. \ref{f:colores.SNs} se muestran las curvas de color de las tres SNs corregidas por extinción de la Vía Láctea y de la galaxia anfitriona. Para comparar se agregó a la SN 2011fe, una SN Ia típica que fue muy estudiada y tiene datos de gran calidad ya que explotó en la galaxia M101 ($\sim 6.6 \, \mathrm{Mpc}$). En los tres colores observamos que nuestras tres SNs siguen los mismos comportamientos que la SN 2011fe. Asimismo, disponemos de colores en las etapas tempranas de estas SNs que suelen ser escasos.  
+
+En relación al parámetro $\Delta m_{15}$, la SN 2021vtq debería ser más luminosa que las otras dos SNs y tener la curva de luz más ancha. En la Fig. \ref{f:LC.abs} se presentan las curvas de luz absolutas y se ven reflejados los aspectos mencionados. Sin embargo, observamos que la luminosidad de la SN 2021vtq y la SN 2021wjb son casi iguales. Entendemos que esto se debe a que el método tiene su grado de dispersión y la estimación de las distancias y extinciones también presentan incertezas. 
+\section{Trabajo a futuro}
+
+Los datos de las SNs restantes continúan siendo analizados y sigue en desarrollo la calculadora de tiempo de exposición para el telescopio HSH.
+
+Aunque la campaña fue exitosa, todavía no se pudo volver a repetir por la gran cantidad de tiempo que conlleva. Sin embargo, se planea realizar campañas más cortas utilizando el HSH y siguiendo el mismo enfoque.
+
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+\newpage
+\newpage
+
+
+%----------------------------------------
+\newpage
+
+
+\end{document}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+
+
+\section{Guía de estilo para el BAAA}\label{sec:guia}
+
+Al elaborar su manuscrito, siga rigurosamente el estilo definido en esta sección. Esta lista no es exhaustiva, el manual de estilo completo está disponible en la sección \href{http://sigma.fcaglp.unlp.edu.ar/docs/SGM_docs_v01/Surf/index.html}{Instructivos} del SiGMa. Si algún caso no está incluido en el manual de estilo del BAAA, se solicita seguir el estilo de la revista Astronomy \& Astrophysics\footnote{\url{{https://www.aanda.org/for-authors/latex-issues/typography}}}.
+
+\subsection{Idioma del texto, resumen y figuras}
+
+El artículo puede escribirse en español o inglés a decisión del autor. El resumen debe escribirse siempre en ambos idiomas. Todas las partes del documento (título, texto, figuras, tablas, etc.)  deben estar en el idioma del texto principal. Al utilizar palabras de un lenguaje diferente al del texto (solo si es inevitable) incluirlas en {\em cursiva}.
+
+\subsection{Título}
+
+Inicie en letra mayúscula solo la primera palabra, nombres propios o acrónimos. Procure ser breve, de ser necesario divida el título en múltiples líneas, puede utilizar el corte de línea (\verb|\\|). No agregue punto final al título.
+
+\subsection{Autores}
+
+Los autores deben estar separados por comas, excepto el último que se separa con ``\verb|\&|''. El formato es: S.W. Hawking (iniciales luego apellidos, sin comas ni espacios entre las iniciales). Si envía varios artículos, por favor revisar que el nombre aparezca igual en todos ellos, especialmente en apellidos dobles y con guiones.
+
+%------------------------------------------------------------
+
+
+%------------------------------------------------------------
+\subsection{Afiliaciones}
+
+El archivo ({\sc ASCII}) {\tt BAAA\_afiliaciones.txt} incluido en este paquete, lista todas las afiliaciones de los autores de esta edición en el formato adoptado por el BAAA. En caso de no encontrar su institución, respete el formato: Instituto (Observatorio o Facultad), Dependencia institucional (para instituciones en Argentina sólo indique las siglas), País (en español).  No incluya punto final en las afiliaciones, excepto si es parte del nombre del país, como por ejemplo: ``EE.UU.".
+
+\subsection{Resumen}
+
+Debe consistir de un solo párrafo con un máximo de 1\,500 (mil quinientos) caracteres, incluyendo espacios. Debe estar escrito en castellano y en inglés. No están permitidas las referencias bibliográficas o imágenes. Evite el uso de acrónimos en el resumen. 
+
+\subsection{Palabras clave: \textit{Keywords}}
+
+Las palabras clave deben ser escritas en inglés y seleccionarse exclusivamente de la lista de la American Astronomical Society (AAS) \footnote{\url{https://journals.aas.org/keywords-2013/}}. Toda parte indicada entre paréntesis no debe incluirse. Por ejemplo, ``(stars:) binaries (including multiple): close'' debe darse como ``binaries: close''. Palabras que incluyen nombres individuales de objetos lo hacen entre paréntesis, como por ejemplo: ``galaxies: individual (M31)". Respete el uso de letras minúsculas y mayúsculas en el listado de la AAS. Note que el delimitador entre palabras clave es el triple guión. Las {\em keywords} de este artículo ejemplifican todos estos detalles. 
+
+Finalmente, además de las palabras clave listadas por la AAS, el BAAA incorpora a partir del Vol. 61B las siguientes opciones: {citizen science --- education --- outreach --- science journalism --- women in science}.
+
+\subsection{Texto principal}
+
+Destacamos algunos puntos del manual de estilo.
+
+\begin{itemize}
+ \item La primera unidad se separa de la magnitud por un espacio inseparable (\verb|~|). Las unidades subsiguientes van separadas entre si por semi-espacios (\verb|\,|). Las magnitudes deben escribirse en roman (\verb|\mathrm{km}|), estar abreviadas, no contener punto final, y usar potencias negativas para unidades que dividen. Como ejemplo de aplicación de todas estas normas considere: $c \approx 3 \times 10^8~\mathrm{m\,s}^{-1}$ (\verb|$c \approx 3\times 10^8~\mathrm{m\,s}^{-1}$|).
+ \item Para incluir una expresión matemática o ecuación en el texto, sin importar su extensión, se requiere del uso de solo dos signos \verb|$|, uno al comienzo y otro al final. Esto genera el espaciado y tipografía adecuadas para cada detalle de la frase.
+  \item Para separar parte entera de decimal en números utilizar un punto (no coma).
+  \item Para grandes números, separar en miles usando el espacio reducido; ej.: $1\,000\,000$ (\verb+$1\,000\,000$+).
+  \item Las abreviaturas van en mayúsculas; ej.: UV, IR.
+  \item Para abreviar ``versus'' utilizar ``vs.'' y no ``Vs.''.
+  \item Las comillas son dobles y no simples; ej.: ``palabra'', no `palabra'.
+  \item Las llamadas a figuras y tablas comienzan con mayúscula si van seguidas del número correspon\-dien\-te. Si la palabra ``Figura'' está al inicio de una sentencia, se debe escribir completa. En otro caso, se escribe "Fig." (o bien Ec. o Tabla en caso de las ecuaciones y tablas).
+  \item Especies atómicas; ej.: \verb|He {\sc ii}| (He {\sc ii}).
+  \item Nombres de {\sc paquetes} y {\sc rutinas} de {\em software} con tipografía {\em small caps} (\verb|\sc|).
+  \item Nombres de {\sl misiones espaciales} con tipografía {\em slanted} (\verb|\sl|)
+\end{itemize}
+
+\subsection{Ecuaciones y símbolos matemáticos}
+
+Las ecuaciones deben enumerarse utilizando el entorno \verb|\begin{equation} ... \end{equation}|, o similares (\verb|{align}, {eqnarray}|, etc.). Las ecuaciones deben llevar al final la puntuación gramatical correspondiente, como parte de la frase que conforman. Como se detalla más arriba, para expresiones matemáticas o ecuaciones insertas en el texto, encerrarlas únicamente entre dos símbolos \verb|$|, utilizando \verb|\mathrm{}| para las unidades. Los vectores deben ir en ``negrita'' utilizando \verb|\mathbf{}|.
+
+\subsection{Tablas}
+
+Las tablas no deben sobrepasar los márgenes establecidos para el texto (ver Tabla \ref{tabla1}), y {no se pueden usar modificadores del tamaño de texto}.
+En las tablas se debe incluir cuatro líneas: dos superiores, una inferior y una que separa el encabezado. Se pueden confeccionar tablas de una columna (\verb|\begin{table}|) o de todo el ancho de la página (\verb|\begin{table*}|).
+
+\begin{table}[!t]
+\centering
+\caption{Ejemplo de tabla. Notar en el archivo fuente el manejo de espacios a fin de lograr que la tabla no exceda el margen de la columna de texto.}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+\!\!Date & \!\!\!\!Coronal $H_r$ & \!\!\!\!Diff. rot. $H_r$& \!\!\!\!Mag. clouds $H_r$\!\!\!\!\\
+& \!\!\!\!10$^{42}$ Mx$^{2}$& \!\!\!\!10$^{42}$ Mx$^{2}$ & \!\!\!\!10$^{42}$ Mx$^{2}$ \\
+\hline\noalign{\smallskip}
+\!\!07 July  &  -- & (2) & [16,64]\\
+\!\!03 August& [5,11]& 3 & [10,40]\\
+\!\!30 August & [17,23] & 3& [4,16]\\
+\!\!25 September & [9,12] & 1 & [10,40]\\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+\subsection{Figuras}
+
+Las figuras deberán prepararse en formatos ``jpg'', ``png'' o ``pdf'', siendo este último el de preferencia. Deben incluir todos los elementos que posibiliten su correcta lectura, tales como escalas y nombres de los ejes coordenados, códigos de líneas, símbolos, etc.  Verifique que la resolución de imagen sea adecuada. El tamaño de letra de los textos de la figura debe ser igual o mayor que en el texto del epígrafe (ver p.ej. la Fig.~\ref{Figura}). Al realizar figuras a color, procure que no se pierda información cuando se visualiza en escala de grises (como en la versión impresa del BAAA). Por ejemplo, en la Fig.~\ref{Figura}, las curvas sólidas podrían diferenciarse con símbolos diferentes (círculo en una y cuadrado en otra), y una de las curvas punteadas podría ser rayada. Para figuras tomadas de otras pu\-bli\-ca\-cio\-nes, envíe a los editores del BAAA el permiso correspondiente y cítela como exige la publicación original 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{ejemplo_figura_Hough_etal.pdf}
+\caption{El tamaño de letra en el texto y en los valores numéricos de los ejes es similar al tamaño de letra de este epígrafe. Si utiliza más de un panel, explique cada uno de ellos; ej.: \emph{Panel superior:} explicación del panel superior. Figura reproducida con permiso de \cite{Hough_etal_BAAA_2020}.}
+\label{Figura}
+\end{figure}
+
+\subsection{Referencias cruzadas}\label{ref}
+
+Su artículo debe emplear referencias cruzadas utilizando la herramienta  {\sc bibtex}. Para ello elabore un archivo (como el ejemplo incluido: {\tt bibliografia.bib}) conteniendo las referencias {\sc bibtex} utilizadas en el texto. Incluya el nombre de este archivo en el comando \LaTeX{} de inclusión de bibliografía (\verb|\bibliography{bibliografia}|). 
+
+Recuerde que la base de datos ADS contiene las entradas de {\sc bibtex}  para todos los artículos. Se puede acceder a ellas mediante el enlace ``{\em Export Citation}''.
+
+El estilo de las referencias se aplica automáticamente a través del archivo de estilo incluido (baaa.bst). De esta manera, las referencias generadas tendrán la forma co\-rrec\-ta para un autor \citep{hubble_expansion_1929}, dos autores \citep{penzias_cmb_1965,penzias_cmb_II_1965}, tres autores \citep{navarro_NFW_1997} y muchos autores \citep{riess_SN1a_1998}, \citep{Planck_2016}.
+
+\begin{acknowledgement}
+Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+\end{acknowledgement}
+
+
+
+
+ 

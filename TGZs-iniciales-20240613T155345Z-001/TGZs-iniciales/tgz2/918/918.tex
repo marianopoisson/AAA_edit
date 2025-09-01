@@ -1,0 +1,371 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{02 August 2024}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Parámetros fundamentales de cúmulos estelares poco estudiados de la Nube Mayor de Magallanes derivados a partir de sus espectros integrados}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Cúmulos estelares de la Nube Mayor de Magallanes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+C.M. Rodríguez-Buss\inst{1,2},
+M.I. Tapia-Reina\inst{1,2,3},
+A.V. Ahumada\inst{2,3}
+\&
+L.R. Vega-Neme\inst{2,4}
+}
+
+\authorrunning{Rodríguez-Buss et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{catalina.rodriguez@mi.unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Matemática, Astronomía, Física y Computación, UNC, Argentina
+\and   
+Observatorio Astronómico de Córdoba, UNC, Argentina.
+\and
+Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina.
+\and
+Instituto de Astronomía Teórica y Experimental, CONICET–UNC, Argentina.
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Se presentan los primeros datos espectroscópicos obtenidos en el Complejo Astronómico El Leoncito (CASLEO, Argentina) de dos cúmulos estelares (CEs) poco estudiados ubicados en la Nube Mayor de Magallanes (NMM). De esta forma, se obtienen edades y metalicidades de los CEs SL\,802 y SL\,888 a partir de sus espectros integrados aplicando la técnica de síntesis espectral. Se encuentra que son CEs de edad intermedia con valores de metalicidad típicos de la NMM.}
+
+\abstract{We present the first spectroscopic data obtained at Complejo Astronómico El Leoncito (CASLEO, Argentina) for two poorly studied star clusters (SCs) located in the Large Magellanic Cloud (LMC). In this way, ages and metallicities of the SCs SL\,802 and SL\,888 were obtained from their integrated spectra by applying the spectral synthesis technique. They turned out to be intermediate-age SCs with metallicity values typical of the LMC.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ galaxies: invidivual (LMC) --- galaxies: star clusters: general --- techniques: spectroscopic }
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+
+Para obtener una mejor comprensión de la evolución estelar y las propiedades significativas de las galaxias, es esencial estudiar sus cúmulos estelares (CEs). Según la definición tradicional, son grupos de estrellas que se mantienen unidas por su propia gravedad, todas ellas con la misma edad, distancia y composición química \citep{CG2022}. Una de las maneras de estudiar CEs es a través de la espectroscopía integrada. Esta técnica implica la síntesis de poblaciones estelares, lo que permite analizar poblaciones estelares compuestas utilizando un conjunto de patrones estándares y una matriz de propiedades espectrales integradas, parametrizadas según la edad y la metalicidad. A partir de esto, se puede obtener información crucial, como la edad, el enrojecimiento y la metalicidad de CEs \citep{AVA2019}. En este trabajo se estudian CEs de la Nube Mayor de Magallanes (NMM) mediante la técnica mencionada, siendo estos resultados espectroscópicos los primeros en su tipo.
+
+
+\section{Observación y reducción de datos}
+
+Se observaron dos CEs de la NMM, cuyas principales denominaciones y coordenadas ecuatoriales (J2000.0) son SL\,888 (NGC\,2241) ($\alpha_{2000}$ = 06h 22m 53.0s ; $\delta_{2000}$ = -68º 55’ 30’’) y SL\,802 ($\alpha_{2000}$ = 05h 57m 25.0s ; $\delta_{2000}$ = -75º 08’ 24’’). Las observaciones espectroscópicas tuvieron lugar en el Complejo Astronómico El Leoncito (CASLEO) en San Juan, Argentina. Se utilizó el telescopio ``Jorge Sahade'' de 2.15 m durante un turno de observación en enero de 2018. Se empleó una cámara CCD acoplada al espectrógrafo REOSC en modo dispersión simple. Se configuró la rendija de 400 $\mu$m, con una apertura de 5’’ y una longitud de 2.25', en la dirección este-oeste. Las observaciones se realizaron desplazando la rendija a lo largo de los objetos en dirección norte-sur para obtener así una adecuada muestra de las estrellas del cúmulo. Se utilizó una red de 300 líneas/mm que produjo una dispersión promedio en la región observada de 3.4 \r{A}/píxel y una región espectral útil de (3800–7250) \r{A}. En la Fig. \ref{F1} se presenta al CE SL\,802, en tanto que en la Fig. \ref{F2} se puede ver a SL\,888, junto a una representación de la ranura utilizada.
+
+La reducción de los datos para obtener los espectros finales, se llevó a cabo con {\sc pyraf}, que permite ejecutar {\sc iraf} (\textit{Image Reduction and Analysis Facility}) en un entorno de Python, siguiendo procedimientos estándar \citep{Marti2023}. Luego de examinar los espectros finales, se decidió acotar el rango espectral útil a (4000-6850)\,\r{A} debido, por un lado, a la escasa señal en las longitudes de onda más bajas (S/N $\sim$ 6), y por el otro, a la ausencia de información relevante que podría existir en las longitudes de onda mayores.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\columnwidth]{SL802.png}
+\caption{CE SL\,802. La imagen fue creada con ©Aladin en color DSS2. El norte está hacia arriba y el este está hacia la izquierda. Además, se representa la disposición de la ranura $\sim$ 2.25'\,$\times$ 5'') en rojo.}
+\label{F1}
+\end{figure}
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\columnwidth]{SL888.png}
+\caption{Ídem que Fig. \ref{F1}, pero para SL\,888.}
+\label{F2}
+\end{figure}
+
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=1.\columnwidth]{SL888.png}
+%\caption{Ídem que Fig. \ref{F1}, pero para SL\,888.}
+%\label{F2}
+%\end{figure}
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{SL802-1_articulo.png}
+\caption{Ajuste de SL\,802 realizado con {\sc starlight}. El espectro integrado observado aparece en negro, el sintetizado en azul y el flujo residual en color verde. Se han añadido constantes en el eje vertical a los efectos de una mejor visualización. Las líneas rojas a trazos (-0.25;\,0.25) señalan la dispersión del flujo residual.}
+\label{F3}
+\end{figure*}
+
+
+\section{Determinación de parámetros}
+
+Se obtuvieron edades y metalicidades mediante modelos de síntesis evolutiva para poblaciones estelares simples (SSPs, por sus siglas en inglés) utilizando el código {\sc starlight} de ajuste de espectro completo \citep{CF2005}, que incorpora un conjunto de modelos de SSPs de diferentes edades y metalicidades. Las SSPs se combinan linealmente en diferentes proporciones para obtener el espectro del modelo resultante (M$_{\lambda}$) que mejor se ajusta al espectro integrado observado (O$_{\lambda}$). Los ajustes se realizaron minimizando:
+
+\vspace{0.5cm}
+\begin{equation} 
+\chi^{2}=\frac{\sum_{\lambda}^{}[O_{\lambda}-M_{\lambda}]^2 } {O_{\lambda}^2}  w_{\lambda}^2 , 
+\end{equation} 
+\vspace{0.5cm}
+
+\noindent donde ${w_{\lambda}}$ es una función de peso. Esta minimización proporciona la mejor combinación de SSPs en el espacio de parámetros edad y metalicidad. {\sc starlight} realiza la síntesis espectroscópica a partir de una base espectral de más de 300 SSPs obtenidas de los modelos de \citep{BC2003} (versión actualizada), construidos mediante las librerías  MILES + Martins \citep{SB2006,Martins2005}. Para los propósitos de este estudio, se seleccionaron sólo 69 SSPs con edades entre 1 $\times$ 10$^{6}$ años y la edad del Universo ($13\,000$ $\times$ 10$^{6}$ años) y tres abundancias químicas diferentes: la típica de la NMM (Z = 0.008) y sus dos más cercanas (Z = 0.019 y 0.004) \citep{SR2023}. Vale destacar que para los valores finales promediados, se tuvieron en cuenta sólo aquellas SSPs cuyas contribuciones superaron el 5 $\%$.
+
+La Tabla \ref{T1} muestra los diferentes porcentajes de las SSPs utilizadas (vectores población) y los valores medios de edad y de metalicidad (Z), que corresponden a la edad y Z pesadas por la contribución de cada SSP. De esta manera, SL\,888 presentaría una edad log(t) = 9.66 y una [Fe/H] = -0.16, en tanto que SL\,802 haría lo propio con log(t) = 9.05 y [Fe/H] = -0.28. Los valores promedios se indican de esta forma, ya que \cite{GD_CF_2010} señalaron su precisión: $\sigma$ (log t) = 0.1-0.2 y $\sigma$[Fe/H] = 0.3-0.4. Las Figs. \ref{F3} y \ref{F4} presentan los espectros sintetizados de SL\,802 y SL\,888. El factor de normalización de los espectros observados fue un parámetro libre, en tanto que las SSPs fueron normalizadas a la unidad en $\lambda$ = 4020\,\r{A} \citep{CF2010C}. El flujo residual, determinado como la resta entre el espectro integrado observado en una dada longitud de onda y el espectro sintetizado en la misma longitud de onda, es evidencia del buen ajuste obtenido.
+
+\begin{table*}[!t]
+\centering
+\caption{ Parámetros determinados para cada CE y sus vectores población.}
+\begin{tabular}{lccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Cúmulo & \!\!\!\!Edad& \!\!\!\!Z& \!\!\!\! \% &\!\!\!\! SSP &\!\!\!\! SSP \\
+\!\! & \!\!\!\!Promedio& \!\!\!\!Promedio& \!\!\!\!  &\!\!\!\! Edad &\!\!\!\! Z \\
+%\!\! & \!\!\!\!& \!\!\!\!& \!\!\!\!  &\!\!\!\! Edad &\!\!\!\! \\
+\!\! & \!\!\!\!(x 10$^{6}$ años)& \!\!\!\!& \!\!\!\! &\!\!\!\! (x 10$^{6}$ años) &\!\!\!\! \\
+\hline\noalign{\smallskip}
+\!\!SL\,888  & 4622& 0.013 & 11 & 10000 & 0.004\\
+\!\!        &       &       & 16 & 13000 & 0.004\\
+\!\!        &       &       & 13 & 10000 & 0.008\\
+\!\!        &       &       & 28 & 8.7 & 0.019\\
+\!\!        &       &       & 11 & 1.0 & 0.019\\
+\!\!        &       &       & 6 & 2.5 & 0.019\\
+\!\!        &       &       & 6 & 2.9 & 0.019\\
+\!\!        &       &       & 6 & 5.1 & 0.019\\
+\hline
+\!\!SL\,802 & 1113 & 0.010 & 70 & 1278.1 & 0.008\\
+\!\!        &       &       & 14 & 286.1 & 0.019 \\
+%\hline\noalign{\smallskip}
+%\small
+%\multicolumn{Nota: La unidad es de 10$^{6}$ años.} \\
+\hline
+\hline
+\end{tabular}
+\label{T1}
+\end{table*}
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=1\textwidth]{SL888+Run3_articulo.png}
+\caption{Ajuste de SL\,888 realizado con {\sc starlight}, Ídem Fig. \ref{F3}. También se grafica en amarillo una única población de 4.25 $\times$ 10$^{9}$ años y su respectivo flujo residual en rosa. Las líneas rojas a trazos (-0.25;\,0.25 y -0.25;\,-0.75) señalan la dispersión del flujo residual de ambos ajustes.}
+\label{F4}
+\end{figure*}
+
+\section{Discusión y trabajo futuro}
+
+Los CEs estudiados presentan investigaciones previas basadas en métodos fotométricos. SL\,802, también conocido como IC\,2161, es un CE de tipo SWB\,V \citep{SWB1980}, lo que corresponde a un rango de edad de (0.8 - 2.0) $\times$ 10 $^{9}$ años según \cite{Bica1996}. Este valor de edad concuerda con el promedio obtenido aquí ($\sim$ 1.1 $\times$ 10$^{9}$ años). Por otro lado, SL\,888, también conocido como NGC\,2241, es de tipo SWB\,VI \citep{SWB1980}, lo que corresponde a un rango de edad de (2.0 - 5.0) $\times$ 10$^{9}$ años \citep{Bica1996}. Este CE también cuenta con trabajos previos, aunque más detallados. Uno de \cite{Jones1987}, quien obtuvo una edad entre 3 y 4 $\times$ 10$^{9}$ años ajustando isócronas en los respectivos diagramas color-magnitud, y otro de \cite{Geisler1997} quienes estimaron una edad de 1.9 $\times$ 10$^{9}$ años basándose en la diferencia de magnitud T1 entre la rama gigante y el punto de desvío. Es decir que ambos trabajos señalan a SL\,888 como un CE de genuina edad intermedia, tal como el promedio encontrado acá ($\sim$ 4.6 $\times$ 10$^{9}$ años).
+
+%Por otra parte, \cite{HZ2009} determinaron una edad mayor: (4.5 ± 0.1) $\times$ 10$^{9}$ años, similar a la edad promedio presentada aquí. 
+
+Al analizar los porcentajes de las SSPs utilizadas en ambas síntesis espectrales, se encuentra que para el CE SL\,802 sólo se utilizaron dos SSPs, siendo el aporte de una de ellas del 70 \% y que corresponde a una población de edad intermedia (1.3 $\times$ 10$^{9}$ años). Por otro lado, para la síntesis espectral de SL\,888 se emplearon ocho SSPs diferentes correspondientes a dos grupos de edades bien marcados, un 40 \% correspondiente a poblaciones genuinamente viejas (10 - 13 $\times$ 10$^{9}$ años), y el porcentaje restante a poblaciones muy jóvenes (1 - 9 $\times$ 10$^{6}$ años). Estos diferentes porcentajes se podrían deber a una variedad de efectos, tal como las edades y metalicidades limitadas de las SSPs utilizadas, la contaminación de estrellas no miembros y la baja señal espectral, entre otros. Sin embargo se debe notar la posibilidad de que los vectores población respondan efectivamente a poblaciones múltiples (MPs, por sus siglas en inglés) reales \citep{AVA2019}. 
+
+
+Con el objetivo de estudiar si la bimodalidad tan marcada encontrada en la síntesis espectral de SL\,888 podría corresponder a una MP genuina, se procedió a sintetizar su espectro integrado aplicando en {\sc starlight} una base con una única SSP correspondiente a la edad más cercana al promedio encontrado anteriormente (4.25 $\times$ 10$^{9}$ años) y con la metalicidad típica de la NMM (Z = 0.008). La Fig. \ref{F4} presenta también la mencionada SSP, que, como puede observarse, es similar al espectro sintetizado con la contribución de las diferentes SSPs indicadas en la Tabla \ref{T1}. Esto también se puede apreciar en la similitud de ambos flujos residuales. Vale destacar que \cite{CF2010C} señalan haber encontrado que la síntesis espectral de algunos CEs correspondía a múltiples contribuciones de SSPs dividas en jóvenes y viejas, como si el espectro sintetizado careciera de estrellas azules viejas, y que estos ajustes con multiple componentes no deberían ser relevantes para los CEs.
+
+%Como ejemplo se puede mencionar el trabajo de \cite{Milone2017}, quienes encontraron que la secuencia principal en el DCM del CE NGC\,1866 está dividida, indicando un rango de edades de (140 - 220) × 10$^{6}$ años, siendo ésta una clara señal de la presencia de MPs. Por otra parte, \cite{For2017} encontraron objetos estelares jóvenes entre los CEs viejos de la NMM, lo que indicaría formación en curso dentro de este tipo de CEs, es decir MPs.
+
+Se tiene previsto mejorar la calidad de los espectros integrados obtenidos, y realizar nuevas síntesis espectrales con mayor cantidad y combinaciones de SSPs. De esta manera, se espera mejorar los resultados acá encontrados y poder ahondar respecto al significado de los vectores población, indagando el porqué {\sc starlight} necesitó tantas SSPs de valores tan dispares, en lugar de basar la síntesis de SL\,888, principalmente, en SSPs de edad intermedia.
+
+
+\begin{acknowledgement}
+
+{Agradecemos al referee por sus valiosos aportes que permitieron mejorar notablemente este trabajo. CMRB agradece a la FaMAF y al OAC por el apoyo económico brindado. Los autores agradecen al Comité Organizador Local por hacer posible su participación en la 65$^o$ RAAA.}
+%\it “Based on data obtained at Complejo Astronómico El Leoncito (CASLEO), operated under agreement between the Consejo Nacional de Investigaciones Científicas y Técnicas de la República Argentina and the National Universities of La Plata, Córdoba and San Juan". \it This research has made use of the SIMBAD database, operated at CDS, Strasbourg, France 2000,A\&AS,143,9 , "The SIMBAD astronomical database", Wenger et al. This research has made use of "Aladin sky atlas" developed at CDS, Strasbourg Observatory, France (2000A\&AS..143...33B (Aladin Desktop), 2014ASPC..485..277B (Aladin Lite v2), and 2022ASPC..532....7B (Aladin Lite v3)).
+Basado en datos obtenidos en el Complejo Astronómico El Leoncito (CASLEO), operado bajo acuerdo entre el Consejo Nacional de Investigaciones Científicas y Técnicas de la República Argentina y las Universidades Nacionales de La Plata, Córdoba y San Juan. Esta investigación ha hecho uso de la base de datos SIMBAD, operada en el CDS, Estrasburgo, Francia (2000,A\&AS,143,9, ``La base de datos astronómicos SIMBAD", Wenger et al.). Esta investigación ha hecho uso del atlas Aladin sky desarrollado en el CDS, Observatorio de Estrasburgo, Francia [2000A\&AS..143...33B (Aladin Desktop), 2014ASPC..485..277B (Aladin Lite v2), y 2022ASPC..532....7B (Aladin Lite v3)]. 
+
+\end{acknowledgement}
+
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+
+
+ 
+\end{document}

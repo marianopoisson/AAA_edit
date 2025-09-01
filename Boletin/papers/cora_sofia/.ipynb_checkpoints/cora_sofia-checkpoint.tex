@@ -1,0 +1,496 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{16 February 2024}
+\accepted{03 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Deviation of galaxies from the main sequence: \\multiple mechanisms in action}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Deviation of galaxies from the main sequence}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+S.A. Cora\inst{1,2,3}
+}
+
+\authorrunning{Cora}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{sacora@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina\and   
+Instituto de Astrof\'isica de La Plata, CONICET--UNLP, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{La mayoría de las galaxias que están en proceso de formación estelar siguen una relación conocida como la ``secuencia principal", donde la tasa de formación estelar está estrechamente relacionada con la masa total de la galaxia. Sin embargo, cuando la tasa de formación estelar específica (que es el cociente entre la tasa de formación estelar y la masa de la galaxia) disminuye significativamente, las galaxias se vuelven pasivas y se alejan de esta secuencia principal. El estudio de las galaxias que abandonan esta secuencia nos proporciona información valiosa sobre los diversos mecanismos físicos responsables de la supresión de la formación estelar y cómo se originan las galaxias pasivas en diferentes rangos de masa y en ambientes de distinta densidad (campo, grupos, cúmulos de galaxias). 
+Esta revisión tiene como objetivo ofrecer una visión general de la abundante evidencia observacional que respalda este fenómeno, así como de los principales resultados de diversas simulaciones numéricas cosmológicas que ayudan a su interpretación. Al hacerlo, se evaluará el papel de varios mecanismos físicos que pueden estar actuando de manera simultánea.}
+
+\abstract{Most star-forming galaxies follow a relationship known as the ``main sequence", where the star formation rate is closely tied to the total mass of the galaxy. However, when the specific star formation rate (which is the ratio of the star formation rate to the mass of the galaxy) decreases significantly, galaxies become passive and deviate from this main sequence. Studying galaxies that depart from this sequence provides valuable information about the various physical mechanisms responsible for suppressing star formation and how passive galaxies originate in different mass ranges and environments of varying density (field, groups, galaxy clusters). This review aims to provide an overview of the abundant observational evidence supporting this phenomenon, along with key findings derived from diverse cosmological numerical simulations that aid in their interpretation. Throughout this exploration, we will assess the role of various physical mechanisms that may be acting simultaneously.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{galaxies: formation --- galaxies: evolution --- galaxies: star formation}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+The main sequence of galaxies is an almost linear correlation existing between 
+the star formation rate and the stellar mass of those galaxies forming stars, 
+referred to as star-forming galaxies \citep[e.g.][]{Brinchmann_2004, Noeske_2007, Daddi_2007, Pannella_2009, Magdis_2010}. 
+Recent studies have examined the evolution of this sequence using data from deep surveys. \cite{Merida_2023} utilized the Cosmic Assembly Near-Infrared Deep Extragalactic Legacy Survey (CANDELS) and the Survey for High-z Absorption Red and Dead Sources (SHARDS) to probe the main sequence in the redshift range $1 < z < 3$. Additionally, \cite{HuertasCompany_2023} extended the analysis to the range $0 < z \lesssim 6$, incorporating data from the James Webb Space Telescope (JWST). In the latter study, the power-law fit to the star-forming main sequence, focusing on galaxies with stellar mass $M_{\star} > 10^9~{\rm M}_{\odot}$ in redshift bins $0 < z < 1$, $1 < z < 3$, and $3 < z < 6$, is characterized by normalizations of $0.72$, $1.04$, and $1.19$, and slopes of $0.96$, $0.89$, and $0.55$, respectively.
+%
+The rise in the zeropoint with increasing redshift aligns with prior studies \citep[e.g][]{Whitaker_2012}. The decline in slope observed as redshift increases is also corroborated by numerous other studies in the literature, as illustrated in the compilation by \cite[][see their figure 14]{Merida_2023}. However, these authors demonstrate that the trend changes when exploring the main sequence at smaller stellar masses. 
+They consider   $M_{\star}>10^8~{\rm M}_{\odot}$  at $z = 1$ and $M_{\star}>10^{8.5}~{\rm M}_{\odot}$
+at $z = 3$, reaching $\approx 0.6$ dex deeper than previous analyses. This variation in the evolution of the slope might be influenced by a greater scatter in star formation at fixed stellar mass and the absence of massive objects at these redshifts. Further in-depth observations and investigation are required to comprehend this trend.
+
+Various techniques are employed to classify galaxies based on their star-forming activity. One such method utilises the rest-frame $U-V$ versus $V-J$ colour–colour diagram, known as the UVJ diagram \citep[e.g.][]{Muzzin_2013}. 
+This method involves empirical cuts in this colour-colour space and is grounded in the analysis of the $4000$\AA~break in the spectrum of an old stellar population.
+Another approach to classify galaxies based on their star formation activity relies on 
+the mass-doubling timescale, which is determined by the instantaneous star formation rate (SFR) at the time of observation \citep{Tacchella_2022}. 
+The mass-doubling number, 
+denoted as $D(z) = {\rm sSFR}(z) \times t_{\rm H}(z)$, 
+involves the specific star-formation rate (${\rm sSFR} \equiv {\rm SFR}/M_{\star}$) 
+and the Hubble time at the time of observation, $t_{\rm H}$. 
+Galaxies are classified as star-forming if $D(z) > 1/3$, and quiescent if $D(z) < 1/20$, being transitioning galaxies between these two categories if $1/20 < D(z) < 1/3$. 
+
+Galaxies that deviate from the main sequence are quiescent (passive) galaxies with a low SFR.
+They have undergone a process of star formation suppression, known as ``quenching'', a term referring to the interruption of the conditions necessary for star formation.
+
+The link between the evolution of the SFR, colours and morphologies of galaxies is evident in many studies in the literature. \cite{Schawinski_2014} provide a clear illustration of these connections based on $z = 0$ results from a galaxy sample in the Sloan Digital Sky Survey (SDSS) Data Release 7. In their analysis, galaxies are classified by morphology and colour. The colour-mass diagram of the entire sample reveals a bimodal distribution, resulting from the overlap of two distinct populations: galaxies on the red sequence, mostly of early type, and galaxies forming the blue cloud, dominated by late-type galaxies. The intermediate region between these two main populations is referred to as the green valley, representing a transitional stage in terms of SFR evolution from the blue cloud to the red sequence. This correlation is evident when identifying galaxies based on their SFR, where galaxies on the red sequence exhibit low SFR, while those on the blue cloud show high SFR (refer to their figures 4 and 6).
+
+To understand the mechanisms behind galaxy quenching, it is essential to consider the currently accepted scenario of galaxy formation, taking into account the knowledge provided by the results of cosmological numerical simulations.
+In the cold dark matter cosmogony, the large scale structure of the Universe forms through the hierarchical merging
+of dark matter haloes.
+Modern dark matter-only cosmological simulations can  cover volumes as large as a box of side length of $3\,h^{-1}\,{\rm Gpc}$, like the MillenniumXXL simulation with a dark matter particle mass resolution of $m_{\rm p}=8.456 \times 10^9 \, {\rm M_{\odot}}$ \citep{Angulo_2012}. More recently, the Uchuu simulation suite \citep{Ishiyama_2021} 
+introduced a large simulation covering a volume of $2\,h^{-1}\,{\rm Gpc}$ side length, featuring improved mass resolution
+($m_{\rm p}=3.27 \times 10^8 \, {\rm M_{\odot}}$).
+ This kind of simulations 
+ effectively model the large-scale structure of the Universe, unveiling the cosmic web, a complex three-dimensional network comprising filaments, nodes, and void regions. Nodes, situated at the intersections of multiple filaments, often correspond to locations of massive galaxy clusters.  
+The physics pertinent to galaxy formation is considered through both hydrodynamic simulations \citep[see][for a review]{Crain_2023} and semi-analytic models of galaxy formation (see reviews of \citealt{Baugh_2006, Benson_2010}).
+Modeling the formation of the galaxy population through hydrodynamic simulations involves solving the partial differential equations governing
+the gravitational evolution of matter,
+the hydrodynamic evolution of gas, and
+the interaction of gas with evolving radiation and magnetic fields.
+Hydrodynamic cosmological simulations have the capability to trace the formation of cosmic structures up to scales of $\mathcal O(100~{\rm Mpc})$. On smaller scales, these simulations need to employ subgrid models to approximate the macroscopic effects of physics that are not numerically resolved.
+Semi-analytic models offer an alternative approach to modeling baryonic physics on {\em N}-body dark matter simulations through analytic methods, providing the advantage of being computationally less expensive than hydrodynamical simulations, and allowing to generate galaxy populations in volumes of $\mathcal O({\rm Gpc})$. A comprehensive overview of these different modeling techniques is presented by \cite{Vogelsberger_2020}.
+
+A simplified scenario of the physical processes involved in modeling galaxy formation takes into account that the baryon component, constituting the visible part of galaxies, is initially primarily composed of gas, predominantly hydrogen and helium. Over time, some of this gas undergoes the process of turning into stars during the formation of cosmic structures. Dark Matter haloes serve as the locations where future galaxies will emerge, experiencing accretion shocks as gas and dark matter accumulate onto these haloes through cosmological accretion. This process heats the gas to temperatures ranging from $10^3$ to $10^6\,{\rm keV}$. The gas, supported by pressure against gravitational collapse, attains a quasi-equilibrium state. In the inner regions of the halo, the gas radiatively cools, contracting into a disc where stars form from molecular gas. 
+The formation of stellar bulges and black holes can occur in the galactic center due to gas inflows triggered by instabilities induced by mergers, flybys, and disc instabilities. 
+ While the process of star formation generates chemical and energetic stellar feedback, gas accretion onto super massive black holes (SMBH) gives rise to active galactic nuclei (AGN) and its associated energetic feedback. 
+
+Currently, hydrodynamic simulations and semi-analytic models have advanced to the point of accurately reproducing a wide range of observations, including spatial clustering, mass, size, and SFR distributions, as well as scale relations connecting various properties with mass. This instills confidence in the insights drawn from simulations. However, crucial results are sensitive to details of subgrid models, such as properties of circumgalactic gas and the effects of energy injection from stellar winds, supernova (SN) explosions and AGN.
+
+The rate at which stars form is controlled by the quantity of cold gas present in the galaxy, determined by the interplay between gas accretion (or inflows) and gas expulsion toward the halo or beyond (outflows). This balance establishes the connection between the SFR and stellar masses, forming the main sequence of galaxies.
+Any disturbance in the equilibrium between accretion and ejection can lead the galaxy to deviate from the main sequence. The causes of quenching can be categorized based on their impact on the gas at various stages. 
+
+
+This review seeks to compile the primary physical mechanisms leading to the quenching of star formation, offering an overview of numerous observational findings related to this phenomenon, along with key insights from various cosmological numerical simulations that aid in their interpretation. It explores how passive galaxies originate across different mass ranges and environments, including varying density scenarios such as field, groups, and galaxy clusters. The foundation of this review is largely derived from the work of \cite{ManBelli_2018}, which provides concise overview and a
+comprehensive classification of the
+quenching mechanisms at work in massive galaxies. We delve into references provided by them and complement the information with additional and updated results, extending the analysis to include low-mass galaxies. Additionally, we present recent findings from our own research that contribute to the understanding of specific aspects within this vast topic.
+
+
+The article is structured as follows. Section~\ref{Sec:InflowsOuflows} introduces fundamental aspects of gas accretion and ejection. Section~\ref{Sec:SFquenchingMech} constitutes the central part of this review, detailing the primary mechanisms for quenching star formation. Section~\ref{Sec:PassiveSat} briefly outlines some findings from our own research focused on the star formation quenching of satellite galaxies. Finally, Section~\ref{Sec:EvolPassiveFrac} presents concluding remarks, summarizing the entire scenario by considering the evolution of the fraction of passive galaxies, encompassing both centrals
+and satellites, over a broad stellar mass range. 
+
+\section{Gas inflows and outflows}
+\label{Sec:InflowsOuflows}
+
+Before delving into the physical processes linked to the quenching of star formation, it is essential to present certain aspects of gas accretion (inflows) and ejection (outflows). 
+
+ 
+\subsection{Gas accretion}
+\label{sec:GasAccretion}
+
+As previously noted, the gas falling into a dark matter halo heats up in the presence of shocks. 
+These shocks occur when a critical balance is achieved between the cooling rate and the compression rate of the post-shock gas \citep{BirnboimDekel_2003}. 
+Hydrodynamic simulations indicate that there exists a critical halo mass
+ for the formation of stable shocks, $M_{\rm shock} \approx 10^{12}~{\rm M}_{\odot}$ \citep{DekelBirnboim_2006}. 
+For halo masses below the critical threshold ($M_{\rm halo} < M_{\rm shock}$), the gaseous disc forms through the accretion of cold flows. In contrast, for halo masses surpassing the critical limit ($M_{\rm halo} > M_{\rm shock}$), the initially falling gas undergoes heating via stable shocks until it attains a virial temperature $T_{\rm vir} \approx 10^6\,{\rm K}$.
+
+In the context of a hierarchical structure formation scenario, where more massive haloes form at later epochs, the typical mass of haloes formed at a given redshift, $z$, increases as redshift decreases. 
+Thus, gas accretion becomes more complex when considering large haloes at high redshift. 
+At $z\gtrsim 2$, there are streams of cold and dense gas that penetrate through the shock-heated medium.
+Consequently, below the critical mass, there is only accretion of cold gas regardless of redshift, while above the critical mass, at high redshift, there are cold flows traversing the hot halo. This entire scenario is illustrated in figure 7 of \cite{DekelBirnboim_2006}.
+These large haloes at high redshift are rare haloes located at the intersection of cosmic web filaments that will evolve into galaxy clusters with virial masses $M_{\rm vir}\approx 10^{15}~{\rm M}_{\odot}$ at $z=0$. These filaments are narrow compared to the virial radius of the halo, and their higher density promotes shorter cooling times, leading to the development of these cold streams. 
+ 
+\subsection{Gas ejection}
+\label{Sec:GasEjection}
+
+Gas outflows can originate from two primary sources, and their prevalence is contingent on the stellar mass of the galaxy: stellar winds, primarily influencing low-mass galaxies, and AGN, whose impact is relevant in high-mass galaxies. The combination of these mechanisms leads to a maximal efficiency of baryon-to-star conversion for a halo mass of $M_{\rm halo}\approx 10^{12}{\rm M}{\odot}$ and a stellar mass of $M_{\star }\approx 10^{10}{\rm M}_{\odot}$; these values remain roughly constant across different redshifts.
+This is evidenced by results from galaxy formation models \citep[e.g.][]{Henriques_2019}.
+
+Stellar feedback is provided by galactic winds generated in star-forming galaxies, which can be propelled by the overlap of SN explosions, radiation pressure from starlight on dust particles, and cosmic rays \citep[see][for a review]{Zhang}. 
+
+AGN feedback is produced by a diverse group of galaxies, including Seyferts, radio galaxies, blazars, and quasars.  These are very luminous sources with an energy spectral distribution ranging from radio to gamma rays, showing significant temporal variability as their energy is generated from gas accretion onto a SMBH. This has led to the proposal of a unified model consisting of the central SMBH surrounded by a dust torus, with an accretion disc and the generation of jets. The formation of jets depends on the rate of gas accretion onto the SMBH relative to the Eddington accretion rate, a theoretical value estimated for spherical accretion.
+%
+This gives rise to two modes of AGN feedback: radiative AGN feedback and mechanical AGN feedback \citep{Heckman_2014, 
+ Harrison_2017}. In the radiative scenario, the accretion disc takes precedence, while in the mechanical scenario, the jet plays a dominant role.
+ 
+Radiative AGN (also termed quasar mode, following \citealt{Croton_2006}, or wind mode) typically exhibit high accretion rates, with their energy being primarily radiated from the accretion disc. They are luminous in X-rays, optical, and/or infrared wavelengths and are commonly observed in galaxies experiencing active star formation with young stellar populations.
+Conversely, mechanical AGN (also termed radio mode, following \citealt{Croton_2006}, or jet mode), marked by low accretion rates, generate jets, resulting in a mechanical release of energy. They are commonly recognised by their radio emission and are typically located in more massive galaxies with older stellar populations, especially at lower redshifts.
+
+\section{Star formation quenching mechanisms}
+\label{Sec:SFquenchingMech}
+
+Star formation quenching arises from diverse physical processes that disturb the balance between gas accretion and ejection, consequently impacting the reservoir of cold gas available for star formation. These quenching mechanisms can be categorized according to their effects on the gas cycle throughout galaxy evolution \citep{ManBelli_2018}, and they may act individually or in combination. In some cases, cosmological gas accretion may be inefficient. Even when accretion occurs, the conditions for gas cooling might not be met. If a reservoir of cold gas forms, it could be heated. Despite the presence of a cold gas reservoir, star formation may either be insufficiently efficient or excessively efficient.
+Additionally, gas in a cold gas reservoir might be expelled by outflows generated by internal sources or removed by physical processes related to the environment in which the galaxy resides. The subsequent subsections provide a more detailed explanation of the physical processes leading to each of these scenarios.
+
+
+\subsection{Inefficient cosmological gas accretion}
+
+Star-forming galaxies can transition to a passive state through a phenomenon known as cosmological starvation, characterized by a reduction in the accretion of gas into their dark matter haloes, as demonstrated by \cite{Feldmann_2015}. This occurrence is evident in the outcomes of a detailed zoom-in hydrodynamic cosmological simulation ({\sc argo}) analyzed by these researchers. The simulation tracks the evolutionary trajectory of a massive galaxy at $z > 2$. Initially, at $z=4$, the simulated galaxy possesses a stellar mass of $\approx 10^{10}~{\rm M}{\odot}$ and has blue colour with a disc-like structure. However, by $z=2$, it undergoes a transformation into an early-type, red galaxy with a stellar mass of $\approx 10^{11}~{\rm M}{\odot}$. The galaxy follows the star formation main sequence until $z\approx 3.5$, at which point it deviates, experiencing a notable decline in sSFR by a factor of 5 to 10 within a few hundred million years, indicative of suppressed star formation.
+
+The cause of this suppression becomes evident when examining the evolution of the galaxy's dark matter, stars, and gas masses \citep[see figure 11 in][]{Feldmann_2015}. At $z \gtrsim 3.7$, the dark matter halo undergoes growth during a collapse phase, marked by rapid accretion, accompanied by an increase in available gas and stellar mass. Around $z\approx 3.5$, the phase of cosmological starvation sets in, wherein the accretion rates of both dark matter and gas onto the halo decrease. 
+For $z \lesssim 3.3$, the SFR diminishes and remains at low levels due to the accretion of cold gas from large radii, specifically through the cold streams (see Section~\ref{sec:GasAccretion}). 
+
+The notably aspect of this scenario is its ability to explain the coexistence of star-forming and passive galaxies within a given mass range, highlighting that SFR depends not only on the halo mass but also on the gas accretion rate.
+
+\subsection{Inefficient gas cooling}
+\label{Sec:InefficientGasCooling}
+
+The mode of gas accretion is strongly dependent on halo mass and redshift, as discussed in Section~\ref{sec:GasAccretion}. Galaxies residing in dark matter haloes of virial mass $M_{\rm vir} > 10^{12}~{\rm M}_{\odot}$ at low redshifts ($z\lesssim 2$) experience the development of a hot gas halo through shocks and the disappearance of cold gas streams. This results in a reduction of the gas cooling rate and, consequently, a decrease in the star formation rate. This quenching mechanism, linked to the critical halo mass for shock formation ($M_{\rm shock} \approx 10^{12}~{\rm M}_{\odot})$, is known as ``virial shock heating'' or  ``halo mass quenching''.  
+We can see it in action by revisiting the colour-mass relationship for a sample of galaxies at $z=0$ from the SDSS, separated by halo mass \citep[see figure 10 in][]{Schawinski_2014}.
+Late-type galaxies in the blue cloud (i.e., those located along the main sequence) are predominantly found in low-mass haloes ($M_{\rm vir} < 10^{12}~{\rm M}_{\odot}$), while late-type galaxies in the green valley and the red sequence (i.e., with low or no SFR) are almost exclusively located in high-mass haloes ($M_{\rm vir} > 10^{12}~{\rm M}_{\odot}$). Clearly, the star formation suppression in late-type galaxies is clearly different above and below this critical mass.
+
+
+\subsection{Cold gas heating}
+\label{Sec:ColdGasHeated}
+
+While virial shock heating can initiate quenching in massive haloes at low redshifts by reducing the availability of cold gas, the gas can still cool in the inner regions of the halo and be available for star formation. Therefore, additional sources of heating are required to maintain the suppression of star formation, such as stellar feedback and  AGN feedback (see Section~\ref{Sec:GasEjection}).
+
+The inclusion of stellar and AGN feedback in galaxy formation models is crucial for reproducing a large number of observables, including the relationship between the ratio of stellar mass to halo mass versus halo mass, which provides the baryon conversion efficiency into stars. An evident illustration of this is depicted in figure 1 of \cite{Harrison_2017}. 
+Models without any feedback results in an excess of stellar mass for all halo masses.
+%
+By activating stellar feedback, the stellar mass is reduced in low-mass haloes. This feedback operates by disrupting molecular clouds, inducing turbulence, and ejecting gas into the circumgalactic medium and intergalactic medium.
+%
+Additionally, by activating AGN feedback, star formation is reduced at high masses ($M_{\star} \gtrsim 10^{10}~{\rm M}_{\odot}$, typically residing in haloes of virial mass $M_{\rm vir} \gtrsim 10^{12}~{\rm M}_{\odot}$). The physical mechanisms of energy coupling to the interstellar medium remain poorly understood. Possible channels include radiation pressure on free electrons/dust grains expelling the reservoir of cold gas, and jets.
+While AGN winds may be more important at early times,
+jets dominate the energy budget at $z \lesssim 2$ \cite{Kondapally_2023}.
+%
+The latter constitutes an additional source of heating that prevents star formation by counteracting the cooling of hot gas in the halo. This is because highly energetic jets traverse the cooling region and deposit their energy much farther away, as observed in images of the intra-cluster medium in X-rays and the radio lobes of the central galaxy in some galaxy clusters \citep{McNamara_2009, Fabian_2012}.
+
+The impact of feedback on cosmological gas accretion has been investigated using cosmological
+hydrodynamic simulations that implement the full physics
+model of the Illustris simulation project \citep{Nelson_2015}. 
+Comparing the results of runs with SN and AGN feedback and those without feedback for a halo with mass of $10^{11.5}~{\rm M}_{\odot}$ at $z=2$ (refer to their figure 6), it is evident that models with feedback result in the injection of energy, pushing hot gas to larger radii, and increasing the fraction of the virial sphere covered by outflows. There are relatively unaffected cold streams and galactic winds due to stellar feedback, which are cold and metal-rich, within $\approx 0.5$ times the virial radius.
+Furthermore, when analyzing the evolution of the net rate of cosmologically sourced gas accretion onto central galaxies in haloes of mass ranging from $10^{11.3}~{\rm M}_{\odot}$ to $10^{11.4}~{\rm M}_{\odot}$, feedback suppresses accretion by a factor of $\approx 3$ at z=5 (refer to their figure 1).
+
+
+\subsection{Inefficient star formation from available cold gas}
+
+
+Even in the presence of a cold gas reservoir, the star formation activity requires the dissipation of kinetic energy to induce instability and fragmentation. However, this dissipation process can be hindered by long dissipation scales, attributed to factors such as energy injection and turbulence. Potential sources of this hindrance include AGN feedback, as previously discussed (Section~\ref{Sec:ColdGasHeated}), and a phenomenon known as ``Morphological Quenching'' \citep{Martig_2009}, linked to morphological transformations.
+
+
+Morphological quenching involves the morphological transition from a rotation-supported disc to a pressure-supported spheroid (due to gas turbulence) caused by minor and major mergers. In the course of this process, early-type galaxies can turn red even with gas reservoirs similar to spiral galaxies.
+This concept is exemplified by the outcomes of a simulation of a galaxy starting from $z=2$ \citep[see their figure 2]{Martig_2009}. Initially, there is a gradual increase in the stellar spheroid due to minor mergers. Towards the end of the morphological quenching phase, a substantial gaseous disc and a stellar spheroid become evident. Therefore, morphological quenching has the potential to produce a red early-type galaxy with a significant molecular gas content: the stellar spheroid stabilizes the gas, halting star formation. As the stellar disc diminishes, the conditions for star formation are not fulfilled, as the self-gravity of perturbations diminishes, failing to exceed the disruptive galactic tidal field, which prevents fragmentation into dense gas clusters.
+
+
+A subset of galaxies that might be undergoing morphological quenching are the group-dominant early-type galaxies identified in the molecular gas survey of the Complete Local-volume Groups Sample \citep[CLoGS,][]{Sullivan_2018}.These galaxies deviate from the main sequence (see their figure 6), displaying characteristics such as high molecular gas content ($H_{\rm H2} \sim 0.01 - 6\times 10^8~{\rm M}{\odot}$), low star formation rates ($0.01-0.1~{\rm M}{\odot}\,{\rm yr}^{-1}$), and evidence of interactions, aligning with the expectations of morphological quenching.
+
+Similarly, morphological quenching may clarify the  characteristics observed in the colour-mass distribution of early-type galaxies in the SDSS galaxy sample 
+\citep[see their figure 10]{Schawinski_2014}. In this distribution, early-type galaxies reside on the red sequence regardless of their halo mass, implying low SFR across the entire spectrum of halo masses. 
+
+\subsection{Excessively efficient star formation from available cold gas}
+
+When star formation occurs in efficient bursts and consumes cold gas at a rate faster than it is replenished, the galaxy may exhaust its fuel and transition to a quiescent state. Starbursts involve intense gas flows towards the core (inflows), loss of angular momentum, and compression of the gas, 
+particularly evident in mergers of gas-rich galaxies \citep[e.g.][]{Springel_2005}. During these mergers, significant gravitational interactions lead to pronounced gas flows toward the nucleus, reaching maximum SFR and critical size for the SMBH in the remnant galaxy. Subsequently, feedback mechanisms come into play, halting additional SMBH growth and expelling gas from the central region through a powerful wind driven by the AGN. This heating source (Section~\ref{Sec:ColdGasHeated}) contributes to the quenching of star formation.
+
+A similar  situation can also arise from disc instabilities experienced by a disc galaxy, generating a bar \citep{Athanassoula_2013, Lopez_2023_baaa}.
+
+Positive AGN feedback can also induce these starbursts, which can coexist with negative feedback, creating a central cavity at the edge of which the gas is compressed, resulting in higher star formation efficiency \cite{Mercedes-Feliz_2023}.
+
+
+\subsection{Gas removal}
+
+Other factors contributing to quenching involve the removal of gas through outflows induced by stellar feedback and AGN feedback in low and high-mass galaxies, respectively (see Section~\ref{Sec:GasEjection}), as well as by the effects of the environment on satellite galaxies.
+
+Each dark matter halo hosts a central galaxy. In smaller haloes, only one galaxy is present, while in larger haloes corresponding to groups or clusters of galaxies, the central galaxy, being in general the most massive in its group or cluster, is subject to processes where the efficiency of quenching scales with the mass of its halo: SN feedback, AGN feedback, halo mass quenching.
+
+ Subhaloes of dark matter within the larger halo host satellite galaxies. These galaxies experience the same mass-quenching processes as central galaxies but are also influenced by environmental effects. These effects encompass tidal forces (acting on gas and stars), leading to tidal stripping \citep{Merritt_1983}, and ram pressure, determined by the product of the density of the intragroup/intracluster medium and the square of the galaxy's relative velocity with respect to it \citep{GunnGott_1972}, resulting in the removal of the interstellar medium from galaxies.
+
+ It is worth noting that a central galaxy becomes a satellite by being accreted by a group or cluster that eventually hosts it at $z=0$. Alternatively, it may become a satellite of a group that is then accreted by a larger halo, where it is ultimately located at $z=0$. Physical processes that satellites undergo before falling into the host halo at $z=0$ are considered as ``pre-processing'' \citep[e.g.,][]{Wetzel_2013}.
+
+The fraction of observed $z=0$ passive galaxies as a function of stellar mass for both central and satellite galaxies in the SDSS has been presented by \cite{Wetzel_2012} (see their figure 3, top panel); satellite galaxies have been split in different samples according to the mass of their host halo. As the stellar mass increases, both satellite and central galaxies exhibit a decline in their star formation, resulting in a concurrent rise in the fraction of passive galaxies. In the case of satellite galaxies with a specific stellar mass, the percentage of passive galaxies increases with increasing halo mass, and this dependency is more gradual for more massive galaxies, indicating that they exhibit less variation based on the halo mass they inhabit. These trends are reproduced by current models of galaxy formation using either semi-analytic models of galaxy formation \citep[e.g.][]{Cora_2018} or hydrodynamic simulations \citep[e.g.][]{Donnari_2021}.
+
+\section{Passive satellite galaxies}
+\label{Sec:PassiveSat}
+
+This section relies on our own findings concerning the examination of quenching mechanisms impacting satellite galaxies. We employed a semi-analytic model of galaxy formation and evolution, {\sc sag} \citep{Cora_2018}, that incorporates various physical processes influencing the baryonic component (gas cooling, quiescent star formation, bursty star formation triggered by mergers and disc instabilities, chemical enrichment, SN and AGN feedback) coupled with the dark matter cosmological simulation {\sc mdpl2} \citep{Klypin_2016}. The simulation features a box size of $1~h^{-1},{\rm Gpc}$ and a dark matter particle mass of $m_{\rm DM}=1.51 \times 10^9{\rm M}_{\odot}$. 
+
+Initially, we ensured a satisfactory alignment with the aforementioned observational outcomes regarding the fraction of passive galaxies \citep{Wetzel_2012}. This alignment was achieved by introducing a model of ram pressure stripping applied to satellite galaxies (among other improvements implemented in the model). We apply fits to the radial profile of ram pressure based on halo mass and redshift, derived from hydrodynamic simulations \citep{VegaMartinez_2022}. This implementation mimics the observed phenomenon of ram pressure stripping, such as in jellyfish galaxies, leading to the expulsion of cold gas. However, this process also affects the halo of hot gas surrounding the galaxy, resulting in a gradual reduction of its content. Our model considers that the removal of cold gas occurs when the halo of hot gas has significantly diminished. The stripped mass, for both hot and cold gas, is higher in less massive galaxies due to their lower restorative gravitational force. Moreover, it is more substantial for galaxies located in larger haloes where the density of the intracluster medium is higher (see figure 14 and 15 of \citealt{Cora_2018}). Once the hot gas diminishes to a point where it no longer shields the cold gas, the latter also undergoes ram pressure stripping, albeit at a lower magnitude, playing a secondary role in further reducing cold gas after the galaxy has ceased active star formation.
+
+An in-depth investigation aiming to comprehend how the fraction of satellite galaxies reaches the observed value at $z=0$ has been undertaken by \cite{Cora_2019}. When examining the quenched fractions at $z=0$ as a function of the redshift at which galaxies become satellites (redshift at first infall; see their figure 1), it becomes apparent that, for a given stellar mass, there is a higher fraction of passive satellites for those accreted at higher redshifts. This indicates that they have been subjected to the effects of ram pressure stripping for a longer time; although tidal stripping has been taken into account, its effect is negligible. Additionally, a higher fraction of quenched satellites at $z=0$ is observed for greater stellar mass, regardless of the redshift of first infall, aligning with the overall trend of increased star formation quenching in more massive galaxies. 
+
+Evaluating the fraction of passive galaxies at the time of first infall (see figure 2 in \citealt{Cora_2019}) reveals that the fraction is very low for low-mass galaxies ($M_{\star} \lesssim 3 \times 10^{10}{\rm M}_{\odot}$), regardless of the time of first infall, indicating that low-mass satellites do not become passive due to mass-quenching effects (halo mass quenching, stellar and AGN feedback) while they are central, consistent with \cite{Wetzel_2013}. In these cases, star formation is primarily suppressed by environmental effects.
+%
+Considering high-mass galaxies ($M_{\star} \gtrsim 3 \times 10^{10}{\rm M}_{\odot}$) recently accreted, the fraction of quenched galaxies is already $\gtrsim 0.5$, suggesting that star formation is suppressed while the galaxy is still central, driven by mass-quenching effects and not by environmental ones. For those high-mass galaxies falling in at $z \gtrsim 1.5$, the quenched fraction is low, indicating that most central galaxies have been accreted as main-sequence star-forming galaxies. However, as we consider high-mass galaxies accreted more recently, this fraction increases (till they achieve the $z=0$ quenched fraction) because they have had more time to suppress their star formation due to mass-quenching processes; environmental processes are no so relevant in high-mass galaxies. In other words,
+high-mass satellites that are star-forming
+during accretion primarily experience the effects of mass-quenching processes following their first infall.
+
+Delving further into this analysis, \cite{Hough_2023} examine the connection between the passive satellite fraction at $z=0$ and the dynamic evolution of galaxies within and around galaxy clusters. The sample is divided into galaxies within the cluster that fell more than $2~{\rm Gyr}$ ago (ancient infallers), those that fell within the last $2~{\rm Gyr}$ (recent infallers), and backsplash galaxies, which have a $z=0$ cluster-centric distance larger than the virial radius of the cluster but were inside it at some point in their orbital evolution. The analysis explores the relation between the fraction of quenched galaxies as a function of their stellar mass for the three populations at different times during their evolution (see their figure 6). For ancient infallers, four times are considered: the time of infall to the progenitor of the $z=0$ cluster, the first and second passages through the pericentre, and the present epoch ($z=0$). For a given stellar mass, the fraction of quenched satellites is observed to increase along the galaxy's orbit while contained in the cluster. While low-mass satellites display a significant evolution in their passive fraction over time, indicating the cumulative impact of environmental effects, high-mass galaxies demonstrate less change in their passive fractions. This is due to their tendency to be more quenched than low-mass galaxies at the moment of their infall. This is attributed to the fact that present high-mass galaxies initiate star formation earlier than their low-mass counterparts, depleting their gas reservoirs. Additionally, mass-quenching processes, as virial shock heating and AGN feedback, inhibit further gas cooling, impeding the replenishment of their cold gas discs \citep{Cora_2019}, thereby disrupting the baryon cycle.
+%.
+Conversely, recently accreted galaxies show no changes between their infall time and $z=0$, indicating that $2~{\rm Gyr}$ is not sufficient for environmental effects to suppress star formation.
+
+For backsplash galaxies, the first passage through the pericenter and the time of exit from the cluster are considered. In this case, a moderate evolution is observed, falling between ancient infallers and recent infallers, aligning with their intermediate infall times (see figure 3 of \citealt{Hough_2023}). A more detailed examination of the amount of stripped hot gas since the galaxy became a satellite (time of first infall) inside and outside the cluster indicates that the fraction of quenched backsplash galaxies and recent infallers results from pre-processing in groups and environmental effects within the cluster (see figure 12 of \citealt{Hough_2023}).
+
+It is noteworthy that only $\approx 50$ per cent of low-mass backsplash galaxies are passive at $z=0$. A more in-depth analysis of the backsplash population is presented in \cite{Ruiz_2023}, categorizing them based on the stage of their orbit when they become passive: those that are passive before entering the cluster, those that become passive within the cluster, those that become passive upon exiting the cluster, and those that never suppress their star formation. Examining the number of galaxies for each type as a function of their stellar mass (see their figure 2) reveals that backsplash galaxies that become passive before entering the cluster are high-mass galaxies (consistent with the previously mentioned results), while those that continue to form stars or become passive outside the cluster are predominantly low-mass galaxies. The fact that some galaxies become passive and others do not depends on the pericentre distance of their orbit to the center of the cluster, with passive galaxies having a smaller pericentre distance (see their figure 6) due to the greater effect of ram pressure, resulting from a combination of higher intracluster medium density in the inner regions and a higher relative velocity of the galaxy near the pericentre.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig1.png}
+\caption{
+Evolution across the redshift range $0\le z \le 1$ of the fraction of quenched galaxies over $\approx 7$ dex in stellar mass. \emph{Top panel}: Results for low-mass galaxies ($M_{\star} \lesssim 10^{8}{\rm M}_{\odot}$; \citealt{Weisz_2015}), and high-mass ones ($M_{\star} \gtrsim 10^{8}{\rm M}_{\odot}$; \citealt{Geha_2012, Wetzel_2013}). \emph{Bottom panel}: Same as top panel (thin coloured lines) with the addition of thick lines representing the fractions of quenched galaxies in all type of systems, regardless of their mass, and field galaxies \citep{Geha_2012, Karachentsev_2013}. Figure reproduced with permission from \cite{Weisz_2015}.
+}
+\label{Fig1}
+\end{figure}
+
+
+\section{Evolution of the passive fraction and concluding remarks}
+\label{Sec:EvolPassiveFrac}
+
+Lastly, it is noteworthy to consider the evolution of the passive fraction of galaxies, encompassing both centrals and satellites, and extending the stellar mass range to values below $10^8~{\rm M}_{\odot}$. This insight is derived from observations of dwarf galaxies within the Local Group \citep{Weisz_2015} and the Exploration of Local VolumE Satellites (ELVES) survey \citep{Greene_2023}, which investigates groups within a local volume within $12~{\rm Mpc}$. Aligning with the findings of \cite{Wetzel_2012} for the stellar mass range $\gtrsim 10^{10}{\rm M}_{\odot}$ at $z=0$, the relationship between the fraction of quenched galaxies and stellar mass exhibits a U-shaped pattern when covering seven orders of magnitude in stellar mass. This pattern persists when considering data at higher redshifts, spanning from $z = 0$ to $z = 1$, as depicted in Fig.\ref{Fig1} with data compiled by \cite{Weisz_2015}.
+
+The distinct U-shaped pattern emerges from different quenching mechanisms coming into play at different mass scales. At lower masses, external processes, such as reionization, ram pressure stripping and tidal stripping are relevant, while at higher masses, quenching is primarily governed by stellar mass and halo mass (gas accretion rates, virial shock heating, SN and AGN feedback). The low passive fraction at intermediate masses indicates a transitional region where no specific mechanism is particularly effective.
+
+In this overview of the primary quenching processes impacting central and satellite galaxies across various stellar masses, it becomes apparent that certain mechanisms can trigger quenching, while others play a role in its continuation. While specific studies have been cited to emphasize particular aspects covered in this review, it is essential to acknowledge the extensive body of both observational and theoretical research addressing this topic. This underscores the fundamental and unresolved nature of the question regarding why galaxies transition to a passive state and deviate from the main sequence in the realm of galaxy formation.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{acknowledgement}
+We express our gratitude to the Scientific Committee of the 65th Annual Meeting of the {\it Asociaci\'on Argentina de Astronom\'ia} for their invitation to present this review. We acknowledge funding from {\it Consejo Nacional de Investigaciones Científicas y Tecnológicas}  (CONICET, PIP-2876), {\it Agencia Nacional de Promoci\'on de la Investigaci\'on, el Desarrollo Tecnol\'ogico y la Innovaci\'on} (Agencia I+D+i, PICT-2018-3743), and support from the {\it Universidad Nacional de La Plata} (G11-150), Argentina.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

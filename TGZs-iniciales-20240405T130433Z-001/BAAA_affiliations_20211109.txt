@@ -1,0 +1,402 @@
+Asociaci{\'o}n Argentina Amigos de la Astronom{\'i}a, Argentina
+Comisi{\'o}n de Investigaciones Cient{\'i}ficas de la Provincia de Buenos Aires, Argentina
+Comisi{\'o}n Nacional de Actividades Espaciales, Argentina
+Complejo Astron{\'o}mico El Leoncito, CONICET--UNLP--UNC--UNSJ, Argentina
+Consejo Nacional de Investigaciones Cient{\'i}ficas y T{\'e}cnicas, Argentina
+Departamento de Astronom{\'i}a y Geof{\'i}sica, UNSJ, Argentina
+Departamento de Ciencia y Tecnolog{\'i}a, UNTREF, Argentina
+Departamento de Ciencias de la Atm{\'o}sfera y los Oc{\'e}anos, FCEN--UBA, Argentina
+Departamento de Espectroscop{\'i}a, Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Departamento de Geof{\'i}sica y Astronom{\'i}a, Facultad de Ciencias Exactas, F{\'i}sicas y Naturales, UNSJ, Argentina
+Departamento de Qu{\'i}mica Biol{\'o}gica, Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+Facultad de Arquitectura, Dise{\~n}o y Urbanismo, UBA, Argentina
+Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Facultad de Ciencias Exactas, Ingenier{\'i}a y Agrimensura, UNR, Argentina
+Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+Facultad de Matem{\'a}tica, Astronom{\'i}a, F{\'i}sica y Computaci{\'o}n, UNC, Argentina
+Facultad Regional Mendoza, UTN, Argentina
+Facultad de Ciencias Exactas, F{\'i}sicas y Naturales, UNSJ, Argentina 
+Facultad de Ingenier{\'i}a, UNLP, Argentina
+Facultad de Ciencias Exactas, F{\'i}sicas y Naturales, UNC, Argentina
+Observatorio Astron{\'o}mico de C{\'o}rdoba, UNC, Argentina
+Observatorio Astron{\'o}mico F{\'e}lix Aguilar, UNSJ, Argentina
+Grupo de Ciencias Planetarias, Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Grupo de Ciencias Planetarias, Instituto de Astrof{\'i}sica de La Plata, CONICET--UNLP, Argentina
+Grupo de Evoluci{\'o}n Estelar y Pulsaciones, Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Grupo de Gravitaci{\'o}n, Astrof{\'i}sica y Cosmolog{\'i}a, Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Instituto Argentino de Radioastronom{\'i}a, CONICET--CICPBA--UNLP, Argentina
+Instituto de Astrof{\'i}sica de La Plata, CONICET--UNLP, Argentina
+Instituto de Astronom{\'i}a Te{\'o}rica y Experimental, CONICET--UNC, Argentina
+Instituto de Astronom{\'i}a y F{\'i}sica del Espacio, CONICET--UBA, Argentina
+Instituto de Ciencias Astron{\'o}micas, de la Tierra y del Espacio, CONICET--UNSJ, Argentina
+Instituto de F{\'\i}sica de Buenos Aires, CONICET--UBA, Argentina
+Instituto de F{\'i}sica de Rosario, CONICET--UNR, Argentina
+Instituto de Tecnolog{\'i}as en Detecci{\'o}n y Astropart{\'i}culas, CNEA--CONICET--UNSAM, Argentina
+Instituto de F{\'i}sica del Plasma, CONICET--UBA, Argentina
+Instituto de F{\'i}sica de La Plata, CONICET--UNLP, Argentina
+Instituto de Institute for Computational Science, University of Zurich, Suiza
+F{\'i}sica Enrique Gaviola, CONICET--UNC, Argentina
+Planetario de la ciudad de Buenos Aires Galileo Galilei, Argentina
+Ciclo B{\'a}sico Com{\'u}n, UBA, Argentina
+Sede Atl{\'a}ntica, UNRN, Argentina
+Sede Andina, UNRN, Argentina
+Universidad Nacional de La Matanza, Argentina
+Universidad Nacional de La Plata, Argentina
+International Center for Advanced Studies e Instituto de Ciencias F{\'i}sicas, CONICET-UNSAM, Argentina
+Astronomický {\'u}stav, Akademie v\v ed \v Cesk{\'e} republiky, Rep{\'u}blica Checa
+Astrophysics Research Institute, Liverpool John Moores University, Reino Unido
+Australian National University, Australia
+Canada-France-Hawaii Telescope Corporation, EE.UU.
+Centre d'{\'e}tudes Nucl{\'e}aires de Bordeaux Gradignan, Universit{\'e} de Bordeaux,  Francia 
+Centre for Astrophysics and Supercomputing, Swinburne University of Technology, Australia
+Centro de Astrobiolog{\'i}a, Instituto Nacional de T{\'e}cnica Aeroespacial, Consejo Superior de Investigaciones Cient{\'i}ficas, Espa{\~n}a
+Centro de Estudios de F{\'i}sica del Cosmos de Arag{\'o}n, Espa{\~n}a
+Centro de Radioastronom{\'i}a y Astrof{\'i}sica, Universidad Nacional Aut{\'o}noma de M{\'e}xico, M{\'e}xico
+Commonwealth SInstitute for Computational Science, University of Zurich, Suiza
+cientific and Industrial Research Organisation Astronomy and Space Science, Australia
+Departament d’Astronomia i Meteorologia, Institut de Ci\`ences del Cosmos, Universitat de Barcelona, Espa{\~n}a
+Departamento de Astronom{\'i}a, Universidad de Chile, Chile
+Departamento de Astronomia, Universidade Federal do Rio Grande do Sul, Brasil
+Departamento de Ciencias F{\'i}sicas, Universidad Andr{\'e}s Bello, Chile
+Departamento de F{\'i}sica y Astronom{\'i}a, Universidad de La Serena, Chile
+Departamento de F{\'i}sica, Universidad de Ja{\'e}n, Ja{\'e}n, Espa{\~n}a
+Departamento de F{\'i}sica, Universidade Federal de Santa Catarina, Brasil
+Departamento de F{\'i}sica, Universidade Federal de Sergipe, Brasil
+Department of Astronomy \& Astrophysics, University of California, EE.UU.
+Department of Astronomy, University of Texas, EE.UU.
+Department of Astronomy, University of Wisconsin, EE.UU.
+Department of Astrophysics, Geophysics and Oceanography, University of Li\`ege, B{\'e}lgica
+Department of Atmospheric, Oceanic, and Space Sciences, University of Michigan, EE.UU.
+Department of Climate and Space Sciences and Engineering, University of Michigan, EE.UU.
+Department of Physics, Missouri University of Science and Technology, EE.UU
+Dipartimento di Fisica e Astronomia Galileo Galilei, Università degli Studi di Padova, Italia
+European Southern Observatory, Chile
+European Space Astronomy Centre, European Space Agency, Espa{\~n}a
+Facultad de Ciencias, Universidad de la Rep{\'u}blica, Uruguay
+Geneva Observatory, University of Geneva, Suiza
+Global Network of Astronomical Telescopes, EE.UU.
+Goddard Space Flight Center, National Aeronautics and Space Administration, EE.UU.
+Goodricke-Pigott Observatory, EE.UU.
+Grupo de Investigaci{\'o}n en Fuentes de Alta Energ{\'i}a en la Galaxia, Universidad de Ja{\'e}n, Ja{\'e}n, Espa{\~n}a
+Harvard-Smithsonian Center for Astrophysics, EE.UU.
+Institute for Nuclear Physics, Karlsruhe Institute of Technology, Alemania
+Institut de Ciencies de l’Espai, Espa{\~n}a
+Institut de Recherche en Astrophysique et Pl{\'a}netologie, Universit{\'e} de Toulouse III Paul Sabatier-Centre national de la recherche scientifique, Francia
+Institut de Recherche en Astrophysique et Plan{\'e}tologie, Centre National de la Recherche Scientifique--Universit{\'e} F{\'e}d{\'e}rale de Toulouse Midi-Pyr{\'e}n{\'e}es, Francia
+Institut de Recherche en Astrophysique et Plan{\'e}tologie, Centre national de la recherche scientifique, Francia
+Institut f{\"u}r Geophysik und Extraterrestrische Physik, Technische Universität Braunschweig, Alemania
+Institut f{\"u}r Physik, Karl-Franzens-Universität Graz, Austria
+Institut f{\"u}r Theoretische Physik und Astrophysik, Universität Kiel, Alemania
+Institut Universitaire de France, Francia
+Institute for Computational Cosmology, University of Durham, Reino Unido
+Institute of Astronomy, Reino Unido
+Instituto de Astrof{\'i}sica de Andaluc{\'i}a, Consejo Superior de Investigaciones Cient{\'i}ficas, Espa{\~n}a
+Instituto de Astrof{\'i}sica, Pontificia Universidad Cat{\'o}lica de Chile, Chile
+Instituto de Astronom{\'i}a, Universidad Nacional Aut{\'o}noma de M{\'e}xico, M{\'e}xico
+Instituto de Astronom{\'i}a, Universidad Nacional Aut{\'o}noma de M{\'e}xico, M{\'e}xico
+Instituto de Astronomia, Geof{\'i}sica e Ci\^encias Atmosf{\'e}ricas, Universidade de S\~ao Paulo, Brasil
+Instituto de F{\'i}sica y Astronom{\'i}a, Facultad de Ciencias, Universidad de Valpara{\'i}so, Chile
+Instituto de Qu{\'i}mica, Universidade de S\~ao Paulo, Brasil
+Instituto Milenio de Astrof{\'i}sica, Chile
+Instituto Nacional de Pesquisas Espaciais, Brasil
+Instituto Oceanogr{\'a}fico, Universidade de S\~ao Paulo, Brasil
+Istituto Nazionale di Fisica Nucleare, Universit{\'a} degli Studi di Bari Aldo Moro, Italia
+International Centre for Radio Astronomy Research, University of Western Australia, Australia
+Kavli Institute for Cosmology, University of Cambridge, Reino Unido
+Konkoly Thege Mikl{\'o}s Csillag{\'a}szati Int{\'e}zet, Magyar Tudom{\'a}nyos Akad{\'e}mia, Hungr{\'i}a
+Laborat{\'o}rio Nacional de Luz S{\'i}ncroton, Centro Nacional de Pesquisa em Energia e Materiais, Brasil
+Large Aperture GRB Observatory, LAGO Project
+Las Campanas Observatory, Carnegie Observatories, Chile
+Matematicko-Fyzik{\'a}ln{\'i} Fakulta, Universita Karlova V Praze, Rep{\'u}blica Checa
+Max-Planck-Institut f{\"u}r Astronomie, Alemania
+Max-Planck-Institut f{\"u}r Astrophysik, Alemania
+Mullard Space Science Laboratory, Department of Space \& Climate Physics, University College London, Reino Unido
+N{\'u}cleo de Pesquisa em Astrobiologia, Instituto de Astronomia, Geof{\'i}sica e Ci\^encias Atmosf{\'e}ricas, Universidade de S\~ao Paulo, Brasil
+National Centre for Radio Astrophysics, Tata Institute of Fundamental Research, India
+Observat{\'o}rio do Valongo, Universidade Federal do Rio de Janeiro, Brasil
+Observat{\'o}rio Nacional, Brasil
+Observatoire de Paris, Laboratoire d'etudes spatiales et d'instrumentation en astrophysique, Francia
+Observatorio Astron{\'o}mico Nacional, Universidad Nacional de Colombia, Colombia
+Pontificia Universidad Cat{\'o}lica de Chile, Chile
+School of Physics, University of New South Wales, Australia
+Service d'astrophysique, Comissariat \`a l'energie atomique-Centre national de la recherche scientifique-Universit{\'e} Paris Diderot, Francia
+Space Telescope Science Institute, EE.UU.
+Swinburne University of Technology, Australia
+Tartu Observatoorium, Estonia
+Unidad de Astronom{\'i}a, Facultad de Ciencias B{\'a}sicas, Universidad de Antofagasta, Chile
+Universidad de Concepci{\'o}n, Chile
+Universidad de La Serena, Chile
+Universidad Diego Portales, Chile
+Zentrum f{\"u}r Astronomie der Universität Heidelberg, Alemania
+Centro de Astro-Ingenier{\'i}a, Pontificia Universidad Cat{\'o}lica de Chile, Chile
+Centro de Estudios de F{\'i}sica del Cosmos de Arag{\'o}n, Espa{\~n}a
+Department of Physics and Astronomy, University College London, Reino Unido
+Gemini Observatory, EE.UU.
+Gemini Observatory, Chile
+Department of Astronomy, University of Arizona, EE.UU.
+National Radio Astronomy Observatory, EE.UU.
+Rochester Institute of Technology, EE.UU.
+Kapteyn Astronomical Institute, Pa{\'i}ses Bajos
+Instituto de Astronom{\'i}a, Universidad Nacional Aut{\'o}noma, M{\'e}xico
+Institute for Fundamental Physics of the Universe, SISSA--ICTP--INAF--INFN, Italia
+Osservatorio Astronomico di Trieste, INAF, Italia
+National Institute For Space Research, INPE/MCTI, Brasil
+Vatican Observatory, Italia
+N{\'u}cleo de Astronom{\'i}a, Facultad de Ingenier{\'i}a y Ciencias, Universidad Diego Portales, Chile
+Astronomical Institute, Czech Academy of Sciences, Rep{\'u}blica Checa
+Observatorio Astron{\'o}mico Municipal de Mercedes "Ing. {\'a}ngel Di Palma", Argentina
+Instituto de Investigaci{\'o}n en Inform{\'a}tica, Facultad de Inform{\'a}tica, UNLP, Argentina
+Universidad Nacional de R{\'i}o Negro, Argentina
+Laboratorio de Procesamiento de Se{\~n}ales Aplicadas y Computaci{\'o}n de Alto Rendimiento, Sede Andina, UNRN, Argentina
+Kavli Institute for the Physics and Mathematics of the Universe, Todai Institutes for Advanced Study, University of Tokyo, Jap{\'o}n
+Instituto de Alta Investigaci{\'o}n, Universidad de Tarapac{\'a}, Chile
+Universidad Nacional Aut{\'o}noma de Nicaragua, Nicaragua
+Departamento de F{\'i}sica Te{\'o}rica, Universidad Aut{\'o}noma de Madrid, Espa{\~n}a
+Laboratorio MAGGIA, Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Jet Propulsion Laboratory, NASA--CALTECH, EE.UU.
+Oficina Gemini Argentina, MinCyT, Argentina
+Department of Physics, Duke University, EE.UU.
+Centro Internacional Franco Argentino de Ciencias de la Informaci{\'o}n y de Sistemas, CONICET--UNR, Argentina
+Laboratorio de Ingenier{\'i}a y Mantenimiento Industrial, Facultad de Ciencias Exactas, F{\'i}sicas y Naturales, UNC, Argentina
+Instituto De Estad{\'i}stica Y Demograf{\'i}a, Facultad de Ciencias Econ{\'o}micas, UNC, Argentina
+Facultad de Ciencias de la Administraci{\'o}n, UNDE, Argentina
+Instituto de Investigaciones en F{\'i}sico-Qu{\'i}mica de C{\'o}rdoba, CONICET--UNC, Argnetina
+Centro de Astronom{\'i}a, Universidad de Antofagasta, Chile
+Geodesia Espacial y Aeronom{\'i}a, Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Universidad Cat{\'o}lica de C{\'o}rdoba, Argentina
+University of Texas Rio Grande Valley, EE.UU.
+Facultad Regional C{\'o}rdoba, UTN, Argentina
+Facultad de Ciencias Exactas y Naturales, UNCuyo, Argentina
+Facultad de Ingenier{\'i}a, UM, Argentina
+Physics Department and Research Center OPTIMAS, University Kaiserslautern, Alemania
+Centro de Nanotecnolog{\'i}a Aplicada, Facultad de Ciencias, Universidad Mayor de Chile, Chile
+Liricus SRL, Argentina
+International Center for Advanced Studies, CONICET--UNSAM, Argentina
+Brazilian Center for Physics Research, MCTI, Brasil
+Instituto Superior de Formaci{\'o}n Docente Nº 34 "Prof. H{\'e}ctor J. M{\'e}dici", Argentina
+Comisi{\'o}n Nacional de Energ{\'i}a At{\'o}mica, Argentina
+Universidad de Buenos Aires, Argentina
+Universidad Nacional de San Mart{\'i}n, Argentina
+Instituto de Investigaci{\'o}n Multidisciplinario en Ciencia y Tecnolog{\'i}a, Universidad de La Serena, Chile
+Universidad Andr{\'e}s Bello, Chile
+Universidad de Atacama, Chile
+Universidad de Antofagasta, Chile
+European Southern Observatory, Alemania
+Instituto de Estudios Avanzados en Ingenier{\'i}a y Tecnolog{\'i}a, CONICET, Argentina
+Grupo LAMP, Departamento de Ciencias de la Atm{\'o}sfera y los Oc{\'e}anos, Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+Grupo LAMP, Departamento de F{\'i}sica, Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+LESIA, Observatoire de Paris--Universite PSL--CNRS--Sorbonne Universite--Univ. Paris Diderot, Francia
+Institut d'Astrophysique Spatiale, Universite Paris-Saclay--CNRS, Francia
+Solar-Terrestrial Center of Excellence, Royal Observatory of Belgium, Belgica
+Instituto Ant{\'a}rtico Argentino, Direcci{\'o}n Nacional del Ant{\'a}rtico, Argentina
+Servicio Meteorol{\'o}gico Nacional, Argentina
+Complejo Astron{\'o}mico Municipal de Rosario, Argentina
+Instituto de F{\'i}sica Aplicada, UNSL--CONICET, Argentina
+George Mason University, EE.UU.
+CEDS, Facultad Regional Mendoza, UTN, Argentina
+Insituto de Desarrollo Humano, UNGS, Argentina
+Instituto de Ciencias, UNGS, Argentina
+Grappa Centre, University of Amsterdam, Pa{\'i}ses Bajos
+Centre of Excellence in All Sky Astrophysics in 3 Dimensions, Australian Research Council, Australia
+The Cosmic Dawn Center, University of Copenhagen, Dinamarca
+Centro Brasileiro de Pesquisas F{\'i}sicas, MCTI, Brasil
+Brandeis University, EE.UU.
+Department of Physics and Astronomy, University of British Columbia, Canada
+Shanghai Astronomical Observatory, CAS, China
+University of the Chinese Academy of Sciences, CAS, China
+Argelander-Institut f{\"u}r Astronomie, University of Bonn, Alemania
+Instituto Argentino de Nivolog{\'i}a, Glaciolog{\'i}a y Ciencias Ambientales, CONICET--U.N.Cuyo, Argentina
+European Space Research and Technology Centre, ESA, Pa{\'i}ses Bajos
+Dipartimento di Matematica e Fisica, Universit\`a degli Studi Roma Tre, Italia
+Kapteyn Astronomical Institute, University of Groningen, Pa{\'i}ses Bajos
+School of Physical Sciences and Nanotechnology, Yachay Tech University, Ecuador
+Leiden Observatory, Leiden University, Pa{\'i}ses Bajos
+Max-Planck-Institut f{\"u}r Extraterrestrische Physik, Alemania
+Donostia International Physics Centre, BERC, Espa{\~n}a
+Basque Foundation for Science, Espa{\~n}a
+McMaster University, Canada
+Institute for Astronomy, University of Edinburgh, Reino Unido
+University of Western Cape, Sud{\'a}frica
+Departamento de F{\'i}sica Te{\'o}rica, M{\'o}dulo 15, Facultad de Ciencias, Universidad Aut{\'o}noma de Madrid, Espa{\~n}a
+Centro de Investigaci{\'o}n Avanzada en F{\'i}sica Fundamental, Universidad Aut{\'o}noma de Madrid, Espa{\~n}a
+School of Physics \& Astronomy, University of Nottingham, Reino Unido
+Instituto de Astronomia, Geof{\'i}sica e Ci\^encias Atmosf{\'e}ricas, USP, Brasil
+Departamento de F{\'i}sica, UFSC, Brasil
+Observatorio do Valongo, UFRJ, Brasil
+Departamento de Astronom{\'i}a, UFRGS, Brasil
+Observatorio Nacional, Brasil
+Centro Brasileiro de Pesquisas F{\'i}sicas, Brasil
+Universidade Anhembi Morumbi, Brasil
+Dark Cosmology Centre, University of Copenhagen, Dinamarca
+Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Instituto de Astrof{\'i}sica de La Plata, CONICET--UNLP, Argentina
+Instituto de Astronom{\'i}a y F{\'i}sica del Espacio, CONICET--UBA, Argentina
+Instituto Argentino de Radioastronom{\'i}a, CONICET--CICPBA, Argentina
+Consejo Nacional de Investigaciones Cient{\'i}ficas y T{\'e}cnicas, Argentina
+ICTP South American Institute for Fundamental Research \& Instituto de F{\'i}sica Te{\'o}rica, Universidade Estadual Paulista, Brasil 
+Instituto de Investigaci{\'o}n Multidisciplinar en Ciencia y Tecnolog{\'i}a, Universidad de La Serena, Chile
+Facultad de Ciencias, Universidad de La Serena, Chile
+CSIRO Astronomy \& Space Science, Australia Telescope National Facility, Australia
+Faculty of Physics and Astronomy, Ruhr-University Bochum, Alemania
+Grupo de Cosmolog{\'i}a, Facultad de Ciencias Astron{\'o}micas y Geof{\'i}sicas, UNLP, Argentina
+Osservatorio di Astrofisica e Scienza dello Spazio, INAF, Italia
+Instituto de F{\'i}sica, Universidade Federal do Rio Grande do Sul, Brasil
+Facultad de Matem{\'a}tica, Astronom{\'i}a, F{\'i}sica y Computaci{\'o}n, UNC, Argentina
+Departamento de F{\'i}sica Matem{\'a}tica, Instituto de F{\'i}sica, Universidade de S\~ao Paulo, Brasil
+Museo del Observatorio Astron{\'o}mico de C{\'o}rdoba, UNC, Argentina
+Departamento de Ciencias B{\'a}sicas, UNLu, Argentina
+Instituto de Formaci{\'o}n Docente Continua de El Bols{\'o}n, Argentina
+Instituto Dante Alighieri, Bariloche, Argentina
+Universidad de Groningen, Pa{\'i}ses Bajos
+Departamento de F{\'i}sica, Escuela de Ciencias Exactas y Naturales, Facultad de Ciencias Exactas, Ingenier{\'i}a y Agrimensura, UNR, Argentina
+Taller de Investigaci{\'o}n en Did{\'a}ctica de las Ciencias y la Tecnolog{\'i}a, Escuela de Formaci{\'o}n B{\'a}sica, Facultad de Ciencias Exactas, Ingenier{\'i}a y Agrimensura, UNR, Argentina
+Complejo Astron{\'o}mico Municipal Rosario, Argentina
+Joint ALMA Observatory, Chile
+NAOJ Chile Observatory, Chile
+Department of Astronomical Science, The Graduate University for Advanced Studies, Japan
+National Astronomical Observatory of Japan, National Institutes of Natural Sciences, Jap{\'o}n
+Instituto de Ciencias Nucleares, UNAM, M{\'e}xico
+Departamento de F{\'i}sica, UNLP, Argentina
+Institut f{\"u}r Kernphysik, KIT, Alemania
+Center for Computational Relativity and Gravitation, Rochester Institute of Technology, EE.UU.
+Grupo de Gravitaci{\'o}n, Astrof{\'i}sica y Cosmolog{\'i}a, FCAG--UNLP, Argentina
+Instituto de Investigaciones F{\'i}sicas de Mar del Plata, CONICET--UNMdP, Argentina
+Departamento de F{\'i}sica de la Facultad de Ciencias Exactas y Naturales, UNMdP, Argentina
+Facultad de Ciencias Exactas, UNLP, Argentina
+Departamento de Astronomua, IAG--USP, Brasil
+Instituto de Astronom{\'i}a, UNAM, M{\'e}xico
+Center for Space and Habitability, University of Bern, Suiza
+Tacoma Community College, EE.UU.
+Laboratoire d'Astrophysique de Marseille, Francia
+Institute of Physics Czech Academy of Sciences, Rep{\'u}blica Checa
+Departamento de F{\'\i}sica, FCEN--UBA, Argentina
+Instituto de Astrofisica de Andalucia, CSIC, Espa{\~n}a
+Instituto de Estudios Andinos ``Don Pablo Groeber'', CONICET--UBA, Argentina
+Grupo de Ciencias Planetarias, Depto. de Geof{\'i}sica y Astronom{\'i}a, CONICET--UNSJ, Argentina
+Instituto de Astrof{\'i}sica, PUC, Chile
+N{\'u}cleo Milenio de Formaci{\'o}n Planetaria, Chile
+Observatoire de Gen\`eve, Universit{\'e} de Gen\`eve, Suiza
+Laboratorio Nacional de Astrof{\'i}sica, Brasil
+Departamento de Ciencias F{\'i}sicas, Facultad de Ciencias Exactas, Universidad Andres Bello, Chile
+Vatican Observatory, Vatican City State, Italia
+The Catholic University of America, EE.UU.
+Solar-Terrestrial Center of Excellence, Royal Observatory of Belgium, B{\'e}lgica
+Institute of Geodynamics of the Romanian Academy, Rumania
+Instituto de Estudios Avanzados en Ingenier{\'i}a y Tecnolog{\'i}a, CONICET--UNC, Argentina
+Dipartimento di Fisica e Astronomia, Università di Bologna, Italia
+Departamento de Astronom{\'\i}a, Universidad de Concepci\'on, Chile
+Departamento de Astronom{\'\i}a, Universidad de La Serena, Chile
+Instituto de Astronom{\'\i}a, Universidad Cat\'olica del Norte, Chile
+Centro Federal de Educa\c{c}\~ao Tecnol\'ogica de Minas Gerais, Brasil
+Department of Physics and Astronomy, University of California, EE.UU.
+Armagh Observatory and Planetarium, Irlanda del Norte
+Nicolaus Copernicus Astronomical Center, Polish Academy of Sciences, Polonia
+Departamento de Astronomia, Instituto de Astronomia, Geof{\'\i}sica e Ci\^encias Atmosf\'ericas, USP, Brasil
+Jodrell Bank Centre for Astrophysics, The University of Manchester, Reino Unido
+Facultad de F{\'\i}sica, Pontificia Universidad Cat\'olica de Chile, Chile
+Institute for Computational Science, University of Zurich, Suiza
+Institute of Space Sciences, IEEC--CSIC, Espa{\~n}a
+Institut d'Estudis Espacials de Catalunya, Espa{\~n}a
+Universidade do Vale do Para{\'\i}ba, Brasil
+Faculty of Physics, Ludwig-Maximilians-Universit\"at, Alemania
+Main Astronomical Observatory, National Academy of Sciences of Ukraine, Ucrania
+Departamento de Geof{\'\i}sica y Astronom{\'\i}a, FCEFN--UNSJ, Argentina
+Escola Polit\'ecnica, USP, Brasil
+Instituto de Pesquisa e Desenvolvimento, UNIVAP, Brasil
+Universidade Presbiteriana Mackenzie, Brasil
+Universidad Nacional de Tres de Febrero, Argentina
+Kavli Institute for Cosmological Physics, The University of Chicago, EE.UU.
+Leibniz-Institut f\"ur Astrophysik Potsdam, Alemania
+Departamento de F{\'i}sica Te{\'o}rica, M{\'o}dulo 8, Facultad de Ciencias, Universidad Aut{\'o}noma de Madrid, Espa{\~n}a
+Facultad de Ciencias, Universidad Aut\'onoma de Madrid, Espa\~na
+Facultad de Humanidades y Ciencias Sociales, UNPSJB, Argentina
+Coordinaci\'on Nacional de la Educaci\'on en Astronom\'ia, AAA, Argentina
+Radio Bicicleta, Fundaci{\'o}n Red de Gestoras Culturales, Argentina
+Radio Eterogenia, Centro Cultural Espa\~na C\'ordoba, Argentina
+Facultad de Filosof{\'\i}a y Humanidades, UNC, Argentina
+Centro de Investigaciones ``Mar{\'\i}a Saleme de Burnichon'', FFyH--UNC, Argentina
+Biblioteca ``Roberto F. Sister\'o'', OAC--UNC, Argentina
+Centro de Formaci\'on e Investigaci\'on en Ense\~nanza de las Ciencias, FCEN--UBA, Argentina
+Universidad Nacional del Centro de la Provincia de Buenos Aires, Argentina
+Grupo de Astronom{\'\i}a, Facultad de Ciencias, Universidad Nacional de Ingenier{\'\i}a, Per\'u 
+Observatorio Astron\'omico AFARI, Per\'u
+Grupo Ense\~nanza y Difusi\'on de la Astronom{\'\i}a, EnDiAs, Argentina
+Centro de Interpretaci{\'o}n Cient{\'i}fica Plaza Cielo Tierra, UNC y Gob. de la Prov. de C{\'o}rdoba, Argentina
+Isaac Newton Group of Telescopes, Espa{\~n}a
+Instituto de Astrof{\'\i}sica de Canarias, Espa\~na
+Departamento de Astrof{\'\i}sica, Universidad de La Laguna, Espa\~na
+Universidad Nacional del Sur, Argentina 
+Department of Physics, DSB Campus, Kumaun University, India
+Observatoire de Paris, Francia
+Departamento de Investigaciones en L\'aseres y sus Aplicaciones, CITEDEF, MINDEF--CONICET, Argentina
+Direcci\'on de Redes de Observaci\'on, Servicio Meteorol\'ogico Nacional, Argentina
+Instituto de Hidrolog{\'\i}a de Llanuras ``Dr. Eduardo Jorge Usunoff'', CONICET--UNICEN, Argentina
+Laboratorio Argentino de Meteorolog{\'\i}a del Espacio, DCAO, FCEN--UBA, Argentina
+Università degli Studi di Firenze, Italia
+Istituto Nazionale di Astrofisica, Universit\'a degli Studi di Torino, Italia
+Laboratoire Cogitamus, Francia
+School of Physics \& Astronomy, University of Glasgow, Reino Unido
+Centro de R\'adio Astronomia e Astrof{\'\i}sica Mackenzie, Universidade Presbiteriana Mackenzie, Brasil
+Center for Solar-Terrestrial Research, New Jersey Institute of Technology, EE.UU.
+Universidad Tecnol\'ogica Nacional, Argentina
+School of Natural Sciences, Institute for Advanced Study, EE.UU.
+Space sciences, Technologies and Astrophysics Research Institute, Li\`ege Universit\`e, B\'elgica
+Institut de Ci\`encies del Cosmos, Universitat de Barcelona, Espa\~na
+Departamento de Investigaci\'on en Ciencias Exactas e Ingenier{\'\i}a, Sede Atl\'antica, UNRN, Argentina
+Departamento de F{\'\i}sica Te\'orica, Instituto de F{\'\i}sica, Universidade do Estado de Rio de Janeiro, Brasil
+Facultad de Ciencias, UNAM, M\'exico
+Instituto de Alta Investigaci\'on, Sede Esmeralda, Universidad de Tarapac\'a, Chile
+Instituto de F{\'i}sica, Universidade Federal do Rio de Janeiro, Brasil
+Departamento de F{\'\i}sica, Instituto de Ci\^encias Exatas, Universidade Federal de Minas Gerais, Brasil
+Departamento de Ci\^encias Exatas e Tecnol\'ogicas, Universidade Estadual de Santa Cruz, Brasil
+Physikalisches Institut, University of Bern, Suiza
+SRON Netherlands Institute for Space Research, Pa{\'\i}ses Bajos
+Secretar{\'\i}a de Articulaci\'on Cient{\'\i}fico Tecnol\'ogica, MINCYT, Argentina
+Instituto de Radioastronom{\'\i}a y Astrof{\'\i}sica, UNAM, M\'exico
+Departamento de F{\'i}sica, Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+Instituto de Ciencias F{\'i}sicas, CONICET-UNSAM, Argentina
+DIRAC Institute, Department of Astronomy, University of Washington, EE.UU.
+Departamento de Tecnolog{\'\i}a e Ingenier{\'\i}a, UNaHur, Argentina
+Zentrum f\"ur Astronomie, Institut f\"ur Theoretische Astrophysik, Universit\"at Heidelberg, Alemania
+Departamento de Ci\^encias Exatas e Tecnol\'ogicas, UESC, Brasil
+Departamento de F{\'\i}sica, UFSC, Brasil
+Centro de R\'adio Astronomia e Astrof\'isica Mackenzie, Escola de Engenharia, UPM, Brasil
+Max Planck Institute for Solar System Research, Alemania
+MPI f{\"u}r Sonnensystemforschung, Alemania
+Instituto de Astrof{\'\i}sica de Canarias, Tenerife, Espa\~na
+Departamento de Astrof{\'\i}sica, Universidad de La Laguna, Tenerife, Espa\~na
+Centro At{\'o}mico Bariloche, Comisi{\'o}n Nacional de Energ{\'i}a At{\'o}mica, Argentina
+Departamento de Astronom\'ia, Facultad de Ciencias, Udelar, Uruguay
+Nordita, KTH Royal Institute of Technology and Stockholm University, Suecia
+Institut f\"ur Astrophysik, Georg-August-Universit\"at G\"ottingen, Alemania
+Hamburger Sternwarte, Universit\"at Hamburg, Alemania
+Departamento de F{\'\i}sica, ICEx {\textendash} UFMG, Brasil
+Institut f\"ur Astronomie und Astrophysik, Kepler Center for Astro and Particle Physics, Eberhard Karls Universit\"at, Alemania
+Institute for Physics and Astronomy, University of Potsdam, Alemania
+Department of Astrophysics, IMAPP, Radboud University, Paises Bajos
+NSF Astronomy and Astrophysics Postdoctoral Fellow
+Department of Physics, Brandon University, Canad{\'\a}
+Departamento de Astronomia do IAG/USP, Universidade de S\~ao Paulo, Brasil
+Observatorio Geof{\'\i}sico Trelew, Argentina
+Physics Department, American University of Sharjah, Emiratos \'Arabes
+Universidad Nacional Mayor de San Marcos, Per{\'u}
+Max Planck Partner Group, Facultad de Ingenier{\'i}a, Universidad de Mendoza, Argentina
+Grupo de Observadores de Rotaciones de Asteroides, GORA, Argentina
+Centre for Exoplanets and Habitability, University of Warwick, Reino Unido
+Department of Physics, University of Warwick, Reino Unido
+Departamento de Ciencias, Facultad de Artes Liberales, Universidad Adolfo Ib\'a\~nez, Chile
+University Grenoble Alpes, CNRS, Francia
+Astrophysikalisches Institut, Friedrich-Schiller-Universität Jena, Alemania
+naXys, Department of Mathematics, University of Namur, Belgica
+Jet Propulsion Laboratory, California Institute of Technology -- NASA, EE.UU.
+Astronomical Institute of Slovak Academy of Sciences, Eslovaquia
+Osservatorio Astrofisico di Catania, INAF, Italia
+International Space Science Institute, Suiza
+Instituto de Ciencias F\'{\i}sicas, Universidad Nacional Aut\'onoma de M\'exico, M\'exico
+Instituto de F{\'\i}sica, Facultad de Ciencias, UDELAR, Uruguay
+AIM, CEA, CNRS, Universit\'e Paris-Saclay, Universit\'e de Paris, Francia \and
+Astroparticule et Cosmologie, CNRS, Universit\'e de Paris, Francia
+Instituto Universitario de F\'isica Aplicada a las Ciencias y las Tecnolog{\'\i}as, Universidad de Alicante, Espa\~na
+Observatorio Argentino-Alem\'an de Geodesia, CONICET, Argentina 
+Centro de Interpretaci\'on Cient{\'\i}fica, Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+Gobierno de la Provincia de C\'ordoba, Argentina

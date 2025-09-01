@@ -1,0 +1,371 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+    \title{Observaciones de la región central de NGC\,5128 con Flamingos-2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Región central de NGC\,5128}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.P. Agüero\inst{1,2},
+R.J. Díaz\inst{3},
+H. Dottori\inst{4},
+G. Gaspar\inst{1},
+J. Camperi\inst{1} \&
+G. Díaz\inst{2}
+}
+
+\authorrunning{Agüero et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mpaguero@unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina\and   
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+\and
+Gemini Observatory, Chile
+\and
+Departamento de Astronomia, Universidade Federal do Rio Grande do Sul, Brasil
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Hemos iniciado un estudio espectroscópico y fotométrico del núcleo y disco interior de la radiogalaxia más cercana, NGC 5128, a partir de datos en el infrarrojo cercano obtenidos con Flamingos-2 (Telescopio Gemini Sur). En los espectros infrarrojos sobre el eje mayor interno hemos detectado la línea molecular H$_{ 2} 1-0 S(1)$, con la cual se construyó la curva de rotación dentro del kiloparsec central. Como consecuencia de la alta resolución espacial, se pueden distinguir las distintas componentes dinámicas, incluyendo el radio de influencia (rotación de cuerpo rígido) de la masa nuclear no resuelta de aproximadamente $2\times 10^7~\mathrm{M}_{\sun}$. A
+partir de las imágenes J, H y K$_{s}$ de 2MASS se han confeccionado los diagramas color-color en los que se evidencian diferencias en las poblaciones estelares de un lado y otro del núcleo. Las asimetrías del disco circunnuclear son observadas también en los perfiles de brillo de continuo y en banda K$_{s}$.}
+
+\abstract{From Flamingos-2 near infrared data, we have started a spectroscopic and photometric study of the nucleus and inner disk of the nearest radiogalaxy, NGC\,5128. Through the infrared spectra taken on the major axis we have been able to detect the molecular line H$_{ 2} \,1-0\, S(1)$, which allowed us to built the rotation curve in the central kiloparsec. Due to the high spatial resolution, the various dynamic components are clearly seen, including the unresolved nuclear mass of about $2\times 10^7~\mathrm{M}_{\sun}$, which exhibits a rigid body rotation. Based on J, H, and K$_{s}$ 2MASS images we have been able to construct color-color diagrams where the differences between stellar populations on one side of the nucleus and the other become evident. The continuum and K$_{s}$ radial brightness profiles also show asymmetries in the circumnuclear disk.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ infrared: galaxies --- galaxies: nuclei --- galaxies: kinematics and dynamics ---  galaxies: individual (NGC\,5128)}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducci\'on}
+
+NGC 5128 (Centaurus A) alberga un núcleo activo emisor en radio \citep{1949Natur.164..101B}. Su proximidad \citep[3.42\,Mpc,][]{Ferrarese} presenta una gran oportunidad para estudiar el rol del gas en la alimentación del núcleo en una galaxia de tipo temprano.
+La región central está atravesada por una importante banda de polvo \citep{1966ApJS...14....1A} que le da un aspecto muy distintivo (Fig. 1).
+La presencia de esta banda de polvo impide observaciones ópticas profundas, siendo necesarias observaciones en longitudes de onda mayores. La región circunnuclear de esta radiogalaxia presenta un escenario complejo con numerosos filamentos y componentes de gas coexistiendo en las cercanías del núcleo activo \citep{Espada}. A fin de complementar los datos cinemáticos existentes, hemos iniciado un proyecto observacional utilizando las facilidades del telescopio Gemini Sur, considerando la alta resolución espacial que alcanza y su instrumental adaptado al infrarrojo cercano (NIR, por sus siglas en inglés). En esta oportunidad presentamos los datos espectroscópicos y fotométricos que hemos obtenido con el espectrógrafo Flamingos-2 \citep{Eikenberry2008, Gomez2012}, presentando también algunos resultados preliminares. 
+A partir de estos espectros e imágenes de alta resolución esperamos, a futuro, determinar las estructuras presentes en la región nuclear de esta galaxia y compararlas con las estructuras observadas en otras bandas espectrales. Esto nos permitirá discernir cuáles son los mecanismos de pérdida de momento angular que predominan en el proceso de acumulación de materia en las cercanías del núcleo.
+
+
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig1.jpg}
+\caption{Imagen en banda K$_{s}$ de la región central de NGC\,5128, obtenida con Flamingos-2 (Gemini Sur). En dirección este-oeste por encima del núcleo, se puede observar la banda de polvo que atraviesa la región central. La línea punteada representa la posición de la ranura utilizada.
+}
+\label{Figura1}
+\end{figure}
+
+
+
+\section{Observaciones}
+Hemos obtenido espectros en la banda K$_{s}$ del NIR con el espectrógrafo Flamingos-2 emplazado en Gemini Sur durante febrero de 2021 (Proyecto: GS\_ENG20210221), con un poder resolvente de R=3000. Se aplicó la técnica de ranura larga con un ancho de 1 pixel, con la ranura posicionada a lo largo del eje mayor interno  \citep[PA=155°,][]{Espada}, lo que se corresponde con una posición horizontal en la Fig. 1, atravesando el núcleo galáctico. La región espectral muestreada se extiende de 19300\textup{~\AA} a 24000\textup{~\AA}, con una razón de $3.4 \textup{~\AA}$\,pix$^{-1}$.
+Con el mismo instrumento hemos obtenido imágenes en banda K$_{s}$ con una resolución espacial de 0.18$''$\,pix$^{-1}$ (Fig. 1), con un campo total de 6$'$, abarcando un tercio del tamaño de
+la galaxia.
+Se llevó a cabo un proceso estándar de reducción de datos utilizando el paquete de {\sc iraf/pyraf} \footnote{IRAF es distribuido por NOAO (National Optical Astronomy Observatories), los que son operados por la Asociación de Universidades para la Investigación en Astronomía, Inc., bajo un acuerdo cooperativo con la NSF (National Science Foundation).} provisto por el Observatorio Gemini.
+
+
+\section{Resultados preliminares}
+
+En los espectros, la línea en emisión del hidrógeno molecular H$_{2} \,1-0\, S(1)$ \citep[2,12$\mu$m,][]{2019yCat..36300058R} es la destacada (Fig. 2). La línea de Br$\gamma$ del hidrógeno atómico no se distingue entre el ruido del continuo. La línea molecular puede ser detectada hasta 50$''$ (850 pc) desde el núcleo y muestra claros indicios de movimientos rotacionales. El punto de velocidad radial más interno ($\pm$ 0.36$''$) es compatible con una masa interior no resuelta de $(2\pm 0.5)\times 10^7~\mathrm{M}_{\sun}$. Esta cota superior para la masa del agujero negro central es compatible con los valores propuestos por \citet{Neumayer}.  Se determinaron los desplazamientos respecto a la velocidad sistémica de la línea espectral de H$_{2}$, y asumiendo que el gas molecular actúa como partícula de prueba del potencial gravitatorio, se confeccionó la curva de velocidad radial dentro de los 2$'$ centrales (Fig. 3). La misma presenta una rotación del tipo cuerpo rígido en $\pm$ 10$''$ centrales, interrumpida por una pequeña perturbación a los 5$''$. Esta curva de rotación interna muestra cierta simetría a ambos lados del eje mayor. Hacia el noroeste, la curva de rotación de la galaxia presenta una región relativamente plana y los últimos puntos exhiben mayor crecimiento con el radio. Hacia el sureste, la misma presenta un comportamiento más errático, probablemente por la absorción irregular del polvo presente en esa región de la galaxia.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig2.jpg}
+\caption{Espectro sobre el eje mayor interno de NGC 5128, obtenido con el espectrógrafo Flamingos-2.
+}
+\label{Figura2}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig3.jpg}
+\caption{Curva de velocidad radial sobre el eje mayor de NGC 5128, obtenida con Flamingos-2 (Gemini Sur). Se observa rotación rígida en los puntos centrales, una componente más compacta hasta 20$''$ y luego una componente con velocidades crecientes hacia afuera. En azul se representaron los errores de medición de las velocidades radiales y de la posición espacial de la medición. Esta última se corresponde a un ancho de integración espacial para obtener suficiente señal en la emisión.
+}
+\label{Figura3}
+\end{figure}
+
+Por otro lado, se obtuvieron perfiles del continuo en distintas longitudes de onda a lo largo del espectro obtenido. En la Fig. 4 se muestra el corte centrado en 19389\textup{~\AA}, entre las bandas H y Ks. En los perfiles obtenidos, se percibe una clara asimetría a ambos lados del disco. Se distinguen una componente central muy poco resuelta y la importante absorción de la banda de polvo que atraviesa la región central. En todos los cortes de continuo, el perfil se puede representar con una gaussiana consistente con el \textit{seeing} (fuente no resuelta), un disco más compacto cercano al núcleo y un disco más extendido en la región circunnuclear (modelos de disco exponencial). La asimetría que presenta el disco circunnuclear no ha permitido realizar un ajuste de componentes con el perfil completo, siendo imposible reproducir las diferentes pendientes del disco a izquierda y a derecha con un mismo modelo. Asumiendo que la presencia de polvo puede alterar considerablemente el perfil de brillo, hemos utilizado sólo el lado izquierdo del perfil (noroeste) para el ajuste de componentes. El mismo se realizó minimizando el cuadrado de los residuos, dándole además menor peso a los puntos en el perfil con mayores errores.
+Esta asimetría también se destaca en el perfil a lo largo del eje mayor en la imagen en banda ancha K$_{s}$ (Fig. 5). Si bien el núcleo se observa integrado al disco nuclear, las estructuras son similares. El disco más externo en Ks se extiende más allá de lo detectado en continuo ($\sim70''$).
+Si bien el perfil en banda ancha es similar al de continuo, se observa que la fuente central pierde relevancia frente al disco nuclear. Lo mismo se observa con la banda de polvo, la cual es menos profunda que en el continuo.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig4.jpg}
+\caption{Perfil radial del brillo de NGC 5128 del continuo estelar centrado en 19389\textup{~\AA} (corte en el infrarrojo cercano más próximo a la banda Ks), orientado  sobre el eje mayor interno. En color naranja se presenta el modelo de distribución de brillo con 3 componentes: núcleo (gaussiana de $\sigma=1.5$pix$=0.27''$), disco nuclear y disco circunnuclear (modelos exponenciales). En línea punteada color gris se demarcó el disco nuclear, visualizando la importancia de tal componente en los 20$''$ centrales. Se puede observar que el perfil ajustado del lado izquierdo (noroeste) del núcleo queda por encima del perfil derecho (sureste) hasta los 26$''$, mientras que para radios mayores el brillo del perfil es mayor al modelado.}
+
+\label{Figura4}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig5.jpg}
+\caption{Perfil radial de brillo de NGC 5128 en banda K$_{s}$, obtenido con Flamingos-2 sobre el eje mayor interno.}
+\end{figure}
+
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=6.8in]{fig6.jpg}
+\caption{Diagramas color-color en el infrarrojo cercano (J, H, K de 2MASS). Los puntos de colores se corresponden con distintas distancias al núcleo.
+\textit{Panel derecho}: diagrama color-color hacia el lado noroeste del núcleo. \textit{Panel izquierdo}: diagrama color-color hacia el lado sureste del núcleo.
+}
+\label{Figura6}
+\end{figure*}
+
+Para examinar esta asimetría observada tanto en los perfiles de brillo como en la cinemática, utilizamos imágenes infrarrojas del relevamiento 2MASS \citep{2006AJ....131.1163S}, que proporciona observaciones en distintas bandas espectrales del infrarrojo cercano. Tanto en los perfiles de continuo como en las distintas bandas fotométricas, la banda de polvo disminuye su importancia considerablemente a medida que se aumenta la longitud de onda empleada, permitiendo observar el núcleo con mayor claridad. A partir de las imágenes de 2MASS en bandas J, H y K$_{s}$, se confeccionaron los diagramas color-color, diferenciando distintas regiones de la zona circunnuclear, tanto de un lado como del otro del núcleo (ver Fig. 6). Estos diagramas muestran diferencias entre el lado norte y sur del disco.  En el lado noroeste, la región del diagrama color-color ocupado dependerá de la distancia al núcleo. Específicamente, la región nuclear muestra colores más enrojecidos que el resto, alcanzando 1.4 en J-H y algo más de 1 en H-K. A medida que nos alejamos del núcleo, los colores se vuelven más azules, llegando a un valor de 0 en H-K y cercano a 0.6 en J-H. A medida que nos seguimos alejando, el color H-K aumenta nuevamente hasta los valores observados en el núcleo, pero en combinación con una disminución de J-H hasta valores cercanos a 0. En cambio, el lado sureste  muestra menores diferencias en la distribución de color de las poblaciones según su distancia al centro. Se encuentran valores de color confinados mayormente entre $\pm$ 0.5 en H-K y entre 0.5 y 1.2 en J-H. Sin embargo, se observa que a medida que nos alejamos del núcleo, las regiones van disminuyendo su color J-H, a excepción de la región más externa que presenta una gran dispersión en ambos colores, probablemente debido al aumento del error de medición.
+
+
+\section{Comentarios finales y trabajos futuros}
+En este artículo hemos presentado datos fotométricos y espectroscópicos en el  infrarrojo cercano de la región central de NGC 5128, obtenidos con el espectrógrafo multifunción Flamingos-2, emplazado en el telescopio Gemini Sur. Estos datos nos permitirán observar con mayor profundidad hacia el núcleo activo, sobrellevando el problema de la presencia de una gran cantidad de polvo en este objeto. A pesar de tratarse de una galaxia de tipo temprano, en su región central se observan claros indicios de movimientos rotacionales (consistentes con las estructuras tipo disco que se aprecian en los perfiles de brillo, tanto en banda Ks como en el continuo estelar). \citet{Espada} observan discos moleculares circunnucleares en monóxido de carbono (CO), consistentes con los observados aquí. Si bien estos autores detectan movimientos rotacionales en el centro de NGC\,5128, los datos cinemáticos obtenidos con Flamingos-2 llegan a mayor profundidad considerando que observamos valores de velocidad que duplican a aquellos observados en CO. Esto puede deberse a que el hidrógeno molecular está más confinado al disco circunnuclear y es mejor trazador de la rotación ecuatorial. 
+Una característica notoria en los resultados presentados en este trabajo es la asimetría observada a un lado y a otro del núcleo a partir de los 5$''$. La misma se presenta tanto en las velocidades radiales como en los perfiles de brillo y los diagramas de color. Continuaremos con el análisis de los datos presentados aquí y serán complementados con otros datos observacionales ya obtenidos y a obtener en un futuro cercano. 
+
+En un próximo trabajo compararemos las velocidades observadas con modelos de distribución de masa que puedan ser complementarios con los modelos aplicados a los perfiles de brillo. 
+Realizaremos un ajuste de componentes en el perfil de banda ancha para ser comparado con aquellos obtenidos en el perfil de continuo, así como con aquéllos presentes en la literatura en bandas del NIR. Por otro lado, 
+las peculiares asimetrías que presentan los colores a ambos lados del núcleo serán estudiadas en función de modelos de poblaciones estelares y de distribución del polvo. Es de interés complementar las observaciones Ks presentadas aquí con imágenes en banda J y H con el mismo instrumento (Flamingos-2) a fin de reproducir los diagramas de color con mayor precisión espacial. Además, complementaremos estos datos con aquellos ya obtenidos con GNIRS, espectrógrafo tipo IFU (Intregal Field Unit) de Gemini Sur que cubre la región espectral del NIR, con resolución de 0.4$''$, cubriendo los 5$''$ centrales \citep{2021_Diaz}. 
+
+Con todo ello aspiramos a discernir las estructuras dinámicas presentes en la región circunnuclear de NGC 5128 que puedan dar cuenta de la pérdida de momento angular del material que estaría alimentando al agujero negro central.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%\begin{acknowledgement}
+%%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+%%\end{acknowledgement}%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

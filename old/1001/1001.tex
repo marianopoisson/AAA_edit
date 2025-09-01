@@ -1,0 +1,506 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{8}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Non-thermal radiation from stellar \\ bowshocks in windy AGNs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Non-thermal bowshocks in windy AGNs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.C. Gallardo\inst{1,2},
+L. Abaroa\inst{1,2},\, \&
+G.E. Romero\inst{1,2}
+}
+
+\authorrunning{Gallardo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{marugallardo@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina\and   
+Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Los núcleos galácticos activos (AGNs) son alimentados por la acreción de agujeros negros supermasivos (SMBHs) ubicados en los centros de las galaxias. Estos SMBHs capturan numerosas estrellas jóvenes que orbitan en trayectorias elípticas. Cuando la tasa de acreción sobre el SMBH supera la tasa de Eddington, las capas externas del disco de acreción son eyectadas por la presión de radiación, generando un viento que expulsa la mayor parte del material acretado. Las estrellas que orbitan el SMBH están expuestas a los efectos de este viento, lo que resulta en ondas de choque cuando interactúan con el viento estelar. Estos choques entre vientos pueden acelerar partículas cargadas hasta velocidades relativistas, las cuales luego se enfrían mediante diversos mecanismos y emiten radiación no térmica. En este artículo presentamos resultados preliminares del estudio de la interacción entre el viento estelar de estrellas jóvenes y el viento generado por el disco de un AGN con acreción super-Eddington.}
+
+\abstract{Active galactic nuclei (AGNs) are powered by the accretion of supermassive black holes (SMBHs) at the centers of galaxies. These SMBHs capture numerous young stars that orbit them in elliptical orbits. When the accretion rate to the SMBH exceeds the Eddington rate, the outer layers of the accretion disk are ejected by radiation pressure, creating a wind that expels most of the accreting material. Stars orbiting the SMBH are exposed to the effects of this wind, resulting in shock waves when they interact with the stellar wind. These colliding wind bowshocks can accelerate charged particles to relativistic speeds, which then cool by various mechanisms and emit non-thermal radiation. In this paper, we present preliminary results from the study of the interaction of the stellar wind of young stars with windy AGNs.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ (galaxies:) quasars: supermassive black holes | accretion, accretion disks | radiation mechanisms:
+non-thermal}
+
+\begin{document}
+
+\maketitle
+
+
+%========================================================================================
+% Introduction
+%========================================================================================
+
+\section{Introduction}\label{S_intro}
+
+Supermassive black holes (SMBHs) capture young stars that move in elliptical orbits around them. In our Galaxy, studying the motion of these stars has allowed the determination of the mass of the central black hole \citep{1996Natur.383..415E,1998ApJ...509..678G,2002MNRAS.331..917E,2012A&A...537A..52E,2022ApJ...933...49P,2022A&A...657L..12G}. 
+
+Since the accretion rate to the Galactic black hole is low, the stars are not moving through a particularly dense medium. This scenario changes in the case of SMBHs in galaxies with high accretion rates, such as some Seyfert 1 galaxies. In these systems, the accretion disk becomes supercritical \citep{2004PASJ...56..569F,2022A&A...664A.178S}, and its outer layers are ejected by radiation pressure, creating a wind that evacuates most of the accreted material. We call these systems windy active galactic nuclei (AGNs).
+
+Stars captured by the SMBH in such environments are exposed to the effects of this wind. The interaction between the wind of the accretion disk and the stellar wind is expected to produce shock waves \citep{2021BAAA...62..262A,2022BAAA...63..265A} that can accelerate charged particles to relativistic speeds.
+
+The accelerated particles will cool through several mechanisms, which can lead to broadband electromagnetic emission. Since the stars move in eccentric orbits, the physical conditions are highly variable.
+
+The calculation of radiative processes under these conditions will help us to better understand the origin of the non-thermal radiation observed in the core region of Seyfert galaxies. These galaxies, despite the absence of jets, have high inferred accretion rates, as evidenced by the high luminosity of the surrounding clouds and the excess of soft ultraviolet/X radiation.
+
+In this paper, we calculate the electron acceleration in shocks formed by the interaction between the stellar winds of young stars and the strong winds produced by super-Eddington accretion disks around SMBHs (i.e., windy AGNs). Our goal is to understand the processes leading to non-thermal radiation in the nuclear regions of Seyfert galaxies, especially those with significant accretion activity.
+
+The paper is organized as follows. In Sect.\ref{S_model}, we describe the physical model and detail the properties of the accretion disk and the stars involved. Sect.\ref{S_collision} focuses on the interaction between the winds and the resulting shock dynamics. In Sect.\ref{S_results}, we present the main results of our analysis, including the cooling rates of the electrons for different radiative processes. In Sect.~\ref{S_conclusions} we end with our conclusions.
+
+
+\begin{figure*}[h]
+\centering
+\includegraphics[width=\textwidth]{EsquemaSMBH.png} 
+\caption{Conceptual illustration of the proposed scenario. \textit{Left}: Super-Eddington SMBH and population of stars in a galactic center with eccentric orbits. \textit{Right}: The dense wind from the disk of the SMBH collides with the stellar wind, producing two shocks. Adapted from \cite{2023A&A...671A...9A} and \cite{2024A&A...691A..73A}.}
+\end{figure*} 
+
+
+%========================================================================================
+% Disk, wind, and stars
+%========================================================================================
+
+
+\section{Disk, wind, and stars}\label{S_model}
+\subsection{The accretion disk and its wind}
+Accretion disks are categorized according to their mass accretion rates, with a particular distinction between standard disks and super-Eddington disks. The critical radius (also referred to as the spherization radius) plays a key role in this classification by separating the disk into two regions: the outer region, which behaves as a standard disk characterized by a stable flow \citep{1973IAUS...55..155S}, and the inner region, where the disk is radiation-dominated and advection becomes important \citep{2004PASJ...56..569F}.
+
+
+
+%-----------------------------------------------------------------------------------------
+
+%-----------------------------------------------------------------------------------------
+
+We assume a SMBH with mass $M_{\text{\rm SMBH}}=4 \times 10^7 \, M_\odot$ and an accretion rate at the outer part of the disk of $\dot{M}_{\text{\rm input}} = 10 \dot{M}_{\text{\rm Edd}}$. The Eddington rate depends only on the mass of the SMBH:
+ 
+\begin{equation}
+\dot{M}_{\text{\rm Edd}} = \frac{L_{\text{\rm Edd}}}{\eta c^2} = 2 \times 10^{-8} M_{\text {\rm SMBH}} \, \rm {yr^{-1}},
+\end{equation}
+where $L_{\text{\rm Edd}}$ is the Eddington luminosity, $\eta \approx 0.1$ is the accretion efficiency, and $c$ the speed of light. The super-Eddington disk is inflated at the critical radius, $r_{\text{crit}} \sim 40 \dot{m}_{\text{input}} r_{\rm g}$, where \( r_{\rm g} = {G M_{\text {\rm SMBH}}}/{c^2} \) is the gravitational radius.
+
+
+The outer layers of the inner supercritical disk are ejected as strong winds since the accretion is self-regulated at about the Eddington rate for radii $<r_{\text {\rm crit}}$. Therefore, the total mass loss in winds is about \(\dot{M}_{\text{\rm loss}} \approx \dot{M}_{\text{\rm input}}\) \citep{2024A&A...691A..93A}. The speed of this wind can be estimated as \citep{2010MNRAS.402.1516K}:
+\begin{equation}
+v_{\text{\rm dw}} = \frac{c}{2 \sqrt{\dot{m}}},
+\end{equation}
+where $\dot{m} = \dot{M}_{\rm input}/\dot{M}_{\rm Edd}$ is the normalized rate. We then get $v_{\text{\rm dw}}\approx 15000 \, \text{km\,s}^{-1}$.
+
+%-----------------------------------------------------------------------------------------
+\subsection{Stars}
+%-----------------------------------------------------------------------------------------
+
+
+We assume that the stars orbiting the SMBH are of spectral types O4 and O9, with eccentricities of 0.3 (low) and 0.9 (high). At low eccentricity, the periastron is $r_{\rm{p,low}} \, = \, 30 \, r_{\rm{crit}}$ and the apoastron $r_{\rm{a,low}} \, = \, 56 \, r_{\rm{crit}}$; at high eccentricity, we have $r_{\rm{p,high}} \, = \, 4 \, r_{\rm{crit}}$ and $r_{\rm{a,high}} \, = \, 82 \, r_{\rm{crit}}$.  In all cases, we calculate the orbits so that the periastrons are larger than the critical radius of the disk, ensuring that the stars do not cross the inner disk. Furthermore, the star-disk interaction, which could lead to flares, is not considered in this work. Table \ref{table_stars} lists the parameters of the two stars considered in this work.
+
+
+
+%-----------------------------------------------------------------------------------------
+%Table
+%-----------------------------------------------------------------------------------------
+\begin{table}[!h]
+\centering
+\caption{Stellar parameters of our model. All taken from 
+\label{table_stars}\cite{2019yCat..51580073K}, except for the magnetic field, taken from  \cite{2015ASPC..494...30W}.}
+
+\begin{tabular}{lcccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Star & \!\!\!\!$T_\text{\rm eff}$\!\!\!\! & \!\!\!\!$R_\star$\!\!\!\! & \!\!\!\!Mass\!\!\!\! & \!\!\!\!$\dot{M}_{\star \rm w}$\!\!\!\! & \!\!\!\!$v_{\star \rm w}$\!\!\!\! & \!\!\!\!$B_\star$\!\!\!\! \\
+         & \!\!\!\!(\rm K)\!\!\!\! & \!\!\!\!($R_\odot$)\!\!\!\! & \!\!\!\!($M_\odot$)\!\!\!\! & \!\!\!\!($M_\odot \rm {yr^{-1}}$)\!\!\!\! & \!\!\!\!($\rm {km \, s^{-1}}$)\!\!\!\! & \!\!\!\!(\rm G)\!\!\!\! \\
+\hline\noalign{\smallskip}
+\!\!O9III & 30700 & 13.6 & 23 & $5.48 \times 10^{-8}$ & 1300 & 750 \\
+\!\!O4If & 40700 & 19.0 & 58 & $1.98 \times 10^{-5}$ & 1600 & 750 \\
+\hline
+\end{tabular}
+\label{table_1}
+\end{table}
+
+
+%========================================================================================
+% Collision of winds
+%========================================================================================
+
+\section{Collision of winds}\label{S_collision}
+The wind ejected from the disk interacts with the stellar wind in the interaction region, where shock waves are produced. Under certain physical conditions, these shocks may lead to particle acceleration. We characterize this region and the shocks in the following section.
+%-----------------------------------------------------------------------------------------
+\subsection{Contact discontinuity and stagnation point}
+%-----------------------------------------------------------------------------------------
+
+
+The winds collide at a surface called the contact discontinuity (CD), whose closest point to the star is the stagnation point (SP), where the ram pressure of the disk-driven wind is equal to that of the stellar wind:
+
+\begin{equation}
+P_{\text{\rm ram}}(d-R_0) = \rho_{\text{\rm dw}} v_{\text{\rm dw}}^2 = \rho_{\star \rm w} v_{\star \rm w}^2 = P_{\text{\rm ram}}(R_0),
+\end{equation}
+
+Assuming that both winds are spherically symmetric, the density of the stellar wind at this location is given by:
+\begin{equation}
+\rho_{\star \rm w} = \frac{\dot{M}_{\rm \star }}{4 \pi {R_0}^2 v_{\rm \star w}},
+\end{equation}
+and the density of the disk-driven wind reads:
+\begin{equation}
+\rho_{\rm dw} = \frac{\dot{M}_{\rm dw}}{4 \pi (d - R_0)^2 v_{\rm dw}}.
+\end{equation}
+Here, $R_0$ and $d - R_0$ are the distances to the SP, from the center of the star and from the SMBH, respectively (where $d$ is the instantaneous separation between the star and the SMBH along the orbit). 
+
+
+
+
+
+Two shock fronts are generated at the CD: a forward shock (FS), which propagates in the same direction as the stellar wind with a velocity \(\sim v_{\text{\rm dw}} + v_{\text{\rm orb}}\) (where $v_{\text{\rm orb}}$ is the orbital velocity of the star), and a reverse shock (RS), which propagates in the opposite direction with a velocity $\sim v_{\star \rm w}$. 
+
+%-----------------------------------------------------------------------------------------
+\subsection{Thermal cooling and shock dynamics}
+%-----------------------------------------------------------------------------------------
+
+
+We focus on adiabatic shocks, where particle acceleration can occur. The shock is adiabatic if the thermal cooling length, $R_{\Lambda}$, is greater than $\Delta X_{\text{\rm accel}}$ \citep{1979ARA&A..17..213M}.
+The cooling length defines the distance over which the shocked material loses significant energy through radiation: 
+\begin{equation}
+R_{\Lambda} = \dfrac{5.9 \times 10^{-11} \left(\dfrac{v_{\text{\rm sh}}}{\text{km s}^{-1}}\right)^{3}}{\left(\dfrac{n_{\rm w}}{\text{cm}^{-3}}\right) \left[\Lambda(T_{\text{\rm sh}})/\text{erg s}^{-1} \text{ cm}^{-3}\right]} \, \text{cm},
+\end{equation}
+\noindent where $n_{\rm w}$ is the number density of the undisturbed medium, $ \mu $ is the mean molecular weight ($ \mu = 0.6 $ for a fully ionized plasma), and $ \Lambda(T_{\text{\rm sh}}) $ is the cooling function which depends on the shock temperature (see e.g., \citealt{1976ApJ...204..290R,1998MNRAS.298.1021M,2003ApJ...587..278W}). 
+
+We assume that the acceleration region is a compact area near the apex of the bowshock. We calculate its size as $\Delta X_{\text{\rm accel}} \sim \mathcal{M}^{-2} R_0$, where $\mathcal{M}=  {v_{\text{\rm sh}}}/{c_{\rm s}}$ is the Mach number of the shocked wind and $c_{\rm s}$ is the speed of sound. 
+
+We obtain that both the RS and the FS remain adiabatic throughout the orbit for the assumed stars and eccentricities.
+%This result indicates that energy losses due to radiative cooling are negligible, meaning that most of the energy from the shocks is used to heat the gas and accelerate particles, rather than being radiated away.
+
+
+
+
+%-----------------------------------------------------------------------------------------
+\subsection{Magnetic field in the acceleration region}
+%-----------------------------------------------------------------------------------------
+
+The magnetic field strength at the CD is mainly determined by the stellar surface magnetic field \( B_\star \). The intensity and geometry of \( B_\text{\rm CD} \) can be classified as dipole (i), radial (ii), or toroidal (iii) \citep{1993ApJ...402..271E}:
+
+
+\begin{align}
+B_{\rm CD} \approx B_\star \times
+\begin{cases}
+\dfrac{R_\star^3}{R_0^3}, & R_\star < R_0 < r_{\rm A} \quad\text{(i)} \\[2em]
+\dfrac{R_\star^3}{r_{\rm A} R_0^2}, & r_{\rm A} < R_0 < R_\star \left( \dfrac{v_{\star\rm w}}{v_{\rm rot}} \right) \text{\,(ii)} \\[2em]
+\dfrac{R_\star^2 v_{\rm rot}}{r_{\rm A} R_0 v_{\star\rm w}}, & R_\star \left( \dfrac{v_{\star\rm w}}{v_{\rm rot}} \right) < R_0 \quad\text{(iii)}
+\end{cases}
+\end{align}
+where $R_{\star}$ is the stellar radius, $r_{\rm A}$ the Alfvén radius, and $v_{\text{\rm rot}} \sim 0.1 v_{\star \rm w}$ is the surface rotation velocity.
+%========================================================================================
+% Energy losses
+%========================================================================================
+
+\subsection{Energy gain and losses}\label{S_losses}
+We assume that particles reach relativistic energies through a diffusive shock acceleration mechanism (Fermi type I). The acceleration rate is given by:
+
+\begin{equation}
+t_{\rm acc}^{-1} = \dfrac{e\, B\, \eta\, c}{E},
+\end{equation}
+where $e$ is the electric charge, $Z$ the atomic number, $c$ the speed of light, $B$ the magnetic field, $E$ the particle energy. The acceleration efficiency $\eta$ in the Bohm diffusion regime is given by:
+\begin{equation}
+\eta = \dfrac{3}{8} \left( \dfrac{v_{\rm w}}{c} \right)^2,
+\end{equation}
+where $v_{\rm w}$ is the wind velocity, with $v_{\rm \star w}$ for the RS and $v_{\rm dw}$ for the FS.
+
+The accelerated particles can cool through various interactions; we have considered the following radiative processes:
+\begin{itemize}
+\item Synchrotron: Interaction between relativistic electrons and magnetic field lines. We consider the stellar magnetic field at the CD.
+\item Inverse Compton (IC) scattering: Relativistic electrons collide with low-energy thermal photons, transferring energy to the latter. We consider the stellar radiation field as the photon source.
+\item Relativistic Bremsstrahlung: Interaction between relativistic electrons and the electric field of ions or nuclei in the surrounding medium. The cold matter is the stellar wind at the CD.
+\end{itemize}
+
+
+%----------------------FIGURE------------------------------------------------------------
+\begin{figure*}[h]
+\centering
+\includegraphics[width=0.86\textwidth]{enfriamientos.png} 
+
+
+
+\caption{Timescales for electron acceleration, advective escape, and cooling at the RS, for both periastron and apastron of orbits with eccentricities of 0.3 and 0.9. \textit{Upper panels}: Stars of spectral type O4If. \textit{Lower panels}: Stars of spectral type O9III. The acceleration efficiency is $\eta_{\rm acc} \sim 4 \times 10^{-5}$ in all cases.}
+
+    
+    \label{fig:timescales}
+\end{figure*}
+\vspace{-1em}
+%----------------------------------------------------------------------------------------
+%========================================================================================
+% Results
+%========================================================================================
+
+\section{Results}\label{S_results}
+
+Figure \ref{fig:timescales} shows the timescales on a logarithmic scale for electron acceleration, advective escape, and cooling, for both periastron and apoastron. We show in this work only the results for the RS. IC scattering is the dominant process in all cases. We only consider the thermal ultraviolet photons from the star as the target field. This field dominates in all cases over the radiation field of the photosphere of the disk-driven wind at the SP, $U_{\rm rad}^{\star}(R_0)\gg U_{\rm rad}^{\rm dw}(R_0)$.
+We observe no variation in the maximum energy of the relativistic electrons, which is $\sim 1\,{\rm GeV}$ in all cases. The scenarios with the highest cooling rates correspond to the most eccentric stars at periastron (right panels). Thus, these scenarios are likely to contribute most to the electron synchrotron and IC emission of the RS in the system. The magnetic field in the acceleration region ranges from $\sim 6\,{\rm G}$ at ${\mathbf r_{\rm a}}$, to $\sim 700\,{\rm G}$ at $ {\mathbf r_{\rm p}}$ for the most eccentric orbits.
+In Table \ref{table_2} we list the values of $R_0$ for different stars at $r_{\rm p}$ and $r_{\rm a}$.
+
+
+%----------------------TABLE--------------------------------------------------------------
+
+\begin{table}[h!]
+\centering
+\begin{tabular}{lcccc}
+\hline\hline\noalign{\smallskip}
+\!\!Star & \!\!Eccentricity\!\! & \!\!\(R_0\)($r_p$)\!\! & \!\!\(R_0\)($r_{a}$)\!\! \\
+\hline\noalign{\smallskip}
+\!\!O4If & 0.9 & $5 R_\star$ & $103 R_\star$ \\
+         & 0.3 & $37 R_\star$ & $70 R_\star$ \\
+\hline\noalign{\smallskip}
+\!\!O9III & 0.9 & $1 R_\star$ & $5 R_\star$ \\
+          & 0.3 & $1.8 R_\star$ & $3.5 R_\star$ \\
+\hline
+\end{tabular}
+\caption{Variation of $R_0$ for the two stars, depending on their eccentricity and orbital position.}
+\label{table_2}
+\end{table}
+%----------------------------------------------------------------------------------------
+
+
+\vspace{-1em}
+
+%========================================================================================
+% Conclusions
+%========================================================================================
+
+\section{Conclusions}\label{S_conclusions}
+We conclude that, under the assumptions adopted in this work, shocks formed by the collision of winds from stars orbiting a super-Eddington SMBH (a windy AGN) may be adiabatic and capable of accelerating electrons to relativistic energies by diffusive shock acceleration. These relativistic particles could produce non-thermal radiation, including radio synchrotron and IC emission from the RS. In future work, we plan to study proton acceleration and compute the expected non-thermal emission from the system.
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+
+\end{document}
+
+

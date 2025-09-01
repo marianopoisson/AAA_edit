@@ -1,0 +1,6 @@
+avisos_model          REV
+cargador_marco_model  REV
+login_model           REV
+olvido_clave_model
+registro_model
+usuario_model

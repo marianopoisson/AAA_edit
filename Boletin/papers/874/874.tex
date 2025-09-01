@@ -1,0 +1,330 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{22 March 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Charles D. Perrine y el “gran debate” de la astronomía a comienzos del siglo XX}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Charles D. Perrine y el “gran debate”}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M. Bozzoli\inst{1,2,3},
+S. Paolantonio\inst{1} \&
+D.C. Merlo\inst{1}
+}
+
+\authorrunning{Bozzoli et al}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{maxibozzoli@ffyh.unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Museo del Observatorio Astronómico de Córdoba, UNC, Argentina
+\and
+Facultad de Filosofía y Humanidades, UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En 1920, en la Academia de Ciencias de los Estados Unidos, se presentó un debate público en torno a las escalas del universo entre Heber D. Curtis del Observatorio Lick y Harlow Shapley del Observatorio de Mount Wilson. En este debate participaron numerosos astrónomos quienes adoptaron diversas posiciones al respecto. La presente investigación se halla en curso y se centra en dilucidar cuál era la postura de Charles D. Perrine, director del Observatorio Nacional Argentino (1909-1936). Precisamente, se intenta mostrar algunas influencias epistémicas de tal controversia en ciertas investigaciones astrofísicas de Perrine en Córdoba. Como fuentes importantes para esta investigación histórica, se ha considerado la correspondencia de 1920 y de 1921, entre Perrine, Curtis y William W. Campbell (director del Observatorio Lick). Asimismo, se ha analizado documentación existente en los archivos del Museo del Observatorio Astronómico (MOA) de la Universidad Nacional de Córdoba (UNC).}
+
+\abstract{In 1920, a public debate on the scales of the universe was held, at the Academy of Sciences of the United States of America, between Heber D. Curtis of Lick Observatory and Harlow Shapley of Mount Wilson Observatory. Many astronomers participated in this debate and adopted different positions in relation to that matter. The present research is being carried out and focuses on elucidating the position of Charles D. Perrine, director of the Argentine National Observatory (1909-1936). Precisely, an attempt is made to show some epistemic influences of such controversy in certain astrophysical investigations of Perrine in Córdoba. As important sources for this historical research, the letters of 1920 and 1921 among Perrine, Curtis and William W. Campbell (director of the Lick Observatory) have been considered. Several documents, available within the files of the Museum of the Astronomical Observatory (MOA) of the National University of Córdoba (UNC), have been analysed.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ history and philosophy of astronomy --- Galaxy: general }
+
+\begin{document}
+
+\maketitle
+\section{Introducción}\label{S_intro}
+
+La teoría de los “universos isla”, propuesta inicialmente por Thomas Wright (Durham, Reino Unido) en 1750, fue considerada por Immanuel Kant en 1755 y reinterpretada por Pierre S. Laplace en 1796. El resurgimiento de esta teoría permitió a los astrónomos de principios del siglo pasado entender los movimientos propios y de recesión de las “nebulosas” observadas. Los astrónomos conjeturaron que estas últimas podían ser sistemas estelares, independientes a la Vía Láctea. Las observaciones disponibles estaban tanto a favor como en contra de esta nueva teoría. Gran parte de la comunidad astronómica de la época era reticente no sólo a aceptarla, sino también a adoptar los métodos astrofísicos empleados. En 1920, se llevó a cabo en la Academia de Ciencias de los Estados Unidos un debate entre Curtis del Observatorio Lick, principal defensor de dicha teoría, y Shapley del Observatorio de Mount Wilson, quien propuso su modelo de la “gran galaxia”. Entre 1920 y 1921, hubo una nutrida correspondencia entre Curtis, Perrine y Campbell \footnote{Correspondecia Campbell a Perrine, 29 de julio de 1920; Perrine a Curtis, 6 de mayo de 1920 y Perrine a Curtis, 26 de mayo de 1920 (Mary Lea Shane Archives of the Lick Observatory, University of California Santa Cruz).}. En este artículo presentaremos las ideas principales subyacentes a este acontecimiento en la astronomía de ese entonces. Al considerar este intercambio epistolar, se intentará dilucidar la posición de Perrine con respecto a este “gran debate”, mostrando así algunas influencias que tuvo en sus propias investigaciones astrofísicas realizadas en Córdoba.
+
+
+\section{Sobre una vieja “teoría”}
+
+A partir del resurgir de la teoría de los “universos isla”, los astrónomos de principios del siglo XX mostraron que, con un telescopio adecuado, varias de las nebulosas observadas podían ser resueltas en estrellas (Figura ~\ref{Figura1}). Esto fue conformando la base de las evidencias a favor de esta teoría. No obstante, parte de la comunidad astronómica de la época era reticente a aceptarla. En 1898, James Keeler comenzó a fotografiar cúmulos de estrellas y nebulosas espirales con el Reflector Crossley de 36 pulgadas del Observatorio Lick. Cabe destacar que Perrine, por ese entonces colaboró con Keeler en este trabajo y lo continuó luego de su fallecimiento. En esta época surge una reinterpretación de la hipótesis nebular de Laplace postulada en 1796.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig01.jpg}
+\caption{Fotografía de la Gran Nebulosa de Andrómeda realizada el 29 de diciembre de 1888 por Isaac Roberts. En aquel entonces se la interpretaba como un sistema planetario en proceso de condensación. La estrella central se situaba dentro de la materia nebulosa. Las dos nebulosas menores, asociadas a la “Gran Nebulosa”, atravesaban un proceso de transformación en planetas. Muchos astrónomos de la época sostenían: ¡la hipótesis nebular de Laplace hecha visible! \citep{1899spss.book.....R}}
+\label{Figura1}
+\end{figure}
+
+A diferencia de la hipótesis Laplaciana, la llamada “hipótesis planetesimal” de 1904 del geólogo Thomas C. Chamberlin y del astrónomo Forest R. Moulton, sostenía que cada nebulosa asociada a la Gran Nebulosa de Andrómeda (Messier 31 - M31) eran sistemas solares en formación independientes. Chamberlin y Moulton utilizaron las fotografías tomadas por Keeler para intentar confirmar esta última hipótesis. Por otra parte, en 1898, Julius Scheiner ya había detectado líneas de absorción dentro de la supuesta banda continua de M31, lo cual concordaba con las líneas de un espectro estelar. Ello lo llevó a afirmar, a favor de la teoría de los universos isla, que las nebulosas en espiral eran sistemas constituidos por estrellas. Recién en 1908, Edward A. Fath confirmó los resultados de Scheiner y, en 1912, Max Wolf detectó líneas de absorción y de emisión en un gran número de las espirales. Ello condujo a unificar la idea de que las nebulosas estaban compuestas de materia estelar y también de gas.
+
+\section{Sobre las “nebulosas” observadas}
+
+En 1912, Vesto M. Slipher del Observatorio Lowell fue el primero en medir la velocidad radial de una nebulosa espiral. Entre 1909 y 1913 observó los corrimientos hacia el rojo de M31. En 1914 él sostuvo que los desplazamientos de las líneas espectrales de las espirales observadas correspondían a que las mismas se estaban alejando de la Vía Láctea y, en 1917, calculó la deriva de ésta con respecto al resto de las nebulosas espirales, afirmando su posición sobre la teoría de los universos isla. Por otro lado, dado que los cúmulos globulares eran también considerados nebulosas, Shapley empezó a investigarlos en 1916 en el Observatorio de Mount Wilson. Para estudiar la dinámica de los mismos empleó diferentes métodos estadísticos basados en el recuento de estrellas, identificación del color y tipos espectrales, así como sus movimientos dentro del cúmulo.
+
+Por otra parte, Campbell y Curtis, como principales defensores de dicha teoría, la ponían en evidencia usando los siguientes elementos: la estructura espiral de la Vía Láctea, los senderos oscuros observados en las nebulosas en espiral, sus velocidades radiales, los movimientos propios y su distribución. Con respecto a los supuestos movimientos internos de las espirales, George W. Ritchey del Observatorio de Mount Wilson, solicitó en 1915 a Adriaan van Maanen (Observatorio Yerkes) que midiera sus placas de Messier 101 (M101) tomadas entre 1910 y 1915 para determinar si existían o no movimientos rotacionales. Así, concluyó que esta nebulosa espiral poseía un movimiento interno mensurable con un período rotacional de 85.000 años a una distancia de 10.000 años luz, aproximadamente (Figura ~\ref{Figura2}).
+
+El modelo de la “gran galaxia” propuesto por Shapley, a partir de sus observaciones de los cúmulos globulares, sostenía que la Vía Láctea debería tener unos 300.000 años luz de diámetro, incluyendo así a todas las espirales circundantes. Conjuntamente con las mediciones de van Maanen, ponían en aprietos a la teoría de los universos isla. Si M101 es un objeto extragaláctico, se halla a una gran distancia. De ser así, al determinarse sus velocidades rotacionales centrales, las mismas superarían la velocidad de la luz, lo cual era inaceptable.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig02.jpg}
+\caption{Mediciones de van Maanen de la espiral M101 (NGC 5457). Las flechas indican la dirección y la magnitud (a muy pequeña escala) de los movimientos propios medios anuales. Las estrellas de referencia están rodeadas con círculos \citep{Maanen1916}}
+\label{Figura2}
+\end{figure}
+
+
+\section{Sobre el “gran debate”}
+
+Según Robert Smith, la disputa entre Curtis y Shapley se había establecido ya a principios de 1920 \citep{Smith1993}. Durante el debate del 26 de abril de ese año, Curtis criticaba la pobreza estadística de la muestra de Cefeidas tomadas por Shapley a la hora de estimar las distancias a los cúmulos globulares e inferir luego el tamaño de la Vía Láctea. Shapley, criticaba la teoría de los universos isla, dada la evidencia observacional obtenida de las mediciones de van Maanen de los movimientos internos de M101, Messier 51 y Messier 33: \textit{“Parece que entre los dos hemos puesto entre la espada y la pared a los universos isla: Ud. acercando las espirales y yo alejando la Galaxia”}, carta de Shapley a van Maanen del 8 de junio de 1921 \citep{Smith1993} (p.140). Por su parte, Curtis contaba con la evidencia observacional lograda por Slipher sobre las velocidades radiales de un gran número de nebulosas. Esto último sugería que las mismas espirales, al no estar ligadas gravitacionalmente a la Vía Láctea, se alejaban rápidamente.
+
+Como es sabido, esta polémica acaba cuando Edwin P. Hubble identifica en 1923 una estrella variable cefeida en la nebulosa de Andrómeda, la cual confunde inicialmente con una nova (Figura ~\ref{Figura3}). Estas estrellas permitieron que Hubble, en los años posteriores, estimara que la distancia de M31 era de más de 900.000 años luz, bastante mayor que el tamaño propuesto por Shapley para nuestra galaxia. Cuando Hubble le escribió al año siguiente anunciándole su descubrimiento, Shapley apuntó en su diario: \textit{“Esta es la carta que ha destruido mi universo”}, carta de Hubble a Shapley del 19 de febrero de 1924 \citep{Smith1993} (p. 158). De esta manera, el gran debate quedaba resuelto \footnote{Para mayor información, se recomienda consultar: \citep{1960S&T....19..398S}, \citep{1970ASPL...10..313H}, \citep{1976JHA.....7..169H}, \citep{1995PASP..107.1133T}.}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig03.jpg}
+\caption{Placa fotográfica de Andrómeda (M31) tomada por Hubble el 6 de octubre de 1923 con el telescopio Hooker de 100 pulgadas del Mount Wilson. En el margen superior derecho de la imagen puede apreciarse la letra N tachada (correspondiente a una estrella nova) y con signo de admiración las letras VAR! (haciendo referencia a la cefeida detectada) (Cortesía Carnegie Observatories)}
+\label{Figura3}
+\end{figure}
+
+\section{Sobre la posición de Perrine}
+
+En la conferencia presentada por el Primer Astrónomo del Observatorio Nacional Argentino, Meabe L. Zimmer, estrecho colaborador de Perrine, en la Sociedad Científica Argentina el 3 de octubre 1929, sostenía que:
+\\
+\\
+\textit{“No puede haber más dudas respecto a la naturaleza de estas espirales. Son claramente inmensos agregados de estrellas semejantes a la de nuestro sistema de la Vía Láctea… El consenso de las opiniones actuales, es según creo, [sic] que son verdaderos universos, lo mismo que el nuestro; pero completamente independientes… No insistiré sobre este punto ya que hay algunas autoridades que creen que son dependientes de nuestra Vía Láctea.”} \citep{Zimmer1931} (p. 297)
+\\
+\\
+Por su parte, en la conferencia brindada el 17 de octubre de ese mismo año en la misma Sociedad, el Dr. Perrine planteaba que: 
+\\
+\\
+\textit{“Chamberlin y Moulton, han propuesto su «Planetesimal Hipótesis» [sic] del paso de una estrella por otra con la expulsión de brazos espirales los cuales se han condensado en planetas y satélites... tales pasos de estrellas tienen que suceder, y que la frecuencia de la forma espiral en las nebulosas muestra la posibilidad de tales deformaciones. Sin embargo, hay que recordar que no se conoce ninguna estrella con brazos espirales. Los únicos objetos que tienen forma espiral definida son algunas nebulosas. Éstas contienen miles y miles de estrellas… Pero se ha probado que las nebulosas llamadas «Planetarias» están constituidas por una estrella central, rodeada por mantos y corrientes nebulosas… En algunas, las formas no son simétricas, y en varias pueden verse rastros de una estructura espiral.”} \citep{Perrine1931} (pp. 345-346)
+\\
+\\
+En la correspondencia de 1921, Perrine revela a Curtis que estaba \textit{“entre Pinto y Valdemoro”}, carta de Perrine a Curtis del 5 de enero de 1921 \citep{Smith1993} (p. 127), con respecto a la naturaleza de las nebulosas espirales. Sin embargo, sostenía que los análisis espectrales y las “novas” observadas en ellas favorecían a la teoría de los universos isla. Más allá de toda incertidumbre, la posición “pragmática” de Perrine fue notable. La misma consistió en reinterpretar la hipótesis planetesimal, dándole importancia al estudio observacional sobre la dinámica entre sistemas estelares, restringiendo el ámbito de fenómenos al de las nebulosas planetarias. Este hito en la historia de la astronomía influyó y marcó líneas de investigación, permitiendo el desarrollo de la astrofísica argentina a través de su Observatorio Nacional Argentino \citep{Paolantonio2022} (p. 251). Cabe destacar que las valiosas investigaciones de Perrine en Córdoba quedaron plasmadas en innumerables observaciones y registros fotográficos de objetos nebulosos, los cuales fueron utilizados posteriormente por el Dr. José Luis Sérsic en la elaboración del reconocido Atlas de Galaxias Australes \citep{1968adga.book.....S}.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{874}
+ 
+\end{document}

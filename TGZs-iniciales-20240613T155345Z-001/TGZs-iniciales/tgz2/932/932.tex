@@ -1,0 +1,392 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{19 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Insights into the formation of OB associations:\\ an examination of key parameters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Simulations of OB association}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{S. Ortega\inst{1}, M. Bascuñán\inst{1}, S. Villanova\inst{1} \& P. Assmann\inst{1}
+}
+
+\authorrunning{Ortega et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{scarlletortegarojas@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Universidad de Concepci\'on, Chile}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las asociaciones OB son conglomerados estelares no ligados que albergan todo tipo de estrellas, destacándose las de tipo OB. Este grupo estelar resulta de particular interés debido a su idoneidad como entornos para el estudio del proceso de formación estelar. En este trabajo, evolucionamos cúmulos estelares jóvenes con el propósito de determinar los parámetros fundamentales que propiciarían la formación de una asociación OB. Para generar las condiciones iniciales, empleamos el código {\sc{McLuster}} para introducir fractalidad en la distribución estelar. Además, ajustamos un radio de media masa de $1~\mathrm{pc}$, una función inicial de masa de Kroupa y un $10\%$ de estrellas binarias. Posteriormente, utilizamos el código {\sc{Nbody6++GPU}} para evolucionar el cúmulo, incorporando un potencial de fondo que representara el gas residual de la formación estelar. El gas se modeló como una esfera de Plummer que, después de un tiempo característico, comenzó a reducir su masa, simulando así la expulsión de gas de los cúmulos estelares jóvenes. Se exploraron dos escenarios: uno con una expulsión instantánea y otro con una expulsión lenta de la masa de gas. Nuestros hallazgos revelan que, tras 10 millones de años, las simulaciones con expulsión instantánea de gas lograron un radio promedio para el cúmulo de {$28.8~\mathrm{pc}$}. Este resultado se sitúa en concordancia con el tamaño característico de una asociación OB, validando así nuestros modelos como posible escenario de evolución de estos sistemas estelares.
+}
+
+\abstract{OB associations are unbound stellar clusters that house a variety of stars, with a particular emphasis on those classified as OB types. This stellar group is of specific interest due to its suitability as an environment for studying the star formation process. In this study, we evolved young star clusters with the aim of determining the fundamental parameters that would lead to the formation of an OB association. We employed the {\sc{McLuster}} code to introduce fractality into the stellar distribution to generate initial conditions. Additionally, we adjusted a half-mass radius of $1~\mathrm{pc}$, an initial mass function following Kroupa, and included $10 \%$ binary stars. Subsequently, we used the {\sc{Nbody6++GPU}} code to evolve the cluster, incorporating a background potential representing residual gas from star formation. The gas was modeled as a Plummer sphere, which, after a characteristic time, began to reduce its mass, simulating the expulsion of gas from young star clusters. Two scenarios were explored: one with instantaneous gas expulsion and another with a slow expulsion of gas mass. Our findings reveal that, after 10 million years, simulations with instantaneous gas expulsion achieved an average cluster radius of {$28.8~\mathrm{pc}$}. This result aligns with the characteristic size of an OB association, thereby validating our models as a possible scenario for the evolution of these stellar systems.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{Galaxy: kinematics and dynamics --- open clusters and associations: general --- stars: evolution --- methods: numerical}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+OB associations, situated within the Milky Way, constitute a diverse collection of stars, with the OB types taking center stage, signifying the youthful nature of these stellar clusters. This inherent youthfulness makes OB associations valuable arenas for investigating recent star formation and the distribution patterns of young stars \citep{N_Wright_2020}.\\
+The formation mechanisms of OB associations remain a subject of discussion, with two primary models seeking to explain their origins. The monolithic model suggests that OB associations evolve from young clusters, expanding due to the expulsion of residual gas resulting from stellar birth processes, driven by phenomena such as stellar winds, UV radiation, and supernova explosions. Alternatively, the hierarchical model proposes that stars can form in regions of overdensity without adhering to a specific pattern, and their current distribution reflects the conditions of their birth \citep{G_Carraro_2020}.\\
+Typically, OB associations exhibit sizes ranging from $10-500~\mathrm{pc}$ {\citep{M&D_2017}} and maintain low densities ($<0.1 ~\mathrm{M_\odot\,pc}^{-3}$) \citep{N_Wright_2020}. \cite{M&D_2020} calculated a median stellar mass of $8.1\times10^3~\mathrm{M_\odot}$ and an average of 22 stars with a mass greater than $20 ~ \mathrm{M_\odot}$ based on their study of 28 OB associations. However, each association showcases unique features; for instance, \cite{Beccari_2018} identified two stellar populations in the Vela OB2 association, aged $10~\mathrm{Myr}$ and $30~\mathrm{Myr}$, respectively. Similarly, \cite{Cantat_Gaudin_2019} identified 11 star subgroups in Vela OB2 based on proper motions and parallaxes. Additionally, certain OB associations like Per OB1, Car OB1, Sgr OB1, Gem OB1, Ori OB1, and Sco OB1 exhibit signs of expansion, as analyzed using Gaia DR2 proper motions by \cite{M&D_2020}.\\
+
+In this study, we employ the {\sc{McLuster}} {\citep{McLuster}  \footnote{\url{https://github.com/ahwkuepper/mcluster}}} {code along with N-body simulations by using} {\sc{Nbody6++GPU}} {\citep{NBODY6++GPU} \footnote{\url{https://github.com/nbodyx/Nbody6ppGPU}}} code to discern the fundamental parameters influencing the formation of OB associations. Adopting a monolithic scenario in our model, we evolve stellar clusters over time, considering the individual stellar evolution of each star, and incorporate a background gas potential to simulate the effects of the expulsion of the cluster's initial gas.\\
+
+\section{Simulations}\label{Simulations}
+\subsection{Generation of initial conditions}
+
+{For this study we utilize the {\sc McLuster} code, which enables us to derive clusters from their nascent stages of formation. The {\sc McLuster} code serves as a tool for generating the initial conditions of clusters by adjusting parameters related to spatial and mass distribution.}
+
+\subsubsection{Setup}
+Our initial stellar distribution comprises a young cluster with $10\,000$ stars, with $10\%$ of them existing as primordial binary stars. These stars are spatially distributed within a homogeneous sphere exhibiting maximum fractality, a design chosen to generate clusters without adhering to predefined patterns. Additionally, we set a half-mass radius of $1~\mathrm{pc}$ and adopt a Kroupa initial mass function (IMF) within a mass range spanning from 0.08 to 40 M$_\odot$. This results in a total stellar mass ($M${$_{\mathrm{st}}$}) of {$5\,056~\mathrm{M_\odot}$} and a cluster radius of {$1.6~\mathrm{pc}$}.\\
+The parameters mentioned above are summarized in Table~\ref{mcluster_parameters}. In Fig.~\ref{initial_distribution}, we can see the cluster, {generated with the {\sc McLuster} code},  that will be evolved in {\sc{Nbody6++GPU}} to analyze its evolution, which could lead to the formation of OB association.
+
+\begin{table}[!t]
+\centering
+\caption{Initial stellar parameters set in {\sc{McLuster}}.}
+\begin{tabular}{lc}
+\hline\hline\noalign{\smallskip}
+\!\!Parameter & \!\!\!\! Option\\
+\hline\noalign{\smallskip}
+\!\!Stars number & {$10\,000$}\\
+\!\!Density profile & Homogeneous sphere\\
+\!\!Half mass radius & 1 pc\\
+\!\!Fractal dimension & 1.6\\
+\!\!Initial mass function & Kroupa\\
+\!\!Binary fraction & 0.1\\
+\hline
+\end{tabular}
+\label{mcluster_parameters}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{initial_distribution.pdf}
+\caption{Initial two dimensional distribution of the star cluster with substructure from a homogeneous sphere.}
+\label{initial_distribution}
+\end{figure}
+
+\subsection{N-body simulations}
+We utilize {\sc{Nbody6++GPU}} to steer the dynamical evolution of these young clusters. During the simulations, we consider the stellar evolution of each star complemented by the incorporation of a background gas potential into the model.
+
+\subsubsection{Background potential}
+In our simulations, we incorporate a background potential arising from residual gas generated during star formation. This potential is precisely modeled by adjusting parameters in accordance with {\sc{Nbody6++GPU}} keywords: total mass of the Plummer gas sphere ($MP$), Plummer scale factor ($AP$), decay time for gas expulsion ($MPDOT$), and initiation time for gas expulsion ($TDELAY$).\\
+
+{To calculate the total gas mass ($M=MP$), we employ Eq.~\ref{M(r)}, which represents the mass contained within a radius \em{r}}. Here, {\em{``a''}} denotes the Plummer radius, and {\em{``r''}} is the cluster's radius:
+
+\begin{equation}
+    M(r)= M\left(1+\frac{a^2}{r^2}\right)^{-3/2}\label{M(r)}.
+\end{equation}
+
+The gas distribution within the cluster ($M(r)=M_g$) aligns with the adjusted star formation efficiency (SFE) \citep{JP_2015}, ensuring consistency throughout the distribution: 
+
+\begin{equation}
+    SFE = \frac{M_{st}}{M_{st}+M_g}.
+    \label{SFE}
+\end{equation}
+
+The evolution of gas mass in the code adheres to Eq.~\ref{MP_time}, where $MP0$ signifies the initial mass of the Plummer gas sphere ($MP$). This equation is exclusively applicable during the gas expulsion phase:
+
+\begin{equation}
+    MP(T) = \frac{MP0}{(1+MPDOT(T-TDELAY))}.
+    \label{MP_time}
+\end{equation}
+
+\subsection{Evolution of the simulations}
+All simulations within this investigation adhere strictly to the initial parameters outlined in Table~\ref{mcluster_parameters}. The {SFE} of $10 \%$ yields a total mass for the Plummer gas sphere equivalent to {$75\,843~\mathrm{M_\odot}$}, with the Plummer scale factor ($AP$) precisely set at $1~\mathrm{pc}$.\\
+To evaluate the impact for gas expulsion on the evolution of the cluster, we systematically investigate two extreme scenarios for the decay time of the gas. In the initial scenario, where $MPDOT$ is set to $10\,000$ (expressed in N-body units), nearly $99 \%$ of the total gas mass is expelled within an exceptionally brief timeframe of {$1.8\times10^{-3}~\mathrm{Myr}$} after $TDELAY$. Conversely, in the second scenario with $MPDOT$ adjusted to 0.1, a substantial $50 \%$ reduction in gas mass is observed $1.8~\mathrm{Myr}$ after $TDELAY$. In both instances, the initiation of gas expulsion occurs precisely at $4.5~\mathrm{Myr}$.\\
+Finally, we performed five simulations per set, and the adjusted parameters for background gas are summarized in Table~\ref{simulations_set}.
+
+\begin{table*}[!t]
+\centering
+\caption{Summary of simulation sets, including gas potential.}
+\begin{tabular}{lccccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Simulation & \!\!\!\! {SFE} [\%] & \!\!\!\! $M_g$ [M$_\odot]$ & \!\!\!\! $r$ [pc] & \!\!\!\! $AP$ [pc] & \!\!\!\! $MP$ [M$_\odot$] & \!\!\!\! $MPDOT$ & \!\!\!\! $TDELAY$ [Myr]\\
+\hline\noalign{\smallskip}
+\!\!Sim 1 & 10 & 45\,506.79 & 1.6 & 1 & $75\,842.62$ & $10\,000$ & 4.5\\
+\!\!Sim 2 & 10 & 45\,506.79 & 1.6 & 1 & 75\,842.62 & 0.1 & 4.5\\
+\hline
+\end{tabular}
+\label{simulations_set}
+\end{table*}
+
+\section{Results} \label{Results}
+The ensuing section delineates the outcomes derived from the performed numerical simulations. The results are obtained from the average of each simulation set.\\
+Figure~\ref{Lagrangian_radius_comparison} shows the evolution of the Lagrangian radius. In the top panel, the average from five simulations of Sim 1 reveals an immediate expansion of cluster shells following gas expulsion. Conversely, the bottom panel displays the average from five simulations of Sim 2, depicting a slower expansion resulting in a more concentrated cluster.\\
+Using the Lagrangian radius, we define the core radius as the boundary containing $20 \%$ of the cluster's mass and the cluster radius as the boundary containing $80 \%$ of the cluster's mass. The simulation outcomes, including core and cluster radii, are detailed in Table~\ref{results}.\\
+Our focused analysis centers on the simulations at $10~\mathrm{Myr}$ and $20~\mathrm{Myr}$, representing the typical ages of OB associations according to \cite{N_Wright_2020}. Parameters under examination include the core radius (R$_{\mathrm{core}}$), the count of OB stars within the core radius (N$_\mathrm{OB,core}$), and the count of stars exceeding $20~\mathrm{M_\odot}$ within the core radius (N$_\mathrm{20,core}$). Additionally, we evaluate the cluster radius (R$_{\mathrm{cluster}}$), the count of OB stars within the cluster radius (N$_\mathrm{OB,cluster}$), and the count of stars with a mass greater than $20~\mathrm{M_\odot}$ within the cluster radius (N$_\mathrm{20,cluster}$).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Lagrangian_radius_comparison_log.pdf}
+\caption{Evolution of the Lagrangian radius. Each color curve indicates radius values that contain a certain percentage of the total mass of the cluster. The {\emph{upper panel}} corresponds to Sim 1 and the {\emph{lower panel}} represents Sim 2.}
+\label{Lagrangian_radius_comparison}
+\end{figure}
+
+\begin{table*}[!t]
+\centering
+\caption{Simulation results.}
+\begin{tabular}{lccccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Simulation & \!\!\!\! T [Myr] & \!\!\! R$_{\mathrm{core}}$ [pc] & \!\!\!\! N$_\mathrm{OB,core}$ & \!\!\!\! N$_\mathrm{20,core}$ & \!\!\! R$_\mathrm{cluster}$ [pc] & \!\!\!\! N$_\mathrm{OB,cluster}$ &\!\!\!\! N$_\mathrm{20,cluster}$\\
+\hline\noalign{\smallskip}
+\!\!Sim 1 & 10 & 0.7 & 102 & 3 & 28.8 & 256 & 3\\
+\!\!    & 20 & 1.3 & 106 & 0 & 94.3 & 281 & 0\\
+\!\!Sim 2 & 10 & 0.3 & 96 & 2 & 1.6 & 295 & 3\\
+\!\!      & 20 & 0.4 & 113 & 0 & 30.5 & 288 & 0\\
+\hline
+\end{tabular}
+\label{results}
+\end{table*}
+
+\section{Conclusions} \label{Conclusions}
+At $10~\mathrm{Myr}$, simulations in Sim 1 resulted in an average {cluster radius} of {$28.8~\mathrm{pc}$}, falling within the observed size range of OB associations ($10-500~\mathrm{pc}$). This outcome suggests that adjusting a higher $MPDOT$ than that in Sim 2 is necessary when comparing our simulations with OB associations of this age. However, by $20~\mathrm{Myr}$, both simulation sets reached sizes representative of OB associations.\\
+Additionally, both sets of simulations yielded comparable stars with masses exceeding $20~\mathrm{M_\odot}$, both within the core and the entire cluster. It is noteworthy, however, that in all cases, this count of stars remains considerably lower than \cite{M&D_2020} reported, {and even at $20~\mathrm{M_\odot}$ our model does not yield any such stars.} This discrepancy is attributed to our focus on {the monolithic model, having} a group of pre-existing stars, making it improbable to find extremely massive stars after $10~\mathrm{Myr}$ due to stellar evolution.\\
+{Notably, the most massive stars in the cluster are the most likely to be observed in reality, due to their magnitude values. For this reason, the analysis of the number of OB stars and stars with masses greater than $20~\mathrm{M_\odot}$ presented in Table~\ref{results} was performed to approximate their distribution throughout the cluster.}\\
+In conclusion, we identify the decay time for gas expulsion ($MPDOT$) as a pivotal parameter in our model to emulate the characteristics of OB associations, such as their sizes. Future endeavors will explore the variation of parameters, including the initial mass of the cluster and the half-mass radius, to refine our model and gain deeper insights into the essential factors influencing the formation of OB associations.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{acknowledgement}
+S.V. and S.O. gratefully acknowledge the support provided by ANID BASAL project FB210003 and
+Fondecyt regular n. 1220264.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{ID932}
+
+
+\clearpage
+
+
+\end{document}

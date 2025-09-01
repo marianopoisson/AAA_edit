@@ -1,0 +1,217 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+%  Este ejemplo define el formato para el envío de contribuciones a las      %
+%  Reuniones Anuales de la Asociación Argentina de Astronomía, a partir      %
+%  de 2014. Los resúmenes enviados serán publicados sin modificaciones       %
+%  en el Cuaderno de Resúmenes de la Asociación (CRAAA).                     %
+%                                                                            %
+%  Los comentarios en este archivo contienen instrucciones sobre el formato  %
+%  obligatorio del mismo. Por favor léalos.                                  %
+%                                                                            %
+%  No se permite el uso de \newcommand ni definiciones particulares de       %
+%  cada autor.                                                               %
+%                                                                            %
+%  Para compilar este archivo, use 'pdflatex <archivo>'.                     %
+%                                                                            %
+%  ************************** IMPORTANT NOTICE **************************    %
+%                                                                            %
+%  This template defines the format for the submission of contributions      %
+%  to the Annual Meetings of the Argentinian Astronomical Association,       %
+%  since 2014. The submitted abstracts will be published without changes     %
+%  in the Abstract Book of the Association (CRAAA).                          %
+%                                                                            %
+%  The comments in this file give instructions about its mandatory format.   %
+%  Please read them.                                                         %
+%                                                                            %
+%  The use of \newcommand and author's definitions are forbidden.            %
+%                                                                            %
+%  To compile this file, use 'pdflatex <filename>'.                          %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[craaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Paquetes de LaTeX necesarios, por favor no modifique estos comandos. En   %
+%  En caso de que su editor de texto codifique los archivos en un formato    %
+%  distinto a UTF8, cambie la opción correspondiente del paquete 'inputenc'. %
+%                                                                            %
+%  Needed LaTeX packages, please do not change these commands. If your text  %
+%  editor encodes files in a format different than UTF8, change the          %
+%  corresponding option of the package 'inputenc'.                           %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{helvet}
+\usepackage{afterpage}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione el idioma de su contribución:                                  %
+%                                                                            %
+%  Select the languague of your contribution:                                %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione el tipo de contribución solicitada:                            %
+%                                                                            %
+%  Select the requested contribution type:                                   %
+%                                                                            %
+%  1 : Presentación mural / Poster                                           %
+%  2 : Presentación oral / Oral contribution                                 %
+%  3 : Informe invitado / Invited report                                     %
+%  4 : Mesa redonda / Round table                                            %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                     %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos      %
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial / Astrometry and Space Geodesy%
+% 11 : ASOC  - Astronomía y Sociedad / Astronomy and Society                 %
+% 12 : O     -  Otros / Other                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Título. Este debe ser corto e informativo. Debe estar en minúsculas       %
+%  salvo la primer letra y aquellas palabras que siempre se escriben con     %
+%  mayúscula. Utilizar subtítulo solo en caso necesario. Para dividir un     %
+%  título largo en más líneas utilizar el corte de línea (\\).               %
+%                                                                            %
+%  Title. It should be short and informative and should not be capitalized,  %
+%  except for the first letter and any other words that are always           %
+%  capitalized. Please only use subtitle if necessary. In order to split     %
+%  a long \title across two or more lines, please insert linebreaks (\\).    %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{The color-magnitude relation in the Fornax and Antlia galaxy clusters\\ as seen by the 12 bands of S-PLUS
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Lista de autores. Los nombres de los autores deben estar separados por    %
+%  comas, y deben tener el formato A.E. Autor (iniciales apellido(s); sin    %
+%  coma entre apellido e iniciales ni espacios entre las iniciales).         %
+%                                                                            %
+%  Author list. Authors' names must be separated by commas, and stick to     %
+%  the format A.E. Author (initials Family name -neither commas between      %
+%  name and the initials nor blanks between the initials).                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{R.M. Samir\inst{1}, S. Zayas\inst{2}, A.V. Smith Castelli\inst{2,3}, J.P. Calderón\inst{2,3}, R.F. Haack\inst{2,3}, A.R. Lopes\inst{3}, C. Lima Dias\inst{4} \& L.A. Gutiérrez Soto\inst{3}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+% Lista de afiliaciones, por favor ajustese al formato especificado.         %
+%                                                                            %
+% Affiliation list, please conform to the specified format.                  %
+%                                                                            %
+% Ej./E.g.:                                                                  %
+%                                                                            %
+% Departamento de F{\'\i}sica, Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+% Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+% Facultad de Ciencias Exactas, F{\'\i}sicas y Naturales, UNSJ, Argentina
+% Instituto Argentino de Radioastronom{\'\i}a, CONICET--CICPBA--UNLP, Argentina
+% Instituto de Astrof{\'\i}sica de La Plata, CONICET--UNLP, Argentina
+% Instituto de Astronom{\'\i}a Te\'orica y Experimental, CONICET--UNC, Argentina
+% Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+% Instituto de Ciencias Astron\'omicas, de la Tierra y del Espacio, CONICET--UNSJ, Argentina
+% Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+% Observatorio Astron\'omico F\'elix Aguilar, UNSJ, Argentina
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+National Research Institute of Astronomy and Geophysics, NRIAG, Cairo, Egypt
+\and
+Facultad de Ciencias Astronómicas y Geofísicas, Universidad Nacional de La Plata, La Plata, Argentina
+\and
+Instituto de Astrofísica de La Plata, CONICET-UNLP, La Plata, Argentina
+\and
+Universidad de La Serena, La Serena, Chile
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  El resumen puede estar escrito en castellano o inglés, a elección del     %
+%  autor. El número máximo de caracteres permitidos es 1500 (mil quinientos),%
+%  contabilizando espacios.                                                  %
+%                                                                            %
+%  The abstract can be written in Spanish or English, at the author's        %
+%  choice. The maximum number of allowed characters is 1500 (one thousand    %
+%  five hundred), counting spaces.                                           %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\abstract{
+
+Fornax is the richest nearby (D $\sim$ 20 Mpc) galaxy cluster in the southern sky and it displays a dinamically young structure in the process of assembling. Antlia (D $\sim$ 35 Mpc) is a cluster that seems to be dynamically younger than Fornax but unexpectedly relaxed though its central galaxy density is 1.7 higher than in Fornax. In this poster we present preliminary results on the analysis and the comparison of the color-magnitude relation (CMR) defined by the galaxies of Fornax and Antlia using specific photometric catalogs obtained from the images of the Southern Photometric Local Universe Survey (S-PLUS). S-PLUS aims at mapping $\approx$9300 deg$^2$ of the celestial sphere in 12 optical bands which includes the 5 $ugriz$ broad-band filters and 7 narrow-band filters centred on prominent stellar spectral features like the Balmer jump/[OII], Ca H + K, H$\delta$, G band, Mg b triplet, H$\alpha$, and the Ca triplet. We will explore, among other properties, if the intrinsic color scatter of the $(g-r)$ vs. $r$ relation can be linked to variations of any of the 65 additional colors provided by S-PLUS and, in that case, if such a behaviour can give clues about its physical origin. As an example, it has been suggested that such scatter might be linked to difference in ages between the galaxies that follow the CMR. In addition, we will compare the properties of the CMRs of Fornax and Antlia in the context of the alledged universality of that photometric relation. As a final outcome, we expect that such an analysis allows us to trace difference and similarities in the evolutionary paths followed by the galaxies of both clusters.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{galaxies: clusters: Fornax --- galaxies: clusters: Antlia --- techniques: photometric --- software: data analysis --- surveys
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+% Por favor provea una dirección de e-mail de contacto para los lectores.    %
+%                                                                            %
+% Please provide a contact e-mail address for readers.                       %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{sofiazayas22@gmail.com} 
+
+\begin{document}
+\maketitle
+
+\end{document}
+

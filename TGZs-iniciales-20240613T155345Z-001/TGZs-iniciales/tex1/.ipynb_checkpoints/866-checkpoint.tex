@@ -1,0 +1,433 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\usepackage{ulem}
+\usepackage{enumitem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Primordial power spectrum from an objective collapse mechanism: The simplest case}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Primordial power spectrum from an objective collapse mechanism: The simplest case}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.M. Ocampo\inst{1,2},
+O. Palermo\inst{2},
+G. León\inst{2}
+\&
+G.R. Bengochea\inst{3}
+}
+
+\authorrunning{Ocampo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mocampo@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+\and
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+\and
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En este trabajo se analizó el origen físico de las inhomogeneidades primordiales durante la era inflacionaria. El marco teórico propuesto está basado, por un lado, en el contexto de gravedad semiclásica donde solamente se cuantizan los campos de materia y no la métrica espacio-temporal. Por otro lado, se incorpora un mecanismo de colapsos objetivos basado en el modelo de Localización Continua Espontánea (CSL por sus siglas en inglés), el cual es aplicado a la función de onda asociada al campo inflatón. Esto es introducido para atender la relación cercana entre la cosmología y el llamado ``problema de la medición" en Mecánica Cuántica. En particular, para romper las simetrías asumidas para el vacío de Bunch-Davies inicial y así obtener las inhomogeneidades observadas hoy, la teoría necesita de algo similar a una ``medición", ya que la evolución lineal dada por la ecuación de Schrödinger no rompe simetrías iniciales. El colapso dado por el modelo CSL provee un mecanismo satisfactorio de ruptura de las simetrías iniciales del vacío de Bunch-Davies. El aspecto novedoso en este trabajo es que el modelo CSL propuesto surge a partir de las elecciones más simples para el parámetro y operador de colapso, obteniéndose un espectro primordial que tiene las mismas características distintivas del espectro estándar, y que es consistente con las observaciones del Fondo Cósmico de Microondas.}
+
+\abstract{In this work we analyzed the physical origin of the primordial inhomogeneities during the inflation
+era. The proposed framework is based, on the one hand, on semiclassical gravity, in which only the matter fields are quantized and not the spacetime metric. Secondly, we incorporate an objective collapse mechanism based on the Continuous Spontaneous Localization (CSL) model, and we apply it to the wavefunction associated with the inflaton field. This is introduced due to the close relation between cosmology and the so-called “measurement problem” in Quantum Mechanics. In particular, in order to break the homogeneity and isotropy of the initial Bunch-Davies vacuum, and thus obtain the inhomogeneities observed today, the theory requires something akin to a “measurement” (in the traditional sense of Quantum Mechanics). This is because the linear evolution driven by Schrödinger’s equation does not break any initial symmetry. The collapse mechanism given by the CSL model provides a satisfactory mechanism for breaking the initial symmetries of the Bunch-Davies vacuum. The novel aspect in this work is that the constructed CSL model arises from the simplest choices for the collapse parameter and operator. From these considerations, we obtain a primordial spectrum that has the same distinctive features as the standard one, which is consistent with the observations from the Cosmic Microwave Background.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ cosmology: theory --- inflation --- cosmic background radiation}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+The current cosmological model provides a description of the evolution of the Universe, in which the seeds of structure originate from quantum fluctuations during an inflationary stage \citep{guth.inflation.paper, Mukhanov1992}. The predictions have been tested with success in observations of the Cosmic Microwave Background (CMB) \citep{Planck2020}.
+
+In this standard approach the primordial power spectrum is calculated quantizing both the metric and matter fields. The Universe is pretended to be in an initial symmetric state, and the usual choice is to adopt the Bunch-Davies (BD) vacuum. This initial symmetric state is found to evolve into an asymmetric one, with the inhomogeneities expected to be found in the matter and energy distribution today. The mechanism responsible for this transition, in the standard model, is the fluctuations of the vacuum state of the inflaton field. In practice, the theoretical prediction is consistent with the CMB observations, and, in particular, for the large scale modes for which the Sachs-Wolfe effect is dominant \citep{sachswolfe1967}. This corresponds with the so-called super-horizon modes, i.e. inhomogeneities that are not affected by microphysics since they are at scales bigger than the particle horizon at decoupling. The power spectrum obtained from standard inflation, denominated Harrison-Zel'dovich spectrum \citep{Harrison1970, zeldovich1972}, is scale invariant and given by the following expression:
+\begin{equation} \label{standardps}
+    \mathcal{P}_{\mathcal{R}}(k) \simeq \left ( \frac{H_I^2}{2\pi \dot{\phi}}\right)^2 = \frac{H_I^2}{8\pi^2 \varepsilon M^2_P} ,
+\end{equation}
+where $H_I$ is the Hubble parameter during inflation, $\phi$ is the scalar inflaton field, $M_P$ is the Planck mass, and $\varepsilon$ is the slow-roll parameter. For a complete derivation it is suggested to check \cite{Sriramkumar2009}.
+
+However, the physical origin for the primordial perturbations remains unclear, and in Sect. \ref{sec2.1} we will discuss the standard explanation and why we find it inappropriate.
+
+%\begin{figure} [!t]
+%    \centering
+%    \includegraphics[width=\columnwidth]{image_2023-12-12_162925086.png}
+%    \caption{Angular spectrum of temperature anisotropies from \cite{Planck2020}. At large scales $(l<30)$ the so called Sachs-Wolfe effect is dominant and these scales are of particular interest for this work.}
+ %   \label{fig1}
+%\end{figure}
+
+\section{The measurement problem in Quantum Mechanics}
+
+In Sect. \ref{S_intro} we mentioned the fluctuations of the inflaton field in the vacuum state as the mechanism that originates the primordial inhomogeneities in the Universe. We find this argument difficult to justify and it is closely related to the so-called measurement problem in Quantum Physics \citep{Maudlin1995-MAUTMP, Okon2014, Norsen2017}. 
+
+In Quantum Mechanics the equation that describes the temporal evolution of a system from an initial state is the Schrödinger equation: 
+\begin{equation}
+    i \hbar \frac{\partial}{\partial t} | \psi (t) \rangle = \hat{H} | \psi (t) \rangle ,
+\end{equation}
+where $\hat{H}$ is the Hamiltonian operator and $\hbar$ is the reduced Planck constant. On the other hand, if an external agent (of ambiguous nature intended by the theory) makes a measurement of a property of the system, the wavefunction will collapse and the state will be an eigenstate of the respective operator. This process is random with the probability given by Born’s rule.
+
+The evolution given by the Schrödinger equation, by itself, is not capable of breaking initial symmetries\footnote{Given that $[\hat{O},\hat{H}]=0$, with $\hat{O}$ being the symmetry generating operator.} and superpositions of a system. The theory needs the measurement postulate in order to connect the formalism with the observations, and such a mechanism provokes the collapse of the wave function. This leads to the following questions: What is a measurement? Who can perform one? When does it happen? When do we have to use the evolution given by Schrödinger equation and when the random process that collapses the wavefunction i.e. the measurement postulate? This is the so called \textit{“measurement problem”}. 
+
+In \cite{Maudlin1995-MAUTMP} the measurement problem is approached formally, synthesizing it in the incompatibility of the following statements:
+
+\begin{enumerate}
+    \item The physical description provided by the state vector is complete. \label{A}
+    \item Quantum states always evolve according to the Schrödinger equation. \label{B}
+    \item Measurements always have definite results. \label{C}
+\end{enumerate}
+
+Any alternative to the standard quantum formalism that aspires to address the measurement problem must negate at least one of these points. In our case, we will explore a possibility that negates \ref{B}. Alternative approaches that discard the other two statements can be seen in \cite{Bell1982} for \ref{A}, in the known as de Broglie-Bohm model, and \cite{Schlosshauer2007} for \ref{C}, where decoherence is explored.
+
+By negating \ref{B} we need to explore theories in which the collapse of the wavefunction is self induced by some novel mechanism. These models are known as \textit{objective collapse theories}. This approach was first explored in works like \cite{Pearle1976}, \cite{Diosi:1984wuz, Diosi:1986nu, Diosi:1988uy} and \cite{penrose1989book}, with the aim of obtaining a theory that maintains the successful predictions of Quantum Mechanics and can also describe macroscopic phenomena that do not exhibit superposition of states.
+
+In particular, we will use a version of the model called Continuous Spontaneous Localization (CSL), which proposes an objective collapse of the wavefunction \citep{Pearle1976, Pearle1989}. The quantum-to-classical transition of the perturbations is naturally explained by the CSL model.
+
+\subsection{The cosmological scenario} \label{sec2.1}
+
+In cosmology the measurement problem is enhanced \citep{Bell1995, Hartle1993, perezsahlmansudarsky2006, Sudarsky:2009za, Landau:2011ljv, Bengochea_2020}. We will briefly describe the issue here.    
+
+At the beginning of the inflation stage, both spacetime and the quantum state of the inflaton field are assumed to be isotropic and homogeneous. Then, as in any quantum system, the expected values and quantum uncertainties of the quantum field in that vacuum state can be calculated. On the other hand, until a “measurement” is performed, the system will continue having the initial symmetries if its evolution is dictated by the Schrödinger equation, which does not break any symmetry. However, today we see the initial symmetries broken, characterized in the anisotropies of the CMB, and also in the structure formation in the Universe. How do we arrive to an asymmetric state from a symmetric one? Usual Quantum Mechanics needs the measurement postulate in order to break symmetries but, in the early Universe, the same questions exposed before emerge: who can make a measurement that breaks symmetries? How is it made in that scenario?
+
+Standard cosmology tries to answer this problem by invoking the Uncertainty Principle and the quantum vacuum fluctuations as the mechanism generator of the seeds of structure. This would mean that the quantum fluctuations have a real existence in the Universe and that the quantum field have real, random but well-defined values at every time. We find this problematic since quantum fluctuations are uncertainties and, thus, the only thing they can provide is the range of the most probable values (together with Born’s rule) if a measurement is made. \textbf{Quantum fluctuations are not equivalent to inhomogeneities.} 
+
+
+\section{Continuous Spontaneous Localization}\label{sec:guia}
+
+The Continuous Spontaneous Localization model consists of a non linear modification of the Schrödinger equation, to which a stochastic term is added. This model is a generalization of the previously proposed Quantum Mechanics of Spontaneous Localization (QMSL), or GRW model after its authors (Ghirardi, Rimini and Weber ) \citep{GhirardiRiminiWeber1986}. As the name suggests, in CSL the collapse of the wave function occurs continuously, whereas in GRW the collapse is discrete.
+
+CSL has two main equations and their derivation can be found in \cite{Pearle2012}. Since we are interested in introducing the CSL mechanism in a cosmological context, we will use an adaptation of them to this scenario. The first equation is a modification of the Schrödinger equation to which a non-linear stochastic term is added. The modified evolution equation is:
+\begin{eqnarray} \label{eqcsl1}
+    |\Phi,\eta\rangle &=& \hat{\mathcal{T}} \text{exp} \bigg \{ \int_{\tau}^{\eta} d\eta \int d^3x \sqrt{|g|} \bigg [ -i\hat{\mathcal{H}}\nonumber 
+    \\ 
+    &-&
+    \frac{1}{4\lambda} (W(\eta,\mathbf{x})-2\lambda \hat{C}(\eta,\mathbf{x}))^2 \bigg ] \bigg \} |\Phi,\tau\rangle .
+\end{eqnarray}
+In this expression $\Phi$ represents the wavefunction associated with the quantum state of the inhomogeneous part of the inflaton field, $d\eta d^3x\sqrt{|g|}$ is the 4-volume of the background Friedmann-Lemaître-Robertson-Walker (FLRW) metric, $\tau \rightarrow -\infty$ the conformal time at the beginning of inflation and $\hat{\mathcal{H}}$ is the Hamiltonian density of the system such that $\hat{H}=\int d^3x\hat{\mathcal{H}}$. $\hat{C}$ is the collapse operator to which one of its eigenstates will collapse the system. $\lambda$ represents the collapse rate and characterizes the \textit{amplification mechanism} of the theory, that is, the collapse being rare for microscopic systems as expected by standard Quantum Mechanics, and increasing this effect to the level of being notable for systems with enough energy to be considered macroscopic. The choices for these two terms will be discussed in the Sect. \ref{sec4}.  $W$ is a scalar white noise field and its probability rule in this case is:
+\begin{equation}
+    P(W)dW=\langle\Phi,\eta|\Phi,\eta\rangle \prod_{\eta'=\tau}^{\eta-d\eta}\frac{|g|^{1/4}dW(\eta',\mathbf{x})}{\sqrt{2\pi\lambda/d\eta}} .
+\end{equation}
+
+Since we are working with conformal time as the time coordinate, we can see that $\sqrt{|g|}=a^4$, with $a$ the usual scale factor in FLRW geometry.
+
+The random nature of $W$ in (\ref{eqcsl1}) is needed because the collapse toward an eigenstate of the collapse operator needs to be random, in order to replicate the predictions of Quantum Mechanics. Then, different systems starting each one in the same initial state will evolve toward different eigenstates. We are interested in the evolution of this ensemble of systems and, to describe it, we introduce the density matrix:
+\begin{equation}
+    \hat{\rho} \equiv \int_{-\infty}^{\infty} P(W)dW \frac{|\Phi,\eta\rangle\langle\Phi,\eta|}{\langle\Phi,\eta|\Phi,\eta\rangle} ,
+\end{equation}
+ and, combining this expression with (\ref{eqcsl1}) the following evolution equation can be found:
+ \begin{equation}
+     \frac{\partial\hat{\rho}}{\partial\eta} = - i [\hat{H},\hat{\rho}] - \frac{\lambda a^4}{2} \int d^3x [\hat{C},[\hat{C},\hat{\rho}]].
+ \end{equation}
+
+\section{Collapse in Inflation} \label{sec4}
+
+\subsection{Semiclassical gravity}
+
+In this work we will employ the semiclassical gravity (SCG) framework, as in previous works like \citep{perezsahlmansudarsky2006}, where the collapse proposal for cosmology was originally introduced. The semiclassical Einstein equations are simply:
+\begin{equation}
+    G_{\mu\nu} = 8\pi G \langle \hat{T}_{\mu\nu}\rangle ,
+\end{equation}
+with $G_{\mu\nu}$ the Einstein tensor and $\hat{T}_{\mu\nu}$ the energy-momentum tensor.
+In this model only $\hat{T}_{\mu\nu}$ is quantized and its expectation value acts as source of spacetime curvature. SCG presents two main advantages \citep{LeonBengochea2021}:
+\begin{itemize}
+    \item It is not needed to justify the ``quantum-to-classical'' transition in the metric as the spacetime is always taken as classical. When including the CSL mechanism the collapse of the wave function is regarded as a physical process happening in time, and then is preferred to admit full spacetime notions.
+    \item It facilitates presenting how the perturbations are born from the wavefunction collapse, since the expectation value of the energy-momentum tensor in SCG yields a geometry that will not be homogeneous and isotropic after the collapse has taken place. 
+\end{itemize}
+
+Nevertheless, CSL calculations with the standard quantization of both spacetime metric and matter fields have been done, for example in \cite{LeonBengochea2016} and \cite{Palermo:2022dim}. For a complete discussion about the advantages and disadvantages of SCG approach the interested reader can check \cite{bengochealeonpearlesudarsky2020}.
+
+
+\subsection{Collapse parameter and operator}
+
+As mentioned before, $\lambda$ represents the collapse rate. \cite{Diosi:1984wuz, Diosi:1986nu, Diosi:1988uy} and \cite{Penrose:1996cv} discuss that the collapse mechanism should be a dynamical process related to gravitational interaction. Taking this into account, \cite{bengochealeonpearlesudarsky2020} and \cite{LeonBengochea2021} consider that $\lambda$ has to be related to the spacetime curvature, and several parameterizations can be considered involving the different mathematical quantities that emerge from the curvature. The simplest choice that we can do is to use the Ricci scalar and, thus, having the following expression:
+\begin{equation}
+    \lambda = \lambda_0 \frac{R}{M_P} \simeq \lambda_0 \frac{H_I^2}{M_P},
+\end{equation}
+where $\lambda_0 \simeq 10^{-17}$s$^{-1}$ is estimated from laboratory experiments and $H_I$ is the quasi constant Hubble parameter in slow-roll inflation.
+
+Although the simplest, this choice for $\lambda$ is novel since in previous works like \cite{Canate2013}, \cite{LeonBengochea2016}, \cite{LeonBengochea2021} and \cite{Palermo:2022dim} the parameter was not considered as a constant and needed to be properly adjusted in order to be consistent with observations. On the other hand, more sophisticated parameterizations can potentially lead to better predictions for the primordial spectra.
+
+We turn our attention to the collapse operator $\hat{C}$ in (\ref{eqcsl1}). Following the criterion of choosing the simplest quantity, we will use the field variable itself, this means the collapse operator will be the inhomogeneous part of the inflaton field:
+\begin{equation}
+    \hat{C}\equiv \delta \hat{\phi}.
+\end{equation}
+
+\subsection{Primordial power spectrum}
+
+We will show now the relation between the primordial curvature perturbation and the CSL mechanism. For a complete derivation the reader is invited to see \cite{LeonBengochea2021} and, in particular for this work, \cite{ocampotesis}.
+
+Using the perturbed Einstein equations in the longitudinal gauge \citep{Mukhanov1992, Mukhanov.physcosm.2005}, and the definition of the slow-roll parameter $\varepsilon$, we can obtain \citep{LeonBengochea2021}:
+
+\begin{equation}
+    \Psi + \mathcal{H}^{-1} \Psi' = \sqrt{\frac{\varepsilon}{2}}\frac{\langle \hat{y}\rangle}{a M_P} ,
+\end{equation}
+where $\Psi$ is a scalar field corresponding to the scalar perturbations at first order and, in the longitudinal gauge, represents the curvature perturbation. $\mathcal{H}$ is the comoving Hubble parameter and $\hat{y}=a\delta\hat{\phi}$. This expression is exact, with no approximations made, and relates the quantum expectation value of the matter fields and the classical curvature perturbations. Since the matter fields follow the evolution driven by CSL equation, we have derived an expression that relates the CSL mechanism (present in $\langle\hat{y}\rangle$) to the scalar perturbations of the metric (given by $\Psi$).
+
+Next, we introduce the Lukash variable \citep{Lukash:1980iv}, and using the slow-roll approximation, we can relate it to the last expression as follows:
+\begin{equation}
+    \mathcal{R} \simeq \frac{1}{\varepsilon} (\Psi + \mathcal{H}^{-1} \Psi' ) = \frac{\langle \hat{y}\rangle}{a M_P\sqrt{2\varepsilon}} .
+\end{equation}
+The variable $\mathcal{R}$ also represents, in the comoving gauge, the curvature perturbation. The associated scalar power spectrum is defined in Fourier space as:
+\begin{equation}
+    \overline{\mathcal{R}_{\mathbf{k}}\mathcal{R}^*_{\mathbf{q}}} \equiv \frac{2\pi^2}{k^3} \mathcal{P}_{\mathcal{R}}(k)\delta(\mathbf{k}-\mathbf{q}) ,
+\end{equation}
+where the bar indicates an ensemble average over the field $\mathcal{R}_\mathbf{k}$. Since $\mathcal{R}$ is a gauge invariant quantity, we can compute it in the Newtonian gauge and then switch to the comoving gauge in order to compute the resultant power spectrum. This will be:
+
+\begin{equation}
+    \mathcal{P}_{\mathcal{R}}(k)\delta(\mathbf{k}-\mathbf{q})= \frac{k^3}{4\pi^2\varepsilon M^2_P a^2} \overline{\langle\hat{y}_{\mathbf{k}}\rangle\langle\hat{y}_{\mathbf{q}}\rangle^*}.
+\end{equation}
+
+Finally, using the CSL parameter and operator chosen in the previous section, we can obtain the following expression for the scalar power spectrum \citep{ocampotesis}:
+
+\begin{equation}
+    P_\mathcal{R}(k) \approx \frac{H_I^2}{8\pi^2\varepsilon M_P^2} \left ( 1 - \frac{4 \lambda_0\pi}{M_P}\right),
+\end{equation}
+this means, the same standard Harrison-Zel'dovich spectrum plus a factor dependent of $\lambda_0$. This factor, in Planck units, results $\lambda_0\simeq 10^{-61}M_P$ and, thus, we can neglect it recovering (\ref{standardps}). 
+
+\section{Conclusions}
+
+%In this work we discussed the measurement problem in Quantum Mechanics and its relevance to the cosmological scenario where the lack of an external observer for the Universe or even a good definition for a measurement leads to a problem for  the primordial symmetry break and how we found the standard explanation unsatisfactory due to the treatment of quantum fluctuations as physical inhomogeneities \textbf{[GL:  Como que habria que reescribir este parrafo, primero, que es un parrafo de una frase entera. Segundo, como que se quieren decir varias cosas pero, justo como es toda una frase en un parrafo, se pierde mucho el sentido]}.
+In this work we discussed the measurement problem in Quantum Physics and its relevance to the cosmological scenario, in which the lack of an external observer for the early Universe (or even a good definition for a measurement) leads to a problem for breaking the primordial symmetries. We explained why we find the standard approach unsatisfactory due to the inappropriate treatment of quantum uncertainties as physical inhomogeneities.
+
+Then, we introduced the CSL model which incorporates an objective collapse mechanism for the wavefunction and chose the simplest options for the collapse rate parameter $\lambda$ and the collapse operator $\hat{C}$. With these choices we computed the primordial scalar power spectrum, obtaining an equal expression to the traditional one. This means that the CSL mechanism provides a plausible explanation for the quantum origin for the primordial perturbations and, with even the simplest parameterization, can lead to a spectrum consistent with observations.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{acknowledgement}
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+%\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

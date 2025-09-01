@@ -1,0 +1,405 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Preliminary study of CH$_3$CN as a chemical thermometer of
+molecular cores}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{A. Marinellli\inst{1},
+% N. C. Martinez\inst{1},
+% N. L. Isequilla\inst{1}
+M.E. Ortega\inst{1} \&
+S. Paron\inst{1}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{amarinelli@iafe.uba.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Se sabe que las estrellas de gran masa se forman como resultado de la fragmentación de grumos moleculares de alta masa. Esto da origen a los núcleos que son las estructuras más pequeñas del medio interestelar que pueden dar lugar al nacimiento de estrellas. Caracterizar sus parámetros físicos y químicos es fundamental para comprender los procesos de formación estelar. En particular, una correcta determinación de la temperatura de los núcleos moleculares es de vital importancia para la estimación de su masa en el contexto de los distintos escenarios de formación de las estrellas masivas. 
+En este trabajo, se presentan resultados preliminares de un estudio estadístico de la molécula CH$_3$CN como trazadora de temperatura hacia una muestra de grumos moleculares de alta masa. El estudio fue llevado a cabo a partir de observaciones en Banda 6 obtenidas del ALMA Science Archive.}
+
+\abstract{High-mass stars are known to form as a result of the fragmentation of high-mass molecular clumps. This gives rise to cores, which are the smallest structures in the interstellar medium that can lead to the birth of stars. Characterizing their physical and chemical parameters is essential to understanding star formation processes. In particular, accurately determining the temperature of molecular cores is crucial for estimating their mass in the context of different scenarios of massive star formation.
+In this work,  preliminary results of a statistical study of the CH$_3$CN molecule as a temperature tracer toward a sample of high-mass molecular clumps are presented. The study was carried out from observations in Band 6 taken from the ALMA Science Archive.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ ISM: clouds --- ISM: molecules --- stars: formation}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+The formation of a high-mass star begins with the fragmentation of a massive clump into smaller structures known as molecular cores. There are two models under debate for high-mass star formation: monolithic collapse \citep{palau2018, moscadelli2021} and competitive accretion \citep{motte18, sch19}.
+For the study and validation of these models, it is essential to determine the masses of the cores involved in the fragmentation of molecular clouds. For this, the correct estimation of the temperature of the molecular cores is of crucial importance since it is directly related to the calculation of their masses.
+
+One of the most used tools in temperature estimation is the Rotational Diagram \citep{goldsmith99} applied to top-symmetric molecules. In particular, the top-symmetric molecule methyl cyanide (CH$_3$CN) is a good temperature tracer. CH$_3$CN is formed in interstellar grains by recombination of radicals such as CN- and CH$_3$- \citep{her14} and it is generally detected in hot molecular cores \citep{brouillet2022}. In this work, we present preliminary results of a statistical study of the CH$_3$CN molecule as a temperature tracer toward a sample of high-mass molecular clumps with cores in its interior.
+
+\section{Data}
+
+Data cubes were obtained from the ALMA Science Archive. We used data from the project 2015.1.01312.S (P.I. Gary Fuller). The telescope configuration used baselines  L5BL/L80BL of 39.84/215.91m, respectively,  in the 12\,m array. 
+The observed frequency range of the spectral window used in this work goes from 238.81 to 240.69~GHz (Band 6). The angular and spectral resolutions are 0$.\!\!^{\prime\prime}$7 and 1.4~MHz, respectively. The velocity resolution is about 1.4~km~s$^{-1}$. The rms noise level is 4.2~mJy~beam$^{-1}$ for the emission line (averaged each 10~km s$^{-1}$) and 0.14~mJy~beam$^{-1}$ for the continuum emission. The maximum recoverable spatial scale is 6$.\!\!^{\prime\prime}$53. 
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=14cm]{fuentes4.png}
+\caption{ ALMA continuum emission at 1.2 mm toward the 19 ATLASGAL sources analyzed in this work, represented by colors and contours (at levels 0.001 Jy beam$^{-1}$ to 0.01 Jy beam$^{-1}$). The active cores (C\#) are indicated for each source. The maps are in Galactic coordinates. The beam of the continuum emission at 250~GHz is shown in the bottom right corner of each panel.}
+\label{Figura1}
+\end{figure*}
+
+\section{Results}
+
+Using data from the APEX Telescope Large Area Survey of the Galaxy (ATLASGAL; \citealt{atla}), we studied 19 sources representing condensations of cold dust (molecular clumps) of a few (between 2 to 10) parsecs in size. For each molecular clump, we analyze the 1.2~mm continuum emission to identify possible fragmentation. The typical size of these fragments (molecular cores) is on the order of the subparsec. 
+Figure\,\ref{Figura1} displays the continuum emission from the ALMA data toward each analyzed source. The spectrum of each core was inspected to detect the presence or not of CH$_3$CN emission, and in the case of a positive detection, we calculated the temperatures of the core.
+
+In Table\,\ref{datos}, we present the  main physical parameters of the studied ATLASGAL sources (Cols. 1 to 6). The systemic velocity (V$_\mathrm{LSR}$) of most of the sources were obtained from \citet{wienen2015},  while for those sources not studied in that work, the systemic velocity was estimated using the intense and ubiquitous transition J=5$-$4 of the methanol at 239.746~GHz. For these last sources, the kinematic distances were obtained using the Galactic rotation model of \citet{brand93} based on their estimated systemic velocities.
+
+The study of the possible fragmentation of each ATLASGAL clump in multiple molecular cores was carried out by analyzing the high resolution and sensitivity ALMA continuum  emission at 1.2~mm (see Fig.\,\ref{Figura1}). From a careful inspection of the spectrum toward each core, we determined the presence or not of methyl cyanide emission. For the purposes of this work, active cores (labeled as C\# in Fig.\,\ref{Figura1}) are defined as those that exhibit CH$_3$CN emission strong enough to allow us for a reliable estimation of the core temperature. Therefore, it is possible that a source is fragmented into several cores, but only some of them are active cores as defined here. If the clump is fragmented, the number of active cores within it is indicated in Cols.\,3 and 4 of Table\,\ref{datos}.
+ 
+
+\begin{table*}[tt]
+\caption{Main physical parameters of the sources}
+\label{datos}
+\tiny
+\centering
+\begin{tabular}{lccccccccc}
+\hline
+%\multicolumn{1}{c} 
+Source & Gal. Coord. &Frag. & Active Cores & V$_{\rm LSR}$ (km s$^{-1}$)     & Dist.(kpc)   &  \multicolumn{2}{c}{T$_\mathrm{rot}$(K)} & \multicolumn{2}{c}{$R$} \\ 
+       \cline{7-10}
+     &        &       &              &                  &        &  C1 & C2 &   C1 & C2   \\
+\hline
+G332a  & 332.987 $-$0.487 & no                  & 1                     & $-$55.2               & 3.7              & 177  & -      & 76.6$^\ddagger$ &  -   \\
+G332b  & 332.963 $-$0.680 & yes                 & 1                     & $-$48.4               & 3.3              & 489* & -      & 5.7            &  -   \\
+G017   & 017.638  0.156 & yes                 & 2                     & 22.5                & 2.2              & 124  & 67     & 8.6$^\dagger$  &  0.3 \\
+G023   & 023.389  0.185 & no                  & 1                     & 75.7                & 4.8              & 451* & -      & 3.1            & - \\
+G034   & 034.821  0.352 & yes                 & 1                     & 56.9                & 3.7              & 335  & -      & 5.5            & - \\
+G326   & 326.669  0.520 & yes                 & 1                     & $-$39.5               & 2.6              & 420* & -      & 9.3            & - \\
+G327   & 327.119  0.510 & no                  & 1                     & $-$82.9               & 5.2              & 423* & -      & 14.9           & - \\
+G338   & 338.919  0.549 & yes                 & 2                     & $-$64.0               & 4.4              & 752  & 139    &  9.7           & 1.0  \\
+SDC20a & 020.747 $-$0.092 & yes                 & 1                     & 59.0                & 4.5              & 86   & -      & 0.9            & - \\
+SDC20b & 020.775 $-$0.076 & yes                 & 2                     & 57.0                & 4.1              & 337  & 157    & 2.7            & 1.7  \\
+SDC24  & 024.462  0.219 & no                  & 1                     & 119.0               & 6.8              & 197  & -      &1.4             & -  \\
+SDC25  & 025.426 $-$0.175 & no                  & 1                     & $-$13.7               & 17.1             & 198  & -      &1.4             & -\\
+SDC28a & 028.147 $-$0.006 & yes                 & 1                     & 98.0                & 5.8              & 210  & -      &1.83            & -\\
+SDC28b & 028.227 $-$0.352 & no                  & 1                     & 84.2                & 5.1              & 353  & -      &18.3$^\dagger$  & -\\
+SDC29  & 029.844 $-$0.009 & yes                 & 1                     & 101.3               & 6.3              & 332  & -      &4.9             & -\\
+SDC33  & 033.107 $-$0.065 & yes                 & 2                     & 76.9                & 9.3              & 296  & 300    &4.6             &4.4 \\
+SDC42  & 042.401 $-$0.309 & no                  & 1                     & 65.0                & 4.8              & 292  & -      &1.7             & - \\
+G043a  & 043.186 $-$0.549 & yes                 & 2                     & 59.6                & 4.8              & 466  & 157    &1.2             &0.8 \\
+SDC45  & 045.787 $-$0.355 & no                  & 1                     & 58.4                & 7.1              &277   & -      &3.5             & - \\
+\hline
+\multicolumn{10}{l}{* In this preliminary study, cores that have a T$_\mathrm{rot}$ $>$ 350 K are not taken into account for the linear fitting (see Fig. \ref{Figura2}).}\\
+\multicolumn{10}{l}{$\dagger$ These cores have an unusually high value of $R$, so they are not taken into account for the linear fitting.}\\
+\multicolumn{10}{l}{$\ddagger$ Part of the spectrum of this core falls outside the spectral window, resulting in an off-scale $R$. This value is not used.}\\
+\end{tabular}
+\end{table*}
+
+\subsection{Rotational diagrams and rotational temperature.}
+
+The primary objective of this work is to conduct a statistical study of the CH$_3$CN molecule as a chemical thermometer for hot molecular cores. To achieve this, we first estimate the rotational temperature (T$_\mathrm{rot}$) of each active core using the CH$_3$CN emission through the rotational diagram method. Under the assumption of LTE conditions and that the lines are optically thin, with a beam filling factor equal to unity, we derive the T$_\mathrm{rot}$ for each core. This analysis is based on a derivation of the Boltzmann equation:\\
+
+\begin{equation}
+        {\rm ln}\left (\frac{N_u}{g_u}  \right ) = {\rm ln}\left ( \frac{N_\mathrm{tot}}{Q_\mathrm{rot}} \right )-\frac{E_u}{kT_\mathrm{rot}},
+\end{equation}
+
+\noindent where $N_u$ represents the molecular column density of the upper level of the transition, $g_u$ the total degeneracy of the upper level, $E_u$ the energy of the upper level, N$_\mathrm{tot}$ the total column density of the molecule, $Q_\mathrm{rot}$ the rotational partition function, and $k$ the Boltzmann constant.
+
+Following \citet{miao95}, for interferometric observations, the left-hand side of Eq. 1 can also be estimated by,\\
+
+\begin{equation}
+{\rm ln}\left (\frac{N_u^{obs}}{g_u}  \right ) = {\rm ln}\left ( \frac{2.04\times10^{20}\,W}{\theta_a \theta_b\,g_kg_l\nu_0^{3}\,S_{ul} \mu_0^{2} } \right ),
+\end{equation}
+
+
+\noindent where $N_u^{obs}$ (in $\mathrm{cm^{-2}}$) is the observed column density of the molecule under the conditions mentioned above, $\mathrm{\theta_a}$ and $\mathrm{\theta_b}$ (in arcsec) are the major and minor axes of the clean beam, respectively, $W$ (in Jy beam$^{-1}$ km s$^{-1}$) is the integrated intensity of each K-projection, $g_k$ is the K-ladder degeneracy, $g_l$ is the degeneracy due to the nuclear spin, $\nu_0$ (in GHz) is the rest frequency of the transition, $S_{ul}$ is the line strength of the transition, and $\mu_0$ (in Debye) is the permanent dipole moment of the molecule. The free parameters, ($N_\mathrm{tot}/Q_\mathrm{rot}$) and T$_\mathrm{rot}$ (see Table\,\ref{datos}) were determined by a linear fitting of Eq.\,1. The typical errors in T$_\mathrm{rot}$ are about 10\%.\\
+
+
+\subsection{Correlation between CH$_3$CN and CH$_3$CCH}
+
+Methyl Acetylene (CH$_3$CCH) is also a top-symmetric molecule that can serve as a good temperature indicator. CH$_3$CCH is probably produced in interstellar ices by radical combination and by successive hydrogenation of physisorbed C$_3$ \citep{kalenskii,hickson16, wong18}.
+
+However, as different authors pointed out (e.g., \citealt{tycho2021}), CH$_3$CN would trace more internal regions of the core, because this molecule requires  higher temperatures to be sublimated from the surface of the dust grains, while the emission of CH$_3$CCH is preferentially found mapping the coldest envelopes. Interestingly, the transitions of CH$_3$CN (J=13-12) and CH$_3$CCH (14-13), which exhibit a K-ladder form,  are very close in frequency in the ALMA Band 6 (see Fig. \ref{Figura2}), which allow us to simultaneously characterize both emissions in the context of our statistical study of chemical thermometers.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{espectro_v2.png}
+\caption{Example of a spectrum taken toward the molecular core C1 of the SDC24 source. The K projections (K-ladders) of the CH$_3$CN and CH$_3$CCH molecules are indicated with vertical red and green lines, respectively.}
+\label{Figura2}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Ajuste2.eps}
+\caption{ Linear fitting of the ratio I$_{\rm CH_3CN}$/I$_{\rm CH_3CCH}$ vs. T$_\mathrm{rot}$. The peak intensities of the K=2 projections of each molecule were used. Cores with T$_\mathrm{rot}$ $>$ 350 K or cores that presented atypically high values of R were not taken into account (outlier points). The linear fitting obtained is $R=0.016\, \mathrm{T_{rot}} - 1.1$}
+\label{Figura3}
+\end{figure}
+
+The possible correlation between the ratio of the peak intensities of CH$_{3}$CN and CH$_{3}$CCH ($R$=I$_{\rm CH_3CN}$/I$_{\rm CH_3CCH}$) and the temperature of the cores was studied. We used the K=2 projection for both molecules because it is an intense component not blended with others lines, and thus it can be used to reliably determine its peak intensity, in this way we limit the error of $R$ to 5\%.
+Figure\,\ref{Figura3} shows the linear fitting between $R$ and the rotational temperature of the cores. The fitting was carried out on cores with temperatures lower than 350 K. This cutoff is attributed to the high dispersion observed in the ratios above such a temperature, an issue that will be studied in a future work.
+% limit will be reviewed in the final work since there are several studies where higher temperatures are obtained using the rotational diagram method. {\bf Esto tenemos que discutirlo un toque}
+
+Some cores present an atypical behavior in $R$ and were not considered for the fitting. These atypical points (outlier points) will also be studied individually in a future work, seeking to determine their evolutionary stages and the reason for their discrepancy with the most common cases.
+
+Taking into account the limitations previously stated, we performed a linear fit on the data, obtaining a relationship of $R=0.016\, \mathrm{T_{rot}}-1.1$, with a $\rho^2$ (Pearson's correlation coefficient) around 0.7. Figure\,\ref{Figura3} shows a clear linear correlation between $R$ and the temperature of the cores, which suggests that the ratio $R$ could be useful,  under certain conditions, to estimate the temperature of a core in a simpler way than using the rotational diagram method.
+
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+
+\section{Summary}
+
+%\textcolor{red}{ACA NO PONDRIA UN SUMMARY, ES UN ARTICULO CORTO QUE NO REQUIERE HACER UN RESUMEN DE LO HECHO. SACARIA EL SUMMARY Y LOS DETALLES DE COMO SE HICIERON LAS COSAS. EN UN PAR DE ORACIONES DEJARIA DICHO LA UTILIDAD DE LO QUE SE HIZO Y LO QUE SE VA HACER.}
+
+
+We characterized 19 ATLASGAL sources/clumps using high resolution and sensitivity ALMA data in Band 6. The continuum emission at 1.2~mm revealed fragmentation in most of the clumps. We classified 24 molecular cores as active.
+
+We estimated the cores temperatures using the rotational diagram method applied to the emission of the CH$_3$CN. In addition, we built the ratio $R$=I$_{\rm CH_3CN}$/I$_{\rm CH_3CCH}$ (K=2) as a first exploration of the study of the CH$_3$CN  and CH$_3$CCH molecules as a chemical thermometer for the active cores. We found a linear correlation between the ratio $R$ and the rotational temperature of the cores in the range of temperatures going from 50 to 350~K. Active cores whose rotational temperature exceeds 350 K and those that present $R$ values that deviate from the behavior of the majority are not considered for the linear fitting. These cores were called `outlier points' and the interpretation of what is occurring with such cores will be studied in a future work. The open and important question that arises from this study is what are the underlying factors contributing to the observed linear correlation between $R$ and the rotational temperature, as well as its dependence on the evolutionary stage of the source, are yet to be determined.
+
+%In the future, it is expected to search for other relationships of CH$_3$CN with other spectral lines or other physical magnitudes that support its functioning as a thermometer.
+
+Finally, once we are able to determine the accuracy in the calculation of the temperature through these methods, we will estimate the active core masses in the context of the two main models of massive star formation.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{acknowledgement}
+We thank the anonymous referee for her/his useful comments pointing to improve our work.
+This work was partially supported by the Argentina grants PIP 2021 11220200100012 and PICT 2021-GRF-TII-00061 awarded by CONICET and ANPCYT.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

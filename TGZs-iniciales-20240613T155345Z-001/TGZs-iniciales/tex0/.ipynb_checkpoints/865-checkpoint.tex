@@ -1,0 +1,378 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Ansae in NGC 253}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Ansae in NGC 253}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+J.A. Camperi\inst{1},
+H. Dottori\inst{4},
+G. Günthardt\inst{1},
+R.J. Díaz\inst{1,3}
+\&
+M.P. Agüero\inst{1,2}
+}
+
+\authorrunning{Camperi et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{javier.camperi@unc.com.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina 
+\and
+Consejo Nacional de Investigaciones Cient{\'\i}ficas y T\'ecnicas, Argentina
+\and
+Gemini Observatory, NSF's NOIRLab, EE.UU.
+\and 
+Instituto de Física, Universidade Federal do Rio Grande do Sul, Brasil
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{A partir de im\'agenes infrarrojas obtenidas con el instrumento Flamingos-2 del telescopio Gemini Sur en las bandas J, H y K$_{s}$\textcolor{red}{,} presentamos la detecci\'on de estructuras diferenciadas en los extremos de la barra de NGC 253 (conocidas como ansae). Estructuras de este tipo se observan en aproximadamente el uno por ciento de las galaxias, y las ansae de NGC 253 son las m\'as cercanas detectadas a la fecha. Su cercan{\'\i}a, sumada a la alta resoluci\'on espacial de nuestras observaciones permiti\'o caracterizarlas por primera vez como estructuras espacialmente resueltas. Utilizamos diagramas color-color (CCD) y color-magnitud (CMD) de los c\'umulos de emisi\'on infrarroja de las ansae y los comparamos con los de diversos subsistemas de la galaxia (n\'ucleo, brazos, barra). Aplicamos modelos evolutivos para caracterizar y comparar las poblaciones de c\'umulos predominantes en los diferentes subsistemas gal\'acticos. Entre los diagramas color-color confeccionados se consider\'o uno que incluye el {\'\i}ndice de color Q$_{d}$ (asociado con la edad de los c\'umulos), por lo que se dispone de un indicador para cuantificar la proporci\'on de las poblaciones j\'ovenes en estos subsistemas. En las ansae de NGC 253 hay una notable separaci\'on de valores en el {\'\i}ndice Q$_{d}$ para la poblaci\'on noreste y la poblaci\'on  suroeste de c\'umulos y existe una mayor proporci\'on de fuentes brillantes en la ansae suroeste. En t\'erminos de colores y poblaci\'on, las ansae se diferencian de la barra y por tanto deben ser de ahora en m\'as consideradas como una componente adicional en la estructura de NGC 253.}
+
+\abstract{From infrared images obtained with the Flamingos-2 instrument of the Gemini South telescope in the J, H, and K$_{s}$ bands\textcolor{red}{,} we present the detection of differentiated structures at the ends of the NGC 253's bar (known as ansae). Structures of this type are observed in approximately one percent of galaxies, and the ansae of NGC 253 are the closest ones detected to date. Its proximity, added to the high spatial resolution of our observations, allowed us to characterize them for the first time as structures spatially resolved. We use color-color diagrams (CCD) and color-magnitude diagrams (CMD) of the infrared emission clusters of the ansae and we compare them with those of various subsystems of the galaxy (core, arms, bar). We apply evolutionary models to characterize and compare predominant cluster populations in the different galactic subsystems. Among the color-color diagrams constructed was one that included the color index Q$_{d}$, which is associated with the age of the clusters. This provides an age indicator to quantify the proportion of young clusters in these subsystems. In the ansae of NGC 253 there is a notable separation of values in the Q$_{d}$ index for the northeast population and the southwest population of clusters and there is a greater proportion of bright sources in the ansae southwest. In terms of colors and population, the ansae differ from the bar and therefore must be from now in more considered as an additional component in the structure of NGC 253.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{galaxies: starburst --- galaxies: spiral --- galaxies: photometry --- galaxies: structure --- galaxies: individual (NGC\,253)}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+The term ansae, in the context of the morphology of barred galaxies, makes reference to density enhancements at the ends of the bar (see the image of NGC 253 in Fig. 1), sometimes also referred to as ``condensations" in older works \citep{1965AJ.....70..501D}, or symmetric density knots. A more scientific definition could be ``a local maximum before the end of the bar along its main axis and absent on its minor axis" \citep{2007AJ....134.1863M}. It was first introduced, in the specific context of the study of starburst galaxies, by \citet{1995AJ....110.1588B}. A close visual inspection of atlas images of the 600 closest galaxies in the southern hemisphere, shows that only 6 have visible ansae, with an average distance of 23 Mpc. Only 14 \% of the barred galaxies have some type of ansae \citep{2007AJ....134.1863M}. The presence of these structures in NGC 253 (d = 3.94$\pm$0.37 Mpc, where 1$''$ $\sim$ 17 pc; \citealt{2003A&A...404...93K}) enhance our understanding by allowing detailed study of the constituent star clusters, which are resolved through high spatial resolution ground-based observations. However, the ansae were not detected and studied before due to the high inclination of the galaxy, which causes significant intrinsic obscuration in optical wavelengths.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig1.jpg}
+\caption{Pseudocolor JHK$_{s}$ Flamingos-2 (Gemini South telescope, program GS-F2-MOSCOM-2016B) image of NGC 253 with a non-linear display scale to enhance the brightest structural components in the near-infrared, depicting the ansae at the tips of the bar. The red tones indicate the most obscured regions (highest K$_{s}$/J ratio).}
+\label{Figura}
+\end{figure}
+
+\section{Ansae in NGC 253}
+
+Many efforts have been devoted to the study of nuclear and circumnuclear star formation in galaxies, mainly interested in studying the feeding mechanisms of the super-massive black hole \citep[e.g.][]{2014ApJ...780...86E,2016IJAA....6..219A,2016MNRAS.461.4192R}. 
+Since 2011 we have been studying the structure and dynamics of the central region of NGC\,253 in order to shed light on the feeding mechanisms of the starburst and its possible relationship with the existence of a super-massive black hole outside the center of symmetry of the galaxy \citep{2012BAAA...55..253C,2015BAAA...57...28C}.
+The presence of structures such as ansae, capable of modulating feeding mechanisms in several ways, cannot escape  our attention.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig2.png}
+\caption{Identification of luminous clusters in the northeast (blue, 192 sources) and southwest (purple, 249 sources) ansae in the residual K$_{s}$ band image.}
+\label{Figura}
+\end{figure}
+
+\section{Observations and data reduction}
+
+Direct images of NGC 253 with Flamingos-2 \citep{Eikenberry2008,2013BAAA...56..457D} have been obtained at Gemini South, in the J, H, and K$_{s}$ bands with an average spatial resolution of 0$\arcsec$.5. The images were reduced using THELI \citep{2013ApJS..209...21S}. Then we applied a standard mask procedure with the IRAF \footnote{IRAF is distributed by the National Optical Astronomy Observatories, which are operated by the Association of Universities for Research in Astronomy, Inc., under a cooperative agreement with the National Science Foundation.} package: the frames went through a process of filtering that consisted of the successive use of two IRAF subroutines (median and gauss) to produce highly smoothed frames taking into account the galaxy background. Then the smoothed frames were subtracted from the original ones to generate residues where the various infrared sources were much better evidenced. 
+
+To identify the clusters we used the SExtractor code \citep{1996A&AS..117..393B}, a neural network-based algorithm, widely used by the community during the last 25 years. SExtractor  made it possible to automatically detect the luminous sources on our infrared images and get their coordinates and photometry in a particularly simple and direct way (see Fig. 2). The photometric calibration and zero points were determined following the methodology outlined in \citet{2015AJ....150..139G}.
+
+\section{Color-magnitude diagrams}
+
+We have constructed a classic color-magnitude diagram (CMD) (J-K$_{s}$) vs. M$_{k}$ (see Fig. 3), and we compared our observational data with the theoretical isochrones of Padova \citep{2008A&A...482..883M} with the Initial Mass Function of Chabrier \citep{2003PASP..115..763C}, a metallicity Z $=$ 0.02, and running the simulation up to an age t $\sim$ 14.8$\times$10$^9$ yr (see Figs. 3 and 4). For control, we also used the Starburst 99 (SB99) code \citep{1999ApJS..123....3L}. In addition, we also constructed a reddening-free color-magnitude diagram using the Q$_{d}$ index \citep[]{1998A&A...336..433I,1992ApJ...393..611W} (see Fig. 4), following the approach outlined in \citet{2012A&A...542A..39G}. The Q$_{d}$ index characterizes reddening-corrected color under the assumption of well-mixed dust and stars, while another reddening-free index, Q$_{s}$, can be formulated under the assumption of dust screening the stars \citep{2005ApJ...619..931I}.
+We opted to analyze the distribution of clusters in the Q$_{d}$ vs. M$_{k}$ reddening-free diagram. This choice works well with the problem of extinction, as the majority of clusters that appeared scattered in the CMD are concentrated on the descending branch of the models in the Q$_{d}$ versus M$_{k}$ diagram (Fig. 4).
+
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig3.pdf}
+\caption{Color-magnitude diagram for the index (J-K$_{s}$) of the ansae northeast (NEA; red dots) and southwest (SWA; black dots). The Padova curves (Pdv) for different masses (10$^{6}$\textit{M$_{\odot}$} in blue, 10$^{5}$\textit{M$_{\odot}$} in green, and 10$^{4}$\textit{M$_{\odot}$} in pink), along with the SB99 curve (10$^{6}$\textit{M$_{\odot}$} in ochre) are displayed. The numbers next to the lines are the elapsed simulation times in millions of years. It is added in this diagram R-, which represents the deredening vector for this particular CMD.}
+\label{Figura}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig4.pdf}
+\caption{Color-magnitude diagram for the index Q$_{d}$ of the northeast (NEA; red dots) and southwest (SWA; black dots) ansae. Also shown for different masses are the Padova and SB99 curves (same symbology than in Fig. 3).}
+\label{Figura}
+\end{figure}
+
+\section{Color-color diagram}
+
+Figure 5 shows the (J-H) vs. (H-K$_{s}$) diagram. The figure also shows the dereddening vector for two extreme models: 1- dust well mixed with the stars (black arrow), as can be seen in \citet{1992ApJ...393..611W} and \citet{1998A&A...336..433I}; 2- a screen model of the dust (pink arrow), as can be seen in \citet{2005ApJ...619..931I}.
+
+It is worth mentioning that the Padova models do not take into account the ionized gas line emission, contrary to SB99 \citep{1999ApJS..123....3L}. This fact explains the differences between both models shown in Fig. 5.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig5.pdf}
+\caption{Color-color diagram of the ansae northeast (NEA; red dots) and southwest (SWA; black dots). The Padova and SB99 curves are displayed\textcolor{red}{,} as well as the dereddening vectors (dust model - black arrow - and screen model - pink arrow). Same symbology than in Fig. 3.}
+\label{Figura}
+\end{figure}
+
+\section{Analysis}
+
+We could detect the ansae of NGC 253 and its component clusters. This was achieved with the conjunction of an 8-meter class telescope (Gemini South Telescope) and a peripheric tool optimized for operating in the near infrared (Flamingos-2), with enough resolution. The use of standard masking techniques, plus neural-based algorithms, provided the quantitative results for comparing our data with evolutionary models. With this, we were capable of characterize the ansae as very young structures. 
+
+On the other hand, our data can be used for direct, simple statistical comparisons between the two ansae. From them, it is noticeable that there are statistical differences between the northeast and the southwest ansae. We can look at the histograms in the Fig. 6, Fig. 7 and Fig. 8. In Fig. 6 we see that the maximum number of clusters is found at m$_{Ks}$ = 18.10 ± 0.15 mag for the northeast ansae and m$_{Ks}$ = 17.9 ± 0.15 mag for the southwest. In the southwest structure, there are 9 sources brighter than m$_{Ks}$ = 16.5 ± 0.1 mag, whereas in the northeast, there is only one. This proportion is much larger than the statistical relationship between both samples.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig6.pdf}
+\caption{Histogram of the ansae's apparent magnitudes in the K$_{s}$ band. F2(NEAn) denotes the bars for the northeast ansae and F2(SWAn) denotes the bars for the southwest ansae.}
+\label{Figura}
+\end{figure}
+
+In Fig. 7 no differential reddening is observed on one side with respect to the other if we use the (J-K$_{s}$) color index. However, this index is susceptible to the effects of the presence of dust.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig7.pdf}
+\caption{Histogram of the ansae's (J-K$_{s}$) color index. The notations F2(NEAn) and F2(SWAn) have the same meaning as in Fig. 6.}
+\label{Figura}
+\end{figure}
+
+In the study conducted by \citet{2013A&A...553A..74S}, it is proposed that the age distribution of clusters up to 100 Myr can be classified into two categories: clusters older and younger than 7 Myr, based on whether Q$_{d}$ $<$ 0.1 or Q$_{d}$ $>$ 0.1 respectively. As shown in Fig. 8, by applying this criterion to our clusters, we observe that across all substructures, there is a higher proportion of young clusters in the southwest sector compared to the northeast.
+
+This research is part of a broader study covering the entirety of NGC 253. For detailed information on the nuclear and circumnuclear regions of NGC 253, we refer the reader to \citet{2022BAAA...63..232C}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1\columnwidth]{fig8.pdf}
+\caption{Histogram of the ansae's Q$_{d}$ color index. The notations F2(NEAn) and F2(SWAn) have the same meaning as in Fig. 6.}
+\label{Figura}
+\end{figure}
+
+\section{Summary}
+
+The utilization of CMD and CCD diagrams, coupled with the simple statistical data, has enabled us to delineate the northeast ans southwest ansae as distinct structures, representing separate populations. This characterization will serve as the focal point for future investigations.
+
+\begin{acknowledgement}
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+Based on observations obtained at the Gemini Observatory, which is operated by the Association of Universities for Research in Astronomy, Inc., under a cooperative agreement with the NSF on behalf of the Gemini partnership: the National Science Foundation (United States), the National Research Council (Canada), CONICYT (Chile), Ministerio de Ciencia, Tecnolog\'{i}a e Innovaci\'{o}n Productiva (Argentina), and Minist\'{e}rio da Ci\^{e}ncia, Tecnologia e Inova\c{c}\~{a}o (Brazil).
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

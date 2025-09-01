@@ -1,0 +1,248 @@
+\documentclass[
+	a4paper,
+  10pt,
+  twoside,
+  onesidepapers,
+  electronic,
+  binding=0mm,
+  papers=final,
+  paperselec=all,
+	linkcolor=blue,
+	colorheaders=black
+]{confproc}
+
+% > > > PACKAGES < < <
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+\usepackage{microtype}                                                          
+\usepackage{afterpage}
+\usepackage[titles]{tocloft}
+\usepackage{titletoc}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+%\usepackage[spanish, activeacute]{babel}
+\usepackage[pdftex,breaklinks,linktocpage]{hyperref}
+
+%\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{layout}
+
+%\usepackage{pdflscape}
+% > > > BAAA STYLE < < <
+%{{{
+
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{237mm}
+
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+
+\setlength{\marginparsep}{0pt}
+
+\setlength{\footskip}{47pt}
+\setlength{\hoffset}{0mm}
+\fancyfootoffset{0cm}
+
+\titleformat*{\section}{\bfseries}
+
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{}
+\makeatother
+
+% Definir section "invisible" para que aparezca en el indice
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+\newcommand\invisiblechapter[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \chaptermark{#1}}
+
+% Definir parámetros de la tabla de contenidos
+\newcommand{\secmark}{}
+\titlecontents{section}
+              [8pt]
+              {\normalsize\mdseries\protect\addvspace{5pt}}%
+              {}
+              {\small\mdseries\itshape}%
+              {\mdseries\titlerule*[0.8pc]{.}\contentspage}%
+
+\renewcommand{\backmattertocstyle}{%
+    \titlecontents{section}[]{}{}{}{}[]%
+    \titlecontents{part}%
+      [0pt]%
+      {\addvspace{2pc}}%
+      {\contentspage\hspace*{2.5em}\vspace*{-8mm}\contentsmargin{0pt}%
+       \bfseries\makebox[0pt][r]{\huge\contentspage\enspace}\large\bfseries}%
+      {\contentspage\hspace*{2.5em}\vspace*{-8mm}\contentsmargin{0pt}\large\bfseries}%
+      {}%
+      [\addvspace{.5pc}]%
+}% 
+
+%}}}                    
+\renewcommand{\proccfoot}{\color{black} \thepage}
+
+% CONFPROC SETTINGS
+%{{{
+\author{\procpdfauthor}
+\title{\procpdftitle}
+\date{\today}
+
+%%% > > > PAPERPATH < < <
+\renewcommand{\PAPERPATH}{../papers/}
+%}}}
+
+
+%%% > > > INDEX < < <
+\makeindex
+
+\hyphenation{a-que-llas bi-blio-te-ca co-lo-res de-sa-rro-lla-das des-cri-bir 
+de-ta-lla-da de-sa-rro-lla-do exa-mi-nar co-rres-pon-dien-te gra-dua-do 
+go-bier-nan flui-do for-ma-lis-mos me-ta-li-ci-da-des mo-de-los mo-der-nos 
+rea-li-za-do re-pre-sen-ta-ti-vi-dad si-mi-li-tu-des va-ria-bles}
+
+%%% > > > PROCEEDINGS < < <
+
+\begin{document}
+\frontmatter
+\pagenumbering{roman}
+\cfoot{\makebox[\textwidth][c]{\thepage}}
+\setcounter{page}{-2}
+
+%%% > > > PORTADA < < <
+\pdfbookmark[1]{Portada}{Portada}
+
+\includepdf[fitpaper=true,pages=1,link,offset=0mm 0cm]{../editor/Cover2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+%%% > > > PAGINAS DE PREAMBULO < < <
+\includepdf[link]{../editor/intro_hoja1_2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+\includepdf[link]{../editor/intro_hoja2_2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+\pagenumbering{roman}
+\setcounter{page}{7}
+\otherpagestyle
+
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\textwidth}{10pt}
+
+\section{Prefacio}
+\spacing{1.15}
+
+
+Este Bolet\'in de la Asociaci\'on Argentina de Astronom\'ia contiene un subconjunto  de los trabajos presentados durante la 65a Reuni\'on Anual de la Asociaci\'on Argentina de Astronom\'ia, celebrada en la ciudad de San Juan entre el 18 y el 22 de septiembre de 2023. Esta reuni\'on, organizada por la Facultad de Ciencias Exactas, F\'isicas y Naturales de la Universidad de San Juan, form\'o parte de las actividades conmemorativas del 50$^\circ$ aniversario de dicha instituci\'on.
+
+La reuni\'on convoc\'o a 250 investigadores y estudiantes. En la misma se presentaron 12 conferencias invitadas. A estas se sumaron las conferencias correspondientes al Premio José Luis Sérsic al investigador consolidado, otorgado a la Dra. Paula Benaglia, y al Premio Jorge Sahade a la trayectoria, otorgado al Dr. Diego García Lambas. Este Bolet\'in incluye ocho de estas valiosas contribuciones invitadas. Agradecemos especialmente a estos colegas el esfuerzo de enviar sus trabajos.  En la reuni\'on se presentaron, adem\'as, 198 trabajos en las modalidades oral (66) y mural (132). De ellos,  68 han sido incluidos en esta edici\'on tras un proceso de revisi\'on por pares y correcciones editoriales. Como es habitual, los trabajos se publican en castellano o en ingl\'es, seg\'un la elecci\'on de los autores, con un m\'aximo de ocho p\'aginas para las contribuciones invitadas y cuatro para las dem\'as presentaciones. Agradecemos a todos los autores que han enriquecido este Bolet\'in con sus aportes.
+
+Queremos  expresar nuestro agradecimiento a los colegas de nuestro pa\'is y del exterior que participaron en el proceso de arbitraje. Su labor desinteresada ha sido clave para elevar la calidad cient\'ifica de los art\'iculos.
+
+Este Bolet\'in es el primero que se publica estando a cargo de un grupo editorial compuesto  por una Editora en Jefe y cinco Editores Asociados. Esta nueva modalidad ha resultado en una significativa reducci\'on del tiempo de procesamiento de cada art\'iculo.
+
+Finalmente, extendemos nuestro agradecimiento al Dr. Ren\'e D. Rohrmann y al Dr. Mario A. Sgr\'o, Editor en Jefe y T\'ecnico Editorial de los Boletines 63$^\circ$ y 64$^\circ$, respectivamente, por su gu\'ia, as\'i como a la Srta. Laura Alves y al Dr. Roberto C. Gamen por su invaluable colaboraci\'on en la producci\'on de este Bolet\'in.
+
+\vskip 1.2cm
+Argentina, 21 de agosto de 2024.
+
+\vskip 1.5cm
+\noindent
+\begin{center}
+\begin{tabular}{cp{5cm}c}
+ {\it Cristina H. Mandrini} & & {\it Hernan Muriel}\\
+ Editora en Jefe & & Editor Invitado\\
+ & &\\
+Editores Asociados: & {\it Andrea P. Buccino} & \\
+& {\it Gabriela M. Castelletti} & \\
+& {\it Sof\'ia A. Cora} & \\
+& {\it H\'ector J. Mart\'inez} & \\
+& {\it Mariela C. Vieytes} & \\
+
+ & &\\
+ 
+ {\it Claudia Evelina Boeris} & & {\it Mariano Poisson}\\
+ Secretaria Editorial & &  T\'ecnico Editorial
+\end{tabular}
+\end{center}
+
+
+
+
+\setlength{\textwidth}{170mm}
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+
+\newpage \pagenumbering{gobble} \phantom{.} \newpage
+
+\pagenumbering{roman}
+\setcounter{page}{9}
+\otherpagestyle
+
+% FOTO GRUPAL
+{{{
+\invisiblesection{Foto Grupal}
+\includepdf[fitpaper=true,pages=1,link,offset=0cm 0cm]{../editor/FotoGrupal2023.pdf}
+}}}
+\newpage
+\thispagestyle{empty}
+
+%%%%\newpage \pagenumbering{gobble} \phantom{.} \newpage
+%%%%
+%%%%\pagenumbering{roman}
+%%%%\setcounter{page}{11}
+%%%%\otherpagestyle
+%%%%
+%%%%{{{
+%%%%\invisiblesection{Ganadores concurso de astrofotografía 2021}
+%%%%\includepdf[fitpaper=true,pages=1,link,offset=0cm 0cm]{../editor/AstroFoto2021_a4.pdf}
+%%%%}}}
+%%%%\newpage
+%%%%\thispagestyle{empty}
+
+\titleformat*{\section}{\Large}
+\otherpagestyle
+\input{\PAPERPATH expapersswitch}
+
+%%% > > > TOC < < <
+\tableofcontents
+%\newpage \pagenumbering{gobble} \phantom{.} \newpage
+\cleardoublepage
+\otherpagestyle
+
+%%% > > > PAPERS < < <
+\mainmatter
+\markboth{}{}
+\pagestyle{myheadings}
+\cfoot{\makebox[\textwidth][c]{ \thepage }}
+\setcounter{page}{1}
+
+\input{\PAPERPATH sessions}
+
+%%% > > > BACKMATTER < < <
+\otherpagestyle
+\cleardoublepage
+\setlength{\footskip}{38pt}
+\backmatter                  
+\backmattertocstyle
+\session{\'Indice alfab\'etico de autores}
+\printindex                 
+
+\end{document}

@@ -1,0 +1,387 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+%\usepackage[spanish]{babel}
+%\usepackage[utf8]{inputenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{21 June 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Espectroscopía integrada de candidatos a cúmulos globulares ubicados hacia el centro de la Via Láctea
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Espectroscopía integrada de cúmulos globulares}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{A.A. Massara\inst{1}, D.M. Illesca\inst{1,2} \& A.E. Piatti\inst{1,2}
+}
+
+\authorrunning{Massara et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{amassara@est.fcen.uncu.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Exactas y Naturales, UNCuyo, Argentina
+\and
+Instituto Interdisciplinario de Ciencias Básicas, CONICET--UNCuyo, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El conocimiento de la población de los cúmulos globulares de la región central 
+de la Vía Láctea es de vital importancia para reconstruir la historia de formación de la misma. Recientemente, varios candidatos a cúmulos globulares han sido identificados en el bulbo galáctico, lo cual ha motivado su estudio más detallado. En este trabajo presentamos resultados obtenidos del
+análisis de uno de estos candidatos, Minni 22, a partir de espectroscopía integrada.  Hasta donde conocemos, es la primera vez que se aplica esta técnica al estudio de candidatos a cúmulos globulares del bulbo de nuestra galaxia. Los espectros integrados obtenidos permitieron determinar propiedades astrofísicas fundamentales, tales como edad, enrojecimiento y metalicidad. A partir de los valores obtenidos obtenemos conclusiones acerca de la realidad fisica de Minni 22 como cúmulo globular genuino. 
+}
+
+\abstract{The knowledge of the population of globular clusters of the central region of the Milky Way is of vital importance to rebuild the history of its formation. Recently, many globular cluster candidates have been identified in the galactic bulge, which has motivated more detailed stuydies. In this work we present results obtained from the analysis of one of these candidates, Minni 22, based on integrated spectroscopy. As far as we as aware, this is the first time this technique is applied to the study of globular cluster candidates in the bulge of our Galaxy. The integrated spectra obtained allowed us determining fundamental astrophysical properties, such as age, reddening and metallicity. From the obtained values we conclude about the physical reality of the studied object as a genuine globular cluster. }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{Galaxy: bulge --- globular clusters: general --- techniques: spectroscopic
+}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}\label{S_intro}
+
+ El estudio de los cúmulos globulares galácticos nos proporciona información sobre los procesos de formación de la Vía Láctea y de su interacción pasada con otras galaxias. Los cúmulos globulares galácticos se formaron en las etapas más tempranas de la Vía Láctea, y por ello constituyen los fósiles más valiosos para reconstruir su formación y evolución.
+
+El conocimiento de la población real de cúmulos globulares galácticos ha sido y sigue siendo uno de los aspectos más importantes en la reconstrucción del proceso de formación de nuestra galaxia. Por ejemplo, dependiendo de la población real de cúmulos globulares, de su distribución espacial, de sus edades y composición química, diferentes modelos de formación y evolución de la Vía Láctea se han propuesto (\citealt{prantzos-1998}, \citealt{gilmore-1999}, \citealt{jang-2015}, \citealt{keller-2020}). Actualmente, existe un consenso general de que la Vía Láctea se formó a partir de un colapso gradual, en el cual estuvo presente la acreción de galaxias enanas \citep{kruijssen-2019}. Sin embargo, quedan muchos interrogantes acerca del origen del bulbo galáctico (región central de unos 3 kpc de radio), a saber: si este se originó a través de la inestabilidad del disco galáctico, o por la acreción de galaxias enanas, o a partir de un colapso jerárquico, entre otros (\cite{debattista-2019}, \cite{lian-2021}).
+
+Durante varias décadas, los astrónomos han invertido mucho tiempo y esfuerzo en la identificación de cúmulos globulares galácticos. Actualmente, existen casi 200 cúmulos globulares identificados cuyas propiedades astrofísicas fundamentales se conocen relativamente bien \citep{baumgardt-2019}. Sin embargo, aún no se conoce la población total de cúmulos globulares en nuestra galaxia. De acuerdo a los más recientes censos de la población de cúmulos globulares de la Vía Láctea, la dirección hacia el centro de la galaxia es la más afectada por incompletitud, debido a la severa absorción que experimenta la luz en esa dirección \citep{harris-1996}. Por ese motivo, más recientemente, varios relevamientos observacionales han identificado nuevos candidatos a cúmulos globulares en la región del bulbo de la galaxia utilizando técnicas observacionales infrarrojas (\cite{froebrich-2008}, \cite{minniti-2017}, \cite{camargo-2018}).
+
+Debido a la fuerte absorción interestelar y a la marcada contaminación de estrellas del campo en dirección hacia el centro de nuestra galaxia, los nuevos candidatos a cúmulos globulares aparecen en el cielo como diminutas concentraciones de estrellas, similares a las fluctuaciones de la densidad estellar observada en esa región. Por ese motivo, es de fundamental importancia confirmar en primer lugar la realidad física de dichos candidatos como cúmulos globulares genuinos y, en el caso de aquellos que puedan ser confirmados como tales, determinar sus propiedades astrofísicas fundamentales.
+
+ Recientemente, varios candidatos a cúmulos globulares han sido identificados en el bulbo galáctico utilizando datos infrarrojos del relevamiento VVV \citep{minniti-2017}. En este trabajo nos proponemos realizar un análisis de las propiedades astrofísicas fundamentales (edad, enrojecimiento y metalicidad) de uno de estos candidatos, Minni 22, a partir de espectroscopía integrada. Hasta donde tenemos conocimiento, es la primera vez que se aplica esta técnica al estudio de candidatos a cúmulos globulares del bulbo de nuestra galaxia.
+
+En la Sección 2 describimos las observaciones espectroscópicas realizadas. La Sección 3 presenta el procedimiento seguido para determinar las propriedades astrofísicas (edad, enrojecimiento, metalicidad) a partir del uso de espectros patrones; los resultados obtenidos y su comparación a la luz de los estudios previos sobre la realidad física de Minni 22. Por último, la Sección 4 resume las conclusiones finales.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{Figura1.png}
+\caption{Imagen VVV $JYZ$ combinada centrada en Minni 22. El campo es 2' x 2'. El Norte está hacia arriba y el Este hacia la izquierda. Imagen obtenida de SIMBAD.}
+\label{Figura1}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{Figura2.png}
+\caption{Espectro integrado de NGC 6642, obtenido con espectrógrafo REOSC de CASLEO.}
+\label{Figura2}
+\end{figure}
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{Figura3.png}
+\caption{Espectro integrado de Minni 22, obtenido con espectrógrafo REOSC de CASLEO.}
+\label{Figura3}
+\end{figure}
+
+
+\section{Observaciones}
+
+Minni 22 está localizado en dirección hacia el centro de la Vía Láctea ($\mathrm{R.A.}= 17:48:51.4, \mathrm{Dec.}= -33:03:40, J2000$) \citep{minniti-2018}. La Fig.~\ref{Figura1} muestra una imágen de la region de interés. Como puede apreciarse, predomina la presencia de una gran cantidad de estrellas de campo.
+
+Las observaciones espectroscópicas las realizamos en el Complejo Astronómico “El Leoncito” (CASLEO, San Juan) utilizando el telescopio ''Jorge Sahade'' y el espectrógrafo REOSC, en modo de dispersión simple. Empleamos la ranura de mayor tamaño (ancho de ranura=4.2'' y largo de ranura=4.7’), una red de 300l/mm y el filtro GG495. Debido a la importante absorción interestelar en dirección hacia el centro de la galaxia, decidimos obtener espectros en el rango 5800-9200\r{A}. Obtuvimos 6 integraciones de 900 segundos cada una, seguidas de la obtención de lámparas de comparación de CuNeAr. Para control de la metodología de análisis y como patrón de referencia observamos el cúmulo globular NGC 6642, obteniendo también 6 integraciones de 900 segundos cada una, y de sus respectivas lámparas de comparación. Durante cada integración barrimos la ranura en declinación, procurando que la misma fuera iluminada por toda la extensión del objeto aproximadamente de modo uniforme. También obtuvimos espectros de las estrellas estándares HD 160233 y LTT 7379 (tiempo de integración de 300 segundos) para calibraciones de flujo.
+
+Los espectros fueron procesados con {\sc IRAF} \footnote{Image Reduction and Analysis Facility.} del modo habitual en el Instituto Interdisciplinario de Ciencias Básicas (ICB, CONICET-UNCuyo). Primeramente corrigiendo los mismos por bias y flat promediados, luego extrajimos los espectros propiamente de las imágenes bidimensionales, y finalmente los calibramos en longitud de onda a partir de los espectros de las lámparas de comparación de CuNeAr, y en flujo, empleando los espectros observados de las estrellas estándares. A partir de los espectros de lámparas de comparación obtuvimos una dispersión de 3.36 \AA/px y una resolución de 17\AA. La Figura ~\ref{Figura2} muestra el espectro obtenido de NGC 6642, mientras que la Figura ~\ref{Figura3} muestra el espectro de Minni22. La S/N típica obtenida es de 30.
+
+\section{Análisis y resultados}
+
+La metodología seguida para desentrañar si Minni 22 es un cúmulo globular genuino, consiste en comparar su espectro integrado con una librería de espectros patrones de cúmulos globulares. En este trabajo empleamos el catálogo de espectros integrados de \cite{bica-1987}, el cual contiene espectros patrones
+que cubren todo el rango de metalicidades conocidas de cúmulos globulares del bulbo galáctico. Particularmente, seleccionamos los espectros patrones que corresponden a las edades de los cúmulos globulares. La Figura ~\ref{Figura4} muestra cinco espectros patrones de dicho catálogo, con metalicidades [Fe/H] $= -2.0, -1.5, -1.0, -0.5, 0.0 ~\mathrm{dex}$, respectivamente. Estas metalicidades corresponden a los espectros patrones utilizados. Hasta donde tenemos conocimiento, esta técnica no ha sido utilizada previamente para el estudio de cúmulos globulares del bulbo de la galaxia, por ello observamos también NGC 6642, un cúmulo globular del bulbo galáctico muy bien conocido.
+
+NGC 6642 es un cúmulo globular del bulbo de la Vía Láctea que tiene una metalicidad de [Fe/H]$=-1.1~\mathrm{dex}$ (\cite{harris-2010}, \cite{geisler2023}). Corregimos por enrojecimiento el espectro obtenido  $E(B-V)=0.4~\mathrm{mag}$ \citep{harris-2010} y lo comparamos con el espectro patrón correspondiente ([Fe/H] $=-1.0~\mathrm{dex}$). La Figura  ~\ref{Figura5} ilustra el resultado de dicha comparación. Como se observa, el acuerdo es satisfactorio.
+
+A continuación comparamos el espectro de Minni 22 con cada uno de los espectros patrones, para obtener enrojecimiento $(E(B-V))$ y metalicidad ([Fe/H]), simultáneamente. Para ello, empleamos una grilla de valores de $(E(B-V))$ desde $0.0~\mathrm{mag}$ hasta $2.0~\mathrm{mag}$ , en intervalos de $0.5~\mathrm{mag}$ ; corregimos el espectro observado de Minni 22 por cada uno de estos valores, y comparamos todos los espectros corregidos por enrojecimiento obtenido con cada uno de los cinco espectros patrones de la Figura ~\ref{Figura4}. El rango de valores de $(E(B-V))$ abarca aquel conocido hacia el centro de la Vía Láctea.
+
+Encontramos que ninguno de los espectros de Minni 22 corregidos con diferentes valores de enrojecimiento entre $E(B-V)=0.0$ y $2.0~\mathrm{mag}$ $(E(B-V)=1.386$, NED) se asemejan a alguno de los espectros patrones de los cúmulos globulares. Para ilustrar esto, la Figura~\ref{Figura6} muestra el espectro de Minni 22 corregido por enrojecimiento  ($E(B-V)=0.5~\mathrm{mag}$) que más se asemeja a alguno de los espectros patrón utilizados ([Fe/H] $=0.0~\mathrm{dex}$). Como se observa, hay una cierta similitud en la pendiente global de los espectros, pero también se observan diferencias importantes en la presencia de líneas y bandas moleculares (ejemplo, TiO, Ca {\sc ii}, etc). De esta comparación concluimos que el espectro integrado de Minni 22 no presenta las características de un cúmulo globular del bulbo galáctico. Por el contrario, su
+espectro integrado se asemeja a aquél resultante de la superposición de los espectros de estrellas del campo distribuídas a lo largo de la visual.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{Figura4.png}
+\caption{Espectros integrados patrones del catálogo de Bica y Alloin (1986).}
+\label{Figura4}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{Figura5.png}
+\caption{Espectro integrado de cúmulo globular NGC6642 en comparación con el espectro patrón de la metalicidad correspondiente. Ambos obtenidos con espectrógrafo REOSC de CASLEO.}
+\label{Figura5}
+\end{figure}
+
+
+\cite{minniti-2018} mostraron que Minni 22 es un cúmulo globular a partir de datos del relevamiento VVV, una base de datos de fotometría infrarrojo que abarca el bulbo galáctico y buena parte del disco interior de la Galaxia \citep{VVV}.
+De los datos VVV, ellos identificaron estrellas RR Lyrae. También utilizaron movimientos propios obtenidos a partir de los mismos datos VVV. El mejor ajuste del diagrama color-magnitud en la región de Minni 22 corresponde para una isócrona teórica con una metalicidad [Fe/H] $=-1.3~\mathrm{dex}$. Sin embargo, \cite{minniti-2019} reexaminaron la región de Minni 22 a partir de la aplicación de  un algoritmo que reconoce sobredensidades en un espacio de cinco dimensiones, a saber: R.A., Dec, movimientos propios en R.A. y Dec. y color.
+\cite{minniti-2019} aplicaron dicha metodología a datos del catálogo Gaia DR2 \citep{gaia-2016} y \citep{gaia-2018} de una región del cielo dentro de $-10^o \leq (l, b) \leq 10^o$, y a datos del catálogo VVV que incluye fotometría PSF y movimientos propios para estrellas dentro de $|b|< 3^o$ , donde Gaia DR2 está incompleto  debido a la gran extinción interestelar \cite{minniti-2019}. Del análisis realizado, \cite{minniti-2019}
+descartaron la naturaleza física como cúmulo globular de 93 candidatos identificados previamente \cite{minniti-2017}, dentro de los cuales se encuentra Minni 22.
+Concretamente, basándose en el requisito de que los miembros de un cúmulo deben moverse coherentemente, \cite{minniti-2019} descartaron a Minni 22 como un cúmulo globular genuino. 
+
+Los resultados obtenidos no muestran relación con los valores de \cite{minniti-2018} para ninguno de los patrones examinados. La metalicidad obtenida en este trabajo para Minni 22 difiere significativamente del valor derivado por \cite{minniti-2018}, lo cual consideramos como evidencia de que Minni 22 podría no ser un cúmulo globular. Hacemos notar que la escala de metalicidades del presente trabajo está en muy buen acuerdo con la escala  de metalicidades de los cúmulos globulares (ver arriba análisis de NGC 6642). Por otro lado, el enrojecimiento obtenido aquí para Minni 22 difiere también significativamente del valor derivado por \cite{minniti-2018}, lo cual constituye un segundo elemento a favor de que se trataría de un conjunto de estrellas del campo proyectadas en la línea de la visual. Nuestros resultados, sin embargo, concuerdan con los encontrados por \cite{minniti-2019}.
+
+
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{Figura6.png}
+\caption{Espectro integrado corregido de Minni 22 con enrojecimiento de $E(B-V)=0.5$ comparado con espectro de metalicidad [Fe/H] $=0.0$.}
+\label{Figura6}
+\end{figure}
+
+
+\section{Conclusiones}
+
+El presente análisis es parte de un programa de investigación en el cual buscamos estudiar los espectros integrados de una decena de candidatos a cúmulos globulares de la Vía Láctea. 
+En este trabajo presentamos un estudio sobre las propiedades astrofísicas del candidato a cúmulo globular de la Vía Láctea, Minni 22. Utilizando el telescopio ''Jorge Sahade'' y el espectrógrafo REOSC del CASLEO, en modo dispersión simple, obtuvimos el espectro integrado de Minni 22 y de un cúmulo globular bien conocido (NGC 6642). 
+Calibramos los espectros en longitud de onda y flujo, y mediante el método de comparación con espectros de referencia estimamos sus enrojecimientos y metalicidades.   Para NGC 6642 estimamos una metalicidad en muy buen acuerdo con los valores de la literatura. Este resultado sirvió de prueba de validación de la metodología de análisis, la cual hasta donde tenemos conocimiento, fue aplicada por primera vez a cadidatos a cúmulos globulares del bulbo galáctico.
+El enrojecimiento y metalicidad obtenidos para Minni 22 distan notablemente de los valores derivados por \cite{minniti-2018}, quienes catalogaron a Minni 22 como candidato a cúmulo globular. Además de las diferencias en la curvatura del espectro observado de Minni 22 con la de espectros patrones de cúmulos globulares, también observamos diferencias en la intensidad de varias líneas y bandas moleculares. Nuestros resultados favorecen las conclusiones de \cite{minniti-2019} quienes
+descartaron a Minni 22 como cúmulo globular genuino.
+
+
+
+
+\begin{acknowledgement}
+Basado en datos obtenidos en el Complejo Astronómico El Leoncito, operado bajo convenio entre el Consejo Nacional de Investigaciones Científicas y Técnicas de la República Argentina y las Universidades Nacionales de La Plata, Córdoba y San Juan. Observación ralizada los días 26 y 27 de julio del 2022.
+Este trabajo se realizó con fondos del proyecto PICT 2020-SERIEA-01914. AAM y DMI agradecen la hospitalidad del personal del Complejo Astronómico El Leoncito (CASLEO).
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+
+\bibliographystyle{baaa}
+
+
+\small
+
+\bibliography{bibliografia}
+
+
+
+
+
+
+\end{document}

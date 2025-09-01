@@ -1,0 +1,331 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Poblaciones y agrupaciones estelares \\
+       en las Nubes de Magallanes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Poblaciones y agrupaciones en las MCs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{G. Baume\inst{1,2}, C. Parisi\inst{3,4}, C. Feinstein\inst{1,2} \& B. De Bórtoli\inst{1,2}
+}
+
+\authorrunning{Baume et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{gbaume@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astronómicas y Geofísicas, UNLP, Argentina
+\and
+Instituto de Astrofísica de La Plata, CONICET-UNLP, Argentina
+\and
+Observatorio Astronómico, UNC, Argentina
+\and
+Instituto de Astronomía Teórica y Experimental, CONICET-UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Se ha realizado la separación de diferentes poblaciones estelares en las Nubes de Magallanes junto con una identificación de agrupaciones estelares. El estudio se ha basado en datos provistos por los relevamientos Gaia~DR3 y S-Plus~DR4. En una primer etapa, se han correlacionado los datos Gaia y S-Plus, y se han utilizado criterios astrométricos para separar la población estelar de las Nubes de Magallanes de la contaminación producida principalmente por la población estelar de la Vía Láctea. La fotometría multi-banda que proveen tanto los datos S-Plus como los datos Gaia ha permitido construir diagramas color-color y color-magnitud. Mediante el uso de estos diagramas se ha logrado discriminar las poblaciones estelares de cada galaxia que comparten una misma fase evolutiva. Finalmente, se ha realizado la identificación de agrupaciones estelares basadas en la distribución espacial de las poblaciones estelares más relevantes. En este último procedimiento se han aplicado algorítmos de aprendizaje automático no supervisado.
+}
+
+\abstract{The separation of different stellar populations and the identification of stellar clusters in the Magellanic Clouds was carried out. The study was based on data provided by the Gaia~DR3 and S-Plus DR4 surveys. In the first stage, the Gaia and S-Plus data were correlated, and astrometric criteria were used to separate the stellar population of the Magellanic Clouds from the contamination produced mainly by the stellar population of the Milky Way. The multi-band photometry provided by the S-Plus and Gaia data allowed the construction of color-color and color-magnitude diagrams. By using these diagrams, it was possible to discriminate the stellar populations in each galaxy that share the same evolutionary phase. Finally, the identification of stellar clusters was carried out, driven by the spatial distribution of the most relevant stellar populations. In this last procedure, unsupervised machine learning algorithms have been applied.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{Magellanic Clouds --- galaxies: star clusters: general --- galaxies: structure}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}
+\label{sec:intro}
+Las agrupaciones estelares se caracterizan por ser grupos de estrellas que pertenecen una misma región del espacio y comparten una historia común (\citealt{Piecka_Paunzen2021, Baume2022}). Ellas involucran las asociaciones estelares, los cúmulos abiertos y los cúmulos globulares. Dado que los parámetros fundamentales de estas agrupaciones se pueden estimar de una forma más confiable y precisa que para el caso de estrellas individuales, las agrupacioes estelares permiten dilucidar más claramente la historia y la distribución espacial de las diferentes poblaciones estelares que constituyen la galaxia anfitriona.  Una primer etapa para realizar estos estudios consiste en la identificación de las agrupaciones estelares de una galaxia.
+
+En particular, numerosos trabajos han utilizado a las agrupaciones estelares para el estudio de las Nubes de Magallanes (MCs por su nombre en inglés). En este sentido, se pueden mencionar los catálogos de \cite{Bica2008, Bica2020} y de \cite{Nayak2016}, el análisis de observaciones del Telescopio Espacial Hubble realizado por \cite{Milone2023}, o la serie de trabajos basados en los datos del relevamiento fotométrico VISCACHA (p.e. \citealt{Maia2019, Rodriguez2023, Parisi2024}). En varios de estos trabajos, se han empleado diferentes técnicas para catalogar las agrupaciones estelares y obtener sus parámetros básicos. Además, estudios recientes han llevado a cabo búsquedas sistemáticas utilizando métodos automáticos (ver \citealt{Strantzalis2024}). No obstante, estos procedimientos se han realizado usualmente sobre regiones acotadas de las MCs.
+
+Por otro lado, actualmente existe un acceso relativamente sencillo a diferentes herramientas de aprendizaje automático, mientras que es usual disponer de bases de datos producidas por importantes relevamientos celestes que proveen información homogénea de alta calidad. Estas condiciones permiten llevar a cabo estudios sistemáticos sobre regiones muy extensas de la esfera celeste. 
+
+En el presente análisis se focaliza la atención sobre un conjunto de datos de diferentes relevamientos celestes que cubren de forma completa el campo de ambas MCs.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[trim=40 30 40 90,width=0.8\textwidth]{mc_chart.png}
+\caption{Imagen basada en el relevamiento DSS2 de Aladin cubriendo la región de las dos MCs. Los 150 campos del relevamiento S-Plus ($1.4^{\circ} \times 1.4^{\circ}$) se hallan indicados por los cuadrados azules. Los círculos verdes indican las regiones centradas en cada una de las galaxias y adoptadas para la selección de los datos Gaia.}
+\label{fig:MCchart}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[trim=0 0 0 0,width=\textwidth]{lmc_splus_phot_sg_hdbscan.png} \\
+\includegraphics[trim=-15 0 15 0,width=\textwidth]{lmc_sg_stat_hdbscan.png}
+\caption{Diagramas de las agrupaciones estelares identificadas en la Nube Mayor de Magallanes. Los paneles de la primer fila presentan las cartas buscadoras de las estrellas consideradas miembros de las agrupaciones estelares. Los paneles de la segunda, tercer y cuarta filas corresponden a los diagramas fotométricos. Los paneles de las últimas tres filas indican la cantidad de agrupaciones, sus distribuciones de tamaños y de sobredensidades. Cada columna corresponde a una clasificación diferente. Se presentan también los tamaños medios ($r_m$) y sobredensidades medias ($\Delta \rho_m$) de cada caso.}
+\label{fig:LMCsg}
+\end{figure*}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[trim=0 0 0 0,width=\textwidth]{smc_splus_phot_sg_hdbscan.png} \\
+%\vspace{5mm}
+\includegraphics[trim=-15 0 15 0,width=\textwidth]{smc_sg_stat_hdbscan.png}
+\caption{Diagramas de las agrupaciones estelares identificadas en la Nube Menor de Magallanes. El significado de los paneles es análogo a los de la Fig.~\ref{fig:LMCsg}.}
+\label{fig:SMCsg}
+\end{figure*}
+
+\section{Datos}
+
+En el presente trabajo se utilizan los datos fotométricos y astrométricos del relevamiento Gaia~DR3\footnote{\url{https://www.cosmos.esa.int/web/gaia/}} \citep{GaiaDR3_2023} junto con los datos fotométricos del relevamiento S-Plus~DR4\footnote{\url{https://splus.cloud/}} (\citealt{SPlus_2019, Herpich2024}). 
+
+Los datos de los relevamientos Gaia proveen posiciones, magnitudes / colores ($G$, $G_{BP}$, $G_{RP}$), movimientos propios y paralajes. Estos datos fueron seleccionados para dos zonas circulares que incluyen a cada una de las MCs y sus entornos (ver Fig.~\ref{fig:MCchart}). Por otro lado, los datos del relevamiento S-Plus~DR4 brindan fotometría PSF en 12 bandas, basadas en el sistema $ugriz$ y en siete filtros de banda angosta. Este relevamiento cubre un área de $~\sim$3000 grados cuadrados involucrando varias zonas del cielo austral e incluyendo completamente la región de las MCs (ver Fig.~\ref{fig:MCchart}). En nuestro estudio, seleccionamos los datos astrométricos y fotométricos de la región de las MCs correspondientes a las bandas $ugri$.
+
+\section{Metodología}
+
+Dado que el relevamietno S-Plus~DR4 cubre las MCs con 150 campos, se construyó un único cátalogo a partir de los catálogos individuales de cada campo. Posteriormente, se correlacionaron dichos datos con aquellos de Gaia y se utilizaron los criterios de selección indicados por \cite{GaiaCollaboration2021}. Estos criterios permiten emplear los parámetros astrométricos de Gaia para eliminar la contaminación, producida principalmente por estrellas de la Vía Láctea.
+
+A continuación, se utilizaron los diagramas fotométricos obtenidos a partir de los datos Gaia y los datos S-Plus, junto con los criterios indicados por \cite{GaiaCollaboration2021} para llevar a cabo la separación de las poblaciones estelares en cada galaxia. Dicha separación fue refinada utilizando la fotometría $ugri$. Cada población obtenida se corresponde con diferentes fases evolutivas y vinculadas con rangos de edades aproximadamente acotados (ver \citealt{GaiaCollaboration2021}).
+
+Posteriormente, se utilizó HDBSCAN \citep{McInnes2017} para identificar sobre-densidades sobre cada una de las poblaciones estelares definidas en la etapa anterior y se seleccionaron aquellas sobre-densidades de menor tamaño (radio $<$ 3'). Se construyeron entonces las agrupaciones estelares como una combinación de las estrellas correspondientes a las sobre-densidades resultantes del paso anterior, unificándo aquellas que se encontraban cerca espacialmente ($<$ 1’). Este procedimiento permitió clasificar a las agrupaciones en las categorías denominadas como $Y1.0$, $Y1.1$, $Y1.2$, $Y2.0$, $Y2.1$, $Y2.2$, $Y3.0$, $Y3.1$ e $Y3.2$, las cuales siguen aproximadamente un orden evolutivo. Luego, para minimizar la presencia de agrupaciones espúreas, se seleccionaron aquellas agrupaciones cuyas densidades estelares centrales (``$\rho_C$") eran relevantes respecto a la densidad estelar de fondo (``$\rho_F$"). Además, en aquellas agrupaciones estelares resultantes con mas de 10 estrellas, se eliminaron los miembros considerados ``$outliers$” en base a sus medidas de movimientos propios del catálogo Gaia.
+
+La distribución espacial y los diagramas fotométricos de las estrellas consideradas miembros de las agrupaciones identificadas en diferentes poblaciones se presentan de forma superpuestas en los graficos de las cuatro filas de paneles superiores de las Figs.~\ref{fig:LMCsg} y \ref{fig:SMCsg}. Adicionalmente, las tres filas de paneles inferiores presentan, para cada caso, las cantidades de agrupaciones estelares identificadas y las distribuciones de sus tamaños y sobre-densidades.
+
+\section{Resultados preliminares y trabajo futuro}
+
+El análisis realizado nos ha permitido establecer los siguientes resultados preliminares:
+\begin{itemize}
+\item Los datos astrométricos y fotométricos multi-banda de las estrellas de las MCs han permitido llevar a cabo una separación refinada de las diferentes poblaciones estelares en cada una de las galaxias. De esta forma, fue posible mapear la distribución espacial de cada una de ellas.
+\item Utilizando una metodología automatizada, se ha generado un catálogo de candidatas a agrupaciones estelares en cada una de las MCs.
+\item La información fotométrica ha permitido realizar, también automáticamente, la clasificación aproximada de dichas agrupaciones en tres grupos de edades diferentes.
+\end{itemize}
+
+El presente trabajo se verá complementado en el futuro cercano con un estudio comparativo entre las agrupaciones encontradas automáticamente con aquellas ya catalogadas por otros autores o mediante otras metodologías. Además, se llevará a cabo un estudio detallado los diagramas fotométricos individuales de las agrupaciones.
+
+\begin{acknowledgement}
+Este trabajo ha sido financiado parcialmente por el Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET, PIP 112-202101-00714), el Programas de Incentivos 11/G182 de la Universidad Nacional de La Plata. Los autores agradecen al árbitro de este artículo por sus sugerencias.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

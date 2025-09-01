@@ -1,0 +1,387 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+%\usepackage{amsmath}
+%\usepackage{mathtools}
+%\usepackage{float}
+%\usepackage{comment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Observaciones fotométricas ópticas de candidatas a galaxias en el survey VVV}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Fotometría en el óptico de galaxias en la ZOA.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+F. Zarate\inst{1},
+F. Duplancic\inst{2},
+E. Gerville-Reache\inst{3},
+D. Galdeano\inst{2},
+F. Podestá\inst{1,4},
+E. Gonzalez\inst{1,4}
+\&
+J.F. González\inst{5}
+}
+
+\authorrunning{Zarate et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{fzarate152@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Exactas, Físicas y Naturales, UNSJ, Argentina
+\and
+Gabinete de Astronomía Extragaláctica, Facultad de Ciencias Exactas, Físicas y Naturales, CONICET--UNSJ, Argentina
+\and
+Department of Astronomy, Yale University, EE.UU.
+\and
+Observatorio Astronómico Félix Aguilar, UNSJ, Argentina
+\and
+Instituto de Ciencias Astronómicas, de la Tierra y del Espacio, CONICET--UNSJ, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Se presentan resultados del estudio de una muestra de posibles candidatas a galaxia observadas en el relevamiento Vista Variables in the Via Láctea en la región sur del bulbo galáctico. Utilizando el Astrógrafo Doble de la Estación de Altura Carlos Ulrrico Cesco se obtuvieron las magnitudes en el óptico de 35 candidatas a galaxias de una muestra inicial de más de 14000 objetos seleccionados en el infrarrojo cercano. Para la obtención de las magnitudes estándares en el óptico se calibró una transformación entre las magnitudes instrumentales observadas con magnitudes calculadas en la banda G de 60\,928 estrellas de GAIA en la región. Como conclusión de este trabajo resaltamos la factibilidad de utilizar el Astrógrafo Doble para obtener fotometría óptica de este tipo de galaxias. Esta información en muy relevante a la hora de poder planificar observaciones en otras facilidades como el telescopio Jorge Sahade  que se encuentra emplazado en el Complejo Astronómico El Leoncito (CASLEO).}
+
+\abstract{A sample of galaxy candidates observed in the south region of the galactic bulge of Vista Variables in the Via Láctea  survey is presented in this work. With the use of the Double Astrograph from the Estación de Altura Carlos Ulrrico Cesco the magnitudes in the visible light of 35 galaxy candidates were obtained. This galaxy candidates were selected from a catalogue with more than 14000 objects in the Near Infra-red part of the spectrum. For obtaining standard visual magnitudes a transformation from the instrumental observed magnitudes to the G standard magnitudes was calibrated with data of 60\,928 GAIA stars. As a conclusion to this work we highlight the feasibility of using the Double Astrograph to obtain optical photometry of this type of galaxies.  This information is very relevant when planning observations at other facilities such as the Jorge Sahade Telescope located at the Complejo Astronómico El Leoncito (CASLEO).}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ Galaxy: bulge --- galaxies: photometry --- dust, extinction}
+
+\begin{document}
+
+\maketitle
+\section{Introducción: Sobre las galaxias del relevamiento VVV}
+
+Una gran mayoría del gas, polvo y estrellas de la Vía Láctea se encuentran en el disco y bulbo galáctico. Las subestructuras de nuestra galaxia y sus componentes son un obstáculo para observar el Universo en longitudes de onda ópticas debido a la gran densidad estelar y alta extinción de la luz visual. Estudiar dicha región del cielo conocida como ``Zona de Oscurecimiento Óptico'' o ZOA, por sus siglas en inglés, resulta una tarea compleja. Ante esta situación, el relevamiento público de la ESO, VISTA Variables in the Vía Láctea (VVV; \cite{minniti2010}) en el infrarrojo cercano (NIR) ha demostrado ser una valiosa herramienta para descubrir y catalogar objetos extragalácticos en la ZOA gracias a su alta resolución angular ($0.339\,\mathrm{\arcsec/pix}$) y profundidad 3 magnitudes más débiles que 2MASS \citep{2masspaper} en la banda $K\mathrm{s}$.
+
+%En la Figura \ref{gxsvvv} se muestran algunos ejemplos de galaxias observadas con el relevamiento VVV. 
+
+%\begin{figure*}[!t]
+%\centering
+%\includegraphics[width=0.8\textwidth]{gxsvvv.png}
+%\caption{Galaxias detrás del bulbo galáctico en falso color KsJZ. El tamaño del campo es de $1\,x\,1\,\mathrm{arcmin}$}
+%\label{gxsvvv}
+%\end{figure*}
+
+Diversos autores como \cite{amores2012}, \cite{coldwell2014}, \cite{baravalle2018}, \cite{galdeano2021} y \cite{Duplancic2024} definieron diferentes criterios fotométricos para la correcta identificación y diferenciación de objetos estelares de los extragalácticos en el relevamiento VVV. En el trabajo de \cite{amores2012} se realizó inspección visual de imágenes en falso color del mosaico \textit{d003}, buscando identificar estructuras con morfología característica de fuentes extragalácticas. También, se analizaron diagramas color--color y distribuciones de tamaño basadas en el radio de Petrosian. En \cite{coldwell2014} se realizó fotometría con {\sc SExtractor} \citep{bertin} de candidatas a galaxias del cúmulo Suzaku J1759--3450 (mosaico \textit{b216}) y se utilizó el índice de estelaridad {\rm class\_star} para diferenciar fuentes estelares de extragalácticas así como el parámetro $r_{1/2}$, el cual dá el radio que encierra la mitad del flujo medido de una fuente. En el trabajo de \cite{baravalle2018} se realizó fotometría de apertura con {\sc SExtractor} y {\sc psfex} \citep{bertin2011} en los mosaicos \textit{d010} y \textit{d115} y se buscó diferenciar objetos estelares de extragalácticos usando los parámetros {\rm class\_star}, $r_{1/2}$, índice de concentración C y {\rm spread\_model}. También se utilizaron criterios para diferenciar fuentes extendidas de estelares en diagramas color--color y color--magnitud. Además, se inspeccionaron visualmente imágenes de las candidatas a galaxias. En el trabajo de \cite{galdeano2021} se utilizaron técnicas y criterios similares a los descriptos en los trabajos anteriores; además de un análisis de un mapa de densidad de las galaxias encontradas; hallando una sobredensidad de galaxias en el mosaico \textit{b204}, posteriores estudios \citep{galdeano2022} confirmaron dicha sobredensidad como un cúmulo de galaxias.
+
+Recientemente \cite{Duplancic2024} presentaron un catálogo con  fotometría NIR en las bandas $Z, Y, J, H, K\mathrm{s}$ (con longitudes medias de 0.88, 1.02, 1.25, 1.65, 2.15 $\mu \mathrm{m}$, respectivamente) de más de 14\,000 candidatas a galaxias observadas con el relevamiento VVV. Este catálogo cubre la sección del bulbo galáctico comprendida entre $-10\,^\circ \leq l \leq 10\,^\circ$ y $-10\,^\circ\leq b \leq 5\,^\circ$.  Los objetos se seleccionaron a partir de datos de catálogo extraídos desde VSA\footnote{http://vsa.roe.ac.uk/}, de los cuales se obtuvieron magnitudes de apertura y extinciones del mapa de \cite{chen2013}. Luego se descargaron imágenes en la banda $K\mathrm{s}$ de estos objetos y se corrió {\sc SExtractor} de manera de obtener parámetros específicos de separación estrella-galaxia. Así mismo se realizó inspección visual en imágenes falso color que resaltan el color rojo de las galaxias en contra del azul del las estrellas. De esta manera se terminó de descontaminar de objetos estelares el catálogo. Para mayor información sobre el catálogo se remite al lector al trabajo de \citet{Duplancic2024} (D24).
+
+La finalidad del presente trabajo es generar una estrategia observacional adecuada para poder obtener fotometría en la región del óptico de una muestra de estos objetos. Para tal fin se llevó a cabo un proyecto piloto utilizando las facilidades de la estación de altura Carlos U. Cesco del observatorio Astronómico Félix Aguilar (OAFA). 
+
+\section{Estrategia Observacional}
+
+Para las observaciones se utilizó el Astrógrafo Doble (AD), instrumento que actualmente cuenta con filtro en la banda $V$ de Johnson--Cousins (JC) con una longitud de onda media de $0.54\,\mu \mathrm{m}$ y ancho equivalente de $0.08\,\mu\mathrm{m}$. El AD consta de un diámetro de apertura de $0.5\mathrm{m}$ y la combinación del telescopio y cámara proporciona un tamaño de campo de $\approx25\,\arcmin\times25\,\arcmin$ con una resolución angular de $0.732\,\arcsec\mathrm{/pix}$. El valor límite de magnitud observable del AD se estima en $V_{\mathrm{lim}}=18$.
+
+Para la selección de los objetos con mayor probabilidad de ser observados en el óptico se escogió la región del bulbo galáctico cubierta por el catálogo de D24 que posee menor extinción en las bandas $K\mathrm{s}$ y $V$ según los mapas de \cite{chen2013} y \cite{schlafly2011}, respectivamente: $-10\,^\circ\leq b \leq -5\,^\circ$. En dicha región se encuentran 13863 objetos (90\%)  del catálogo de D24.
+
+De manera de estimar la magnitud $V$ de estas fuentes se transformaron las magnitudes $J$, $H$ y $K\mathrm{s}$ de VVV otorgadas por el catálogo a magnitudes en las mismas bandas del relevamiento 2MASS utilizando las ecuaciones presentadas en \citet{Gon2018}.
+Posteriormente, para obtener una estima de la magnitud $V$ se utilizaron las ecuaciones de transformación del sistema fotométrico de 2MASS al de JC presentadas en \cite{bilir2008}.
+
+Una vez obtenida una estima de las magnitudes $V$ de los 13863 objetos dentro de la zona de estudio se buscó aquellos que cumplieran $V<V_{\mathrm{lim}}$ y se construyó una lista de objetos con mayor viabilidad para la observación fotométrica con este instrumento. Dicha lista se compone de 93 objetos, constituyendo el $\approx0.671\%$ de la región explorada ($\approx0.606\%$ del total del catálogo). En la Fig. \ref{targetobs} se muestra la posición de estos objetos en coordenadas galácticas.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\columnwidth]{Fig1.pdf}
+\caption{Distribución espacial de los 93 objetos de D24 seleccionados como viables de observación.}
+\label{targetobs}
+\end{figure}
+
+Se inspeccionaron los 93 objetos con imágenes en falso color de VVV para desarrollar una estrategia observacional que permitiese optimizar el tiempo de telescopio. Se priorizaron los objetos del catálogo más brillantes, que tuvieran la menor contaminación de estrellas en el campo así como galaxias cercanas en proyección que pudieran ser capturadas en una misma imagen. 
+Durante 6 noches de observación en el mes de julio de 2023, se tomaron imágenes de 27 campos del AD permitiendo la observación de 35 objetos de los 93 seleccionados inicialmente. El \textit{seeing} medio durante las noches de observación fue de $2.5\,\arcsec$, mientras que dos noches presentaron leve nubosidad.
+
+En la Fig. \ref{compgx} se pueden comparar como se ven algunos objetos del catálogo de D24 observados para este trabajo con respecto a sus imágenes en falso color en las bandas de VVV.
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.9\textwidth]{Fig2.png}
+\caption{Comparación entre algunos objetos del catálogo de D24 en imágenes VVV en el NIR en falso color vs. las obtenidas para este trabajo en el óptico en escala de grises. Es apreciable la diferencia en resolución espacial de VISTA ($0,339\,\arcsec\mathrm{/pix}$) y el AD ($0,732\,\arcsec\mathrm{/pix}$). Las imágenes tienen $1\arcmin\times1\arcmin$.}
+\label{compgx}
+\end{figure*}
+
+\section{Fotometría en el óptico de galaxias VVV}
+Se realizó fotometría de apertura con un diámetro de $11.712\,\arcsec$ (16 píxeles) sobre las imágenes de los 27 campos observados. Para tal fin se utilizó el paquete {\sc daophot} de {\sc IRAF} \citep{ref-iraf} con parámetros estándar. Para la determinación de magnitudes en el óptico de los objetos del catálogo se buscó construir y calibrar, con estrellas catalogadas de cada campo, una transformación entre las \textit{magnitudes instrumentales} $v$, obtenidas de la fotometría de apertura con el AD, y magnitudes estándares $G$ del sistema fotométrico RGB de \cite{cardiel2021} (con una longitud de onda media de $0.53\,\mu\mathrm{m}$ y ancho equivalente de $0.09\,\mu\mathrm{m}$).
+La elección de este sistema fotométrico está fundamentada en que el rango espectral cubierto y la morfología de la curva de transmisión de la banda $G$ es muy similar al de la banda $V$ de JC con la que se tomaron las imágenes. De esta manera, una transformación entre magnitudes $v$ y $G$ debería ser consistente con una constante aditiva, descontando dependencias con el color que no pueden ser cuantificables por que las imágenes del AD se tomaron con único filtro. 
+Además, en el sistema fotométrico RGB existen catalogadas una gran cantidad de estrellas en cada uno de los campos, permitiendo tener una mejor precisión en la calibración de la transformación. Para esto se recurrió al catálogo de \cite{carrasco2023} que contiene la fotometría RGB de $\sim2\times10^8$ fuentes de Gaia EDR3 \citep{GAIAEDR32021}. 
+
+En la Fig. \ref{vG} se muestra el diagrama construido para la calibración de la transformación $G-v$ considerando 60928 estrellas con $v<18$ distribuidas en 17 de los 27 campos observados. Estos campos fueron seleccionados por ser los de mejor calidad de cielo, con la finalidad de evitar sesgos en la calibración. Puede observarse que la transformación se ubica a lo largo de una recta con pendiente casi nula para las fuentes brillantes con $v<12$, indicando una diferencia de $\approx1$ magnitud entre las magnitudes instrumental $v$ y estándar $G$. A medida que nos desplazamos a magnitudes más débiles, la dispersión de los puntos aumenta considerablemente. Los puntos verdes en esta figura representan las galaxias observadas de D24, las mismas presentan magnitudes instrumentales en el rango  $13<v<17$.
+
+En base a estos resultados se consideró la siguiente ecuación de transformación $$G = v-0.00075\times v +1.19$$ 
+Este ajuste está representado por la línea de trazos roja en la Fig. \ref{vG}. De esta manera se obtuvo una estima de la magnitud $G$ de 35 objetos del catálogo de D24. La tabla \ref{tbl_mags} muestra 5 ejemplos de las magnitudes obtenidas para estas galaxias. Los errores asociados a la banda $G$ son calculados a partir de los errores en la magnitud $v$.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.8\columnwidth]{Fig3.pdf}
+\caption{Relación entre $G-v$ y $v$ de 60928 estrellas (cuadrados abiertos azules). Las galaxias observadas se muestran en círculos llenos verdes. Los errores en los puntos son los asociados a la fotometría. La línea roja de trazos corresponde a un ajuste lineal adoptado, mientras que la linea amarilla continua y el sombreado representan la media de la distribución y la dispersión gaussiana correspondiente a $1\sigma$.}
+\label{vG}
+\end{figure}
+
+\begin{table}[!t]
+\centering
+\caption{Fotometría de apertura realizada para candidatas a galaxias del catálogo de D24.}
+\begin{tabular}{ccccc}
+\hline\hline\noalign{\smallskip}
+\!\!VVV ID & \!\!\!\!RA[$^{\circ}$] & \!\!\!\!DEC[$^{\circ}$] &\!\!\!\!$G$ & \!\!\!\!$G_{\rm{err}}$ \!\!\!\!\\
+\hline\noalign{\smallskip}
+515679688554 & 273.26774 & -37.67551 &  14.911 & 0.012\\
+ 515744996356 & 276.09729 & -34.18186 & 15.582 & 0.019\\
+ 515632792050 & 271.24481 & -41.66352 &  15.868 & 0.016\\
+ 515928986848 & 278.67882 & -23.70622 &  16.261 & 0.016\\
+ 515656835363 & 270.11203 & -39.42281 &  15.325 & 0.015\\
+\hline
+\end{tabular}
+\label{tbl_mags}
+\end{table}
+
+
+\subsection{El rol de la extinción galáctica}
+Es sabido que la extinción en longitudes de onda del visual en las latitudes galácticas analizadas en este trabajo puede afectar fuertemente la magnitud visual de las galaxias observadas. De manera de tener una primera aproximación de este efecto es que se estudiaron los mapas de extinción de \cite{schlafly2011} en los campos observados por el AD.
+
+En la Fig. \ref{vG_ext} se muestran  la relación entre la magnitud instrumental $v$ y las extinciones $A_{\rm{V}}$ para la región donde se ubican los 17 campos con los que construyó la relación entre $v$ y $G$. El código de color de esta figura representa la latitud galáctica. Puede observarse que las altas extinciones vuelven más débiles los objetos observados y que los campos con mayor absorción son aquellos ubicados más cerca del centro galáctico. Luego concluimos que es muy importante considerar los valores de la extinción en el visual en trabajos a futuro.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig4.pdf}
+\caption{Magnitud instrumental v en función de la extinción $A_{\rm{V}}$ del mapa de \cite{schlafly2011}. El código de colores indica la latitud galáctica de cada campo.}
+\label{vG_ext}
+\end{figure}
+
+\section{Resumen y conclusiones}
+
+El presente trabajo presenta un proyecto piloto para obtener magnitudes en el rango visual de galaxias del catálogo de D24. Dichos objetos han sido detectados en la región del bulbo galáctico mapeado por el relevamiento VVV y poseen información fotométrica en el NIR.
+
+Para tal fin se utilizó el AD de la estación de Altura Carlos U. Cesco del OAFA y considerando las características de dicho instrumento se seleccionó una lista de 93 objetos con mayor probabilidad de ser observados satisfactoriamente en longitudes de onda correspondientes al óptico. Se realizaron observaciones de 27 campos que incluyen 35 de las 93 galaxias y se obtuvo fotometría de apertura en la banda $G$ de dichos objetos en base a una calibración realizada con fotometría de 60928 estrellas de estos campos obtenidas a partir del  catálogo de \cite{carrasco2023}. 
+
+Como trabajo a futuro, se espera poder utilizar información fotométrica en la región espectral correspondiente al óptico en conjunto con la disponible en el NIR para estimar el corrimiento al rojo fotométrico de galaxias del catálogo de D24. Obtener una cobertura lo más amplia posible de la distribución espectral de energía de una galaxia es fundamental para computar corrimientos al rojo fotométricos libres de sesgos en un amplio rango de distancias. Por otro lado \citet{Benintez2009} demostraron que obtener fotometría en más de 8 filtros anchos, preferentemente adyacentes, pueden mejorar significativamente el rendimiento de diversos algoritmos de estima de corrimiento al rojo fotométrico con incertezas en el orden de ${\delta}z\approx 0.028(1+z)$. Estos autores también resaltan que incluir filtros en el NIR es crucial para mejorar el rendimiento cuando se tiene un bajo número de filtros.
+
+Como conclusión de este trabajo resaltamos la factibilidad de utilizar el AD para obtener fotometría óptica de este tipo de galaxias. Esta información en muy relevante a la hora de poder planificar observaciones en otras facilidades como el telescopio Jorge Sahade (JS) que se encuentra emplazado en el Complejo Astronómico El Leoncito (CASLEO) que posee detector con sistema de filtros JC y también SDSS \citep{sloan-ref}. De este modo se puede llegar a obtener cerca de 10 filtros para el cómputo de los corrimientos al rojo fotométricos de las galaxias observadas en el presente trabajo.
+
+Además, se extenderá a otras regiones del bulbo galáctico cubiertas por VVV la determinación de magnitudes con los métodos expuestos en este trabajo.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

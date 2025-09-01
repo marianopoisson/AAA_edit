@@ -1,0 +1,354 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{The Fe {\sc i} lines and the chromospheric activity}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{The Fe {\sc i} lines}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.C. Vieytes\inst{1}
+}
+
+\authorrunning{Vieytes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mariela@iafe.uba.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las líneas de Fe neutro son las más abundantes en el espectro de estrellas tardías. Se utilizan para obtener diferentes parámetros estelares básicos como abundancias relativas, gravedad superficial, y temperatura efectiva. Sin
+embargo, los núcleos de muchas de estas líneas se forman en la cromósfera estelar, viéndose afectados por los cambios producidos por la actividad magnética. Calculando modelos semiempíricos de la atmósfera estelar fuera del equilibrio termodinámico local (NLTE por sus siglas en inglés), es posible estudiar la formación de estas líneas en detalle. En este trabajo
+presentamos un nuevo modelo actualizado del átomo de Fe {\sc i}, que nos permite calcular 1715 líneas de Fe {\sc i} entre 3000 y 7000 \AA~ en estrellas con diferente nivel de actividad cromosférica. Los resultados
+preliminares muestran la presencia de rangos espectrales más sensibles al calentamiento cromosférico, sugiriendo
+que las líneas con mayores variaciones deben ser tenidas en cuenta como fuentes de error, o incluso podrían ser excluídas, al momento de ser utilizadas para determinar parámetros estelares.}
+
+\abstract{Neutral Fe lines are the most abundant in the spectrum of late-type stars. They are used to obtain different basic stellar parameters such as relative abundances, surface gravity, and effective temperature. 
+However, the cores of many of these lines are formed in the stellar chromosphere, being affected by the changes produced by magnetic activity. Calculating non-local thermodynamic equilibrium (NLTE) semi-empirical models of the stellar atmosphere, it is possible to study the formation of these lines in detail. 
+We present a new updated model of the Fe {\sc i} atom, which allows us to calculate 1715 lines of Fe {\sc i} between 3000 and 7000 \AA~in stars with different levels of chromospheric activity. 
+Preliminary results show the presence of spectral ranges more sensitive to chromospheric heating, suggesting that the lines with greater variations should be taken into account as a source of uncertainty, or would even be excluded, when determining stellar parameters.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{stars: solar-type --- stars: chromospheres    --- stars: activity}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+The Fe {\sc i} lines in the stellar spectra of late-type stars are used to characterize them. Basic parameters such as effective temperature, metallicity, or surface gravity can be calculated from these lines. They are also used in detecting extrasolar planets by the radial velocity method. For these reasons, it is crucial to understand their behavior under different physical processes acting on line formation, such as the chromospheric activity.  Any associate change due to these processes on the line profile can produce miscalculations if it is not properly understood and described. 
+
+Previous observational studies have shown that some spectral Fe {\sc i} lines present changes in their depth and width due to chromospheric stellar activity \citep{wise18,spi20}. In some cases, the changes in the line profile can track the magnetic cycle of the stars \citep{liv07,flor16}.
+
+Semi-empirical NLTE models of the stellar atmospheres can be used as a tool to study the formation of line profiles in detail. But to obtain reliable synthetic spectra, it is necessary to build atomic and molecular models of the species that form the atmosphere, considering the different processes that can take place between them and the radiation field. 
+
+The goal of the present work is to update the data and expand the level structure of the Fe {\sc i} atomic model to be implemented in the Solar Stellar Radiation Physical Modeling ({\sc SSRPM}) library of codes \citep{fon15}. Further on, using the new atomic model, we are able to calculate the spectra of a solar-type star under two different atmospheric thermal structures that differ in the level of chromospheric activity, which was estimated by the flux in the Ca {\sc ii} K line profile. These synthetic spectra allow us to study the influence of activity on the Fe {\sc i} line profiles.
+
+
+\section{The new Fe {\sc i} atomic model}
+The previous Fe {\sc i} atomic model is described by \cite{fon15} and references therein. The energy level structure contained the first 119 energy levels, and their corresponding 381 sublevels from the National Institute of Standards and Technology (NIST) database version 2004 \citep{nist04}. The maximum energy reached using this atomic structure was 54386.189 cm$^{-1}$. This atomic model allowed the calculation, in NLTE, of 1624 Fe {\sc i} lines. 
+
+We spanned and updated the atomic structure, using the latest version 2022 of the NIST database \citep{nist22}.The new Fe {\sc i} model was built considering levels and sublevels until reaching a similar energy to the previous model, but the number of levels was increased to 141, and their corresponding sublevels to 444. 
+We also selected from the same version of NIST, 2397 lines with well-determined oscillator strength, and 1715 lines in the range between 3000 and 7000 \AA. This portion of the spectra is mostly used to characterize the stars and for exoplanet detection. Considering that the previous atomic model included 1624 lines, we increased the calculated lines by 47\%. The distribution of these line centers in the visible spectrum for both atomic models is displayed in the histogram of Fig. \ref{fig:histogram}. The new structure of energy levels and sublevels allows to take into account an increased number of Fe {\sc i} lines mainly in the range between 3000 to 4250 \AA ~compared to the older model.
+
+The line broadening processes for the line profiles considered were the usual, radiative, Stark, and van der Waals. The approximate values were taken from \cite{kurucz:1995} when the line was present, otherwise only the radiative coefficient was considered. 
+
+\begin{figure}[t]
+\centering
+\resizebox{\hsize}{!}{\includegraphics{Histograma_compara.pdf}}
+\caption{Comparison of the distribution of the Fe {\sc i} lines calculated in NLTE with the new (green) and old (orange) atomic model between 3000 and 7000 \AA.}
+\label{fig:histogram}
+\end{figure}
+
+Regarding the rest of the atomic parameters, the electron collisions were obtained from the semi-empirical approximation of \cite{sea62} for allowed transitions, and \cite{vanRege62}
+when transitions were forbidden. For ionizing collisions,
+the \cite{nrl05} ionization rate equation, adapted from Earth atmospheric calculations, was used. We neglected the H {\sc i} inelastic collisions because we did not consider metal-poor stars.
+
+The photoionization cross-sections were taken from TOPbase3,
+the Opacity Project atomic database \citep{topbase93}. 
+The radiative recombination was included as the
+inverse of the photoionization process.  
+
+\section{NLTE calculations}
+There are several previous works that show the importance of an NLTE calculation for the level populations of Fe {\sc i}. The more comprehensive is the one by \cite{masho11}. \cite{hol13} showed that 3D NLTE calculation could be important for some regions with strong horizontal temperature gradients such as the boundaries of granules, but in spatial averaged profiles calculations, as is the case for stars, the difference between 1D and 3D NLTE is less than 1\%.
+
+In this work, the calculations were done using the {\sc SSRPM} system \citep{fon15}. This system allows us to self-consistently solve the equations of radiation transport and statistical equilibrium for a plane-parallel atmosphere, assuming hydrostatic equilibrium. 
+
+The {\sc SSRPM} computes in NLTE the populations of H, H$^{-}$, H$_{2}$, and 52 neutral and lowly ionized atomic species, considering partial redistribution (PRD). These species are shown in Table 2 of \cite{fon15}, although in this work, we modified the number of levels and sublevels of Fe {\sc i}. Additionally, the NLTE effectively thin approximation is used for highly ionized species. Besides, the most abundant diatomic molecular species are calculated in LTE. A more detailed explanation of the code can be found in \cite{fon16} and references therein. 
+
+We selected the atmospheric model corresponding to the solar magnetic inter-network model 1401 built by \cite{fon15} to calculate the spectra representing a low chromospheric active G2 star. This feature is the most abundant in the atmosphere of the quiet Sun \citep{fon11}, and for that reason, it is a good model for a low-activity star. 
+
+To generate a more chromospheric active G2 star, we used the same technique as in \citet{viey04} and \citet{andre95} by shifting the  thermal structure inward, i.e. toward higher mass column densities. Fig. \ref{fig:modelsyca2} shows the thermal structure of the two models calculated, and their resulting Ca {\sc ii} K profiles. In black the model 1401, and in magenta a more active model built as it was previously described.
+
+The Ca {\sc ii} H\&K doublet is widely used as a proxy of chromospheric activity due to its response to the chromospheric heating produced by stellar activity. For this reason, an increasing Ca {\sc ii} K profile ensures an increasing chromospheric activity.  It can be seen in the figure that the more active model gives a higher Ca {\sc ii} K profile, as is expected for a more chromospherically active star. 
+
+It is important to note that both atmospheric models have the same photospheric thermal structure, as can be seen in Fig. \ref{fig:modelsyca2}. We are interested only in studying the effect of a change in the chromosphere due to the heating produced by the stellar activity on the same star. 
+
+\begin{figure*}[ht]
+\centering
+\includegraphics[width=.5\textwidth]{dos_modelos.pdf}%\quad
+\includegraphics[width=.5\textwidth]{dos_ca2.pdf}%\vspace{0cm}
+\caption{\textit{Left:} Atmospheric models with different chromospheric level of activity. In black the model for the quiet Sun 1401, and in magenta a more active model built from it. \textit{Right:} Ca {\sc ii} K profiles calculated from each model, plotted with the same line colour as the corresponding model. }
+\label{fig:modelsyca2}
+\end{figure*}
+
+\section{Results}
+We computed the NLTE population for all the species composing the atmosphere, and the resulting synthetic visible spectra. 
+
+To determine the change in the Fe {\sc i} lines, we calculated the relative difference (in percentage) between both spectra. We identified the lines cross-matching the wavelengths in the spectra with the line centers of the 1715 lines in our database belonging to the spectral range under study. 
+
+Fig. \ref{fig:diferencias} shows the result of the calculations for the spectral range from 3000 to 7000 \AA. 
+The 38 \% of the Fe {\sc i} lines calculated with these models present a change in their line depths between 5 and 497 \%. 
+
+It is possible to distinguish two main regions severally affected by the change in the thermal structure of the model, one between 3000 and 4550 \AA, and the other between 4780 to 5500 \AA ~approximately. 
+
+The change shown in the figure means that these lines are affected in their line center by the level of chromospheric activity in the star. The main reason these lines are changing is that their formation region  moves, totally or partially, outward to chromospheric regions as the temperature increases. 
+
+The 62 \% of the lines are affected by less than 5 \%, showing that the peak of the contribution function remains at approximately the same photospheric height, where both models have the same thermal structure.
+
+Although we were interested in studying the change in Fe {\sc i} lines with chromospheric activity, this methodology allowed us to track the change in any line present in our synthetic spectra, for all the species from which the stellar atmosphere is made up. In a forthcoming paper, \cite{viey24} will address this idea, increasing the number of stars with different levels of chromospheric activity. 
+
+\begin{figure}[t]
+\centering
+\resizebox{\hsize}{!}{\includegraphics{FeI_diffVSwave_17018-170.pdf}}
+\caption{Relative difference in percentage between the Fe {\sc i} line centers calculated with the two models for the visible range.}
+\label{fig:diferencias}
+\end{figure}
+
+\section{Conclusions}
+Considering the importance of Fe {\sc i} in the stellar spectra of solar-type stars, we built a more comprehensive Fe {\sc i} atomic model into the {\sc SSRPM} system. This new model increases 47\% of the number of lines that we can calculate with a 1D full NLTE semiempirical stellar model atmosphere. Using this new atomic model, we computed two atmospheric models representing dG2 stars with different levels of chromospheric activity. Calculating the relative difference in the percentage of the two synthetic spectra, we identified 652 (38 \%) Fe {\sc i} lines that are affected by chromospheric activity. These lines should be not considered in the stellar parameter calculations and be also excluded from the stellar mask used for exoplanet detections. 
+
+
+\begin{acknowledgement}
+ I sincerely thank the referee and editor for their detailed revision of my manuscript since it has helped me improve my work.This research was supported by grants PICT 2018-2895 and PICT 2019-4342 from the Agencia Nacional de Promoción Científica y Tecnológica (MINCyT, Argentina).
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{873}
+ 
+\end{document}

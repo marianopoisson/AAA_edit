@@ -1,0 +1,383 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Distribución de masas de algunos sistemas exoplanetarios}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\titlerunning{Macro BAAA65 con instrucciones de estilo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A. Terluk\inst{1}
+\&
+R. Gil-Hutton\inst{1,2}
+}
+
+%\authorrunning{González et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{aldana41292@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Departamento de Geofísica y Astronomía, Facultad de Ciencias Exactas, Físicas y Naturales, UNSJ, Argentina \and Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina}
+
+%Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina\and   
+%Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina
+%\and
+%Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+%\and
+%Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+%\and
+%Instituto de Astronom\'ia Te\'orica y Experimental, CONICET--UNC, Argentina
+%\and
+%Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+%}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Se analizó la distribución de masa de un conjunto de exoplanetas que forman parte de sistemas planetarios que han sido clasificados según su arquitectura. Además, se analizó la distribución de masa de aquellos exoplanetas de la muestra que fueron dectados mediante el método de tránsitos teniendo en cuenta un significativo sesgo observacional, y se determinó que ambas distribuciones pueden describirse mediante una ley de potencia.} 
+
+\abstract{The mass distribution of a set of exoplanets that are part of planetary systems classified according to their architecture was analyzed. Furthermore, the mass distribution of those exoplanets in the sample that were detected using the transit method, taking into account a significant observational bias, was analyzed, and it was determined that both distributions can be described by a power law.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{methods: numerical }%: abundances --- stars: early-type --- Galaxy: structure --- galaxies: individual (M31)}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}
+El estudio de los sistemas exoplanetarios se fundamenta en dos procesos que además de ser complementarios, se retroalimentan mutuamente: las observaciones de exoplanetas y los modelos de formación y evolución planetaria. Los datos observacionales reportados hasta la fecha permiten llevar a cabo un análisis estadístico de la distribución de exoplanetas sobre sus diferentes propiedades físicas y dinámicas y a su vez estos resultados son útiles para validar los modelos de formación y evolución planetaria, ya que estos deberían ser capaces de reproducir las distribuciones observadas.  
+
+Particularmente, conocer la distribución de masas planetarias puede proporcionar información valiosa sobre los diferentes procesos físicos y dinámicos que intervienen en la creación de planetas como procesos de acreción, inestabilidades en el disco e interacciones gravitacionales, entre otros, y por ende nos acercaría a un mejor entendimiento de los procesos de formación y evolución planetaria.
+
+Diferentes autores han estudiado la distribución general de masas para exoplanetas obtenidas de diferentes muestras, determinando que las mismas pueden describirse mediante una ley de potencias. \citet{marcy2005} analizaron 104 de los 152 exoplanetas detectados hasta ese momento mediante el método de velocidad radial, hasta ese momento, demostrando que la distribución de los exoplanetas seleccionados sobre masa mínima ($ m \hspace{0.5mm} sin \hspace{0.5mm} \textit {i} $) puede aproximarse mediante una ley de potencias $ {\rm d} N(m)/{\rm d} m \propto m^{-1.0}$. En la misma línea, a partir del estudio de 167 planetas detectados mediante el método de velocidad radial, \citet{butler2006} demostraron que la distribución de masa mínima puede ser aproximada por una ley de potencias ${\rm d} N(m)/ {\rm d} m \propto m^{-1.1}$. Para este análisis \citet{butler2006} utilizaron datos que no fueron corregidos por ningún efecto de selección.
+
+\citet{cumming2008} consideraron 182 planetas y aproximaron la distribución de masa con dependencia también del período P, con la forma descrita por $ \partial N/ (\partial ln(m) \partial ln (P)) \propto m^{-0.31} P ^{0.26} $ (que puede interpretarse como $ {\rm d} N/{\rm d} m \propto m ^{-1.31})$.
+
+En un estudio reciente, \citet{ananyeva2020} analizaron la distribución de masa observada de exoplanetas detectados mediante la técnica de tránsito. Los planetas se dividieron en dos grupos, por un lado los descubiertos por Kepler y por otro, los descubiertos mediante observaciones terrestres y CoRoT. Considerando una serie de efectos de selección, determinaron que la distribución de masa para los exoplanetas del grupo Kepler puede aproximarse por $ {\rm d}N/{\rm d}m \propto m^{-1.90 \pm 0.06} $ mientras que para el grupo restante la distribución puede ser aproximada por ${\rm d}N/{\rm d} m \propto m^{-2.12 \pm 0.12}$.
+
+Por otro lado, un trabajo de \citet{mishra2023} plantea un marco novedoso para estudiar la estructura de un sistema exoplanetario a nivel de sistema. Este marco permite caracterizar, cuantificar y clasificar la arquitectura de un sistema planetario individual en cuatro clases diferentes: Similar, Ordenado, Anti-ordenado y Mixto, en función de la disposición y distribución de varias cantidades planetarias como masa, radio, densidad, entre otras, dentro de un único sistema planetario.  
+
+En este trabajo se estudia la distribución de masas de los exoplanetas que forman parte de sistemas multiplanetarios observados y clasificados por \citet{mishra2023}. Se considera esta selección de exoplanetas con el objetivo inicial de cotejar nuestros resultados con los obtenidos en la literatura  para diferentes muestras de exoplanetas seleccionados de manera diferente al propuesto por este autor. Además, con la perspectiva a futuro de realizar un análisis más detallado de la distribución de masas de los exoplanetas que forman parte de las clases ``Similar'' y ``Ordenada'' dado que son las clases más numerosas.
+
+En la sección 2 se discutirán los datos disponibles y el ajuste realizado y en la sección 3 se detallan los resultados y las conclusiones.
+
+\section{Datos y ajuste}
+\subsection{Distribución de masas de exoplanetas}
+
+\citet{mishra2021} plantean que la disposición de múltiples planetas y la distribución colectiva de sus propiedades físicas alrededor de la estrella anfitriona caracteriza la arquitectura de un sistema planetario. Para respaldar dicho esquema de clasificación, desarrollaron un catálogo de sistemas planetarios observados \citet{mishra2023}. Cada sistema planetario incluido en el catálogo debe cumplir con dos criterios: tener al menos cuatro planetas conocidos y contar con masas determinadas para al menos cuatro de esos planetas. De esta manera, el catálogo de \citet{mishra2023} incluye a 41 sistemas exoplanetarios con un total de 194 exoplanetas. 
+
+En la Fig. \ref{Figura 1} se presenta la distribución de masa para este conjunto particular de 194 exoplanetas, los cuales han sido detectados mediante diferentes técnicas y por tanto, para construir dicho histograma no se ha hecho distinción entre masa y masa mínima. 
+ 
+La Fig. \ref{Figura 2} muestra la distribución acumulativa de masa en escala logarítmica y su aproximación a una función de ley de potencia. Puede observarse que no toda la distribución sigue una ley de potencia (visualmente tal función sigue una linea recta en ejes logarítmicos) sino que la ``linealidad'' se cumple para valores de masas contenidos entre $m_{min} =0.006 M_J$ y $m_{max} =9.106 M_J$. Esto puede deberse principalmente a factores de sesgo observacional. Se realiza un ajuste sobre dicha región mediante regresión lineal por mínimos cuadrados para recuperar la pendiente de la recta cuyo valor es la estimación del parámetro de escala $\alpha$. Por lo tanto, esta distribución se puede aproximar mediante una ley de potencia ${\rm d}(N \geq m)/{\rm d} log(m) \propto m^{-0.48 \pm 0.008}$ (${\rm d}(N \geq m)/{\rm d}(m) \propto m^{-1.48 \pm 0.008}$). La desviación estándar para el valor del exponente también surge de la rutina de ajuste de mínimos cuadrados. 
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{FIGURA1.pdf}
+\captionof{figure}{Distribución de masa de los 194 exoplanetas que conforman los 41 sistemas exoplanetarios clasificados.}
+\label{Figura 1}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{FIGURA3.pdf}
+\captionof{figure} {En verde: distribución acumulativa de masas para los 194 exoplanetas considerados. En negro: ajuste a dicha distribución sobre la región donde la curva sigue una ley potencia ${\rm d}(N \geq m)/{\rm d}log(m) \propto m^{-0.48 \pm 0.008}$ . Las rectas verticales en linea de puntos corresponden a los valores $m_{min}$ y $m_{max}$ que delimitan dicha región.}
+\label{Figura 2}
+\end{figure}
+
+\subsection{Distribución de masas de exoplanetas en tránsito}
+
+Como se mencionó anteriormente, existen factores relacionados con el modo en que se realiza la observación que pueden distorsionar la forma que obtiene la distribución real de masa. Estos efectos pueden hacer que la distribución observada no sea completamente representativa de la distribución real. Además, tales efectos son diferentes para las diversas técnicas de detección, e incluso dentro de una misma técnica para los diferentes programas de observación. 
+
+Uno de los métodos que puede verse afectado es el que detecta exoplanetas mediante tránsitos. El método consiste en el estudio de disminuciones periódicas en la intensidad de la luz de una estrella, causadas por el paso de un planeta entre la estrella y el observador. 
+Es claro, que este método solo identifica aquellos planetas que, desde la perspectiva del observador en la Tierra, pasan frente al disco de su estrella anfitriona. Esto implica que la inclinación del plano orbital $i$ del planeta con respecto a la línea de visión del observador debe ser muy cercana a $90^{\circ}$. Si el plano orbital está demasiado inclinado con respecto a la línea de visión, el planeta no pasará frente a la estrella y no se observará un tránsito. 
+
+Debido a que las inclinaciones orbitales están distribuidas aleatoriamente, la mayoría de exoplanetas no son detectados en tránsito. Dada la naturaleza del método existe un fuerte sesgo, favoreciendo la detección de planetas de mayor tamaño y cercanos a la estrella anfitriona. Por este motivo es necesario corregir por este sesgo para obtener una distribución de masas razonable.  
+
+Del total de exoplanetas considerados, se seleccionó un total de 92 exoplanetas que han sido detectados por el método de tránsitos y para los que se cuenta con mediciones de masa. La Fig. \ref{Figura 3} muestra la distribución de masa correspondiente. Para estudiar dicha distribución y, con la finalidad de recuperar una distribución de masa más próxima a la verdadera, se corrige por el sesgo observacional que implica la probabilidad de detectar un tránsito planetario siguiendo las ecuaciones utilizadas en \citet{ananyeva2020}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{FIGURA2.pdf}
+\captionof{figure}{Distribución de masa de los 92 exoplanetas detectados por el método de tránsitos.}
+\label{Figura 3}
+\end{figure}
+
+Según \citet{winn2014}, la probabilidad geométrica $p$ de una configuración de tránsito es: 
+\vspace{2mm}
+\begin{equation}
+p=\left(\frac{r_{*} \pm r}{a}\right)\left(\frac{1 + e \sin w}{1-e}\right)
+\end{equation}
+\vspace{2mm}
+
+Siendo $r_{*}$ y $r$, el radio de la estrella anfitriona y el radio del planeta respectivamente, $a$ semieje mayor de la órbita del planeta, $e$ excentricidad y $w$ argumento del pericentro.   
+
+Si el radio del planeta es mucho mas pequeño que el radio estelar ($r<<r_{*}$) y la excentricidad es cercana a cero ($e \approx 0$), la ecuación (1) se reduce a: 
+
+\begin{equation}
+p=r_{*}/a
+\end{equation} 
+
+Siguiendo el planteo propuesto por \citet{ananyeva2020}, a cada planeta en tránsito de la muestra considerada se le asigna un peso estadístico, definido como $w_{i}$, que es inversamente proporcional
+a la probabilidad de una configuración de tránsito: $w_i= 1/p \approx a/r_{*}$.
+
+La Fig. \ref{Figura 4} muestra la distribución de masa acumulativa en escala logarítmica (y su respectivo ajuste) para los exoplanetas en tránsito sin considerar el factor de sesgo observacional, mientras que la Fig. \ref{Figura 5} muestra la distribución de masa acumulativa teniendo en cuenta el parámetro $w_i$. Los resultados obtenidos para las aproximaciones con una función de ley de potencia a la distribución de masa sin tener en cuenta y teniendo en cuenta el parámetro $w_i$ son: ${\rm d}(N\geq m)/{\rm d}log(m) \propto m^{-1.45\pm 0.04 }$ y ${\rm d}(N\geq m)/{\rm d}log(m) \propto m^{-0.79\pm 0.01 }$, respectivamente.      
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{FIGURA4.pdf}
+\captionof{figure} {En celeste: distribución acumulativa de masas para los 92 exoplanetas en tránsito, sin tener en cuenta la probabilidad geométrica de observar un tránsito. En gris: su respectivo ajuste a una ley de potencia ${\rm d}(N\geq m)/{\rm d}log(m) \propto m^{-1.45\pm 0.04 }$.}
+\label{Figura 4}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{FIGURA5.pdf}
+\captionof{figure}{La curva azul representa la distribución acumulativa de masa para los 92 exoplanetas detectados mediante el método de tránsitos corregida por el coeficiente $w_{i}$. En negro: su respectivo ajuste a una ley de potencia ${\rm d}(N\geq m)/{\rm d}log(m) \propto m^{-0.79\pm 0.01 }$.}
+\label{Figura 5}
+\end{figure}
+
+\section{Resultados y conclusiones}
+
+Estudiar la distribución estadística de las masas de exoplanetas es importante para comprender la variedad planetaria, así como para evaluar y perfeccionar los modelos de formación y evolución planetaria. Las observaciones de esta distribución nos brindan la oportunidad de poner a prueba y mejorar los modelos teóricos existentes, además de comparar sus predicciones con los datos observados. Este enfoque permite avanzar en la comprensión de los procesos físicos involucrados en la formación y evolución de los planetas.
+
+En este trabajo, se analizó la distribución de masas de un total de 194 exoplanetas obtenidos del catálogo generado por \citet{mishra2023}. Esta muestra representa aproximadamente solo el 3 $\%$ de los exoplanetas reportados hasta la fecha. Se determinó que la distribución de masas puede describirse mediante una ley de potencia: $ {\rm d}(N \geq m)/{\rm d}log(m) \propto m^{-0.48 \pm 0.008} ({\rm d}(N\geq m)/{\rm d}m \propto m^{-1.48 \pm 0.008}) $. Para este estudio tanto la distinción entre masa y masa mínima, como factores de selección observacional fueron ignorados.  
+
+Ademas se estudió la distribución de masas de los exoplanetas de la muestra que fueron detectados mediante el método de tránsitos y se corrigió dicha distribución teniendo en cuenta la probabilidad de configuración de un tránsito. Se encontró que esta distribución puede aproximarse también mediante una ley de potencia: $ {\rm d}(N \geq m)/{\rm d}log(m) \propto m^{-0.79 \pm 0.01 }$ (${\rm d}(N\geq m)/{\rm d}m \propto m^{-1.79 \pm 0.01 }$). Es importante destacar que esta aproximación no logra representar adecuadamente el extremo izquierdo de la distribución. Esto podría atribuirse a las limitaciones en la detección, ya que esta región corresponde a exoplanetas de baja masa, los cuales son más difíciles de detectar y medir con precisión. La fracción de exoplanetas en tránsito con masas medidas, mediante la técnica de velocidad radial, por ejemplo, está limitada por el hecho de que es más fácil medir la masa de planetas gigantes masivos que la de planetas más pequeños. 
+
+Como se mencionó anteriormente se espera a futuro realizar un análisis de la distribución de masas sobre las diferentes arquitecturas planetarias, con la finalidad de estudiar si estos resultados podrían sugerir ciertos mecanismos de formación predominantes y explorar como estas distribuciones se relacionan con otras carácteristicas físicas y dinámicas del sistema planetario.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\subsection{Referencias cruzadas}\label{ref}
+
+%Su artículo debe emplear referencias cruzadas utilizando la herramienta  {\sc bibtex}. Para ello elabore un archivo (como el ejemplo incluido: {\tt bibliografia.bib}) conteniendo las referencias {\sc bibtex} utilizadas en el texto. Incluya el nombre de este archivo en el comando \LaTeX{} de inclusión de bibliografía (\verb|\bibliography{bibliografia}|). 
+%Recuerde que la base de datos ADS contiene las entradas de {\sc bibtex}  para todos los artículos. Se puede acceder a ellas mediante el enlace ``{\em Export Citation}''.
+
+%El estilo de las referencias se aplica automáticamente a través del archivo de estilo incluido (baaa.bst). De esta manera, las referencias generadas tendrán la forma co\-rrec\-ta para un autor \citep{hubble_expansion_1929}, dos autores \citep{penzias_cmb_1965,penzias_cmb_II_1965}, tres autores \citep{navarro_NFW_1997} y muchos autores \citep{riess_SN1a_1998}, \citep{Planck_2016}.
+
+\begin{acknowledgement}
+
+Los autores agradecen el apoyo financiero de CONICET a través del PIP 112-202001-01227 y de la Universidad Nacional de San Juan mediante un subsidio de CICITCA para el período 2023-2024
+
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                           %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\bibliographystyle{baaa}
+\small
+\bibliography{Biblio}
+\end{document}

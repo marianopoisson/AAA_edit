@@ -1,0 +1,555 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\newcommand{\manu}[1]{\textcolor{red}{#1}}
+\newcommand{\michu}[1]{\textcolor{purple}{#1}}
+\usepackage{enumitem}
+\usepackage{ulem}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{11 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Supernovas asociadas a explosiones de radiación gamma}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Supernovas asociadas a explosiones de radiación gamma}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+L.M. Román Aguilar\inst{1,2},
+M.M. Saez\inst{3,4},
+\&
+M.C. Bersten\inst{1,2}
+}
+
+\authorrunning{Román Aguilar et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mroman94@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina\and  
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+\and
+Interdisciplinary Theoretical and Mathematical Sciences Program, RIKEN, Japón
+\and
+Department of Physics ans Astronomy, University of California, EE.UU.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{%Esta es una guía de preparación de artículos para el \textit{Boletín de la Asociación Argentina de Astronomía} (BAAA), que además sirve de macro para el Volumen 65. Por favor lea con atención su contenido a fin de prevenir los errores de estilo más frecuentes. Lea también con atención los comentarios, precedidos con el símbolo ``\%" en el archivo fuente \LaTeX{} de este documento. El presente es el único formato aceptado para los artículos recibidos por los editores. Su envío deberá hacerse exclusivamente mediante el Sistema de Gestión de Manuscritos del BAAA (SiGMa).
+En este trabajo estudiamos %las propiedades físicas de
+un conjunto de ocho supernovas (SNs) asociadas a explosiones de radiación gamma (GRB-SNs), con el objetivo de identificar las propiedades físicas que las caracterizan. Para garantizar la comparabilidad entre estos objetos, realizamos una homogeneización de la muestra, dado que en la literatura encontramos distintos métodos de cálculo de luminosidades bolométricas aplicados. Mediante un código hidrodinámico, modelamos las SNs de la muestra y derivamos sus parámetros físicos. %Finalmente, contrastamos nuestros resultados con los parámetros obtenidos en la literatura para un grupo de SNs deficientes en hidrógeno y otro de SNs clasificadas como Ic con l\'ineas anchas. 
+Nuestros resultados muestran una degeneración en los modelos. Por un lado, modelos de baja masa y por otro, modelos de alta masa que necesitan la formación de remanentes compactos consistentes con agujeros negros estelares. Independientemente del modelo elegido, hay un requerimiento en común: la masa eyectada debe ser baja para reproducir las observaciones.}
+
+\abstract{%This is the author guide to prepare articles for the \textit{Boletín de la Asociación Argentina de Astronomía} (BAAA), intended also as a macro for Volume 65. Please read carefully its content to prevent the most frequent style errors. Please also read carefully the comments preceded by the symbol ``\%"in the \LaTeX{} source file of this document. This is the only format accepted for article submission, that must be done via the BAAA Manuscript Management System (SiGMa).
+%The origin of supernovae (SNe) associated with long gamma-ray burst (GRB-SNe) is a captivating and currently debated topic. All these SNe have been classified as type Ic-BL, meaning they are deficient in hydrogen and helium and also exhibit broad lines in their spectra. This latter characteristic indicates that their velocities, and hence their energy, surpass those commonly observed in other SNe. 
+In this study we analyze a set of eight GRB-SNe, with the aim to identify the the physical properties that chacaterize these events. To ensure comparability, we homogenize the sample, since different methods have been applied in the literature to calculate bolometric luminosities. Using a hydrodynamic code, we model the SN sample and derive their physical parameters. %Finally, we compare our results with parameters obtained from the literature for a group of hydrogen-deficient SNe and a group of SNe Ic-BL without a GRB detected.
+Our results reveal a degeneration in the models, with both low-mass and high-mass initial models being acceptable. High-mass models require compact remnants consistent with stellar black holes formation. Regardless of the chosen model, a common requirement emerges: low ejected mass is necessary to reproduce the observations.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ supernovae: general --- gamma rays: stars --- gamma-ray burst: general }
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{sec:intro}
+El origen de las GRB-SNs es un tema interesante que se encuentra actualmente en discusión. Todas estas SNs han sido clasificadas como de tipo Ic-BL, es decir, SNs de colapso de núcleo, deficientes en hidrógeno y helio, que además presentan líneas anchas en sus espectros (BL: \textit{Broad-Lines}, líneas anchas). Esta última característica indica que sus velocidades, y por lo tanto su energía, son superiores a las observadas en otras SNs \citep{Modjaz:2016}. %Para explicar el mecanismo de explosión de estos objetos de colapso nuclear, se han propuesto al menos dos modelos teóricos. Por un lado un mecanismo impulsado por neutrinos, y otro impulsado por \textit{jets}. Sin embargo, se piensa que la energía de explosión que se puede obtener mediante el mecanismo de neutrinos (2 $\times$ 10$^{51}$erg $=$ 2 foe) es insuficiente para explicar las altas energías que se observan en estos objetos (3-10 foe) \citep{Shishkin:23,Soker:23}.
+La primera GRB-SN observada fue la SN 1998bw (z\,=\,0.0085, \cite{Galama:1999}), que coincidió temporal y espacialmente con el GRB 980425 (\cite{Soffitta:1998}). Luego de esta, y hasta la actualidad, gracias a los lanzamientos de nuevos telescopios y satélites, ha habido un gran aumento de dichas detecciones; por ejemplo SN 2003dh \citep{Hjorth:2003}, SN 2013dx \citep{DElia:2015}, SN 2016jca \citep{Pian:2016}, % SN 2019jrj \citep{Melandri:2021}, SN 2022xiw \citep{DeUgarte:2022},
+SN 2023pel \citep{Agui:2023}, entre otras. Asimismo, las SNs Ic-BL también han sido asociadas a \textit{flashes} de rayos X (XRFs). Se piensa que estos eventos son fenómenos parecidos a los GRBs, pero que alcanzan menores rangos de luminosidad \citep{Heise:2001}. Ejemplos de estas asociaciones son las SN 2006aj y SN 2010bh asociadas con los XRF 060218 y XRF 100316D respectivamente \citep{Pian:2006, Cano:2011}. Conviene resaltar que no todas las SNs Ic-BL cuentan con un GRB detectado. El motivo de esta diferencia, o si comparten un origen en común con las GRB-SNs, está aún en debate. Dentro de este grupo se encuentran SNs tales como SN 2002ap \citep{Deng2:2003}, SN 2018bvn \citep{Ho:2020b}, y la SN 2020bvc \citep{Ho:2020}.\\
+En este trabajo, hemos seleccionado una muestra de ocho GRB-SNs y estandarizado el método de cálculo de sus luminosidades bolométricas (Lbol), para garantizar la comparabilidad entre ellas. Luego, derivamos sus parámetros físicos a través del modelado hidrodinámico de sus curvas de luz y velocidades de expansión en simultáneo. %\manu{PONER UN CIERRE: PUEDE SER UN MINIMO RESUMEN DE LOS RESULTADOS HALLADOS, O UNA FRASECITA DE CIERRE MAS GENERICA (me inclino mas por lo segundo).}
+%\michu{\sout{De esta manera hemos podido evitar la degeneración entre parámetros que puede\michu{(suele??)} darse al no tener en cuenta también datos provenientes de la espectroscopía. En conjunto, este enfoque nos ayuda a comprender mejor el origen y las características particulares de estos fenómenos estelares. }
+Esperamos que este estudio contribuya a una mejor comprensión del origen y las características distintivas de estos fenómenos estelares.   %. Los resultados obtenidos fueron comparados con los par\'ametros f\'isicos obtenidos de la literatura para dos grupos distintos de SNs: %Finalmente, realizamos comparaciones de nuestros resultados con los parámetros físicos obtenidos de la literatura para dos grupos distintos de SNs: 
+%(a) SNs de colapso gravitatorio deficientes de hidrógeno (SE-SNs) y (b) SNs Ic-BL sin detección de GRB (en adelante SNs Ic-BL).
+
+%La 65a reunión anual de la Asociación Argentina de Astronomía (AAA) se desarrolló del 18 al 22 de septiembre de 2023 en la ciudad de San Juan. Durante la misma, se expusieron 68 trabajos en forma de presentaciones orales y 133  trabajos en forma de presentaciones murales, incluyendo 14 charlas invitadas (dos correspondientes a los Premios Sahade y Sérsic). Invitamos cordialmente a los expositores de dicha reunión a remitir sus contribuciones en forma escrita, para que puedan ser consideradas para su publicación en el {Vol. 65 del BAAA.}
+
+%El Comité Editorial de este volumen está integrado por Cristina H. Mandrini como Editora en Jefe. Claudia E. Boeris como Secretaria Editorial y Mariano Poisson como Técnico Editorial. A éstos se incorporan los Editores Asociados: Andrea P. Buccino, Gabriela Castelletti, Sofía A. Cora, Héctor J. Martínez y Mariela C. Vieytes. El Editor Invitado es Hernán Muriel, quien se desempeñó como Presidente del Comité Organizador Científico de la reunión. 
+
+%Al considerar el envío de su contribución, tener en cuenta los siguientes puntos:
+%\begin{itemize}
+%    \item La carga de contribuciones y su seguimiento durante la etapa de revisión, se realiza exclusivamente utilizando el Sistema de Gestión de Manuscritos de la AAA  (SiGMa)\footnote{\url{http://sigma.fcaglp.unlp.edu.ar/}}. 
+%    \item Las contribuciones serán revisadas por árbitros externos asignados por los editores (excepto las correspondientes a informes invitados, premios y mesas redondas). Los árbitros constatarán, entre otros aspectos, la originalidad de su contribución. No se aceptarán contribuciones ya publicadas o enviadas a publicar a otra revista. 
+%    \item Los manuscritos aceptados formarán parte de la base de publicaciones ADS.    
+%    \item  El BAAA está regulado por el Reglamento de Publicaciones\footnote{\url{http://astronomiaargentina.org.ar/uploads/docs/reglamento_publicaciones.pdf}} de la AAA, artículos 2 al 6.
+%\end{itemize}
+                                                                   
+%Agradecemos desde ya el envío de contribuciones en tiempo y forma, ayudando a lograr que la próxima edición de la única publicación de astronomía profesional de la Argentina se publique lo antes posible.
+
+
+
+\section{Muestra y homogeneización}\label{sec:muestra}
+
+%Para la b\'usqueda de objetos, inicialmente nos basamos en el trabajo de \cite{Cano:2017}, donde se presenta una recopilaci\'on de datos de GRB-SNs. Seleccionamos a aquellos objetos que tuvieran una buena cobertura temporal, fotom\'etrica y espectrosc\'opica. Estas condiciones son escenciales para el modelado hidrodin\'amico. De dicha referencia, elegimos a las SN 1998bw, SN 2003dh, SN 2003lw, SN 2006aj, SN 2010bh y SN 2012bz. Posteriormente, agregamos a la muestra objetos m\'as recientes como la SN 2013dx estudiada por \cite{Taddia:2019} y \cite{DElia:2015}, as\'i como a la SN 2016jca de los trabajos de \cite{Cano:2017b} y \cite{Ashal:2019}.
+
+%Con el objetivo de realizar comparaciones significativas entre los objetos de nuestra muestra, decidimos realizar una homogeneización siguiendo los pasos que se detallan a continuación.
+%Dados los diferentes de m\'etodos y aproximaciones utilizados en la literatura para calcular las Lbol de estas SNs, decidimos realizar una homogeneizaci\'on de dicho c\'alculo. De esta manera garantizamos que las comparaciones que hagamos entre los objetos de la muestra sean significativas. 
+
+Para la búsqueda de GRB-SNs a estudiar, nos basamos en la recopilaci\'on realizada por \cite{Cano:2017}, de donde seleccionamos a  aquellas SNs que tuvieran una buena cobertura temporal, fotom\'etrica y espectrosc\'opica. Estas son: SN 1998bw, SN 2003dh, SN 2003lw, SN 2006aj, SN 2010bh y SN 2012bz. Luego, revisamos la literatura en búsqueda de objetos más recientes, e incorporamos en nuestro análisis a la SN 2013dx estudiada por \cite{Taddia:2019} y \cite{DElia:2015}, as\'i como a la SN 2016jca de los trabajos de \cite{Cano:2017b} y \cite{Ashal:2019}. Finalmente, nuestra muestra comprende: SN 1998bw/GRB 980425, SN 2003dh/GRB 030329, SN 2003lw/GRB 031203, SN 2006aj/XRF 060218, SN 2010bh/XRF 100316D, SN 2012bz/GRB 120422, SN 2013dx/GRB 130702A y SN 2016jca/GRB 161219B.
+
+En la literatura, se han utilizado diversos métodos para calcular las curvas de luz bolométricas o pseudo-bolométricas asociados a estos objetos \citep{Deng:2005, Mazzali:2006, Cano:2011, Schulze:2014, DElia:2015, Ashal:2019}. Estos métodos incluyen diferentes rangos de integración para la fotometría, diversos enfoques para considerar los flujos omitidos en las regiones azul y roja, la consideración de diferentes curvas de extinción y la suposición de diferentes cosmologías (es decir, diferentes valores para H$_0$, $\Omega_{\Lambda}$, $\Omega_{\rm{M}}$), entre otros factores. Para trabajar de manera más consistente, decidimos utilizar la fotometría disponible de cada uno de los objetos (cuando ha sido posible), en lugar de usar las CLs pseudo-bolom\'etricas presentadas por los distintos autores. De esta manera podemos construir todas las CLs lo más estandarizadas posible. Para ello, aplicamos las siguientes correcciones y calibraciones a los datos fotom\'etricos:
+%\subsection{Homogeneizaci\'on}\label{sec:homog}
+
+%Para trabajar con estas SNs, hemos elegido basarnos en la fotometr\'ia de cada una de ellas (cuando ha sido posible), en lugar de usar las curvas de luz (CLs) pseudo-bolom\'etricas presentadas por los distintos autores. Luego, aplicamos las siguientes correcciones y calibraciones a los datos fotom\'etricos, para obtener las CLs bolom\'etricas:
+
+\begin{enumerate}[label=(\alph*)]
+\item Correcci\'on por extinci\'on Gal\'actica y por galaxia hu\'esped. Las correciones se realizaron siguiendo la ley de extinci\'on propuesta por \cite{Cardelli:1989} para  $\rm{R_{V}}=3.1$. Los valores adoptados para $\rm{E(B-V)_G \ y \ E(B-V)_H}$ fueron obtenidos de la literatura y se muestran en la Tabla \ref{tabla1}.
+\item Calibraci\'on presentada por \cite{Lyman:2014}, la cual ofrece una aproximaci\'on para el c\'alculo de las magnitudes bolom\'etricas, bas\'andose en datos fotom\'etricos BVRI o \textit{g r i}, de SE-SNs. En dicho trabajo se propone que la correcci\'on bolom\'etrica puede ser calculada mediante un polinomio de grado 2, en funci\'on de la diferencia de magnitudes de dos bandas fotom\'etricas. 
+\item Corrección por cosmología para recalcular las distancias de luminosidad. De esta manera, para todos los objetos de la muestra consideramos una cosmología $\mathrm{Flat\,\Lambda CDM}$, con H$_0=73.4 \, [\rm{km}\,\rm{s}^{-1} \rm{Mpc}^{-1}]$, $\rm{\Omega_M= 0.338 \pm 0.018}$, y $\Omega_\Lambda=0.662 \pm 0.018$ \citep{Brout:2022}.
+\end{enumerate}
+
+
+%\begin{itemize}
+ %   \item (a) Correcci\'on por extinci\'on, tanto Gal\'actica como de la galaxia hu\'esped. Para esto usamos la ley de extinci\'on propuesta por \cite{Cardelli:1989} para  $\rm{R_{V}} = 3.1$. Los valores adoptados para $\mathrm{E(B-V)_G \ y \ E(B-V)_H}$ fueron obtenidos de la literatura y se muestran en la Tabla \ref{tab:propiedades}. 
+%    \item (b) Utilizamos la calibraci\'on presentada por \cite{Lyman:2014}, la cual ofrece una aproximaci\'on para el c\'alculo de las magnitudes bolom\'etricas, bas\'andose en datos fotom\'etricos BVRI o \textit{g r i}, de SE-SNs. En dicho trabajo se propone que la correcci\'on bolom\'etrica puede ser calculada mediante un polinomio de grado 2, de la diferencia de magnitudes de dos bandas fotom\'etricas. Luego, su Lbol puede ser calculada a partir de la magnitud bolom\'etrica. En los casos en los que hubieron m\'ultiples bandas fotom\'etricas disponibles, la Lbol fue calculada como el promedio entre los colores de las mismas.
+%    \item (c) Aplicamos también una corrección por cosmología para recalcular las distancias de luminosidad. De esta manera todos los objetos de la muestra tendrán los mismos parámetros cosmológicos. Consideramos una cosmología $\mathrm{Flat\,\Lambda CDM}$, con H$_0=73.4 \pm 1.1 \, [\rm{km}\,\rm{s}^{-1} \rm{Mpc}^{-1}]$, $\rm{\Omega_M= 0.338 \pm 0.018}$, and $\Omega_\Lambda= 0.662 \pm 0.018$, que fueron derivados de SNs Ia y variables Cefeidas, del trabajo de \cite{Brout:2022}. %El valor máximo de diferencia encontrado para las Lbol fue de 0.164 dex. 
+%\end{itemize}
+
+\begin{table}
+\centering
+\caption{Propiedades de la muestra de GRB/XRF-SNs. Las columnas corresponden a: \textit{redshift}, distancia corregida, extinción galáctica y por galaxia huésped.}
+\begin{tabular}{lccccc}
+\hline\hline\noalign{\smallskip}
+\!\!\textbf{GRB-SN} & \textbf{z} & \textbf{d [Mpc]} &  \textbf{E(B-V)$_{\bf{G}}$}  & \textbf{E(B-V)$_{\bf{H}}$} \\
+\hline\noalign{\smallskip}
+\!\!{1998bw} & 0.0085 & 34.9 & 0.06 & -\\
+\!\!{2003dh} & 0.1685 & 769.2 & 0.025 & -\\
+\!\!{2003lw} & 0.1055 & 463.4 & 0.78 & 0.25\\
+\!\!{2006aj} & 0.03342 & 139.9 & 0.13 & -\\
+\!\!{2010bh} & 0.0591 & 251.8 & 0.117 & 0.063\\
+\!\!{2012bz} & 0.283 & 1373.9 & 0.03 & -\\
+\!\!{2013dx} & 0.145 & 652.7 & 0.04 & -\\
+\!\!{2016jca} & 0.1475 & 665.0 & 0.028 & -\\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+\subsection{Curvas de luz resultantes}\label{sec:resultantes}
+
+En los casos en los que fue posible, trabajamos con los datos fotométricos y aplicamos las 3 correcciones mencionadas anteriormente, de manera de obtener la CL bolométrica asociada a las SNs. Sin embargo, este no fue el caso de las SN 2003lw, SN 2012bz, SN 2013dx y SN 2016jca. Para estos objetos, debimos trabajar directamente con las CLs pseudo-bolométricas publicadas en la literatura, corregidas únicamente por (c). En el primero de los casos (SN 2003lw), esto se debió a que la fotometría disponible correspondía solo a las bandas I y J \citep{Cobb:2004,GalYam:2004}, lo que resulta insuficiente para utilizar la calibración (b).  Luego, en los 3 casos restantes, la fotometría presentada no contaba con la corrección K, la cual se vuelve muy importante a altos valores de redshift (z $\gtrsim$ 0.1), de manera que la calibración (b) no podía ser aplicada a dichas SNs.%las SN 2012bz, SN 2013dx y SN 2016jca.
+
+En la Fig. \ref{fig:all} mostramos las CLs y las velocidades medidas de la línea de Fe II $\lambda$5169 \AA, para toda la muestra de GRB-SNs. Se estima que dicha línea muestrea adecuadamente la fotósfera \citep{Dessart:2005,Schulze:2014}. Los datos de las velocidades fueron obtenidos del trabajo de \cite{Schulze:2014}. En dicha figura podemos diferenciar las CLs bolométricas (con las correcciones aplicadas) en línea contínua, y las CLs pseudo-bolométricas halladas en la literatura, en línea punteada. En general, observamos que las diferencias existentes entre nuestras CLs bolométricas y las pseudo-bolométricas de otros autores, son pequeñas. En los casos donde la única corrección aplicada fue (c), dicha diferencia se mantiene constante a lo largo de la CL, dado que al corregir solo por cosmología, se altera la distancia de luminosidad utilizada para estimar las magnitudes. %, por ello la misma variación se aplica a lo largo de toda la CL.
+Al cuantificar esta diferencia obtuvimos un valor máximo de $10^{-3}$ dex, correspondiente a la SN 2013dx. Para las SN 1998bw, SN 2003dh, SN 2006aj y SN 2010bh, a las cuales fue posible aplicar todas las correcciones, las diferencias obtenidas varían a lo largo de la CL y son de 0.164 dex como máximo. Estos valores las sitúa dentro de los rangos de error estimados por otros autores. %\manu{Para las SN 1998bw, SN 2003dh, SN 2006aj y SN 2010bh, fue factible aplicar todas las correcciones. En estos casos, las discrepancias entre las CL bolométricas obtenidas en este estudio y las pseudo-bolométricas derivadas en otros trabajos varían a lo largo de la CL y resultan ser de 0.164 dex como máximo, lo que las sitúa dentro de los rangos de error estimados por otros autores.} %\sout{Para las SN 1998bw, SN 2003dh, SN 2006aj y SN 2010bh, a las cuales fue posible aplicar todas las correcciones, la diferencia varía a lo largo de la CL.} 
+Como mencionamos previamente, esto podría deberse a distintos procedimientos o extrapolaciones utilizadas en la literatura para calcular la CL bolométrica. % o a la extrapolación utilizada para la integración de flujos faltantes hacia el rojo o el UV. 
+A pesar de ser correcciones menores, su relevancia reside en la capacidad de llevar a cabo una comparación más precisa entre las SNs de la muestra. A su vez, estas variaciones en la CL serán importantes para determinar con mayor precisión las características físicas de los objetos, como por ejemplo la cantidad de n\'iquel radiactivo sintetizado en la explosión.
+
+
+%, al corregir por h0, distintos procedimientos en metodos de calculo de CLs bolometricas, mayor dex 0.164 para 03lw, se ve que al corregir solo por h0 la diferencia es una constante a lo largo de la curva, afecta más a epocas tempranas la aprox de integracion de flujops hacia el azul 2006aj,  )
+
+%Para varias SNs de la muestra nos fue posible aplicar las 3 correcciones/calibraciones propuestas anteriormente, sin embargo este no fue el caso de las SN 2003lw, SN 2012bz, SN 2013dx y SN 2016jca. Para ellas utilizamos las CLs pseudo-bolométricas publicadas en la literatura, corregidas únicamente por (c). En el primero de los casos (SN 2003lw) la fotometría disponible abarcaba solo a las bandas I y J \citep{Cobb:2004,GalYam:2004}, lo cual resultaba insuficiente para utilizar la calibración (b). En la Ref. \cite{Lyman:2014} los colores necesarios para dicha calibración son (B-V), (B-R), (B-I), (V-R) ó (V-I). Luego, en los 3 casos restantes la fotometría presentada no contaba con la corrección K, la cual se vuelve muy importante a los altos valores de redshift de estos objetos (z $\gtrsim$ 0.1). Por ello, la calibración (b) no podía ser aplicada a las SN 2012bz, SN 2013dx y SN 2016jca. 
+
+%En la Fig. \ref{fig:all} mostramos todas las CLs y las velocidades medidas de la línea de Fe II $\lambda$5169 \AA, para toda la muestra de GRB-SNs. En ella podemos diferenciar las CLs bolométricas (con las correcciones aplicadas) en línea contínua, y las CLs pseudo-bolométricas en línea punteada.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{all_CL_and_velos_v4_RAAA65.pdf}\vspace{-1cm}
+    \caption{\textit{Panel superior:} CLs corregidas de GRB-SNs (l\'ineas continuas) y CLs pseudo-bolom\'etricas presentadas en otras referencias (l\'ineas punteadas). \textit{Panel inferior:} Velocidades medidas de la l\'inea de FeII $\lambda$5169${\AA}$. Las barras de error omitidas para mayor claridad. }
+    \label{fig:all}
+\end{figure}
+
+%nos permitimos realizar comparaciones significativas entre ellas. 
+%El BAAA admite dos categorías de contribución:
+%\begin{itemize}
+%    \item Breve (4 páginas), correspondiente a comunicación oral o mural.
+%    \item Extensa (8 páginas), correspondiente a informe invitado, mesa redonda o premio.
+%\end{itemize}
+%El límite de páginas especificado para cada categoría aplica aún después de introducir correcciones arbitrales y editoriales. Queda a cargo de los autores hacer los ajustes de extensión que resulten necesarios. {No está permitido el uso de comandos que mo\-di\-fiquen las propiedades de espaciado y tamaño del texto}, tales como $\backslash${\tt small}, $\backslash${\tt scriptsize}, $\backslash${\tt vskip}, etc. 
+
+
+%Tenga en cuenta los siguientes puntos para la correcta preparación de su manuscrito:
+%\begin{itemize}
+%    \item Utilice exclusivamente este macro ({\tt articulo-baaa65.tex}), no el de ediciones anteriores. El mismo puede ser descargado desde SiGMa o desde el sistema de edición en línea \href{https://www.overleaf.com/}{\emph{Overleaf}}, como la plantilla titulada  \emph{Boletín Asociación Argentina de Astronomía}.
+%   \item Elaborar el archivo fuente (*.tex) de su contribución respetando el formato especificado en la Sec.~\ref{sec:guia}      
+%   \item No está permitido el uso de definiciones o comandos personalizados en \LaTeX{}.
+%\end{itemize}
+
+%\subsection{Plazos de recepción de manuscritos}
+
+%La recepción de trabajos correspondientes a comunicación oral o mural se extiende hasta el día {\bf 9 de febrero de 2024} inclusive. Las contribuciones tipo informe invitado, mesa redonda o premio, se recibirán hasta el {\bf 16 de febrero de 2024} inclusive. La recepción finalizará automáticamente en las fechas indicadas, por lo que no se admitirán contribuciones enviadas con fechas posteriores.
+
+
+\section{Modelado hidrodinámico}\label{sec:modelado}
+
+Utilizamos el código hidrodinámico Lagrangiano en 1D descripto en el trabajo de \cite{Bersten:2011}. Este código simula la explosión de la SN y genera CLs bolométricas y velocidades fotosféricas. Para iniciar dicha explosión, son necesarios modelos pre-SN obtenidos a partir de la evolución de estrellas en equilibrio hidrostático, que son utilizados para los cálculos hidrodinámicos. En este trabajo consideramos modelos pre-SN calculados por \cite{Nomoto:1988}, los cuales siguen la evolución de la estrella desde la ZAMS hasta su etapa pre-explosión. Específicamente utilizamos los modelos ricos en helio de 3.3 M$_\odot$ (He3), 4 M$_\odot$ (He4), 5 M$_\odot$  (He5), 6 M$_\odot$ (He6) y 8 M$_\odot$ (He8), dada la falta de modelos deficientes en He disponibles. Estos modelos se corresponden con masas de remanentes compactos (M$_{\rm{cut}}$) estándares de 1.4, 1.5, 1.6, 1.7, 1.85 M$_\odot$, y con M$_{\rm{ZAMS}}$ 13, 15, 18, 20 and 25 M$_\odot$, respectivamente \citep{Sugimoto:1980,Tanaka:2009}. Además, dado que este tipo de objetos son generalmente asociados a eventos más extremos, con mayores energías y progenitores más masivos, también empleamos un modelo pre-SN de 11 M$_\odot$ (He11) calculado por el Dr. Laureano Martinez, usando el código público MESA \citep{Paxton:2011}. Dicho modelo se corresponde con M$_{\rm{cut}}$ estándar de 2.5 M$_\odot$ y con una M$_{\rm{ZAMS}}$ de \mbox{30 M$_\odot$.}
+
+%Nuestro modelado se basa en la comparación de los datos observacionales con los modelos que se obtienen al variar distintos parámetros físicos. De esta manera, elegimos como óptimo el conjunto de parámetros que mejor describa las observaciones. 
+Los parámetros libres del código son: masa pre-SN (M$_{\rm{preSN}}$), energía de explosión (E) y la masa de $^{56}\rm{Ni}$ (M$_{\rm{Ni}}$). Tanto M$_{\rm{cut}}$ como la masa eyectada post-explosión ($\mathrm{M_{ej}}$) son también tenidos en cuenta, dada la relación $\mathrm{M_{preSN}= M_{cut}+M_{ej}}$. Para identificar el modelo más adecuado, ajustamos los parámetros libres y buscamos aquella combinación que mejor represente las Lbol, %previamente estandarizados como se describió en la Sección \ref{sec:muestra},
+y la evoluci\'on de velocidades de manera simultánea.
+
+
+Para más del 60\% de los objetos de la muestra, encontramos dos soluciones posibles. Una asociada a modelos iniciales pre-SN de baja masa (M${_{\rm{PreSN}}} < 8$ M$_\odot$) y otra asociada a modelos de alta masa (M${_{\rm{PreSN}}} \geq 8$ M$_\odot$). Los parámetros correspondientes a los mejores modelos, se muestran en la Tabla \ref{table:best_param}. A su vez, en la Figura \ref{fig:modelos} mostramos, a modo de ejemplo, los modelos hallados para 3 de las SNs de la muestra, tanto la solución de baja masa como la de alta masa (l\'ineas sólidas y punteadas respectivamente).
+
+
+Como se observa en la Tabla \ref{table:best_param}, las GRB-SNs son objetos muy energéticos (E $\sim$ 10 foe) y ricos en n\'iquel (M$_{\rm{Ni}} \gtrsim 0.2$ M$\odot$), en comparación con las SNs de colapso gravitatorio normales (ver por ejemplo \cite{Taddia:2018}). Sin embargo, podemos notar que precisamente las SNs vinculadas a XRFs, son aquellas que presentan los valores más bajos de M$_{\rm{Ni}}$ de toda la muestra, lo cual está en acuerdo con que son también fenómenos de menor luminosidad que las GRB-SNs \citep{Heise:2001}.%Cabe destacar que, como se puede ver de la Tabla \ref{table:best_param}, independientemente del modelo elegido, las GRB-SNs son objetos muy energéticos (E $\sim$ 10 foe), y sus M$_{\rm{Ni}}$ son superiores a 0.2 M$_\odot$, que es un valor límite esperable para SNs de colapso gravitatorio normales \citep{Taddia:2018}. Sin embargo, podemos notar que precisamente las SNs vinculadas a XRFs, son aquellas que presentan los valores más bajos de M$_{\rm{Ni}}$ de toda la muestra, lo cual está en acuerdo con que son también fenómenos de menor luminosidad que las GRB-SNs \citep{Heise:2001}.}%, y además las $\mathrm{M_{ej}}$ se mantienen en un rango de valores esperables para las objetos mencionados.}
+%\manu{FALTARIA TAL VEZ DECIR ALGO DE LAS ENERGIAS Y MASAS DE NIQUEL HALLADAS Y QUE LA MASA DE EYECTA SIEMPRE ES CHICA. (MUY RESUMIDITO). }
+%\subsection{Modelos}
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.45\textwidth]{modelos_RAAA65.pdf}\vspace{-1cm}
+    \caption{Comparaci\'on entre observables y modelos para las SNs 1998bw, SN 2013dx y SN 2012bz. \textit{Panel superior:} CLs bolom\'etricas. \textit{Panel inferior:} Evoluci'on de las velocidades de expansi\'on. Se muestran dos modelos posibles: de baja masa (l\'inea s\'olida) y de alta masa (l\'inea punteada).}
+    \label{fig:modelos}
+\end{figure}
+
+
+\begin{table}
+\centering
+\begin{center}
+\caption{Parámetros físicos derivados del modelado hidrodinámico. E en unidades de foe (1 foe$\,=10^{51}$erg), y M$_{\rm{Ni}}$, M$_{\rm{cut}}$ y M$_{\rm{ej}}$ en unidades de M$_\odot$.}
+{\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{cccccc}
+\hline
+\hline
+\textbf{SN} & \textbf{Modelo} & \textbf{E} & \textbf{M$_{\rm{Ni}}$} & \textbf{M$_{\rm{cut}}$} & \textbf{M$_{\rm{ej}}$}  \\
+\hline
+{\textbf{98bw}} & He5 & 15.3 & {0.6} &  1.6 & 3.4 \\
+ & He11 & 17 &  0.6 &  6.9 & 4.1 \\
+\hline
+\textbf{03dh} & He3 & 4.5 & 0.6 &  1.4 &  1.9 \\
+ & He11 & 10 & 0.53 & 8.2 & 2.8 \\
+\hline
+\textbf{03lw} & He11 & 23 & 0.74 &  6.9  & 4.1   \\
+\hline
+\textbf{06aj} & He4 & 1.8 & 0.23  & 3.18 & 0.82 \\
+\hline
+\textbf{10bh} & He11 & 33 & 0.24  & 7.7 & 3.3 \\
+\hline
+\textbf{12bz} & He3 & 3.5 & 0.75 & 1.4 & 1.9 \\
+ & He11 & 8.8 &  0.74 & 8.4 & 2.6\\
+\hline
+\textbf{13dx} & He5 & 2.5 & 0.35 &  3.5 & 1.5 \\
+ & He11 & 3.3 & 0.35 & 9.3 & 1.7 \\
+\hline
+\textbf{16jca} & He3 & 7.15 & 0.35  & 1.4 & 1.9 \\
+ & He11 & 12 & 0.34 &  8.6 & 2.4 \\
+\hline
+\end{tabular}}\label{table:best_param}
+\end{center}
+\end{table}
+
+\section{Discusi\'on y conclusiones}
+En este estudio, exploramos las características de SNs asociadas con estallidos de rayos gamma. Nuestro objetivo principal fue estimar sus propiedades físicas características. Para ello, trabajamos con una muestra que incluye ocho GRB/XRF-SNs y calculamos sus CLs bolométricas utilizando una metodología lo más uniforme posible. Para los objetos seleccionados, realizamos el modelado hidrodinámico de las CLs y las velocidades de expansión simultáneamente. De esta manera, derivamos los parámetros físicos que mejor reproducen los observables. En la mayoría de los casos, encontramos una degeneración en los modelos, hallando dos soluciones posibles: una asociada a modelos pre-SN de baja masa, y otra asociada a modelos pre-SN de alta masa. Esta ultima solución, además requiere la consideración de M$_{\rm{cut}} \geq$ 6.9 M$\odot$. Por lo tanto, la asociamos a la formación de un agujero negro estelar. Notamos que sin importar el modelo elegido, las GRB-SNs resultan ser objetos con energías altas, ricos en $^{56}\rm{Ni}$ y por lo tanto muy luminosos. Además, ambas soluciones comparten el requisito común de necesitar una baja M$_{\rm{ej}}$ para encontrar un modelo adecuado. Los valores encontrados para M$_{\rm{ej}}$ ($\sim$ 0.8 a 4 M$_\odot$) son similares a los observados en SNs de colapso gravitatorio normales. La solución asociada a modelos de alta masa parece ser la más natural para explicar este tipo de eventos, ya que los mismos suelen estar vinculados a progenitores muy masivos, y los parámetros hallados están en concordancia con otros estudios. Sin embargo, las soluciones de modelo de masa baja no pueden ser descartadas completamente. Aunque estos eventos están asociados con M$_{\rm{ZAMS}}$ grandes, las mismas podrían verse potencialmente afectadas por algún mecanismo intenso de pérdida de masa, resultando en una pre-SN menos masiva. Esta posibilidad, no ha sido investigada en profundidad en trabajos previos, y abordarlo contribuiría significativamente a resolver la degeneración en el modelado.
+%Al elaborar su manuscrito, siga rigurosamente el estilo definido en esta sección. Esta lista no es exhaustiva, el manual de estilo completo está disponible en la sección \href{http://sigma.fcaglp.unlp.edu.ar/docs/SGM_docs_v01/Surf/index.html}{Instructivos} del SiGMa. Si algún caso no está incluido en el manual de estilo del BAAA, se solicita seguir el estilo de la revista Astronomy \& Astrophysics\footnote{\url{{https://www.aanda.org/for-authors/latex-issues/typography}}}.
+
+%\subsection{Idioma del texto, resumen y figuras}
+
+%El artículo puede escribirse en español o inglés a decisión del autor. El resumen debe escribirse siempre en ambos idiomas. Todas las partes del documento (título, texto, figuras, tablas, etc.)  deben estar en el idioma del texto principal. Al utilizar palabras de un lenguaje diferente al del texto (solo si es inevitable) incluirlas en {\em cursiva}.
+
+%\subsection{Título}
+
+%Inicie en letra mayúscula solo la primera palabra, nombres propios o acrónimos. Procure ser breve, de ser necesario divida el título en múltiples líneas, puede utilizar el corte de línea (\verb|\\|). No agregue punto final al título.
+
+%\subsection{Autores}
+
+%Los autores deben estar separados por comas, excepto el último que se separa con ``\verb|\&|''. El formato es: S.W. Hawking (iniciales luego apellidos, sin comas ni espacios entre las iniciales). Si envía varios artículos, por favor revisar que el nombre aparezca igual en todos ellos, especialmente en apellidos dobles y con guiones.
+
+%\subsection{Afiliaciones}
+
+%El archivo ({\sc ASCII}) {\tt BAAA\_afiliaciones.txt} incluido en este paquete, lista todas las afiliaciones de los autores de esta edición en el formato adoptado por el BAAA. En caso de no encontrar su institución, respete el formato: Instituto (Observatorio o Facultad), Dependencia institucional (para instituciones en Argentina sólo indique las siglas), País (en español).  No incluya punto final en las afiliaciones, excepto si es parte del nombre del país, como por ejemplo: ``EE.UU.".
+
+%\subsection{Resumen}
+
+%Debe consistir de un solo párrafo con un máximo de 1\,500 (mil quinientos) caracteres, incluyendo espacios. Debe estar escrito en castellano y en inglés. No están permitidas las referencias bibliográficas o imágenes. Evite el uso de acrónimos en el resumen. 
+
+%\subsection{Palabras clave: \textit{Keywords}}
+
+%Las palabras clave deben ser escritas en inglés y seleccionarse exclusivamente de la lista de la American Astronomical Society (AAS) \footnote{\url{https://journals.aas.org/keywords-2013/}}. Toda parte indicada entre paréntesis no debe incluirse. Por ejemplo, ``(stars:) binaries (including multiple): close'' debe darse como ``binaries: close''. Palabras que incluyen nombres individuales de objetos lo hacen entre paréntesis, como por ejemplo: ``galaxies: individual (M31)". Respete el uso de letras minúsculas y mayúsculas en el listado de la AAS. Note que el delimitador entre palabras clave es el triple guión. Las {\em keywords} de este artículo ejemplifican todos estos detalles. 
+
+%Finalmente, además de las palabras clave listadas por la AAS, el BAAA incorpora a partir del Vol. 61B las siguientes opciones: {citizen science --- education --- outreach --- science journalism --- women in science}.
+
+%\subsection{Texto principal}
+
+%Destacamos algunos puntos del manual de estilo.
+
+%\begin{itemize}
+% \item La primera unidad se separa de la magnitud por un espacio inseparable (\verb|~|). Las unidades subsiguientes van separadas entre si por semi-espacios (\verb|\,|). Las magnitudes deben escribirse en roman (\verb|\mathrm{km}|), estar abreviadas, no contener punto final, y usar potencias negativas para unidades que dividen. Como ejemplo de aplicación de todas estas normas considere: $c \approx 3 \times 10^8~\mathrm{m\,s}^{-1}$ (\verb|$c \approx 3\times 10^8~\mathrm{m\,s}^{-1}$|).
+% \item Para incluir una expresión matemática o ecuación en el texto, sin importar su extensión, se requiere del uso de solo dos signos \verb|$|, uno al comienzo y otro al final. Esto genera el espaciado y tipografía adecuadas para cada detalle de la frase.
+%  \item Para separar parte entera de decimal en números utilizar un punto (no coma).
+%  \item Para grandes números, separar en miles usando el espacio reducido; ej.: $1\,000\,000$ (\verb+$1\,000\,000$+).
+%  \item Las abreviaturas van en mayúsculas; ej.: UV, IR.
+%  \item Para abreviar ``versus'' utilizar ``vs.'' y no ``Vs.''.
+%  \item Las comillas son dobles y no simples; ej.: ``palabra'', no `palabra'.
+%  \item Las llamadas a figuras y tablas comienzan con mayúscula si van seguidas del número correspon\-dien\-te. Si la palabra ``Figura'' está al inicio de una sentencia, se debe escribir completa. En otro caso, se escribe "Fig." (o bien Ec. o Tabla en caso de las ecuaciones y tablas).
+%  \item Especies atómicas; ej.: \verb|He {\sc ii}| (He {\sc ii}).
+%  \item Nombres de {\sc paquetes} y {\sc rutinas} de {\em software} con tipografía {\em small caps} (\verb|\sc|).
+%  \item Nombres de {\sl misiones espaciales} con tipografía {\em slanted} (\verb|\sl|)
+%\end{itemize}
+
+%\subsection{Ecuaciones y símbolos matemáticos}
+
+%Las ecuaciones deben enumerarse utilizando el entorno \verb|\begin{equation} ... \end{equation}|, o similares (\verb|{align}, {eqnarray}|, etc.). Las ecuaciones deben llevar al final la puntuación gramatical correspondiente, como parte de la frase que conforman. Como se detalla más arriba, para expresiones matemáticas o ecuaciones insertas en el texto, encerrarlas únicamente entre dos símbolos \verb|$|, utilizando \verb|\mathrm{}| para las unidades. Los vectores deben ir en ``negrita'' utilizando \verb|\mathbf{}|.
+
+%\subsection{Tablas}
+
+%Las tablas no deben sobrepasar los márgenes establecidos para el texto (ver Tabla \ref{tabla1}), y {no se pueden usar modificadores del tamaño de texto}.
+%En las tablas se debe incluir cuatro líneas: dos superiores, una inferior y una que separa el encabezado. Se pueden confeccionar tablas de una columna (\verb|\begin{table}|) o de todo el ancho de la página (\verb|\begin{table*}|).
+
+%\begin{table}[!t]
+%\centering
+%\caption{Ejemplo de tabla. Notar en el archivo fuente el manejo de espacios a fin de lograr que la tabla no exceda el margen de la columna de texto.}
+%\begin{tabular}{lccc}
+%\hline\hline\noalign{\smallskip}
+%\!\!Date & \!\!\!\!Coronal $H_r$ & \!\!\!\!Diff. rot. $H_r$& \!\!\!\!Mag. clouds $H_r$\!\!\!\!\\
+%& \!\!\!\!10$^{42}$ Mx$^{2}$& \!\!\!\!10$^{42}$ Mx$^{2}$ & \!\!\!\!10$^{42}$ Mx$^{2}$ \\
+%\hline\noalign{\smallskip}
+%\!\!07 July  &  -- & (2) & [16,64]\\
+%\!\!03 August& [5,11]& 3 & [10,40]\\
+%\!\!30 August & [17,23] & 3& [4,16]\\
+%\!\!25 September & [9,12] & 1 & [10,40]\\
+%\hline
+%\end{tabular}
+%\label{tabla1}
+%\end{table}
+
+%\subsection{Figuras}
+
+%Las figuras deberán prepararse en formatos ``jpg'', ``png'' o ``pdf'', siendo este último el de preferencia. Deben incluir todos los elementos que posibiliten su correcta lectura, tales como escalas y nombres de los ejes coordenados, códigos de líneas, símbolos, etc.  Verifique que la resolución de imagen sea adecuada. El tamaño de letra de los textos de la figura debe ser igual o mayor que en el texto del epígrafe (ver p.ej. la Fig.~\ref{Figura}). Al realizar figuras a color, procure que no se pierda información cuando se visualiza en escala de grises (como en la versión impresa del BAAA). Por ejemplo, en la Fig.~\ref{Figura}, las curvas sólidas podrían diferenciarse con símbolos diferentes (círculo en una y cuadrado en otra), y una de las curvas punteadas podría ser rayada. Para figuras tomadas de otras pu\-bli\-ca\-cio\-nes, envíe a los editores del BAAA el permiso correspondiente y cítela como exige la publicación original 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=\columnwidth]{ejemplo_figura_Hough_etal.pdf}
+%\caption{El tamaño de letra en el texto y en los valores numéricos de los ejes es similar al tamaño de letra de este epígrafe. Si utiliza más de un panel, explique cada uno de ellos; ej.: \emph{Panel superior:} explicación del panel superior. Figura reproducida con permiso de \cite{Hough_etal_BAAA_2020}.}
+%\label{Figura}
+%\end{figure}
+
+%\subsection{Referencias cruzadas}\label{ref}
+
+%Su artículo debe emplear referencias cruzadas utilizando la herramienta  {\sc bibtex}. Para ello elabore un archivo (como el ejemplo incluido: {\tt bibliografia.bib}) conteniendo las referencias {\sc bibtex} utilizadas en el texto. Incluya el nombre de este archivo en el comando \LaTeX{} de inclusión de bibliografía (\verb|\bibliography{bibliografia}|). 
+
+%Recuerde que la base de datos ADS contiene las entradas de {\sc bibtex}  para todos los artículos. Se puede acceder a ellas mediante el enlace ``{\em Export Citation}''.
+
+%El estilo de las referencias se aplica automáticamente a través del archivo de estilo incluido (baaa.bst). De esta manera, las referencias generadas tendrán la forma co\-rrec\-ta para un autor \citep{hubble_expansion_1929}, dos autores \citep{penzias_cmb_1965,penzias_cmb_II_1965}, tres autores \citep{navarro_NFW_1997} y muchos autores \citep{riess_SN1a_1998}, \citep{Planck_2016}.
+
+\begin{acknowledgement}
+Agradecemos a la Asociación Argentina de Astronomía por el espacio otorgado para compartir nuestro trabajo con la comunidad científica. 
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

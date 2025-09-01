@@ -1,0 +1,382 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Emisiones de radio kilom\'etricas de tipo II: lista completa de eventos observados en TNR}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Emisiones de radio kilom\'etricas de tipo II: lista completa de eventos observados en TNR}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{F. Manini\inst{1}, H. Cremades\inst{1}, M. Cécere \inst{2} \& F.M. L\'opez \inst{1}
+}
+
+\authorrunning{Manini et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{franco.manini@um.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Grupo de Estudios en Heliofisica de Mendoza, Universidad de Mendoza, Argentina
+\and
+Instituto de Astronom{\'\i}a Te\'orica y Experimental, CONICET--UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{ %AQUI HAY QUE MODIFICAR, YA QUE EL RESUMEN INCLUYE LOS RESULTADOS DE LA TABLA GRANDE QUE NO VAMOS A COLOCAR
+En el presente trabajo se describe una base de datos de eventos de radio de baja frecuencia construida analizando todos los espectros dinámicos provistos por el instrumento \textit{Thermal Noise Receiver} perteneciente al \textit{Radio and Plasma Wave Investigation} (WAVES) a bordo de la misión \textit{Wind} de NASA, ampliando así la base de datos en un trabajo anterior.
+La base de datos comprende los años 1994\,--\,2021, abarcando más de dos ciclos solares completos. En esta base además, se interrelaciona la detección de las ondas de radio de baja frecuencia con estructuras interplanetarias detectadas in situ como ondas de choque y eyecciones coronales de masa interplanetarias. Se encontraron un total de 320 eventos, de los cuales 136 no habian sido catalogados previamente. Además, 121 ondas de choque que llegaron a las cercanías de nuestro planeta pudieron ser asociadas a estos eventos de radiofrecuencia.}
+
+\abstract{In the present work, a database of low frequency radio events is described, analyzing all dynamic spectra  from the instrument \textit{Thermal Noise Receiver}, belonging to the \textit{Radio and Plasma Wave Investigation} (WAVES) suite aboard the NASA \textit{Wind} spacecraft. This database expands the one built in a previous work, and encompasses the years 1994\,--\,2021, covering more than two full solar cycles. The radio events are also linked to the detection of other interplanetary structures such as shock waves and interplanetary coronal mass ejections. We found a total of 320 events, out of which 136 had not been previously catalogued. Moreover, 121 shock waves that arrived to Earth's vicinity could be associated with these radiofrequency events.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{Sun: solar--terrestrial relations --- Sun: radio radiation --- Sun: coronal mass ejections (CMEs) --- Sun: heliosphere}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+Las emisiones de radio de tipo II surgen como consecuencia de ondas de choque típicamente impulsadas por las eyecciones coronales de masa (ECMs). Cuando éstas se propagan desde el Sol a través del medio interplanetario, la frecuencia de la emisión va decreciendo, ya que la misma depende de la densidad local del plasma, esto da lugar al patrón usual de las emisiones de tipo II.
+En este trabajo usamos espectros dinámicos del instrumento \textit{Thermal Noise Receiver} (TNR, por sus siglas en inglés), a bordo de la nave \textit{Wind}, para identificar emisiones de radio de tipo II en el rango kilométrico de longitudes de onda; es decir, con una frecuencia menor a 300 kHz. De aquí en adelante nos referiremos a estas emisiones de radio baja frecuencia como kmTII.
+
+El conjunto de instrumentos del \textit{Radio and Plasma Wave Investigation} (WAVES) \citep{Bougeret95} a bordo de la nave \textit{Wind}, además de alojar al instrumento TNR también cuenta con dos receptores llamados RAD1 y RAD2, cuyos datos han sido ampliamente utilizados como parte de muchas investigaciones, como por ejemplo \cite{gopal}, \cite{krupar} y \cite{makela}. Este no es el caso del instrumento TNR, cuya frecuencia de observación se encuentra entre 4\,-\,256 kHz, el cual además tiene una resolución espectral mucho mayor que la de RAD1 a esas frecuencias, conviertiéndolo en una herramienta valiosa para la detección y análisis de eventos kmTII.
+
+Al día de hoy, no existe un estudio completo de eventos kmTII identificados en los datos de TNR y su asociación con estructuras interplanetarias (IP). Esto es crucial para entender qué características de las estructuras IP son más factibles de resultar en emisiones kmTII. Más aún, resulta de gran interés para el campo de la meteorología del espacio el evaluar la geoefectividad de estructuras IP asociadas a emisiones kmTII respecto a aquellas estructuras no asociadas a estas emisiones.
+
+En este trabajo se identificaron 320 eventos tipo kmTII y se compilaron varias características para cada uno de ellos. Se encontró que 136 eventos no estaban reportados en el catálogo oficial de \textit{Wind}/WAVES (basado en datos de RAD1 y RAD2).
+Además, se buscaron asociaciones con choques interplanetarios detectados in situ, usando datos de las naves \textit{Wind} y \textit{Advanced Composition Explorer} (ACE) y se analizaron sus características, para revelar atributos distintivos que puedan correlacionarse con la ocurrencia de emisiones kmTII.
+
+\section{Metodología}
+
+Para llevar a cabo este trabajo, se examinaron todos los espectros dinámicos (ED) disponibles para este instrumento. Esto corresponde a aproximadamente 25 años de datos (un ED por día), lo que constituye una base de datos de mas de 9000 ED. 
+
+Cuando una detección es positiva en los ED, se cataloga en una tabla que consiste de las siguientes entradas: fecha de comienzo y finalización, rango de frecuencia detectado para los kmTII; número de referencia al evento en la lista oficial de \textit{Wind}; fecha, velocidad y catálogo usado para la asociación con choques in situ; fecha de la eyección coronal de masa interplanetaria (ECMI) asociada, junto con características tales como velocidad, campo magnético, índice Dst, entre otras. Una emisión observada en un ED es considerada como kmTII si se cumplen las dos condiciones siguientes: 1) muestra un decaimiento sustancial en frecuencia, de al menos 0.5 kHz/h, y 2) la emisión se observa en el ED en conexión con un evento previo relacionado con su origen en la corona solar (típicamente, pero no necesariamente, una emisión de radio de tipo III).
+
+%Para cada detección, se buscó en la lista oficial de Wind/WAVES , y luego la posible asociación con ondas de choque y eyecciones coronales de masa interplanetaria (ECMI). Con esto, se construyó una lista completa de eventos de TII: 320 eventos con asociacion a choques y ECMI, desde 1996 a 2021, abarcando 2 ciclos solares completos y más. 136 no habian sido registrados previamente. Luego, se compiló una lista de choques y separamos los choques relacionados a las kmTII para ver diferencias intrinsecas entre ellas
+
+Para cada detección, se analizó si la emisión estaba presente en la lista oficial de \textit{Wind}/WAVES, la cual fue compilada por el equipo a cargo de WAVES utilizando los instrumentos RAD1 y RAD2.
+Para relacionar la emisión con un choque IP, comparamos la proyección de la emisión kmTII hacia la línea de la frecuencia del plasma local (PFL por sus siglas en inglés) con la observación de un choque IP. Los candidatos posibles para relacionar con la onda de choque, son aquellos eventos que han sido detectados no más de 4 días antes del comienzo de la emisión kmTII, vista desde el ED (Figura \ref{Fig1}).
+
+Finalmente, se analizaron las listas de ECMIs observadas in situ por las naves \textit{Wind} y ACE, listadas en los catálogos de \citet{NC18}, \citet{RC03} y \citet{RC10}, para relacionarlas con la ocurrencia de eventos kmTII. Para ello se tuvieron en cuenta consideraciones temporales de forma similar a las empleadas para las asociaciones con ondas de choque. 
+
+Con este procedimiento, se construyó una lista completa de kmTII que consta de 320 eventos, con asociación a ambos tipos de estructuras IP: ondas de choque y ECMIs. La misma abarca más de dos ciclos solares completos. Se encontraron 136 nuevos eventos, que no habian sido previamente catalogados en la lista oficial de \textit{Wind}/WAVES. La lista resultante de nuestro trabajo es de acceso público y puede encontrarse en: \url{https://sites.google.com/um.edu.ar/gehme/science/km-tii-catalogue}.
+
+Además, se compiló una lista de ondas de choques de las naves \textit{Wind} y ACE, donde se encuentran todos los eventos detectados por ambas naves con sus respectivos parámetros medidos; éstos fueron clasificados de acuerdo a si existía relación de los mismos con una detección de kmTII.
+
+\begin{figure*}
+\centering
+\includegraphics[width=1.0\textwidth]{DE_usar_este_corregido_spanish.pdf}
+%\includegraphics[width = 0.905\textwidth]{figs/aislada.pdf}
+%\includegraphics[width = 0.95\textwidth]{figs/Nocae.png}
+%\caption{Upper panel: DS showing the radio emission detected by TNR during 23 and 24 of January 2012. The emission between the red dashed lines is a clear kmTII event observed during these days. Lower panel: DS from 10 October 2009. Between 09:00 and 13:00 GMT it is possible to detect a feature indicated by white arrows. We classified this signal as an isolated emission, that is not catalogued as a kmTII event.
+\caption{Espectro dinámico de ejemplo, mostrando la emisión kmTII detectada por TNR durante los dias 23 y 24 de enero de 2012. Entre lineas blancas se puede observar la emisión en radio kilométrica. Se muestra una imagen adaptada de \cite{franco}}
+\label{Fig1}
+\end{figure*}
+
+
+
+
+\section{Resultados}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+La totalidad de eventos encontrados se muestra en la Tabla \ref{table:resumen}, así como también la cantidad que corresponde a la asociación con ondas de choque y ECMIs.
+
+ \begin{table}[htbp]
+ %\begin{center}
+ \caption{Número de eventos kmTII identificados y sus asociaciones con estructuras IP in situ. Se puede observar en la primera columna la totalidad de los eventos, en la segunda columna (Existentes) aquellos que ya habian sido catalogados previamente y en la tercera columna (Nuevos) aquellos que fueron agregados en este trabajo.}
+\captionsetup{width=1\textwidth}
+\begin{tabular}{cccc}
+\hline
+  & Todos & Existentes & Nuevos  \\
+\hline
+ kmTII  &  320 & 184 & 136 \\
+ Con choque & 121 & 84 & 37 \\
+ Con ECMI & 106 & 69 & 37\\
+ Con choque y ECMI & 77 & 51 & 26 \\
+ Con choque - Sin ECMI & 44 & 33 & 11 \\
+ Con ECMI - Sin choque & 29 & 18 & 11 \\
+ \hline
+\end{tabular}
+\label{table:resumen}
+%\end{center}
+\end{table}
+
+La Figura \ref{Fig2} muestra la ocurrencia de eventos por año. El número anual de kmTII está de acuerdo con los máximos y mínimos del ciclo solar. Resulta notable que existe un doble pico en las detecciones de kmTII para los años 1998 y 2001. Otro incremento en las detecciones se puede ver en el año 2005, durante la fase decreciente del Ciclo Solar 23. El número de choques detectados es más grande para el Ciclo 23 que para el Ciclo 24, sin embargo, los valores máximos de kmTII son similares.
+
+%COMO HAGO PARA QUE LA IMAGEN VAYA EN UNA SOLA COLUMNA MAS CHICA, NO ME ACUERDO
+
+\begin{figure}[htb]
+\centering
+\includegraphics[scale=0.6]{TII_shocks_icmes_spanish.pdf} 
+%\includegraphics[width = 0.905\textwidth]{figs/aislada.pdf}
+%\includegraphics[width = 0.95\textwidth]{figs/Nocae.png}
+%\caption{Upper panel: DS showing the radio emission detected by TNR during 23 and 24 of January 2012. The emission between the red dashed lines is a clear kmTII event observed during these days. Lower panel: DS from 10 October 2009. Between 09:00 and 13:00 GMT it is possible to detect a feature indicated by white arrows. We classified this signal as an isolated emission, that is not catalogued as a kmTII event.
+\caption{Número de kmTII, choques detectados y choques asociados a kmTII por año.}
+\label{Fig2}
+\end{figure}
+
+Dado que para que exista un kmTII se necesita la presencia de una onda de choque, surge el interrogante sobre qué sucede con aquellas emisiones de radio que no están asociadas a ondas de choque. Se plantean dos hipótesis: 1) El choque sí ha ocurrido y ha arribado a las cercanías de la Tierra, sin embargo por alguna razón no fue detectado y catalogado como tal en los catálogos de ondas de choque inspeccionados. Podría suceder que el incremento en las cantidades que definen la presencia de un choque se hayan suavizado en el viento solar de fondo y, por lo tanto, el choque podría ser demasiado débil para ser detectado a 1 unidad astronomica. 2) A pesar de que el kmTII fue detectado por la nave, el choque no está viajando precisamente en la misma dirección que la nave, es decir, la porción de la onda de choque que produjo el kmTII no se encuentra en la dirección Sol-Tierra. 
+
+Para cada evento de los 11 casos nuevos de la Tabla \ref{table:resumen}, donde hay ECMI pero no hay choque detectado, se realizó una búsqueda manual de las características que definen el choque en las mediciones in situ de plasma de las naves \textit{Wind} y ACE. En nueve de estos casos se encontró evidencia que favorece la hipótesis 1) anteriormente mencionada; es decir, existen características que dan indicio de que el choque efectivamente arribó a la nave, pero no fue catalogado como tal.
+
+En la Tabla \ref{table:shocks} se observan los tipos de choques que se encuentran presentes en la lista. Para casi la totalidad de los asociados a kmTII, se encuentra que los choques son de tipo \textit{Fast Forward} (FF), lo que quiere decir que las cantidades que definen el choque, tales como densidad, temperatura, campo magnético y velocidad, se ven incrementadas con la llegada del choque.
+
+ \begin{table}[htbp]
+ \begin{center}
+ \caption{Tipos de choques. Se han clasificado los choques de acuerdo a si tenían relación con los eventos kmTII o no. Acrónimos, por sus siglas en inglés: FF (\textit{fast forward}), SF (\textit{slow forward}), FR (\textit{fast reverse}), SR (\textit{slow reverse}), NN (no identificado). }
+\captionsetup{width=1\textwidth}
+\begin{tabular}{cccc}
+\hline
+ Tipo & kmTII & No kmTII  \\
+\hline
+ FF &  113 & 408 \\
+ SF & 2 & 67 \\
+ FR & - & 46 \\
+ SR & - & 15 \\
+ NN & 1 & 22 \\
+ \hline
+\end{tabular}
+\label{table:shocks}
+\end{center}
+\end{table}
+
+\section{Conclusiones}\label{ref}
+
+Se construyó una lista con 27 años de datos del instrumento TNR a bordo de \textit{Wind}, con la asociación a ondas de choque IP y ECMIs. Se encontraron 136 eventos, que no habían sido catalogados previamente. Se compiló además una lista con 674 eventos de \textit{Wind} y ACE, con todos los parámetros disponibles para cada evento. El análisis de los choques asociados a los kmTII y la comparación con el resto de los choques muestra que: 121 choques están relacionados a los kmTII, de los cuales 116 pudieron ser clasificados de acuerdo a lo descripto en la Tabla \ref{table:shocks}. Los 5 choques restantes fueron asociados a los eventos kmTII a través de mediciones tomadas de la lista de choques de la Universidad de New Hampshire (en nuestra lista en línea, pueden ser identificados con la sigla UNH en la celda \emph{catalog}, dentro de \emph{In situ shock}). De los choques asociados a kmTII, casi todos (97\%) son de tipo FF, lo cual es razonable, considerando que estos choques son más eficientes para acelerar electrones, en comparación con otros tipos de choques lentos o de tipo \textit{reverse}. Son precisamente los electrones acelerados los que, al interactuar con el campo magnético del viento solar, generan las emisiones de radio de tipo II. Además, un choque tipo FF que se encuentra con plasma moviéndose más lentamente, también presenta condiciones favorables para la aceleración de electrones. Finalmente, las emisiones de tipo II se originan cerca del frente de las ECMs \citep{makela16}, lo que coincide con la ubicación esperada de la onda de choque FF.
+
+La lista compilada completa de kmTIIs puede encontrarse en el sitio web: \url{https://sites.google.com/um.edu.ar/gehme/science/km-tii-catalogue}.
+
+%All increases with shock arrival are much larger (2 - 3 times) for those associated with kmTII,
+%Plasma beta increases beyond 1, thus the dominant force in the shock tends to change
+
+%\begin{acknowledgement}
+%\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

@@ -1,0 +1,555 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{10 May 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Modeling the chemistry of early universe}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Primordial chemistry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M. Segovia \inst{1},
+D. Schleicher\inst{1},
+S. Bovino \inst{1}
+\&
+D. Galli \inst{2}
+}
+
+\authorrunning{Segovia et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mariasegov1999@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Departamento de Astronom{\'\i}a, Universidad de Concepci\'on, Chile \and   
+Osservatorio Astrofisico di Arcetri, INAF, Italia
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{La química del Universo primitivo consistía principalmente en especies atómicas simples y moléculas compuestas de hidrógeno y helio. Por lo tanto, para comprender la química del Universo primitivo es necesario conocer los procesos químicos que sufrieron estas especies. Además, la interacción con el fondo cósmico de microondas (CMB) es la mejor prueba para determinar la evolución y abundancia de las especies primordiales. Modelizamos la química del Universo primigenio en función del corrimiento al rojo utilizando el paquete astroquímico \textsc{KROME}. Nos centramos en la molécula $\mathrm{HeH^+}$ porque esta molécula tiene un alto momento dipolar y se forma a partir de las especies más abundantes, $\mathrm{H}$ y $\mathrm{He}$. Además, su contribución a la opacidad óptica afecta al CMB.  En particular, exploraremos el impacto en la abundancia de $\mathrm{HeH^+}$ de nuevas tasas para procesos como la recombinación disociativa y la fotodisociación. La determinación precisa de la composición química del gas primordial es importante para comprender la formación de las primeras estrellas del universo.}
+
+\abstract{The chemical composition of the early universe consisted mainly of simple atomic species and molecules made of hydrogen and helium. Therefore, to understand the chemistry of the early universe it is necessary to know the chemical processes that these species underwent. Also, the interaction with the  Cosmic Microwave Background (CMB) is the best test to determine the evolution and abundance of the primordial species. We model the chemistry of the early universe as a function of redshift using the astrochemistry package \textsc{KROME}. We focus on the $\mathrm{HeH^+}$ molecule because this molecule has a high dipole moment and is formed from the most abundant species, $\mathrm{H}$ and $\mathrm{He}$. Also, its contribution to the optical opacity affects the CMB.  In particular, we explore the impact of new rates for processes such as dissociative recombination and photodissociation on the abundance of $\mathrm{HeH^+}$. An accurate determination of the chemical composition of the primordial gas is important to understand the formation of the first stars in the universe.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{early universe --- dark ages, reionization, first stars --- primordial nucleosynthesis}
+
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+
+
+It is important to know the processes that primordial molecules and atoms underwent, and their interactions with the cosmic microwave background to understand the evolution of the early universe. 
+\citet{Maoli1994} suggested that primordial molecules are important for the CMB because they can smear the primary fluctuations of the CMB, and create second anisotropies.
+Primordial molecules can produce low-frequency photons (rotational lines). For the interaction of molecules and photons, it is important to consider two important physical quantities, the cross section for scattering, and the concentration, which depends on the abundance of the chemical elements and the rate of their reactions \citet{Dubrovich1997}. 
+The early universe was extremely hot and dense. Density perturbations first expanded adiabatically, then began to cool, forming the first bound structures \citet{Leep2002}. To understand all this, it is important to know the chemical processes, which first appeared in the recombination era \citet{Dalgarno2005}.
+At redshift $\approx$ 1100 the universe was controlled by the net 2s-1s two-photon decay.  At redshift $<800-900$, free electrons and protons are available, which allows the rate of recombination to be of importance, thus the fractional abundance of protons and free electrons starts to decrease \citet{Chluba2010}. 
+Approximately 250 reactions of 30 species have been studied so far. In this way, they compute the abundances of the first molecules \citet{Gay2011}. To understand the primordial chemistry of the universe one must consider the Friedmann-Robertson-Walker model, this model considers a homogeneous, flat and isotropic universe. According to this model, the formation of the first elements occurred in a low-density, high-temperature plasma environment \citet{GP2013}.
+To model the early chemistry we estimate the abundance of these species as a function of redshift using the astrochemistry package \textsc{KROME}. The main objective is to explore new rates of destruction of the $\mathrm{HeH^+}$ molecule and the impact it has on the abundance of this molecular ion.
+
+
+\section{Chemical network}
+
+Considering the network of chemical reactions for hydrogen and helium in the early universe, we compute the abundance of this species, so it is important to know the reactions that occurred to this species. First, we consider the most abundant molecular, which is molecular hydrogen. This molecule can be formed by two channels. 
+
+The first is via the $\mathrm{H_2^+}$ channel:
+
+\begin{equation}
+    \mathrm{H_2^+} + \mathrm{H} \longrightarrow \mathrm{H_2} + \mathrm{H}^+.
+\end{equation}
+
+The second reaction is via associative detachment, 
+\begin{equation}
+\mathrm{H^-} + \mathrm{H} \longrightarrow \mathrm{H_2} + e.
+\end{equation}
+
+The early universe was dominated mainly by $\mathrm{H}$ and $\mathrm{He}$. The main interaction between these species is via $\mathrm{HeH^+}$ molecule (helium hydride ion), one of the first molecular ions. The formation process of this species is the radiative association. In this process two gas phase species collide to form a new species while emitting a photon \citet{Bates}: %(\ref{Bates}):.
+
+\begin{equation} \label{Radiative association}
+    \mathrm{He} + \mathrm{H^+} \longrightarrow \mathrm{HeH^+} + h\nu.
+\end{equation}
+
+On the other hand, another process that contributes to determine $\mathrm{HeH^+}$ abundance is the charge-exchange destruction process via:
+\begin{equation} \label{charge-exchange}
+    \mathrm{HeH^+} + \mathrm{H} \longrightarrow \mathrm{He} + \mathrm{H_2^+}.
+\end{equation}
+
+For the destruction process, photodissociation is dominated by two processes \citet{Coppola2017}:
+
+\begin{equation}\label{photodissociation 1}
+    \mathrm{HeH^+} + h\nu \longrightarrow \mathrm{He^+} + \mathrm{H},
+\end{equation}
+
+\begin{equation}\label{photodissociation 2}
+    \mathrm{HeH^+} + h\nu \longrightarrow \mathrm{He} + \mathrm{H^+}.
+\end{equation}
+Another destruction process is dissociative recombination, in which the ion captures a free electron while its internal degrees of freedom undergo excitation \citet{Novotny2019}:
+
+\begin{equation}\label{dissociative recombination}
+    \mathrm{HeH^+} + e \longrightarrow \mathrm{He} + \mathrm{H}.
+\end{equation}
+ 
+
+The chemical network is completed by  the equation for the redshift: 
+
+\begin{equation}                                      \frac{\mathrm{d}t}{\mathrm{d}z}= \frac{1}{H_0(1+z)^2 \sqrt{1 + \Omega_0 z}},                                                                  \end{equation} 
+
+
+where $H_0$ is the Hubble constant and $\Omega_0$ is the closure parameter. 
+
+\section{Numerical algorithm}
+
+To obtain the abundances of the species $i$ we use the following differential equation:
+\begin{equation}
+    \frac{\mathrm{d}n_i}{\mathrm{d}t} =- D_i n_i+ C_i \label{rate equation},
+\end{equation}
+
+where $D_i$ represents the destruction coefficient and $C_i$ represents the creation coefficient, both for species i.
+
+
+
+
+To model the early chemistry
+we will compute the abundance of these species as a function of redshift (Fig.~\ref{EvHydrogen} and Fig.~\ref{EvHelium}) using the astrochemistry package \textsc{KROME} \citet{Grassi2014}. 
+To reproduce the evolution of the primordial gas, the test is based on the rate coefficient for the different reactions for the species from \citet{GP98}. 
+
+%colocar imagenes una al lado de la otra 
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{Evolution_of_Hydrogen.png}
+    \caption{Hydrogen chemistry considered in the standard model as a function of redshift.}
+    \label{EvHydrogen}
+\end{figure}
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{Evolution_of_Helium.png}
+    \caption{Helium chemistry considered in the standard model as a function of redshift.}
+    \label{EvHelium}
+\end{figure}
+
+
+
+\section{Chemical rate coefficients}
+To compute the abundances of primordial molecules, it is important to know the rate coefficients of the different reactions, we will focus on the molecule $\mathrm{HeH^+}$ and we will use different rate coefficients from the literature. 
+
+\subsection{Rate coefficients of $\mathrm{HeH^+}$}
+
+
+The reactions used to compute the $\mathrm{HeH^+}$ abundance are the same as those used by \citet{Schleicher2008}, and a comparison will be made with \citet{GP98} (Fig.~\ref{Comparasion}). However for some of the reactions new rate coefficients that have been calculated will be used, such as \citet{Coppola2017} for the reaction Eq.~\ref{photodissociation 1} and Eq.~\ref{photodissociation 2}, \citet{Novotny2019} for Eq.~\ref{dissociative recombination}.
+
+Table~\ref{reacciones} collects the reactions used and the reaction number. Table~\ref{RateCoeffHEH+}, next to the reaction number, compares the rate coefficients of \citet{GP98} with those used by \citet{Schleicher2008}.
+
+\begin{table}[h!]
+
+
+
+\centering
+\begin{tabular}{lc} 
+
+\hline\hline\noalign{\smallskip}
+&  Reaction \\
+\hline\noalign{\smallskip}
+
+He8) & $\mathrm{He}$ + $\mathrm{H^+}$ $\longrightarrow$ $\mathrm{HeH^+}$ + $h\nu$ \\
+
+
+
+%He9)
+He9)& $\mathrm{He}$ + $\mathrm{H_2 ^+}$ $\longrightarrow$ $\mathrm{HeH^+}$ + $\mathrm{H}$ \\
+
+%He10)
+He10)& $\mathrm{He^+}$ + $\mathrm{H}$ $\longrightarrow$ $\mathrm{HeH^+}$ + $h\nu$ \\
+
+%He11)
+He11)& $\mathrm{HeH^+}$ + $\mathrm{H}$ $\longrightarrow$ $\mathrm{He}$ + $\mathrm{H_2 ^+}$ \\
+
+%He12)
+He12)& $\mathrm{HeH^+}$ + e $\longrightarrow$ $\mathrm{He}$ + $\mathrm{H}$ \\
+%He14)
+He13) & $\mathrm{HeH^+}$ + $\mathrm{H_2}$ $\longrightarrow$ $\mathrm{H_3^+}$ + $\mathrm{He}$ \\
+He14)& $\mathrm{HeH^+}$ + $h\nu$ $\longrightarrow$ $\mathrm{He}$ + $\mathrm{H^+}$  \\
+
+%He15)
+He15)& $\mathrm{HeH^+}$ + $h\nu$ $\longrightarrow$ $\mathrm{He^+}$ + $\mathrm{H}$  \\ \hline
+    
+    \end{tabular}
+    \caption{Reactions considered in this paper for  $\mathrm{HeH^+}$.}
+    \label{reacciones}
+\end{table}
+
+
+\begin{table*}[!t]
+    \centering
+    \begin{tabular}{lcc} 
+         \hline\hline\noalign{\smallskip}
+         &  Rate from GP98 & Rate from Schleicher et. al (2008)\\
+         \hline\noalign{\smallskip}
+He8) & $7.6\times 10^{-18}T_g^{-0.5}$ , $T_g \leq 10^3$ & $8.0 \times 10{-20} \left( \frac{T}{300} \right)^{-0.24} \exp \left( \frac{-T}{4000}\right)$ (SLD98) \\
+
+%He8)
+
+%He9)
+He9) &  $3.0 \times ^{-10} \exp \left( -\frac{6717}{T} \right)$ & GP98 \\
+
+%He10)
+He10) &  $1.6 \times 10^{-14} T^{-0.33}$ , $T \leq 4000$,fit   &  $4.16 \times 10^{-16} T^{-0.37} \exp \left( \frac{-T}{87600}\right)$ (SLD98) \\
+&  $1.0 \times 10^{-15}$,  $T > 4000$  & \\
+
+%He11)
+He11)& $9.1 \times 10^{-10}$ & $0.69 \times 10 ^{-9} \left( \frac{T}{300} \right)^{0.13} \exp \left( \frac{-T}{33100}\right)$ (LJB95)\\
+
+%He12)
+He12) & $1.7 \times 10^{-7} T^{-0.5}$  & $3.0 \times 10^{-8} \left( \frac{T}{300} \right)^{-0.47}$ (SLD98) \\
+
+He13) & $1.3\times 10^{-9}$ & -- \\
+%He14)
+He14) & $6.8 \times 10^{-1} T_{r}^{1.5} \exp \left( \frac{-22750}{T_r}\right)$  & $220 T_r^{0.9} \exp \left( \frac{-22740}{T_r}\right)$ (JSK95) \\
+
+%He15)
+He15)  & $7.8 \times 10^{3} T_r^{1.2} \exp \left( -\frac{240000}{T_r}\right)$ & GP98 \\ \hline
+    \end{tabular}
+    
+    \caption{Rate coefficients in cm$^3$~s$^{-1}$for each reaction of the molecule $\mathrm{HeH^+}$. The gas temperature $T$ is in $\mathrm{K}$, and $T_r$ is the temperature of the radiation in $\mathrm{K}$. The first column shows the reactions of $\mathrm{HeH^+}$, the second shows the value from \citet{GP98}, and the last column shows the value from \citet{Schleicher2008} that recompile the value from;  GP98: Galli and Palla (1998), JSK95:Juřek, Špirko, Kraemer (1995), LJB95: Linder, Janev, Botero (1995), SLD98: Stancil, Lepp, Dalgarno (1998) and ZSD98: Zygelman, Stancil, Dalgarno (1998). }
+    \label{RateCoeffHEH+}
+\end{table*}
+
+We will also use the rate coefficient calculated from \citet{Coppola2017} they presented a new calculation for direct photoionization, they use Eq.~\ref{ecuacion fotoionizacion} to the processes Eq.~\ref{photodissociation 1}, and for Eq.~\ref{photodissociation 2}:
+
+
+\begin{equation} \label{ecuacion fotoionizacion}
+\alpha({T_r})  =  a T_r^b \exp(-c/T_r),  
+\end{equation}
+the parameter values for Eq.~\ref{ecuacion fotoionizacion} are given in Table ~\ref{Parameters value of photodissociation}.
+
+\begin{table}[h!]
+    \centering
+    \begin{tabular}{lc} 
+    \hline\hline\noalign{\smallskip}
+            & Thermal \\ 
+        \hline\noalign{\smallskip}
+        $\mathrm{HeH^+}$ + $h\nu$ $\longrightarrow$ $\mathrm{He^+}$ + $\mathrm{H}$ &   a = $273518$ \\
+        & b = $0.623525$ \\
+        & c = $1444044~\mathrm{K}$\\
+        & \\
+
+        $\mathrm{HeH^+}$ + $h\nu$ $\longrightarrow$ $\mathrm{He}$ + $\mathrm{H^+}$ &   a = $2.03097 \times 10^8$ \\
+        & b = $-1.20281$ \\
+        & c = $24735~\mathrm{K}$ \\
+        \hline
+
+    \end{tabular}
+    \caption{Fits for the thermal contribution as a function of $T_r$ for $\mathrm{HeH^+}$ direct photodissociation.}
+    \label{Parameters value of photodissociation}
+\end{table}
+
+
+\subsection{Dissociative recombination of $\mathrm{HeH^+}$}
+Using ion storage, \citet{Novotny2019}  performed measurements of the rate coefficient of dissociative recombination. This is a process in which the ion captures a free electron while its internal freedom undergoes excitation. They found a decrease in the recombined electrons for low rotational states of $\mathrm{HeH^+}$.
+
+To determine the rate coefficient, they use the Eq.~\ref{eq.Novotny}:
+
+ \begin{equation}\label{eq.Novotny}
+         \alpha_{}(T)= A \left(\frac{300}{T}\right)^n + T^{-1.5} \sum_{i=1}^3 c_i \exp(-T_i/T).
+     \end{equation} 
+
+The units for Eq.~\ref{eq.Novotny} are cm$^3$~s$^{-1}$, assuming thermal level populations, the parameters are, $A =2.0 \times 10^{-10}~\mathrm{cm^3 \, s^{-1}}$, $n=0.68$ (dimensionless) ,  $c_1$ =$2.8 \times 10^{-7}~\mathrm{K^{3/2} \, cm^3\, s^{-1}}$ , $c_2$ = $1.3 \times 10^{-6}$~ $\mathrm{K^{3/2} \, cm^3\, s^{-1}}$, $c_3$ = $8.6 \times 10^{-5}~\mathrm{K^{3/2} \, cm^3\, s^{-1}}$, $T_1 = 20 ~\mathrm{K}$, $T_2 = 140~\mathrm{K}$ and $T_3 = 420~\mathrm{K}$. 
+
+
+\section{Results}
+
+ In the following we report our results and compare the new $\mathrm{HeH^+}$ abundances, using rate coefficients calculated in previous works.
+ 
+
+\subsection{Fit coefficients}
+
+Considering the rate from \citet{GP98}, \citet{Stancil1998} and from \citet{Novotny2019} for dissociative recombination, we obtained the results shown in Fig.~\ref{Comparasion}, which presents the rate of this reaction as a function of the temperature. 
+\begin{figure}[h!]
+  \centering
+   \includegraphics[width=\columnwidth]{Comparasion.png}
+\caption{Rate coefficients as a function of temperature for the destruction reaction dissociative recombination of $\mathrm{HeH^+}$.}
+    \label{Comparasion}
+\end{figure}
+
+\subsection{Evolution of $\mathrm{HeH^+}$}
+
+To calculate the evolution of $\mathrm{HeH^+}$ we use the value used by \citet{Schleicher2008}, but we also use the rate calculated in different works. In particular for the reaction Eq.~\ref{dissociative recombination}, we use the rate calculated from \citet{Novotny2019}, for photodissociation Eq.~\ref{photodissociation 1} and  Eq.~\ref{photodissociation 2} we use the value calculated from \citet{Coppola2017}. In addition for Eq.~\ref{charge-exchange} we use the value calculated from \citet{Bovino2011} is:  
+
+\begin{equation}\label{fitBovino}
+    \alpha(T) =4.3489 \times 10^{-10} T^{10.110373} e^{-315396/T}.
+\end{equation}
+The units for Eq.~\ref{fitBovino} are cm$^3$~s$^{-1}$ valid for $\mathrm{T} \leq 1000~\mathrm{K}$.
+
+First considering the values used in \citet{Schleicher2008}, we compute the abundance of the species in function of redshift. Figure~\ref{Schleicher} shows the evolution of $\mathrm{HeH^+}$ with the values of \citet{GP98} and from \citet{Schleicher2008}.
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\columnwidth]{Evolution_of_HeH+_Schleicher2008.png}
+    \caption{Fractional abundance of $\mathrm{HeH^+}$ using the rate coefficients from \citet{GP98}(magenta) and from \citet{Schleicher2008}(blue)}.
+    \label{Schleicher}
+\end{figure}
+
+In Fig.~\ref{NewrateCoeff} it can be seen how the evolution of $\mathrm{HeH^+}$ changes as the rate coefficients from \citet{Bovino2011}, \citet{Coppola2017} and \citet{Novotny2019} are considered. 
+
+\begin{figure}[h!]
+   \centering
+    \includegraphics[width=\columnwidth]{newHeh+.png}
+    \caption{Fractional abundance of $\mathrm{HeH^+}$ in function of redshift. The green curve represents the evolution of $\mathrm{HeH^+}$ using the rate coefficients of \citet{Schleicher2008}. The cyan curve is the evolution of $\mathrm{HeH^+}$ but changing the reaction ~\ref{charge-exchange} of \citet{Bovino2011}. The blue curve is the evolution of $\mathrm{HeH^+}$ but changing the rate coefficient for the reaction ~\ref{photodissociation 1} and ~\ref{photodissociation 2} of \citet{Coppola2017}, and the magenta curve is changing the rate coefficient for the reaction ~\ref{dissociative recombination} of \citet{Novotny2019}.}
+
+    \label{NewrateCoeff}
+\end{figure}
+
+\section{Discussion and conclusion}
+To understand the chemistry of the early universe it is necessary to know about the atomic and molecular processes presented in this epoch \citet{Bovino2011}. One of the primordial molecules that we focus on is $\mathrm{HeH^+}$, this is because this molecule presents a large dipole moment, which is important to radiative cooling and coupling to the CMB \citet{Novotny2019}. The cooling of primordial gas is crucial to the formation of the first stars \citet{Coppola2011}. 
+Implementing new values of the rate coefficients for $\mathrm{HeH^+}$ we have been able to compute the abundance of this molecule using \textsc{KROME}, we reproduced the results obtained by \citet{Schleicher2008} and also added the new value of rate coefficient from \citet{Bovino2011}, \citet{Coppola2017} and \citet{Novotny2019}. In particular, we obtained an increase in the abundance of $\mathrm{HeH^+}$, which means that at low z, the detection of $\mathrm{HeH^+}$ may become more feasible. Also, the increase of this abundance can affect the formation of the first stars as it contributes to the formation of molecular hydrogen. 
+
+
+
+
+
+
+\begin{acknowledgement}
+
+%Los agradecimientos deben agregarse usando el entorno correspondiente (
+\texttt{DRGS and MS thank for funding via the ANID BASAL project FB21003. DRGS thanks for funding via the  Alexander von Humboldt - Foundation, Bonn, Germany.}
+\end{acknowledgement}
+\bibliographystyle{baaa}
+\small
+\bibliography{ref}
+\newpage
+%\section{Comments}
+%\begin{itemize}
+ %   \item I made all the issues in the writing. 
+  %  \item section 4.2(previous version) was deleted and it was added to section 4.1., in principle this part its for explain how \citet{Coppola2017} calculated the rate coefficient for the reactions ~Eq.\ref{photodissociation 1} and \ref{photodissociation 2}.
+   % \item I change the label for Fig.~\ref{Schleicher} and Fig.~\ref{NewrateCoeff}.
+    %\item I tried to make the optional figure with Zoom. 
+    %\item In the section Discussion and Conclusion I added the significance of the results. 
+    
+%\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+ 
+\end{document}

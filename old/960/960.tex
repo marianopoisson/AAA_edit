@@ -1,0 +1,540 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{An\'alisis multifrecuencia de los c\'umulos BH\,205 y\\ 
+Ruprecht\,102 y de su medio interestelar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{BH\,205, Ruprecht\,102 y su MIE}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+L. Rizzo\inst{1},
+M.A. Corti\inst{1,2}
+\&
+L.G. Paíz\inst{1,3}
+}
+
+\authorrunning{Rizzo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{lrizzo@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina\and   
+Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina
+\and
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las poblaciones estelares j\'ovenes constituyen c\'umulos abiertos (CA) y asociaciones OB. Ellos son
+algunos de los trazadores de la estructura espiral del plano de la V\'ia L\'actea y su estudio proporciona informaci\'on para mejorar nuestro conocimiento de la estructura radial y espiral del disco. Con ese objetivo, se presentar\'an aqu\'i un estudio sobre dos CA que por sus subestructuras con diferentes edades, ubicadas en regiones de  extinci\'on visual variable, los convierte en evidencias muy confiables de formaci\'on estelar. Empleando datos fotom\'etricos y astrom\'etricos del cat\'alogo \emph{Gaia}\,DR3 y datos de radio en continuo y en l\'inea, hemos investigado los posibles miembros de las subestructuras del CA Ruprecht\,102 (Rup\,102) ($\alpha$ = 183.4\degr, $\delta$ = -62.7\degr) y del CA van den Bergh-Hagen\,205 (BH\,205) ($\alpha$ = 254.3\degr, $\delta$ = -40.6\degr) y del medio interestelar en el que se encuentran (MIE). Los resultados obtenidos del an\'alisis efectuado a los datos del cat\'alogo \emph{Gaia}\,DR3 con el empleo del c\'odigo {\sc HDBSCAN} y las isocronas de \emph{PARSEC}, permitieron
+mejorar la identificaci\'on de los posibles miembros de ambos CA. Finalmente, sumando a ese an\'alisis, el estudio del MIE con datos en diferentes frecuencias de radio, pudo obtenerse informaci\'on sobre sectores del brazo \emph{Carina-Sagitario} del cuarto cuadrante gal\'actico.}
+
+%\textit{Boletín de la Asociación Argentina de Astronomía} (BAAA)
+\abstract{Young stellar populations constitute open clusters (OCs) and OB associations. These populations are important tracers of the spiral structure of the Milky Way plane, and their study provides crucial information to improve our understanding of the radial and spiral structure of the disk. With this aim, we present an investigation about two OCs wan investigation abouthose substructures, with different ages and located in regions with variable visual extinction, make them highly reliable evidence of stellar formation. Using photometric and astrometric data from the \emph{Gaia}\,DR3 catalog, along with continuum and line radio data, we have investigated the potential members of the substructures of the Ruprecht\,102 OC (Rup\,102) ($\alpha$ = 183.4\degr, $\delta$ = -62.7\degr) and the van den Bergh-Hagen\,205 OC (BH\,205) ($\alpha$ = 254.3\degr, $\delta$ = -40.6\degr), and the interstellar medium (ISM) in which they are located. The results obtained from the analysis of \emph{Gaia}\,DR3 catalog data, using the {\sc HDBSCAN} code and the \emph{PARSEC} isochrones, allowed us to improve the identification of potential members of both OCs. Finally, by complementing this analysis with a ISM study at different radio frequencies, we obtained information about the \emph{Carina-Sagittarius} arm in the fourth galactic quadrant.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{stars: individual (Ruprecht\,102, BH\,205) --- stars: formation --- H\,{\sc ii} regions --- open clusters and
+associations: general}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}
+\label{S_intro}
+La combinaci\'on de an\'alisis de datos obtenidos en frecuencias del espectro \'optico y de radio para estudiar una posible vinculaci\'on entre Regiones H\,{\sc ii} y c\'umulos abiertos j\'ovenes, es de gran importancia en la investigaci\'on de la estructura de la V\'ia L\'actea \citep{2023corti,2016corti}. Los miembros tempranos de los CA con la emisi\'on de fotones ionizantes y sus fuertes vientos suelen modificar el MIE en el que se encuentran, generando por ejemplo regiones de hidr\'ogeno ionizado (RH{\sc ii}) y c\'ascaras de hidr\'ogeno neutro. Este trabajo, hace foco en la b\'usqueda de sub\-estructuras en dos c\'umulos abiertos poco estudio a\'un, como son Ruprecht\,102 y BH\,205, ambos ubicados en el plano gal\'actico.
+Ellos presentan ambig\"uedades sobre la determinaci\'on de sus miembros y en esta investigaci\'on se los estudia con datos actuales m'as precisos y herramientas de an\'alisis m\'as eficientes. 
+
+%Para realizar este trabajo se emple\'o la base de datos astrom\'etricos y fotom\'etricos de las bandas $G$, $G_{BP}$ y $G_{RP}$ e im\'agenes obtenidas en l\'inea y continuo de radio en 21\,cm, 843\,MHz y 1420\,MHz. 
+%Para la detección de cúmulos abiertos, en este trabajo se aplica el algoritmo HDBSCAN ({\em Hierarchical Density %Based Spatial Clustering of Applications with Noise}) de \citet{Campello2013}. El mismo tiene la ventaja de poder ser aplicado a varias dimensiones (parámetros) y de detectar agrupamientos de diferentes densidades y formas. En este estudio, se aplica sobre cuatro parámetros astrométricos $(\alpha,\,\delta,\,\mu_{\alpha}cos(\delta),\,\mu_{\delta})$ obtenidos del catálogo Gaia DR3 y normalizados para dar el mismo peso a estas cuatro cantidades.
+\section{Datos}
+\label{datos}
+El an\'alisis de los c\'umulos abiertos Rup\,102 y BH\,205 se realiza con los datos astrom\'etricos y fotom\'etricos proporcionados por el cat\'alogo \emph{Gaia}\,DR3 \citep{2021g}. Actualmente, es el cat\'alogo m\'as detallado y preciso de emplear en la determinaci\'on de distancias estelares por medio de la paralaje, en aquellos grupos que no distan m\'as de 2\,kpc al Sol y el estudio de movimientos propios con los cuatro par\'ametros astrom\'etricos $(\alpha,\,\delta,\,\mu_{\alpha}cos(\delta),\,\mu_{\delta})$. La completitud hasta magnitud $G$ = 20 mag permite tener informaci\'on fotom\'etrica de estrellas que a\'un puedan encontrarse in\-mersas en la nube molecular donde se originan. La banda $G$ del relevamiento \emph{Gaia}, agrupa los fotones del espectro electromagn\'etico que llegan de las estrellas en la longitud de onda del \'optico con la banda BP de 330 a 680\,nm y del rojo con la banda RP de 630 a 1050\,nm.
+
+Se emplean tambi\'en los mapas en continuo de radio en 843\,MHz del relevamiento {\it Sydney University Molonglo Sky Survey} (\emph{SUMSS};  \citealt{Sadler2001}) con una resoluci\'on angular de $\sim$ 43"$\times$50" y sensibilidad de $\sim$ 6 $\mathrm{mJy\,beam^{-1}}$. A ellos se suman los mapas en  21\,cm y 1420\,MHz del relevamiento {\it Southern Galactic Plane Survey} (\emph{SGPS};\citealt{MCG2005}) con una resoluci\'on en velocidad $\Delta$v = 0.82~$\mathrm{km\,s}^{-1}$ y un ruido en temperatura de brillo de $\sim$ 1.6\,K, para el primero y una resoluci\'on angular de $\sim$ 1.7$^{\prime}$ y sensibilidad $\sim$ 0.3 $\mathrm{mJy\,beam^{-1}}$, para el segundo. 
+
+%\subsection{Datos \emph{Gaia} DR3}
+%En el comienzo de nuestra investigaci\'on contamos con datos del catálogo Gaia\,DR3 \citep{2021g}, que tiene completitud hasta  G=20 mag, mayor que GDR2 con G=18 mag. El mismo constituye el catálogo más detallado y preciso que actualmente puede usarse para determinar distancias estelares en el vecindario solar.\\
+
+%Utilizamos la herramienta que brinda la p\'agina de Vizier, de este modo mediante algunas sentencias de Python elegimos el cat\'alogo I/350/gaiaedr3, el centro y el radio de la zona escogida y su corte en magnitud G.\\
+
+%En la Tabla~\ref{per} puede leerse el área elegida para cada zona individual, la misma fue amoldada a las caracter\'isticas del entorno pertinente. Por ejemplo, los c\'umulos lejanos o de radios m\'as chicos necesitaron campos m\'as reducidos.Como una generalizaci\'on el área tomada debiera ser unas cinco veces el radio del c\'umulo trabajado.\\
+
+%\begin{table}[!t]
+%\centering
+%\caption{Ejemplo de tabla. Notar en el archivo fuente el manejo de espacios a fin de lograr que la tabla no exceda el margen de la columna de texto.}
+%\begin{tabular}{lccc}
+%\hline\hline\noalign{\smallskip}
+%\!\!Cúmulo & \!\!\!\!Campo  & \!\!\!\!\textbf{$N^{ro}$estrellas}& HDBSCAN\\
+
+%& \!\!\!\!10$^{42}$ Mx$^{2}$& \!\!\!\!10$^{42}$ Mx$^{2}$ & \!\!\!\!10$^{42}$ Mx$^{2}$ \\
+%\hline\noalign{\smallskip}
+%\!\!Ruprecht\,102  & \!\!  10$^{\prime}$ & \!\! 3240 & \!\! 54\\
+%\!\!BH\,205 & \!\! 30$^{\prime}$ & \!\! 2470 & \!\! 178\\
+%\hline
+%\label{per}
+%\end{tabular}
+%\end{table}
+
+%\subsection{Radioastronómicos}
+
+%Con el objetivo de conocer el MIE en la misma línea de la visual que los cúmulos estudiados, se trabajó con mapas de HI de distintos relevamientos (ver sección 2.). Dichos mapas se centran en las coordenadas galácticas de cada cúmulo (Tabla 1) y corresponden a la velocidad radial baricentral, en el sistema Local Standard of Rest (LSR) adoptada para cada uno de ellos (ver última columna en la Tabla 1). Dichas velocidades se emplearon junto con el modelo de ajuste lineal de rotación Galáctica (AL) de Fich et al. (1989) para estimar las correspondientes distancias cinemáticas. Todas las imágenes de HI fueron analizadas con el software AIPS (Astronomical Image Processing System). En la Fig.1b) se muestra una imagen de la distribución de emisión del HI, obtenida para el cúmulo Ruprecht 102, vinculada a la velocidad radial Vr(LSR) = −36 km s−1. Los mínimos presentes en esta emisión de HI fueron interpretados como la absorción del HI de los fotones emitidos por fuentes en el continuo.\\
+
+%{\bf 7 de febrero de 2024} 
+
+\section{Análisis}\label{sec:guia}
+
+%\footnote{\url{{https://www.aanda.org/for-authors/latex-issues/typography}}}.
+\begin{figure}[!t]
+\centering
+%\includegraphics[width=\columnwidth]{hdbscan2024-6.png}
+%\includegraphics[width=0.39\columnwidth,angle=-90]{esp-item-2.png}
+\includegraphics[width=0.39\columnwidth,angle=-90]{esp-item-feb20.png}
+\caption{Distribuci\'on espacial. a) Salida de {\sc HDBSCAN} para los grupos presentes en direcci\'on a Ruprecht 102. b) Salida de {\sc HDBSCAN} en la visual a BH\,205.}
+\label{subgrupos}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+%includegraphics[width=\columnwidth]{movpropios-6.png}
+%\includegraphics[width=0.39\columnwidth,angle=-90]{vpd-item-2.png}
+%\includegraphics[width=0.39\columnwidth,angle=-90]{vpd-item-feb20.png}
+%\includegraphics[width=0.39\columnwidth,angle=-90]{vpd-item-feb23.png}
+\includegraphics[width=0.39\columnwidth,angle=-90]{vpd-item-feb28.png}
+\caption{Movimientos propios. a) Salida de {\sc HDBSCAN} para los grupos presentes en la visual a Ruprecht\,102. b) Salida de {\sc HDBSCAN} en direcci\'on a BH\,205. En la parte inferior izquierda de cada panel se incluyen las barras de  error en las componentes de movimiento propio para los miembros de los CA estudiados aquí (grupos 25-0 y 20-0 respectivamente).}
+\label{mov}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{CMDs1.pdf}
+\caption{a) Miembros seg\'un an\'alisis con {\sc HDBSCAN} con isocronas a d = 2947 pc (verde) y d = 3200 pc (azul). b) Miembros de BH\,205 (c\'irculos llenos rojos) y ESO\,332-8 (cuadrados vac\'ios negros) seg\'un an\'alisis con {\sc HDBSCAN}.}
+\label{aju}
+\end{figure}
+
+
+\subsection{Ruprecht 102}
+%\begin{figure}[ht!]
+%\centering
+ %\includegraphics[width=0.3\textwidth]{rup10210min.jpg}
+	%\caption{Imagen DSS del campo investigado para Ruprecht 102}
+	\label{rup102dss}
+%\end{figure}
+
+Esta regi\'on de formaci\'on estelar emite energ\'ia de baja intensidad en el rango del visual. Es posible que esto haya sido la raz\'on por la cual su estudio comenz\'o a desarrollarse reci\'en en estos \'ultimos a\~nos, en los cuales se han generado nuevas t\'ecnicas de trabajo. Actualmente, se emplean c\'odigos capaces de encontrar agrupaciones de estrellas en una gran base de datos, lo cual permiti\'o que muy recientemente fueran caracterizados los miembros de Rup\,102 \citep{2019liu,2020cg}, detectando dos posibles sobredensidades en las coordenadas indicadas para este CA sólo en \cite{2019liu}. 
+%De hecho, en la imagen del cat\'alogo \emph{DSS} presente en la Fig.~\ref{rup102dss}, es posible observar una sobredensidad central y otra en direcci\'on NO. %a una distancia de 2985 $\pm$ 371 pc del centro de la regi\'on, resultado obtenido del estudio de la paralaje media, considerando el punto cero de paralaje para el cat\'alogo de $-0.017~\mathrm{mas}$.
+Para el estudio de Rup\,102 se consideran estrellas en la regi\'on de 10$^{\prime}\times10^{\prime}$ con centro en $\alpha_{J2000}=183\degr.383$, $\delta_{J2000}=-62\degr.730$, y componentes de movimiento propio $\mu_{\alpha}cos(\delta)\in[-10:-3]$ mas\,a\~no$^{-1}$, $\mu_{\delta}\in[-3:4]$ mas\,a\~no$^{-1}$ con error 
+$\leq$ 0.3 mas\,a\~no$^{-1}$ para minimizar los errores provenientes de este par\'ametro. El an\'alisis de estos datos se realiza sin poner restricciones en los valores del cat\'alogo para las paralajes, ni RUWE ({\em renormalised unit weight error}), ni Dup. La muestra resultante es de 3240 estrellas.
+
+%$\leq 0.3$~\mathrm{mas\,año}$^{-1}$ para minimizar los errores provenientes de este par\'ametro. La muestra resultante es de 3240 estrellas. 
+
+%Las estrellas estudiadas en la regi\'on fueron las ubicadas en un campo de 
+ %componentes de movimiento propio -10 $< \mu_{\alpha}cos(\delta) <$ -3$~\mathrm{mas\,a\~nos}^{-1}$, -4 $< \mu_{\delta} <$ -4$~\mathrm{mas\,a\~nos}^{-1}$, ambos con errores de cat\'alogo menores a 0.3$~\mathrm{mas\,a\~nos}^{-1}$ para minimizar los errores que puedan surgir de este par\'ametro en el estudio. No se ponen restricciones en el valor de las paralajes ni en el valor del par\'ametro \emph{RUWE} ({\em Renormalised unit weight error}) ni de \emph{Dup} (fuente con m\'ultiples identificaciones) del cat\'alogo. La muestra resultante es de 3240 estrellas.
+
+Para la detección del CA se utiliza el algoritmo {\sc HDBSCAN} ({\em Hierarchical Density Based Spatial Clustering of Applications with Noise}) de \citet{Campello2013}, el cual se aplica en cuatro par\'ametros astrom\'etricos $(\alpha,\,\delta,\,\mu_{\alpha}cos(\delta),\,\mu_{\delta})$ obtenidos del cat\'alogo \emph{Gaia}\,DR3 y normalizados para que queden libres de escala. %darles el mismo peso estad\'istico.
+ Los principales hiperpar\'ametros de {\sc HDBSCAN} son  la m\'inima cantidad de estrellas en un c\'umulo ({\em min\_cluster\_size}) y el n\'umero de estrellas en un vecindario ({\em min\_samples}) \citep{Alfonso2024}. \citet{Campello2013} recomiendan dar igual valor a ambos. Habi\'endose producido una representaci\'on jer\'arquica del conjunto de datos, los CA se pueden seleccionar con uno de estos dos m\'etodos, {\em End of Mass} (EoM) o {\em Leaf}. Para realizar este trabajo, nos quedamos con el m\'etodo {\em Leaf} ya que resulta significativamente mejor para recuperar los CA m\'as peque\~nos en un campo dado \citep{Hunt2021}. Considerando que un cúmulo abierto tiene un mínimo de 10 miembros, en este estudio se hace pruebas con valores de {\em min\_cluster\_size} y {\em min\_samples} entre 10 y 100 \-es\-tre\-llas.
+
+Asignando a {\em min\_cluster\_size} y {\em min\_samples} el valor 25 se detectan cuatro grupos denominados 25-0, 25-1, 25-2 y 25-3 que se muestran en el panel de la Fig.~\ref{subgrupos} y la Fig.~\ref{mov}. El grupo 25-0 es el correspondiente a Rup\,102 con 48 miembros y componentes medias de movimiento propio $\mu_{\alpha}cos(\delta)$ =  -4.13 $\pm$ 0.20 mas\,a\~no$^{-1}$ y $\mu_{\delta}$ = 0.31 $\pm$ 0.17 mas\,a\~no$^{-1}$. A partir del estudio de la paralaje media, considerando el punto cero de paralaje para el cat\'alogo de -0.017~$\mathrm{mas}$, se obtuvo una distancia de 2985 $\pm$ 371\,pc. Los otros tres grupos, comparten movimientos propios pero cuentan con error en paralaje más grande que las paralajes mismas, por lo que se deberá esperar datos con una mayor precisi\'on. Los errores de los datos presentes en la Fig.~\ref{subgrupos} y Fig.   \ref{aju} no se muestran, porque al ser muy peque\~nos no lo permite la escala de las mismas.
+
+Con el objetivo de mejorar el conocimiento sobre los par\'ametros f\'isicos de este CA realizamos un diagrama color-magnitud (CMD) (Fig. \ref{aju}). Luego, con el sucesivo ajuste de un gran n\'umero de isocronas PARSEC v1.2S \citep{Bressan2012}, facilitando la elecci\'on de la misma, la estrella con identificaci\'on \emph{Gaia}\,DR3 6054468857230064896 situada en el {\em turn-off} del diagrama, encontramos dos isocronas con valores de distancia pr\'oximos al obtenido con el estudio de paralaje y un valor de $E(B-V)$ $\sim$ 0.47, los resultados se presentan en la Tabla \ref{datosfisicos}. Nuestra determinación de miembros no acepta un enrojecimiento tan alto como $E(B-V)$ = 0.84 $\pm$ 0.15 registrado por \citet{2019angelo}. Ese resultado puede haber sido la consecuencia de emplear \citet{2019angelo} un algoritmo de b\'usqueda de miembros no lo suficientemente eficiente para casos como Rup\,102 donde encontramos grupos estelares mezclados.
+%con edades en el rango de las ya publicadas $\log(\mathrm{edad})$= 8.64 dex \citep{2020cg} y $\log(\mathrm{edad})$= 8.76 dex \citep{2021dias}, coincidiendo ellas con un valor de $E_{(B-V)}$= 0.47 $\pm$ 0.03 y , 
+
+ Rup\,102 con sus coordenadas gal\'acticas (l, b) = (298$\degr$.6, -0$\degr$.16) se ubica al sur de la RH{\sc ii} centrada en (l, b) = (298$\degr$.57, -0$\degr$.08) la cual puede estudiarse con los mapas en frecuencias de radio de 843\,MHz y 1420\,MHz (ver Secci\'on \ref{datos}). La Fig. \ref{regionhii} presenta al mapa obtenido en 843\,MHz mostrando con los contornos la densidad de flujo en $\mathrm{mJy\,b}^{-1}$ y con cruces azules los miembros de Rup\,102. La Tabla \ref{estadistica} lista los par\'ametros calculados en el sector sur de la RH{\sc ii} con un m\'aximo de emisi\'on de flujo y lindero al CA. Se supuso una temperatura electr\'onica can\'onica para las RH{\sc ii}, Te = 10$\times10^4$ K, el modelo esf\'erico y ecuaciones de \citet{1967Mez}. Con la imagen de la RH{\sc ii} en 21\,cm se encuentra una posible velocidad radial en el sistema \emph{Local Standard of Rest}, V$_{LSR}$ = -36$~\mathrm{km\,s}^{-1}$ que al usarse como dato de entrada en el modelo de rotaci\'on gal\'actica de \citet{2018Wenger} encuentra como distancia cinem\'atica pr\'oxima al Sol (por ambig\"uedad de distancia en el cuarto cuadrante), d$_{cin}$ = 2.9 $\pm$ 0.5\,kpc. 
+ Con la edad de $\sim$ 400 millones de a\~nos estimada para Rup\,102 (Fig. \ref{aju}), se deduce que 
+%Estimando para Rup\,102 una edad de $\sim$ 400 millones de a\~nos de acuerdo al CMD realizado  
+ los tipos espectrales de sus miembros son m\'as fr\'ios que B2, razón por la cual, no es posible que este CA haya ionizado a la regi\'on. Tampoco se observ\'o que en el MIE se hubiera generado una burbuja o c\'ascara de H{\sc i}. 
+ 
+% La paralaje media $\varpi=0.335~\rm{mas}$ arroja una distancia estimada de $2985~\mathrm{pc}$.\\
+%$\mu_{\alpha}cos(\delta)=-4.134\pm0.20~\mathrm{mas\,a\~nos}^{-1}$, $\mu_{\delta}=0.311\pm0.17~\mathrm{mas\,a\~nos}^{-1}$.
+
+\begin{figure}[ht!]
+\centering
+ \includegraphics[width=0.4\textwidth]{RuprMol.pdf}
+\caption{Mapa en 843\,MHz centrado en (l, b) = (298$\degr$.57, -0$\degr$.08) mostrando con los contornos la densidad de flujo en $\mathrm{mJy\,b}^{-1}$ con un paso de 15 $\mathrm{mJy\,b}^{-1}$.}
+	\label{regionhii}
+\end{figure}
+ 
+%{\em cursiva}.
+\begin{table}
+%\begin{table}[!t]
+\centering
+\caption{Par\'ametros fotom\'etricos de los CA investigados.}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+\!\!C\'umulo & \!\!\!\!E$_{(B-V)}$ [mag] & \!\!\!\!log\,(Edad) & \!\!\!\!Distancia [kpc]\!\!\!\!\\
+%& \!\!\!\!10$^{42}$ Mx$^{2}$& \!\!\!\!10$^{42}$ Mx$^{2}$ & \!\!\!\!10$^{42}$ Mx$^{2}$ \\
+\hline\noalign{\smallskip}
+\!\!Ruprecht\,102 & 0.47 $\pm$ 0.03 & 8.60 $\pm$ 0.05 & 2.9 $\pm$ 0.3\\
+\!\!BH\,205  &  0.40 $\pm$ 0.05 & 6.87 $\pm$ 0.06 & 2.0 $\pm$ 0.4 \\
+\hline
+\label{datosfisicos}
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+\subsection{BH\,205}
+%\begin{figure}[ht!]
+%\centering
+% \includegraphics[width=0.3\textwidth]{btrumpler24.jpg}
+	%\caption{Imagen DSS del campo investigado para BH 205}
+	%\label{trumpler24dss}
+%\end{figure}
+
+%Este grupo se situa en el borde sur de la regi\'on H{\sc ii} G345+1.50 y 
+
+%En la Fig.~\ref{trumpler24dss} se marca el conjunto de estrellas que se estudian observando que se presenta algo disperso. 
+
+Para el estudio de este CA consideramos una regi\'on de 30$^\prime\times$30$^\prime$ con centro en $\alpha_{J2000}=254\degr.047$ y $\delta_{J2000}=-40\degr.666$. En la Fig.~\ref{subgrupos} se aprecian dos subgrupos de densidad resultantes de nuestro an\'alisis. En este caso una de las sobredensidades, compatible con BH\,205 es bastante extensa. Las componentes de movimiento propio consideradas en este caso son $\mu_{\alpha}cos(\delta)\in[-1.38:+1]$ mas\,a\~no$^{-1}$ y $\mu_{\delta}\in[-2.32:+0.06]$ mas\,a\~no$^{-1}$; al igual que para el estudio de Rup\,102, los errores en movimiento propio son $\leq$ 0.3 mas\,a\~no$^{-1}$. La muestra resultante es de 2497 estrellas sin restricciones de paralajes, RUWE ni Dup. %La muestra resultante es de 2497 estrellas.
+Con {\em min\_cluster\_size} y {\em min\_samples} iguales a 20 se detectan dos grupos denominados 20-0 y 20-1, siendo el primero de estos el correspondiente a BH\,205 con 225 miembros y el segundo ESO\,332-8 con 22 miembros.
+%no obstante los miembros de ambas sobredensidades est\'an asociados en edad y distancia. 
+En la Fig.~\ref{mov} puede verse para el grupo 20-0 una fuerte concentraci\'on en el espacio de movimientos propios, los valores centrales son $\mu_{\alpha} cos(\delta)=$-0.15 $\pm$ 0.14 mas a\~no$^{-1}$ y $\mu_{\delta}=$-1.10 $\pm$ 0.14 mas a\~no$^{-1}$. %Estos valores están en concordancia con los hallados por \citet{2019liu} y \citet{2021poggio}, con ($\mu_{\alpha} cos(\delta)$, $\mu_{\delta}$) = (-0.10 $\pm$ 0.29, -1.04 $\pm$ 0.22) mas a\~no$^{-1}$ y ($\mu_{\alpha}cos(\delta)$, $\mu_{\delta}$) =  (-0.13 $\pm$ 0.17, -1.13 $\pm$ 0.18) mas a\~no$^{-1}$, respectivamente.
+%El an\'alisis de estos datos se realiza sin poner restricciones en los valores del cat\'alogo para las paralajes, ni RUWE, ni Dup. %La muestra resultante es de 2497 estrellas.
+%Con {\em min\_cluster\_size} y {\em min\_samples} iguales a 20 se detectan dos grupos denominados 20-0 y 20-1, siendo el primero de \'estos el correspondiente a BH\,205 con 225 miembros. Las componentes de movimiento propio resultantes para BH\,205 son $\mu_{\alpha}cos(\delta)\in[-1.38:+1]~\mathrm{mas\,a\~nos}^{-1}$, $\mu_{\delta}\in[-2.32:+0.06]~\mathrm{mas\,a\~nos}^{-1}$; al igual que para el estudio de Ruprecht\,102, los errores en movimiento propio son $\leq 0.3~\mathrm{mas\,a\~nos}^{-1}$. 
+
+El c\'odigo {\sc DBSCAN} utilizado en \citet{miotrumpler24} detecta tres picos de densidad, indicados como grupos B\,1, B\,2 y B\,3 los cuales cubren el \'area que corresponde a BH\,205. De acuerdo a la investigaci\'on de \citet{miotrumpler24} todos ellos tienen la misma edad y cinem\'atica, lo cual refuerza nuestro resultado respecto a que BH\,205 es un \'unico grupo estelar con estructura elongada. 
+
+\citet{1968se} llama Trumpler\,24\,III al grupo estudiado aqu\'i y su trabajo junto al de \citet{1984h} estiman posibles valores de distancias para Trumpler\,24 en su conjunto comprendidos entre 1600 y 2200 pc. Nuestra investigaci\'on indica para el valor medio de la pa\-ralaje, corregida por punto cero del cat\'alogo, una distancia de $1639 \pm  176~\mathrm{pc}$. En \citet{miotrumpler24}, para los grupos B dan distancias 1540 $<$ d $<$ 1569$~\mathrm{pc}$ con un error caracter\'istico de 20$~\mathrm{pc}$, quedando de ese modo a\'un dentro de nuestros m\'argenes de error. En los cat\'alogos actuales, la denominaci\'on utilizada para el grupo de estrellas con estas coordenadas es BH\,205 y con distancias del orden de 1666$_{-61}^{+67}~\mathrm{pc}$ \citep{2019liu} y 1718$_{-98}^{+110}~\mathrm{pc}$ \citep{2021poggio}.
+
+%como detallaremos a continuación. Este grupo es evidente en los trabajos de \citet{2019ku} y \citet{2018da}.\\
+
+
+%Por otra parte la Fig.~\ref{aju} a la derecha nos determina una distancia astrométrica Distancia pxl: 1686 +/-  186 pc.
+
+
+
+\begin{table*}
+\centering
+\begin{tabular}{lcc}
+\hline
+\hline
+\textit{\textbf{(l, b)=(298$\degr$.57, -0$\degr$.13)}} & \textbf{Frec: 843\,MHz} & \textbf{Frec: 1420\,MHz} \\
+\hline
+Tama\~no angular [arcmin] & 4.0 & 4.2 \\
+ Densidad de Flujo [Jy] & 3.2 (1.7) & 3.8 (1.1)\\
+ Masa H{\sc ii} [$M_{\odot}$] & 101 (52) & 123 (63)\\
+Densidad Electrónica [$cm^{-3}$] & 63 (6) & 66 (7)\\
+Radio de Stromgrem [$pc$] & 2.5 (0.8) & 2.6 (0.9)\\
+Parámetro de Excitación [pc\,$cm^{-2}$] & 39 (14) & 43 (15)\\
+\hline
+\end{tabular}
+\caption{Valores para la {\bf región} H{\sc ii} de la zona de Ruprecht\,102.}
+\label{estadistica}
+\end{table*}
+
+Del an\'alisis del CMD presente en la Fig.~\ref{aju}, se observa que los miembros de BH\,205 no se diferencian de los miembros hallados con an\'alisis astrom\'etrico para ESO\,332-8 \citep{1968se} y con an\'alisis de distribuci\'on espacial por este trabajo. Se aprecia una isocrona bien definida, que se extiende por 12 magnitudes con la caracter\'istica particular de mostrar una marcada ausencia de poblaci\'on estelar en G = 14 mag.
+Antes de la era \emph{Gaia} se pensaba que quiz\'as las estrellas brillantes estaban disociadas de aquellas con intensidad m\'as d\'ebil. Luego, al poder medir la paralaje con \emph{Gaia}, se evidencia que las dos poblaciones poseen distancias y movimientos propios similares. De esta manera, no resulta posible dar una explicaci\'on a esa caracter\'istica.
+El c\'umulo posee la forma esperable de objetos estelares j\'ovenes, de hecho la isocrona que mejor se ajusta a las observaciones es la correspondiente al valor $\log(\mathrm{edad})$= 6.87 $\pm$ 0.06 dex (edad $\sim$ 7.4 millones de a\~nos), evidenciando la juventud del mismo.
+Otros autores como \citet{2019liu} y \citet{2021dias} llegan a valores similares, puesto que obtienen $\log(\mathrm{edad})$= 6.80 $\pm$ 0.03 dex y $\log(\mathrm{edad})$= 6.68 $\pm$ 0.09 dex, respectivamente.
+Por otra parte, encontramos un valor de $E(B-V)$= 0.40 $\pm$ 0.05,  pr\'oximo al hallado por \citet{2006ahu} empleando ellos otro m\'etodo de an\'alisis y encontramos un valor de distancia fotométrica de 2000$_{-400}^{+200}$ pc, acorde con las dem\'as distancias mencionadas.
+Otra caracter\'istica remarcable del CMD para este c\'umulo es la presencia de posibles estrellas presecuencia, as\'i como lo evidencia \citet{2018da}.  
+
+Para este c\'umulo tambi\'en se investiga una posible interacci\'on de sus miembros con el MIE. Por ubicarse en (l, b) = (344$\degr$.79, +1$\degr$.48) no es posible encontrarlo en el mapa del continuo en 1420\,MHz del relevamiento {\emph SGPS}, ya que s\'olo llega hasta b = +1$\degr$.0. En la ima\-gen obtenida en 843\,MHz se lo observa al sur de la RH{\sc ii}\,RCW\,116B investigada por \citet{2020Baume} donde se concluye que posiblemente haya sido generada por el c\'umulo inmerso DBS\,113.
+
+%ESO332-8 El mismo corresponde al grupo Trumpler 24 II de \citet{1968se}, Distancia pxl: 1636 +/-  170 pc.\\
+%El grupo 25-1 corresponde a ESO332-8 con 22 miembros y componentes medias de movimiento propio $(\mu_{\alpha}cos(\delta),\mu_{\delta}) = (-0.35\pm0.09, -1.33\pm0.08)~\mathrm{mas\,a\~nos}^{-1}$. En el an\'alisis de la paralaje, su valor medio corregida por punto cero del cat\'alogo indica una distancia estimada de $1592 \pm  159~\mathrm{pc}$.
+
+%20-1 corresponde ESO332-8 con 22 miembros, componentes medias de movimiento propio $(\mu_{\alpha}cos(\delta),\mu_{\delta})=(-0.34537,-1.33774)~\mathrm{mas\,a\~nos}^{-1}$ y paralaje media $\varpi=0.628~\rm{mas}$ corregida por punto cero del catálogo, lo cual arroja una distancia estimada de 1592~\mathrm{pc}.
+
+%En el caso de BH 205  se consideran estrellas en la región de $30'\times30'$, centro $\alpha=254.04725^{\circ}$, $\delta=-40.66627^{\circ}$ y componentes de movimiento propio $\mu_{\alpha}cos(\delta)\in[-1.38:1]$, $\mu_{\delta}\in[-2.32:0.06]$ y, al igual que el caso de la muestra para estudiar Ruprecht 102, los errores en estas componentes son menores o iguales a $0.3~\mathrm{mas\,a\~no}^{-1}$; esta muestra resulta de 2497 estrellas
+
+%, componentes medias de movimiento propio $(\mu_{\alpha}cos(\delta),\mu_{\delta})=(-0.15074,-1.10619)~\mathrm{mas\,a\~nos}^{-1}$ y paralaje media $\varpi=0.610~\rm{mas}$ corregida por punto cero del cat\'alogo, lo cual arroja una distancia estimada de $1639~\mathrm{pc}$.
+
+\section{Discusi\'on y Resultados}\label{sec:res}
+
+% \item La primera unidad se separa de la magnitud por un espacio inseparable (\verb|~|). Las unidades subsiguientes van separadas entre si por semi-espacios (\verb|\,|). Las magnitudes deben escribirse en roman (\verb|\mathrm{km}|), estar abreviadas, no contener punto final, y usar potencias negativas para unidades que dividen. Como ejemplo de aplicación de todas estas normas considere: $c \approx 3 \times 10^8~\mathrm{m\,s}^{-1}$ (\verb|$c \approx 3\times 10^8~\mathrm{m\,s}^{-1}$|). En caso de tener que utilizar la unidad mega años, tener en cuenta que en inglés la misma es Myr y en español Ma.
+% \item Para incluir una expresión matemática o ecuación en el texto, sin importar su extensión, se requiere del uso de solo dos signos \verb|$|, uno al comienzo y otro al final. Esto genera el espaciado y tipografía adecuadas para cada detalle de la frase.
+ Se estudiaron los c\'umulos abiertos Ruprecht\,102 y BH\,205, localizados en el cuarto cuadrante del plano Gal\'actico de la V\'ia L\'actea, buscando subestructuras no confirmadas a\'un en los trabajos publicados \citep{2019liu,miotrumpler24}. Se  investig\'o tambi\'en una posible interacci\'on de sus miembros con el medio circundante (MIE). Del an\'alisis que se presenta aqu\'i se obtuvieron los siguientes resultados.
+%par\'ametros fundamentales para los mismos y se analiza la vinculaci\'on entre ellos.
+\begin{itemize}
+\item En Ruprecht\,102 se analizaron los datos presentes en \emph{Gaia}\,DR3, se pudieron encontrar cuatro subestructuras aunque a\'un se necesita mayor precisi\'on que la actual para investigarlas. Los par\'ametros calculados coinciden, con los ya publicados sobre la \'unica estructura que se conoc\'ia, el grupo central indicado en color verde (Fig.\ref{subgrupos}).
+  Del MIE se presentan aqu\'i caracter\'isticas del sector sur de la RH{\sc ii} centrada en
+ (l, b) = (298$\degr$.57, -0$\degr$.08) 
+ %como {\bf ser} par\'ametro de excitaci\'on, masa, densidad de flujo y distancia de la Regi\'on H{\sc ii},
+ previamente desconocidos. Al evaluar la posible vinculaci\'on entre las estrellas de tipo espectral m\'as temprano y esta RH{\sc ii} por medio de los par\'ametros de ionizaci\'on (estrellas) y de excitaci\'on (RH{\sc ii}) se  vi\'o que es poco probable que el CA haya generado a esta \'ultima. 
+%\item Para grandes números, separar en miles usando el espacio reducido; ej.: $1\,000\,000$ (\verb+$1\,000\,000$+).
+  \item En BH\,205 se emple\'o {\sc HDBSCAN} para estudiar un campo de 30${^\prime}$ de lado, se compar\'o con los resultados producidos por \cite{miotrumpler24} los cuales contaron con \emph{Gaia}\,DR2 y {\sc DBSCAN} y a diferencia de ellos, encontramos un sólo cúmulo elongado. La regi\'on H{\sc ii} m\'as pr\'oxima a este CA no coincide espacialmente con \'el. 
+\end{itemize}
+%\item Para abreviar ``versus'' utilizar ``vs.'' y no ``Vs.''.
+%  \item Las comillas son dobles y no simples; ej.: ``palabra'', no `palabra'.
+%  \item Las llamadas a figuras y tablas comienzan con mayúscula si van seguidas del número correspon\-dien\-te. Si la palabra ``Figura'' está al inicio de una sentencia, se debe escribir completa. En otro caso, se escribe ``Fig.'' (o bien Ec. o Tabla en caso de las ecuaciones y tablas).
+%  \item Especies atómicas; ej.: \verb|He {\sc ii}| (He {\sc ii}).
+ % \item Nombres de {\sc paquetes} y {\sc rutinas} de {\em software} con tipografía {\em small caps} (\verb|\sc|).
+%  \item Cuando incluya un enlace en el cuerpo de su texto o al pie del mismo. No utilice el comando \verb|\href{}|, use siempre \verb|\url{}|. El comando \verb|\href{}| no vinculará a la dirección implícita al compilar la versión final del Boletín y se perderá el enlace correspondiente. 
+ % \item Nombres de {\sl misiones espaciales} con tipografía {\em slanted} (\verb|\sl|)
+
+%utilizando \verb|\mathrm{}| para las unidades. Los vectores deben ir en ``negrita'' utilizando \verb|\mathbf{}|.
+% (ver Tabla \ref{tabla1}), y {no se pueden usar modificadores del tamaño de texto}.
+%En las tablas se debe incluir cuatro líneas: dos superiores, una inferior y una que separa el encabezado. Se pueden confeccionar tablas de una columna (\verb|\begin{table}|) o de todo el ancho de la página (\verb|\begin{table*}|).
+
+
+
+%(ver p.ej. la Fig.~\ref{Figura}). Al realizar figuras a color, procure que no se pierda información cuando se visualiza en escala de grises (en caso se decida imprimir el BAAA). Por ejemplo, en la Fig.~\ref{Figura}, las curvas sólidas podrían diferenciarse con símbolos diferentes (círculo en una y cuadrado en otra), y una de las curvas punteadas podría ser rayada. Para figuras tomadas de otras pu\-bli\-ca\-cio\-nes, envíe a los editores del BAAA el permiso correspondiente y cítela como exige la publicación original .
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%Figura reproducida con permiso de \cite{Hough_etal_BAAA_2020}
+
+
+%\section{Trabajo a futuro}\label{sec:tr}
+Se desea continuar la b\'usqueda sistem\'atica y
+homog\'enea de agrupaciones estelares j\'ovenes vinculadas a Regiones H{\sc ii}, estudiar la interacci\'on entre ellos. 
+%y enriquecer de este modo, el conocimiento de la estructura de nuestra Galaxia, como los brazos espirales y sus posibles ramificaciones (\emph{spurs}).
+
+%\begin{itemize}
+%\item La mejora en el trazado de la estructura a gran escala de la Vía Láctea:
+%brazos espirales y sus posibles ramificaciones (“spurs”).
+%\item El estudio de la interacción entre la población estelar joven y el medio
+%interestelar (MIE) en la región de cada objeto.
+%\end{itemize}
+
+
+
+
+
+\begin{acknowledgement}
+%Gaia edr3.
+%This work has made use of data from the European Space Agency (ESA) mission
+%{\it Gaia} (\url{https://www.cosmos.esa.int/gaia}), processed by the {\it Gaia}
+%Data Processing and Analysis Consortium (DPAC,
+%\url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Funding for the DPAC
+%has been provided by national institutions, in particular the institutions
+%participating in the {\it Gaia} Multilateral Agreement.
+
+\texttt{Este trabajo ha hecho uso de datos de la misión \emph{Gaia} (\url{https://www.cosmos.esa.int/gaia}) de la Agencia Espacial Europea (ESA), procesados por el \emph{Gaia} Data Processing and Analysis Consortium (DPAC, \url{https://www.cosmos.esa.int/web/gaia/dpac/consortium}). Al \'arbitro por mejorar este trabajo con los comentarios y correcciones aportadas. }
+
+%El financiamiento para el DPAC ha sido provisto por instituciones nacionales como las participantes en el Acuerdo Multilateral de \emph{Gaia}.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+\end{document}

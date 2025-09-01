@@ -1,0 +1,383 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Environmental conditions and the CO emission in the \\Small Magellanic Cloud}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{CO and environment conditions}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+H. P. Saldaño\inst{1,2},
+M. Rubio\inst{3},
+L. Ferrero\inst{4},
+C. C. Mendez\inst{5}
+}
+
+\authorrunning{Saldaño et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{hpablohugo@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Investigaciones en Energ{\'i}a no Convencional, UNSa, Argentina
+\and
+Consejo Nacional de Investigaciones Cient{\'i}ficas y T{\'e}cnicas, Godoy Cruz 2290, CABA, Argentina
+\and
+Departamento de Astronom{\'i}a, Universidad de Chile, Casilla 36-D, Santiago, Chile
+\and
+Observatorio Astronómico de Córdoba, UNC, Argentina
+\and
+Departamento de Física, Facultad de Ciencias Exactas, UNSa, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{La Nube Menor de Magallanes (NmM) es un laboratorio ideal para el estudio del medio interestelar (MIE) en condiciones físicas similares al Universo primigenio: baja fracción de gas molecular, intensos campos de radiación ultravioleta y baja metalicidad. En este trabajo, analizamos la dependencia de la emisión integrada del CO ($J=3-2$) con trazadores de formación estelar (colores en la banda del infrarojo de {\it Herschel} y {\it Spitzer}) y propiedades físicas del polvo (densidad superficial, temperatura y absorción visual) en el MIE de la barra de la NmM.  Encontramos que la emisión de CO ($J=3-2$) en la barra de la NmM tiene una buena correlación con los índices de color en el infrarojo y con las propiedades del polvo estudiadas, indicando que esta molécula es un buen trazador de regiones de alta densidad con activa formación estelar en la NmM.}
+
+\abstract{The Small Magellanic Cloud (SMC) is an ideal laboratory for studying the interstellar medium (ISM) in physical conditions that are similar to the early Universe: low molecular gas fraction, high ultraviolet radiation fields, and low metallicity. In this work, we analysed the dependence of the integrated CO ($J=3-2$) emission with star-formation tracers (e.g., {\it Spitzer} and {\it Herschel} infrared colours) and physical dust properties (surface density, temperature, and visual absorption) of the ISM in the SMC's Bar (SMC-Bar). We found that the CO ($J=3-2$) emission in the SMC-Bar shows a good correlation with the infrared colour indices and the dust properties, indicating that this molecule is a reliable tracer of dense and actively star-forming regions in the SMC.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{galaxies: individual (SMC) --- galaxies: dwarf --- galaxies: ISM --- galaxies: star formation}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+The Small Magellanic Cloud (SMC) serves as an ideal laboratory for studying the physical properties of the interstellar medium (ISM) under conditions of low metallicity ($20\%$ solar neighbourhood abundance), high ultraviolet radiation field, and extremely low dust and molecular abundances \citep{Roman_Duval_2017ApJ_841_72R,Jameson_2018_ApJ_853_111J}. Due to its proximity to our Galaxy ($\sim 60$ kpc), hundreds of small molecular clouds have been identified in the SMC at high spatial resolutions ($\sim 1 - 10$ pc) using carbon monoxide (CO) \citep[e.g., ][]{Tokuda_2021ApJ_922_171T, Saldano_2023AA_672A_153S, Saldanio_2024_AA_687A_26S}, thereby characterising the main properties of the clouds, such as size, velocity dispersion, and CO luminosity. These observations showed that the low metallicity may affect such properties, resulting in less turbulent and luminous clouds than their Milky Way counterparts of similar size. Moreover, since the CO clouds in the SMC are embedded within large reservoirs of H$_2$ gas \citep{Jameson_2018_ApJ_853_111J}, the CO-to-H$_2$ conversion factor ($\alpha_{\rm CO}$) of the SMC tends to be three to tens of times larger than that of the Galaxy \citep{Bolatto_2013ARA&A_51}. 
+%Similar properties have been found in several low-metallicity regions \citep{Madden_2020AA_643A_141M}.
+
+The gas density and star formation can also influence the properties of the ISM. A parameter that is highly sensitive to the environment is the ratio between integrated CO lines of different transitions (e.g., $R_{21} =[{\rm CO}\,(2-1)]/[{\rm CO}\,(1-0)]$). Theoretical studies have demonstrated that varying the stellar radiation field by two orders of magnitude produces an increase in $R_{21}$ by up to a factor of two \citep{Penialoza_2018_MNRAS_475_1508P}. \cite{denBrok_2021_MNRAS_504_3221D} also observed a positive correlation between $R_{21}$ and observational properties that trace star formation in low-metallicity galaxies, whereas \cite{Saldanio_2024_AA_687A_26S} analysed the integrated CO line ratio $R_{32} =[{\rm CO}\,(3-2)]/[{\rm CO}\,(2-1)]$ in the SMC-Bar, showing an increase of $R_{32}$ with infrared observational properties. These authors concluded that regions with high density and strong star formation activity can be traced by high values of $R_{32}$ ($>0.65$).
+
+However, the measurements of $R_{32}$ in the SMC by \cite{Saldanio_2024_AA_687A_26S} were made in four small regions (yellow boxes in Fig. \ref{fig:smc_bar}), where the CO\,($2-1$) emissions were observed by \cite{Saldano_2023AA_672A_153S}. These regions are located within the full survey of CO\,($3-2$) in the SMC-Bar, indicated by a white contour in the figure. In this study, we used the complete CO\,($3-2$) survey of the SMC-Bar to explore the correlations between the integrated CO\,($3-2$) emission and dust parameters. A detailed description of these data, along with an overview of all datasets used in our analysis, is provided in Sect.~\ref{sec:data}. Sect.~\ref{sec:metodology} outlines the methodology used to process the data. In Sect.~\ref{sec:results}, we present the correlations between CO and dust properties, followed by a discussion in Sect.~\ref{sec:discussion}. Finally, Sect.~\ref{sec:summary} summarises the main findings of our study.
+
+\section{CO and dust surveys}
+\label{sec:data}
+
+We used the recent CO\,($3-2$) survey of the SMC at $6$ pc ($\sim 20''$) resolution \citep[][]{Saldanio_2024_AA_687A_26S}, observed with the $12$ m Atacama Pathfinder EXperiment (APEX) telescope \citep{Gusten_2006_AA_454L_13G}. The survey was carried out using the SuperCAM instrument \citep{Kloosterman_2012SPIE_8452E_04K}, covering the main body (bar) of the SMC within a field of view (FoV) of $\sim 3.5$ square degrees (see Fig. \ref{fig:smc_bar}). The root mean squared (rms) in intensity of the mapped regions is $\sim 1$ K at a $7''$ pixel size. 
+
+We also used the APEX CO\,($2-1$) survey at $9$ pc ($\sim30''$) resolution \citep{Saldano_2023AA_672A_153S}. This survey covers the south-west bar (SW-Bar) and the north-east bar (NE-Bar) regions of the SMC, as well as the highest H\,{\sc ii} region of the SMC (N66), and the dark peak (DarkPK) region, indicated by yellow boxes in Fig. \ref{fig:smc_bar}. These regions give a total FoV of $\sim 0.4$ square degrees and have rms between $\sim 0.1-0.3$ K at a $14''$ pixel size. 
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{map_plot_smc_160mu.pdf}
+    \caption{CO\,($3-2$) observations of the SMC-Bar with APEX. The white contour outlines the SMC-Bar region, while the green contours represent the CO\,($3-2$) distribution. Yellow boxes indicate the CO\,($2-1$) survey coverage in the SW-Bar, NE-Bar, N66, and DarkPK regions. The background emission corresponds to $160\,\mu$m data from {\it Spitzer}.}
+    \label{fig:smc_bar}
+\end{figure}
+
+%In addition, we used data from the HERITAGE {\it Herschel} Project \citep{Meixner_2013AJ_146_62M} and the Surveying the Agents of Galaxy Evolution Projects \citep[SAGE-SMC,][]{Gordon_2011_AJ_142_102G}. Both projects mapped the mid-infrared (MIR) and far-infrared (FIR) emission of the entire SMC. The infrared maps provided by these projects were used to model dust parameters such as dust surface density ($\Sigma_{\rm dust}$) and temperature ($T_{\rm dust}$) \citep{Gordon_2014_ApJ_797_85G}. Specifically, we used these dust parameter maps corresponding to the broken emissivity modified black-body (BEMBB) model with a constrained exponential index ($\beta$) ranging between $0.8$ and $2.5$. This model yielded the best fit with the smallest residuals. All dust property maps are at $\sim 40''$ resolution, and have been binned into $56''$ pixels to ensure that the data for each point are independent.
+
+In addition, we used the mid-infrared (MIR) maps from Surveying the Agents of Galaxy Evolution (SAGE) in the SMC \citep{Gordon_2011_AJ_142_102G} at $8$ and $24\,\mu$m, and the far-infrared (FIR) maps from the {\it HERschel} Inventory of The Agents of Galaxy Evolution (HERITAGE) in the Magellanic Clouds Project \citep{Meixner_2013AJ_146_62M} at $100$, $160$, $250$, $350$, and $500\,\mu$m. Both projects covered the entire IR emitting region of the SMC. We also used the dust surface density ($\Sigma_{\rm dust}$) and temperature ($T_{\rm dust}$) maps created by \cite{Gordon_2014_ApJ_797_85G} using a broken emissivity modified black-body (BEMBB) model with a constrained exponential index ($\beta$) ranging between $0.8$ and $2.5$. All dust property maps are at $\sim 40''$ resolution, and have been binned into $56''$ pixels to ensure that the data for each point are independent.
+
+\section{Data processing}
+\label{sec:metodology}
+
+We convolved the CO data cubes to a common spatial resolution of $\sim 40''$, then the convolved maps were regridded to match the pixel size of the dust maps ($56''$) in order to perform a pixel-by-pixel analysis. Given the low signal-to-noise (S/N) ratio of the CO\,($3-2$) survey and its non-uniform background noise \citep[see][]{Saldanio_2024_AA_687A_26S}, we employed the CO($1-0$) data cube \citep{Mizuno_2009IAUS_256_203M} to mask channels with unreliable CO\,($3-2$) emission. Subsequently, we calculated the integrated CO emission in each pixel using the expression $I_{{\rm CO}} = \sum T_{{\rm CO}}(\upsilon)\Delta\upsilon$, where $T_{{\rm CO}}$ represents the main beam brightness temperature in Kelvin and $\Delta\upsilon$ denotes the channel width in km\,s$^{-1}$. The integration was performed within the velocity range of the CO line, where $T_{{\rm CO}} \gtrsim 3\times {\rm rms}$.
+
+On the other hand, we estimated the total infrared surface brightness ($S_{\rm TIR}$) using a combination of the {\it Spitzer} $24$ and $70$ $\mu$m bands with the {\it Herschel} $100$, $160$, and $250$ $\mu$m bands \citep{Jameson_2018_ApJ_853_111J}. This was accomplished through the expression $S_{\rm TIR} = \sum{c_{i}S_{i}}$, where $S_{i}$ denotes the brightness in the respective {\it Spitzer} and {\it Herschel} band $i$. Here, $c_{i}$ represents the calibration coefficient for the combined brightness \citep[][]{Galametz_2013_MNRAS_431_1956G}. Both $S_{\rm TIR}$ and $S_{i}$ are expressed in W\,kpc$^{-2}$.
+
+We also estimated the visual extinction ($A_V$) in the SMC-Bar. Following the methodology outlined by \cite{Lee_2015MNRAS_450_2708L}, we used the temperature ($T_{\rm dust}$) and the {\it Herschel} $160\,\mu$m map \citep{Gordon_2014_ApJ_797_85G} to determine the visual extinction, expressed as $A_V = 2200\,\tau_{160}$, where the optical depth $\tau_{160}$ is given by:
+
+\begin{equation}
+    \tau_{160} = \dfrac{S_{160}{\rm [MJy/sr]}}{B_{\nu}(T_{\rm dust},160\mu{\rm m})}
+    \label{eq:tau160}
+\end{equation}
+
+\noindent
+In Eq. \ref{eq:tau160}, $S_{160}$ represent the surface brightness at $160\,\mu$m and $B_{\nu}(T_{\rm dust},160\,\mu{\rm m})$ the Planck function. The factor $2200$ in the expression for $A_{V}$ was estimated by comparing visual extinctions and optical depths in the Galaxy.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.95\linewidth]{moment-0_ratio_mmasked_cubes_SW-BAR_2.pdf}
+    \caption{Correlation between the integrated CO\,($3-2$) and CO\,($2-1$) emission at $40''$ resolution. All values correspond to regions where the integrated emission in both transitions has S/N $\ge 3$. The dotted and solid lines represent $R_{32}$ values of $0.4$, $0.65$, and $1.0$, corresponding to the slopes of the linear function $y = a\,x$.}
+    \label{fig:CO_correlation}
+\end{figure}
+
+\section{Results}
+\label{sec:results}
+
+In Fig.~\ref{fig:CO_correlation}, we present the correlation between the integrated emission of CO\,($3-2$) and CO\,($2-1$) at $40''$ resolution for the SW-Bar, NE-Bar, N66, and DarkPK regions (see Fig.~\ref{fig:smc_bar}). To avoid a noise-dominated correlation, we considered integrated emissions in both transitions with uncertainties lower than $30\%$, i.e., S/N $\ge 3$. Across the three regions (SW-Bar, NE-Bar, and N66), most pixels with high S/N ratios in both integrated emissions exhibited $R_{32}$ values between $0.4$ and $1.0$, with a median of $0.65$. In contrast, pixels with high S/N ratios in the DarkPK region exhibited $R_{32} \gtrsim 1$. These ratios are consistent with those reported by \cite{Saldanio_2024_AA_687A_26S} for the SMC-Bar region at a smaller spatial resolution, supporting the analyses presented in Figs.~\ref{fig:FIR_colors}, \ref{fig:MID_colors}, and \ref{fig:dust_parameters}.
+
+Figure~\ref{fig:FIR_colors} shows the correlation between the integrated CO\,($3-2$) emission and observable quantities in the FIR range ($S_{160}/S_{500}$, $S_{250}/S_{500}$, and $S_{\rm TIR}$) for the SMC-Bar. The integrated CO emissions with high S/N ($\ge 3$) are depicted in green, while empty circles represent pixels with low S/N ratios ($< 3$). The left and middle panels of Fig.~\ref{fig:FIR_colors} reveal that $I_{{\rm CO}(3-2)}$ with high S/N ratios exhibit moderately increasing trends with FIR colours, characterised by Spearman coefficients ($\rho_{S}$) of $0.7$. In contrast, the right panel of Fig.~\ref{fig:FIR_colors} shows a strong correlation between $I_{{\rm CO}(3-2)}$ and $S_{\rm TIR}$, with a Spearman coefficient of $0.8$.
+
+Similar results were obtained for the relationships between the $I_{{\rm CO}(3-2)}$ and {\it Spitzer} colours ($S_{24}/S_{08}$, $S_{24}/S_{70}$, and $S_{70}/S_{160}$), as shown in Fig. \ref{fig:MID_colors}. The relationships between $I_{{\rm CO}(3-2)}$ and the dust parameters ($\Sigma_{\rm dust}$, $A_{V}$, $T_{\rm dust}$) are shown in Fig. \ref{fig:dust_parameters}.
+
+\begin{figure*}[h]
+    \centering
+    %\includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_SPIRE250-SPIRE500.pdf}
+    %\includegraphics[width=0.3\linewidth]{moment-0_Ico_correlations_vs_SPIRE350-SPIRE500.pdf}
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_PACS160-SPIRE500.pdf}
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_SPIRE250-SPIRE350.pdf}
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_TotalFIR.pdf}
+    \caption{Correlation between $I_{{\rm CO}(3-2)}$ and FIR datasets for the SMC-Bar. The left and middle panels show $I_{{\rm CO}(3-2)}$ as a function of the {\it Herschel} colour ratios $S_{160}/S_{500}$ and $S_{250}/S_{350}$, respectively. The subscripts in the surface brightnesses ($S$) in each panel indicate the wavelength of the {\it Herschel} bands. The right panel displays $I_{{\rm CO}(3-2)}$ vs. TIR surface brightness ($S_{\rm TIR}$). Integrated CO emissions with uncertainties lower than $30\%$ are highlighted in green, while empty circles represent emissions with higher uncertainties. The Spearman rank correlation coefficient ($\rho_S$) and the best fits for the low-uncertainty data are shown in the bottom-right corner of each panel.}
+    \label{fig:FIR_colors}
+\end{figure*}
+
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_MIPS24-IRAC08.pdf}
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_MIPS24-MIPS70.pdf}
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_MIPS70-MIPS160.pdf}
+    \caption{Similar to Fig. \ref{fig:FIR_colors} , but for {\it Spitzer} MIR and FIR colours.}
+    \label{fig:MID_colors}
+\end{figure*}
+
+\begin{figure*}[h]
+    \centering
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_density.pdf}
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_Av.pdf}
+    \includegraphics[width=0.32\linewidth]{moment-0_Ico_correlations_vs_Tdust.pdf}
+    %\includegraphics[width=0.3\linewidth]{moment-0_Ico_correlations_vs_beta.pdf}
+    \caption{$I_{{\rm CO}(3-2)}$ vs. dust parameters for the SMC-Bar. {\it Left:} The $I_{{\rm CO}(3-2)}$ as function of the dust surface density ($\Sigma_{\rm dust}$). {\it Middle:} $I_{{\rm CO}(3-2)}$ as a function of the visual extinction ($A_V$). {\it Right:} correlation between $I_{{\rm CO}(3-2)}$ and the dust temperature ($T_{\rm dust}$).}
+    \label{fig:dust_parameters}
+\end{figure*}
+
+\section{Discussion}
+\label{sec:discussion}
+
+%Our findings suggest that the CO\,($3-2$) emission effectively traces dense and active star-forming regions. Such inference is supported by our empirical correlations with the IR colours and $S_{\rm TIR}$. The FIR colours are used as indicators of star-formation rate \citep[see][]{Gregg_2022ApJ_928_120G}, while $S_{\rm TIR}$ scales with the gas surface density and recent star formation \citep{denBrok_2021_MNRAS_504_3221D}. On the other hand, warm dust clouds generally peak between $70$ and $160$ $\mu$m and others are peaking between $35$ and $70$ $\mu$m \citep{Madden_2012IAUS_284_141M}, leading the MIR and FIR colours to trace dust temperatures and interstellar radiation fields \citep{denBrok_2021_MNRAS_504_3221D}. Therefore, such colours are indicative of the star formation rate \citep{Gregg_2022ApJ_928_120G}.
+
+Our findings suggest that the CO\,($3-2$) emission effectively traces dense and actively star-forming regions. This inference is supported by our empirical correlations with the IR colours and $S_{\rm TIR}$. Warm dust clouds generally peak between $70$ and $160$ $\mu$m, and some are peaking between $35$ and $70$ $\mu$m \citep{Madden_2012IAUS_284_141M}, causing the MIR and FIR colours to trace dust temperatures and interstellar radiation fields \citep{denBrok_2021_MNRAS_504_3221D} and are therefore indicative of the star formation rate \citep{Gregg_2022ApJ_928_120G}. While $S_{\rm TIR}$ scales with the gas surface density and star formation \citep{denBrok_2021_MNRAS_504_3221D}. 
+
+In particular, the emission lines of polycyclic aromatic hydrocarbons, which fall within the {\it Spitzer} $8\,\mu$m band, are typically excited by far-ultraviolet radiation in the outer regions of molecular clouds, known as photo-dissociation regions \citep[see][]{Madden_2020AA_643A_141M}. Consequently, in the innermost parts of the clouds, the emission at $8\,\mu$m decreases while the emission at $24\,\mu$m increases, and vice versa. This implies that in regions with high dust density and strong CO emission, the $S_{24}/S_{08}$ colour increases. This observation helps to explain the positive correlation observed between CO\,($3-2$) and the {\it Spitzer} $S_{24}/S_{08}$ colour. This agrees with the increasing trend of the local strength of star formation with the $S_{24}/S_{08}$ colour shown by \cite{Gregg_2022ApJ_928_120G} in local galaxies.
+
+These findings are consistent with the positive correlations that we found between the $I_{{\rm CO}(3-2)}$ and dust properties, as illustrated in Fig. \ref{fig:dust_parameters}. Specifically, we observed an increase in $I_{{\rm CO}(3-2)}$ within dense, optically thick regions, as shown in the left and middle panels of Fig. \ref{fig:dust_parameters}. Similar results were reported by \cite{Lee_2015MNRAS_450_2708L} using the integrated CO\,($2-1$) emission but only in the SW-Bar region. Furthermore, we identified a moderate correlation between CO\,($3-2$) emission and the dust temperature ($\rho_S = 0.4$). This relatively weak correlation may indicate that the molecular gas and dust temperatures are poorly coupled \citep[see ][]{Luo_2023ApJ_942_101L}. 
+
+Finally, we found that all correlations improved when data with lower uncertainties were selected (S/N~$\geq 5$~or $10$), although the number of data decreased. 
+
+\section{Summary}
+\label{sec:summary}
+For the first time, we present the correlation between the integrated CO\,($3-2$) emission and dust properties across the entire SMC-Bar at a resolution of $\sim 40''$. We found that $I_{{\rm CO}(3-2)}$ increases with MIR and FIR colours, as well as with the TIR surface brightness. These results indicate that the CO\,($3-2$) is a good tracer of dense and active star-forming regions in the SMC.
+
+%\begin{acknowledgement}
+%H.P.S acknowledges partial financial support from a fellowship from Consejo Nacional de Investigación Científicas y Técnicas (CONICET-Argentina). 
+%M.R. wishes to acknowledge support from ANID(CHILE) through FONDECYT grant N$^{\circ}$1190684 and ANID Basal FB210003.
+%\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{biblio2}
+ 
+\end{document}

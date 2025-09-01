@@ -1,0 +1,394 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{29 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Estudio de la dinámica de sistemas binarios de
+cúmulos abiertos con LP-VIsuite: el cúmulo doble de Perseo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Dinámica de sistemas binarios de
+cúmulos abiertos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A. Granada\inst{1,2},
+F. Zoppetti\inst{2,3,4},
+N.P. Maffione\inst{1,2}
+\&
+M. Orellana\inst{1,2}
+}
+
+\authorrunning{Granada et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{agranada@unrn.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Laboratorio de Investigación Científica en Astronomía, UNRN, Argentina
+\and
+Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina
+\and
+Instituto de Astronomía Teórica y Experimental, CONICET--UNC, Argentina
+\and 
+Observatorio Astronómico de Córdoba, UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En este trabajo se lleva a cabo una investigación sobre la dinámica de los cúmulos NGC 869 y NGC 884, conocido como el c\'umulo doble de Perseo con el fin de evaluar posibles aproximaciones pasadas o futuras entre ellos y su impacto potencial en la formación de estrellas Be. Se emplea {\sc LP-VIcode} para realizar las simulaciones, mientras que el modelo {\sc Hydra 2.0} se utiliza para representar el potencial de la Vía Láctea. Los resultados sugieren que no se puede descartar que un acercamiento máximo en el pasado pueda haber influido en la formación de estrellas Be, aunque el máximo de probabilidad para este m\'aximo acercamiento corresponde a un tiempo futuro. Se propone extender este análisis a otros cúmulos dobles de la literatura para obtener una comprensión más amplia de su dinámica, y para aquellos que albergan estrellas Be evaluar si la din\'amica de los c\'umulos pudo haber influenciado la formación de estrellas Be.}
+
+\abstract{In this work, we carry out an investigation of the dynamics of the clusters NGC 869 and NGC 884, known as the Double Cluster in Perseus in order to assess possible past or future approaches between them, and its potential impact on Be star formation. {\sc LP-VIcode} is used to perform the numerical simulations, while the {\sc Hydra 2.0} model is used to represent the Milky Way potential. We find that it cannot be ruled out that a maximum approach in the past may have influenced Be star formation, although the maximum probability for this maximum approach corresponds to a future time. We propose to extend this analysis to other double clusters in the literature to gain a broader understanding of their dynamics, and for those harbouring Be stars to assess whether the dynamics of the clusters may have influenced the formation of Be stars.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\keywords{ Sun: abundances --- stars: early-type --- Galaxy: structure --- galaxies: individual (M31)}
+\keywords{Galaxy: kinematics and dynamics --- open clusters and associations: individual (NGC 869, NGC 884) --- stars: emission-line, Be}
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+Una de las líneas de investigación del Laboratorio de Investigación Científica en Astronomía (LICA) de la Universidad Nacional de R\'io Negro propone contribuir a mejorar el conocimiento de diferentes aspectos vinculados a las estrellas Be. Se trata de estrellas B de secuencia principal que rotan en promedio más rápido que el grueso de las estrellas B y que forman eventualmente discos circunestelares a partir del material eyectado \citep{Rivinius2013}. Estas estrellas se observan con mayor frecuencia en cúmulos abiertos (CA) de entre $10$ y $50$ Ma, algunos de ellos con fracción de estrellas Be sobre el total de las B cercana al 50\%. Tal es el caso del Cúmulo doble de Perseo, que consiste en un par de cúmulos abiertos con una elevada fracción de estrellas Be. Proponemos investigar con datos de la literatura \citep{Tarricq2021} y utilizando la {\sc LP-VIsuite}, si este par de cúmulos se está acercando o alejando entre sí, para poder evaluar si una mayor cercanía en \'epocas de formacion estelar pudo haber favorecido la formación de estrellas Be.
+
+
+\section{\sc LP-VIsuite}
+
+LP-Visuite \citep{Carpintero2022} es un paquete de códigos para trabajar en dinámica, particularmente diseñado para operar con indicadores de caos. Entre las componentes del paquete, para el presente trabajo utilizamos dos: (a) {\sc LP-VIcode} es el código principal del paquete que calcula hasta 10 indicadores de caos dado un potencial, las aceleraciones y las ecuaciones variacionales asociadas al mismo. También ofrece el cálculo de cantidades físicas vinculadas a la órbita, entre otra informaci\'on relevante \citep{Carpintero2014}. (b) {\sc MILKYWAYHYDRA}, es un archivo que contiene el potencial, aceleraciones y ecuaciones variacionales para modelos de galaxia variados, ajustado particularmente para galaxias tipo Vía Láctea. Este archivo está en el formato de entrada del {\sc LP-VIcode}, para poder utilizarlo directamente para el análisis de dinámica gal\'actica. En este trabajo hacemos uso del modelo {\sc MILKYWAYHYDRA} de Vía Láctea conocido como {\sc Hydra 2.0}. Más información de la suite en: \url{http://lp-vicode.fcaglp.unlp.edu.ar/}.
+
+{\sc Hydra 2.0} es un modelo representativo de potencial de galaxia tipo Vía Láctea, con valores de los parámetros ajustados para representar la din\'amica en vecindades tipo solar. Sus componentes son: 
+\begin{itemize}
+\item Zona nuclear donde se tiene al agujero negro supermasivo; 
+\item Bulbo modificado por el efecto de la barra; 
+\item Discos fino y grueso de perfiles exponenciales; 
+\item Cuatro brazos espirales que representan, desde el interior hacia el exterior, los brazos Scutum-Centaurus, Local (l\'imite exterior) m\'as los de Sagittarius (l\'imite interior), Perseus y Cygnus; 
+\item Halo de materia oscura bi-triaxial.
+\end{itemize}
+ Tanto la barra como los brazos espirales son componentes dependientes del tiempo que tienen diferentes velocidades angulares. Las demás componentes son estáticas. Por otro lado, cabe aclarar que si bien es posible realizar con el c\'odigo una introducci\'on adiab\'atica de la barra y los brazos, en este estudio consideramos que en $t=0$, que corresponde al inicio de la simulaci\'on, tanto brazos como barra ya han alcanzado su configuraci\'on final. 
+
+\section{Metodolog\'ia}
+Dado el modelo de potencial de V\'ia L\'actea mencionado, y dadas las posiciones y velocidades observadas de los c\'umulos NGC 869 y NGC 884 respecto al centro gal\'actico obtenidas de la literatura con sus correspondientes errores \citep{Tarricq2021},  buscamos conocer las posibles separaciones m\'inimas entre los c\'umulos y las fechas donde estas ocurrieron u ocurrir\'an. Para ello, seguimos los pasos descritos en las siguientes subsecciones.
+
+\subsection{Generación de condiciones iniciales} 
+Para NGC 869 y NGC 884,  tomamos los valores observados de las posiciones y velocidades junto con sus errores del art\'iculo de \citet{Tarricq2021}. Luego, modelamos cada c\'umulo a partir de elipsoides 6D, en el espacio de fases, con distribuciones normales de partículas sintéticas alrededor de las posiciones y velocidades medias. Para ello distribuimos aleatoriamente alrededor de los valores medios observados  una cantidad de partículas sintéticas compatible con una densidad media de 0.0002387 pc$^{-3}$ en el espacio de configuraciones.  Este valor, que fue elegido arbitrariamente  con el \'unico objetivo de definir el n\'umero de part\'iculas en cada elipsoide, tiene su origen en el orden de magnitud de tama\~no t\'ipico de c\'umulos abiertos j\'ovenes, y es de unos 10 pc de radio \citep{Piskunov2007}. Es decir, corresponde a una part\'icula por esfera de radio de 10 pc. Considerando tal densidad, el elipsoide que representa a NGC 869 tiene 1197 partículas y el que representa a NGC 884, 863 partículas.  Cabe recordar que estas part\'iculas no representan estrellas individuales de cada c\'umulo, sino posibles estados actuales en el espacio de configuraciones.  Luego, en cada elipsoide 6D, estas part\'iculas son distribuidas siguiendo una distribución normal que tiene por $\sigma$ a un tercio del valor de desviaci\'on est\'andar que brinda la literatura para las posiciones y velocidades de estos c\'umulos \citep{Tarricq2021}. Esto asegura que, fuera de los errores observacionales, prácticamente no haya partículas. Por completitud, en la Tabla \ref{tabla1} detallamos las dispersiones de posiciones y velocidades que hemos utilizado. Entre las part\'iculas de cada c\'umulo, hemos considerado a aquel que tiene como condiciones iniciales a las posiciones y velocidades medias del c\'umulo \citep{Tarricq2021}. Nos referiremos a tales part\'iculas como “nominales”. 
+\begin{table}[!t]
+\centering
+\caption{Desviaciones est\'andar utilizadas para definir los elipsoides en torno a NGC 869 y NGC 884.}%Ejemplo de tabla. Notar en el archivo fuente el manejo de espacios a fin de lograr que la tabla no exceda el margen de la columna de texto.}
+\begin{tabular}{lcccccc}
+\hline\hline\noalign{\smallskip}
+\!\!C\'umulo &$\sigma$X &$\sigma$Y&$\sigma$Z&$\sigma$vX &$\sigma$vY&$\sigma$vZ\!\!\!\!\\
+\!\!NGC & \!\! kpc\!\! & \!\! kpc\!\! & \!\! kpc\!\!&$\mathrm{km\,s}^{-1}$\!\!\!\!\!\!&$\mathrm{km\,s}^{-1}$\!\!\!\!\!\!&$\mathrm{km\,s}^{-1}$\!\!\!\!\!\!\\
+\hline\noalign{\smallskip}
+\!\!869 &\!\!\!\!\!\!\!\!0.06347   &\!\!\!\!\!\!0.06428   &\!\!\!\!\!0.00569   &\!\!\!\!\!1.84027   &\!\!\!\!\!1.84497  &\!\!\!\!\!0.7613   \!\!\!\!\\
+\!\!884 &\!\!\!\!\!\!\!\!0.05826   &\!\!\!\!\!\!0.05814   &\!\!\!\!\!0.00494   &\!\!\!\!\!0.99897   &\!\!\!\!\!0.99730   &\!\!\!\!\!0.6793   \!\!\!\!\\
+%869 &\!\!\!\!\!\!0.19041   &\!\!\!\!0.19285   &\!\!\!\!0.01708   &\!\!\!\!5.5208   &\!\!\!\!5.5349   &\!\!\!\!2.2839   \!\!\!\!\\ son estos valores dividido tres!!!!
+%884 &\!\!\!\!\!\!0.17477   &\!\!\!\!0.17441   &\!\!\!\!0.01483   &\!\!\!\!2.9969   &\!\!\!\!2.9919   &\!\!\!\!2.0379   \!\!\!\!\\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+%\begin{table}[!t]
+%\centering
+%\caption{Velocidades y sus correspondientes desviaciones est\'andar para NGC 869 y NGC 884.}%Ejemplo de tabla. Notar en el archivo fuente el manejo de espacios a fin de lograr que la tabla no exceda el margen de la columna de texto.}
+%\begin{tabular}{lcccccc}
+%\hline\hline\noalign{\smallskip}
+%\!\!\!C\'umulo &vX &vY&vZ&$\sigma$vX &$\sigma$vY&$\sigma$vZ\!\!\!\!\\
+%NGC & \!\! km/s & km/s & km/s & km/s & km/s & km/s\!\!\!\!\\
+%\hline\noalign{\smallskip}
+%\!\!\!869 &\!\!\!\!\!\!\!\!44.6128&\!\!\!\!\!\!222.3864&\!\!\!\!\!-2.4561&\!\!\!\!\!5.5208&\!\!\!\!\!5.5349&\!\!\!\!\!\!2.2839\!\!\!\!\\
+%\!\!\!884 &\!\!\!\!\!\!\!\!36.8984&\!\!\!\!\!\!229.5187&\!\!\!\!\!-2.5778&\!\!\!\!\!2.9969&\!\!\!\!\!2.9919&\!\!\!\!\!\!2.0379\!\!\!\!\\
+%\hline
+%\end{tabular}
+%\label{tabla2}
+%\end{table}
+\subsection{Integración de \'orbitas} 
+Integramos las órbitas de todas las partículas sintéticas en cada elipsoide, representativas de ambos c\'umulos en la Vía Láctea, utilizando el modelo {\sc Hydra 2.0} en {\sc LP-VIcode} sin habilitar el c\'omputo de los indicadores de caos, s\'olo integración de las trayectorias. Aqu\'i debemos mencionar que hacemos una simplificaci\'on, y es que consideramos que ambos c\'umulos son solamente afectados por el potencial de la galaxia y no interact\'uan entre s\'i.  Cabe destacar que entre las \'orbitas calculadas est\'an incluidas aquellas que tienen como posiciones y velocidades iniciales los valores observados de NGC 869 y NGC 884, es decir, las denominadas “nominales”.
+
+
+\subsection{Cálculo de separaciones mínimas entre los c\'umulos} 
+Con todas las trayectorias integradas, incluidas las nominales, calculamos la separación mínima para todos los pares posibles. Es decir, para cada partícula dentro del elipsoide representativo de NGC 869, calculamos su separación mínima con cada partícula dentro del elipsoide representativo de NGC 884, y registramos el momento de m\'inima separaci\'on. En la Fig.~\ref{Figura1} mostramos parte del método en un gráfico de tiempo y separaciones. Con línea sólida verde tenemos la evolución de la separación entre las posiciones nominales de NGC 869 y NGC 884, con un círculo negro el resultado de buscar el mínimo en la evolución temporal de esta separación. En puntos rojos, las separaciones mínimas para todos los demás pares de las distribuciones, calculados de igual manera que en el caso de las posiciones nominales arriba descriptas.  
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Figura1.png}
+\caption{Ubicaci\'on de cada par de posibles separaciones m\'inimas de los c\'umulos en el plano separaci\'on-tiempo. La curva verde indica la evolucion temporal esperada para los c\'umulos seg\'un sus velocidades y posiciones nominales.}
+\label{Figura1}
+\end{figure}
+
+
+\section{Descripci\'on de los experimentos num\'ericos}
+
+Dados los resultados anteriores, queremos investigar qué tan probable es que los cúmulos NGC 869 y NGC 884 se hayan encontrado o estén por encontrarse en el futuro. Esto puede verse en la Fig~\ref{Figura2}, donde se tiene un gr\'afico separaci\'on/tiempo dividido en una grilla de $100 \times 100$ celdas. Cada celda tiene una extensi\'on temporal de 1 Ma (0.001Ga) y en separaci\'on de $0.012$ kpc (12 pc). Este valor surge de dividir en 100 partes al máximo de separación de las posiciones nominales de NGC 869 y 884  durante los primeros $100$ Ma. Luego contamos el n\'umero de “separaciones mínimas” entre pares representativos que se dieron en cada celda, y dividimos por la cantidad de pares totales ($1197 \times 863$) para obtener una probabilidad de separación mínima en cada celda. Los colores de la figura indican probabilidades de cada celda en escala logarítmica. 
+
+Entonces, en la Fig.~\ref{Figura2}, se puede observar cómo la región de mayor probabilidad, de $0.32$ en color rojo oscuro,  en realidad se encuentra en la primera columna de celdas, que corresponde a que la separación mínima entre NGC 869 y NGC 884 pueda haber ocurrido antes del final del primer Ma de integraci\'on. C\'alculos complementarios donde integramos exlusivamente el primer Ma pero con un paso temporal 100 veces m\'as chico que el original, muestran que hay dos m\'aximos de probabilidad en ese primer Ma. Un m\'aximo con probabilidad 0.0248 ocurre en el primer intervalo de integraci\'on (correspondiente al primer 0.01 Ma), representativo de m\'inimas separaciones ocurridas en tiempos anteriores al intervalo de integraci\'on. Otro m\'aximo, con probabilidad 0.0526 ocurre en el \'ultimo intervalo temporal (correspondiente al intervalo entre 0.09 Ma y 1 Ma), y que asociamos a m\'inimas separaciones ocurridas luego del primer Ma. Es decir que al refinar la grilla  temporal m\'as gruesa en el primer Ma, encontramos dos m\'aximos de probabilidad: uno que sigue representando una mínima separación ocurrida en tiempos anteriores al de integración (y que por los tanto no podemos descartar con nuestros argumentos estadísticos) y otro, más relevante, que apoya la hipótesis de que el máximo sucede luego del primer Ma.
+
+ En este sentido, tambi\'en, en la Fig.~\ref{Figura2}, vemos que la separación mínima entre posiciones nominales que est\'a señalada con un círculo negro en  $19.4$ pc a los $5.1$ Ma tambi\'en se encuentra dentro de una regi\'on de alta probabilidad. 
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Figura2.png}
+\caption{Ubicaci\'on de cada par de posibles separaciones m\'inimas de los c\'umulos en el plano separaci\'on-tiempo. El s\'imbolo negro corresponde a los valores nominales. La paleta de colores indica la probabilidad de que ocurra cada separaci\'on m\'inima al tiempo correspondiente.}
+\label{Figura2}
+\end{figure}
+
+Para observar esto con mayor detalle, descartamos la primera columna, dado que representa la probabilidad asociada a encuentros ocurridos exclusivamente antes del primer Ma como detallamos previamente, y también toda probabilidad inferior a $0.001$ (notemos que la probabilidad acumulada de todas las celdas con valores menores a $0.001$, es de $0.13$). De esta manera buscamos detallar mejor la región alrededor de la separación nominal. En la Fig.~\ref{Figura3} repetimos el gráfico de la Fig.~\ref{Figura2}, pero en este caso con las restricciones mencionadas. Además establecemos una escala de colores lineal. En este nuevo gráfico  señalamos el máximo de probabilidad con un cuadrado negro vacío. Observamos finalmente que la separación mínima nominal entre los cúmulos NGC 869 y NGC 884 está muy cerca de ese máximo de probabilidad.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Figura3.png}
+\caption{\'Idem Fig.~\ref{Figura2}, pero descartando las probabilidades de que el evento haya ocurrido antes del primer Ma y también toda probabilidad inferior a $0.001$.}
+\label{Figura3}
+\end{figure}
+
+\section{Conclusiones} 
+Calculamos una probabilidad de $0.32$ para que la aproximación máxima entre los cúmulos NGC 869 y NGC 884 haya ocurrido en algún momento antes del primer Ma de integración, y $0.28$ para que ocurra antes del primer 0.01Ma de integraci\'on. Debido a que estos cúmulos tienen gran cantidad de estrellas Be, no podemos descartar que un m\'aximo acercamiento pasado pueda haber contribuido al desarrollo de esta población estelar en particular. Por otro lado, el máximo de probabilidad en algún momento en el futuro coincide muy bien con la aproximación máxima de los cúmulos abiertos para sus posiciones nominales, es decir: a 19.4 pc dentro de unos 5.1 Ma. Finalmente, tenemos una probabilidad de $0.685$ de que la separación mínima no se d\'e más allá de los próximos 9 Ma. Siguiendo la metodología del presente trabajo para el cúmulo doble de Perseo, proponemos hacer el mismo análisis para todos los cúmulos abiertos dobles de la literatura, ya que el n\'umero de c\'umulos binarios detectados ha crecido en los \'ultimos tiempos \citep{Song2022} pero no se ha determinado su din\'amica en la Galaxia. Para aquellos que tuvieran estrellas Be podr\'iamos investigar si ya ha ocurrido la m\'axima aproximaci\'on y explorar si las separaciones mínimas en edades j\'ovenes se correlacionan con la presencia numerosa de estrellas Be. 
+
+
+\begin{acknowledgement}
+Este trabajo es Auspiciado por el Programa de Estadías Nacionales de la Asociación Argentina de Astronomía (PEN) 2023, F. Zoppetti – N. Maffione. A.G. agradece al proyecto PIBAA 28720210100879CO. Agradecemos a la/el refer\'i del art\'iculo por su detallada lectura de nuestro manuscrito.
+\end{acknowledgement}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=\columnwidth]{ejemplo_figura_Hough_etal.pdf}
+%\caption{El tamaño de letra en el texto y en los valores numéricos de los ejes es similar al tamaño de letra de este epígrafe. Si utiliza más de un panel, explique cada uno de ellos; ej.: \emph{Panel superior:} explicación del panel superior. Figura reproducida con permiso de \cite{Hough_etal_BAAA_2020}.}
+%\label{Figura}
+%\end{figure}
+
+%\subsection{Referencias cruzadas}\label{ref}
+
+%Su artículo debe emplear referencias cruzadas utilizando la herramienta  {\sc bibtex}. Para ello elabore un archivo (como el ejemplo incluido: {\tt bibliografia.bib}) conteniendo las referencias {\sc bibtex} utilizadas en el texto. Incluya el nombre de este archivo en el comando \LaTeX{} de inclusión de bibliografía (\verb|\bibliography{bibliografia}|). 
+
+%Recuerde que la base de datos ADS contiene las entradas de {\sc bibtex}  para todos los artículos. Se puede acceder a ellas mediante el enlace ``{\em Export Citation}''.
+
+%El estilo de las referencias se aplica automáticamente a través del archivo de estilo incluido (baaa.bst). De esta manera, las referencias generadas tendrán la forma co\-rrec\-ta para un autor \citep{hubble_expansion_1929}, dos autores \citep{penzias_cmb_1965,penzias_cmb_II_1965}, tres autores \citep{navarro_NFW_1997} y muchos autores \citep{riess_SN1a_1998}, \citep{Planck_2016}.
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

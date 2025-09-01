@@ -1,0 +1,324 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\title{
+The orbital period of the nova V1674~Her as observed with TESS}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{V1674~Her orbital period}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+G.J.M. Luna\inst{1,2,3}, I.J. Lima\inst{2,4} \& M. Orio\inst{5}
+}
+
+\authorrunning{Luna et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{juan.luna@unahur.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Universidad Nacional de Hurlingham, Argentina \and
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina \and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina \and
+Facultad de Ciencias Exactas, Físicas y Naturales, UNSJ, Argentina  \and
+Department of Astronomy, University of Wisconsin, EE.UU. \and
+Osservatorio Astronomico di Padova, INAF, Italia
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El sat\'elite TESS observó Nova Her 2021 12.62 días después de su erupción el 12 de Junio de 2021 a las 12 h 53.28 m. Esta variable cataclísmica pertenece al tipo polar intermediario, con un período de spin de $\sim$501 segundos y un período orbital de 0.1529 días. Durante las observaciones del Sector 40 de TESS, 17 días después de la erupción, se detectó el período orbital de 0.1529(1) días. Adem\'as, se detecta una modulación de origen desconocido con una periodicidad de $\sim$0.537 días desde el día 13 al día 17 luego de la erupción. }
+
+\abstract{Nova Her 2021 was observed with TESS 12.62 days after its most recent outburst in June 12.537 2021. This cataclysmic variable belongs to the intermediate polar class, with an spin period of $\sim$501 seconds and orbital period of 0.1529 days. During TESS observations of Sector 40, the orbital period of 0.1529(1) days is detected significantly 17 days after the onset of the outburst. A modulation of unknown origin with a period of $\sim$0.537 days is present in the data from day 13 to day 17.
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{
+binaries: close --- novae, cataclysmic variables --- stars: individual (V1674 Her)
+}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+V1674~Her (Nova Her 2021) was reported in an outburst on 2021 June 12.537 UT at 8.4 magnitudes by Seiji Ueda (Kushiro, Hokkaido, Japan) reaching naked-eye magnitudes at its peak (\citealt{2021ATel14704....1M,2022ATel15796....1M} and other references in \citealt{2021ApJ...922L..42D}). Early X-ray observations obtained with {\em Chandra}  \citep{2000SPIE.4012....2W} show an strong modulation with a period of 503.9 s \citep{2021ATel14776....1M}. A period of 501.42~s was later reported by \cite{2021ATel14720....1M} found in Zwicky Transient Facility (ZTF) $g$ and $r$-band data obtained during quiescence. These were the first hints of the presence of a magnetic-accreting white dwarf in the system. The period measurement was refined and confirmed in subsequent X-ray monitoring \citep{2021ATel14798....1P, 2021ApJ...922L..42D, Orio2022} and was clearly detected during all the supersoft X-ray phase \citep{Orio2022}. 
+
+Photometric data obtained by \cite{2021ATel14835....1S} and \cite{2021ATel14856....1P} allowed the detection of a 0.15302(2)~days period in optical wavelengths. This has since been identified as the orbital period. Then, V1674~Her has the physical characteristics to be identified as a magnetic cataclysmic variable of the intermediate polar type; a binary system where the white dwarf's magnetic field ($\approx$0.1–10 MG) channels material from the inner edge of the truncated accretion
+disk through the accretion columns. The orbital period was later refined to a value of 0.152921(3) days by \citet{2022ApJ...940L..56P} by analyzing fast photometry optical data. A 0.153 days period likely present in X-ray data has been reported by \cite{2022MNRAS.517L..97L}.
+
+In this article, we analyze the photometric series obtained with the TESS \citep{2015JATIS...1a4003R} mission during the scanning of sector 40. The exquisite quality and cadence allow us to search for the orbital period during the decaying phase of a nova. This modulation, observed in fast novae once they fade for about 2-4 magnitudes after outbursts, arise from irradiation of the secondary and/or ellipsoidal variations. 
+We discuss our data and their analysis in Section \ref{sec:obs} while results and conclusions are discussed in Sections \ref{sec:res} and \ref{sec:conc} respectively.
+
+\section{Observations} 
+\label{sec:obs}
+
+V1674~Her was observed with TESS during Sector 40, which started on June 25 2021, 12.62 days after the outburst. The total observing time was 676~h. Figure~\ref{Fig:lc}a shows the TESS light curve in the context of the post-outburst light curve from AAVSO (Fig.~\ref{Fig:lc}b). We extracted the TESS Full Frame Images (FFI) with a cadence of 10~min using {\tt TESSCut} tool \citep{Brasseur_2019} from the Python package {\tt lightkurve} \citep{Lightkurve_2018}. 
+The target was identified by its {\tt SIMBAD} coordinates and {\em GAIA} EDR3 catalog \citep{2021A&A...649A...1G}. We tested different aperture masks thresholds and background masks in order to produce the 
+%better corrected 
+light curve.  The images were selected using hard QUALITY flag discarding unwanted events. We removed the long-term trend, due to the fading of the nova, subtracting a Savitzky-Golay filter \citep{Savitzky_1964} (see Figure \ref{Fig:lc}c). 
+
+\begin{figure*}
+\includegraphics[scale=0.78]{fig_all.pdf} \caption{{\em Panel (a):} TESS light curve of V1674~Her observed during Sector 40, 13 days after outburst. {\em Panel (b):} AAVSO, V-magnitud light curve of V1674~Her after outburst on June 12 2021. In both cases the error bars are smaller than the symbol size and thus are not included. {\em Panel (c):} TESS light curve with a Savitzky-Golay (SG) filter (red line) to remove the long-term trend.  {\em Panel (d):} TESS light curve after applying the SG filter. {\em Panel (e):} Lomb-Scargle power spectrum of the TESS~-SG light curve. The red vertical line marks the frequency of the orbital period at P$_{orb}$=0.1529(1) days.  {\em Panel (f):} Lomb-Scargle power spectra of each 3-day portion of light curve. Colors correspond to the colors in Panel (d). The 3-day portions of the light curve were extracted from a moving window with 50\% overlap.  The orbital period is significantly detected after day $\sim$ 17. {\em Panel (g):} TESS light curve folded at the orbital period P$_{orb}$=0.1529 days. The light curve was binned at 80 bins/period. {\em Panel (h):} TESS light curve folded at period P=0.537 days with arbitrary ephemeris. The light curve was binned at 40 bins/period.}
+\label{Fig:lc}
+\end{figure*}
+
+We searched for periods using the Lomb-Scargle \citep{1976Ap&SS..39..447L,1982ApJ...263..835S} algorithm in the light curve with the SG filter applied (Fig. \ref{Fig:lc}e). We also searched for changes in the orbital period by extracting the power spectrum in 3-days-long sliding windows that overlap 50\% (Figure \ref{Fig:lc}d,f). 
+
+\section{Results}
+\label{sec:res}
+
+The TESS light curve of V1674~Her from day 17 after the outburst is modulated at the orbital period of P$_{orb}$=0.1529(1) days, consistent with previous findings. The light curve folded at the orbital period and taking the ephemeris, T$_{0}$, from \citet{2022ApJ...940L..56P}, shows a double-peak profile (see Fig. \ref{Fig:lc}g), with secondary minima distant at 
+$\Delta\phi$=0.5 from the main minimum. 
+
+Although the observations started 13 days after the outburst, remarkably, the orbital period was not detected until $\sim$17 days after the outburst, also in agreement with \citet{2022ApJ...940L..56P}. 
+We found that within the error of 0.001 days, we could not detect any changes in the orbital period during the 28.2 days covered by TESS. \citet{2022ApJ...940L..56P} report a systematic drift toward longer periods in the photometric data taken in 2022 with respect to those taken in 2021. Our observations do not cover the times when the source has returned to quiescence, when the changes in the orbital period seem to manifests.
+
+%\begin{figure}[ht!]
+%\includegraphics[scale=0.3]{tess_SG_folded.pdf} 
+%\caption{TESS light curve folded at the orbital period P$_{orb}$=0.1529 days. The light curve was binned at 80 bins/period.}
+%\label{Fig2}
+%\end{figure}
+
+The variability on time scales longer than the orbital period reported by \citet{2023MNRAS.521.5453S} is also observed in the TESS light curve from day 13th until day 17th. A search for periods in this segment of the light curve yields a period of $\sim$0.537 days, of unknown origin (see Fig. \ref{Fig:lc}h). This period is unlikely to be due to superhumps, which are modulations with periods slightly below or above the orbital period and likely due to a warped/precessing accretion disk. The 0.537 days period is much longer than the orbital period.
+
+%\begin{figure}[ht!]
+%\includegraphics[scale=0.3]{tess_SG_1stdays.pdf}
+%\caption{TESS light curve folded at period P$_{orb}$=0.537 days with arbitrary ephemeris. The light curve was binned at 40 bins/period.}
+%\label{Fig3}
+%\end{figure}
+
+\section{Conclusion}
+\label{sec:conc}
+
+We analyzed the TESS, observations of Nova Her 2021, that entered into Sector 40 12.62 days after being reported to be in outburst. This nova belongs to the intermediate polar class of cataclysmic variables and, as such, it displays clear modulations with the orbital and white dwarf spin periods. In agreement with other authors, we found that the light curve shows two minima, separated by half a cycle. The secondary minimum is most noticeable once the light curve is decaying more slowly and the systems is reaching quiescence conditions. This secondary minimum could be due to the eclipsed, enhanced emission due to irradiation of the secondary by the still-burning white dwarf \citep{2022ApJ...924...27P}.
+
+\begin{acknowledgement}
+
+GJML and IJL acknowledge support from grant ANPCYT-PICT 0901/2017. GJML is a member of the CIC-CONICET (Argentina). This research made use of Lightkurve, a Python package for Kepler and TESS data analysis (Lightkurve Collaboration, 2018). We also acknowledge the variable star observations from the {\sc AAVSO} International Database contributed by observers worldwide and used in this research.
+
+\end{acknowledgement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{sample631} 
+\end{document}

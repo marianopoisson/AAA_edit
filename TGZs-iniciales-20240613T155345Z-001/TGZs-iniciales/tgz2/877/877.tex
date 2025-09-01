@@ -1,0 +1,415 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{17 June 2024}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Imágenes en vidrio: restauración y recuperación de fotografías astronómicas solares del Observatorio de San Miguel}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Imágenes en vidrio del Observatorio de San Miguel}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+J.N. Balbi\inst{1},
+\&
+D.C. Merlo\inst{2}
+}
+
+\authorrunning{Balbi \& Merlo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{nicolasbalbi@outlook.com.ar}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Museo Lic. Gustavo Rodríguez, Observatorio de Física Cósmica Padre Bussolini, Argentina
+\and
+Museo del Observatorio Astronómico de Córdoba, UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las placas de vidrio fueron utilizadas desde comienzos del siglo XIX para fijar imágenes utilizando distintos tipos de emulsiones químicas reactivas a la luz.
+En las mismas se fijaron imágenes en positivo y negativo hasta que a fines de ese siglo se popularizó el uso del método de Daguerre.
+Hacia principios del siglo XX, utilizando sucesores del daguerrotipo y emulsiones más estables, comenzaron a emplearse placas de vidrio para capturar imágenes
+astronómicas y estudiarlas como parte del proceso observacional.
+En el presente trabajo nos centramos en la recuperación y restauración de placas solares tomadas en el Observatorio de Física Cósmica de San Miguel (Provincia de Buenos Aires, Argentina),
+entre los años 1940 y 1970. Las mismas fueron abandonadas durante 23 años y almacenadas en condiciones no siempre satisfactorias, por lo cual se deterioraron.
+Se explican las técnicas y procesos a los que fueron sometidas parte de ellas, tratándose tanto de procedimientos químicos y físicos, incluyendo detalles de las
+distintas técnicas con las que se reconstruyeron algunas que se hallaban rotas.
+Las imágenes obtenidas son de fundamental importancia para reproducir los estudios solares realizados en este Observatorio a mediados del siglo XX;
+estas imágenes fueron y están siendo catalogadas para su posterior utilización. Con ello se desea recuperar este valioso patrimonio, siendo ésta una iniciativa llevada
+a cabo por la Municipalidad local, la cual incluye desde la recuperación de telescopios e instrumentos hasta la del material producido durante los años de su funcionamiento.
+También se trabaja, como miembros de la Red de Museos de Observatorios Astronómicos Argentinos, para la recuperación de todo tipo de material histórico, en especial procedentes
+de los observatorios históricos argentinos. 
+}
+
+\abstract{Glass plates were used since the beginning of the 19$^{th}$century to fix images using different types of light-reactive chemical emulsions.
+Positive and negative images were fixed in them until the use of the Daguerre method became popular at the end of this century.
+By the early 20$^{th}$century, the use of successors to the daguerreotype and more stable emulsions led to the adoption of glass plates for the capture and study of astronomical images.
+In the present work we focus on the recovery and restoration of solar photographic plates acquired at the Observatorio de Física Cósmica de San Miguel (Province of Buenos Aires, Argentina),
+between the years 1940 and 1970. They were abandoned for 23 years and stored in conditions not always satisfactory. This resulted in the deterioration of the plates.
+The techniques and processes to which part of them were subjected are explained, both chemical and physical procedures, including details of the
+different techniques with which some that were broken were rebuilt.
+The images obtained have fundamental importance in order to reproduce the solar studies carried out in this Observatory in the mid-20$^{th}$century,
+which were and are being cataloged for later use. The aim is to recover the valuable heritage, this is an initiative carried out by the local Municipality that includes from the recovery of telescopes and instruments to that of the material produced during the years of its operation.
+We also work, as members of the Red de Museos de Observatorios Astronómicos Argentinos, in order to recover all types of historical material, especially from Argentinian historical observatories.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ history and philosophy of astronomy --- methods: miscellaneous --- Sun: general}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{intro}
+\subsection{Pasado, presente y futuro de las placas fotográficas}\label{intro_a}
+El origen de los soportes en vidrio es muy antiguo y con un interesante desarrollo (ver por ej. \citealp{Rose2007}). En 1814 Niépce ideó la ``heliografía'' y en 1817 realizó sus primeros
+soportes en positivo sobre vidrio. Asociado con Daguerre mejoraron la calidad, aunque éste publicó en 1829 un tratado sobre el tema y se apropió del invento, surgiendo los ``daguerrotipos''.
+Weatstone también realizó una gran cantidad de estudios y publicó sus descubrimientos en 1838, en los cuales usaba un soporte de vidrio tratado con una emulsión al colodión.
+En 1842, Herschel descubrió que la mezcla de sales de hierro y cianuro producía un compuesto fotosensible que podía utilizarse para crear impresiones fotográficas. 
+Luego Brewster, en 1849, modernizó el proceso de Weatstone utilizando el negativo (en vidrio/colodión), mientras que el positivo era impreso en papel cartón tratado con albúmina.
+Esta combinación se utilizaría hasta aproximadamente 1880, donde comenzaron a usarse placas al positivo con gelatinobromuros, gracias a los trabajos de Bennett y Maddox.
+Ya a fines del siglo XIX se emplearon emulsiones más estables que permitían varios días de almacenamiento y, finalmente, las gelatinas de haluro de plata sensibilizadas con azufre, agentes reductores o metales preciosos.
+Un hito relevante para la Astronomía lo constituyó la fotografía del Gran Cometa tomada por Gill en 1882, ya que además de los pequeños detalles obtenidos de este objeto, la zona del cielo cubierta por la fotografía reveló miles de estrellas que resultaban invisibles a la mera observación visual, generalizándose rápidamente su uso debido a las grandes ventajas que representaba, entre ellas, el registro permanente de la observación \citep{Bachiller2009}.
+
+Con el advenimiento de la tecnología digital, las placas fotográficas dejaron de ser la principal fuente de información en Astronomía. Con el paso del tiempo, éstas sufren deterioros debido, principalmente, a exposiciones a la luz, al contacto con la humedad, su manipulación inadecuada, a las reacciones químicas con elementos del ambiente y al incorrecto almacenamiento,
+por lo cual resulta imprescindible su constante mantenimiento y preservación. Las mismas representan un registro único e irrepetible de los cuerpos celestes de estudio o de fenómenos y/o eventos del universo. En este sentido, a finales del siglo XX la Unión Astronómica Internacional (IAU) comenzó a concientizar a la comunidad internacional sobre la necesidad de no solo salvaguardar la gran cantidad de colecciones de placas fotográficas, muchas de ellas aún no analizadas o procesadas, sino también preservar la gran cantidad de colecciones de placas distribuidas en todo el mundo. Al mismo tiempo la IAU  advertía que no todos los observatorios disponían del lugar, dispositivos computacionales de acceso, ni de los recursos para almacenarlas y archivarlas \citep{1992HiA.....9..727V}.
+
+Extraer todo el potencial científico de los datos astronómicos es un proceso que a menudo ocurre a lo largo de mucho tiempo y gracias a los esfuerzos combinados de generaciones de investigadores. Esta explotación científica y síntesis de datos sólo es posible mediante el establecimiento y la gestión de colecciones de datos astronómicos bien definidas y bien conservadas. Al respecto, en el año 2001 la IAU estableció el grupo de trabajo para la preservación y digitalización de placas fotográficas
+(\href{https://www.iau.org/science/scientific_bodies/working_groups/313/}{Comisión B2 ``Datos y Documentación''}), con el objetivo de fomentar los esfuerzos para digitalizar las placas y actuar como organismo de control.
+
+Algunos resultados actuales muestran las potencialidades de esta tarea; entre ellos podemos mencionar la implementación de un algoritmo semiautomático para la detección de manchas solares y de la umbra, realizada con placas fotográficas digitalizadas del Observatorio Solar Kodaikanal (India). Este trabajo permitió ampliar el catálogo existente con placas recuperadas de los años 1904 y 1921, constituyendo una importante fuente de información para el estudio de la variabilidad del Sol a largo plazo \citep{2022FrASS...919751J}. También se pudo estudiar la variabilidad de largo periodo de la emisión de la intensidad solar en Ca II K utilizando placas fotográficas digitalizadas en el observatorio antes citado \citep{2022ApJ...928...97K}.
+
+
+\subsection{El Observatorio de Física Cósmica ``Padre Bussolini'' (OFCPB)}\label{intro_b}
+Este Observatorio se encuentra ubicado en la ciudad de San Miguel, al NE de la Provincia de Buenos Aires. Fue fundado en 1935 con la intención de realizar estudios de fenómenos atmosféricos 
+y telúricos vinculados con la actividad solar, combinando Meteorología, Geofísica y Astronomía. Pensado a semejanza del Observatorio del Ebro (España), se constituyó en uno de los cinco existentes de su tipo en el mundo. Fue propuesto por el Consejo Nacional de Observatorios, gestionado por la Compañía de Jesús y subvencionado a partir del aporte de empresas y particulares \citep{Paolantonio2015}. 
+En el mismo llegaron a trabajar aproximadamente 500 personas, entre las que se cuentan premios Nobel  e investigadores de la NASA y de los mayores planetarios de Europa.
+
+Entre los registros realizados con el telescopio solar Lyott, el Gustav Heide y el celóstato, encontramos una cantidad de imágenes, muchas de ellas
+con anotaciones y formatos inusuales; las mismas están en proceso de estudio, recuperación y clasificación. Además, este observatorio contaba con 
+varios espectroheliógrafos y el primer radioheliógrafo para el estudio de los eclipses.
+A principios del siglo XX, las fotografías se tomaban normalmente sobre placas de vidrio y tenían ``esa'' línea media que, según \citet{Iwa2020}, indicaba el meridiano terrestre correspondiente al lugar de adquisición de las mismas.
+En 1935 cambiaron esta característica a un meridiano solar, por una convención de los astrónomos europeos, y esa es la línea media que vemos en nuestras imágenes (ver Fig.~\ref{Fig1}).
+
+Actualmente se están terminando de restaurar una serie de placas correspondientes a eclipses solares, a las que se prevé facilitar el acceso a través de un repositorio en línea al finalizar el trabajo.
+Este proyecto es una iniciativa llevada a cabo por la Municipalidad local, que incluye la recuperación de telescopios e instrumentos hasta la del material producido durante los años 
+de funcionamiento del Observatorio.
+Como miembros de la Red de Museos de Observatorios Astronómicos Argentinos (RedMOAA) \citep{2023BAAA...64..323M},
+venimos realizando actividades de recuperación de material histórico procedentes de los observatorios que la integran. Los trabajos de recuperación fotográfica mencionados aquí fueron realizados por el primer autor con asesoramiento de personal especializado en restauración que colabora con el
+Museo del Observatorio Astronómico (MOA\footnote{MOA \href{https://moa.unc.edu.ar}{(web)}}), Observatorio Astronómico de Córdoba, UNC, coordinado por el segundo autor.
+
+\section{Placas de vidrio en el OFCPB}\label{placas}
+Este Observatorio dispone de placas fotográficas con información muy importante, ya que reflejan los trabajos realizados desde mediados hasta
+fines del siglo XX. Sus resultados, además de publicarse en revistas de la especialidad, se editaron en artículos propios (ver por ej. \citealp{OFCSM1938publi}).
+Las observaciones y las fotografías fueron realizadas por los profesionales que trabajaron allí, y las mismas no se encuentran debidamente catalogadas.
+Se ignora por el momento la autoría de ellas, pudiéndose identificar solo las fechas a través de las anotaciones o etiquetas agregadas a las placas.
+Tampoco es posible determinar los instrumentos con que fueron tomadas, aunque suponemos que fueron los acoplados al celóstato. 
+El material seleccionado para restaurar se encontraba atacado por la humedad y con polvo pegado, sometido a condiciones límites de temperatura y humedad, como podemos apreciar en la  Fig.~\ref{Fig1}.
+Para la documentación del contenido se utilizó un negatoscopio, fabricado en base a una película de policarbonato y papeles de calco apoyados sobre una computadora personal con un fondo luminoso blanco. 
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{877-Fig1.pdf}
+\caption{Placa solar atacada por la humedad y el polvo pegado. La línea horizontal que pasa por el centro del Sol corresponde a un meridiano solar (ver subsección \ref{intro_b}).}
+\label{Fig1}
+\end{figure}
+
+\section{Metodología de intervención}
+
+Utilizamos el protocolo de actuación propuesto por \citet{hg_2014}: a) Registro de procedencia; b) Estudio histórico–artístico del material; c) Preparación y propuesta de tratamiento; d) Planificación del transporte del material al lugar de tratamiento; e)  Fotografiado pre-restauración; f) Informe de la colección y fichas técnicas de restauración; g) Extracciones microbiológicas (si fuera necesario) antes o durante la intervención; h) Proceso de intervención de conservación y/o restauración; i) Fotografiado de todo el proceso; j) Preparación de un almacenaje adecuado; k) Informe final ; l) Transporte y consigna de los materiales restaurados al lugar de almacenado.
+
+\subsection{Deterioros}
+Las placas se encontraban afectadas por roturas físicas o atacadas por agentes químicos, que incluyen todos los oxidantes procedentes tanto de los productos de limpieza como del deterioro de edificios, pinturas, etc.
+Debe tenerse en cuenta que las sales de bromuro se diluyen totalmente en concentrados de cloro o sus variantes de hipocloritos.
+Asimismo, debido a su composición, la gelatina se encuentra afectada por todo tipo de bacterias, aunque las sales de bromuro actúen rápidamente como antibióticos.
+Por ello es usual ver afectados los bordes de las mismas pero no su centro, donde suelen encontrarse las imágenes.
+Además, la elevada humedad puede causar una pérdida de transparencia y el ataque de hongos deteriora la imagen irreversiblemente.
+La naturaleza higroscópica de las sales adicionadas a la gelatina (de sodio, calcio, potasio, etc.) conlleva a la absorción de la humedad y a la pérdida de transparencia de la imagen.
+Esta reacción genera un proceso autocatalítico que produce un aumento de la alcalinidad de la placa, volviéndose más opaca.
+
+\subsection{Limpieza}
+Para el proceso de limpieza realizamos un baño de ``paro'', utilizando una disolución en agua de ácido acético en una proporción del 1\% al 2\%.
+En nuestro caso utilizamos el producto Kodak\texttrademark SB-5a diluido en agua desmineralizada.
+Las placas fueron luego sumergidas a una temperatura no inferior a los 21 $^o$C, limpiadas de moho y suciedad con un hisopo, lavadas con agua destilada y finalmente dejadas secar en un ambiente con la menor humedad posible.
+Un punto importante es el uso de agua destilada, ya que la capa de gelatina es reactiva a los oxidantes y si fuera sumergida directamente en lavandina (lejía), tardaría segundos en diluirse.
+Un procedimiento previo, que a veces resulta suficiente, consiste en la limpieza con un pincel con pelos de marta, usados normalmente en el área artística o cosmética, ya que el soporte seco tiende a atraer polvo.
+También resulta útil el uso de una pera de goma o un aspirador.
+Casi todas las placas sufrieron deterioros que obligó el uso del baño mencionado, aunque se utilizó la limpieza en seco, útil después del tratamiento químico ya que las placas recién secas tienden a atraer polvo sobre la superficie y dificulta la documentación de su contenido.
+
+\subsection{Enferulado}\label{enf}
+El ``enferulado'' es un tipo de intervención que tiene por objetivo estabilizar la placa rota con la adición de nuevas capas de vidrio.
+El método es práctico y ampliamente utilizado por su evidente reversibilidad \citep{hg_2014}.
+Este montaje de estabilización (férula) se realiza colocando las partes de la placa dañada entre dos nuevos vidrios transparentes del mismo tamaño que el original, reforzados con material plástico en los bordes y con el agregado de un pequeño espesor que formarán algunas ventanas para la circulación de aire por el interior de la placa original.
+Pueden utilizarse varios tipos de cintas (por ej. \textit{Filmoplast}\texttrademark P-90).
+Esta forma de sujeción evita que la emulsión se pegue al vidrio añadido, lo que deteriora la emulsión y produce anillos de Newton que afectan el escaneo de las placas.
+Una vez cerrada, los espaciadores quedan ocultos e inapreciables bajo la cinta adhesiva.
+En aquellos casos en que falte algún trozo original, éste deberá ser reproducido con cartón de conservación.
+Su función es evitar que los trozos rotos oscilen dentro de la ``caja'' armada con los vidrios y la cinta.
+En la Fig.~\ref{Fig2} se ejemplifica este procedimiento.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{877-Fig2.pdf}
+\caption{Etapas en la restauración de una placa de vidrio:
+\emph{a:} Trabajar con luz por detrás resulta más cómodo.
+\emph{b:} Limpieza en seco sin abrasivos.
+\emph{c:} Pegado con bicomponente.
+\emph{d:} Armado de la placa rota.
+\emph{e:} Ya pegado, se limpian los restos de pegamento.
+\emph{f:} Una vez colocada la férula, se cubren los bordes con cinta 3M\texttrademark.
+}
+\label{Fig2}
+\end{figure}
+
+
+\section{Conservación preventiva de fotografías sobre vidrio}\label{conser}
+El vidrio es un material de gran dureza y conservación, que asegura la estabilidad del contenido de la emulsión sin que la placa se vea afectada por las condiciones de almacenamiento.
+El problema reside en la emulsión y su contenido. Por eso es tan particular la aplicación de reguladores de temperatura y humedad en los depósitos de placas.
+En la práctica, muchos sitios carecen de la correcta vigilancia de estos valores por lo que resultan mucho más dañinas las variaciones bruscas de temperatura y humedad, las que podrían provocar el desprendimiento, deterioro o delaminación de la emulsión.
+Como condiciones deseables se conviene en mantener una temperatura de 18 $^o$C y una humedad relativa entre 30 y 40\% \citep{Koob2006}, las cuales resultarán efectivas para evitar tanto el resecamiento de las emulsiones como también la aparición de microorganismos.
+Debería, asimismo, evitarse la presencia dentro del depósito de placas de agentes reactivos tales como los peróxidos, óxidos de nitrógeno, dióxido de azufre, sulfuro de hidrógeno, ozono, etc.
+El vidrio no sufre especialmente por exposición a la luz. Sin embargo, para proteger la imagen fotográfica, debe ser almacenado a oscuras en sobres y cajas de acuerdo a su formato.
+Además, debe tenerse en cuenta una característica adicional: el peso, volumen y fragilidad de los elementos. Por todo ello, poder dotarlas de un almacenaje apropiado, seguro y económico sigue siendo un problema serio en los archivos. 
+
+Muchas de las placas a restaurar aún se albergan en sus cajas originales, las cuales contienen información muy útil como la marca, procesado, fecha de caducidad, etc., pero fueron fabricadas con cartón de mala calidad.
+Además, estas placas no se encuentran en sobres individuales para protección, si bien tienen un papel calco intercaladas entre ellas.
+En el caso de las placas medianas, por ejemplo, las cajas originales contenían 12 placas cada una, número que no condice con la cantidad existente en las mismas; en estos casos, las emulsiones pueden sufrir arañazos y todo tipo de daños mecánicos.
+En nuestro trabajo colocamos las placas restauradas en sobres individuales de cuatro solapas hechos a partir de papel y plásticos recomendados (normas ISO: 18916 y 18918)
+tales como el papel de soporte quirúrgico, muy económico que se vende en rollos y se usan en los quirófanos para apoyar elementos esterilizados.
+
+\section{Conclusiones}\label{sec:concl}
+
+Se está llevando adelante la recuperación y revaloración histórica de una gran cantidad de placas fotográficas solares que forma parte del patrimonio del OFCPB.
+Durante el trabajo ya realizado, se aplicaron técnicas y métodos profesionales, lográndose muy buenos resultados. Los datos de las placas, luego de su interpretación histórica y puesta en valor, quedarán a disposición en modalidad digital para la comunidad interesada.
+La restauración de las placas de vidrio es más que una recuperación del patrimonio fotográfico, es también una obra de preservación cultural.
+Se realiza en base a la idea de que el soporte original, en este caso las fotografías astronómicas, tienen en sí mismo un valor insustituible.
+Su recuperación es un trabajo importante al cual debemos aplicar una total dedicación e investigación de métodos novedosos que optimicen el proceso.
+
+\begin{acknowledgement}
+Los autores agradecen el asesoramiento recibido de las Bibls. Sofía Lacolla y Verónica Lencinas, de la Biblioteca ``Roberto F. Sisteró'' del OAC. También a las/los referís anónimas/os que mejoraron la presentación de este trabajo.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{877-biblio}
+ 
+\end{document}

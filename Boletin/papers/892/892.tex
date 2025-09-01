@@ -1,0 +1,416 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{23 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Formation of supermassive black holes in galaxies through collisions in Nuclear Star Clusters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Formation of supermassive black holes in galaxies through collisions in Nuclear Star Clusters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M. Liempi\inst{1},
+A. Benson\inst{2},
+A. Escala\inst{3},
+D.R.G. Schleicher\inst{1}
+\&
+L. Almonacid\inst{1}
+}
+
+\authorrunning{Liempi et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mliempi2018@udec.cl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Departamento de Astronom\'ia, Universidad de Concepci\'on, Chile
+\and 
+Carnegie Observatories, EE.UU.
+\and 
+Departamento de Astronom\'ia, Universidad de Chile, Chile 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En el centro de las galaxias se observan c\'umulos nucleares de estrellas y/o agujeros negros supermasivos. Aunque cada objeto se encuentran en diferentes reg\'imenes, es posible detectar ambos coexistiendo en galaxias con masas estelares $\sim 10^{10}~\mathrm{M}_\odot$. En este trabajo, presentamos la implementaci\'on de un modelo de formaci\'on y evoluci\'on de c\'umulos de estrellas nucleares en {\sc Galacticus}, un c\'odigo semianal\'itico dise\~nado para simular la formaci\'on y evoluci\'on de galaxias. Nuestro objetivo es explorar el papel de c\'umulos durante la formaci\'on de los agujeros negros. Suponemos un escenario de formaci\'on estelar in-situ en el gas acumulado en el centro de la galaxia. Adem\'as, introducimos un modelo de colapso de los c\'umulos, donde finalmente colapsan en una semilla de agujero negro al alcanzar una masa cr\'itica donde las colisiones entre estrellas son relevantes dentro del c\'umulo. Esta masa cr\'itica se alcanza cuando la escala de tiempo de colisiones es m\'as corta que la edad del sistema. Al explorar este escenario de colapso, nuestro objetivo es encontrar pistas sobre las posibles implicaciones en la poblaci\'on de agujeros negros. Nuestra investigaci\'on profundiza en coomo  este escenario de colapso puede afectar la poblaci\'on general de agujeros negros, as\'i como las conexiones entre el c\'umulo, la galaxia anfitriona y el agujero negro central. En nuestros resultados encontramos la formaci\'on de semillas con masas entre $10^3-10^5~\mathrm{M}_\odot$ a partir de este mecanismo.}
+
+\abstract{Nuclear Star Clusters (NSCs) and/or Supermassive Black Holes (SMBHs) are observed in the center of galaxies. Although each object is found in different regimes, it is possible to find both of them coexisting in galaxies with stellar masses $\sim10^{10}~\mathrm{M}_\odot$. In this work we present an implementation of a NSC model in {\sc Galacticus}, a semi-analytic code designed for simulating galaxy formation and evolution. Our focus is exploring the role of NSCs during the formation of SMBHs. We assume an in situ star formation scenario in the gas accumulated in the center of the galaxy. Moreover, we introduce a collapse model for NSCs, where they ultimately collapse into a BH seed upon reaching a critical mass for which collisions between stars become relevant within the cluster. This critical mass is reached when the collisional timescale is shorted than the age of the system. By exploring this collapse scenario, we aim to shed light on its potential implications for the resulting population of SMBHs. Our investigation delves into how this collapse scenario can impact the overall SMBH, as wel as the intricate connections between NSCs, galaxies, and SMBHs. This research provides insights into the formation and evolution of NSCs and their impact on the galactic and  black hole environments. We find the formation of BH seeds with masses in the range $10^3-10^{5.5}~\mathrm{M}_\odot$.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ black hole physics --- galaxies: nuclei --- methods: analytical}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{iIntro}
+
+
+Nuclear Star Clusters (NSCs) are located in the center of a large fraction of early- and late-type galaxies \citep[e.g.,][]{PHILLIPS1996,DURRELL1997,BOKER2002,BOKER2004,COTE2006,GEORGIEV2009,NEUMAYER2011,HOYER2021}. Different methods for the estimation of their mass suggest masses in the range of $10^4-10^9~\mathrm{M}_\odot$. Similarly, it is possible to observe Supermassive Black Holes (SMBHs) in the center of almost all the massive galaxies \citep{KORMENDY2013} with masses of $10^6-10^{10}~\mathrm{M}_\odot$ \citep{NATARAJAN2009,GULTEKIN2009,VOLONTERI2010,RUSLI2013,PACUCCI2017}.
+
+Both objects scale alike with global properties of the host galaxy \citep[e.g.][]{GEORGIEV2016}. NSCs hold correlations between their mass and the host-galaxy bulge luminosity, mass and velocity dispersion \citep{FERRARESE2006,WEHNER2006,ERWIN2012}. On the other hand, the masses of SMBHs correlate with the host spheroid including luminosity, mass, and velocity dispersion \citep{SETH2008,KORMENDY2013,REINES2015,BENTZ2018}. These scaling relations are slightly different in early- and late-type hosts \citep{ERWIN2012}, suggesting a common physical mechanism responsible for the formation of NSCs and/or SMBHs in the galactic center. This mechanism remains unclear.
+
+Moreover, in galaxies with stellar mass around $\sim 10^{10}~\mathrm{M}_\odot$ there are observations of NSCs surrounding SMBHs \citep{FLIPPENKO2003,SETH2008,SETH2010,NEUMAYER2012,NGUYEN2019}, and the coexistence of both objects might suggest that NSCs have a role in the formation of SMBHs.
+
+\cite{ESCALA2021} demonstrated that observed NSCs are in a regime where collisions are not relevant throughout the system and SMBHs are found in regimes where collisions between stars are expected to be dynamically relevant.  In this sense, NSCs in virial equilibrium with short collision times will collapse toward the formation of a massive black hole.
+                                                
+\section{Methodology}
+
+In this work we implement an in-situ NSC formation model in {\sc Galacticus},  a semi-analytic model for galaxy formation and evolution \citep{BENSON2012} to explore the space of parameters related to the model.  
+
+
+We also implement a recipe for BH seed formation in NSCs based on the work of \cite{ESCALA2021}, and \cite{VERGARA2023}.
+
+\subsection{The model}
+
+In this scenario, we assume NSCs may form by star formation in the gas accumulated in the center of the galaxy. The gas is accumulated in a nuclear reservoir correlated to the star formation events in the bulge \citep{GRANATO2004,HAIMAN2004,LAPI2014,ANTONINI2015,NEUMAYER2011} by
+\begin{equation}
+\dot{M}_\mathrm{NSC}^\mathrm{gas} = A_\mathrm{res}\dot{M}_\mathrm{spheroid}^\mathrm{stellar},
+\end{equation}
+where $\dot{M}_\mathrm{spheroid}^\mathrm{\star}$ is the star formation in the bulge and $A_\mathrm{res}$ is a free parameter in the order of $\sim 10^{-2}-10^{-3}$ \citep{ANTONINI2015}.
+
+The size of the NSC is assumed to scale with the square root of the dynamical mass of the system, 
+\begin{equation}
+r_\mathrm{NSC} = r_0\sqrt{\frac{M^\mathrm{dyn}_\mathrm{NSC}}{10^{6}~M_\odot}},
+\end{equation}
+where $r_0$ is the mean radius of the observed NSCs set equal to $r_0=3.3~\mathrm{pc}$ \citep{NEUMAYER2020}, and $M^\mathrm{dyn}_\mathrm{NSC}=M_\mathrm{NSC}^\mathrm{gas}+M_\mathrm{NSC}^\mathrm{stellar}$.
+We use a S\'ersic profile with index $n=2.28$ for the mass distribution of the NSCs. While this is quite arbitrary, we choose this value based on the results of \cite{PECHETTI2020} where density profiles for 29 galaxies containing NSCs in a volume-limited survey are analyzed.
+
+The star formation rate in the NSC gas reservoir follows the prescription of \cite{KRUMHOLZ2009} in a quiescent mode as in the model of \cite{SESANA2014} and \cite{ANTONINI2015}, 
+
+\begin{equation}
+\dot{M}_\mathrm{NSC}^\mathrm{stellar} = f_\mathrm{c} \frac{M_\mathrm{NSC}^\mathrm{NSC}}{t_\mathrm{SF}},
+\end{equation}
+where $f_\mathrm{c}$ is the fraction of the cold gas of the NSC available for the star formation, $M_\mathrm{NSC}^\mathrm{gas}$ is the gas of the NSC and $t_\mathrm{SF}$ is the timescale on star formation takes place.
+
+The fraction of the cold gas $f_\mathrm{c}$ available to form stars depends on the metallicity, at high metallicities  ($Z> 0.01~\mathrm{Z}_\odot$)  the fraction $f_\mathrm{c}$ is determined by the molecular gas, whereas at lower metallicities ($Z < 0.01~\mathrm{Z}_\odot$), star formation takes place in the atomic phase \citep{KRUMHOLZ2012}, 
+\begin{equation}
+f_\mathrm{c} = {\rm max}\left(0.02,1- \left[1+\left( \frac{3}{4} \frac{s}{1+\delta} \right)^{-5} \right]^{-1/5}\right),
+\end{equation}
+with 
+\begin{eqnarray}
+s  &=& \frac{\ln{(1+0.6\chi)}}{0.04\Sigma_1Z}, \\
+\chi &=& 0.77(1+3.1Z^{0.365}),\\
+\delta &=& 0.0712(0.1s^{-1}+0.675)^{-2.8},\\
+\Sigma_1 &=& \frac{\Sigma_\mathrm{res}}{\mathrm{M}_\odot\,\mathrm{pc}^{-2}},\\
+\Sigma_\mathrm{res} &=& \frac{M_\mathrm{NSC}^\mathrm{gas}}{4\pi r_\mathrm{NSC}^{2}}.
+\end{eqnarray}
+
+
+The timescale is obtained assuming that star formation happens in clouds \citep{KRUMHOLZ2009,SESANA2014,ANTONINI2015} and is given by
+\begin{equation}
+t_\mathrm{SF}^{-1} = (2.6~\mathrm{Gyr})^{-1} \times \begin{cases}
+\left( \frac{ \Sigma_\mathrm{res}}{\Sigma_\mathrm{th}}\right)^{-0.33},& \Sigma_\mathrm{res} <\Sigma_\mathrm{th},\\
+\left( \frac {\Sigma_\mathrm{res}}{\Sigma_\mathrm{th}}\right)^{0.34},& \Sigma_\mathrm{res} >\Sigma_\mathrm{th},
+\end{cases}
+\end{equation}
+with $\Sigma_\mathrm{th}=85~{\rm M}_\odot\,\mathrm{pc}^{-2}$.
+
+
+\subsection{Nuclear star cluster collapse}
+
+A  seed is formed at the center of the galaxy if the stellar mass of the NSC  is larger than the critical mass of the NSC ($M_\mathrm{NSC}^\mathrm{stellar} > M_\mathrm{crit}$). The critical mass is obtained under the condition that the collision time is equal to or shorter than the age of the system ($t_\mathrm{H}$) and  is given by  \citep{VERGARA2023}
+\begin{eqnarray}
+M_\mathrm{crit} (r_\mathrm{NSC}) = r_\mathrm{NSC}^\frac{7}{3}\left( \frac{4\pi M_\star}{3\Sigma_0 t_\mathrm{H}G^\frac{1}{2}}\right)^\frac{2}{3},
+\end{eqnarray}
+ where $G$ is the gravitational constant, $\Sigma_0=16\sqrt{\pi}R_\star^2(1+\Theta)$, with $\Theta=9.54((M_\star \mathrm{R}_\odot )/(\mathrm{M}_\odot R_\star ))( 100~\mathrm{km}\,\mathrm{s}^{-1} /\sigma)^2$  the Safronov number \citep{BINNEY2008}, which depends on the velocity dispersion $\sigma$ and $M_\star$ and  $R_\star$ are the mass and the radius of a single sun-like star. The value of $\sigma$ is obtained assuming a virialized system as 
+\begin{equation}
+\sigma= \sqrt{\frac{G M_\mathrm{NSC}^\mathrm{stellar}(r_\mathrm{NSC})}{r_\mathrm{NSC}}}.
+\end{equation}
+
+The age of the system ($t_H$) is assumed to be equal to the stellar mass-weighted age and is given by
+
+\begin{equation}
+t_H = \int_0^{t}(t-t^\prime){\rm d}t^\prime\dot{M}_\mathrm{NSC}^{\mathrm{stellar}}(t^\prime)\int_0^t{\rm d}t^\prime\dot{M}_\mathrm{NSC}^{\mathrm{stellar}}(t^\prime),
+\end{equation}
+where $\dot{M}_\mathrm{NSC}^{\mathrm{stellar}}(t^\prime)$ is the star formation rate at time $t^\prime$ and t is the present time.
+
+Furthermore, we introduce a free efficiency parameter $\epsilon_r$  and a  threshold mass $M_\mathrm{threshold}$. The $\epsilon_r$  parameter is introduced to rescale the radius used to compute the critical mass for the NSC. The mass threshold is required to avoid the formation of very low BH seeds.  Specifically, the radius used to compute the critical mass is rescaled $r_\mathrm{NSC}\rightarrow \epsilon_r r_\mathrm{NSC}$, with $0<\epsilon_r\leq1$. This is motivated by observational and computational studies of young massive clusters with initial sizes less than $0.3~$pc which can expand more than 10 times \citep{KROUPA2017}.
+
+NSC forms a BH seed if $M_\mathrm{NSC}^\mathrm{stellar}>M_\mathrm{threshold}$ and $M_\mathrm{NSC}^\mathrm{stellar} > M_\mathrm{crit}$.
+
+\subsection{Simulations}
+
+We start from the best baryonic physics constrained model in {\sc Galacticus}\footnote{\url{https://github.com/galacticusorg/galacticus/wiki/Constraints:-Baryonic-Physics}} and vary the relevant parameters for the evolution of the NSCs. The description of the parameters explored are available in Table \ref{tabla1}. The mass for the threshold is set using the critical mass concept. This implicitly assumes that the stellar cluster is well-sampled and we assume here that it requires a minimum of at least around 1000 stars, changing this value indeed would extend the power-law to lower masses without affecting the high end very significantly.
+
+The value of $A_\mathrm{res}$ is fixed in order to not exceed the maximum NSC mass observed at $z=0$. The value is found to be $A_\mathrm{res}\approx 1\cdot 10^{-2}$  and is in agreement with the order of magnitude previously reported ($A_\mathrm{res}\approx 10^{-2}-10^{-3}$) by \cite{ANTONINI2015}.
+
+
+\begin{table}[!t]
+\centering
+\caption{Description of the parameters of the models run in {\sc Galacticus}. The value of $A_\mathrm{res}$ is fixed in order not to exceed the maximum NSC mass observed. }
+\begin{tabular}{lcccc}
+\hline\hline\noalign{\smallskip}
+\!\!Model & \!\!\!\!$A_\mathrm{res}$ & \!\!\!\! $\epsilon_r$ & \!\!\!\! $\epsilon_\bullet$\!\!\!\! &\!\!\!\!  M$_\mathrm{threshold}$ \\
+& & & & $~[M_\odot]$\\
+\hline\noalign{\smallskip}
+\!\!Model A  & $1\cdot 10^{-2}$ & 1.0 & 0.5& $10^{3}$\\
+\!\!Model B & $1\cdot 10^{-2}$  &  0.5& 0.5&$10^{3}$\\
+\!\!Model C & $1\cdot 10^{-2}$   &  0.1& 0.5&$10^{3}$\\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+\section{Results}
+
+We output galaxies with $M_\mathrm{NSC}^\mathrm{stellar} > 10^{4}~\mathrm{M}_\odot$ at $z=0$ in {\sc Galacticus} as this is the lower NSC mass observed in \cite{COTE2006,GEORGIEV2016,SPENGLER2017} due to the resolution limit in observations. Furthermore, we classify the galaxies with bulge to total stellar mass ratio larger than 0.2 as early-type galaxies, and late-type otherwise \citep{GRAHAM2008}.
+
+The distribution of the effective radius is shown in Figure \ref{Reff}. We only show the results of Model A as Model B and C show the same distribution. We notice that the comparison between the observations of early- and late-type galaxies and models A, B, and C show that the most of the radii distribution is below $10~\mathrm{pc}$ but it does not exclude the existence of NSCs with larger radii.
+However, our simulations underestimate the number of NSC with $r_\mathrm{eff,NSC} < 5~\mathrm{pc}$  in early-type galaxies and overestimate the number of NSC in late-type galaxies.
+
+\begin{figure}[!t]
+\includegraphics[width=\columnwidth]{reffhistogram.png}
+\caption{Radii distribution of the observed NSCs compared with {\sc Galacticus}. In both, the radii of most NSCs are below $10~\mathrm{pc}$. Data for early-type galaxies is taken from the ACSVCS survey \cite{COTE2006}, and
+for late-type spiral galaxies from \cite{GEORGIEV2016}. Adaptation from \cite{NEUMAYER2020}.}\label{Reff}
+\end{figure}
+
+In Figure \ref{Scale} we show the stellar mass of the NSC as a function of the stellar mass of the host galaxy compared with the data from \cite{SPENGLER2017} (red dots) and \cite{GEORGIEV2016} (blue dots). The stellar mass of NSCs is slightly underestimated, this could be as result of the absence of another mechanism to form NSCs in the code.
+
+\begin{figure}[!t]
+\includegraphics[width=\columnwidth]{bestfit.png}
+\caption{Scaling relation between the stellar mass of the host galaxy and the stellar mass of the NSC. Purple dots represent the output of {\sc Galacticus} at $z=0$. Blue and red dots are observations from \cite{GEORGIEV2016} and \cite{SPENGLER2017}, respectively. }\label{Scale}
+\end{figure}
+
+In models A and B, there is no formation of BH seeds. However, Model C does form BH seeds with masses in the order of $10^{3}~\mathrm{M}_\odot$ and $\sim 10^{5.5}~\mathrm{M}_\odot$ as shown in Figure \ref{seed}. 
+This suggests that the conditions to form a BH seed in this scenario are satisfied in initially more compact NSCs. The peak of the distribution is in BH seeds with masses $10^{3}~\mathrm{M}_\odot$ and decreases as the BH mass increases.
+
+\begin{figure}[!t]
+\includegraphics[width=\columnwidth]{SEED.png}
+\caption{Mass distribution of the  black hole seeds formed in Model C. The mass range of formed seeds is from $10^{3}~\mathrm{M}_\odot$ to $\sim 10^{5.5}~ \mathrm{M}_\odot$.
+Models A and B do not form BH seeds as result of this mechanism.}\label{seed}
+\end{figure}
+
+\section{Conclusions}
+
+The absence of another NSC formation scenario (e.g. globular cluster migration) could be the reason of the slightly underestimation of the stellar mass of NSCs predicted by {\sc Galacticus} in Figure \ref{Scale}. This is expected according to the simulations of \cite{ANTONINI2015}. The in situ star formation scenario contributes up to $\sim 80\%$ of the final stellar mass of the NSC in their simulations.  Although our simulations recover a scaling relation between the stellar mass of the host galaxy and the stellar mass of the NSC, the inclusion of the globular cluster migration scenario \citep{ANTONINI2015} could improve the agreement of our model with the observations.
+
+From Figure \ref{seed}, we conclude that the formation of BH seeds under this mechanism is possible if $\epsilon_r=0.1$, suggesting that BH seeds are favored to form under this mechanism in initially more compact NSCs. This is consistent with studies of young massive clusters, which initially are more compact and increases their size due to external processes \citep{KROUPA2017}. In a future work we will explore if there is a critical limit for the value of $\epsilon_r$ where NSC could stop forming seeds as the clusters are more relaxed. 
+
+\begin{acknowledgement}
+We gratefully acknowledge support by the ANID BASAL project FB210003, as well as via the Millenium Nucleus NCN19-058 (TITANs).
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

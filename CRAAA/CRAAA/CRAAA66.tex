@@ -1,0 +1,204 @@
+\documentclass[
+	a4paper,
+  10pt,
+  twoside,
+  onesidepapers,
+  electronic,
+  binding=0mm,
+  papers=final,
+  paperselec=all,
+	linkcolor=blue,
+	colorheaders=black
+]{confproc}
+
+% > > > PACKAGES < < <
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+\usepackage{microtype}                                                          
+\usepackage{afterpage}
+\usepackage[titles]{tocloft}
+\usepackage{titletoc}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+%\usepackage[spanish, activeacute]{babel}
+\usepackage[pdftex,breaklinks,linktocpage]{hyperref}
+\let\oldbookmark\bookmark % Guarda la definición original de \bookmark
+
+%\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{layout}
+
+%\usepackage{pdflscape}
+% > > > BAAA STYLE < < <
+%{{{
+
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{237mm}
+
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+
+\setlength{\marginparsep}{0pt}
+
+\setlength{\footskip}{47pt}
+\setlength{\hoffset}{0mm}
+\fancyfootoffset{0cm}
+
+\titleformat*{\section}{\bfseries}
+
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{}
+\makeatother
+
+% Definir section "invisible" para que aparezca en el indice
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+\newcommand\invisiblechapter[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \chaptermark{#1}}
+
+% Definir parámetros de la tabla de contenidos
+\newcommand{\secmark}{}
+\titlecontents{section}
+              [8pt]
+              {\normalsize\mdseries\protect\addvspace{5pt}}%
+              {}
+              {\small\mdseries\itshape}%
+              {\mdseries\titlerule*[0.8pc]{.}\contentspage}%
+
+\renewcommand{\backmattertocstyle}{%
+    \titlecontents{section}[]{}{}{}{}[]%
+    \titlecontents{part}%
+      [0pt]%
+      {\addvspace{2pc}}%
+      {\contentspage\hspace*{2.5em}\vspace*{-8mm}\contentsmargin{0pt}%
+       \bfseries\makebox[0pt][r]{\huge\contentspage\enspace}\large\bfseries}%
+      {\contentspage\hspace*{2.5em}\vspace*{-8mm}\contentsmargin{0pt}\large\bfseries}%
+      {}%
+      [\addvspace{.5pc}]%
+}% 
+
+%}}}                    
+\renewcommand{\proccfoot}{\color{black} \thepage}
+
+% CONFPROC SETTINGS
+%{{{
+\author{\procpdfauthor}
+\title{\procpdftitle}
+\date{\today}
+
+%%% > > > PAPERPATH < < <
+\renewcommand{\PAPERPATH}{../invitadas/}
+%}}}
+
+
+%%% > > > INDEX < < <
+\makeindex
+
+\hyphenation{a-que-llas bi-blio-te-ca co-lo-res de-sa-rro-lla-das des-cri-bir 
+de-ta-lla-da de-sa-rro-lla-do exa-mi-nar co-rres-pon-dien-te gra-dua-do 
+go-bier-nan flui-do for-ma-lis-mos me-ta-li-ci-da-des mo-de-los mo-der-nos 
+rea-li-za-do re-pre-sen-ta-ti-vi-dad si-mi-li-tu-des va-ria-bles}
+
+%%% > > > PROCEEDINGS < < <
+
+\begin{document}
+\frontmatter
+\pagenumbering{roman}
+\cfoot{\makebox[\textwidth][c]{\thepage}}
+\setcounter{page}{-2}
+
+%%% > > > PORTADA < < <
+\pdfbookmark[1]{Portada}{Portada}
+
+\includepdf[fitpaper=true,pages=1,link,offset=0mm 0cm]{../editor/Cover2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+%%% > > > PAGINAS DE PREAMBULO < < <
+\includepdf[link]{../editor/intro_hoja1_2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+\includepdf[link]{../editor/intro_hoja2_2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+\pagenumbering{roman}
+\setcounter{page}{7}
+\otherpagestyle
+
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\textwidth}{10pt}
+
+
+\newpage \pagenumbering{gobble} \phantom{.} \newpage
+
+\pagenumbering{roman}
+\setcounter{page}{9}
+\otherpagestyle
+
+
+\thispagestyle{empty}
+
+%%%%\newpage \pagenumbering{gobble} \phantom{.} \newpage
+%%%%
+%%%%\pagenumbering{roman}
+%%%%\setcounter{page}{11}
+%%%%\otherpagestyle
+%%%%
+%%%%{{{
+%%%%\invisiblesection{Ganadores concurso de astrofotografía 2021}
+%%%%\includepdf[fitpaper=true,pages=1,link,offset=0cm 0cm]{../editor/AstroFoto2021_a4.pdf}
+%%%%}}}
+%%%%\newpage
+%%%%\thispagestyle{empty}
+
+\titleformat*{\section}{\Large}
+\otherpagestyle
+\input{\PAPERPATH expapersswitch}
+
+%%% > > > TOC < < <
+\tableofcontents
+%\newpage \pagenumbering{gobble} \phantom{.} \newpage
+\cleardoublepage
+\otherpagestyle
+
+%%% > > > PAPERS < < <
+\mainmatter
+
+\markboth{}{}
+%\pagestyle{myheadings}
+%\otherpagestyle
+\cfoot{\makebox[\textwidth][c]{ \thepage }}
+\setcounter{page}{1}
+
+
+\input{\PAPERPATH sessions}
+
+%%% > > > BACKMATTER < < <
+\otherpagestyle
+\cleardoublepage
+\setlength{\footskip}{38pt}
+\backmatter                  
+\backmattertocstyle
+\session{\'Indice alfab\'etico de autores}
+\printindex                 
+
+\end{document}

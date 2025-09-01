@@ -1,0 +1,146 @@
+\documentclass[baaa]{baaa}
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+\contriblanguage{1}
+
+
+\contribtype{1}
+
+\thematicarea{6}
+
+\received{09 February 2024}
+\accepted{15 March 2024}
+
+\title{Evolution of dynamically identified stellar components}
+
+\titlerunning{Dynamics decomposition of a merged galaxy}
+
+\author{
+N.M. Isa\inst{1},
+H.P. Salda\~no\inst{2,3},
+V.A. Cristiani\inst{3,4}
+\&
+M. Abadi\inst{4}
+}
+
+\authorrunning{Isa et al.}
+
+\contact{nicolasmiguelisa@gmail.com}
+
+\institute{
+Facultad de Ciencias Exactas, UNSa, Argentina
+\and   
+Instituto de Investigaciones en Energ{\'\i}a no Convencional, UNSa, Argentina
+\and
+Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina
+\and
+Instituto de Astronomía Teórica y Experimental, CONICET--UNC, Argentina
+}
+
+\resumen{Las galaxias son sistemas complejos formados por diferentes componentes estelares. Estos componentes, como el disco, la barra, el halo estelar y el núcleo, interactúan entre sí mientras coexisten en el espacio y el tiempo. Presentamos un análisis detallado de la descomposición dinámica de los componentes de las galaxias, centrándonos en la transición de una galaxia aislada del tipo de la Vía Láctea al escenario de fusión de dos galaxias idénticas. Utilizamos una metodología robusta, combinando los códigos AGAMA y GADGET-2 para la generación y evolución de condiciones iniciales, y el paquete GalaxyChop para la descomposición dinámica. Nuestros resultados preliminares revelan cambios significativos en los componentes morfológicos de la galaxia durante el proceso de fusión, enfatizando el predominio del componente esferoidal en la galaxia fusionada.}
+
+\abstract{Galaxies are complex systems formed by different stellar components. These components, such as the disk, bar, stellar halo, and core interact with each other as they coexist in space and time. We present a detailed analysis of the dynamical decomposition of galaxy components, focusing on the transition from an isolated Milky Way-type galaxy to the merging scenario of two identical galaxies. We utilize a robust methodology, combining the AGAMA and GADGET-2 codes for the generation and evolution of initial conditions, and the GalaxyChop package for dynamical decomposition. Our preliminary results reveal significant changes in the morphological components of the galaxy during the merging process, emphasizing the dominance of the spheroidal component in the merged galaxy.}
+
+\keywords{ galaxies: evolution --- galaxies: interactions --- galaxies: kinematics and dynamics --- galaxies: spiral }
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+In the beginning of 20th century, \cite{1926ApJ....64..321H,1936rene.book.....H} introduced a morphological classification of the known galaxies up to date. This classification, named as \textit{The Hubble Sequence}, encompasses four distinct categories: elliptical (E), spiral (S), lenticular (S0), and irregular (Irr) galaxies. Hubble interpreted this galaxy sequence as an indicator of different evolutionary stages. For this reason, he labeled elliptical and lenticular galaxies as "early-type", while spirals and irregulars were indicated as "late-type" galaxies. Although this classification do not have a physical foundations, it currently continues to be used for purely historical reasons.
+
+A fundamental disadvantage in the Hubble's classifications based solely on the morphology is the significant influence of the projection effect. Two observers in different location in the Universe will perceive different projected shapes of the same object, leading to different classifications in each case. Another issue arises when we observe an edge-on spiral galaxy, as it becomes difficult to distinguish between the different sub-classes and discern the presence of a bar or even whether the disk is thick or thin \citep{2006}. 
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{isolated-pos.png}
+    \caption{\emph{Left panel:} Spatial distribution of the initial isolated Milky Way-type galaxy in the XY plane. \emph{Right panel:} Spatial distribution of the initial Milky Way-type galaxy in the XZ plane. In the both Figures, the red colour correspond to the spheroidal component and the blue colour indicated the disk component.}
+    \label{Figura1}
+\end{figure*}
+
+Much later, with the rise of more sensitive telescopes, it was able to define new classifications using the brightness of the galaxies \citep[e.g., see][]{Sandage_2005ARAA_43_581S}. This allow to classify the galaxies following their spectral energy distributions (SEDs), or identifying brightness excesses in different spectral ranges using color indexes that can be associated to starburst episodes or excesses of cold dust in the galaxy. The photometric classification allowed to define the different components of spiral galaxies, like exponential disks and spheroids, following different radial surface brightness profiles. However, such decomposition is also affected by the projection effect since different orientations of the galaxy can give different profiles. Indeed, the photometric decomposition, which do not use the dynamic of stars, do not allow to distinguish between stars of different components of the galaxy. 
+
+A robust method used in the last years for decomposing the different components of spiral galaxies is the dynamical decomposition. Such decomposition, used mainly for modeled galaxies \citep[e.g.,][]{Cristiani_2021BAAA_62_216C,Du_2019ApJ_884_129D,Abadi_2003_ApJ_597_21A}, have allowed to study in details the properties of disks, bulges, and halos, in order to understand the galaxy formation and evolution. 
+
+\begin{figure*}[!h]
+    \centering
+    \includegraphics[width=1\textwidth]{merger-pos.png}
+    \caption{In the upper graphs, we can observe the evolutionary stages of two Milky Way-like galaxies in the XY plane. In the lower graphs, we can observe the evolutionary stages of two Milky Way-like galaxies in the XZ plane. In both graphs, the red color represents the bulge components, and the blue color represents the disk components.}
+    \label{Figura2}
+\end{figure*}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.35\textwidth]{isolated-lindblad+hist.png}
+    \caption{\emph{Top panel}: Distribution function of the circularity parameter ($\varepsilon$) for two components. \emph{Bottom panel}: Lindblad diagram. In both cases, the red colour correspond to the spheroidal component and the blue colour indicated the disk component.}
+    \label{Figura3}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=0.35\textwidth]{merger-lindblad+hist.png}
+    \caption{Similar of Fig. \ref{Figura3} but for the merged galaxy}
+    \label{Figura4}
+\end{figure}
+
+Initially, \cite{Abadi_2003_ApJ_597_21A}, using the circularity parameter ($\varepsilon$) defined as the ratio between the z-component of the specific angular momentum ($J_{z}$) and the specific circular orbits momentum ($J_{circ}$) of the star, identified at least two components: a spheroid of bulge ($\epsilon ~\text{around}~ 0$) and a disk ($\epsilon \approx 1$). This method also allowed to decompose the disk into a thin and thick component assuming that the thin component of the simulated galaxy is similar to that of the Milky Way. Modification of the initial method \citep{Du_2019ApJ_884_129D} allowed to decompose the simulated galaxies into several components, such as cold disks, warm disks, bulges, and halos. These dynamical decompositions were used to analyze the main properties of the different component of galaxies through scaling relations \citep[see][]{Cristiani_2023BAAA_64_250C} like the Faber-Jackson relation which correlate the total stellar mass as a function of the velocity dispersion for elliptic galaxies, and the Tully-Fisher relations for spiral galaxies that is the correlation between the total stellar mass and the rotational velocity. Such scaling-relations are important for understanding the evolution of the galaxies.
+
+Our motivation is to study the dynamical decomposition of galaxies that results from a merge of spiral galaxies. Merging galaxies have important effect on the evolution of the resulting galaxy. Several studies \citep{Prieto_2021MNRAS_508_3672P,Gao_2020AA_637A_94G,Pearson_2019AA_631A_51P} have shown that the merge of galaxies can increase the star-formation rate, increase the fuelling of compact objects (like black-holes) and lighting up the galactic nuclei. We first focus the study in the decomposition of a evolved galaxy originated by the merge of two spiral galaxies of similar size and stellar mass.
+
+In section \ref{sec:methodology}, we explain the methodology used for the analyses, in section \ref{sec:preliminary_results} we show our preliminary results, and in section \ref{sec:discussion} we discus the results and we indicate the future out coming for this proyect.
+
+\section{Methodology}
+\label{sec:methodology}
+
+For the dynamical decomposition of a merged galaxy, we first generated an ad-hoc initial condition (position and velocity in the $x$, $y$, and $z$ axis) for a Milky Way-type galaxy with 5950 bulge particles, 28085 disk particles and 142367 halo particles. The total stellar mass for the disk and spheroid is $\sim 0.95\times10^{10}$ M$_{\odot}$ and $\sim 1.50\times10^{10}$ M$_{\odot}$, respectively. We used the AGAMA \citep{AGAMA} package\footnote{The AGAMA package is a set of tool to create and model galaxies. The code perform the computation of gravitational potential and force, including orbit integration and the conversion of the position/velocity to action/angle coordinates.} to generate the initial condition, which include the halo, spheroid and disk components. In Fig.\ref{Figura1} we show the spatial distribution of the virialized galaxy.
+
+Using the GADGET-2\citep{GADGET-2} code\footnote{GADGET-2 use the N-body method to track a collisionless fluid and utilizes smoothed particle hydrodynamics (SPH) to simulate an ideal gas.}, we evolve the initial Milky Way-type galaxy within a large time lapse to ensure the stability of the galaxy. We used GADGET-2 due to its robustness in the simulation and its flexibility to gives results that can be read in other codes that we used for the analyses. The evolved Milky Way-type galaxy is then dynamically decomposed using the GalaxyChop\footnote{https://galaxy-chop.readthedocs.io/en/latest/index.html} package to get the galaxy components (disk and bulge) as initial reference.
+
+GalaxyChop is a Python package that face the dynamical decomposition by using clustering methods for stellar galactic components. The package provide five different methodologies for the dynamic decomposition, as an improve of the \cite{Abadi_2003_ApJ_597_21A}'s method (named as JEHistogram), the ones we used for the decomposition of our initial galaxy.  
+
+In the next step, we analyze the evolution of the interaction between two galaxies of equal stellar mass. For that, we create a new initial condition that include two identical galaxies, both similar to the Milky Way-type galaxy created before. For the creation of the new initial conditions, we considered the following parameters:
+
+\begin{itemize}
+    \item $\theta_1$ and $\theta_2$: the offset of the angular momentum of the galaxy $1$ and galaxy $2$ from the angular momentum vector of the orbit.
+    \item $\phi_1$ and $\phi_2$: spherical coordinate $\phi$ of the angular momentum of the galaxy $1$ and galaxy $2$.
+    \item $r_{\text{min}}$: the pericenter passage distance.
+    \item $r_{\text{start}}$: the initial offset of the two galaxies.
+    \item $e$: initial eccentricity of the orbit 
+\end{itemize}
+
+\noindent
+For our analyses, we consider the following values of the encounter parameters: for the galaxy $1$, $\theta_1 = 0^{\circ}$ and $\phi = 45^{\circ}$, while for the galaxy $2$, $\theta_1 = 90^{\circ}$ and $\phi = 0^{\circ}$. With these parameters, the angular momentum of galaxy $1$ is parallel to the initial angular momentum vector of the orbit (face-on in the first panel of Fig. \ref{Figura2}), while the galaxy $2$ rotate perpendicular to the orbit plane (face-off in the first panel of Fig. \ref{Figura2}). The pericenter passage distance is $r_{\text{min}} = 10$ kpc, wile initially both galaxies are separated by a distance of $r_{\rm star} = 125$ kpc. Finally, the initial eccentricity of the orbit is $e = 0.3$. The evolution of the merging galaxies are performed with the GADGET-2 code.
+
+In all panels of Fig. \ref{Figura2}, we show the evolutive sequence of the merging galaxies in different time steps. Across the evolution, we can see the multiple arms that were formed by the tidal forces, and the subsequent formation of a new thick disk and massive spheroid. The size of the resulting galaxy is up to $4$ times larger than the initial Milky Way-type galaxy. 
+
+Finally, we use GalaxyChop to dynamically decompose the different component (disk and spheroid) of the the merged galaxy when the evolution arrived to the last time step. At such time, we expect that the merged galaxy reaches a state of dynamic equilibrium to analyze the dynamic evolution of the system. This method allows us to quantify the ratio between the disk and the spheroid of the resulting galaxy.
+
+\section{Preliminary Results}
+\label{sec:preliminary_results}
+
+In Fig. \ref{Figura3} and \ref{Figura4}, we show the distribution of the circularity parameter (top), which provide information about the quantity of particles in each component, either the disk or the spheroid. Additionally, the Lindblad diagrams (low) is presented, providing information about the rotation and energy possessed by each particle.
+
+In Fig. \ref{Figura3}, we observe how the galaxy has a large number of particles in the disk and very few in the spheroid, as expected since the initial galaxy has a spiral shape. Additionally, we can observe that all particles belonging to the disk rotate in the same direction, as their stellar angular momentum ($J_{\rm Z}$) is always positive. In contrast, the spheroid, supported by velocity dispersion, exhibits stellar motion governed by randomness. Therefore, we will have a similar number of particles for positive and negative values of angular momentum.
+
+For Fig. \ref{Figura4}, on the other hand, we evolved the interaction of two galaxies both with dominant disk components as we showed in \ref{Figura3}. In Fig. \ref{Figura4}, the main component is spheroidal accompanied by a disk-like structure, more likely a elliptical galaxies. For the spheroid, we obtain particles with both positive and negative angular momentum, while for the disk, most of the particle have positive angular momentum. We also observe that the rotational behavior of the resulting spheroid keeps a symmetrical distribution (red curve), unlike to the resulting disk that does not show similar distribution to the initial disk (blue curve). 
+
+A significant discrepancy is noticeable between Fig. \ref{Figura3} and Fig. \ref{Figura4}. In the case of the interaction of two galaxies, insufficient time was taken for the galaxy to reach its steady state. This discrepancy is evident in the distribution of rotational energies and circularities of particles, leading to the observed multiple peaks (blue curve) in Fig. \ref{Figura4}.
+
+\section{Discussion}
+\label{sec:discussion}
+
+In this study, we analyze the dynamic decomposition of stellar components for the case of an isolated Milky Way-type galaxy and for the configuration of two Milky Way-type galaxies merging. We investigate the circularity parameter and the behavior of angular momentum as a function of total energy for both spheroidal and disk components in both cases. We observe that in the case of merged galaxy, the evolution leads to the dominant component being spheroidal, indicating a morphological change compared to the evolution presented by the isolated galaxy.
+
+The future perspective of this work is to study stellar components for different cases of galaxy merging, varying the parameters of the interaction.
+
+\bibliographystyle{baaa}
+\small
+\bibliography{biblio}
+ 
+\end{document}

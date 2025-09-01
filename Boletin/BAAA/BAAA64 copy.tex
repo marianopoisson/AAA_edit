@@ -1,0 +1,236 @@
+\documentclass[
+	a4paper,
+  10pt,
+  twoside,
+  onesidepapers,
+  electronic,
+  binding=0mm,
+  papers=final,
+  paperselec=all,
+	linkcolor=blue,
+	colorheaders=black
+]{confproc}
+
+% > > > PACKAGES < < <
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+\usepackage{microtype}                                                          
+\usepackage{afterpage}
+\usepackage[titles]{tocloft}
+\usepackage{titletoc}
+\usepackage{fancyhdr}
+\usepackage{lipsum}
+\usepackage[spanish, activeacute]{babel}
+%\usepackage[pdftex, colorlinks=false]{hyperref}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{layout}
+
+%\usepackage{pdflscape}
+% > > > BAAA STYLE < < <
+%{{{
+
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{237mm}
+
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+
+\setlength{\marginparsep}{0pt}
+
+\setlength{\footskip}{47pt}
+\setlength{\hoffset}{0mm}
+\fancyfootoffset{0cm}
+
+\titleformat*{\section}{\bfseries}
+
+\makeatletter
+% we use \prefix@<level> only if it is defined
+\renewcommand{\@seccntformat}[1]{%
+  \ifcsname prefix@#1\endcsname
+    \csname prefix@#1\endcsname
+  \else
+    \csname the#1\endcsname\quad
+  \fi}
+% define \prefix@section
+\newcommand\prefix@section{}
+\makeatother
+
+% Definir section "invisible" para que aparezca en el indice
+\newcommand\invisiblesection[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}}
+
+\newcommand\invisiblechapter[1]{%
+  \refstepcounter{section}%
+  \addcontentsline{toc}{chapter}{\protect\numberline{\thechapter}#1}%
+  \chaptermark{#1}}
+
+% Definir parámetros de la tabla de contenidos
+\newcommand{\secmark}{}
+\titlecontents{section}
+              [8pt]
+              {\normalsize\mdseries\protect\addvspace{5pt}}%
+              {}
+              {\small\mdseries\itshape}%
+              {\mdseries\titlerule*[0.8pc]{.}\contentspage}%
+
+\renewcommand{\backmattertocstyle}{%
+    \titlecontents{section}[]{}{}{}{}[]%
+    \titlecontents{part}%
+      [0pt]%
+      {\addvspace{2pc}}%
+      {\contentspage\hspace*{2.5em}\vspace*{-8mm}\contentsmargin{0pt}%
+       \bfseries\makebox[0pt][r]{\huge\contentspage\enspace}\large\bfseries}%
+      {\contentspage\hspace*{2.5em}\vspace*{-8mm}\contentsmargin{0pt}\large\bfseries}%
+      {}%
+      [\addvspace{.5pc}]%
+}% 
+
+%}}}                    
+\renewcommand{\proccfoot}{\color{black} \thepage}
+
+% CONFPROC SETTINGS
+%{{{
+\author{\procpdfauthor}
+\title{\procpdftitle}
+\date{\today}
+
+%%% > > > PAPERPATH < < <
+\renewcommand{\PAPERPATH}{../papers/}
+%}}}
+
+
+%%% > > > INDEX < < <
+\makeindex
+
+\hyphenation{a-que-llas bi-blio-te-ca co-lo-res de-sa-rro-lla-das des-cri-bir 
+de-ta-lla-da de-sa-rro-lla-do exa-mi-nar co-rres-pon-dien-te gra-dua-do 
+go-bier-nan flui-do for-ma-lis-mos me-ta-li-ci-da-des mo-de-los mo-der-nos 
+rea-li-za-do re-pre-sen-ta-ti-vi-dad si-mi-li-tu-des va-ria-bles}
+
+%%% > > > PROCEEDINGS < < <
+
+\begin{document}
+\frontmatter
+\pagenumbering{roman}
+\cfoot{\makebox[\textwidth][c]{\thepage}}
+\setcounter{page}{-2}
+
+%%% > > > PORTADA < < <
+\pdfbookmark[1]{Portada}{Portada}
+
+\includepdf[fitpaper=true,pages=1,link,offset=0mm 0cm]{../editor/Cover2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+%%% > > > PAGINAS DE PREAMBULO < < <
+\includepdf[link]{../editor/intro_hoja1_2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+\includepdf[link]{../editor/intro_hoja2_2024.pdf}
+
+\newpage \phantom{.} \newpage
+
+\pagenumbering{roman}
+\setcounter{page}{7}
+\otherpagestyle
+
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\textwidth}{10pt}
+
+\section{Prefacio}
+\spacing{1.15}
+
+
+El presente volumen del Bolet\'in de la Asociaci\'on Argentina de Astronom\'ia contiene parte de los trabajos expuestos en la 64a Reuni\'on Anual, celebrada en la Ciudad Aut\'onoma de Buenos Aires entre los d\'ias 19 y 23 de septiembre de 2022. El evento fue desarrollado en forma completamente presencial, volviendo de ese modo a su formato habitual prepandemia. La reuni\'on fue organizada por el Instituto de Astronom\'ia y F\'isica del Espacio (IAFE, UBA-CONICET) y cont\'o con la presencia de doscientos cuarenta participantes del pa\'is y del extranjero.
+
+En el transcurso de la reuni\'on se llev\'o a cabo una Mesa Redonda sobre el tema ``Astronom\'ia computacional'' y se entreg\'o al Dr. Carlos Mauricio Correa el premio Carlos Varsavsky correspondiente a la mejor Tesis Doctoral en Astronom\'ia, desarrollada en el pa\'is durante el bienio 2020-2021.
+En la reuni\'on se expusieron doce conferencias invitadas, diez de las cuales se publican en el presente volumen. Se presentaron adem\'as 193 trabajos en las modalidades oral (75) y mural (118). De ellos, 93 fueron enviados al Bolet\'in y 89 son publicados en esta edici\'on luego del proceso de revisi\'on por pares. Agradecemos a quienes enriquecieron el Bolet\'in con el env\'io de sus trabajos y a todos los colegas del pa\'is y del exterior que participaron en el proceso de arbitraje.
+
+Dedicamos este volumen a la memoria de la Dra. Adela Ringuelet fallecida el 26 de abril de 2023, quien fuera la primera mujer socia de la Asociaci\'on Argentina de Astronom\'ia y cofundadora de la misma en 1958. La recordamos especialmente por su extensa dedicaci\'on a la investigaci\'on, docencia y formaci\'on de profesionales en esta disciplina.
+
+Finalmente, agradecemos a la Srta. Laura Alves por su valiosa colaboraci\'on durante el proceso de edici\'on de este volumen.
+
+\vskip 1.2cm
+Argentina, 15 de agosto de 2023.
+
+\vskip 1.5cm
+\noindent
+\begin{center}
+\begin{tabular}{cp{2.5cm}c}
+ {\it René Daniel Rohrmann} & & {\it Cristina Hemilse Mandrini}\\
+ Editor en Jefe & & Editora Invitada\\
+ & &\\
+ & &\\
+ {\it Claudia Evelina Boeris} & & {\it Mario Agust\'in Sgr\'o}\\
+ Secretaria Editorial & &  T\'ecnico Editorial
+\end{tabular}
+\end{center}
+
+
+\setlength{\textwidth}{170mm}
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+
+\newpage \pagenumbering{gobble} \phantom{.} \newpage
+
+\pagenumbering{roman}
+\setcounter{page}{9}
+\otherpagestyle
+
+% FOTO GRUPAL
+{{{
+\invisiblesection{Foto Grupal}
+\includepdf[fitpaper=true,pages=1,link,offset=0cm 0cm]{../editor/FotoGrupal2023.pdf}
+}}}
+\newpage
+\thispagestyle{empty}
+
+%%%%\newpage \pagenumbering{gobble} \phantom{.} \newpage
+%%%%
+%%%%\pagenumbering{roman}
+%%%%\setcounter{page}{11}
+%%%%\otherpagestyle
+%%%%
+%%%%{{{
+%%%%\invisiblesection{Ganadores concurso de astrofotografía 2021}
+%%%%\includepdf[fitpaper=true,pages=1,link,offset=0cm 0cm]{../editor/AstroFoto2021_a4.pdf}
+%%%%}}}
+%%%%\newpage
+%%%%\thispagestyle{empty}
+
+\titleformat*{\section}{\Large}
+\otherpagestyle
+\input{\PAPERPATH expapersswitch}
+
+%%% > > > TOC < < <
+\tableofcontents
+%\newpage \pagenumbering{gobble} \phantom{.} \newpage
+\cleardoublepage
+\otherpagestyle
+
+%%% > > > PAPERS < < <
+\mainmatter
+\markboth{}{}
+\pagestyle{myheadings}
+\cfoot{\makebox[\textwidth][c]{ \thepage }}
+\setcounter{page}{1}
+
+\input{\PAPERPATH sessions}
+
+%%% > > > BACKMATTER < < <
+\otherpagestyle
+\cleardoublepage
+\setlength{\footskip}{38pt}
+\backmatter                  
+\backmattertocstyle
+\session{\'Indice alfab\'etico de autores}
+\printindex                 
+
+\end{document}

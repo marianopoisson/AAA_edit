@@ -1,0 +1,370 @@
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{07 July 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Estudio espectroscópico de cúmulos estelares pertenecientes a la Nube Mayor de Magallanes - \\Parámetros astrofísicos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Cúmulos estelares de las Nubes de Magallanes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.I. Tapia-Reina\inst{1,2,3},
+A.V. Ahumada\inst{2,3}
+\&
+F.O. Simondi-Romero\inst{1,2}
+}
+
+\authorrunning{Tapia-Reina et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{martina.tapia@mi.unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Matemática, Astronomía, Física y Computación, UNC, Argentina
+\and
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{A partir de observaciones realizadas en el Complejo Astronómico El Leoncito (CASLEO, San Juan, Argentina), se presentan espectros integrados en la región del visible correspondientes a 9 cúmulos estelares (CE) pertenecientes a la Nube Mayor de Magallanes (NMM). Mediante diferentes métodos tales como: medición de anchos equivalentes, ajuste de espectros de referencia ({\it templates}) y síntesis espectral, se determinaron edad, enrojecimiento y metalicidad de cada CE. En cuanto a la abundancia metálica, los valores presentados en general son los típicos de la NMM. Por otra parte, se analizaron las poblaciones estelares simples contribuyentes a cada CE, y se discute la presencia de poblaciones múltiples en uno de los CE.}
+
+\abstract{Flux-calibrated integrated spectra in optical wavelength range have been obtained for a sample of 9 Large Magellanic Cloud (LMC) star clusters (SCs) at the Complejo Astronómico El Leoncito (CASLEO, San Juan, Argentina). Age, reddening values and metallicity were simultaneously derived using methods like equivalent width measurements, the template matching method and through evolutionary synthesis models. Also the derived chemical abundances for the sample are LMC's typical values. On the other hand, the simple stellar populations for each SC are analyzed and the presence of multiple stellar populations is confirmed in one SC.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ galaxies: individual (LMC) --- galaxies: star clusters: general --- techniques: spectroscopic}
+
+\begin{document}
+
+\maketitle
+\section{Introducción} \label{S_intro}
+
+Los cúmulos estelares (CE) son los objetos más importantes para comprender la evolución estelar y son considerados los bloques fundamentales de las galaxias. Por este motivo, conocer sus parámetros astrofísicos permite, además, determinar las propiedades principales de las galaxias que los albergan. La espectroscopía integrada ha demostrado ser una poderosa herramienta en el estudio de los CE en general, tanto de la Galaxia (e.g., \citealt{Claria2017}) como en galaxias distantes (e.g., \citealt{Sakari2021}). En particular ha sido aplicada con éxito al estudiar CE de la Nube Mayor de Magallanes (NMM) \citep{Ahumada2019}. Finalmente, vale mencionar que \citet{Asad2013} encontraron que los espectros integrados de CE, cuando se comparan con modelos computacionales de alta resolución, proveen edades robustas.
+
+En este trabajo se estudian, utilizando la mencionada técnica observacional, 9 CE de la NMM completando, en parte, el trabajo iniciado por \citet{TR2023}.
+
+
+\section{Metodología} \label{M}
+
+\subsection{Observaciones y reducción de datos}
+
+Las observaciones fueron realizadas con el telescopio “Jorge Sahade” ($2.15\,m$) del CASLEO (San Juan, Argentina), utilizando el espectrógrafo REOSC (modo dispersión simple). La configuración del instrumento como la técnica empleada para realizar las observaciones se encuentran en \cite{TR2023}. La reducción de datos fue realizada de manera estándar con {\sc{IRAF\footnote{Software confeccionado y continuamente actualizado por el grupo de programación {\em{IRAF}} del{\em{ National Optical Astronomy Observatories}}, Tucson (Arizona, EE.UU.)}}}  \citep{Ahumada2016} empleando el entorno Python (PyRAF) \citep{TR2023_TF}. En la Tabla \ref{T1} se presentan las principales denominaciones y coordenadas ecuatoriales de los 9 CE, como así también el tiempo de exposición total y la razón señal-ruido S/N en $5500 - 5700 \, \textup{\r{A}}$ de cada agregado. En la Fig. \ref{F1} se presentan los espectros finales de cada uno de los 9 CE estudiados.
+
+
+\begin{figure*}
+\centering
+\includegraphics[width=1.0\textwidth]{Espectros_2.png}
+\caption{Espectros finales de los CE en unidad de flujo normalizado a la unidad en $ \lambda\sim5500\,\mathrm{\textup{\r{A}}}$, desplazados por diferentes constantes para una mejor visualización. Se marcan las regiones correspondientes a las primeras cuatro líneas de Balmer.}
+\label{F1}
+\end{figure*}
+
+\begin{table}[!h]
+\centering
+\caption{Muestra de CE observados.}
+\begin{tabular}{lccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Cúmulo & \!\!$\alpha_{2000}$ & \!\!$\delta_{2000}$ & \!\!\!Exposición & \!\! $S \, /N$  \\
+\!\! & \!\!\!\!($h\ m\ s$)& \!\!\ $(^o\ '\ '')$ & \!\!\ total\\ 
+\!\! & \!\ & \!\!\ & \!\!\ $(min)$ \\
+\hline\noalign{\smallskip}
+\!NGC\,1718 & $04\ 52\ 25$ & $-67\ 03\ 09$ & $95$  & $30$ \\
+\!NGC\,1826 & $05\ 05\ 34$ & $-66\ 13\ 45$ & $110$ & $46$ \\
+\!NGC\,1866 & $05\ 13\ 39$ & $-65\ 27\ 53$ & $70$  & $45$ \\
+\!NGC\,1946 & $05\ 25\ 15$ & $-66\ 23\ 39$ & $40$  & $40$ \\
+\!SL\,573   & $05\ 33\ 44$ & $-64\ 56\ 06$ & $50$  & $29$ \\
+\!NGC\,2100 & $05\ 42\ 07$ & $-69\ 12\ 27$ & $55$  & $42$ \\
+\!NGC\,2109 & $05\ 44\ 23$ & $-68\ 32\ 49$ & $135$ & $35$ \\
+\!NGC\,2140 & $05\ 54\ 17$ & $-68\ 36\ 00$ & $195$ & $20$ \\
+\!NGC\,2145 & $05\ 54\ 23$ & $-70\ 54\ 08$ & $70$  & $35$ \\
+\hline
+\end{tabular}
+\label{T1}
+\end{table}
+
+
+\subsection{Determinación de parámetros}
+
+Los parámetros astrofísicos determinados fueron edad, enrojecimiento y metalicidad y se derivaron a partir de diferentes métodos (medición de anchos equivalentes, ajuste de espectros de referencia ({\it templates}) y síntesis espectral). Una primera determinación de edades se realizó mediante la medición de anchos equivalentes, a partir de la cual se ajustaron espectros de referencia (\textit{templates}), tal como lo indica \cite{TR2023}. 
+
+En la Fig. \ref{F2}, a modo de ejemplo, se presenta el ajuste realizado con FISA \citep{BL2012} para el CE NGC\,2109. Este código, a partir de la minización de $\chi^2$ indica no sólo el {\it template} que mejor representa el espectro observado, sino también el valor de exceso de color ({\it E(B-V)}) por el cual se encuentra afectado el CE. También se muestra la bondad del ajuste  entre el espectro integrado corregido por enrojecimiento ($\it E(B-V)=0.11$) y el {\it template} Yg de la base escogida \citep{Piatti2002}.
+
+
+Seguidamente se determinaron, además de la edad de los CE, la metalicidad de los mismos a partir del método de síntesis espectral, combinando poblaciones estelares simples (PES) \citep{Ahumada2019,SR2023}. Vale destacar que esta técnica permite además analizar las diferentes PES contribuyentes a cada CE, e inferir (o no) la presencia de poblaciones múltiples. En la Fig. \ref{F3} se presentan los vectores de población estelar (PES) utilizados para sintetizar el espectro integrado de NGC\,1866, donde claramente se ve que se trata de dos PES bien marcadas.
+
+En la Tabla \ref{T2} se presentan los valores finalmente adoptados correspondientes a edad, exceso de color {\it E(B-V)} y metalicidad representada con [Fe/H]. Vale destacar que para cada CE, la edad proviene de analizar los valores obtenidos a partir de los diferentes métodos empleados. El enrojecimiento ({\it E(B-V)}) corresponde al determinado del ajuste de templates y respecto a la metalicidad de los objetos, se decidió representarla a través de [Fe/H] luego de convertir la abundancia Z obtenida del método de síntesis espectral, para facilitar su lectura.  La precisión que acompaña los valores determinados para la edad, proviene de examinar cuidadosamente que el intervalo final comprenda los valores encontrados por todos los métodos. En el caso del {\it E(B-V)}, corresponde a la mínima variación necesaria para detectar un cambio en el ajuste del {\it template} escogido al espectro observado. Finalmente para el error de [Fe/H], se asigna el indicado por \cite{Gonzalez2010}.
+
+
+\begin{figure}
+\centering
+\includegraphics[width=1.\columnwidth]{Figura-2.png}
+\caption{Ajuste realizado con FISA para NGC\,2109: Espectro observado (negro), espectro corregido por enrojecimiento (rojo) y espectro {\em{template}} Yg correspondiente a $(200-350)\times10^{6}$ años y metalicidad solar (azul). En la parte inferior se muestra el flujo residual resultante (verde).}
+\label{F2}
+\end{figure}
+
+\section{Análisis y conclusiones. Trabajo futuro}
+
+En la Fig. \ref{F4} se presenta la comparación de las edades adoptadas en este trabajo (Tabla \ref{T2}) y las encontradas por diferentes autores. A través de las barras de error presentadas se puede ver que, en general, los resultados se encuentran en buen acuerdo. El amplio rango de edades encontrado abarca: desde CE muy jóvenes con edades de $20\times10^{6}$\,años, hasta CE de edad intermedia ($3\,000\,\times\,10^{6}$ años). Por otro lado, los valores de enrojecimiento {\it {E(B-V)}} determinados abarcan entre 0 y 0.32, siendo éstos similares a los típicos de la NMM \citep{Za2004}.
+
+\begin{table}
+\centering
+\caption{Valores finales adoptados para la muestra de CE.}
+\begin{tabular}{lcccc}
+\hline\hline\noalign{\smallskip}
+\!\!Cúmulo & \! Edad & \!{\it E(B-V)} & [Fe/H] \\
+\!\!& \! [$x 10^{6}$ años] & [mag] & & \\
+\hline\noalign{\smallskip}
+\!NGC\,1718 & $3000\pm1000$ & $0.25\pm0.05$  &  $-0.1\pm0.4$ \\
+\!NGC\,1826 & $500\pm300$   & $0.05\pm0.02$  &  $-0.2\pm0.4$ \\
+\!NGC\,1866 & $160\pm60$    & $0.23\pm0.02$  &  $-0.4\pm0.4$ \\
+\!NGC\,1946 & $40\pm20$     & $0.03\pm0.02$  &  $-0.4\pm0.4$ \\
+\!SL\,573   & $1000\pm500$  & $0.10\pm0.03$  &  $-0.3\pm0.4$ \\
+\!NGC\,2100 & $20\pm10$     & $0.32\pm0.03$  &  $-0.2\pm0.4$ \\ 
+\!NGC\,2109 & $160\pm40$    & $0.11\pm0.02$  &  $0.0 \pm0.4$ \\ 
+\!NGC\,2140 & $100\pm50$    & $0.00\pm0.05$  &  $-0.7\pm0.4$ \\
+\!NGC\,2145 & $150\pm50$    & $0.11\pm0.02$  &  $-0.5\pm0.4$ \\ 
+\hline
+\\
+\end{tabular}
+\label{T2}
+\end{table}
+
+
+Respecto a las metalicidades, para la mayoría de los CE de la muestra, son las aquí determinadas las primeras en su tipo. Por otra parte, al analizar la Figura \ref{F3} se encuentra que STARLIGHT sólo empleó dos PES en la síntesis espectral de NGC\,1866, indicando además que cada una contribuye con aproximadamente el 50\%. Quizás este resultado sea un reflejo de la presencia de poblaciones estelares múltiples tal como encuentran \citet{Milone2017}.
+ 
+\begin{figure}
+\centering
+\includegraphics[width=1.\columnwidth]{NGC1866-new.png}
+\caption{PES de diferentes edades y abundancias utilizados para realizar la síntesis espectral de NGC\,1866 (anaranjado), en tanto que en violeta se muestra el promedio de los aportes. La escala de los círculos anaranjados corresponde al aporte de cada PES. }
+\label{F3}
+\end{figure}
+
+Los espectros integrados acá presentados serán utilizados, junto a otros obtenidos previamente, para poder combinar los de aquellos CE de características similares \citep{Minniti_2014}. De esta manera se crearán espectros patrones que permitirán mejorar la resolución temporal de las bibliotecas existentes. Estos {\it templates} serán útiles no sólo para estudiar CE de la NMM, sino también de galaxias distantes en las que sólo es posible utilizar técnicas integradas.
+
+
+\begin{figure*}
+\centering
+\includegraphics[width=0.8\textwidth]{Edades_miasVSotros-color.png}
+\caption{Comparación de las edades determinadas en este trabajo y las derivadas por otros autores, a saber: NGC\,1718 \citep{Kapse2021}, NGC\,1826 \citep{Bica1996}, NGC\,1866 \citep{Milone2017}, NGC\,1946 \citep{Glatt2010},SL\,573 \citep{Bica1996}, NGC\,2100 \citep{Niederhofer2015}, NGC\,2109 \citep{Glatt2010}, NGC\,2140 \citep{Glatt2010} y NGC\,2145 \citep{Glatt2010}. Se señala también la relación 1:1 como referencia.} 
+\label{F4}
+\end{figure*}
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+
+\begin{acknowledgement}
+{Los autores agradecen al Comité Organizador Local por haber hecho posible su participación en la 65$^o$ RAAA. Extienden este agradecimiento tanto al árbitro como a los editores de este Boletín.\it Based on data obtained at Complejo Astronómico El Leoncito (CASLEO), operated under agreement between the Consejo Nacional de Investigaciones Científicas y Técnicas de la República Argentina and the National Universities of La Plata, Córdoba and San Juan.}
+%(\texttt{acknowledgement}).
+\end{acknowledgement}
+
+
+\end{document}

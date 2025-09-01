@@ -1,0 +1,432 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%6%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Primeros resultados del estudio observacional de estrellas masivas y centrales en cúmulos abiertos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Primeros resultados del estudio observacional de estrellas masivas y centrales en cúmulos abiertos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A.D. Alejo\inst{1,2},
+J.F. González\inst{1,2}
+\&
+S.P. González\inst{1}
+}
+
+\authorrunning{Alejo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{aalejo@unsj-cuim.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Exactas, Físicas y Naturales, UNSJ, Argentina
+\and
+Instituto de Ciencias Astronómicas, de la Tierra y del Espacio, CONICET--UNSJ, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Los modelos teóricos muestran que las estrellas binarias y múltiples juegan un papel importante en la energética de los cúmulos estelares y por lo tanto en su evolución dinámica, en particular en cúmulos pobres dominados por una estrella masiva central. En este trabajo presentamos los resultados de un análisis espectroscópico, astrométrico y fotométrico de cuatro cúmulos abiertos jóvenes (UPK\,617, Markarian\,38, Alessi\,19 y UPK\,38), que son parte de una muestra seleccionada de 43 cúmulos que poseen una o pocas estrellas centrales que son al menos una magnitud más brillantes que el resto de los miembros. 
+Medimos velocidades radiales de las estrellas brillantes en espectros obtenidos en el Complejo Astronómico El Leoncito y analizamos la variabilidad fotométrica con datos de {\sl TESS}. A partir de datos astrométricos y fotométricos de {\sl Gaia} DR3 realizamos un análisis de membresía a los cúmulos, estimamos sus masas y edades.
+En los dos cúmulos más jóvenes encontramos que las estrellas centrales brillantes son sistemas binarios masivos. Específicamente la estrella HD\,173003 de UPK\,38, es una binaria de líneas dobles de 7.9 d de período, mientras que la estrella HD\,167287 en el cúmulo Markarian\,38 es una binaria de 12.1 d de período con una primaria supergigante azul.
+Por su parte, el cúmulo Alessi\,19 tiene dos estrellas más masivas que el resto de los miembros, una de las cuales posee líneas anchas y la otra presenta una probable variabilidad en velocidad radial. 
+Finalmente en UPK\,617, el cúmulo más viejo analizado, la estrella central (HD 139165) posee una alta rotación y es una pulsante lenta de tipo espectral B.
+Estas estrellas masivas podrían jugar un rol destacado en la evolución dinámica de los cúmulos, particularmente cuando se trata de agregados pobres, como es el caso de UPK\,38, donde la binaria central contiene cerca del 40\% de la masa total del cúmulo. 
+}
+
+\abstract{ Theoretical models show that binary and multiple stars play an important rol in the energetics of open clusters and therefore in their  dynamical evolution, particulary in poor clusters dominated by one or a few central massive stars. In this work we present the results of our spectroscopic, astrometric and photometric analysis of four young open clusters (UPK\,617, Markarian\,38, Alessi\,19 y UPK\,38), that are part of a selected sample of 43 clusters that have one or a few central stars that are at least one magnitude brighter than the rest of the members. 
+We measure radial velocities of bright stars in spectra obtained at the Complejo Astronómico El Leoncito and we analyze photometric variability with data from {\sl TESS}. Using astrometric and photometric data from {\sl Gaia} DR3 we perform a membership analysis of the clusters, estimating their masses and ages. 
+In the two youngest clusters we find that the bright central stars are massive binary systems. Specifically, the star HD\,173003 in UPK\,38 is a double-line binary with a period of 7.9 d, while star HD\,167287 in the cluster Markarian\,38 is a binary with a period of 12.1 d with a blue supergiant primary.
+The cluster Alessi\,19 has two stars that are more massive than the rest of the members, one of which has broad spectral lines and the other presents a probable variability in radial velocity.
+Finally, UPK\,617 is the oldest cluster analyzed whose central star (HD\,139165) has a high rotation and is a slow pulsating B-type star.
+These massive stars could play a prominent role in the dynamical evolution of clusters, particularly in the case of poor aggregates like UPK\,38, whose central binary contains about 40\% of the total mass of the cluster.
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ open clusters and associations: general --- methods: data analysis --- surveys}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}
+Los cúmulos abiertos son considerados como laboratorios naturales para estudiar la evolución de una población estelar acotada. Sin embargo, el abordaje integral del problema es complejo porque la evolución estelar, la dinámica global del cúmulo y actividad binaria (formación y ruptura de sistemas) son procesos que se influyen mutuamente y que se desarrollan en escalas temporales comparables.
+Particularmente la población de estrellas binarias y múltiples juega un papel crucial en la energética de los cúmulos. Los modelos numéricos muestran que la interacción dinámica de éstos objetos ocasiona continuamente la formación y rompimiento de sistemas múltiples \citep{2001MNRAS.321..199P,2004MNRAS.351..473P}. \citet{2012MNRAS.425.2369L,2013MNRAS.432.2474L} destacan el papel de las triples y otras múltiples de alto orden, ya que poseen secciones eficaces mucho mayores y por lo tanto tienen más chances de interactuar dinámicamente en el cúmulo. Por otro lado, el estrechamiento (endurecimiento) de las órbitas binarias libera energía que “calienta” dinámicamente el cúmulo. En las simulaciones de cúmulos suficientemente masivos (población inicial de algunos miles de miembros) se ha encontrado que se podrían formar objetos mucho más masivos que las demás estrellas a través de sucesivos eventos de fusiones colisionales \citep{2011MNRAS.415.1179M,2018MNRAS.481..153O,2022MNRAS.509.3724R}. Estos procesos dinámicos son relativamente rápidos. \citet{2018MNRAS.481..153O} estiman que en el 50\% de los casos se alcanzan objetos centrales con más de $50~M_\odot$ en los primeros 5 millones de años. Existe cierto número de cúmulos abiertos jóvenes con pocos miembros que parecen dominados por una estrella luminosa central que se ubica en los diagramas color--magnitud en por lo menos una magnitud por encima de las demás estrellas de secuencia principal, en una posición frecuentemente irreconciliable con la isócrona del cúmulo. 
+
+El presente estudio se enmarca dentro de un proyecto más amplio que incluye el análisis de la dinámica de 43 cúmulos abiertos jóvenes que poseen una estrella central significativamente más brillante que el resto de los miembros del grupo. Particularmente nuestro objetivo es hacer un aporte al conocimiento empírico del papel de las estrellas binarias, múltiples y masivas en la evolución dinámica y la eventual desintegración de los cúmulos, mediante un estudio observacional utilizando espectroscopía propia obtenida en CASLEO y la fotometría disponible en la base de datos {\sl TESS} \citep{2015JATIS...1a4003R}.
+
+\section{Análisis}
+\subsection{Membresía y cálculo de masa}
+En este trabajo presentamos los primeros resultados obtenidos de las estrellas centrales de los cúmulos UPK\,617, Markarian\,38 (desde ahora Mrk\,38), Alessi\,19 y UPK\,38. Como primer paso realizamos un estudio de membresía utilizando {\sc scludam}\footnote{https://github.com/simonpedrogonzalez/scludam.} ({\em Star CLUster Detection And Membership estimation}) \citep{pedro}, una librería de Python que permite obtener datos de los catálogos de {\sl Gaia} \citep{2023A&A...674A...1G}, localizar cúmulos mediante la detección de picos de densidad en histogramas multidimensionales y calcular probabilidades de pertenencia. {\sc Scludam} utiliza {\sc hdbscan} ({\em Hierarchical density based clustering}) y {\sc kde}  ({\em Kernel Density Estimation}) con ancho de banda variable, incorporando los errores y correlaciones provistas por los catálogos. 
+
+Una vez realizado el estudio de membresía, calculamos los parámetros medios del cúmulo como el promedio de los valores de las estrellas pesadas por su probabilidad de pertenencia. En el cálculo de la velocidad radial media del cúmulo ($v_C$) utilizamos las probabilidades de pertenencia y el error de la medición de {\sl Gaia}. Posteriormente ajustamos una isócrona de los modelos PARSEC  \citep{2022A&A...665A.126N} al diagrama color – magnitud para obtener la edad de cada uno de los cúmulos. Finalmente, a cada estrella se le asignó la masa correspondiente al punto más cercano de la isócrona en el diagrama color-magnitud (masa fotométrica). En estos cálculos tuvimos en cuenta los errores de la magnitud G y del color (BP-RP).
+
+\subsection{Variabilidad}
+Analizamos la variabilidad fotométrica y espectroscópica de las estrellas más brillantes de los cúmulos utilizando espectroscopía y fotometría. Las observaciones espectroscópicas se obtuvieron con el espectrógrafo REOSC del CASLEO en modo dispersión cruzada, de poder resolvente R=14000, en varios turnos de observación entre los años 2022 y 2023. 
+
+A partir de una primera inspección visual de los espectros analizamos la variabilidad de la morfología de las líneas y determinamos el tipo espectral. De acuerdo al tipo seleccionamos un espectro sintético de referencia ({\em template})  adecuado para medir las velocidades radiales utilizando la tarea {\sc fxcor} del paquete {\sl Iraf}. En las estrellas en que las mediciones de velocidad radial sugerían variabilidad, aplicamos la tarea {\sc pdm} del paquete {\sc astutil} para identificar el período. En el caso de las binarias de líneas espectrales dobles, realizamos la separación espectral de las componentes utilizando el código de {\em disentangling} de \citet{2006A&A...448..283G}. Cuando fue posible determinar el período, ajustamos una órbita kepleriana por cuadrados mínimos para calcular los parámetros orbitales.
+
+Para estudiar la variabilidad fotométrica de las estrellas más brillantes, descargamos de la base de datos de {\sl TESS} las imágenes disponibles y aplicamos fotometría con la herramienta LightKurve \citep{2018ascl.soft12013L}. Solamente encontramos datos para la estrella HD\,139165 en el cúmulo UPK\,617 (ver Sec.~\ref{upk617}).
+
+\section{Resultados}
+\begin{table}[!t]
+\centering
+\caption{Parámetros obtenidos para los cúmulos a partir del análisis de pertenencia y del ajuste de la isócrona. Para cada cúmulo se lista el número de estrellas, paralaje, movimientos propios, velocidad radial media del cúmulo, el logaritmo de la edad medida en millones de años, enrojecimiento y masa fotométrica.}
+\begin{tabular}{lrrrr}
+\hline\hline\noalign{\smallskip}
+                                 &  UPK\,38       & Mrk\,38     & Alessi\,19      &  UPK\,617  \\
+ \\
+\hline\noalign{\smallskip}
+N                                &  17            &  170       & 85            & 57      \\
+                                 &                &            &               &         \\
+$\varPi$                         &  $1.69$        &  $0.56$    & $1.70$        & $1.37$ \\
+$(\mathrm{msa})$                 &  $\pm0.16$     &  $\pm0.01$ & $\pm0.08$     & $\pm0.09$\\
+                                 &                &            &               &   \\
+$\mu_\alpha^*$                   &  $-1.88$       & $+5.57$    & $-1.4$       & $-4.58$ \\
+$(\mathrm{msa}$ año$^{-1})$      &  $\pm0.12$     & $\pm 0.03$ & $\pm 0.04$    & $\pm 0.04$ \\
+                                 &                &            &               &   \\
+$\mu_\delta$                     &  $-5.29$       & $-2.30$    & $ -7.13$      & $-5.29$ \\
+$(\mathrm{msa}$ año$^{-1})$      &  $\pm 0.51$    &  $\pm0.05$ & $\pm 0.32$    & $\pm 0.35$ \\
+                                 &                &            &               &   \\
+                                 &                &            &               &   \\
+  $v_C$                          &  $-13.7  $    &  ---       & $-7.7$       & $-36.1$\\
+$(\mathrm{km\,s}^{-1})$          &  $\pm2.5 $    &            & $\pm2.6 $    & $\pm4.4 $\\
+                                 &  (9)          &            &      (36)     & (33)     \\
+                                 &               &            &               &         \\
+$\log(\tau)$                     &  6.98         &  7.41       & 7.63        & 7.97   \\
+                                 &$\pm0.06 $     & $\pm0.12 $ & $\pm0.07 $ &$\pm0.18 $         \\
+                                 &               &            &               &         \\
+E(BP-RP)                         &  1.09        &  0.41      & 0.19        & 0.18      \\
+  $ \mathrm{(mag)}$              &  $\pm0.13 $  & $\pm0.03$ &$\pm0.03 $    &   $\pm0.02 $       \\
+                                 &               &            &               &         \\
+$M_\mathrm{fot}       $          &  40          &  248       & 74        & 60      \\
+  $\mathrm{(M_\odot)} $          & $\pm6 $    & $\pm19 $      & $\pm9 $    &   $\pm5 $      \\
+\hline
+                                 &                &            &               &         \\
+                                 
+\end{tabular}
+%\tablefoottext{{\bf Nota:} N es el número de estrellas y $\tau$ está medido en millones de años.}
+
+\label{tabla1}
+ 
+\end{table}
+\subsection{UPK\,38}
+UPK\,38 aparece dominado por la estrella HD\,173003, la cual es 2 mag más brillante que las demás estrellas del cúmulo. 
+A partir de nuestro análisis de pertenencia y del ajuste de la isócrona obtuvimos la edad y los parámetros listados en la Tabla \ref{tabla1}).
+
+Si bien los parámetros astrométricos de HD\,173003 ($\varPi=1.25\pm0.09~\mathrm{msa}$, $\mu_\alpha^*=-2.31\pm0.10~\mathrm{msa}$ año$^{-1}$, $\mu_\delta=-6.32\pm0.09~\mathrm{msa}$ año$^{-1}$) difieren apreciablemente de los del cúmulo, si se considera
+el parámetro de exceso del ruido ({\em Excess noise of the source}) consignado en {\sl Gaia} ($0.67~\mathrm{msa}$), las diferencias son comparables a las incertezas.
+
+Por otro lado, los espectros mostraron que HD\,173003 es una binaria espectroscópica de doble línea. Realizamos una separación espectral que nos permitió hallar que las componentes poseen morfologías espectrales similares correspondientes a un tipo espectral B1-B2V. Para la clasificación espectral utilizamos los criterios de \citet{2009ssc..book.....G}. El mejor ajuste de las curvas de velocidad radial (Fig. \ref{Fighd173003}) arroja una razón de masas  $q=0.6$ ($M_1\sen^3 i$=1.86 M$_\odot$ $M_2\sen^3 i$=1.18 M$_\odot$) y un período de 7.889 d, aunque se trata de una orbita preliminar ya que las observaciones actuales no permiten identificar inequívocamente el período.
+
+Como un criterio adicional de pertenencia analizamos la distribución de energía espectral (SED) de HD\,173003 comparando la fotometría disponible con los espectros sintéticos de \citet{2014MNRAS.440.1027C}  (Fig.\ref{sedhd173003}). Encontramos consistencia con la distancia y el enrojecimiento del cúmulo si se asume que la binaria está compuesta por una primaria de $T_\mathrm{ef}=25000$~K y  $R=6.3~\mathrm{R_\odot}$, y una secundaria de 
+$T_\mathrm{ef}=19000$~K y  $R=3~\mathrm{R_\odot}$, parámetros que son consistentes con el tipo espectral y la razón de masas espectroscópica. 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{RV_hd173003b.pdf}
+\caption{Curva de velocidad radial de HD\,173003. La línea gris corresponde a la velocidad del centro de masas.}
+\label{Fighd173003}
+\end{figure}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.79\columnwidth]{sed_hd173003.pdf}
+\caption{Distribución espectral de energía (SED) de HD\,173003.}
+\label{sedhd173003}
+\end{figure}
+
+\subsection{Markarian\,38}
+Este cúmulo está formado por un compacto grupo de estrellas alrededor de HD\,167287 en una región de alta densidad estelar.
+La estrella central es una binaria de líneas simples con un período de 12.13 d y una velocidad del centro de masa de $19.4~\mathrm{km\,s}^{-1}$ (Fig~\ref{Fighd167287} y Tabla \ref{tablahd167287}). Analizando los espectros hallamos que posee un tipo espectral B1Ia. 
+Del ajuste de isócronas al diagrama color--magnitud encontramos que HD\,167287 se encuentra en una posición consistente con una masa fotométrica de $9.9\pm0.6~\mathrm{M_\odot}$.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.79\columnwidth]{RV_hd167287.pdf}
+\caption{Curva de velocidad radial de HD\,167287. La línea gris corresponde a la velocidad del centro de masas.}
+\label{Fighd167287}
+\end{figure}
+
+\begin{table}[!t]
+\centering
+\caption{Parámetros orbitales de HD\,167287.}
+\begin{tabular}{lr@{$\pm$}l}
+\hline\hline\noalign{\smallskip}
+ Parámetro & 
+ \multicolumn{2}{c}{HD\,167287}      \\
+ \\
+\hline\noalign{\smallskip}
+$T_0$ (HJD)          &  2460001.607 & 0.038 \\
+$V_\gamma(\mathrm{km\,s}^{-1})$ &  19.44&0.75    \\
+$K_1(\mathrm{km\,s}^{-1})$      &  73.83&0.72 \\
+$\omega(^\circ)$                &  3.159&0.072  \\
+$e$                             &  0.140&0.013 \\
+$P$ (d)                      &  12.1272&0.0016 \\
+\hline
+\end{tabular}
+\label{tablahd167287}
+
+\end{table}
+
+
+\subsection{Alessi\,19}
+Alessi 19 posee dos estrellas brillantes de tipo espectral B temprano. Para la estrella central, denominada HD\,168431, determinamos una masa fotométrica de $6.1\pm0.3~\mathrm{M_\odot}$. Hacia el sur del cúmulo, se halla HD\,168131 con una masa de $6.2\pm0.2~\mathrm{M_\odot}$. Los espectros de la estrella central presentan líneas anchas (estimamos $v\sen i\approx 300$ km\,s$^{-1}$) y variación en la posición y morfología de las líneas espectrales. Sin embargo, con los datos actuales no es posible asegurar que sea la binaridad la causa de esas variaciones por lo que se planea continuar el monitoreo espectroscópico con una mayor relación señal-ruido. Las velocidades radiales medias de las estrellas HD\,168131 y HD\,168431 son $-8.5\pm5.3~\mathrm{km\,s}^{-1}$ y $-11.8\pm0.7~\mathrm{km\,s}^{-1}$ respectivamente, las cuales son consistentes con la obtenida  para el cúmulo (Tabla \ref{tabla1}).   
+
+\subsection{UPK\,617} \label{upk617}
+
+La edad que obtuvimos para UPK\,617 es la mayor de todos los cúmulos analizados en este trabajo (Tabla \ref{tabla1}). La estrella HD\,139165 se encuentra en el centro del grupo y posee un movimiento propio algo  diferente al obtenido para el cúmulo ($\varPi=1.40\pm0.03~\mathrm{msa}$, $\mu_\alpha^*=-3.01\pm0.03~\mathrm{msa}$ año$^{-1}$, $\mu_\delta=-4.99\pm0.03~\mathrm{msa}$ año$^{-1}$), por lo que se obtuvo una baja probabilidad de pertenencia, aún cuando el resto de los parámetros son consistentes con los del cúmulo. 
+Al igual que en otras estrellas, HD\,139165 posee un exceso de ruido astrométrico apreciable ($0.21~\mathrm{msa}$), por lo que no la podemos descartar como probable miembro del cúmulo. La masa fotométrica que hallamos para esta estrella fue de $4.0\pm0.3~\mathrm{M_\odot}$. 
+Por otro lado, analizando la fotometría de {\sl TESS} hallamos que es una pulsante lenta de tipo espectral B con una amplitud de $1.5\times10^{-3}~\mathrm{mag}$ y un período de 0.416 d (ver Fig.\ref{hd139165}).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{tess139165a.pdf}
+\includegraphics[width=\columnwidth]{tess139165b.pdf}
+\caption{Curva de luz de {\sl TESS} de HD\,139165. La variación de la forma de la curva sugiere la presencia de varias frecuencias simultáneas, siendo la principal frecuencia 2.40 d$^{-1}$.}
+\label{hd139165}
+\end{figure}
+
+\section{Discusión}\label{sec:guia}
+En los cúmulos estudiados en este trabajo, confirmamos que las estrellas centrales brillantes son los objetos más masivos de los cúmulos, siendo múltiples en dos de los cuatro casos analizados. 
+Una de las estrellas para las que no obtuvimos indicios de variabilidad es HD\,168131 en Alessi\,19. Sin embargo, su alta rotación conspira contra la detección de variaciones moderadas de velocidad radial y no es posible analizar variaciones fotométricas de baja amplitud ya que no dispone de datos fotométricos {\sl TESS}. 
+
+La binaria HD\,173003 es un objeto masivo que estaría jugando un rol crucial en la dinámica del cúmulo UPK\,38 ya que representa al menos dos quintos la masa total del cúmulo y es unas 5 veces más masiva que el segundo objeto más masivo, lo que la convierte en una estrella muy interesante para nuestro objetivo.
+
+Por otro lado la binaria ubicada en el centro de coordenadas de Mrk\,38, posee una componente primaria masiva evolucionada. Estimamos que incluyendo ambas componentes el sistema tiene unas 16 a 20 $\mathrm{M_\odot}$, lo que representa un 8\% aproximadamente la masa del cúmulo.
+
+La suma de las masas de las estrellas más masivas de Alessi 19, representan el 17\% aproximadamente de la masa total del cúmulo. Finalmente la estrella HD\,139165 representa un 7\% la masa de UPK\,617 y es el doble de las dos estrellas que le siguen en masa.
+
+Como trabajo a futuro planeamos completar la caracterización de las estrellas centrales en la muestra total de cúmulos y analizar su relación con los parámetros estructurales y dinámicos de los cúmulos (escalas de tiempo, radio de marea, radio que contiene la mitad de la masa, existencia de segregación de masas). 
+
+
+\begin{acknowledgement}
+Este trabajo está basado en datos obtenidos en el Complejo Astronómico El Leoncito, operado bajo convenio entre el Consejo Nacional de Investigaciones Científicas y Técnicas de la República Argentina y las Universidades Nacionales de la Plata, Córdoba y San Juan. 
+Este trabajo ha utilizado datos de la mision {\sl Gaia} de la Agencia Espacial Europea (ESA) (https://www.cosmos.esa.int/gaia, procesado por el Consorcio de Análisis y Procesamiento de Datos {\sl Gaia} (DPAC). La financiación para el DPAC ha sido proporcionada por instituciones nacionales, en particular las instituciones que participan en el Acuerdo Multilateral de {\sl Gaia}.
+
+
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{922}
+ 
+\end{document}

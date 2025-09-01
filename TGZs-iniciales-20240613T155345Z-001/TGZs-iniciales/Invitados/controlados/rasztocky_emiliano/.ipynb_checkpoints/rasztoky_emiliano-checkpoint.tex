@@ -1,0 +1,486 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{16 February 2024}
+\accepted{03 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Cutting-edge instrumentation for radio astronomy in Argentina}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Cutting-edge instrumentation for radio astronomy in Argentina}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+E. Rasztocky\inst{1}}
+
+\authorrunning{Rasztocky}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{eraszto@iar.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Desde el Instituto Argentino de Radioastronomía (IAR), se está colaborando activamente en varios proyectos relacionados con la detección y medición de ondas milimétricas y submilimétricas para instrumentos de vanguardia en radioastronomía. En este documento, describo tres desarrollos que abarcan una amplia gama de instrumentación astronómica, en los cuales estoy involucrado desempeñando distintos roles. En primer lugar, describo el sistema óptico NACOS del radiotelescopio LLAMA. Este instrumento posibilita la focalización de la radiación submilimétrica en las cabinas laterales del radiotelescopio, donde se alojan los receptores criogénicos. Detallo y explico el subsistema y cómo se integra en el sistema general del telescopio, indicando sus posibles aplicaciones. A continuación, presento el detector híbrido instalado en el crióstato del instrumento QUBIC, un telescopio diseñado para el estudio de los modos B de polarización del CMB. Proporciono información sobre su instalación y funcionamiento. Finalmente, ofrezco una breve descripción de la antena submilimétrica SWI de la misión espacial JUICE de la ESA, destinada a explorar las lunas heladas de Júpiter. Presento sus características principales y su relevancia en la investigación espacial. Concluyo este trabajo con una breve discusión sobre el potencial a futuro de la radioastronomía desarrollada en el IAR, resaltando la importancia de estos proyectos para avanzar en nuestro entendimiento del cosmos.}
+
+\abstract{From the \textit{Argentine Institute of Radio astronomy} (IAR), active collaboration is underway in various projects related to the detection and measurement of millimeter and sub-millimeter waves for cutting-edge instruments in radio astronomy. In this document, I describe three developments that encompass a wide range of astronomical instrumentation, in which I am involved in various roles. Firstly, I describe the NACOS optical system of the LLAMA radio telescope. This instrument enables the focusing of sub-millimeter radiation in the side cabins of the radio telescope, where cryogenic receivers are housed. I detail and explain the subsystem and how it integrates into the overall telescope system, indicating its potential applications. Next, I present the hybrid detector installed in the cryostat of the QUBIC instrument, a telescope designed for the study of B-mode polarization of the CMB. I provide information about its installation and operation. Finally, I offer a brief description of the SWI sub-millimeter antenna of the JUICE space mission by the European Space Agency (ESA), aimed at exploring the icy moons of Jupiter. I present its key features and relevance in space research. I conclude this work with a brief discussion of the future potential of radio astronomy developed at the IAR, emphasizing the importance of these projects in advancing our understanding of the cosmos.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ Instrumentation: detectors --- instrumentation: interferometers --- telescopes --- methods: observational --- space vehicles: instruments}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+
+The \textit{Instituto Argentino de Radioastronomía}\footnote{\url{https://www.iar.unlp.edu.ar/}}  (IAR), is a scientific and technological research institution  affiliated with the \textit{Consejo Nacional de Investigaciones Científicas y Técnicas}\footnote{\url{https://www.conicet.gov.ar/}} (CONICET), \textit{Comisión de Investigaciones Científicas}\footnote{\url{https://www.cic.gba.gob.ar/}} (CIC) and \textit{Universidad Nacional de La Plata}\footnote{\url{https://unlp.edu.ar/}} (UNLP). IAR was established in 1962 and its first radio telescope was inaugurated in 1966 (Fig.~\ref{Inauguracion}). During this period, the first of the two prime-focus antennas of $30~\mathrm{m}$ aperture (named Varsavsky) was built, primarily for research in the $21~\mathrm{cm}$ hydrogen emission line. The second $30~\mathrm{m}$ aperture antenna (named Bajaja) was built in the 1970's (Fig.~\ref{dos_antenas}). Located in a natural park of approximately $\approx6.3~\mathrm{ha}$ in Berazategui district of Buenos Aires province, the IAR comprises around $\approx1400~\mathrm{m^2}$ of buildings, including offices, laboratories, and various facilities. The institute has a total of 60 employees, including scientists, engineers, technicians, and administrative staff. 
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/Antena_1.png}
+\caption{IAR inauguration event, with the first $30~\mathrm{m}$ radio telescope (Varsavsky) built and operational.}
+\label{Inauguracion}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/Antena_1_y_2.png}
+\caption{The second antenna (Bajaja), pointing to the zenith in the image.}
+\label{dos_antenas}
+\end{figure}
+
+
+Originally conceived as an institute for research in the field of radio astronomy, at the end of the 90s and the beginning of the millennium, the IAR expanded its scope of activities through the Technology Transfer\citep{fliger2024astrophysics} initiative. This expansion included areas such as the space sector, instrumentation for radio astronomy, industry, health, and others (Fig.~\ref{proyectos}). These early experiences played a crucial role in significantly diversifying the institution's areas of operation, leading to the accumulation of valuable experience and knowledge gained by the technical and scientific staff over the years positioning the IAR today not only as a consulting and advisory institution for international projects, but also as a strategic partner in their development.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/Proyectos_TT.png}
+\caption{\emph{Top:} Left: Development of infrared cameras, antennas, communications for SAC-D$/$Aquarius mission \citep{sen2006aquarius}. Middle: Development of telemetry and control for the launchers of the VEX series. Right: Back-end for Deep Space Antenna (DSA3)\citep{benaglia2011antenna}. \emph{Bottom:} Left: Ozone reactor\citep{romero2020canon}. Right: The microwave ($1000~\mathrm{MHz}$) tomography prototype\citep{fajardo2020tomografia}.}
+\label{proyectos}
+\end{figure}
+
+Particularly, in this work I delve into three developments of cutting-edge instrumentation and equipment for the detection and measurement of millimeter and sub-millimeter waves in radio astronomy:
+\begin{itemize}
+    \item The tertiary optical system for the LLAMA radio telescope, where my role involves conducting the Assembly, Integration, and Verification (AIV) activities for the system during the First Light phase, along with designing the system for the Long Term phase.
+    \item The installation, testing, and commissioning of QUBIC, the bolometric interferometer for CMB, where I serve as a System Engineer.
+    \item The design of Mechanical Ground Support Equipment (MGSE) for SWI, one of the ten instruments on board JUICE, a spacecraft launched to Jupiter on April 14th, 2023. I am involved in this project as a Support Engineer, initially focusing on AIV activities and later contributing to MGSE development.
+\end{itemize}
+
+\section{Tertiary optical system for LLAMA}\label{sec:LLAMA}
+
+The Large Latin American Millimeter Array (LLAMA) radio telescope\footnote{\url{https://www.llamaobservatory.org/}} is a collaborative effort between Argentina and Brazil, involving the installation and operation of a Cassegrain antenna with a $12~\mathrm{m}$ aperture. It is situated in Alto Chorrillo, at an elevation of $4860~\mathrm{m}$ above sea level, within the Salta province of Argentina\citep{lepine2021llama}, \citep{romero2020large}. The primary reflector of the radio telescope boasts a precision of $25~\mathrm{\mu m}$. LLAMA is specifically designed for observing the sky within the frequency range of $30-950~\mathrm{GHz}$. The LLAMA configuration, featuring three cabins for receiver installation (one central receiver cabin and two side Nasmyth cabins, A and B), is the  same as the APEX radio telescope \citep{gusten2006atacama} (Fig.~\ref{APEX}).
+
+LLAMA will enable research in scientific aspects such as the study of young stellar objects, spectral molecular lines of forming stars, the sun's chromosphere, outflows in starbursts, black holes, Active Galactic Nuclei (AGN), galaxy formation at high Redshift, and, with the appropriate instrumentation, even Cosmic Microwave Background (CMB) fluctuations at small angular scales.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/APEX.png}
+\caption{The Atacama Pathfinder EXperiment (APEX)
+in Chile. Credit: ESO}
+\label{APEX}
+\end{figure}
+
+LLAMA, in its Long Term (LT) phase will host six ALMA-like single-pixel, dual-polarized heterodyne receivers \citep{carter2004alma} within cryostats (Fig.~\ref{receivers_criostat_antenna}) located in the Nasmyth cabins. For the initial First Light (FL) phase of the project, a phase aimed at validating the technical and scientific capabilities of the radio telescope, three receivers will be installed in Cab-B covering bands 5 ($163-211~\mathrm{GHz}$), 6 ($211-275~\mathrm{GHz}$), and 9 ($602-720~\mathrm{GHz}$). The LT phase will demand a major upgrade to include bands 6, 7 ($275-373~\mathrm{GHz}$) and 9 in Cab-A, along with bands 1 ($35-52~\mathrm{GHz}$), 2+3 ($67-116~\mathrm{GHz}$), and 5 in Cab-B. This setup reserves the Cassegrain cabin for potential future installations of multi-detector cameras, taking advantage of its larger field of view ($\approx10~\mathrm{arcmin}$). To implement this strategy, the utilization of a tertiary optical system that couples the receivers to the antenna is crucial. In LLAMA, this tertiary optical system is named Nasmyth Cabin Optical System (NACOS). 
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/receivers_criostat_antenna.png}
+\caption{\emph{Top:} Example of three cold cartridge receivers. \emph{Middle:} CAD model of the cryostat with three cold cartridge (inside) and warm cartridge (at the bottom) receivers installed. \emph{Bottom:} CAD model of LLAMA cabins.}
+\label{receivers_criostat_antenna}
+\end{figure}
+
+The reduced version of NACOS to be implemented during the FL phase of the project, where only Cab-B will host receivers, was designed and manufactured (between 2017 and 2018) in the ALFA ferramentaria company, in Araraquara, São Paulo state in Brazil.
+NACOS-FL, a frequency independent system, consist of a series of mirrors, some of them motorized and hence capable to be moved in or out from the optical path, redirecting and refocusing the light from the sky collected by the Cassegrain system, into the correspondent receiver in the Nasmyth cabin, according to the frequency to be observed (Fig.~\ref{NACOS-FL}). A detailed description of NACOS-FL can be found in \citep{rasztocky2024}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/NACOS-FL.png}
+\caption{NACOS-FL configuration, where the different mirrors that conform the optical system are shown.}
+\label{NACOS-FL}
+\end{figure}
+
+Since 2018 (with a stand-by period between 2020 to 2022 due to the COVID-19 pandemic situation) the AIV process for NACOS-FL is being carried out in the ALFA facilities. The main activities of the AIV process include the validation of the integration process of NACOS in the antenna through the emulation of the antenna's interfaces and constraints, with the aid of dedicated auxiliary equipment designed and manufactured for this purpose (Figs.~\ref{CASS_integration} and ~\ref{NASS_integration}). The alignment of the different mirrors in the optical chain (Figs.~\ref{NACOS_alignment}), the calibration of the movable mirrors and various operational tests, among other tasks. The completion of NACOS-FL AIV activity is expected to happen in March 2024.     
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/CASS_integration.png}
+\caption{The handling and installation of the NACOS's CASS structure in the Cassegrain Cabin emulator fixture.}
+\label{CASS_integration}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/NASS_integration.png}
+\caption{Testing of the NACOS's NASS structure fixed in the Nasmyth Cabin interface emulator fixture.}
+\label{NASS_integration}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/NACOS_alignment.png}
+\caption{Testing of the NACOS's NASS structure fixed in the Nasmyth Cabin interface emulator fixture.}
+\label{NACOS_alignment}
+\end{figure}
+
+Regarding the design of the system for the LT phase of the project (i.e., NACOS-LT), its optical design is completed. NACOS-LT, as well as NACOS-FL, has been designed to be a frequency independent system and as the latter, it consists of a series of fixed and movable mirrors that allows the user to select the frequency channel to be observed (Fig.~\ref{NACOS-LT}). A very detailed description of NACOS-LT can be found in  \citep{rasztocky2024b}.
+The first mirror assembly (M1A), essential for refocusing the beam into Cab-A, has already been designed and manufactured (Fig.~\ref{M1A_assembly}). Calibration, alignment, and operational tests are expected to be completed during the upcoming AIV campaign in March 2024.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/NACOS-LT.png}
+\caption{NACOS-LT configuration, where the different mirrors that conform the optical system are shown.}
+\label{NACOS-LT}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/M1A_assembly.png}
+\caption{\emph{Top:} CAD model of CASS including M1A assembly. \emph{Bottom:} M1A assembly mounted in the CASS structure.}
+\label{M1A_assembly}
+\end{figure}
+
+
+\section{QUBIC}\label{sec:QUBIC}
+
+The Q $\&$ U Bolometric Interferometer for Cosmology (QUBIC)\footnote{\url{https://www.qubic.org.ar/en/qubic-argentina-english/}} is a collaborative project conducted by France, Italy, Ireland, the USA, and Argentina. It involves the development, installation, and operation of a millimeter/sub-millimeter-wave instrument designed for the detection and measurement of polarization B-modes of the cosmic microwave background (CMB) \citep{battistelli2020qubic} at $130-250~\mathrm{GHz}$ window. These B-modes, as predicted by the inflationary model of the Universe\citep{guth1981inflationary}, \citep{linde1982new}, are expected to be imprinted in the CMB \citep{durrer2015cosmic}. During the inflation period of the Universe ($10^{-38}- 10^{-36}~\mathrm{sec}$ after the Big Bang), the inflationary theory predicts that gravitational waves produced during this event might have perturbed the metric of the early Universe, creating curled polarization in the existing plasma, known as B-modes. This information of the structure of the early Universe might then be imprinted as a fingerprint in the Last Scattering Surface (i.e., CMB), which happened $\approx 380\,000~\mathrm{years}$ after the Big Bang (Fig.~\ref{LSS}). The simplest inflationary models predict that B-modes could be present in fluctuations of the CMB at $\approx 10^{-9}~\mathrm{K}$. However, they might be found at lower temperatures, or they might not exist at all, casting serious doubts on the inflationary model. Considering that the CMB has a constant temperature of  $2.725~\mathrm{K}$ with fluctuations of $\approx 10^{-6}~\mathrm{K}$, the successful detection of B-modes appears to be an extremely challenging task. 
+Different experiments of the type "imagers" (an exhaustive list can be found in \citep{abitbol2017cmb}) are attempting to detect the B-modes but have not achieved success so far.
+
+QUBIC, on the other hand, presents itself as a promising instrument for the detection of B-modes by combining the very high sensitivity of bolometric detectors with the greater control over systematic instrumental effects provided by interferometry. Qubic, a three-cooling-stage cryostat ($40~\mathrm{K}$, $4~\mathrm{K}$ and $1~\mathrm{K}$) achieves  Interferometry by using an array of back-to-back horns. These horns re-emit the collected signal from the instrument aperture towards a tertiary optical system, ultimately focusing the beams onto the $300~\mathrm{mK}$ cooled focal plane of the instrument (Fig.~\ref{QUBIC_instrument}), where the interference fringes (i.e., synthesized beam) are produced.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/LSS.png}
+\caption{Evolution of the Universe.}
+\label{LSS}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/QUBIC_instrument.png}
+\caption{\emph{Top:} Cut of the QUBIC CAD model. \emph{Bottom:} Optical design scheme. On the left corner, the synthesized beam obtained at the instrument's focal plane by observing an artificial source in the laboratory is shown.}
+\label{QUBIC_instrument}
+\end{figure}
+
+QUBIC and its ancillaries were sent to Argentina from France, where arrived in July 2021. The equipment was transported by truck from Buenos Aires to the Integration laboratory in the \textit{Comisión Nacional de Energía Atómica} (CNEA) in the Salta province.
+
+Between July and August 2021, the instrument and its sub-systems were integrated at the laboratory. From September 2021 to September 2022, the instrument underwent a series of tests to confirm that it successfully withstood the transport to Argentina. Later, it underwent a series of calibrations and adjustments (Fig.~\ref{QUBIC_Integration_Lab}) to confirm its full compliance with the required functionality before installation at the observatory site.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/QUBIC_Integration_Lab.png}
+\caption{Adjustment activities in the integration and calibration Laboratory.}
+\label{QUBIC_Integration_Lab}
+\end{figure}
+
+In October 2022, the instrument and its equipment were transported by truck (Fig.~\ref{QUBIC_transport}) to the observatory site, placed $\approx 800~\mathrm{m}$ to the northwest of the LLAMA site (Sec. \ref{sec:LLAMA}). A dedicated shelter, constructed several months earlier, was prepared to host QUBIC. Over two weeks, the instrument and equipment were installed and made ready for the first cool-down and the subsequent beginning of the commissioning phase, which is expected to take nearly a year for completion (Fig.~\ref{QUBIC_site}).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/QUBIC_transport.png}
+\caption{QUBIC arriving by truck at the observatory site.}
+\label{QUBIC_transport}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/QUBIC_site.png}
+\caption{\emph{Top:} Left: QUBIC mount installation. Right: Telescope handling for installation in the mount. \emph{Bottom:} QUBIC inauguration event in Nov. 2022.}
+\label{QUBIC_site}
+\end{figure}
+
+\section{SWI}\label{sec:SWI}
+
+The Sub-millimeter Wave Instrument (SWI) Fig.~\ref{SWI}, developed at the Max Planck Institute for Solar System Research (MPS)\footnote{\url{https://www.mps.mpg.de/planetary-science/juice-swi}}, comprises an offset Cassegrain radio telescope of $29~\mathrm{cm}$ diameter aperture, equipped with two heterodyne receivers operating at $530-625~\mathrm{GHz}$ and $1080-1275~\mathrm{GHz}$ respectively\citep{kotiranta2018optical}.  
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/SWI.png}
+\caption{SWI instrument. The offset Cassegrain system and receiver unit is on the left. The electronic unit is on the right}
+\label{SWI}
+\end{figure}
+
+SWI is one of the ten instruments on board of the JUpiter ICy moon Explorer (JUICE, Fig.~\ref{JUICE}) from the European Space Agency (ESA)\footnote{\url{https://www.esa.int/Science_Exploration/Space_Science/Juice}}, a spacecraft launched in April 2023 to Jupiter. 
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/JUICE.png}
+\caption{JUICE conceptual image. Credit: ESA.}
+\label{JUICE}
+\end{figure}
+
+JUICE is scheduled to reach Jupiter in July 2031. During its mission, it will perform 21 flybys of the moon Callisto, two of Europa, and then enter orbit around Ganymede, the largest moon in the solar system, for a nine-month period. The mission is expected to conclude in 2035 when the probe will intentionally crash into Ganymede's surface.
+
+Juice's objectives include making detailed observations of Jupiter and its three large icy moons: Ganymede, Callisto, and Europa. There is an exciting prospect that these moons may harbor subsurface liquid water oceans and conditions favorable for the development of life. The mission aims to explore Jupiter's complex environment in depth and study the broader Jupiter system as an archetype of gas giants in the Universe.
+SWI has specific objectives, including the investigation of the temperature distribution, chemical composition, and dynamics of Jupiter's atmosphere. Additionally, it aims to characterize the surface properties of the icy moons Callisto, Europa, and Ganymede.
+
+The support from IAR for the SWI activities began at the end of 2020, during the AIV phase of the instrument, with the design of various mechanical components for testing purposes, such as SWI near-field characterization (Fig.~\ref{SWI_NFT}) and receiver calibration. 
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/SWI_NFT.png}
+\caption{Left: CAD model for the SWI near field test. Right: the set-up in the measurement chamber. Credit: SWI/MPS.}
+\label{SWI_NFT}
+\end{figure}
+
+After the commissioning of SWI on the JUICE spacecraft, we initiated the design of a Thermal and Vacuum Chamber (TVAC, Fig.~\ref{GRM-TVAC}) to test a laboratory-level replica of the SWI, known as a ground reference model (GRM). The design of the GRM-TVAC took place throughout 2023, with fabrication and commissioning at the MPS laboratories expected by mid-2024. The primary goal of the GRM-TVAC is to provide a space-like environment, similar to the conditions to which the SWI in the spacecraft will be subjected. This will offer a representative model of the SWI in space, valuable for troubleshooting, action planning, operations, etc.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/GRM-TVAC.png}
+\caption{CAD model of the GRM-TVAC design. Credit: SWI/MPS.}
+\label{GRM-TVAC}
+\end{figure}
+
+
+\section{Discussion}\label{sec:Discussion}
+
+The goal and mission of the IAR, as stated by its authorities, consist of a systemic approach towards the progress of both astronomy and technology transfer, achieved through developments in various branches of engineering. These advancements have an impact on both space and scientific research, as well as on technology itself.
+Currently IAR, as an institutional project, aims at the development and subsequent installation of an interferometer array of 16 radio telescopes of 5 m diameter each, for observations at $1-2~\mathrm{GHz}$ a project identified as MIA\citep{romero2023multipurpose} (acronym for Multipurpose Interferometer Array). The first technological demonstrator dish (MIA-0) is shown in Fig.~\ref{MIA}.
+
+The development of a healthy society is closely linked to advances in the fields of science and technology, which are transferred to its inhabitants. In the case of the IAR, its daily actions are focused on implementing this philosophy through various initiatives as exampled in the collaboration in cutting-edge experiments reviewed along these pages.
+Furthermore, the commitment of the IAR to scientific and technological progress is reflected in its active involvement in the development of new technologies and the training of professionals in these areas. The institution not only seeks to advance scientific knowledge but also ensures that these advancements translate into tangible benefits for society as a whole.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{figuras_erasztocky/MIA.png}
+\caption{The $5~\mathrm{m}$ dish of the technological demonstrator MIA-0.}
+\label{MIA}
+\end{figure}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{acknowledgement}
+I would like to thank in first place to the \textit{Comité Organizador Científico} de la Reunión Anual 2023 for inviting me to present this review. Secondly, to the Director and Vicedirector of IAR, Dr. Gustavo E. Romero and Dra. Paula Benaglia, respectively, for giving me the possibility of participating in such amazing and motivating projects.
+\end{acknowledgement}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia_erasztocky}
+ 
+\end{document}

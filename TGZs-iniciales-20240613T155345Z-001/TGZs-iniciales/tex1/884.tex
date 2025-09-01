@@ -1,0 +1,445 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+%% The graphicx package provides the includegraphics command.
+%\usepackage{graphicx}
+%% The amssymb package provides various useful mathematical symbols
+%\usepackage{amssymb}
+%\usepackage{mathrsfs}
+%% The amsthm package provides extended theorem environments
+%% \usepackage{amsthm}
+
+%% The lineno packages adds line numbers. Start line numbering with
+%% \begin{linenumbers}, end it with \end{linenumbers}. Or switch it on
+%% for the whole article with \linenumbers after \end{frontmatter}.
+%\usepackage{lineno}
+%\usepackage{minted}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{A Python package to find a magnetic cloud frame of reference to
+heliospheric observers using the Minimum Variance approach}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{A M. V. Python package}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{A.M. Gulisano\inst{1,2,3}, A. Arja\inst{4}, R. Pafundi \inst{5,6} \& V. Bazzano\inst{7}
+}
+
+
+\authorrunning{Gulisano et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{adrianagulisano@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto Antártico Argentino, Dirección Nacional del Antártico, Argentina
+\and
+Instituto de Astronomía y Física del Espacio, CONICET--UBA, Argentina
+\and
+Departamento de Física, FCEN--UBA, Argentina
+\and
+Facultad de Matemática, Astronomía, Física y Computación, UNC, Argentina
+\and
+Instituto de Altos Estudios Espaciales Mario Gulich, CONAE--UNC, Argentina
+\and
+Facultad Regional Córdoba, UTN, Argentina
+\and
+Departamento de Ciencias de la Atmósfera y los Océanos, FCEN--UBA, Argentina
+}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Describimos el paquete de Python que desarrollamos y que está disponible públicamente para encontrar la orientación de estructuras interplanetarias  con características específicas de configuración magnética, denominadas nubes magnéticas(MCs), que permite rotarlas en su marco de referencia local. Adaptamos nuestra previa implementación tipo línea de funciones en  Matlab al paradigma Python de programación orientado a objetos. Nuestro fin es proporcionar un paquete fácil de instalar y ejecutar, con un repositorio de código abierto, que brinda estándares de calidad para llegar a una comunidad más amplia de astrofísicos y astrónomos interesados en la heliofísica y la relación Sol-Tierra. Teniendo en cuenta que una nube magnética tiene su propia identidad, estado o atributos y comportamiento (relaciones y métodos), el paradigma de Python es adecuado. Dado que no había librerías o paquetes para encontrar la orientación del eje de una MC implementados en Python y ofrecidos gratuitamente, consideramos nuestro proyecto como una contribución valiosa a la comunidad de heliofísica. En consecuencia, hemos elegido una licencia de Berkeley Software Distribution para su uso, en este artículo se provee información referida a los requerimientos y un breve tutorial para su instalación y uso.}
+
+\abstract{
+We describe the package we have developed that is publicly available to find the orientation of interplanetary structures, called magnetic clouds (MCs) due to specific characteristics of their magnetic configuration, that allows to rotate them to their local frame. We changed the function pipe-line structure of our Matlab previous implementation to the object-oriented programming Python paradigm to provide a package easy to install and run, with an open source repository. Our aim is to provide an easy to install and execute package with high quality standards to reach a wider community of astrophysicists and astronomers interested in heliophysics and Sun-Earth relationship. Taking into account that a magnetic cloud has its own identity, state or attributes, and behavior (relationships and methods), the Python paradigm is appropriate. Since there were no packages to find the MC axis orientation implemented in Python and freely offered, we regard our project as a valuable contribution to the heliophysics community. Accordingly, we have chosen a Berkeley Software Distribution license for its use, in this article information on the requirements and a brief tutorial for installation and usage are provided.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{solar wind --- Sun: heliosphere --- methods: numerical
+}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+Magnetic clouds (MCs) are highly magnetized plasma structures characterized by low proton temperature and plasma $\beta$ \citep{Burlaga1991}. When observed from a heliospheric perspective, their magnetic field vector exhibits a rotational variation. These structures are recognized as the most impactful features within the interplanetary medium. Despite extensive research on MCs (see \citealp{Rodriguez2016}{, and references therein}), consensus regarding their precise magnetic configuration remains elusive. This uncertainty primarily arises from the limitations of spacecraft-obtained magnetic field data, which provide only one-dimensional data along their trajectory \citep{Gulisanoetal2010a, Gulisanoetal2010b}. Consequently, inferring the three-dimensional structure of the cloud needs certain assumptions. Traditionally, MCs have been treated as locally symmetric cylindrical structures.
+The Minimum Variance method (MV) has been widely utilized for determining the orientation of interplanetary structures. By analyzing the temporal series of magnetic field observations, MV can effectively estimate the axis orientation of the cloud, particularly when the spacecraft's trajectory is close to the cloud axis (\citealp{Leppingetal2010, Gulisanoetal2006}). MV offers two significant advantages over more complex techniques used for orientation determination: it is relatively straightforward to implement, and it imposes minimal assumptions on the magnetic configuration, relying solely on local cylindrical symmetry (thus maintaining model independence). This technique provides a good orientation as long as the impact parameter is low, otherwise large errors are present \citep{Gulisanoetal2007}. The importance of a correct orientation can provide a way to estimate global properties in a model-independent fashion \citep{Dassoetal2005}.
+ Another issue to take into account is the proper determination of the MC borders.
+In the following section, the reader can find a description of the project and a brief tutorial for requirements, installation, and usage, including the copyright license terms.
+\subsection{The MC frame}
+The local axis direction of the MC defines ${z}_{\rm cloud}$ (with $B_{z,\rm cloud}>0$).
+Since the speed of the cloud is mainly in the Sun-Earth direction and is much higher than the spacecraft's speed, which can be assumed at rest during the time the cloud is observed, we consider a rectilinear spacecraft trajectory in the cloud frame.  The trajectory defines a  direction ${t}$, so we take ${y}_{\rm cloud}$ in the  direction ${z}_{\rm cloud} \times {t}$ and ${x}_{\rm cloud}$ completes the right-handed orthogonal base (${x}_{\rm cloud},{y}_{\rm cloud},{z}_{\rm cloud}$). So,  {$B_{x, \rm cloud}$, $B_{y, \rm cloud}$, and $B_{z,\rm cloud}$} are the  components of $\vec{B}$ in this new frame.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{MC_Sat.pdf}
+\caption{Idealized scheme of the projection of the magnetic field lines that would be observed during the passage of a magnetic cloud in the plane defined by the spacecraft
+trajectory and the axis of the cloud adapted from\citep{Bothmer1998} }
+\label{Fig6}
+\end{figure}
+In this frame the impact parameter, $p$ (that is, the minimum distance from the spacecraft's trajectory to the cloud axis), is small compared to the MC radius ($R$) or negligible. An MC can be described using a cylindrical magnetic configuration, $\vec{B}(r) = B_z(r) {z} + B_\phi(r) {\phi}$, we have ${x}_{\rm cloud} = {r}$ and ${y}_{\rm cloud} = {\phi}$ after the spacecraft has crossed the MC axis. So for a cylindrical flux rope, the magnetic field data obtained by the spacecraft will show $B_{x, \rm cloud}=0$, a large and coherent variation of $B_{y, \rm cloud}$ (with a change of sign), and an intermediate and coherent variation of $B_{z, \rm cloud}$, from low values at one cloud edge, reaching the highest value at its axis and returning to low values at the other edge ($B_{z, \rm cloud}=0$ is typically taken as the MC boundary). The MV technique provides the minimum, maximum, and intermediate variance directions, being useful to find $B_{x, \rm cloud}$, $B_{y, \rm cloud}$ and $B_{z, \rm cloud}$, respectively, as shown in Fig. ~\ref{Fig6} where an idealized scheme of the projection of the magnetic field lines that would be observed during the passage of a magnetic cloud in the plane defined by the spacecraft trajectory and the axis of the cloud is depicted.
+\section{The project}
+This section outlines the project, to create a publicly accessible package for determining the orientation of an MC and rotating it to its local frame. To enhance accessibility and usability, we transitioned from the functional pipeline structure of our previous Matlab implementation to the object-oriented programming (OOP) paradigm in Python, \citep{roth2022n}. This change allows for easy installation and execution of the package, with an open-source repository adhering to quality standards, thereby catering to a broader community of astrophysicists and astronomers interested in heliophysics and the Sun-Earth relationship.
+Recognizing that an MC possesses distinct characteristics, states, and behaviors, the Python paradigm was deemed suitable due to its characteristics for defining attributes, states, relationships, and methods inherent to the object-oriented approach. We crafted a recognizable logo for the project (not shown).
+
+Given the absence of free packages for determining an MC axis orientation in Python, our project stands as a significant contribution to the heliophysics community. Consequently, we opted for the Berkeley Software Distribution (BSD) License, facilitating the open use and distribution of the project, the reader can find the license information in the GitHub repository:
+\ \\ https://github.com/adelarja/space\_weather.git\
+\subsection{Requirements}
+Users need a Python $3.9+$ environment to run solarwindpy.
+These are the required dependencies:
+NumPy, Pandas, SciPy, matplotlib, typer, heliopy==0.15.4, requests, sunpy, h5netcdf, cdflib.
+
+Test:\\
+To run the swindpy tests, users have to clone the repository and use the pytest module.\\
+\$ pytest tests\\
+Users are also able to run a suite of checks with tox:\\
+ \$ pip install tox \\
+ \$ tox
+\subsection{Installation}
+The package is available in pypi. Users can install it using pip
+the instruction is:
+    \$ pip install swindpy  
+\subsection{Developers}    
+Developers willing to contribute, change, or improve this package, should clone the repository and install the project with the following commands:
+\$ git clone\\ https://github.com/adelarja/space\_weather.git\\
+\$ cd space$-$weather\\
+\$ pip \  \ install \ $-e$ .
+
+\section{Tutorial}
+Users can find a readme.md in our repository and download the Python codes, which follow the PEP8 standard, and have a high test coverage of over 90 percent ensuring the quality of our implementation.\\
+In this tutorial we will show how to rotate a magnetic cloud using the swindpy abstractions.\\
+First of all, we need to import the libraries we are going to use and, set the date times 
+we are interested in:\\
+\\
+import numpy as np\\
+from datetime import datetime\\
+import matplotlib.pyplot as plt\\
+import swindpy.plotter as plotter\\
+from swindpy.data\_manager import Period\\
+from swindpy.data\_manager import MagneticField\\
+from swindpy.data\_manager import DataManager\\
+from swindpy.rotation import RotatedWind\\
+\\
+For this example, we are going to use these dates:\\
+10-Jan-1997 05:00 to 11-Jan-1997 02:00\\
+\\
+We set the datetimes we are interested in:\\
+date\_from = datetime(1997, 1, 10, 5, 0, 0)\\
+date\_to = datetime(1997, 1, 11, 2, 0, 0)\\
+\\
+We create the Period object\\
+period=Period(date\_from, date\_to)\\
+\\
+Using the DataManager, we retrieve the cdf information\\
+cdf\_data=DataManager.get\_gse\_magnetic\_vector(period)\\
+\\
+The obtained data constitute a list of MagneticField objects\\
+(a swindpy abstraction), that has information  about the datetime and the gse coordinates.\\
+cdf\_data[0]\\
+MagneticField(time=Timestamp('1997-01-10 05:00:30'),
+bgse0=-1.8067849$, $bgse1=9.860464$, $bgse2=-8.717464)\\
+\\
+Now, using the DataManager, we can filter Not A Number values and infinite values.\\
+filtered\_data=DataManager.filter\_nan\_and\_inf\_values
+(cdf\_data)\\
+\\
+Now we can obtain the Rotated field simply by calling a classmethod\\
+rotated\_wind = RotatedWind.get\_rotated\_wind(filtered\_data)\\
+Using the plotter method, we can plot non rotated magnetic field\\
+and rotated magnetic field (we are also able to add labels, change size, etc). \\
+Plotting non-rotated \\
+plotter.plot\_mf(filtered\_data)\\
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{nonrotated.jpg}
+\caption{Non-rotated data, magnetic field components [nT] in GSE coordinates in the vertical axis ($B_{z, \rm GSE}$ in green, $B_{y, \rm GSE}$ in orange and $B_{x, \rm GSE}$ in blue), time [minutes] from start in the horizontal axis.}
+\label{Fig2}
+\end{figure}
+Plotting rotated\\
+plotter.plot\_rw(rotated\_wind)\\
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{rotated.jpg}
+\caption{Same as Fig. 2, but for the rotated data in the MC frame of reference, $B_{z, \rm cloud}$ in green, $B_{y, \rm cloud}$ in orange and $B_{x, \rm cloud}$ in blue.}
+\label{Fig3}
+\end{figure}
+Obtain the rotation angles\\
+theta, phi = get\_rotation\_angles(filtered\_data)\\
+Calculate gamma using calc\_gamma\\
+$gamma = Angle$("gamma",\\
+        calc\_gamma(theta.angle, phi.angle) )\\
+ \\       
+The results:\\    
+print(theta, phi, gamma)\\
+theta:\\
+ RAD: -0.31457481937133086\\
+ DEG: -18.02380949106747\\
+phi:\\
+ RAD: 1.6979828788548021\\
+ DEG: 97.28725264385352\\
+gamma\\
+ RAD: 0.31696887828176834\\
+ DEG: 18.160978962541225\\
+In Fig.~\ref{Fig2}, we show the nonrotated field components of the MC in the geocentric-solar-ecliptic (GSE) coordinates; while Fig.~\ref{Fig3} depicts the rotated ones. \\
+\\
+\subsection{Swindpy command line interface}
+We also created a CLI (Command Line Interface) that makes it easier for a user to
+process MC data.\\
+If a user likes to plot a no-rotated cloud, he or she can do it using the next command:\\
+\\
+swindpy plot-cloud 2021-01-01 2021-01-02\\
+\\
+If a user likes to plot a rotated cloud, he or she can do that using the next command:\\
+\\
+swindpy plot-rotated-cloud 2021-01-01 2021-01-02\\
+\\
+To export data about the magnetic field in a period in csv format, use the next command:\\
+\\
+swindpy to-csv 2021-01-01 2021-01-02 output\\
+\\
+A user can also plot both, no rotated and rotated clouds to compare and make a quick analysis of  the results:\\
+swindpy plot-rotated-and-non-rotated 2021-01-01 2021-01-02\\
+The previous Matlab implementation results in Figs. ~\ref{Fig4} and ~\ref{Fig5} for the same example data (indicated between vertical lines) are consistent with the results obtained in Figs. ~\ref{Fig2} and ~\ref{Fig3} as can be seen, providing validation for this new tool.
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{MCNorotatedothertool.pdf}
+\caption{Non-rotated MC data with the Matlab implementation, vertical lines provide the beginning and end of the MC. Each magnetic field component [nT] in GSE coordinates, are shown at the vertical axis $B_{x, \rm GSE}$ in the top panel, $B_{y, \rm GSE}$ in the middle panel and $B_{z, \rm GSE}$ in the bottom panel, time in hours from 1-9-1998 in the horizontal axis, (adapted from \citealp{Gulisano2004})}
+\label{Fig4}
+\end{figure}
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{MCWithothertool.pdf}
+\caption{Same as Fig. ~\ref{Fig4} except that the data have been rotated using the Matlab implementation, Each magnetic field component [nT] are shown at the vertical axis $B_{x, \rm cloud}$ in the top panel, $B_{y, \rm cloud}$ in the middle panel and $B_{z, \rm cloud}$ in the bottom panel, time in hours from 1-9-1998 in the horizontal axis (adapted from \citealp{Gulisano2004})}
+\label{Fig5}
+\end{figure}
+\section{Conclusions}
+Our goal was to make an easy-to-use tool for the community publicly available to find the orientation of a magnetic cloud and rotate it to its local frame.
+We hope our contribution will be useful to other researchers and provide a good synergy for the area encouraging other groups to make their coding available to the community as well for transparency and reproducibility of the results.
+\begin{acknowledgement}
+A.M.G is member of the Carrera del Investigador Científico, CONICET. This work was partially supported by the Argentinean grants PICT 2019-02754 (FONCyT-ANPCyT) and UBACyT-20020190100247BA (UBA)
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+\end{document}

@@ -1,0 +1,405 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Exploring the halo occupation distribution\\ in nodes and filaments}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Exploring the halo occupation distribution}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+N.R. Perez\inst{1,2},
+L.A. Pereyra\inst{3,4},
+G.V. Coldwell \inst{1,2},
+F. Rodr\'iguez\inst{3,4}
+\&
+I.G. Alfaro\inst{3,4}
+}
+
+\authorrunning{Perez et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{noeliarocioperez@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Departamento de Geof\'isica y Astronom\'ia, Facultad de Ciencias Exactas, F\'isicas y Naturales, UNSJ, Argentina 
+\and   
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+\and
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Instituto de Astronom\'ia Te\'orica y Experimental, CONICET--UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Exploramos la distribución de ocupación del halo (HOD) en nodos y filamentos.
+Utilizando las simulaciones hidrodinámicas cosmológicas TNG300-1 y el Extractor de Estructuras Persistentes Discretas (DisPerSE), analizamos la HOD en una amplia gama de umbrales de magnitud y colores de galaxias.
+Nuestros resultados revelan un exceso de galaxias débiles y azules en halos de baja masa en las regiones centrales de los nodos, lo que indica que estas regiones no exhiben el comportamiento de los cúmulos de galaxias virializados.
+Esto sugiere que la materia continúa acumulándose en estas regiones, afectando sus propiedades dinámicas.}
+
+\abstract{We explore the halo occupation distribution (HOD) in nodes and filaments.
+Using the TNG300-1 cosmological hydrodynamical simulations and the Discrete Persistent Structures Extractor (DisPerSE), we analyse the HOD over a wide range of magnitude thresholds and galaxy colours. 
+Our results reveal an excess of faint and blue galaxies in low-mass halos in the central regions of nodes, indicating that these regions do not exhibit the behaviour of virialised galaxy clusters. 
+This suggests that matter continues to accrete in these regions, affecting their dynamical properties.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{large-scale structure of universe --- galaxies: halos --- galaxies: statistics --- methods: statistical}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+
+On large scales, galaxies describe a network pattern of nodes, filaments and voids known as the ``Cosmic Web'' \citep{deLapparent1986,bond96}.
+The standard paradigm of the Universe formation suggests that large structures are formed from hierarchical grouping by the continuous accretion of less massive galaxy systems through filaments \citep{Zel'dovich1970,Cautun2014}. Then, the filamentary structures play an important role in the properties and galaxy evolution.
+
+Galaxies form and evolve within dark matter halos, so their properties are related to the characteristics of the host halo.
+Moreover, several papers show the influence of the large-scale environment on galaxy properties such as shape, spin, stellar mass, star formation rate, colour %\citep{Faltenbacher2002,Trujillo2006,Aragon-Calvo_2007,Tempel2013,Wang2020,Lee2023,Weinmann2006,Einasto2008,Lietzen2012,Malavasi2017,Kraljic2018,Laigle2018}. 
+\citep{Tempel2013,Wang2020,Lee2023,Einasto2008,Malavasi2017,Kraljic2018,Laigle2018}. 
+The halo occupation distribution (HOD, %\cite{Peacock2000,Berlind2002,Berlind2003,Zheng2005,Guo2015,Rodriguez2015, Rodriguez2020}
+\cite{Peacock2000,Berlind2002,Berlind2003,Zheng2005}) links galaxies and dark matter halos by the probability distribution that a halo of mass M contains N galaxies with specific properties.
+
+
+
+We emphasise that our aim in this paper is to identify any differences in HODs for different cosmic structures, considering a wide range of magnitude thresholds and galaxy colours.
+
+
+
+
+\section{Data and sample selection}
+
+\subsection{IllustrisTNG}
+
+The current analysis is based on the cosmological hydrodynamic simulations, \textsc{IllustrisTNG}\footnote{\url{https://www.tng-project.org/}} \citep{Marinacci2018,Naiman2018,Nelson2018,Pillepich2018_a,Pillepich2018_b,Springel2018}, in particular TNG300-1, as it is the most suitable simulation to study the large-scale structure due to its high resolution.
+Cosmological parameters in the simulation agree with Planck 2015 results
+\citep{planckresults}: $\Omega_{\text{m},0}=0.3089$, $\Omega_{\Lambda,0}= 0.6911$, $\Omega_{\text{b},0}= 0.0486$, $\text{h}= 0.6774$, $\text{n}_{\text{s}}= 0.9667$ and $\sigma_{8}= 0.8159$.
+The simulation employs $2\,500^3$ dark matter particles and $2\,500^3$ gas cells with masses of $5.9 \times 10^7~\mathrm{M}_{\odot}$ and $1.1 \times 10^7~\mathrm{M}_{\odot}$, respectively, within a box of $205~ \mathrm{h}^{-1}\,\mathrm{Mpc}$.
+
+\subsection{DisPerSE}
+
+\textsc{DisPerSE}\footnote{\url{http://www2.iap.fr/users/sousbie/web/html/index888d.html?archive}} (Discrete Persistent Structures Extractor) \citep{Sousbie2011_a,Sousbie2011_b,Sousbie2013} is a multiscale structure identifier that is based on the discrete Morse theory.
+This theory applies mathematical properties describing the relationship between the topology and the geometry of the density field to characterise the Cosmic Web in a mathematical equivalent called the Morse complex.
+
+The filaments and critical point catalogues developed by \cite{Duckworth2020a,Duckworth2020b} 
+\footnote{\url{https://github.com/illustristng/disperse_TNG}} 
+are based on \textsc{DisPerSE} and give the cosmic web distances between each subhalo to the nearest minimum critical point, the nearest 1-saddle point, the nearest 2-saddle point, the nearest maximum critical point and the nearest filament segment. 
+These catalogues are available for 8 snapshots from $z=0$ to $z=2$ of TNG300-1 and to build them, the authors selected subhalos with masses higher than $\text{M}_* > 10^{8.5}~\mathrm{h^{-1}\,M}_{\odot}$ and set the persistence parameter $\sigma = 4$.
+
+
+ 
+\subsection{Sample selection}
+
+The sample used in this paper was constructed from the TNG300-1 Groupcat at $z=0$ \text{snapshot} by selecting subhalos with $\text{M}_* > 10^{8.5}~\mathrm{h^{-1}\,M}_{\odot}$ in accordance with the filament catalogue. 
+Moreover, the selected subhalos must be contained in halos with masses $\text{M}_{200} \geq 10^{11}~\mathrm{h^{-1}\,M}_{\odot}$ (being ${\rm M}_{200}$ the mass enclosed within a region that encompasses $200$ times the critical density) in order to obtain halos with about $10^3$ particles.
+
+We obtained for each halo, the distance to the node, the ID of the closest filament and its properties, such as the distance to the axis of the filament. We built different subsamples taking into account the distances and considering halos belonging to nodes and filaments separately. 
+We define nodes with varying radii ($\mathrm{d_n}<0.5, 1.0, 1.5 \, \text{and} \, 2 \mathrm{Mpc}$). The filaments are defined with varying widths ($\mathrm{d_f} \leq 0.5, 1.0, 1.5 \, \text{and} \, 2 \mathrm{Mpc}$) and distances to the nodes ($\mathrm{d_n} \geq 0.5, 1.0, 1.5 \, \text{and} \, 2 \mathrm{Mpc}$) to exclude halos within nodes. Here, $\mathrm{d_n}$ represents the distance to the node and $\mathrm{d_f}$ the distance to the filament axis.
+
+
+
+
+\section{Analysis}
+
+In this section, we explore and compare the HOD for the node and filament samples.
+To obtain these distributions, we compute the mean number of galaxies per halo mass bins $\left< \text{N}_{\text{gal}} | \text{M}_{\text{halo}} \right>$ and we consider different ranges of absolute magnitudes and colours, in order to study their luminosity and galaxy population dependence.
+In this sense, we consider the $r$-magnitude thresholds: $\text{M}_\text{r} - 5\text{log}_{10}(h) \leq -17, -18, -19\ \text{and} -20$ and the mean colour value $M_g - M_r = 0.56$ to separate blue and red galaxies.
+The error bars were calculated using jackknife technique \citep{Quenouille1949,Tukey1958}.
+
+
+\section{Results}
+
+It aimed to study how satellite galaxies behave in the halo occupation, following \cite{Alfaro2020,Perez2024}, we calculate the HOD for different absolute magnitude limits (Fig. \ref{Fig:hod_mag}). 
+For the sake of simplicity, only the results for the extreme magnitude limits are presented.
+
+\begin{figure*}[!h]
+\centering
+    \includegraphics[width=1\textwidth]{fig_HOD_cutMr_17.jpeg}
+
+%    \includegraphics[width=\textwidth]{fig_HOD_cutMr_18.png}
+
+%    \includegraphics[width=\textwidth]{fig_HOD_cutMr_19.png}
+
+    \includegraphics[width=1\textwidth]{fig_HOD_cutMr_20.jpeg}
+\caption{HOD for the node (\emph{left panels}) and filament (\emph{right panels}) subsamples. The black lines represent the overall HOD for the corresponding limit in magnitude and the coloured lines describe the HOD for different node and filament subsamples. Below each panel we show the ratio between the subsamples and the overall HOD.}
+\label{Fig:hod_mag}
+\end{figure*}
+
+For the node samples, the main difference in the HOD between the subsamples occurs for halos with masses lower than $10^{13}~\mathrm{h^{-1}\,M}_{\odot}$, being this signal stronger for nodes with $1~\mathrm{Mpc}$ radius and decreasing for larger nodes. This finding is strongly related with the absolute magnitude limits, with a higher fraction for weaker magnitudes. The distributions for halos with masses greater than $10^{13}~\mathrm{h^{-1}\,M}_{\odot}$ are comparable.
+The HOD for filament subsamples are very similar for halo masses lower than $10^{13}~\mathrm{h^{-1}\,M}_{\odot}$. 
+However, for higher masses we observed a slight difference, with the halo occupancy being lower for the sample with $\mathrm{d_f} \leq 2 \mathrm{Mpc}$ and $\mathrm{d_n} \geq 2 \mathrm{Mpc}$.
+
+To analyse the dependence of the halo occupation with the evolution of stellar populations of the galaxies, we compute the HOD considering the mean value of the $M_g-M_r$ subhalo colours.
+In Fig. \ref{Fig:hod_col}, we observed that for the node subsamples, the distributions differ significantly for low-mass halos, while for the higher mass halos the distributions are indistinguishable. These differences are significantly stronger for the blue subhalos respect to the red ones.
+The HODs for the filament subsamples show an opposite behaviour, being similar for halos with lower masses and clearly differentiated for that with higher masses. This feature becomes more evident for the blue subhalos.
+
+\section{Conclusions}
+
+We have calculated the HOD for Groupcat at $z=0$ of \textsc{IllustrisTNG} by selecting halos in nodes and filaments separately.
+Considering the distances to the nodes and the filament axis provided by the Cosmic Web Distances catalogue, we defined various node and filament subsamples.
+To identify potential variations in halo occupancy based on galaxy characteristics, we separate galaxies by luminosity and colour.
+
+The node samples show an excess of faint galaxies in halos with masses below $10^{13}~\mathrm{h^{-1}\,M}_{\odot}$, which decreases for brighter galaxies. 
+This excess is higher for halos closest to the node centre ($\mathrm{d_n} < 0.5 \mathrm{Mpc}$).
+The occupancy of galaxies is similar in massive halos, regardless of their luminosity.
+The filament samples show no significant variation, suggesting that galaxy halo occupancy does not appear to depend strongly on filament definition or galaxy magnitude.
+
+Regarding the red sample, the HODs do not depend on the definition used for nodes and filaments, as they overlap.
+In the node samples an excess of blue galaxies is observed in low-mass halos, while in the filament samples the differences occur within the error bars for massive halos.
+%In the node samples, the blue sample shows an excess of galaxies in low-mass halos, while in the filament samples the differences occur for massive halos, probably due to the few halos in this mass range.
+
+The occupancy of the halos in the filaments seems to be similar to that of the halos in the total sample.
+The excess of faint and blue galaxies in halos with masses lower than $10^{13}~\mathrm{h^{-1}\,M}_{\odot}$ located in the central regions of the nodes, which would indicate that these regions do not behave like virialized galaxy clusters, probably because the matter is continually falling into these regions.
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\begin{figure*}[!h]
+\centering
+    \includegraphics[width=1\textwidth]{fig_HOD_cutgr_menor.jpeg}
+
+    \includegraphics[width=1\textwidth]{fig_HOD_cutgr_mayor.jpeg}
+\caption{HOD for the node (\emph{left panels}) and filament (\emph{right panels}) subsamples considering subhalos bluer and redder than the mean value for the whole galaxy population. The black lines represent the overall HOD for the corresponding colour, and the coloured lines describe the HOD for different subsamples of nodes and filaments. Below each panel we show the ratio between the subsamples and the overall HOD.}
+\label{Fig:hod_col}
+\end{figure*}
+
+
+
+
+\begin{acknowledgement}
+We thank the referee, for providing us with helpful comments and suggestions that improved this paper.
+This work was supported by the Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas de la Rep\'ublica Argentina (CONICET).
+The authors would like to thank the Scientific Committee for giving them the opportunity to present this work at the RAAA65.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{ID913v3}
+ 
+\end{document}

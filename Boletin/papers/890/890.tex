@@ -1,0 +1,363 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{29 July 2024}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Impacto de la participación argentina \\
+en el Observatorio Gemini}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\titlerunning{Macro BAAA65 con instrucciones de estilo}
+\titlerunning{Participación argentina en Gemini}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+C.G. Escudero\inst{1,2},
+L.A. Sesto\inst{1,2},
+L.H. García\inst{3}
+\&
+G.A. Ferrero\inst{1,2}
+}
+
+\authorrunning{Escudero et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{cgescudero@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astrof\'isica de La Plata, CONICET–UNLP, Argentina
+\and
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+\and   
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En este trabajo, buscamos ofrecer una visión integral de los logros alcanzados por la comunidad argentina, a través de un análisis de estadísticas relevantes provenientes del Observatorio Gemini. Dichas estadísticas abarcan desde el número de publicaciones científicas, tesis generadas, hasta la eficiente asignación de tiempo otorgado al país. Nuestra principal meta es poner en relieve el impacto significativo que el Observatorio Gemini ha tenido en el progreso de la investigación astronómica en Argentina, subrayando el papel significativo del país a nivel internacional y su contribución sustancial al conocimiento astronómico global.}
+
+\abstract{In this work, we aim to provide a comprehensive overview of the achievements of the Argentinean community through an analysis of relevant statistics from the Gemini Observatory. These statistics encompass the number of scientific publications, generated theses, and the efficient allocation of time granted to the country. Our primary goal is to highlight the significant impact that the Gemini Observatory has had on the progress of astronomical research in Argentina, emphasizing the country's significant role on the international stage and its substantial contribution to global astronomical knowledge.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ publications, bibliography --- instrumentation: miscellaneous --- telescopes --- methods: statistical}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}\label{S_intro}
+El Observatorio Gemini destaca como una colaboración internacional que opera dos telescopios de 8.1 metros de diámetro (Gemini Norte y Gemini Sur), situándose entre los diez telescopios más grandes del mundo. Estos telescopios están equipados con instrumentación de vanguardia que permite realizar observaciones en las regiones óptica e infrarroja del espectro. Argentina, como miembro fundador del Observatorio Gemini, ha tenido acceso durante más de dos décadas a una nueva generación de instrumentos y técnicas observacionales, como la espectroscopía multiobjeto, infrarroja, de alta resolución y las unidades de campo integral, entre otros avances tecnológicos. Esta colaboración ha impulsado significativamente la investigación astronómica argentina, consolidando su posición competitiva en el escenario global de los avances científicos en diversas áreas de la astronomía.
+
+
+\section{Proyectos observacionales argentinos}
+Cada país miembro de Gemini dispone de un tiempo de observación proporcional a su contribución financiera al Observatorio. Una de las ventajas principales de esta participación es la libertad que tiene cada país para elegir los proyectos observacionales que desea llevar a cabo dentro de este tiempo que le corresponde. Las únicas limitaciones, en su mayoría debido a cuestiones técnicas/instrumentales y/o astronómicas, son previamente establecidas para que cada país pueda planificar de manera efectiva el uso de su tiempo asignado. En este sentido, el papel desempeñado por los Comité Nacionales de Asignación de Tiempo (NTACs, por sus siglas en inglés) resulta fundamental. En el caso de Argentina, en promedio, entre 2001 y 2023 el tiempo disponible ha sido de 105 horas anuales, sumando Gemini Norte y Gemini Sur. En la Fig.~\ref{fig1} se muestra la evolución de ese tiempo. 
+Es importante señalar que, a partir del segundo semestre del año 2022, se implementó una reducción en la cuota de participación, lo cual se refleja en la cantidad de horas que serán ofrecidas. 
+
+En Argentina, los proyectos observacionales (o propuestas de observación) que se presentan al NTAC solicitan de manera sistemática una cantidad total de tiempo mayor al ofrecido en cada semestre. Esto se cuantifica a través de la tasa de sobrepedido (o sobresuscripción), la cual se calcula como el cociente entre el tiempo total solicitado en las propuestas y el 80\% del tiempo disponible para ciencia para la Argentina. Se considera solamente el 80\% porque este es el tiempo máximo que los NTACs de los distintos países pueden asignar a las bandas 1+2+3. El restante 20\% se considera que no tendrá condiciones astroclimáticas adecuadas para observaciones óptimas. No obstante, aquellas propuestas cuyos objetivos científicos puedan lograrse bajo estas condiciones y que así lo indiquen pueden ser asignadas por el NTAC para ser observadas con estas condiciones. Estos son los programas denominados de {\em Poor Weather}, o banda 4.\\
+
+En la Fig.~\ref{fig2} se presenta la evolución a lo largo del tiempo de la tasa de sobrepedido en Argentina desde el semestre 2016A. Como se observa en dicha figura, durante el período analizado el sobrepedido supera casi siempre el factor dos, con picos en valores muy superiores y con un incremento, en promedio, a lo largo del tiempo. Más allá de la esperable fluctuación estadística por ser Argentina el participante más pequeño del consorcio, este factor de sobrepedido indica la existencia de una comunidad de usuarios interesada en el uso del Observatorio que solicita sistemáticamente una cantidad de tiempo mayor del que es posible ofrecer\footnote{La estadística de la tasa de sobrepedidos realizada por el Observatorio para los distintos países puede observarse en \url{https://www.gemini.edu/observing/science-operations-statistics}}. La demanda actual de tiempo de observación en Gemini es consecuencia de los más de 20 años de participación de Argentina en Gemini y de una comunidad que se encuentra en condiciones de abordar proyectos observacionales más ambiciosos que requieren una mayor cantidad de horas de telescopio.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig1.pdf}
+\caption{Evolución del tiempo total (Gemini Norte + Sur) ofrecido anualmente a la comunidad astronómica argentina.}
+\label{fig1}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig2.pdf}
+\caption{Evolución semestral de la tasa de sobrepedido, calculada como el tiempo solicitado dividido por el 80\% del tiempo disponible, para cada telescopio por separado (GN: Gemini Norte; GS: Gemini Sur).}
+\label{fig2}
+\end{figure}
+
+\section{Programas de observación argentinos}
+Las propuestas de observación presentadas en cada semestre, luego de ser evaluadas y eventualmente recomendadas por el NTAC y por el Comité Internacional de Asignación de Tiempo (ITAC, por sus siglas en inglés) se convierten en programas de observación. El número de programas aprobados por el NTAC ha ido creciendo con el tiempo desde aproximadamente 15 programas por año en el período $2005-2011$ hasta más de 25 por año desde 2013 (Fig.~\ref{fig3}). Y más aún, desde el 2019 al 2023 se aprobaron más de 30 programas cada año.\\
+
+No obstante, vale mencionar aquí que al analizar la duración promedio de los programas, se observa una tendencia hacia programas más cortos, pasando de $\sim4$ horas en 2012 a $\sim3$ horas en 2023. Inicialmente, la participación Argentina era del 2.5\%, lo que equivalía a unas $74$ horas anuales en promedio. Para 2012, la contribución de nuestro país aumentó al 3.2\% y luego se estabilizó en un 3\% entre 2016 y 2022, alcanzando $\sim 125$ horas anuales. El incremento de la cuota de participación en 2012 ha sido el principal factor en el aumento del número de programas de Argentina en Gemini, ya que la demanda de tiempo ya existía en esos años. Otro factor que ha influido en el número de programas, especialmente en años recientes, es el uso de la Banda 4 o {\it Poor Weather}, donde la cantidad de tiempo disponible no está limitada por la cuota de participación del país. Desde hace varios años, la comunidad científica de Argentina ha reconocido que muchos proyectos de investigación pueden llevarse adelante utilizando datos obtenidos en esta modalidad.\\ 
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig3.pdf}
+\caption{Evolución del número de programas aprobados por el NTAC. Se indican las bandas de prioridad: Banda 1 (azul),
+máxima prioridad; Banda 2 (rojo), menos prioridad; Banda 3 (verde) y Banda 4 (violeta) siguen el mismo criterio.}
+\label{fig3}
+\end{figure}
+
+Por otro lado, una parte de los programas de observación argentinos corresponden a proyectos para realizar tesis doctorales en universidades nacionales. Como puede verse en la Fig.~\ref{fig4}, en los últimos años\footnote{La Secretaría Técnica de la Oficina Gemini Argentina (OGA) está recuperando los datos de los años anteriores a 2013.} se han aprobado alrededor de 10 programas por año con esta finalidad\footnote{Se cuentan aquí solamente los programas cuyo Investigador Principal (PI, por sus siglas en inglés) es el propio tesista aunque también existen programas con tesistas como coinvestigadores.}, lo que representa alrededor del 30\% de los programas aprobados cada año. Este es un claro resultado de la participación sostenida de Argentina en Gemini, puesto que implica que se diseñan planes para tesis doctorales basados en la obtención de datos con Gemini, que son aceptados por las correspondientes Facultades y son evaluados positivamente por las agencias y entidades que otorgan becas (CONICET, Agencia I+D+i y universidades nacionales). Por otra parte, esto forma investigadores especializados en la obtención y análisis de este tipo de datos, que se convierten en nuevos usuarios luego que se doctoran.\\
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig4.pdf}
+\caption{Evolución del número de programas aprobados por el NTAC para tesis doctorales en universidades nacionales entre 2014 y 2023, cuyo PI es el tesista. La Banda 1 se indica en color azul, Banda 2 en rojo, Banda 3 en verde y Banda 4 en violeta.}
+\label{fig4}
+\end{figure}
+
+En cuanto a las facilidades e instrumentación ofrecida por el Observatorio, la comunidad astronómica argentina hace uso (en mayor o menor medida) de la gran mayoría de ellos. Esto se ve reflejado en los instrumentos utilizados (es decir, los instrumentos utilizados en las propuestas que efectivamente recibieron tiempo de observación) en el período $2018-2023$, tal como se muestra en la Fig.~\ref{fig5}. Entre los instrumentos más utilizados por la comunidad se encuentran GMOS-Norte y GMOS-Sur ({\em Gemini Multi-Object Spectrographs}), que permiten la obtención de imágenes y la realización de espectroscopía de ranura larga, multiobjeto y de campo íntegro en el rango óptico. Este patrón es consistente con otros países en Gemini, convirtiéndolos en los instrumentos más populares y versátiles del Observatorio.
+Esta versatilidad de GMOS, junto con la disponibilidad de herramientas de reducción, podrían ser factores determinantes en su uso frecuente. Además, el hecho de que GMOS opere en el rango óptico, donde las técnicas observacionales son ampliamente conocidas y dominadas por nuestra comunidad desde antes de la participación de Argentina en Gemini, también contribuye a su popularidad. Los temas de investigación predominantes en nuestro país, que suelen requerir estas técnicas ópticas, refuerzan esta tendencia histórica de uso intensivo de GMOS.
+
+Por otro lado, los siguientes instrumentos más utilizados por la comunidad argentina son GNIRS ({\em Gemini Near-Infrared Spectrometer}) instalado en Gemini Norte, e IGRINS ({\em Immersion GRating INfrared Spectrometer}) en Gemini Sur, que permiten realizar espectroscopía de alta e intermedia resolución en el IR cercano. Las técnicas de observación en el infrarrojo han comenzado a ser incorporadas en nuestra comunidad gracias a la disponibilidad de estos instrumentos en Gemini, observándose una tendencia creciente en su uso con el tiempo.
+Los demás instrumentos muestran diversos porcentajes de utilización, reflejando el aprovechamiento de los recursos disponibles por parte de la comunidad.
+Es importante destacar que este progreso es posible gracias a la participación sostenida de Argentina en Gemini y al resultado conjunto de un proceso de aprendizaje continuo por parte de la comunidad, además del esfuerzo de la Oficina Gemini Argentina (OGA) en difundir e incentivar el uso de nueva instrumentación. Esto último se ha logrado mediante cursos de formación específicos y presentaciones en reuniones científicas, facilitando así que la comunidad se familiarice con las nuevas técnicas y capacidades instrumentales.
+
+La diversidad de instrumentos utilizados, que abarcan técnicas desde imágenes de alta resolución con óptica adaptativa hasta espectroscopía de campo íntegral en el infrarrojo, ha sido incorporada y aprovechada por la comunidad de usuarios para llevar adelante proyectos de investigación en temas recientes de astronomía, enriqueciendo así la astronomía observacional argentina.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig5.pdf}
+\caption{Instrumentos de Gemini utilizados en el período $2018-2023$ por la comunidad astronómica argentina. Aquí solo se consideran los instrumentos que han sido utilizados en propuestas que efectivamente recibieron tiempo de observación argentino en el mencionado período de tiempo.}
+\label{fig5}
+\end{figure}
+
+
+\section{Publicaciones científicas}
+Desde enero de 2003 a diciembre de 2023 se publicaron 154 {\em papers} en revistas internacionales arbitradas\footnote{La lista completa de los {\em papers} de autores/coautores argentinos en revistas internacionales arbitradas con tiempo argentino se encuentra pública y puede verse en \url{https://ui.adsabs.harvard.edu/public-libraries/1hdbb9McRs2FJZUYCTmQoA}}, cuyos autores o coautores son astrónomos afiliados a instituciones argentinas al momento de la publicación, y utilizando datos obtenidos a partir de observaciones realizadas por el Observatorio Gemini con tiempo argentino. 
+Es decir, son aquellos trabajos que han utilizado datos de un programa que ha recibido tiempo argentino, ya sea, para cubrir la totalidad de las observaciones (como en programas con investigadores solo de Argentina), o para cubrir una fracción de ellas (como sucede usualmente en programas conjuntos).
+En el mismo período ($2003 - 2023$) se publicaron 73 {\em papers} en revistas internacionales arbitradas cuyos autores o coautores son astrónomos de instituciones argentinas, que utilizan datos de Gemini, pero obtenidos exclusivamente con tiempo de otros participantes\footnote{La lista de los {\em papers} de autores/coautores argentinos en revistas internacionales arbitradas con tiempo de otros participantes se encuentra pública y puede verse en \url{https://ui.adsabs.harvard.edu/public-libraries/tYie4xXUQqCFJJxdKS0WhA}}. 
+Además, se publicaron 113 artículos en revistas nacionales arbitradas (la gran mayoría en el Boletín de la Asociación Argentina de Astronomía)\footnote{La lista de los artículos de autores/coautores argentinos en revistas nacionales arbitradas puede verse en \url{https://ui.adsabs.harvard.edu/public-libraries/tU0zGpSITByvqTMal7qrVw}}
+La evolución de esos números puede verse en la Fig.~\ref{fig6}, donde se observa un crecimiento sistemático y sostenido en todo el período en consideración. 
+Para obtener información detallada sobre el impacto y la visibilidad de las publicaciones, se pueden consultar las métricas disponibles en los enlaces proporcionados al pie de la página.
+\\
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Fig6.pdf}
+\caption{Evolución del número de {\em papers} arbitrados en revistas internacionales y nacionales de autores argentinos que usan datos de Gemini. Barra azul: en revistas internacionales usando tiempo argentino; rojo: en revistas nacionales; verde: en revistas internacionales con tiempo de otros participantes. Línea continua negra: media móvil cada 3 años.}
+\label{fig6}
+\end{figure}
+
+\section{Conclusiones}
+Las estadísticas muestran que la comunidad astronómica argentina ha desarrollado las capacidades necesarias para aprovechar eficientemente los telescopios Gemini. La relevancia del Observatorio Gemini para nuestra comunidad se evidencia en la significativa productividad científica, en la cantidad de tesis doctorales producidas o en desarrollo utilizando datos de dicho Observatorio y en la eficiente asignación del tiempo otorgado al país. La incorporación de la OGA a la estructura del Ministerio de Ciencia, Tecnología e Innovación Productiva (MinCyT), la clara definición de su estructura y la asignación de cargos rentados para la OGA por parte de las universidades nacionales, ha sido fundamental para producir el crecimiento de Gemini en Argentina. A esto hay que sumar el esfuerzo coordinado y sostenido de diversas administraciones nacionales, instituciones y personas que han financiado, impulsado y colaborado a lo largo de más de 20 años.
+
+La participación de Argentina en Gemini ha sido crucial en la formación de las nuevas generaciones de astrónomos y astrónomas, proporcionando el conocimiento y la experiencia necesarios en técnicas observacionales y tecnologías aplicadas en observaciones ópticas e infrarrojas. Esta preparación es fundamental para el avance hacia la próxima generación de telescopios terrestres de gran envergadura ($20 - 40$ m), como el {\em Giant Magellan Telescope}, el {\em Thirty Meter Telescope} y el {\em Extremely Large Telescope}.
+
+No obstante, aún quedan desafíos por afrontar para aprovechar al máximo las capacidades que el Observatorio Gemini ofrece a la comunidad astronómica argentina. La participación en el desarrollo técnico y tecnológico de instrumentación, así como en la provisión de servicios y suministros al observatorio, sigue siendo limitada. Esta área representa una oportunidad significativa para colaborar en el desarrollo de tecnología de vanguardia, fortaleciendo nuestro conocimiento y experiencia tecnológica y potenciando el crecimiento de la ciencia en Argentina. Una gestión articulada entre autoridades locales, el Observatorio Gemini, y las empresas y universidades nacionales sería muy beneficiosa, comenzando por identificar las necesidades específicas del observatorio y cómo Argentina podría contribuir a satisfacerlas. 
+Para que esta participación sea viable, es esencial que la participación argentina en Gemini permanezca estable.
+
+En conclusión, con apoyo continuo y mayor inversión en desarrollo tecnológico e instrumentación, Argentina está bien posicionada para jugar un papel destacado en la astronomía internacional y en la próxima generación de observatorios, consolidando nuestra posición en el ámbito científico y tecnológico.
+
+
+\begin{acknowledgement}
+{Los autores agradecen al MinCyT, a la UNLP, a la UNC y a CONICET por su apoyo al funcionamiento de la OGA}.
+\end{acknowledgement}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+%\bibliographystyle{baaa}
+%\small
+%\bibliography{bibliografia}
+ 
+\end{document}

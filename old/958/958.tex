@@ -1,0 +1,458 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Campañas, resultados y vivencias de observación de eclipses solares realizados por dos observatorios argentinos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlerunning{Eclipses solares argentinos}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+D.C. Merlo\inst{1}
+\&
+J.N. Balbi\inst{2}
+}
+
+\authorrunning{Merlo \& Balbi}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{dmerlo@unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Museo del Observatorio Astronómico Córdoba (MOA), UNC, Argentina.
+\and
+Museo ``Lic. Gustavo Rodríguez'' del  Observatorio de Física Cósmica ``P. Bussolini'' (MObSM), Argentina.
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En la antigüedad, los eclipses eran fenómenos astronómicos envueltos en misterio y temor, a menudo asociados con presagios de malos augurios o la ira de los dioses.
+Con el avance del conocimiento científico, se los entiende como eventos naturales predecibles, resultado de alineaciones específicas, y se los estudia y observa destacando
+su valor científico, educativo y cultural.
+En este trabajo se presentan investigaciones históricas realizadas por los Museos de los Observatorios Astronómicos de Córdoba y de San Miguel,
+relacionadas a las diversas campañas de observación de eclipses solares realizados por estas instituciones, resaltando sus objetivos, vicisitudes, vivencias y resultados obtenidos.
+Entre ellos se destacan los primeros intentos de verificación de la Teoría de la Relatividad realizadas por el Observatorio de Córdoba en el periodo 1912-1916,
+los cuales, si bien no fueron exitosos, le permitieron a la institución diseñar estrategias y metodologías de trabajo novedosas.
+También exponemos el caso del eclipse solar de 1958, a partir de seis placas obtenidas por el Observatorio de San Miguel, las cuales fueron restauradas y recuperadas, y permiten 
+apreciar las distintas fases del mismo. Asimismo, se relatan anécdotas y aspectos poco conocidos que forman parte de la historia escrita y oral de ambas instituciones, 
+y que constituyen parte del patrimonio inmaterial de las mismas.}
+
+\abstract{In ancient times, eclipses were astronomical phenomena shrouded in mystery and fear, often associated with bad omens or the wrath of the gods.
+With the advancement of scientific knowledge, they are understood as predictable natural events, the result of specific alignments, and they are studied and observed, highlighting
+their scientific, educational and cultural value.
+This work presents historical research carried out at the Museums of the Astronomical Observatories of Córdoba and San Miguel,
+related to the various campaigns of observation of solar eclipses carried out by these institutions, highlighting their objectives, vicissitudes, experiences and results obtained.
+Among them, the first attempts to verify the Theory of Relativity carried out by the Observatory of Córdoba in the period 1912-1916 stand out,
+which, although they were not successful, allowed the institution to design novel work strategies and methodologies. 
+We also present the case of the solar eclipse of 1958, based on six plates obtained by the San Miguel Observatory, which were restored and recovered, and allow us to appreciate
+the different phases of the eclipse. Likewise, we discuss anecdotes and little-known aspects that are part of the written and oral history of both institutions,
+and which constitute part of their intangible heritage.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ history and philosophy of astronomy --- eclipses --- Sun: general}
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{intro}
+Históricamente, los eclipses solares han sido registrados por diversas civilizaciones, proporcionando datos clave para la cronología histórica y la comprensión de los ciclos astronómicos.
+También han impactado en otras ciencias como las humanidades y las artes \citep{10.1093/oso/9780192857996.001.0001}. Asimismo, el estudio de los eclipses solares ha permitido
+confirmar teorías sobre la naturaleza del Sol y la Luna, y ha sido crucial para la verificación de la Teoría de la Relatividad General de Einstein, al observar la curvatura de la luz estelar 
+próxima al Sol durante el eclipse total de 1919.
+Epistemológicamente, han impulsado el desarrollo de instrumentos y métodos de observación, y han fomentado una comprensión más profunda del cosmos,
+influyendo en la manera en que los científicos abordan y verifican sus teorías.
+
+Este trabajo aborda el rol del Museo del Observatorio Astronómico (MOA), perteneciente al Observatorio Astronómico Córdoba (OAC) y
+del Museo ``Lic. Gustavo Rodríguez'' (MObSM) del Observatorio de Física Cósmica ``Padre Bussolini'' (ObSM), en la observación y luego preservación y divulgación de este fenómeno,
+resaltando su impacto cultural y científico.
+
+\section{Antecedentes}\label{ante}
+
+La Red de Museos de Observatorios Astronómicos Argentinos (RedMOAA) se creó en el año 2021, coincidente con el sesquicentenario de la institucionalización científica y astronómica de nuestro país, como una asociación de museos
+de observatorios históricos argentinos \citep{2023BAAA...64..323M} y, desde ese momento, ha sido proactiva en la recuperación del patrimonio, la investigación y divulgación de
+nueva información hallada en elementos restaurados y en la enseñanza de distintas cuestiones relacionadas con la Astronomía, la Física Cósmica y la ciencia en general. 
+
+Como propuesta para el año 2024 se decidió trabajar con los eclipses, particularmente con la observación de tales fenómenos en la República Argentina.
+Para ello, la Red recabó de sus  integrantes información histórica relevante para realizar una muestra en la 66$^a$ Reunión Anual de la Asociación Argentina
+de Astronomía con el tema ``Eclipses en Argentina' ', en donde se exhibieron placas originales y reproducciones relacionados con estos eventos observados en nuestro país, 
+acompañándose la misma con un banner alusivo \footnote{\url{https://drive.google.com/file/d/1Jq83NlMD6Am3R6fV_4bzQ56PhCQcA4l9/view?usp=drive_link}}. 
+Con ello, además de visibilizar nuestro patrimonio histórico-astronómico, se consiguió que las nuevas generaciones
+de estudiantes y astrónomas/os tomaran contacto con las técnicas y los recursos utilizados hasta no hace mucho tiempo atrás.
+
+Además, el MOA y el MObSM presentaron este trabajo en el cual se llevaron adelante, en forma conjunta, tareas de restauración,
+investigación y, sobre todo, mantenimiento de los soportes de las placas fotográficas (en algunos de los casos no contaban con información complementaria),
+respondiendo a los objetivos fundacionales de la RedMOAA \citep{2023BAAA...64..323M}. Así como, también,
+para ser socializados para todas aquellas personas interesadas en la historia de la astronomía argentina y en el registro de los eclipses en particular.
+
+
+\section{Eclipses registrados por el Observatorio Nacional Argentino}\label{ecli}
+
+El 24 de octubre de 1871 se inauguró el Observatorio Nacional Argentino (ONA) en la ciudad de Córdoba y sus tareas estuvieron
+orientadas principalmente a la elaboración de grandes catálogos estelares.
+Si bien no figuraba entre sus objetivos fundacionales la observación de eclipses solares, si se presentaba la oportunidad y se disponía de los recursos, se los
+observaban y registraban \citep{cbaestelar24}.
+Desde esta fecha y hasta 1954, año de su incorporación a la Universidad Nacional de Córdoba como Observatorio Astronómico de Córdoba (OAC),
+se observaron en nuestro país 40 eclipses de Sol, de los cuales dos fueron totales \citep{blogsp18}. 
+La Fig.~\ref{fig1} muestra las trayectorias de los eclipses solares en Sudamérica desde 1941 hasta 2040.
+
+El primero observado desde su creación fue el eclipse total del 16 de abril de 1893, cuya sombra barrió el norte argentino.
+Se organizó para ello una expedición a la localidad de Rosario de la Frontera (Salta), para registrar fotográficamente el fenómeno, con la intención de estudiar la corona solar
+y tratar de hallar al hipotético planeta Vulcano, cuya existencia justificaría las anomalías encontradas en la órbita de Mercurio (años más tarde explicadas por la Teoría
+de la Relatividad). Lamentablemente, al momento del eclipse el cielo se presentó nublado y no se pudo realizar lo planeado. 
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1.0\columnwidth]{958fig01.pdf}
+\caption{Extracto de las trayectorias de los eclipses solares restringidos a Sudamérica, del Atlas Mundial de Eclipses Solares de la NASA.}
+\label{fig1}
+\end{figure}
+
+
+En 1909 asume la dirección del ONA Charles Perrine, quien contaba con una amplia experiencia en la observación de eclipses solares como astrónomo del Observatorio Lick (EE.UU.), 
+comenzando una etapa de estudio sistemático de estos fenómenos. Por otra parte, con el objeto de confirmar su flamante teoría presentada en 1905, Einstein interesó a 
+Freundlich (Observatorio Astronómico de Berlín) para que lo ayudara con el trabajo. Conociendo su gran experiencia, Freundlich contactó por carta a Perrine, poniéndolo al tanto
+de la idea y solicitándole su colaboración para la tarea \citep{cbaestelar24}.
+
+Se organizaron tres expediciones para observar los eclipses solares totales de los años 1912 (Cristina, Brasil), 1914 (Crimea, Ucrania) y 1916 (Tucacas, Venezuela).
+En los dos primeros dirigió la comitiva Perrine, para lo cual se construyeron equipos específicos para el registro fotográfico. En el eclipse de 1912 una intensa lluvia impidió registrar
+el evento. En el de 1914, inició la Primera Guerra Mundial mientras la comitiva del ONA viajaba a Crimea. Pese a que el día había amanecido despejado, en el momento de la
+totalidad algunas nubes cubrieron el Sol, y las imágenes obtenidas no fueron suficientes para el objetivo deseado (ver Fig.~\ref{fig2}a).
+En el eclipse de 1916, debido a problemas financieros, solo viajó el astrónomo Enrique Chaudet; nuevamente las condiciones climáticas fueron desfavorables, obteniéndose algunas
+placas como la mostrada en la  Fig.~\ref{fig2}b.
+
+En el eclipse parcial de 1918, el ONA no realizó ningún estudio y en el anular de 1927 no participó de la primera expedición exitosa de un observatorio argentino (Observatorio
+Astronómico de La Plata) en Neuquén, aunque organizó conferencias para el público en general \citep{blogsp18}. El eclipse
+parcial de 1933 fue observado por el ONA, con cálculos realizados por Bobone y fotografiado por Winter.
+ 
+En la década del '40, bajo la dirección de Enrique Gaviola, se impulsó la difusión de las actividades del ONA a través de la observación de eclipses por parte del público,
+en particular, los de 1940 y 1941. Asimismo, en el eclipse total de 1947, el ejecutivo nacional conformó una comisión interinstitucional que coordinó el estudio del evento.
+Gaviola fue el representante del ONA, el cual organizó dos de las cinco expediciones realizadas, con personal del ONA, una en Corrientes (Platzek/Mc Leish/Hipólito), portando dos espectrógrafos
+y un celóstato propios, para realizar estudios de la composición química y las variaciones de temperatura de la corona solar, avanzando en la comprensión de su dinámica.
+La otra comisión se dirigió a Villa de Soto (Córdoba) (Gaviola/Dartayet/Gómara/Canals-Frau/Diez Fraga), con el objetivo de establecer la distancia entre dos puntos de
+Sudamérica y África, por medio de la determinación exacta de los instantes de contacto, utilizando para ello un celóstato y un telescopio reflector de 25 cm de abertura,
+también fabricados en el ONA \citep{blogsp18}. La  Fig.~\ref{fig2}c muestra una de las imágenes obtenida por Mc Leish en Corrientes, que fue tapa de la revista Sky \& Telescope de ese año.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{958fig02.pdf}
+\caption{
+(a) Fotografía (en negativo) del eclipse solar de 1914, donde se aprecia la corona solar.
+(b) Fotografía (en negativo) del momento de totalidad del eclipse solar de 1918, donde se aprecian algunas protuberancias en el limbo solar.
+(c) Fotografía del eclipse total de 1947 tomada por Mc Leish desde Corrientes, en la que se observan numerosos detalles de la corona, y que fuera tapa del Vol. 6 Nº 3 de la revista Sky \& Telescope.
+Archivo del MOA-OAC.}
+\label{fig2}
+\end{figure}
+
+
+\section{Eclipse de 1958 registrado por el ObSM}
+
+La restauración de bienes del museo termina contándonos historias recopiladas por la RedMOAA.
+Entre los años 2022 y 2023, realizamos una serie de estudios y pruebas dedicados a la restauración y a la utilización de la
+información contenidas en fotografías astronómicas sobre placas de vidrio \citep{2024BAAA...65..317B}.
+La premisa que fundamentó nuestra labor fue que la información resguardada pueda ser utilizada en posteriores investigaciones, como así también revelar las metodologías, los usos y costumbres
+que utilizaban quienes nos precedieron en el uso de los instrumentos e instalaciones. 
+
+En uno de estos trabajos, llamó nuestra atención una caja rotulada con el año 1958. Con la restauración de esas placas, fue posible recuperar
+seis de ellas que correspondían a las fotos que se muestran en secuencia en la  Fig.~\ref{fig3}, y una rota que –aparentemente– había sido usada como fotografía de control, no tenía relación con
+el eclipse y podía ser anterior o posterior al evento.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{958fig03.pdf}
+\caption{Diferentes momentos del eclipse anular del año 1958. Archivo del MObSM.}
+\label{fig3}
+\end{figure}
+
+Para catalogar estas placas buscamos información sobre el eclipse en el trabajo de \cite{spnc_RELEA17}, en varios artículos en línea
+y luego con los almanaques del archivo del MOA. Era innegable que las placas mostraban un eclipse solar, pero toda la información obtenida
+coincidía en que el mismo no habría podido ser fotografiado de ese modo en San Miguel. Consultamos, para mayor información, los archivos de NASA\footnote{\url{https://eclipse.gsfc.nasa.gov}}
+y de Time and Date\footnote{\url{https://www.timeanddate.com/eclipse/list.html}}; los primeros brindan información
+sobre gran cantidad de eventos astronómicos y como se los observarían desde cualquier sitio, concluyendo con ello que las imágenes
+no pudieron obtenerse desde San Miguel, ya que el eclipse fue allí parcial. 
+
+El eclipse llegó desde el Pacífico y se pudo ver completo desde la costa chilena hasta la mitad de la Provincia de Mendoza, a partir de la cual se observó en forma parcial (ver  Fig.~\ref{fig4}).
+Luego preguntamos a antiguos trabajadores y operadores, y fue así como el Director del ObSM, Santiago Maiese, consultó --entre otras personas-- a Jorge Rusansky,
+actual miembro del grupo de divulgación científica del Observatorio y quien trabajó en el mismo décadas atrás.
+Éste le comentó que en los años 50’s y 60’s, y hasta mucho tiempo después,
+uno de los telescopios era instalado --junto con una de las cámaras del celóstato-- en una camioneta de la institución en la que los astrónomos viajaban en busca de estos fenómenos 
+astronómicos, para documentarlos apropiadamente.
+Asimismo, se obtuvieron registros fotográficos del telescopio cargado en la camioneta sobre un terreno árido (posiblemente San Juan o Mendoza, Argentina), donde los científicos habrían
+concurrido para poder tomar las imágenes que acabábamos de restaurar (ver  Fig.~\ref{fig5}). 
+
+Nuestra consulta a la NASA sobre este evento despertó la curiosidad de esa institución, la que nos solicitó compartir el material que mencionamos
+anteriormente, el cual ya está disponible, además, para la consulta de cualquier persona interesada.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{958fig04.pdf}
+\caption{Zona de observación del eclipse anular de Sol de 1958. Composición de imágenes extraídas de:
+\href{https://sunearth.gsfc.nasa.gov}{sunearth.gsfc.nasa.gov} y \href{https://www.timeanddate.com/eclipse/map/1958-october-12}{www.timeanddate.com/eclipse/map/1958-october-12}.}
+\label{fig4}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{958fig05.pdf}
+\caption{Telescopio montado en la camioneta que lo transportó, situado posiblemente en la Provincia de San Juan o Mendoza, Argentina. Archivo del MObSM.}
+\label{fig5}
+\end{figure}
+
+
+
+\section{Conclusiones}
+
+Las campañas de observación de eclipses solares en Argentina no solo contribuyeron al conocimiento científico, sino que también forman parte del patrimonio cultural y social del país.
+Los esfuerzos conjuntos de restauración, divulgación y análisis histórico de estas acciones refuerza el rol de los museos como puentes entre el pasado y el presente,
+permitiendo no sólo conocer la historia astronómica de nuestro país sino también situarnos contextualmente en aspectos socioeconómicos de la época.
+En este sentido rescatamos, por ejemplo, que pese a los tres intentos fallidos del ONA por verificar la Teoría de la Relatividad, la aventura científica sirvió para desarrollar equipamientos y procedimientos que cimentaron su acervo instrumental y procedimental.
+
+Destacamos, asimismo, el cambio de paradigma comunicacional ocurrido a mediados del siglo pasado, donde se comenzó a utilizar la ocurrencia de estos eventos astronómicos para 
+difundir entre la población la ciencia astronómica y la observación de los mismos. Lo que hoy resulta natural y se ha convertido en una actividad tradicional de todos los observatorios,
+no lo era así antes, ya que allí solamente se realizaban actividades de investigación y formación profesional descontextualizada de la comunidad a la cual pertenecían.
+
+Por otra parte, la anécdota de la observación del eclipse de 1958, por parte del ObSM, es una de las tantas que se descubren al analizar los elementos con que cuentan nuestros museos,
+generalmente olvidadas en las arenas del tiempo, las cuales se suman a la cantidad de historias que podemos relatar a nuestros visitantes, y nos presentan el compromiso de seguir recuperando otras más.
+En palabras de \citet{thompson17}, ``\textit{la historia oral es la más nueva y la más antigua forma de hacer historia}''.
+En este sentido, ambos museos hemos iniciado una serie de entrevistas, tanto a antiguos como actuales empleados, para seguir completando la rica historia de ambas 
+instituciones y de esta forma acrecentar los respectivos patrimonios inmateriales. 
+
+Además, los trabajos de investigación realizados por nuestras instituciones nos permiten conocer más sobre las actividades científicas llevadas adelante por las mismas,
+y servirán de inspiración a futuras/os investigadoras/es de nuevos fenómenos celestes. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+De este modo, la RedMOAA ha colaborado con la presentación de algunos trabajos relacionados con eclipses observados en la Argentina, y una breve descripción de las tareas
+de investigación y mantenimiento que fueron necesarias para obtener esta información. Sus museos integrantes continuarán en su tarea conjunta y compartida de catalogar,
+restaurar, investigar y compartir información con el objeto de acrecentar el patrimonio nacional relacionado con los trabajos de investigación astronómica realizados por quienes
+nos precedieron. 
+
+\begin{acknowledgement}
+Agredecemos a quienes hacen posible el trabajo de restauración, investigación y digitalización de imágenes, en particular a las Bibls. Verónica Lencinas y Sofía Lacolla,
+y a la Srta. Cecilia Quiñones, del archivo y biblioteca del OAC, como también a las Srtas. Carolina Balbi y Lucía Balbi. 
+Asimismo, agradecemos al/a la referí anónimo/a por sus sugerencias que mejoraron la presentación de este trabajo. 
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{merlobalbi.bib}
+ 
+\end{document}

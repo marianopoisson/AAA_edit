@@ -1,0 +1,422 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage{bm} 
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{29 March 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Core dynamo simulations of A-type stars}
+
+%MHD simulations of A-type stars: hemispheric core dynamo solutions
+
+%Core dynamo simulations of A-type stars: hemispheric configurations
+
+%Hemispheric dynamos in simulations of A-type stars
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Core dynamo simulations of A-type stars}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+J.P. Hidalgo\inst{1}, 
+P.J. Käpylä\inst{2}, 
+C.A. Ortiz-Rodríguez\inst{3}, 
+F.H. Navarrete\inst{4}, 
+D.R.G. Schleicher\inst{1}
+\& 
+B. Toro-Velásquez \inst{1} 
+}
+
+
+\authorrunning{Hidalgo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{jhidalgo2018@udec.cl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%JPH
+%This disturbs me a little bit, but according to the instructions the affiliations should have the format: "institute (or deparment), institutional dependency (unit), country (in Spanish)"
+
+\institute{
+Departamento de Astronomía, Universidad de Concepción, Chile
+\and
+Institut für Sonnenphysik, KIS, Alemania  
+\and
+Hamburger Sternwarte, Universität Hamburg, Alemania
+\and
+Institute of Space Sciences, ICE--CSIC, España}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las estrellas tipo A tienen núcleos convectivos y envoltorios radiativos. Realizamos simulaciones numéricas en 3D de una estrella tipo A de $2~M_\odot$ con un núcleo convectivo de aproximadamente $20\%$ del radio estelar rodeado por una envoltura radiativa usando un modelo star-in-a-box, como una forma de explorar campos magnéticos impulsados por la convección en el núcleo de la estrella. Las ecuaciones no ideales totalmente compresibles de la magnetohidrodinámica son resueltas ocupando el {\sc Pencil Code}. Periodos de rotación desde 8 a 20 días fueron explorados. Concluimos que el núcleo es capaz de albergar fuertes dínamos hemisféricos con comportamiento cíclico y campos magnéticos con intensidades típicas alrededor de los $60$ kG. Sin embargo, los campos magnéticos que llegan a la superficie son varios órdenes de magnitud menores que en el núcleo, lo que no es suficiente para explicar los campos magnéticos observados.}
+
+%One of the subclasses of these stars are the chemically peculiar Ap and Bp stars, which host large-scale magnetic fields in the range of 200 G to 34 kG. Two of the hypothesis to explain these fields are the fossil field theory and the core dynamo theory
+
+\abstract{A-type stars have convective cores and radiative envelopes. We perform 3D numerical simulations of a $2~M_\odot$ A-type star with a convective core of roughly $20\%$ of the stellar radius surrounded by a radiative envelope using a star-in-a-box model, as a way to explore magnetic fields driven by convection in the core of the star. The non-ideal fully compressible magnetohydrodynamics equations were solved using the {\sc Pencil Code}. Rotation periods from 8 to 20 days were explored. We conclude that the core is able to host strong hemispheric dynamos with cyclic behavior and typical magnetic field strengths around $60$ kG. However, the magnetic fields that reach the surface are several orders of magnitude smaller than in the core, which is not enough to explain the observed magnetic fields.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ stars: magnetic field --- stars: massive --- magnetohydrodynamics (MHD) --- dynamo}
+
+\begin{document}
+
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+Early-type stars are main-sequence stars with masses above $1.5~M_\odot$. In these stars, the main energy production mechanism is the CNO cycle. This cycle is very temperature dependent, and therefore a large energy flux is concentrated in the center of the star leading to a steep
+temperature gradient that drives convection. The convective cores of these stars have differential rotation and regions of shear that are favorable for dynamo action \citep{Krause-1976, Browning-2008}. Numerical simulations by \cite{Brun-2005} showed a core dynamo in a $2~M_\odot$ A-type star, modelling the inner $30\%$ by radius where 15\% is the core. The magnetic energy produced in their models is around equipartition with kinetic energy. In B-type stars dynamo action has been found as well. Simulations by \cite{Augustson-2016} of the inner 65\% by radius of a $10~M_\odot$ B-type star show vigorous dynamo action. The resulting magnetic fields have peaks exceeding a megagauss and reach superequipartition values. Nevertheless, despite these studies reporting that a convective core can lead to strong dynamo action, the nature of these dynamos has not been explored in detail. The produced magnetic fields could play an important role in the observed magnetism of Ap/Bp stars. These stars are a chemically peculiar subclass of early-type stars with masses ranging from 1.5 to $6~M_\odot$, and large-scale magnetic fields with mean field strengths ranging from 200 G to 30 kG \cite{Auriere-2007}.\\
+
+In the present study, we perform 3D magnetohydrodynamic (MHD) simulations of a main-sequence A-type star using a star-in-a-box setup and model the entire star for the first time in 3D numerical simulations. Our main objective is to study and characterize the core dynamos of such stars, and to analyze the resulting magnetic fields at the stellar surface. Differential rotation is also explored, at the surface of the convective core and at the stellar surface. The structure of this paper is the following: The model is described in Section~\ref{model}. The analysis and results of the simulations are presented in Section~\ref{results}. Conclusions are provided in Section~\ref{conclusions}.
+
+\section{The Model \label{model}}
+
+The model is based on the star-in-a-box setup presented by \cite{Kapyla-2021}, which is based on the model of \cite{Dobler-2006}. The setup consists in a star of radius $R$ inside a cube of side $l=2.2R$. All the Cartesian coordinates $(x,y,z)$ range from $-l/2$ to $l/2$. The following non-ideal fully compressible MHD equation set is solved:
+\begin{align}
+    \frac{\partial \bm{A}}{\partial t} &= \bm{u} \times \bm{B} - \eta \mu_0 \bm{J}, \label{mhd_1} \\
+    \frac{D \ln \rho}{D t} &= - \bm{\nabla} \bm{\cdot} \bm{u}, \label{mhd_2} \\
+    \frac{D \bm{u}}{D t} &= - \bm{\nabla} \Phi - \frac{1}{\rho} \left( \bm{\nabla} p - \bm{\nabla} \bm{\cdot} 2 \nu \rho \bm{S} + \bm{J} \times \bm{B} \right) \nonumber \\
+    &\hspace{4.3cm} - 2 \bm{\Omega}\times \bm{u} + \bm{f}_d, \label{mhd_3} \\
+    T \frac{Ds}{Dt} &= - \frac{1}{\rho} \left[ \bm{\nabla}\bm{\cdot} (\bm{F}_\text{rad} + \bm{F}_\text{SGS})  + \mathcal{H} - \mathcal{C} + \mu_0 \eta \bm{J}^2 \right] \nonumber \\
+    &\hspace{4.3cm} + 2 \nu \bm{S}^2, \label{mhd_4}
+\end{align}
+where $\bm{A}$ is the magnetic vector potential, $\bm{u}$ is the flow velocity, $\bm{B} = \bm{\nabla} \times \bm{A}$ is the magnetic field, $\eta$ is the magnetic diffusivity, $\mu_0$ is the magnetic permeability of vacuum, $\bm{J} = \bm{\nabla} \times \bm{B}/\mu_0$ is the current density given by Ampère's law, $D/Dt = \partial/\partial t + \bm{u} \bm{\cdot}\bm{\nabla}$ is the advective derivative, $\rho$ is the mass density, $\Phi$ is the gravitational potential, $p$ is the pressure, $\nu$ is the kinematic viscosity, $\bm{S}$ is the traceless rate-of-strain tensor
+\begin{align}
+    S_{ij} = \frac{1}{2}(\partial_j u_i + \partial_i u_j) - \frac{1}{3}\delta_{ij} \bm{\nabla} \bm{\cdot} \bm{u},  \label{S-tensor}
+\end{align}
+where $\delta_{ij}$ is the Kronecker delta. $\bm{\Omega}=(0,0,\Omega_0)$ is the rotation vector, $\bm{f}_\mathrm{d}$ describes damping of flows outside the star \citep[see][for details]{Dobler-2006}, $T$ is the temperature, and $s$ is the specific entropy. The radiative energy flux is given by 
+\begin{align}
+    \bm{F}_\mathrm{rad} = - K \bm{\nabla} T, \label{radiative-flux}
+\end{align}
+where $K$ is the constant radiative heat conductivity. Additionally, the subgrid-scale (SGS) entropy flux is defined as
+\begin{align}
+    \bm{F}_\mathrm{SGS} = -\chi_\mathrm{SGS} \rho \bm{\nabla}s', \label{entropy-flux}
+\end{align}
+where $\chi_\mathrm{SGS}$ is the SGS diffusion coefficient, and $s'$ is the fluctuating entropy. Finally, $\mathcal{H}$ and $\mathcal{C}$ describe additional heating and cooling, respectively. For these we adopt similar expressions as in \cite{Kapyla-2021}. The ideal gas equation of state $p = (\gamma - 1)\rho e$ is assumed, where $\gamma$ is the adiabatic index and $e$ is the internal energy of the gas. We use radial profiles for the diffusivities $\nu$ and $\eta$, where the radiative layers have values $10^2$ times smaller than in the core. We define the radial jumps at $r=0.35R$ with a width of $w = 0.06R$. This implementation aims to avoid the spreading of magnetic fields and flows from the core to the envelope \citep[see][]{Kapyla-2022}.\\
+
+The model has a convective core of roughly $20\%$ of the stellar radial extent surrounded by a radiative envelope. The heat conductivity coefficient $K = 0.1K_0$ leads to such configuration in the thermally relaxed state, where $K_0$ is the value required for a fully radiative configuration (see Fig. 1 of \citealt{Hidalgo-2023}). The stellar parameters for a $2~M_\odot$ A-type star are $R_* = 2 ~ R_\odot$, $\rho_0 = 5.6 \cdot 10^4~\mathrm{kg}\,\mathrm{m^{-3}}$, $T_0 = 2.25 \cdot 10^{7}~\mathrm{K}$ and $L_* = 23~ L_\odot$ for the radius, mass density and temperature of the stellar center, and luminosity, respectively. These parameters are obtained from a one dimensional stellar model from the open-source code MESA \citep{Paxton-2019}. For the conversion to physical units, the description in the Appendix A of \cite{Kapyla-2020} is followed. The simulations were run on a grid of $200^3$ with the {\sc Pencil Code}\footnote{\url{https://pencil-code.org/}} \citep{Pencil-code-2021}, which is a highly modular high-order finite-difference code for solving ordinary and partial differential equations. 
+
+\subsection{Dimensionless parameters}
+
+To characterize each simulation the following dimensionless parameters are computed. The influence of rotation on the flow is measured by the Coriolis number
+\begin{align}
+    \mathrm{Co} = \frac{2 \Omega_0}{u_\mathrm{rms} k_R},
+\end{align}
+where $u_\mathrm{rms}$ is the root-mean-square velocity averaged over the convective zone ($r < 0.2 R$) and $k_R = 2\pi/0.2R$ is the wave number of the largest convective eddies. The fluid and magnetic Reynolds numbers are
+\begin{align}
+    \mathrm{Re} = \frac{u_\mathrm{rms}}{\nu k_R}, \hspace*{0.5cm}  \mathrm{Re_M} = \frac{u_\mathrm{rms}}{\eta k_R}.
+\end{align}
+The magnetic and SGS Prandtl numbers are
+\begin{align*}
+    \mathrm{Pr}_\mathrm{M} = \frac{\nu}{\eta}, \hspace*{0.5cm} \mathrm{Pr}_\mathrm{SGS} = \frac{\nu}{\chi_\mathrm{SGS}}.
+\end{align*}
+
+
+
+\section{Results \label{results}}
+We present a set of simulations exploring rotation periods from 8 to 20 days. All of the runs have diffusivities $\nu = 5.45\cdot 10^7~\mathrm{[m^2/s]}$, $\eta = 7.78\cdot 10^7~\mathrm{[m^2/s]}$, and $\chi_\mathrm{SGS} = 2.61\cdot 10^8~\mathrm{[m^2/s]}$ in the core. Therefore $\mathrm{Pr}_\mathrm{M} \approx 0.7$ and $\mathrm{Pr}_\mathrm{SGS} \approx 0.21$. The simulations, as well as the diagnostic quantities are listed in Table~\ref{table-1}.
+
+
+\begin{table}[t!]
+\centering
+\caption{Summary of the simulations. From left to right the columns correspond to the rotation period $P_\mathrm{rot}=2\pi/\Omega_0$ in [days], the volume averaged (over the convective zone) root-mean-square flow velocity $u_\mathrm{rms}$ in $[\mathrm{m\,s^{-1}}]$, the volume-averaged root-mean-square magnetic field $B_\mathrm{rms}$ in [kG], the Coriolis number, and the fluid and magnetic Reynolds numbers.}
+\begin{tabular}{lcccccc}
+\hline\hline\noalign{\smallskip}
+Run & $P_\mathrm{rot}$ & $u_\mathrm{rms}$ & $B_\mathrm{rms}$ & Co & Re & $\mathrm{Re}_\mathrm{M} $ \\
+\hline\noalign{\smallskip}
+MHDr1 & 20 & 98 & no dynamo & 4.9 & 54 & 38 \\
+MHDr2 & 15 & 50 & 59 & 10.1 & 35 &  24 \\
+MHDr3 & 10 & 38 & 64 & 19.2 & 27 & 19 \\
+MHDr4 & 8 & 35 & 59 & 26.9 & 24 & 17 \\
+\hline
+\end{tabular}
+\label{table-1}
+\end{table}
+
+The density stratification between the center and the surface of the convective core is $\rho_\mathrm{center}/\rho_\mathrm{surfcore} \approx 1.27$, which is close to the MESA model result $\rho_\mathrm{center}/\rho_\mathrm{surfcore} \approx 1.5$. Furthermore, the ratio between the temperature of the center and the surface of the convective core is $T_\mathrm{center}/T_\mathrm{surfcore} \approx 1.25$.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[scale=0.43]{plotB2.png}
+\caption{Time-latitude diagrams of the azimuthally averaged toroidal magnetic field $\overline{B}_\phi (r=0.2R,\theta,t)$. The run is indicated in the upper left corner of each plot.}
+\label{Figure-1}
+\end{figure*}
+
+\subsection{Core dynamos}
+Run MHDr1 does not have a dynamo. All the remaining runs have core dynamos. The azimuthally averaged toroidal magnetic fields $\overline{B}_\phi(r,\theta,t)$ at $r=0.2R$ are shown in Fig.~\ref{Figure-1}. All of the solutions are hemispheric and cyclic. In Runs MHDr2 and MHDr3 the magnetic field is located in the southern hemisphere, while in MHDr4 the magnetic activity is located in the northern hemisphere. Cyclic solutions have been reported in simulations of fully convective stars \citep[see e.g.][]{Kapyla-2021, ortizrodriguez-2023}. However, these solutions are usually in both hemispheres of the star. A notable exception are the spherical simulations of fully convective M dwarfs by \cite{brown-2020}. In these runs the obtained global-scale mean magnetic fields are hemispheric (see their Fig. 1). The reason behind these hemispheric solutions is currently unclear. \\
+
+The total kinetic and magnetic energies are
+\begin{align}
+    E_\mathrm{kin} &= \frac{1}{2} \int_{V_*}  \rho \bm{u}^2  dV, \label{Ekin} \\ E_\mathrm{mag} &= \frac{1}{2\mu_0} \int_{V_*}  \bm{B^2}  dV, \label{Emag}
+\end{align}
+where $V_*$ is the volume of the star. The runs have magnetic energies below equipartition. However, as rotation increases, the ratio $E_\mathrm{mag}/E_\mathrm{kin}$ increases, reaching a nearly equipartition regime similar to that reported by \cite{Brun-2005} in the core. This behavior is visible in Fig.~\ref{Figure-2}, where the total energies are shown according to equations (\ref{Ekin}) and (\ref{Emag}). All our simulations have magnetic fields with roughly the same mean strength of $B_\mathrm{rms} \approx 60~\mathrm{kG}$, see Table~\ref{table-1}. 
+
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=0.52]{energies.pdf}
+\caption{Temporal evolution of the magnetic and kinetic energies from runs MHDr2 (\emph{top panel}) and MHDr4 (\emph{bottom panel}).}
+\label{Figure-2}
+\end{figure}
+
+
+
+\subsection{Differential rotation}
+The azimuthally averaged rotation rate is
+\begin{align}
+    \overline{\Omega}(\varpi,z) = \Omega_0 + \overline{u}_\phi(\varpi,z)/\varpi,
+\end{align}
+where $\varpi = r\sin\theta$ is the cylindrical radius. Furthermore, the average meridional flow is 
+\begin{align}
+    \overline{\bm{u}}_\mathrm{mer} = (\overline{u}_\varpi,0,\overline{u}_z).
+\end{align}
+
+\begin{figure}[t!]
+\centering
+\includegraphics[scale=0.57]{pOmMHDr2-fullV2.png}
+\caption{Profile of the temporally and azimuthally averaged rotation rate $\overline{\Omega}(\varpi,z)$ of MHDr2. The streamlines indicate the mass flux due to meridional circulation and the maximum averaged meridional flow is indicated in the lower left side of the plot. The dashed line represents the equator.}
+\label{Figure-3}
+\end{figure}
+
+The rotation profile $\overline{\Omega}(\varpi,z)$ of MHDr2 is shown in Fig.~\ref{Figure-3}. The core has solar-like differential rotation, i.e., the equator rotates faster than the poles. Moreover, the stellar surface and a substantial part of the radiative envelope have quasi-rigid rotation. The rotation profile is  asymmetric with respect to the equator. This is a consequence of the hemispheric dynamo, which quenches the differential rotation in its corresponding hemisphere. The rest of simulations have very similar rotation profiles.
+
+\subsection{Surface magnetic fields}
+
+The magnetic fields produced by the core dynamo are
+unable to create large-scale structures in the stellar surface. The root-mean-square of $\overline{B}_\phi(r,\theta,\phi)$ in latitudes from -90 to -75 and 75 to 90 degrees has values around $0.1$ kG, while in the rest of latitudes it has the order of $10^{-5}$ kG. Therefore, the magnetic field is nearly zero on almost the whole surface of the star, except at the poles.
+
+
+\section{Conclusions \label{conclusions}}
+We perform star-in-a-box simulations of a $2~M_\odot$ A-type star, where the convective core corresponds to $20\%$ of the radial extent. Rotation rates from 8 to 20 days are explored. We find core dynamos with magnetic fields with typical strengths around 60 kG. All the dynamo solutions are hemispheric and cyclic, similar to the results reported by \cite{brown-2020}. In the fast rotators the magnetic energy is nearly in equipartition with the kinetic energy. Unlike \cite{Augustson-2016}, none of our runs reached super-equipartition values. The simulations exhibit solar-like differential rotation in the core, and quasi-rigid rotation in a large part of the radiative envelope. We conclude that a core dynamo is not enough to explain the observed magnetism of Ap/Bp stars, and different mechanisms should be explored. A natural next step is to add a fossil field in our model, as it can affect the nature of the core dynamo \citep{Featherstone-2009}.
+Finally, the cycles of the dynamo solutions require further analysis, e.g. a magnetic cycle period $P_\mathrm{cyc}$ can be computed. This would allow to study possible relations between the magnetic cycle period and rotation \citep[see e.g.][]{Warnecke-2018, Kapyla-2022}.
+
+
+\begin{acknowledgement}
+JPH and DRGS gratefully acknowledge support by the ANID BASAL projects ACE210002 and FB21003, as well as via Fondecyt Regular (project code 1201280). The simulations were performed with resources provided by the Kultrun Astronomy Hybrid Cluster via the projects Conicyt Quimal \#170001, Conicyt PIA ACT172033, and Fondecyt Iniciacion 11170268. PJK was supported in part by the Deutsche Forschungsgemeinschaft (DFG,
+German Research Foundation) Heisenberg programme (grant No.\ KA
+4825/4-1), and by the Munich Institute for Astro-, Particle and
+BioPhysics (MIAPbP) which is funded by the DFG under Germany's
+Excellence Strategy – EXC-2094 – 390783311.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}
+

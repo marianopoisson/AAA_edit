@@ -1,0 +1,509 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage{bm}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Dynamos in partially convective M dwarfs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Dynamos in partially convective M dwarfs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+B. Toro-Velásquez\inst{1},
+D.R.G. Schleicher\inst{1},
+P.J. Käpylä\inst{2}, 
+C.A. Ortiz-Rodríguez\inst{3},
+F.H. Navarrete\inst{4},
+%PJK: added linebreak 
+\& \\
+J.P. Hidalgo\inst{1} 
+}
+
+\authorrunning{Toro-Velásquez et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{btoro2017@udec.cl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Departamento de Astronomía, Universidad de Concepción, Chile
+\and
+Institut für Sonnenphysik, KIS, Alemania
+\and
+Hamburger Sternwarte, Universität Hamburg, Alemania
+\and
+Institute of Space Sciences, ICE--CSIC, España
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las enanas M son estrellas de baja masa de la secuencia principal, el tipo de estrella más común de la galaxia. Es bien sabido que tienen una importante actividad magnética, pero el mecanismo que la controla aún no está claro. Las enanas M con masas mayores a 0.35 $M_{\odot}$ son parcialmente convectivas, y esta transición marca un importante cambio en la estructura estelar que puede afectar a la producción y almacenamiento de campos magnéticos internos. El objetivo de este trabajo es probar un nuevo modelo computacional para la dínamo de enanas M parcialmente convectivas. Este modelo consiste en simulaciones numéricas magnetohidrodinámicas tridimensionales utilizando el modelo de estrella en una caja, donde consideramos una estrella de radio $R$ en un cubo cartesiano de tamaño $(2.2 R)^3$. Dentro de este modelo, cambiamos las condiciones magnéticas de contorno para estudiar cómo esto puede afectar a la dínamo; además se exploraron diferentes velocidades de rotación.}
+
+\abstract{M dwarfs are low-mass main-sequence stars, which are the most common type of star in the galaxy. It is well know that they have significant magnetic activity but the mechanism that controls is still unclear. M dwarfs more massive than $0.35 \;M_{\odot}$ are partially convective and this transition marks an important change in the stellar structure that can affect the production and storage of internal magnetic fields. The aim of this work is to test a new computational model for the dynamos of partially convective M dwarfs. This model consists of three-dimensional magnetohydrodynamical numerical simulations using a star-in-a-box model, where we consider a star of radius $R$ in a Cartesian cube of size $(2.2 R)^3$. Within this model, we change the magnetic boundary conditions to see how this affects the dynamo and also explore different rotation rates.}
+
+%Up to now, we observe clear cycles in three of our simulations with different rotation rates, while the others have dynamos that are quasi-static. In addition, we present an exceptional case where the magnetic field disappears and reappears.%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{stars: magnetic field --- dynamo --- magnetohydrodynamics (MHD) --- stars: low-mass}
+
+\begin{document}
+
+\maketitle %4 paginas
+\section{Introduction}\label{S_intro}
+
+
+Dynamo theory describes the process through which a rotating, convecting, and electrically conducting fluid generate and maintain a magnetic field. This theory is used to explain the presence of long-lived magnetic fields in astrophysical bodies \citep{dyntheo}. In stars, the conductive fluid is the ionized gas in the convective zone and at the tachocline, which is the transition region between the radiative and convective zones.
+
+M dwarfs are low-mass late-type main sequence stars, which are the most common type of stars in the galaxy \citep{comunes}, and which often show significant magnetic activity \citep{mfmd}. The stellar mass determines the structure of M dwarfs which range from 0.08 to 0.55 $M_{\odot}$. If the M dwarf has a mass greater than 0.35 $M_{\odot}$, the star is partially convective, which means that it has a radiative core and a convective envelope. If the stellar mass is less than 0.35 $M_{\odot}$, the star is fully convective \citep{estructure}.
+
+Several models have been developed to study stellar dynamos, some of which consider fully convective stars. Most of these simulations operate in spherical shells, (e.g., \citealt{brown}; \citealt{paper2016}). Another option is to use the star-in-a-box model (e.g., \citealt{caroo}; \citealt{model}). Whereas other works model partially convective stars, such as sun-like stars (e.g., \citealt{Felipe1, Felipe2}). \cite{petriSL} applied a star-in-a-box model to solar-like stars in a recent study. Our goal is to apply the star-in-a-box setup for partially convective M dwarfs to study the behavior of the magnetic fields within the star. In \cite{petriSL}, different rotation rates were used and it was noted that while the exact excitation mechanism of the dynamos in the current simulations is not yet clear, it was shown that the including a radiative core and regions exterior to the star are important in shaping the dynamo. 
+
+As a consequence, in this work we present 3D magnetohydrodynamical (MHD) numerical simulations of partially convective M dwarf stars at different rotations rates, where we changed the magnetic boundary conditions in the exterior of the star to study how this affects the dynamo. First, we present the computational methods used with a brief description of the model and the stellar parameters in section \ref{S_model} and then we show the preliminary results in section \ref{S_results}. We finish with the conclusions and future work in section \ref{final}.
+\vfill
+
+\section{Computational methods}\label{S_model}
+\subsection{The Pencil Code}
+ 
+The simulations were run with the {\sc Pencil Code}\footnote{\url{{https://pencil-code.org/}}} \citep{pencil} which is a high-order finite-difference code for compressible hydrodynamics with magnetic fields. The code can solve both ordinary and partial differential equations, and it is easily adapted to different types of problems by activating or deactivating the different modules as needed. The code uses parallel domain decomposition and MPI.
+
+\subsection{The Model}
+The star-in-a-box model is described in \cite{model}, and is based on the set-up of \cite{dobler}. We consider a sphere of radius $R$ that is enclosed in a Cartesian cube with side $H = 2.2\; R$ where all coordinates $(x, y, z)$ range from $- H/2$ to $H/2$. The equations to solve are the induction, continuity, momentum, and energy conservation equations, given respectively by
+%PJK: using eqnarray to save space
+%\begin{equation}
+%    \frac{\partial \mathbf{A}}{\partial t} = \textbf{U} \times \textbf{B} -\eta \mu_0 \mathbf{J},
+%\end{equation}
+%\begin{equation}
+%    \frac{D\ln{\rho}}{Dt} = -{\bm\nabla \bm\cdot {\bf U}},
+%\end{equation}
+%\begin{multline}
+%    \frac{D\bf{u}}{Dt} = -{\bf \nabla} \Phi -\frac{1}{\rho}({\bf \nabla} p-{\bf \nabla\cdot} 2\nu\rho {\bm S} + {\bf J} \times {\bf B})\\
+%    -2\Omega\times {\bf U}+ f_d,
+%\end{multline}
+%\begin{multline}
+%     T\frac{Ds}{Dt} = -\frac{1}{\rho}[{\bf \nabla \cdot} ({\bf{F}_{\textrm{rad}}} + {\bf F}_{\rm{SGS}}) + \mathcal{H} - \mathcal{C}]\\
+%     + 2\nu {\bf S}^2 +\mu_0 \eta {\bf J}^{2},
+%\end{multline}
+\begin{eqnarray}
+    \frac{\partial \mathbf{A}}{\partial t} &=& \textbf{U} \times \textbf{B} -\eta \mu_0 \mathbf{J},\\
+    \frac{{\rm D}\ln{\rho}}{{\rm D}t} &=& -{\bm\nabla \bm\cdot {\bf U}},\\
+    \frac{{\rm D}\bf{u}}{{\rm D}t} &=& -{\bf \nabla} \Phi -\frac{1}{\rho}({\bf \nabla} p-{\bf \nabla\cdot} 2\nu\rho {\bm S} + {\bf J} \times {\bf B})\nonumber \\
+     && -2\bm\Omega\times {\bf U}+ f_d,\\
+     T\frac{{\rm D}s}{{\rm D}t} &=& -\frac{1}{\rho}[{\bf \nabla \cdot} ({\bf{F}_{\textrm{rad}}} + {\bf F}_{\rm{SGS}}) + \mathcal{H} - \mathcal{C}]\nonumber \\
+     && + 2\nu {\bf S}^2 +\mu_0 \eta {\bf J}^{2},
+\end{eqnarray}
+where $\textbf{A}$ is the magnetic vector potential, $\textbf{U}$ is the velocity, $\textbf{B}={\mathbf \nabla} \times \textbf{A}$ is the magnetic field, $\textbf{J}={\bm\nabla}\times\textbf{B}/\mu_{0}$ is the current density, $\mu_0$ is the permeability of vacuum, $\eta$ is the magnetic diffusivity, ${\rm D}/{\rm D}t=\partial/\partial t + \textbf{U}{\bm\cdot\bm\nabla}$ is the advective derivative, $\rho$ is the fluid density, $\Phi$ is the gravitational potential, $p$ is the pressure, $\nu$ is the kinematic viscosity, $\textbf{S}$ is the traceless rate-of-strain tensor. $\mathcal{H}$ and $\mathcal{C}$ describe heating and cooling, and $f_d$ describes the damping of flows outside the star. $\bm\Omega = (0,0,\Omega_0)$ is the rotation rate of the star, $T$ is the temperature, $s$ is the specific entropy, $\textbf{F}_{\rm rad}$ is the radiative flux and $\textbf{F}_{\rm SGS}$ is the subgrid-scale (SGS) entropy flux. These last two expressions are respectively
+\begin{equation}
+    \textbf{F}_{\textrm{rad}} = -K {\bf \nabla} T,
+\end{equation}
+\begin{equation}
+   \textbf{F}_{\textrm{SGS}} = - \chi_{\textrm{SGS}} \rho {\bf \nabla} s',
+\end{equation}
+where $K$ corresponds to Kramers opacity law, $\chi_{\textrm{SGS}}$ is the SGS diffusion coefficient, $s' = s - \Bar{s}_t $ is the entropy fluctuation and $\Bar{s}_t$ is a running temporal mean of the entropy.
+
+\subsection{Stellar parameters}
+
+Due to the fully compressible formulation of the MHD equations, we use a much higher luminosity than in the target star to avoid the time step being limited by sound waves and to resolve the Kelvin-Helmholtz timescale. Therefore, the results must be scaled to represent them in physical units; see \cite{unifis}. 
+
+For the conversion to physical units we need the parameters of a reference star. In this case we use a star simulated with the stellar evolution code MESA \citep{MESA} with its online version MESA web\footnote{\url{http://user.astro.wisc.edu/~townsend/static.php?ref=mesa-web-submit}}. In particular, we simulate a star of $M_{\star} = 0.75 ~  M_{\odot}$, $R_{\star} = 0.72~  R_{\odot}$, $L = 0.94~  L_{\odot}$ and $\rho_{c}^{\star} = 1.08\times 10^{5}~ \rm kg\; m^{-3}$. Following the description in Appendix A of \cite{unifis} we calculate the dimensionless luminosity. In the current simulation we have $\mathcal{L} = 5.8\times10^{-5}$ and the value from the target star is $\mathcal{L}_{\star} = 1.36\times 10^{-12}$. Thus, the velocities are enhanced by a factor $L_{\rm ratio}^{1/3} \approx 350$, where $L_{\rm ratio}=\mathcal{L}/\mathcal{L}_{\star} \approx 4.3\times 10^{7}$.
+
+The surface gravity of the star is 
+\begin{equation*}
+    g_{\star}= \frac{GM_{\star}}{R_{\star}^2} = \frac{0.75}{(0.72)^2} \frac{G M_{\odot}}{R_{\odot}^{2}} \approx 1.45~ g_{\odot} \approx 396~ {\rm m\,s^{-2}},
+\end{equation*}
+where $g_{\odot} = 274~ \rm {m\,s^{-2}}$. For the rotation rate conversion factor we have
+\begin{equation*}
+    \Omega^{\rm sim} = L_{\rm ratio}^{1/3} \left(\frac{g^{\rm sim}}{g_{\star}} \frac{R_{\star}}{R^{\rm sim}}\right)^{1/2} \Omega_{\star},
+\end{equation*}
+using the solar rotation rate $\Omega_{\star} = \Omega_{\odot} = 2.7\times 10^{-6}~ \rm s^{-1}$, yields
+\begin{equation*}
+    \Omega^{\rm sim} = 1.062~ \left(\frac{g^{\rm sim}}{R^{\rm sim}}\right)^{1/2},
+\end{equation*}
+where $g^{\rm sim} = g^{\rm sim}(r=R)\approx 1$ and $R^{\rm sim}=1$ in simulation units. After substitution and conversion to physical units (Mm, yr, and kG), we get conversions factors
+\begin{align}
+    x~ [\rm Mm] &\approx 500~ x^{\rm sim}~ [\rm sim. units], \\
+    t~ [\rm yr] &\approx 0.0125~ t^{\rm sim}~ [\rm sim. units], \\
+    U~ [\rm m\,s^{-1}] &\approx 1271.2~U^{\rm sim}~ [\rm sim. units], \\
+    B~ [\rm kG] &\approx 4691~ B^{\rm sim}~ [\rm sim.units].
+\end{align}
+
+
+\begin{table*}[t!]
+    \centering
+    \begin{tabular}{llllclcllclll}
+    \hline\hline\noalign{\smallskip}
+     Run &\,$\Omega$ & \;\;\;\;\;$\nu_{\rm cz}$ & \;\;\;\;\;$\eta_{\rm cz}$ & \multicolumn{1}{l}{\;\;\;\;$\eta_{\rm ext}$} & $\rm Pr_{M}$ & \multicolumn{1}{l}{$\rm Pr_{\rm{Me}}$} & $\rm Pr_{\rm SGS}$ & $\rm Re_{M}$ & \multicolumn{1}{l}{$\rm Re_{\rm{Me}}$} & $\rm Re $& $\rm Co$ & $\rm Grid$\\
+     \hline\noalign{\smallskip}
+     B1 & 1.0 & $1.0 \times 10^{-4}$ & $1.0 \times 10^{-4}$ & -- &1.0 & -- & 0.2 & 13.66 & -- & 13.66 & 5.93 & $128^3$\\
+     B2$^*$ & 1.0 & $2.5 \times 10^{-5}$ & $5.0 \times 10^{-5}$ & -- & 0.5 & -- & 0.05 & 31.34 & -- & 62.69 & 5.17 & $128^3$\\ 
+     B3$^{**}$ & 1.0 & $2.5 \times 10^{-5}$ & $5.0 \times 10^{-5}$ & $5.0\times 10^{-4}$ & 0.5 & 0.05 & 0.05 & 30.69 & 3.07 & 61.39 & 5.28 & $200^3$\\ \hline\noalign{\smallskip}
+     C1 & 2.0 & $1.0 \times 10^{-4}$ & $1.0 \times 10^{-4}$ & -- & 1.0 & -- & 0.2 & 11.64 & -- & 11.64 & 13.93 & $128^3$\\
+     C2$^*$ & 2.0 & $2.5 \times 10^{-5}$ & $5.0 \times 10^{-5}$ & -- & 0.5 & -- & 0.05 & 33.79 & -- & 67.57 & 9.60 & $128^3$\\
+     C3$^*$ & 2.0 & $2.5 \times 10^{-5}$ & $5.0 \times 10^{-5}$ & -- & 0.5 & -- & 0.05 & 26.16 & -- & 52.31 & 12.40 & $200^3$\\
+     C4$^{**}$ & 2.0 & $2.5 \times 10^{-5}$ & $5.0 \times 10^{-5}$ & $5.0\times 10^{-4}$ & 0.5 & 0.05 & 0.05 & 25.52 & 2.55 & 51.03 & 12.71 & $200^3$\\
+     C5 & 2.0 & $1.5 \times 10^{-4}$ & $1.5 \times 10^{-4}$ & -- & 1.0 & -- & 0.6 & 7.09 & -- & 7.09 & 15.25 & $128^3$\\ \hline\noalign{\smallskip}
+     D1$^*$ & 3.0 & $2.5 \times 10^{-5}$ & $5.0 \times 10^{-5}$ & -- & 0.5 & -- & 0.05 & 22.95 & -- & 45.90 & 21.19 & $288^3$\\ \hline\noalign{\smallskip}
+     E1$^*$ & 5.0 & $2.5 \times 10^{-5}$ & $5.0 \times 10^{-5}$ & -- & 0.5 & -- & 0.05 & 16.89 & -- & 33.77 & 48.00 & $288^3$\\
+     \hline
+    \end{tabular}
+    %\caption{Summary of the simulation. From left to right the columns correspond to the simulation name, $\Omega$ is the magnitude of angular velocity, $\nu$ is the kinematic viscosity and $\eta$ is the magnetic diffusivity, the last two correspond to the value at the center of the star. $\rm Pr_{M}$, $\rm Pr_{Me}$ and $\rm Pr$ are the magnetic Prandtl number, its value in the exterior of the star and the Prandtl number respectively. $\rm Re_{M}$, $\rm Re_{Me}$ and $\rm Re$ are the magnetic Reynolds number, its value in the exterior of the star and the fluid Reynolds number. Co is the Coriolis number and the last column is the size grid for each simulation.}
+    \caption{Summary of the simulation. From left to right the columns correspond to the simulation name, angular velocity, $\nu_{\rm cz}$, $\eta_{\rm cz}$ and $\eta_{\rm ext}$ are the kinematic viscosity and the magnetic diffusivity in the convective zone of the star, and the value of magnetic diffusivity outside the star, respectively. Then, we have the dimensionless numbers, which are the magnetic Prandtl number, its value in the exterior of the star, and the SGS Prandtl number, the magnetic Reynolds number inside the star, and its value in the exterior of the star, and the fluid Reynolds number, respectively. The last two columns indicate the Coriolis number and grid resolution, respectively. $^*$ indicate runs with diffusivity profile inside of the star and $^{**}$ indicate runs with a different value of $\eta$ in the exterior of the star.}
+    \label{tabla}
+\end{table*}
+
+
+
+
+\subsection{Simulation Parameters}
+
+The opacity of the medium is described by Kramers opacity law \citep{kramerley}. We choose the value of the opacity so that we have a radiative core and a convective envelope. We use different $\Omega$ for sets B, C, D and E, and three different setups are explored: in the first one (B1, C1, C5) $\nu = \eta$, in the second one (B2, C2, C3, D1, E1) diffusivity profiles are added inside of the star, and in the third one (B3, C4) the diffusivity profiles are added both inside and outside the star; see Table \ref{tabla} for values.
+%When we add a diffusivity profile we need to increase the resolution of the simulation to be able to see the result. This is because we us
+%PJK: reformulated
+%When we add a diffusivity profile we need to increase the resolution of the simulation to be able to see the result. This is because 
+We use 
+%PJK
+smaller values of $\eta$ and $\nu$ at the center of the star, which are $5\times 10^{-7}$ and $2.5\times 10^{-7}$ respectively. In the second case, we decreased the value of $\eta$ and $\nu$ (mentioned above) by a factor $10^{2}$ below the tachocline, which is situated at about $r = 0.6 R$ (first jump). For the third case, we consider the jump inside the star mentioned before, and add a second jump in the $\eta$ parameter, by a factor $10^{3}$ respect to the core value, outside of the star, i.e., $R > 1.0$. 
+%PJK: added for the referee
+The standard case with ${\rm Pr}_{\rm M} =1$ is chosen because it is numerically the most convenient. The justification to lower the diffusivity in the core is to slow down the diffusion of flows and magnetic fields from the convection zone to the core. Similarly the profile exterior to the star prevents too rapid diffusion and effectively changes the boundary condition of the magnetic field at the surface of the star.
+%PJK
+
+
+\subsection{Dimensionless numbers}
+
+Table \ref{tabla} shows the values of different dimensionless numbers which help us to characterize each of the simulations. Here the quantities are evaluated in the convective zone of the star, so the scale of the largest convective eddies is given by $k_R = 2\pi/0.4R$.
+
+The Coriolis number is a measure of the influence rotation on the flow
+\begin{equation}
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;{\rm Co} = \frac{2\Omega_0}{u_{\rm rms} k_{R}},
+\end{equation}
+where $u_{\rm rms}$ is the volume-averaged root-mean-square velocity. The fluid and magnetic Reynolds numbers are defined as
+
+\begin{equation}
+   \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;{\rm Re} = \frac{u_{\rm rms}}{\nu k_{R}}, \; {\rm Re_{\rm M}} = \frac{u_{\rm rms}}{\eta k_{R}}.
+\end{equation}
+The SGS Prandtl and magnetic Prandtl number are given by
+\begin{equation}
+    \;\;\;\;\;\;\;\;\;\;\;\;\;\;\;\;{\rm Pr_{SGS}} = \frac{\nu}{\chi_{\rm SGS}}, \; {\rm Pr_{\rm M}} = \frac{\nu}{\eta}.
+\end{equation}
+%We must take into account that the values of ${\rm Re_{\rm M}}$ and $\rm Pr_{\rm M}$ are for the interior of the star. For the cases with different value of $\eta$ in the exterior we must consider two values, one in the inside and the other in the outside of the star.
+%PJK: shorten
+We note that the values of ${\rm Re_{\rm M}}$ and $\rm Pr_{\rm M}$ are given for the interior of the star. For the cases with different $\eta$ in the exterior we consider two values, one in the inside and the other in the outside of the star.
+%PJK: added from the response to referee
+As in all numerical simulations of stellar convection the Prandtl is much larger and Reynolds numbers much smaller than in reality. The only effect that can be accurately modeled is the rotational influence measured by the Coriolis number; see, e.g. \cite{2023SSRv..219...58K}.
+
+
+\begin{figure*}[t!]
+    \centering
+    \includegraphics[width=0.67\columnwidth]{pbfly_B1_ar.png}
+    \includegraphics[width=0.67\columnwidth]{pbfly_B2_ar.png}
+    \includegraphics[width=0.67\columnwidth]{pbfly_B3_ar.png}
+    \includegraphics[width=0.67\columnwidth]{pbfly_C1_ar.png}
+    \includegraphics[width=0.67\columnwidth]{pbfly_C3_ar.png}
+    \includegraphics[width=0.67\columnwidth]{pbfly_C4_ar.png}
+    \caption{Time-latitude diagrams of the mean toroidal magnetic field $\overline{B}_{\phi}(R, t)$ for a period of 200 yr for sets B and C. The y axes correspond to the latitude and the colour bar corresponds to $B_{\phi}$ in kG. The dotted horizontal line indicates the equator. In the lower left corner is indicates the value of the magnetic field. \emph{Upper panels:} Results for runs B1, B2 and B3 from left to right. \emph{Lower panels:} Results for runs C1, C3 and C4 from left to right.}
+    \label{pbfly}
+\end{figure*}
+
+
+\section{Preliminary results}\label{S_results}
+
+%PJK: using \overline instead of \bar looks better
+Figure \ref{pbfly} shows the evolution of the azimuthally averaged magnetic field $\overline{B}_{\phi}$ at the surface of the star as a function of time for the simulations of sets B and C. 
+%PJK: reformulated
+We choose simulations with each of our three setups: no diffusivity profiles, profile in the core, and profile in the core and exterior.
+%{\bf For set} C we choose the runs C1, C3 and C4. Here we see the effect of the magnetic boundary conditions. We can notice that in the upper panel of the Fig. \ref{pbfly} (set B), B1, B2 and B3 have different solutions. 
+%PJK: moved lower and reformulated
+%In terms of the minimum and maximum magnetic field, we have values of $(\Bar{B}_{\phi}^{\rm min}, \Bar{B}_{\phi}^{\rm max}) = (-36.1, 32.4)~ \rm kG$ for B1, $(\Bar{B}_{\phi}^{\rm min}, \Bar{B}_{\phi}^{\rm max}) = (-47.8, 32.3)~ \rm kG$ for B2 and $(\Bar{B}_{\phi}^{\rm min}, \Bar{B}_{\phi}^{\rm max}) = (-30.5, 20.5)~ \rm kG$ for B3. 
+%PJK: I think that the maxima are not so important here
+%PJK: moved from above and expanded
+The upper panel of the Fig.~\ref{pbfly} shows the results for runs B1, B2, and B3.
+%Run B1 has more concentrated magnetic field near the equator which show some polarity changes, and appears to be quasi-static at the poles.
+%PJK: reformulated
+Run B1 with no diffusivity profiles has more cyclic fields near the equator toward the end of the simulation.
+%In B2, for which we add a jump inside of the star, we see near to the equator a quasi-static pattern, some reversals on top of and a quasi-static magnetic fields at the poles. 
+%PJK: shortened
+In B2, for with a diffusivity jump inside the star, we see a quasi-static unipolar field superimposed with a cyclic pattern near the equator.
+%In the B3, where we add the jump inside and outside the star, we do not see any cycles or change in the polarity. 
+%PJK:
+In run B3, with diffusivity jumps inside and outside the star, the cycles disappear. 
+%PJK: combine paragraphs
+%For the lower panel of the Fig. \ref{pbfly} (set C), in terms of the minimum and maximum magnetic field, we have values of $(\Bar{B}_{\phi}^{\rm min}, \Bar{B}_{\phi}^{\rm max}) = (-27.8, 28.8)~ \rm kG$ for C1, $(\Bar{B}_{\phi}^{\rm min}, \Bar{B}_{\phi}^{\rm max}) = (-36.2, 36.1)~ \rm kG$ for C3 and $(\Bar{B}_{\phi}^{\rm min}, \Bar{B}_{\phi}^{\rm max}) = (-20.8, 22.0)~ \rm kG$ for C4. 
+%PJK: the maxima are not so important here
+%In C1, the dynamo seems to be less regular with sporadic activity, and concentration near to the equator. 
+%PJK: reworded
+In run C1, the dynamo is irregular and concentrated near the equator with sporadic activity with long quiescent periods.
+ In run C3 we see regular cycles near the equator with a period about $P_{\rm cyc} = 21.7 ~ \rm [yr]$. Finally, run C4 has a quasi-static dynamo concentrated in the northern hemisphere.
+
+%If we compare the sets with each other, we can notice some similarities depending on the boundary condition being used. 
+%PJK: horten
+Comparing the sets of runs, we notice similarities depending on the boundary conditions used. 
+%B2 and C3 (with one jump) have a similar structure to that of the Solar butterfly diagram, whereas C3 has the most regular cycles and the clearest changes in the polarity of the dynamo. 
+%PJK: shorten and reworded
+ Runs B2 and C3 (with one jump) show similarity with the solar butterfly diagram, with C3 having the most regular cycles.
+On the other hand, runs B3 and C4 (with two jumps) have quasi-static dynamos, without polarity changes.
+%PJK: speculating a little about the differences
+A plausible reason for the differences in the dynamos depending on the diffusivity profiles is that if magnetic fields cannot penetrate (or they need more time to do so) the core and the exterior, the possible dynamo modes that can be excited will also be different from the case where uniform diffusion is used. This is most clearly seen in the case where a larger diffusivity is applied in the exterior of the star (runs B3 and C4) in which cases the cyclic solutions disappear. This can be understood as a lower excitation threshold for quasi-static solution in this geometry. It less clear why the dynamo in Run C1 operates only intermittently. A possibility is that the dynamo is only weakly supercritical for this combination of $\Omega$ and constant diffusivity. A more through analysis in terms of mean-field dynamo theory is needed to ascertain the precises causes for the changing behavior.
+
+%As for the cycles, we can observe that only simulation C3 has the most defined cycles compared to the other simulations (B1, B2, B3, C1, C4), of which B1 seems to have cycles at the end of the run and B2 seems to have cycles at the beginning of the run but in a more irregular way. Run C1, even with irregular activity, shows that the magnetic field changes polarity, but no cyclicity is observed. However, to be sure that these three runs (B1, B2, C1) do not have cycles, we should run these simulations for a longer time. 
+%PJK: Condensed to this
+ We observe clear cycles only in runs C3 and toward the end of run B1. Longer time series is needed to ascertain this and whether the cycles in run B2 continue to fade away or whether they are robust. These issues will be revisited in a future study.
+
+%Finally in runs B3 and C4 we do not see any cycles since they have a quasi-static dynamo.
+%PJK: this is already clear from the figure
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\begin{figure*}[t!]
+%    \centering
+%    \includegraphics[width=5.7cm]{AAA_2023/B1_200pbfly.png}
+%    \includegraphics[width=5.7cm]{AAA_2023/B2_200pbfly.png}
+%    \includegraphics[width=5.7cm]{AAA_2023/B3_200pbfly.png}
+%    \caption{Caption}
+%    \label{pbfly}
+%\end{figure*}
+
+\section{Summary and future work}\label{final}
+
+It is clear that changing the conditions in the interior or exterior of the star, the large-sclae magnetic field is affected. In particular, enhancing the diffusivity exterior to the star leads to the disappearance of cyclic solutions.
+%PJK: added
+This is most likely due to different excitation conditions of cyclic and stationary dynamos depending on the spatial distribution of the diffusion coefficients.
+
+%PJK: added future work explicitly
+ In future work these results can be compared with the simulations of \cite{caroo}, who studied fully convective M dwarfs with the same model. This can be useful to explore what happens in the transition from fully convective to partially convective M dwarfs.
+%PJK: combine paras
+As we already know the parameter regime where we obtain a dynamo, we will complete the set D and E with a simulation where the exterior magnetic boundary condition changes, and add another set (A) similar to sets D and E but with an $\Omega = 0.5$ to study how the magnetic field behaves over a considerable range of rotation rates.
+%PJK: added this
+These simulations will be used to study the relation between stellar rotation and cycles.
+
+\begin{acknowledgement}
+We acknowledge the Kultrun Astronomy Hybrid Cluster via the projects Conicyt
+Quimal \#170001, Conicyt PIA ACT172033, and Fondecyt Iniciacion 11170268. The support by the ANID BASAL project FB210003, and Fondecyt Regular (project code 1201280) and the Alexander von Humboldt - Foundation, Bonn, Germany. PJK was supported in part by the Deutsche Forschungsgemeinschaft (DFG, German Research Foundation) Heisenberg programme (grant No.\ KA 4825/4-1), and by the Munich Institute for Astro-, Particle and BioPhysics (MIAPbP) which is funded by the DFG under Germany's Excellence Strategy – EXC-2094 – 390783311. 
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

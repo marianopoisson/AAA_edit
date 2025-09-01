@@ -1,0 +1,361 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\addto\captionsenglish{\renewcommand*\figurename{Fig.}}
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Proyecto HK$\alpha$: 24 años y 400 noches.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Proyecto HK$\alpha$}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A.P. Buccino\inst{1,2},
+P.D. Colombo\inst{1,2},
+F. Mosca \inst{2}, 
+R. Ibañez Bustos\inst{3},
+M. Flores\inst{4},
+M.C. Vieytes\inst{1},
+C.G. Oviedo\inst{1},
+C.F. Martinez\inst{5},
+J.I. Peralta\inst{1}
+ \&
+P. Mauas\inst{1,2}
+}
+
+\authorrunning{Buccino et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{abuccino@iafe.uba.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+\and   
+Departamento de Física, FCEN–UBA, Argentina
+\and
+Observatoire de la Côte d'Azur, Francia
+\and 
+Instituto de Ciencias Astron\'omicas, de la Tierra y del Espacio, CONICET--UNSJ, Argentina
+\and 
+Observatorio Astronómico de Córdoba, UNC, Argentina }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Desde el año 1999, el Grupo de Física Estelar, Exoplanetas y Astrobiología del IAFE desarrolla en el Complejo Astronómico El Loencito (CASLEO) el Proyecto HK$\alpha$ destinado a observar sistemáticamente una centena de estrellas dF5 a dM5.5, con el objetivo de extender el estudio de la variabilidad y periodicidad magnética al final de la secuencia principal. Actualmente el Proyecto HK$\alpha$ es el único relevamiento sistemático de actividad estelar funcionando desde hace más de dos décadas.
+Este proyecto permitió detectar los primeros ciclos de actividad en enanas rojas, así como estudiar indicadores de actividad en diferentes regiones del espectro visible para distintos tipos espectrales y a lo largo de todo un ciclo de actividad estelar. En este trabajo, presentamos las nuevas herramientas desarrolladas para manejar esta extensa base de datos y los aportes que representarán para el Proyecto HK$\alpha$ con las mejoras instrumentales del Complejo Astronómico El Leoncito (CASLEO) en estos últimos 5 años.}
+
+\abstract{Since 1999, the IAFE Stellar Physics, Exoplanets and Astrobiology Group has been developing the HK$\alpha$ Project at el Complejo Astronómico El Loencito (CASLEO), dedictaed to systematically observe a hundred dF5 to dM5.5 stars, with the aim of extending the study of magnetic variability and periodicity at the end of the main sequence. Currently the HK$\alpha$ Project is the only systematic survey of stellar activity in operation for more than two decades. The observations obtained under this project allowed the group to detect the first activity cycles in red dwarfs and to study activity indicators in different regions of the visible spectrum for different spectral types and throughout an entire stellar activity cycle. In this work, we present the new tools developed to manage this extensive database and the expected contributions  for the HK$\alpha$ from  the instrumental improvements of the Complejo Astronómico El Leoncito (CASLEO) in this last 5 years.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ stars: activity --- stars: red dwarfs --- stars: solar-type}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}
+Luego de cuatro décadas de estudios de variabilidad en estrellas de tipo solar, \cite{1998ASPC..154..153B} encontraron que un 60\% de las mismas muestran un comportamiento cíclico como el del Sol, con períodos que van de 2 a 30 años. Alrededor del 25\% de las estrellas observadas muestra variaciones erráticas, sin una periodicidad observable. El otro 15\% de las observaciones muestra estrellas con niveles constantes de emisión cromosférica.  
+Sin embargo, poco se conocía  de la actividad magnética de largo plazo en estrellas más frías (tipo K tardío y M).
+
+En este sentido, con el objetivo de extender el estudio de la variabilidad y periodicidad estelar al final de la secuencia principal y obtener un registro de actividad para estrellas del hemisferio sur. En 1999 el grupo de Física Estelar, Exoplanetas y Astrobiología (FEEPA) del IAFE, liderado por el Dr. Pablo Mauas,  inició el Proyecto HK$\alpha$ \citep{2004A&A...414..699C} destinado a observar sistemáticamente un conjunto de estrellas tardías, utilizando el espectrógrafo REOSC, montado en el telescopio de 2.15 m del Complejo Astronómico El Leoncito (CASLEO, San Juan). Estos estudios fueron realizados con frecuencia creciente,  y que  actualmente es de cuatro veces al año. 
+
+La extensa base de datos del Proyecto HK$\alpha$ ha permitido la detección de los primeros ciclos de actividad en las estrellas Ms. En particular, a partir de las observaciones de CASLEO en conjunto con espectros obtenidos de la base pública del European Southern Observatory hemos detectado ciclos de actividad en las estrellas M puramente convectivas muy activas como Proxima Centauri y GJ 729 \citep{2007A&A...461.1107C,Ibanez20}, en estrellas M en el límite convectivo como GJ 375, AD Leo y Ross 128 \citep{2007A&A...474..345D,2014ApJ...781L...9B,Ibanez19b} y en las estrellas M tempranas GJ 752 A, GJ 229 A y AU Mic \citep{2011AJ....141...34B,Ibanez19a}. Estos trabajos constituyen una de las pocas detecciones de ciclos de actividad magnética en estrellas Ms. 
+
+%De esta manera, el Proyecto HK$\alpha$ provee registros de actividad únicos que permiten detectar patrones de actividad magnética nunca antes detectados. En este sentido, uno de los trabajos más impactantes del proyecto está relacionado  la estrella brillante $\varepsilon$ Eridani (HD 22049), estrella K2V joven (0.8Gyr), muy activa. En \cite{Metcalfe13} se han compilado más de 45 años de mediciones del indicadores de actividad de estelar (1967-2012),
+%entre las cuales  se han incluido 10 años de observaciones obtenidas en CASLEO. A partir de esta extensa serie de datos, se detectaron para $\varepsilon$ Eridani dos ciclos de actividad simultáneos de
+%diferentes escalas (3 y 13 años) y una fase donde la estrella
+%atraviesa un mínimo prolongado de actividad similar al Míninimo de Maunder en el Sol. También gracias a la extensión de
+%nuestra serie de datos, se logró detectar un segundo ciclo largo
+%de actividad en la estrella $\iota$ Hor \citep{Flores16}.
+%
+Por otro lado, la amplia cobertura espectral de los espectros del Proyecto HK$\alpha$ permite estudiar diferentes líneas espectrales asociadas a la actividad de la estrella que se forman en diferentes regiones de la cromósfera como (H$\alpha$, Na \scriptsize{I}\normalsize\- y Ca \scriptsize{II}\normalsize) de manera simultánea. Entre los trabajos más citados de este proyecto se encuentra el de \cite{2007A&A...461.1107C} donde se reportó por primera vez que los flujos de las líneas de H$\alpha$ y Ca \scriptsize{II}\normalsize\- correlacionaban positivamente en algunas estrellas al igual que el caso solar, pero por primera vez mostró que  esta correlación no se hacía presente o era negativa en otro grupo de estrellas de tipo solar y enanas rojas (enanas K tardío y M). Estos resultados fueron corroborados por otros autores con otras estrellas y otras bases de datos \citep{Walkowicz09,Meunier22,Gomes22}.
+
+Entre los resultados relevantes del Proyecto HK$\alpha$ cabe destacar la formación de recursos humanos. Con las observaciones obtenidas en CASLEO en el marco de este proyecto se han llevado a cabo 7 tesis doctorales en diferentes universidades argentinas (UBA, UNC, UNSJ) y una tesis de maestría en la  Universidad de Colorado (E.E. U.U.), así como 6 tesis de licenciatura en la UBA\footnote{\url{https://casleo.conicet.gov.ar/tesis/}}. En la actualidad, el Proyecto HK$\alpha$ vincula investigadores y becarios del Instituto de Astronomía y Física de del Espacio (IAFE, UBA-CONICET), del Instituto de Ciencias Astron\'omicas, de la Tierra y del Espacio (ICATE, UNSJ-CONICET) y del Observatorio Astronómico de Córdoba (OAC, UNC-CONICET).
+
+El proyecto HK$\alpha$ cuenta con observaciones obtenidas a lo largo de 24 años en 93 turnos de observación, generando un gran volumen de datos de características comunes. Una correcta caracterización de esta base de datos permitiría diagnosticar el material disponible así como también programar observaciones futuras de manera eficiente.
+Con estos objetivos, hemos desarrollado un repositorio público disponible en \textsc{github} que permite interactuar con la amplia base de datos obtenidos a lo largo de 24 años del proyecto.  En este trabajo, presentaremos la metodología de observación, los productos típicos del Proyecto HK$\alpha$ y, por primera vez,   compartiremos los paquetes diseñados  para leer y analizar la amplia cantidad de imágenes obtenidas en CASLEO.
+
+
+\section{Observaciones}
+El Proyecto HK$\alpha$ fue concebido con el objetivo de obtener espectros calibrados en flujo de alta calidad que permitieran por un lado construir modelos de atmósferas, así como monitorear sistemáticamente los niveles de actividad de estrellas del hemisferio sur.  La muestra original se seleccionó de acuerdo a una serie de criterios. Por un lado, se incluyeron 18 estrellas no variables, según \cite{1996AJ....111..439H} que fueron utilizadas par calibrar el índice de Mount Wilson, también se incluyeron estrellas tardías con altos niveles de actividad, estrellas de tipo solar, estrellas con planetas y otras estrellas para complementar una distribución medianamente uniforme en tipo espectral. A lo largo de los años, la muestra fue evolucionando. En particular, el programa se dedicó a la observación de  estrellas dM, abarcando diferentes rangos de actividad y priorizando el estudio de esta muestra cerca del límite convectivo (dM3.5). Hoy en día la muestra incluye un centenar de enanas F y G activas y K y M de diferentes niveles de actividad, todas ellas principalmente observables sólo desde el hemisferio Sur.
+
+Desde el año 1999,  el Proyecto HK$\alpha$ solicita turnos de observación de frecuencia trimestral en CASLEO, donde en cada turno se obtienen 2 espectros echelle consecutivos de cada una de las estrellas de la muestra, según la visibilidad, con el espectrógrafo REOSC en configuración DC montado en el Telescopio Jorge Sahade (TJS) de 2.15 m. Para lograr una amplia cobertura espectral y una dispersión que permita resolver las líneas de Ca \scriptsize{II}\normalsize\- H y K en 3968 y 3933 \AA\- utilizamos la red 316 l/mm centrada en 5000 \AA.
+Ambos espectros son promediados para eliminar los rayos cósmicos. Para la reducción y calibración de los espectros, utilizamos el método desarrollado en \citep{2004A&A...414..699C}. El principal problema de los espectros de alta dispersión obtenidos con el espectrógrafo REOSC en dispersión cruzada, es que tienen superpuesta una función de \emph{blaze} muy pronunciada, lo que hace muy difícil la calibración en flujo por comparación directa con estrellas estándares. Como solución, se recomienda adquirir espectros de las mismas estrellas en dispersión simple, y utilizarla para la calibración en flujo del espectro echelle.
+
+En la Fig. \ref{fig:esp} mostramos espectros característicos del Proyecto HK$\alpha$ para diferentes tipos espectrales de la muestra.
+\begin{figure}[htb!]
+    \includegraphics[width=.45\textwidth]{muchosepectros.png}
+    \caption{Espectros calibrados en flujo obtenidos en el Proyecto HK$\alpha$, a modo de ejemplo se muestra un espectro característico para estrellas de secuencia principal de diferentes tipos espectrales.}
+    \label{fig:esp}
+\end{figure}
+
+
+
+Desde el primer semestre del 2020, el Proyecto HK$\alpha$ fue presentado como propuesta \emph{PLP} (\emph{Proyecto de Largo Plazo}), ya que el alcance de sus objetivos científicos requieren  observaciones en más de un semestre.
+
+
+\section{Base de datos}\label{sec.base}
+Con el propósito principal de caracterizar la base de datos y, así, diagramar futuras observaciones de manera eficiente, hemos desarrollado un repositorio diseñado específicamente para operar con los espectros crudos del Proyecto HK$\alpha$. El repositorio se encuentra disponible públicamente en \url{https://github.com/HKalpha/HKalpha}, donde se puede acceder a un paquete diseñado en lenguaje \textsc{python}  destinado  a la lectura de la base de datos  y un \textit{script} que muestra una serie de rutinas que permiten acceder a la información de la tabla y caracterizar la base de datos. Estos paquetes fueron diseñados en base a módulos  de las librerías  \textsc{pandas} y \textsc{astropy}.
+
+Para una correcta lectura de la base de datos, se requiere que los espectros observados  desde CASLEO se encuentren organizados en la estructura de directorios  y subdirectorios según el turno (MMYY) y la fecha de observación (YYYYMMDD) respectivamente. El paquete \textsc{table.py} lee los headers de las observaciones y construye una única tabla  donde cada columna representa un campo de los headers. Los ejemplos volcados en la \emph{notebook} \textsc{Analisis.ipynb} muestran rutinas que permiten leer esta tabla y  analizar distintos parámetros característicos de la base de datos: número de observaciones por estrella, extensión temporal de las observaciones por estrella, etc. Algunas de las rutinas pueden interactuar con la base de datos del \textit{SIMBAD-Astronomical Database}\footnote{\url{https://simbad.unistra.fr/simbad/}} y, así relacionar características de la base de datos con parámetros estelares de la muestra. 
+
+En la Fig. \ref{fig:esq} mostramos un esquema del funcionamiento de estas rutinas. 
+\begin{figure}[htb!]
+\centering
+    \includegraphics[width=0.47\textwidth]{Esquema.png}
+    \caption{Esquema del repositorio diseñado para lectura y análisis de la base de datos del Proyecto HK$\alpha$.}
+    \label{fig:esq}
+\end{figure}
+Si bien ambos paquetes fueron diseñados para observaciones del Proyecto HK$\alpha$, estos paquetes fueron  desarrollados con el objetivo de que fuesen  fácilmente adaptables a otras base de datos de CASLEO. Por lo tanto, estimamos que ambos paquetes serán de gran utilidad para la comunidad astronómica argentina.
+\subsection{Resultados}\label{ssec.res}
+ A septiembre del 2023, el Proyecto HK$\alpha$ contaba con un total de 20245 observaciones, donde se incluyen imágenes de calibración (\textit{bias}, \textit{flats}, \textit{lámparas}, \textit{estrellas estándares}) e imágenes de ciencia obtenidas a lo largo de 24 años. Del análisis de la base de datos, construimos el histograma de la Fig. \ref{fig:obstime}  donde se puede ver la distribución del lapso de tiempo de observación de cada una de las estrellas de la muestra. Del total de  261 estrellas de ciencia observadas por el Proyecto HK$\alpha$, 110 estrellas de la muestra fueron observadas sostenidamente durante al menos 20 años, permitiendo estudiar su actividad de largo plazo.
+\begin{figure}[htb!]
+    \includegraphics[width=0.4\textwidth]{timespans.png}
+    \caption{Histograma del extensión temporal de la base de espectros por estrella.}
+    \label{fig:obstime}
+\end{figure}
+
+A partir del conocido paquete \textsc{astroquery}, en el \emph{script} \textsc{Analisis.ipynb} se incluyeron celdas de códigos que permiten entrecruzar información de base de datos o catálogos públicos con la tabla confeccionada de las observaciones. A modo de ejemplo de estos códigos en la Fig. \ref{fig:sp} mostramos la distribución de la muestra de estrellas de ciencia observadas en el Proyecto HK$\alpha$ en función de la clase espectral. A lo largo del proyecto HK$\alpha$ se han observado 33 estrellas M, 34 F, 103 G y 91 K.
+\begin{figure}
+    \centering
+    \includegraphics[width=0.4\textwidth]{Types.png}
+    \caption{Distribución de la muestra de estrellas según clase espectral.}
+    \label{fig:sp}
+\end{figure}
+\section{Futuro del Proyecto HK$\alpha$}
+Con observaciones del Proyecto HK$\alpha$ hemos mostrado que las estrellas dM pueden presentar ciclos de actividad similares a los solares (e. j. \citealt{2007A&A...461.1107C,2011AJ....141...34B,Ibanez20,Ibanez21}), así como también se han detectado dos ciclos de actividad simultáneos en estrellas de tipo solar \citep{Metcalfe13,Flores16} o se ha estudiado la actividad en sistemas binarios \citep{2007A&A...474..345D,Martinez19,Flores21}. Dado que los espectros se encuentran calibrados en flujo, muchos espectros del Proyecto HK$\alpha$ han sido utilizados para construir modelos de atmósferas \citep{Vieytes09,Tilipman21}, así como para analizar mediciones simultáneas de distintos indicadores de actividad \citep{2012IAUS..286..324B,Ibanez23}. 
+
+Esta primera fase del proyecto ha cumplido gran parte de sus objetivos iniciales y se planea que una segunda fase del Proyecto HK$\alpha$ se dedique a monitorear una nueva muestra de estrellas frías. De esta manera nos enfocaremos en aquellas estrellas dM y dK tardías recientemente catalogadas en CONCH-SHELL \citep{Gaidos14}, observadas por el Proyecto HK$\alpha$ desde el año 2018, aunque con baja frecuencia. Estas observaciones permitirán analizar la variabilidad a corto y largo plazo y, eventualmente, confirmar la periodicidad de una serie de estrellas dK y dM no estudiadas previamente en la literatura.También incorporaremos a la muestra enanas ultrafrías para determinar los niveles de actividad desde una serie de índices espectroscópicos  y así complementar el trabajo liderado por la Dra. Romina Petrucci (OAC, UNC-CONICET) quien recientemente ha estudiado la variabilidad fotométrica de estas estrellas en \cite{Petrucci24}. Por otro lado, en los últimos años una revisión de la actividad magnética en estrellas de tipo solar y observaciones recientes en estrellas FGK han echado luz sobre el dínamo solar, así como también  han contextualizado las fases de baja actividad solar y han revelado nuevos aspectos de la actividad magnética en estrellas de tipo solar y en última instancia sobre su dínamo subyacente. En este contexto la segunda fase del Proyecto HK$\alpha$ se enfocará en aquellas estrellas de tipo solar cuya actividad atraviesa un mínimo prolongado, fortaleciendo la línea iniciada por el Dr. Matías Flores (ICATE, UNSJ-CONICET)en \citealt{Flores18a,Flores21}.
+
+Cabe señalar que las mejoras instrumentales llevadas a cabo en CASLEO nos permitirán expandir el Proyecto HK$\alpha$ en busca de estos objetivos.
+En el año 2023 el espectrógrafo REOSC fue equipado con un nuevo detector SOPHIA 2048B-152-VS-X, que permite ampliar la cobertura espectral y la resolución de los espectros obtenidos hasta dicha fecha. Por un lado, siguiendo el reciente  informe del Dr. Federico González\footnote{\url{https://casleo.conicet.gov.ar/wp-content/uploads/sites/42/2023/08/ReoscDC270.pdf}}, donde analiza la eficiencia de cada una de las redes disponibles con este nuevo detector, exploraremos nuevas configuraciones experimentales en los nuevos turnos asignados para el 2024. 
+
+Por otro lado, dado que para observar las líneas de Ca  \scriptsize{II}\normalsize\- H y K en las estrellas ultra-frías, que se incorporarán en el proyecto, se requieren muchas horas de integración y sólo podrá lograrse con aquellas más brillantes, surge la necesidad de buscar nuevos indicadores de actividad en longitudes de onda mayores. Una ventaja que posee el nuevo detector  SOPHIA es que permite observar simultáneamente las líneas de H$\alpha$ y el triplete infrarrojo del Ca \scriptsize{II}\normalsize. De esta manera, a partir de una calibración fiable del doblete y el triplete del Ca \scriptsize{II}\normalsize\- junto con el indicador H$\alpha$ podremos expandir los registros de actividad en aquellas estrellas dM más frías y más débiles. Más aún, muchas de estas mediciones podrán ser complementadas con  espectros de alta resolución en la banda YJHK de otros observatorios (CARMENES, SPIRou, NIRPS), donde las líneas del Ca \scriptsize{II}\normalsize\- H y K, usualmente utilizadas para el estudio de actividad no se observan.
+
+Finalmente, expandiremos el repositorio presentado en este trabajo, ya que los códigos actuales fueron construidos para administrar las observaciones crudas. En una segunda fase desarrollaremos  rutinas similares  que operen con los espectros extraídos y calibrados con el objetivo de proveer mediciones de actividad provenientes de distintas líneas espectrales. La automatización de estos procesos permitirán eficientizar el análisis así como estandarizar los productos del Proyecto HK$\alpha$ para ser compartidos con la comunidad internacional. 
+\begin{acknowledgement}
+Agradecemos a todo el personal técnico y científico de CASLEO por permitir que el Proyecto HK$\alpha$ se desarrolle ininterrumpidamente durante 24 años. La presentación de este trabajo en la 65a. Reunión Anual Argentina de Astronomía fue posible gracias al apoyo económico del subsidio PICT 2018-0863 expedido por la Agencia Nacional para la Promoci\'on de Ciencia y
+Tecnolog\'\i a.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

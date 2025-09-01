@@ -1,0 +1,60 @@
+\newcommand{\paperid}[2]{
+ 
+\renewcommand{\paperswitch}{#1}
+ 
+%======= PAPER ID = 45 =======
+\ifnum\paperswitch=45
+  \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, npages=6, switch=\paperswitch,%
+    title={Templates for One Author},% paper title
+    author={Alfred Alabama},% list of authors
+    index={\index{Alabama, Alfred}},% authors index entries
+    cite={Serra:1996:sms,Moorer:2000:AES:audio:millenium,Arfib:1998:DAFx,Mitra:Kaiser:1993:DSP:handbook},% cited bib items
+    bookmark={\pdfbookmark[2]{Alfred Alabama}{#2.Alfred Alabama}}% for PDF bookmark structure
+  ]{#2}
+\fi
+ 
+%======= PAPER ID = 21 =======
+\ifnum\paperswitch=21
+  \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, npages=5, switch=\paperswitch,%
+    title={Templates for One Author with Two Affiliations},% paper title
+    author={Bob Boogie-Woogie},% list of authors
+    index={\index{Boogie-Woogie, Bob}},% authors index entries
+    cite={Serra:1996:sms,Moorer:2000:AES:audio:millenium,Arfib:1998:DAFx,Haykin:1991:adaptive:filter},% cited bib items
+    bookmark={\pdfbookmark[2]{Bob Boogie-Woogie}{#2.Bob Boogie-Woogie}}% for PDF bookmark structure
+  ]{#2}
+\fi
+ 
+%======= PAPER ID = 33 =======
+\ifnum\paperswitch=33
+  \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, npages=4, switch=\paperswitch,%
+    title={Templates for Two Authors},% paper title
+    author={Alfred Alabama, Chris Christmas},% list of authors
+    index={\index{Alabama, Alfred}\index{Christmas, Chris}},% authors index entries
+    cite={Serra:1996:sms,Moorer:2000:AES:audio:millenium,Arfib:1998:DAFx,Askenfelt:1976:automatic:transcription},% cited bib items
+    bookmark={\pdfbookmark[2]{Alfred Alabama}{#2.Alfred Alabama}\pdfbookmark[2]{Chris Christmas}{#2.Chris Christmas}}% for PDF bookmark structure
+  ]{#2}
+\fi
+ 
+%======= PAPER ID = 75 =======
+\ifnum\paperswitch=75
+  \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, npages=6, switch=\paperswitch,%
+    title={Templates for Three Authors},% paper title
+    author={Bob Boogie-Woogie, Chris Christmas, Don Didon},% list of authors
+    index={\index{Boogie-Woogie, Bob}\index{Christmas, Chris}\index{Didon, Don}},% authors index entries
+    cite={Serra:1996:sms,Moorer:2000:AES:audio:millenium,Arfib:1998:DAFx,Egozy:1995:MIT:features:gesture},% cited bib items
+    bookmark={\pdfbookmark[2]{Bob Boogie-Woogie}{#2.Bob Boogie-Woogie}\pdfbookmark[2]{Chris Christmas}{#2.Chris Christmas}\pdfbookmark[2]{Don Didon}{#2.Don Didon}}% for PDF bookmark structure
+  ]{#2}
+\fi
+ 
+%======= PAPER ID = 27 =======
+\ifnum\paperswitch=27
+  \procpaper[xshift=\LaTeXxShift{}, yshift=\LaTeXyShift{}, npages=7, switch=\paperswitch,%
+    title={Templates fór Fòür Àuthors},% paper title
+    author={John Jöe, Kéñt Kîng, Lòu Lóu, Mànfréd J. Môstu{e}ki},% list of authors
+    index={\index{Jöe, John}\index{Kîng, Kéñt}\index{Lóu, Lòu}\index{Môstu{e}ki, Mànfréd J.}},% authors index entries
+    cite={Serra:1996:sms,Moorer:2000:AES:audio:millenium,Dutilleux:1991,Fitz:Haken:2003:Web:morphing:loris},% cited bib items
+    bookmark={\pdfbookmark[2]{John Jöe}{#2.John Jöe}\pdfbookmark[2]{Kéñt Kîng}{#2.Kéñt Kîng}\pdfbookmark[2]{Lòu Lóu}{#2.Lòu Lóu}\pdfbookmark[2]{Mànfréd J. Môstu{e}ki}{#2.Mànfréd J. Môstu{e}ki}}% for PDF bookmark structure
+  ]{#2}
+\fi
+ 
+}

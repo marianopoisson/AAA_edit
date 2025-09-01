@@ -1,0 +1,338 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{07 May 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{A case study of oversight and neglect in the handling of massive data }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Oversight and neglect in the handling of massive data}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+E.E. Giorgi\inst{1,2},
+M.S. Pera\inst{3,4},
+G. Perren\inst{2,3},
+R.A. Vázquez\inst{1,2}
+\&
+A. Cruzado\inst{1,2}
+}
+
+\authorrunning{Giorgi et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{egiorgi@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+\and
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+\and
+Facultad de Ciencias Exactas, Ingeniería y Agrimensura, UNR, Argentina
+\and
+Instituto de Física de Rosario, CONICET--UNR, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Presentamos y discutimos datos obtenidos de la misión \textit{Gaia} Data Release 3 hasta $G = 21$ mag en dos campos estelares que cubren cerca de 5 grados cuadrados en el área del cúmulo abierto NGC 2659 en la región de Vela. En combinación con los paquetes de análisis pyUPMASK y ASteCA, los datos \textit{Gaia} proveen probabilidad de membresía, parámetros estructurales y fundamentales de tres cúmulos abiertos, NGC 2659, UBC 482 y UBC 246 ya encontrados en este lugar. Hallamos que dos de ellos, NGC 2659 y UBC 246, están superpuestos a lo largo de la línea de visión y separados entre si casi 100 pc. Esto confirma reportes previos sobre su existencia, siendo el más evidente el cúmulo joven NGC 2659 mientras el otro, UBC 246, es un objeto relativamente débil y más viejo. También investigamos la verdadera naturaleza del sistema binario compuesto por NGC 2659 y UBC 482.}
+
+\abstract{We present and discuss data coming from the \textit{Gaia} Data Release 3 mission up to $G = 21$ mag in two stellar fields covering about 5 square degrees in the area of the open cluster NGC 2659 in the region of Vela. In combination with the pyUPMASK and ASteCA analysis packages,\textit{Gaia} data provide membership probabilities, structure and fundamental parameters of three open clusters, NGC 2659, UBC 482 and UBC 246 already found in this place. We found that two of them, NGC 2659 and UBC 246, are superposed along the line of sight and separated by about 100 pc. This confirms previous reports about their existence, the more evident being the young group NGC 2659 while the other, UBC 246, is a relatively faint and older object. We also investigated the true nature of the binary system composed by NGC 2659 and UBC 482.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{open clusters and associations: general --- techniques: photometric}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+In a recent work \cite{Giorgi2023BAAA...64...90G} investigated partially the area of the open clusters NGC 2659 and of Pismis 9, both superposed along the line of sight. However, new research in the region of NGC 2659 has concluded that this cluster forms part of a probable binary system with UBC 246 \citep{Castro-Ginard2020A&A...635A..45C}. Contrarily, \cite{Song2022A&A...666A..75S} assigned a different partner to NGC 2659 named UBC 482, which was reported by \cite{Casado2021ARep...65..755C} as member of a physical pair with NGC 2659 as well. Casado applied a rule that groups clusters according to their mutual distances and range of ages. Similar criterion was applied by other authors to detect binary cluster but including radial velocities too \citep{Subramaniam1995A&A...302...86S, Song2022A&A...666A..75S}.Based on the mutual distance between NGC 2659 and UBC 482, Casado claims that both clusters constitute a physical pair. Casado also claims that NGC 2659 belongs to group No 18 on his list containing clusters in this same region at similar distances from the Sun.
+
+The present work is aimed at establishing a more trustable frequency of binary clusters in our Galaxy. This number is poorly known  because most open clusters are located along the Galactic plane where the presence of dust makes it difficult to accurately estimate the distances of each component in any potential physical pair.  Uncertainties in ages, distances and absorption often worsen due to the increasing errors amongst the faintest stars and observational data limits. Therefore, extensive and high-precision data provided by the \textit{Gaia} DR3 mission -from now on \textit{Gaia}- \citep{2023vallenari} down to G $\sim$ 21, offer a great opportunity to elucidate the true nature of assumed binary clusters in the Milky Way.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=11.5 cm]{Figura1.png}
+\caption{Analyzed region: The large red square (2$^{\circ}$ on a side) is centered on UBC 482 (known as Bochum 7). The green square ($\sim$ 15$^{\prime}$ on a side) shows the field investigated by Corti and Niemela (2007) with spectroscopy while the green circle shows the estimated size of UBC 482. The small red square (1$^{\circ}$ on a side) encloses the region occupied by NGC 2659 (blue ellipse) and UBC 246 (orange ellipse). The double arrow line indicates the angular distance between NGC 2659+UBC 246 and the potential center of UBC 482.}
+\label{Figura1}
+\end{figure*} 
+
+
+\section{Data and analysis tools}
+
+\textit{Gaia} data such as position, parallax, proper motions, $G$ magnitudes and color index $BP-RP$ were used in our investigation. Two areas were considered for our analysis: the first one centered around the NGC 2659 position enclosed by a small red box 1$^{\circ}$ on a side including more than $25\,000$ stars with \textit{Gaia} data. The second region is centered on the coordinates given for UBC 482 and is delimited by a red square of 2$^{\circ}$ on a side as shown in Fig. \ref{Figura1}. Areas this big are necessary to get an adequate sample of the cluster surroundings.  In the same figure the small box (1$5^{\prime}\times15^{\prime}$) in green shows approximately the region studied in the past by \cite{Corti2007A&A...467..137C} that we will discuss later on. Notice that there exists some overlapping between the red boxes. The presence of dust and gas all over the surveyed region is easily noted in the figure, particularly in the position of NGC 2659. These two regions were inspected using the codes pyUPMASK \citep{Pera2021A&A...650A.109P} and ASteCA \citep{Perren2015A&A...576A...6P} which our group developed. The first code has been designed to assign membership probabilities to cluster stars observed in a frame contaminated by field stars. The second is intended to get the parameters of each group (distances, ages and sizes).
+
+\subsection{The star groups}
+
+Figure \ref{Figura2} shows the results after applying pyUPMASK in the region. The process yielded three stellar groups already shown in Fig. \ref{Figura1}, NGC 2659 (blue circles), UBC 246 (yellow circles) and UBC 482 (green circles). The spatial distribution of the potential members with probability above $70\%$ shows that NGC 2659 and UBC 246 are strongly concentrated while those of UBC 482 are not. UBC 246 has a number of peripheral members spanning a large area. Likewise, the proper motion diagram (pmRA and pmDE are right ascension and declination, respectively) of the zone (left panel in Fig. \ref{Figura3}) indicates that NGC 2659 and UBC 482 share the same pmRA with a slight difference in pmDE. That is, these two objects share the same state of motion, quite different from that of UBC 246. The distribution of individual parallaxes in the right panel of Fig. \ref{Figura3} shows a similar distance for UBC 482 and NGC 2659 and a slightly greater value for the UBC 246 group. Notice -within the uncertainties of the values- that the distributions of parallaxes in the UBC 482 and UBC 246 groups, 0.30 mas and 0.27 mas, respectively, are broader than the one of NGC 2659, 0.19 mas. Since NGC 2659 is a small cluster and, moreover, superimposed to UBC 246, the confusion between their members only could be clarified with proper motions.
+ 
+Whatever the analysis strategy used to get the most trustable membership in each group, still they must be analyzed individually to see whether their color-magnitude diagrams (CMD) are the ones expected for open clusters. To do this, potential members of each of these groups were analyzed next with ASteCA; the respective parameters are listed in Table 1 while the appearance of the CMDs obtained with ASteCA are depicted in Fig. \ref{Figura4}. Here, NGC 2659 and UBC 246 have the expected CMDs for open clusters according to their ages. Moreover, both have well-defined main sequences extending over eight magnitudes. In the case of UBC 246, the top of its sequence is well-delimited and components of the giant branch, compatible with the age assigned by ASteCA, are seen. The conclusion is that these two star groups are real open clusters. Contrarily, the CMD of UBC 482 is complex since it appears as a young object with a confused main sequence where the few brighter members above $G = 14$ mag are fully scattered. Below that value, the main sequence shows a slight widening. We will discuss these facts in the next section.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=7.3 cm]{Figura2.png}
+\caption{J2000 Right ascension and Declination (RA, DEC) showing the members of the stellar groups found by pyUPMASK. Blue, green and yellow circles indicate NGC 2659, UBC 482 and UBC 246 members, respectively. See text. }
+\label{Figura2}
+\end{figure}
+
+\begin{table*}[!t]
+\centering
+\caption{Galactic coordinates and parameters of the three groups analyzed.}
+\begin{tabular}{lccccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Cl ID& \!\!\!\! $l^{\circ}$ &\!\!\!\! $b^{\circ}$ & \!\!\!\!  $\log(age)$  &\!\!\!\!  Distance (pc) & \!\!\!\!$\mu_{\alpha}$ (mas/y)&\!\!\!\!$\mu_{\delta}$ (mas/y)&\!radius ($^{\prime}$)\\
+
+\hline\noalign{\smallskip}
+\!\!UBC 482 & 265.118 &\!\!\!\! -1.976 &7.47$\pm0.09$ &$2128_{2050}^{2208}$& -5.134$\pm0.092$& 5.070$\pm0.095$& 27.00 \\
+\!\!UBC 246 &264.178  &\!\!\!\! -1.671 & 8.70$\pm0.05$&$1914_{1853}^{1976}$&-4.387$\pm0.080$& 3.011$\pm0.082$& 18.15\\
+\!\!NGC 2659&264.182 &\!\!\!\! -1.671 & 7.50$\pm0.29$&$2089_{2032}^{2147}$& -5.324$\pm0.80$& 5.064$\pm0.086$& 6.66 \\
+\hline
+\end{tabular}
+\label{tabla}
+\end{table*}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Figura3.jpg}
+\caption{\emph{ Left panel:} pmRA and pmDE proper motions for the three groups. \emph{ Right panel:} the parallax histograms of the three groups. Colors as in Fig. 2. See text.}
+\label{Figura3}
+\end{figure}
+
+
+\section{ The alleged physical pair UBC 482 and NGC 2659}
+
+Reviewing the literature, we found that UBC 482 coincides with the position of the potential cluster, Bochum 7, already revisited by \cite{Sung1999JKAS...32..109S}, \cite{Corti2003A&A...405..571C} and by \cite{Corti2007A&A...467..137C}. So, the existence of Bochum 7 has been known for many years \citep{Moffat1975A&AS...20...85M}. Sung et al. identified two stellar components, one is the association Vela OB1 with a mean distance of $\sim$ $1\,800$ pc and the other is the association Vela OB3 at an average distance of $4\,800$ pc. For these authors, Bochum 7 is a stellar group in Vela OB3. \cite{Corti2007A&A...467..137C} carried out a spectroscopic survey for more than 60 young stars confirming that two associations of very young objects superimposed along the line of sight are seen. They concluded that Bochum 7 is not an open cluster but the farthest portion of a very young stellar continuum that extends for several thousand parsecs. \cite{Corti2007A&A...467..137C} computed individual distance moduli according to colors, absorption and spectral types of these young stars. This way of estimating distances can lead to large errors between early-type stars due to calibration and reddening uncertainties. But what really matters in the present case is not the distance value of each star but the dispersion that the set of them shows. We estimated individual distances of the same stars through the inversion of their \textit{Gaia} parallaxes. We know this method is entirely naïve but again, what matters to us is the dispersion level and correlation of distances of these stars derived by a method completely independent of the previous one. 
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=5.5cm]{Figura4a.png}
+\includegraphics[width=5.6cm]{Figura4b.png}
+\includegraphics[width=5.5cm]{Figura4c.png}
+\caption{Color-magnitude diagrams for NGC 2656 (\emph{left panel}), UBC 482 (\emph{center panel}) and UBC 246 (\emph{right panel}). The black continuous line is the isochrone that best represents the cluster age. Colors as in Fig. 2.}
+\label{Figura4}
+\end{figure*}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Figura5.jpg}
+\caption{Spectrophotometric vs. \textit{Gaia} distances (See text). Green dots are stars from \cite{Corti2007A&A...467..137C}. The dashed line is the identity. The grey big cross shows the star hiatus between Vela OB1 and Vela OB3 approximately.}
+\label{Figura5}
+\end{figure}
+
+Figure \ref{Figura5} shows spectrophotometric distances obtained by \cite{Corti2007A&A...467..137C} vs. distances obtained through \textit{Gaia} parallaxes. These early-type stars range from $1\,000$ to $7\,000$ pc in the spectrophotometric case and from $1\,000$ to $8\,000$ pc in the case of parallaxes with similar dispersions around the identity line. Fig. \ref{Figura5} confirms that the region of UBC 482 does not contain an open cluster but rather two associations, Vela OB1 and Vela OB3. These associations seem to separate from each other at about $4\,000$ pc from the sun (see the large grey plus sign). Therefore, we must accept that two star groups compose the region of UBC 482/Bochum 7 and that none of them is an open cluster given their huge radial distribution. These facts are against the idea of a binary association between NGC 2659 and UBC 482 since the last one is just a handful of early-type stars belonging to Vela OB1 and Vela OB3. Some members of Vela OB1 are located at almost the same distance and share a same proper motion with the real cluster NGC 2659. And it is only by this fact that they have similar proper motions. New \textit{Gaia} radial velocities are needed to investigate the entire group and adequately explain how we can see similar proper motions maintained for over $6\,000$ pc. To the same extent, the proper motion of UBC 246 should be investigated apart since its movement is completely different from the rest. There is a possibility that UBC 246 is associated with a different stellar current that intersects that of Vela OB1 and Vela OB3. This is quite characteristic of associations. As an example, Vela OB2, at a distance of about 400 pc and almost 6 degrees south of the region studied in this case, was studied by \cite{Armstrong2022MNRAS.517.5704A} who found different kinematic groups that would form in star subgroups dispersed from their initial concentrations in open clusters. 
+
+\subsection{ Concluding remarks}
+
+ From our analysis of \textit{Gaia} data using our own codes in 5 square degrees in the area of NGC 2659, we found three well spatially defined stellar groups. Two of them correspond to true open clusters, NGC 2659 and UBC 246. The first is very young while the second is much older. NGC 2659 is located ahead of UBC 246 separated along the line of sight by just 100 parsecs. UBC 482, which has been considered member of a binary system along with NGC 2659, is not a cluster but the superposition of young stars for more than $6\,000$ pc that, in turn, are scattered members of two associations, Vela OB1 and Vela OB3, reported previously. Consequently there is no possibility that NGC 2659 and UBC 482 form a physical pair despite their proximity and similar age. NGC 2659 appears here as a member of Vela OB1. A final comment: the treatment of massive data that ignores information stored in the literature can lead to wrong statistics.  
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+
+\end{document}

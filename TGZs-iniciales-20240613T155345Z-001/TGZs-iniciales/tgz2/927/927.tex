@@ -1,0 +1,396 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\newcommand{\pr}{\textcolor[RGB]{234, 0,231}} %Pau
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{07 June 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Estudio de los tiempos de disipación de discos gaseosos en poblaciones estelares}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Tiempos de disipación de discos protoplanetarios gaseosos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+J.L. Gomez\inst{1,2},
+O.M. Guilera\inst{1,2},
+M.M. Miller Bertolami\inst{1,2}
+\&
+M.P. Ronco\inst{1,2}
+}
+
+\authorrunning{Gomez et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{josepluis21@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina\and   
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+%Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina
+%\and
+%Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+%\and
+%Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+%\and
+%Instituto de Astronom\'ia Te\'orica y Experimental, CONICET--UNC, Argentina
+%\and
+%Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\resumen{
+Reproducir las características observacionales de los discos resulta crucial para entender el proceso de formación planetaria y validar los modelos numéricos. En este trabajo exploramos qué condiciones iniciales y parámetros físicos del modelado son capaces de reproducir las características observacionales actuales de discos protoplanetarios. Para esto realizamos modelos de síntesis de población de discos protoplanetarios evolucionando debido a la acreción viscosa y la fotoevaporación de la estrella central. Estudiamos en particular los efectos de la tasa de formación estelar, la viscosidad efectiva, las distribuciones de masas estelares y de los discos asociados. Mostramos que, debido a la rápida disipación de los discos alrededor de las estrellas más masivas, la fracción observada de estrellas con discos está dominada por los discos alrededor de estrellas de baja masa. En particular  encontramos que es posible obtener tiempos de disipación medios de los discos objetos (sub)estelares con masas M $\geq$ 0.04 M$_{\odot}$ de alrededor de 4.2 millones de años, en buen acuerdo con los resultados observacionales.
+}
+
+\abstract{
+Reproducing the observational characteristics of the disks is crucial to understanding of the planetary formation process and validating numerical models. In this work, we explore which initial conditions and physical modeling parameters are capable of reproducing the current observational characteristics of protoplanetary disks. For this, we compute a population synthesis of protoplanetary disks that evolving due to viscous accretion and photoevaporation of the stellar star. We study in particular the effects of the star formation rate, the effective viscosity, the stellar mass distributions and the associated disks. We show that, due to the rapid dissipation of disks around more massive stars, the observed fraction of stars with disks is dominated by disks around low-mass stars. In particular, we find that it is possible to obtain mean disk dissipation times for (sub)stellar objets with masses $\geq$ 0.04 M$_{\odot}$ of around 4.2 million years, in good agreement with observational results.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{protoplanetary disks}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}
+Los discos protoplanetarios son las regiones en el espacio en las que se forman los planetas. De este modo, para modelar la formación de planetas se requiere un modelo de disco circumestelar cuyas características en la evolución deben corresponderse con las características de los discos protoplanetarios observados.
+
+De los estudios clásicos, se creía que la escala de tiempo de dispersión típica para los discos protoplanetarios se encuentra entre $1-10~\mathrm{Ma}$ con una media de $\sim3~\mathrm{Ma}$ \citep[e.g][]{MamajekE}. Estos tiempos de disipación son inferidos a partir de la fracción de estrellas con discos observados en regiones de formación estelar. Debido a que las observaciones se encuentran afectadas por la magnitud límite de observación, si no se considera la distancia, la fracción de estrellas con discos observada sufre de sobre muestreo de estrellas masivas. Estudios recientes muestran que, debido a la dependencia de los tiempos de dispersión de los discos con la masa estelar, las fracciones de estrellas con discos observadas están subestimadas \citep[e.g][]{Pfalzner_2022}.
+
+El objetivo de este trabajo es reproducir las características observadas de los discos protoplanetarios a partir de un estudio de síntesis poblacional. Los valores de algunos parámetros libres del modelo considerado son tomados de las observaciones a regiones de formación estelar con discos protoplanetarios de clase 0/I, discos más jóvenes aún embebidos en su envolturas primordiales, mientras que otros siguen resultados obtenidos a partir de estudios numéricos. En particular, presentamos los resultados obtenidos al estudiar el impacto de la magnitud límite debido a la distancia en el cálculo de la fracción de estrellas con disco en regiones de formación estelar. Además, en este trabajo estudiamos c\'omo afecta a nuestros resultados considerar una tasa de formación estelar, a fin de reproducir el diagrama fracción de discos vs. edad de los cúmulos jóvenes observados y las tasas de acreción de gas sobre la estrella central.
+
+
+%%% Fig 2
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=1.\textwidth]{Resultados_1.png}
+\caption{Fracción de estrellas con discos en función de la edad del c\'umulo. Los puntos celestes y la línea roja corresponde a resultados inferidos de las observaciones de \cite{Pfalzner_2022}. La línea negra corresponde a los resultados obtenidos por \cite{MamajekE}. \emph{Panel izquierdo:} Las líneas discontinuas representan los resultados de nuestra síntesis poblacional para diferentes valores de masa estelar mínima considerada. Los colores amarillo, verde y azul corresponden a las masas estelares mínimas $M_{*,m}=0.04,\,0.1$ y 1.0M$_{\odot}$, respectivamente. \emph{Panel centro:} La línea a trazo azul muestran el resultado considerando masa limite de 0.04 M$_{\odot}$. La línea marrón corresponde a considerar tasa de formación estelar con tiempo de decaimiento  $\mathrm{t}_{d}=1$ Ma y las línea cían corresponden $\mathrm{t}_{d}=5$ Ma.
+\emph{Panel derecho:} Las líneas a trazo muestran el resultado con masa estelar mínima igual a 1 M$_{\odot}$. Las líneas marrón y cian corresponden a considerar tasa de formación estelar con $\mathrm{t}_{d}=1$ y 5 Ma, respectivamente.
+}
+\label{Figura2}
+\end{figure*}
+
+
+
+\section{Modelo de disco y condiciones iniciales}
+
+
+
+%%% Fig 3
+\begin{figure*}[!ht]
+%\begin{minipage}[c]{0.73\textwidth}
+\centering
+\includegraphics[width=1.\textwidth]{Resultados_2.png}
+\caption{Tasas de acreción de gas sobre las estrellas centrales, las cruces negras representan los resultados observacionales \citep{manara2023ASPC} y los puntos circulares muestran los resultados de nuestra síntesis poblacional. Los paneles superiores muestran tasa de acrecíon vs. masa del disco protoplanetario a la edad de 2.0 Ma y las observaciones corresponden al cúmulo de Camaleón I. Los paneles inferiores muestran tasa de acreción vs. masa de la estrella central a la edad de 1.2 Ma y los datos observacionales corresponden al cúmulo de Lupus. \emph{Panel superior izquierdo:} Tasa de acreción vs. masa del disco obtenidas sin considerar tasa de formación estelar. \emph{Panel superior centro:} Tasa de acreción vs. masa del disco considerando una tasa de formación estelar con $\mathrm{t}_{d}=1~\mathrm{Ma}$. \emph{Panel superior derecho:} Tasa de acreción vs. masa del disco considerando una tasa de formación estelar con $\mathrm{t}_{d}=5~\mathrm{Ma}$. \emph{Panel inferior izquierdo:} Tasa de acreción vs. masa estelar obtenida en nuestra síntesis sin considerar tasa de formación estelar. \emph{Panel inferior centro:} Tasa de acreción vs. masa estelar considerando una tasa de formación estelar con $\mathrm{t}_{d}=1~\mathrm{Ma}$. \emph{Panel inferior derecho:} Tasa de acreción vs. masa estelar considerando $\mathrm{t}_{d}=5~\mathrm{Ma}$.  
+}
+\label{Figura3}
+\end{figure*}
+
+
+En este trabajo se computa la evolución del disco gaseoso circumestelar considerando el modelo de disco protoplanetario implementado en {\scriptsize PLANETALP} \citep[e.g.][]{pronco2017, Octavio2017}. Dado que el modelo se encuentra ampliamente descrito en \cite{Octavio2017}, repasamos brevemente los procesos importantes incorporados en el modelo y los parámetros libres.
+
+El modelo consiste en un disco no isotermo axi-simétrico 1D+1D. Una dimensión corresponde a la coordenada radial y la segunda coordenada corresponde a la coordenada vertical. El código primero resuelve la estructura vertical; se considera al disco en equilibrio hidrostático y se resuelven las ecuaciones de transporte y conservación de la energía. Las fuentes de energía tenidas en cuenta son la producida por la viscosidad del disco y la energía de radiación de la estrella central en la superficie del disco. Posteriormente, los valores de la densidad superficial y la viscosidad del gas en el plano medio del disco son utilizados para calcular la evolución temporal de la densidad superficial inicial. Para esto se resuelve la ecuación de difusión a la que se incorpora un término que representa un sumidero de material correspondiente a la fotoevaporaci\'on ($\dot{\Sigma}_W $) debida únicamente a la estrella central \citep[e.g]{pringle1981accretion, Octavio2017}
+
+\begin{equation} 
+  \frac{\partial \Sigma_{\text{g}}} {\partial t}= \frac{3}{r}\frac{\partial}{\partial r} \left[ r^{1/2} \frac{\partial}{\partial r} \left( \nu \Sigma_{\text{g}} r^{1/2}  \right) \right] + \dot{\Sigma}_W (r),
+\label{eq:disk_evol}
+\end{equation}
+
+en donde $\nu = \alpha h c_{s} $, $\alpha$ es un par\'ametro adimensional \citep{shakura1973black}. La p\'erdida de masa por fotoevaporaci\'on ocurre debido a que la radiación emitida por la estrella central es capaz de aumentar la energía cinética de las moléculas del gas del disco más allá de su velocidad de escape.
+ 
+Nuestro modelo implementa las prescripciones para la tasa de p\'erdida de masa por fotoevaporaci\'on de RX derivadas por \citet{owen2010implementationfoto}:
+%\begin{eqnarray}
+    \begin{equation}
+        \dot{M}_{\mathrm{x}}= a\times 10 ^{-9}\left(\frac{M_{*}}{1M_{\odot}}\right)^{ b} %\times \\ \nonumber
+     \left(\frac{L_X}{10^{30} \mathrm{erg}~\mathrm{s}^{-1}} \right)^{1.14}\mathrm{M}_{\odot}\mathrm{a}^{-1}
+    \label{eq:Mpunto}
+    \end{equation}
+%\end{eqnarray}
+donde $a=6.25$ y $b=-0.068$ en la etapa de disco primordial. En la etapa de disco con agujero $a=4.8$ y $b=-0.148$. La luminosidad RX considerada es
+\begin{equation}
+    \mathrm{log}_{10}(L_{RX}[ergs^{-1}]) = 30.37 + 1.44\mathrm{log}\left( \frac{\mathrm{M}_{*}}{\mathrm{M}_{\odot}}\right).
+    \label{ec:lum_RX}
+\end{equation}
+La tasa fotoevaporaci\'on de FUV considerada por \citet{kunitoma2021tasas}: $\dot{M} = \int 2 \pi r \dot{\Sigma}_{\mathrm{FUV}}\mathrm{d}r$,
+\begin{align}
+    \dot{\Sigma}_{\mathrm{FUV}}(r\geq r _{\mathrm{FUV}}) = \dot{\Sigma}_{0} \left( \frac{L _{\mathrm{FUV}}}{10^{31.7}\mathrm{erg}~\mathrm{s}^{-1}} \right) \left( \frac{r}{4\text{ua}} \right)^{-2}
+\end{align}
+y $\dot{ \Sigma }_{ \mathrm{FUV} }(r<\mathrm{r}_{\mathrm{FUV}}) = 0$. $r_{\mathrm{FUV}} = 4 (\mathrm{M}_*/ \mathrm{M}_{\odot})$ au y $\dot{\Sigma}_{0} = 10^{-12}\mathrm{g}~\mathrm{cm}^{-2}\text{s}^{-1}$. Donde $L_{\mathrm{FUV}}$ esta dada por tres contribuciones principales: la luminosidad producida por la acreción estelar, de la fot\'osfera y la de la crom\'osfera.
+
+
+\subsection{Perfil de densidad superficial de gas}
+
+Siguiendo los resultados observacionales obtenidos por \cite{Andrews_2010}, el perfil radial de la densidad superficial inicial de gas viene dado por:
+\begin{align}
+    \Sigma_{gas} = \Sigma_{gas}^{0} \left(\frac{r}{r_c}\right)^{-\gamma} e^{-(r/r_c)^{2-\gamma}},
+    \label{eq:densi_inicial}
+\end{align}
+en donde $\Sigma_{gas}^{0}$ es una constante de normalización que depende de la masa inicial del disco, $r_{c}$ es el radio característico y $\gamma$ es el gradiente que define c\'omo se distribuye la densidad superficial del gas.
+
+\subsection{Condiciones iniciales}
+Para el c\'omputo de cada una de nuestras síntesis  poblacionales consideramos un conjunto de 100000 simulaciones estrella-disco. Las condiciones iniciales del modelo son tomadas de resultados observacionales. Los parámetros libres del modelo son: la masa de la estrella central $M_{*}$, la masa inicial del disco de gas $M_{gas}$ y el par\'ametro de viscosidad $\alpha$. La función de masa estelar inicial implementada es la obtenida por \cite{kroupa2001}. Para la distribución de probabilidad de masas estelares, tenemos que la pendiente para la densidad de probabilidad de ocurrencia de estrellas con masa $\text{M}_{*}$, esta dada por:
+
+\begin{equation}
+    \xi (\text{M}_{*}) = 
+   \begin{cases} 
+      M^{-0.3}_{*}              & \mbox{si } 0.01\text{M}_{\odot}\leq \text{M}_{*}< 0.08\text{M}_{\odot}   \\
+      M^{-1.3}_{*}              & \mbox{si } 0.08\text{M}_{\odot}\leq \text{M}_{*}< 0.5\text{M}_{\odot}   \\
+      M^{-2.3}_{*}              & \mbox{si } 0.5\text{M}_{\odot}\leq \text{M}_{*}< 10\text{M}_{\odot}.
+   \end{cases}
+\end{equation}
+Para obtener una muestra se considera el rango de valores de masas estelares $0.04-1.4~M_{\odot}$ discretizamos el continuo tomando intervalos de 0.01 en el rango 0.04-0.1$\mathrm{M}_{\odot}$ y 0.1 en el rango 0.1-1.4$\mathrm{M}_{\odot}$.
+
+La distribución estadística de masas de discos de gas es inferida para las protoestrellas ubicadas en Perseo por \cite{tychoniec2018vla}, la cual representa apropiadamente una población de discos en etapas tempranas (clases 0/I). Las masas de los discos siguen una distribución de probabilidad normal logarítmica donde el valor medio es $\mu_T = -1.49$ y la dispersión es $\sigma_T = 0.35$. El par\'ametro $\alpha$ asociado a la viscosidad toma valores discretos en el rango $10^{-4}$-$10^{-2}$. Se consideran cinco valores espaciados linealmente en  $\mathrm{log}(\alpha)$. La muestra de $\mathrm{log}(\alpha)$ sigue una distribución uniforme. Mientras que el radio característico del gas $r_{c}$, est\'a relacionado con la masa inicial del disco v\'{\i}a la Ec.~(\ref{eq:rc_md}) \citep{andrews2010protoplanetary}.
+\begin{align}
+    \frac{\text{M}_{\text{d}}}{2 \times 10^{-3} \mathrm{M}_{\odot}} = \left( \frac{r_{c}}{10~\text{ua}}\right)^{1.6}. 
+    \label{eq:rc_md}
+\end{align}
+Por \'ultimo, el valor del gradiente radial de la densidad superficial de gas para cada disco adoptamos el valor $\gamma=0.9$, el cual representa el valor medio derivado por \cite{Andrews_2010}. 
+
+\subsection{Tasa de formación estelar}
+
+Debido a que no todas las estrellas se forman simult\'aneamente, sino que a lo largo de una fracci\'on de vida del c\'umulo, consideramos una tasa de formación estelar en la s\'intesis poblacional. Siguiendo el trabajo de \cite{coleman2022dispersal} tenemos en cuenta una tasa de formación inicial $\mathrm{TFE}_{0}$ que permanece constante durante un millón de años. Posteriormente la formación estelar tiene una caída exponencial con un tiempo característico de decaimiento $t_{d}$, Ec. (\ref{eq:TFE}). 
+\begin{equation}     \label{eq:TFE}
+    \mathrm{TFE} \propto \mathrm{TFE}_{0} 
+      \begin{cases}
+           1 & t <  \mathrm{1 Ma} \\ 
+          \exp \left[ \frac{-(t- \mathrm{1 Ma})^{2}}{t^{2}_{d}} \right] & t \geq \mathrm{1 Ma}
+      \end{cases}
+\end{equation}
+
+\section{Resultados}
+
+Para entender cómo la magnitud límite de detección afecta los tiempos medios de disipación inferidos de la fracción de (sub)estrellas con discos en función de la edad del cúmulo realizamos simulaciones con diferentes valores del límite inferior en la distribución de masas estelares. En particular consideramos masas estelares límites de $0.04~\mathrm{M}_{\odot}$, $0.1~\mathrm{M}_{\odot}$ y $1.0~\mathrm{M}_{\odot}$. Para analizar el impacto de considerar una tasa de formación estelar elemental, estudiamos el caso en el que todas las estrellas\footnote{En este trabajo nos referimos a los objetos estelares, y subestelares, como estrellas.} se forman al mismo tiempo en nuestro c\'umulo y el caso en que las estrellas se forman con una tasa de formación con tiempos característicos de $\mathrm{t}_{d} =1$ y $5~\mathrm{Ma}$. 
+
+En este estudio nos enfocamos en estrellas individuales, cuya fracción total observada es del ~55\% \citep{Raghavan_2010} de las estrellas cercanas cercanas similares al Sol. Esto podría modificar los resultados hallados por la gran fracción de estrellas múltiples y debido a que, en el caso de un par binario, los tiempos de disipación dependen de la presencia de sus compañeros estelares y de su separación \cite{2012Krous}.
+
+\subsection{Fracción de estrellas con discos}
+
+En el panel izquierdo de la Fig.~\ref{Figura2}, analizamos el impacto de variar la masa l\'imite en la fracción de estrellas con discos. Debido a que las estrellas masivas dispersan los discos protoplanetarios m\'as eficientemente, los tiempos de disipación de los discos disminuyen al aumentar la masa l\'imite, lo que conduce a una disminución de la proporción de estrellas con discos para una misma región de formación estelar. El  resultado con masa l\'imite $1.0~\mathrm{M}_{\odot}$  muestra un gran acuerdo con los tiempos de vida característicos entre 2-3Ma obtenidos por \cite{MamajekE} (línea continua negra). Sin embargo no es posible reproducir los resultados de \cite{Pfalzner_2022} (líneas continuas roja y verde). Los paneles en centro y derecha de la Fig.~\ref{Figura2} muestran el resultado de incorporar una tasa de formación estelar. El resultado es un incremento en la fracción de estrellas con discos debido al incremento del tiempo de dispersión por considerar un tiempo inicial diferente de cero. 
+El panel central muestra el efecto de variar el tiempo de decaimiento sobre la s\'intesis cuya masa l\'imite es $0.04\mathrm{M}_{\odot}$. 
+Las observaciones están mejor representada por la síntesis poblacional en la que se considera una tasa de formación estelar. En particular, nuestra síntesis es capaz de reproducir la fracción de estrellas con discos para edades mayores a 10 Ma. En el panel derecho la masa l\'imite es de $1.0\mathrm{M}_{\odot}$, esto no introduce mejoras significativas.
+
+\subsection{Tasa de acreción de masa sobre estrella central}
+Comparamos nuestros resultados con las observaciones para las tasas de acreción observadas para los cúmulos de Lupus y Camaleón I. Lupus tiene una edad estimada de $\mathrm{~}1-1.5$ Ma y Camaleón I $\mathrm{~}2$ Ma \citep{manara2013}. 
+En la Fig.~\ref{Figura3}, se muestran las tasas de acreciones estelares considerando una tasa de formación estelar, y se comparan los resultados observacionales. Como resultado general, nuestro modelo logra reproducir los rangos de valores de tasa de acreción observados. También se observa que los sistemas con mayor tasa de acreción de material sobre la estrella central corresponden a los sistemas con $\alpha=10^{-2}$, las viscosidades altas producen altas tasas de acreci\'on.
+En el panel superior izquierdo se observa que las tasas de acreción observadas son mayores a las que se obtienen sin considerar tasa de formación. El panel superior central, al considerar una tasa de formación estelar con $\mathrm{t}_{d}=1$ Ma, las tasas de acreciones se incrementan, obteniendo un mejor acuerdo con las observaciones. Esto es debido a que al considerar un tiempo inicial del sistema, el tiempo de vida del sistema es menor, por lo que la tasa de acreción del material es mayor. Los resultados en el panel superior derecho muestran una leve mejora en la correlación, la densidad de puntos se incrementa en acuerdo con las observaciones, pero no introduce mejoras significativas.
+
+Las tasas de acreción vs. masas estelares obtenidas dependen fundamentalmente de la viscosidad y no reproducen la correlación observada. Determinar si esta característica esta determinada por el proceso evolutivo del disco, o es simplemente un subproducto de cómo las condiciones iniciales escalan con la masa estelar, es un problema abierto sin consenso en la literatura \cite{2017Ecol, manara2023ASPC}. En el caso de que la correlación surja de la eficiencia en el trasporte de material, explorar relación $\alpha  \propto \mathrm{M}_{*}$ que conducen a reproducir la correlación 
+las observaciones es de interés para trabajo futuro. Variar la tasa de formación estelar (panel inferior central y panel inferior derecho) en la síntesis no muestra cambios significativos.
+
+\section{Conclusiones}
+Encontramos que la fracción de estrellas con discos, como función de la edad de nuestra síntesis, está determinada por las estrellas de menor masa. De modo que el efecto de no considerar la distancia a las regiones de formación estelar subestima la fracción de estrellas con discos de manera importante. 
+A su vez para poder reproducir las altas tasas de acreci\'on de material sobre las estrellas centrales, es necesario considerar en el modelo una  formación estelar extendida en el tiempo. 
+Mostramos que la dependencia de la tasa de acreción con la viscosidad es importante, discos con alta viscosidad tiene altas tasas de acreci\'on; por el contrario, una baja viscosidad produce baja tasa de acreci\'on.
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

@@ -1,0 +1,352 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Soluciones hidrodinámicas para vientos impulsados por radiación en regiones de transición}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Soluciones hidrodinámicas para vientos en regiones de transición}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{M.C. Fernandez\inst{1}, R.O.J. Venero\inst{1,2}, L.S. Cidale\inst{1,2}, I. Araya \inst{3} \& M. Cur\'e \inst{4}
+}
+
+\authorrunning{Fernandez et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{melinafernandez@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Departamento de Espectroscopía, Facultad de Ciencias Astronómicas y Geofísicas, UNLP, Argentina \and Instituto de Astrofísica de La Plata, CONICET–UNLP, Argentina \and Centro Multidisciplinario de F\'isica, Universidad Mayor, Chile \and Instituto de Física y Astronomía, Facultad de Ciencias, Universidad de Valparaíso, Chile
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{La teor\'ia est\'andar para modelar los vientos impulsados por radiaci\'on de las estrellas masivas es la teor\'ia m-CAK, que describe la fuerza de radiaci\'on por medio de tres par\'ametros: $k$, $\alpha$ y $\delta$. El parámetro $\delta$, que describe los cambios en la ionizaci\'on del medio, determina dos tipos de soluciones para las ecuaciones hidrodin\'amicas de vientos con baja o nula rotaci\'on. Estas soluciones se llaman $``$r\'apidas$"$ y $``\delta$-lentas$"$, las cuales poseen velocidades terminales muy diferentes. Las soluciones r\'apidas y lentas est\'an separadas entre s\'i por una regi\'on (llamada brecha), en el espacio del par\'ametro $\delta$, en la que, hasta el momento, no se han encontrado soluciones estacionarias. En este trabajo utilizamos el c\'odigo hidrodin\'amico dependiente del tiempo ZEUS-3D para resolver la ecuaci\'on de movimiento siguiendo la evoluci\'on temporal de una solucion inicial dada, para encontrar soluciones pertenecientes a la brecha. Estas nuevas soluciones presentan un quiebre o \textit{kink} en la pendiente de la ley de velocidad, ubicado a una distancia fija desde la estrella, la cual depende del valor de $\delta$. Además, investigamos si esta discontinuidad podr\'ia dar lugar a la presencia de componentes discretas en absorci\'on. Para evaluar esta posibilidad, resolvemos la ecuaci\'on de transporte de radiaci\'on para medios en movimiento, fuera de equilibrio termodinámico local, y analizamos los perfiles de l\'inea sint\'eticos para Si~{\sc iv}.}
+
+\abstract{The theoretical framework for modeling radiation-driven winds in hot stars is the “m-CAK theory”, which describes the radiation force using three parameters: $\alpha$, $\delta$, and $k$. In particular, $\delta$ introduces changes in the ionization of the material and can lead to two different types of solutions for the hydrodynamic equations of slowly or non-rotating winds. These solutions, known as the “fast” and “$\delta$-slow” solutions, are principally distinguished by their markedly different terminal velocities. Both solutions are separated by a gap in the parameter space of $\delta$, where no stationary solutions have been found so far. In this study, we employ the time-dependent hydrodynamic code ZEUS-3D, to solve the equation of motion, tracking the temporal evolution from a specified initial solution to obtain solutions in the gap. These novel solutions exhibit a stationary kink in the velocity profile at a fixed distance from the star, the position of which depends on the value of $\delta$. Here, we investigated if this discontinuity can lead to Discrete Absorption Components, solving the transfer equation in the comoving frame along with the non-local thermodynamic equilibrium rate equations to compute ultraviolet synthetic line-profiles for Si {\sc iv}.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ hydrodynamics --- stars: early-type --- stars: mass-loss --- stars: winds, outflows}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}
+El mecanismo que impulsa al viento de las estrellas masivas es la transferencia de momento desde el campo de radiaci\'on a las part\'iculas que componen la atm\'osfera estelar (plasma). Estos son vientos impulsados por radiaci\'on, y est\'an descriptos mediante la teor\'ia m-CAK (o CAK modificada, \citeauthor{Pauldrach1986}~\citeyear{Pauldrach1986}; \citeauthor{friendabbott1986}~\citeyear{friendabbott1986}). Esta teoría modela la aceleraci\'on de las part\'iculas debida a la presi\'on de radiaci\'on, para estrellas con rotaci\'on. En este caso, la fuerza de radiación debida a líneas espectrales utiliza tres parámetros: $k$, $\alpha$ y $\delta$ con distinto significado físico \citep{abbott1982}. De acuerdo al valor de algunos de estos parámetros, pueden encontrarse distintas soluciones hidrodinámicas para las ecuaciones que modelan el viento estelar. En particular, para estrellas de baja rotación, distintos valores del parámetro $\delta$ dan lugar a las soluciones llamadas “r\'apidas” ($\delta < \delta_{\textnormal{min}}\approx 0.2$), las cuales generan vientos con altas velocidades terminales, y las soluciones “$\delta$-lentas” ($\delta > \delta_{\textnormal{max}} \approx 0.24$), cuyas velocidades terminales son considerablemente m\'as bajas \citep{cure2011}. Estas soluciones, están separadas entre sí por una región (llamada brecha) para la que, hasta el momento, no se han encontrado soluciones estacionarias \citep{venero2016}.
+
+El principal objetivo de este trabajo es buscar soluciones estacionarias en la regi\'on de la brecha. Para ello, usamos un c\'odigo hidrodin\'amico dependiente del tiempo, que permite encontrar soluciones estacionarias pasando previamente por un estado transitorio. De esta manera, es posible encontrar soluciones correspondientes a la región de la brecha, y se observa que presentan una estructura de quiebre o \textit{kink} en la pendiente de la ley de velocidad. Esta estructura podría ser la causa de una característica observada en algunos perfiles de l\'ineas ultravioletas (UV) de las estrellas supergigantes B, conocida como Componentes Discretas en Absorci\'on (cuya sigla en ingl\'es es DACs). Las DACs son un tipo de variabilidad espectral que consiste en una componente en absorci\'on superpuesta a un perfil de l\'inea de tipo P~Cygni que, con el tiempo, se desplaza hacia el borde azul del perfil (por ejemplo, ver~\citeauthor{1989howarthprinja}~\citeyear{1989howarthprinja}). Suelen observarse en las l\'ineas de resonancia UV de elementos ionizados, como Si {\sc iv}, N {\sc v} o C {\sc iv}.
+
+Para poner a prueba esta hipótesis, en este trabajo se calculan perfiles UV de Si {\sc iv} utilizando las leyes de velocidad obtenidas. Para este fin, se emplean c\'odigos hidrodin\'amicos que resuelven la ecuaci\'on de movimiento y, por otra parte, un c\'odigo para la resoluci\'on del transporte de radiaci\'on. En este \'ultimo, se incluye el ensanchamiento Stark cuadr\'atico\footnote{Considerando interacciones entre electrones libres e iones.}, como mecanismo adicional de ensanchamiento sobre el ensanchamiento térmico o Doppler.
+
+Este trabajo se estructura de la siguiente manera: en la Sección~\ref{teoria} se describe la teoría m-CAK para estrellas rotantes y sus posibles soluciones. En la Sección~\ref{codigos} se presentan los códigos num\'ericos utilizados. En la Sección~\ref{resultados} se muestran las soluciones encontradas y los perfiles correspondientes, junto con una discusión de estos resultados. En la Sección~\ref{conclusiones} se presentan las conclusiones y el trabajo a futuro.
+
+\section{Teor\'ia m-CAK}\label{teoria}
+En esta secci\'on, se presenta la teor\'ia m-CAK bajo las hip\'otesis de simetr\'ia esf\'erica (es decir, una sola dimensi\'on radial) y estado estacionario. La fuerza de radiaci\'on producida por las l\'ineas se modela utilizando el concepto de multiplicador de fuerza introducido por \citet*{castorak1975} y \citet{abbott1982}. Siguiendo el planteo desarrollado en \citet{2023curearayareview}, se utilizan las ecuaciones de continuidad de masa,
+\begin{equation}\label{1}
+  \dot{M} = 4 \pi r^2 \rho v = \textnormal{constante,}
+\end{equation}
+donde $r$, $\rho$ y $v$, son la coordenada radial, la densidad de masa y la velocidad respectivamente, mientras que $\dot{M}$ es la tasa de p\'erdida de masa, y la ecuaci\'on de conservaci\'on de momento,
+\begin{equation}\label{eq-mov}
+\left(1- \frac{a^2}{v^2} \right) v \frac{dv}{dr} = \frac{2a^2}{r} + g_{\textnormal{eff}} (r) + g_{\textnormal{rad}}^L (r,v,dv/dr) \textnormal{,}
+\end{equation}
+donde $a$ es la velocidad del sonido isot\'ermica. La gravedad efectiva, $g_{\textnormal{eff}}$, est\'a dada por:
+\begin{equation}
+g_{\textnormal{eff}} (r) = - \frac{G M_* (1 - \Gamma)}{r^2} \left(1 - \Omega^2 \frac{R_*}{r} \right) \textnormal{,}
+\end{equation}
+donde $G$ es la constante de gravitación universal, $M_*$ es la masa de la estrella, $R_*$ es su radio y $\Omega$ es el cociente entre la velocidad de rotaci\'on y la velocidad rotacional cr\'itica ($v_{crit}$) en el ecuador de la estrella, $\Omega = v_{rot} / v_{crit}$ ($0<\Omega<1$). Adem\'as, $\Gamma$ es el factor de Eddington, que introduce el efecto de la aceleraci\'on de la radiaci\'on de continuo, la cual es dominada por la dispersi\'on Thomson por electrones libres. Por otro lado, la aceleraci\'on debida a las l\'ineas, $ g_{\textnormal{rad}}^L$, est\'a dada por:
+\begin{equation}\label{4}
+ g_{\textnormal{rad}}^L (r,v,dv/dr) = \frac{C}{r^2} CF \left( \frac{n_e}{W(r)} \right)^{\delta} \left(r^2 v \frac{dv}{dr} \right)\textnormal{,}
+\end{equation}
+donde $n_e$ es la densidad electr\'onica, $W(r)$ es el factor de diluci\'on, $CF$ es el factor de correcci\'on que considera el tamaño finito del disco estelar (que a su vez depende de $r$, $v$ y $dv/dr$), y $C$ est\'a dado por:
+\begin{equation}
+  C = k G M_* \Gamma \left(\frac{4 \pi}{\sigma_e \dot{M} v_{th}} \right)^{\alpha}\textnormal{,}
+\end{equation}
+donde $\sigma_e$ es el coeficiente de absorci\'on por dispersi\'on de Thomson, y $v_{th}$ es la velocidad t\'ermica (velocidad media de los iones que conducen el gas). Por lo tanto, la aceleraci\'on de radiaci\'on debida a las l\'ineas queda parametrizada mediante $\alpha$, $k$ y $\delta$. El par\'ametro $\alpha$ se puede interpretar como la proporci\'on de l\'ineas \'opticamente gruesas respecto a las l\'ineas totales, mientras que $k$ est\'a asociado a la cantidad efectiva de l\'ineas que absorben momento del campo de radiaci\'on. Por otro lado, el par\'ametro $\delta$ representa el cambio en la ionizaci\'on a lo largo del viento. La combinaci\'on de distintos valores posibles para estos par\'ametros, especialmente el par\'ametro $\delta$, da lugar a distintos tipos de soluciones, como se ver\'a a continuaci\'on.
+
+
+\subsection{Familias de soluciones}
+La resoluci\'on de la Ec.~\ref{eq-mov} permite obtener la ley de velocidad $v(r)$ que rige el viento estelar. As\'i, se pueden encontrar tres familias de soluciones:
+\begin{itemize}
+\item Soluciones r\'apidas (o cl\'asicas): Corresponden a soluciones con baja rotaci\'on ($\Omega \lesssim 0.75$) y $\delta < \delta_{\textnormal{min}}$, teniendo valores altos de velocidad terminal \citep{Pauldrach1986,friendabbott1986}.
+\item Soluciones $\Omega$-lentas: Soluciones con alta rotaci\'on ($\Omega \gtrsim 0.75$) y $\delta < \delta_{\textnormal{min}}$, que alcanzan bajos valores de velocidad terminal \citep{cure2004,venero2016}.
+\item Soluciones $\delta$-lentas: Se obtienen para vientos con baja rotación y $\delta > \delta_{\textnormal{max}}$, alcanzando velocidades terminales menores que las obtenidas para las soluciones rápidas \citep{cure2011}.
+
+\end{itemize}
+En este trabajo, estudiaremos soluciones r\'apidas y $\delta$-lentas para estrellas supergigantes B, ya que estos objetos son rotadores lentos. Las soluciones r\'apidas y $\delta$-lentas, est\'an separadas entre s\'i por una brecha en el espacio del par\'ametro $\delta$. Esta brecha consiste en un intervalo de valores de $\delta$, para el que, con anterioridad a este trabajo, no se hab\'ian encontrado soluciones estacionarias, generándose una brecha de transición entre soluciones rápidas y lentas \citep{venero2016}.
+
+\section{C\'odigos num\'ericos}\label{codigos}
+A continuaci\'on, se presentan los c\'odigos num\'ericos empleados para resolver las ecuaciones hidrodin\'amicas del viento y el transporte de radiaci\'on.
+
+\subsection{C\'odigos Hydwind y ZEUS-3D}
+Para obtener las soluciones, se adoptan valores t\'ipicos para los par\'ametros $\alpha$, $k$ y $\delta$, y se resuelven las ecuaciones que determinan la ley de velocidad. Se hace uso de dos c\'odigos: Hydwind \citep{cure2004} y ZEUS-3D \citep{clarke1996,clarke2010}. El primero resuelve las ecuaciones hidrodin\'amicas en simetr\'ia esf\'erica y en estado estacionario, mientras que el segundo considera tambi\'en la dependencia temporal (se utiliza una adaptaci\'on desarrollada por \citeauthor{araya2018}, \citeyear{araya2018}). Mediante el c\'odigo Hydwind se encuentran soluciones r\'apidas y $\delta$-lentas, junto con la ubicaci\'on de la regi\'on de la brecha, delimitando los valores de $\delta$ para los que no se logra la convergencia. Por otra parte, el c\'odigo ZEUS-3D utiliza una soluci\'on inicial dada (en este caso empleamos soluciones encontradas con Hydwind), y calcula su evoluci\'on temporal hacia una soluci\'on final, seg\'un los par\'ametros $\alpha$, $k$ y $\delta$ dados en la entrada. Variando el valor de $\delta$, es posible obtener soluciones dentro de la regi\'on de la brecha, adem\'as de reobtener las r\'apidas y las $\delta$-lentas.
+
+\subsection{C\'odigo MULITAS}
+El c\'odigo MULITAS~(\textit{MUlti LIne Transfer for Active Stars}, \citeauthor{venerocidaleringuelet2000},~\citeyear{venerocidaleringuelet2000}) basado en \citet{mihalaskunasz1978}, resuelve el transporte radiativo para una atm\'osfera en expansi\'on fuera del equilibrio termodinámico local, con simetr\'ia esf\'erica en el marco de referencia del fluido (\textit{comoving frame}), para \'atomos de Si {\sc iv} de 6 niveles m\'as el continuo. Aqu\'i se incorporan las leyes de velocidad obtenidas previamente con el c\'odigo ZEUS-3D.
+
+\section{Resultados}\label{resultados}
+Para modelar una estrella supergigante B, se adoptaron los siguientes par\'ametros: T$_{\textnormal{eff}} = 18\,000~\mathrm{K}$, $\log\,g = 2.5$, $R_* = 23~\mathrm{R}_{\odot}$, $\Omega = 0.27$, $\alpha = 0.515$ y $k = 0.104$, mientras que, para $\delta$, se utilizaron valores sucesivos para barrer todas las soluciones posibles (r\'apidas, lentas, y en la brecha). Estos par\'ametros corresponden a la estrella HD~41117 modelada por \citet{venero2024}, quienes hallaron dos soluciones posibles para ajustar el perfil observado de H$\alpha$ (una r\'apida y una $\delta$-lenta). Aqu\'i adoptamos los valores promedios para $k$ y $\alpha$ obtenidos a partir de ambos ajustes en ese trabajo. Utilizando el c\'odigo Hydwind, se determina que la regi\'on de la brecha en este modelo corresponde al intervalo $0.20<\delta<0.24$. 
+\subsection{Leyes de velocidad}
+En la Fig.~\ref{vel-fast-slow} se muestran algunas soluciones obtenidas con ZEUS-3D, correspondientes a los reg\'imenes r\'apido y $\delta$-lento, separadas entre s\'i por la regi\'on de transici\'on. En la Fig.~\ref{vel-gap} se presentan las nuevas soluciones obtenidas mediante ZEUS-3D, para los valores del par\'ametro $\delta$ que comprenden la regi\'on de la brecha. Luego, en la Fig.~\ref{vel-todas} se pueden ver todas las soluciones encontradas: r\'apidas, $\delta$-lentas, y en la regi\'on de la brecha. Puede observarse que estas soluciones muestran una regi\'on interna cuya dependencia en $u = -R_*/r$ es muy similar y que representa una transici\'on continua entre todas las soluciones. Sin embargo, en el interior de la brecha, aparece un marcado cambio en la pendiente $dv/du$ que da lugar a un \textit{kink} o quiebre. A medida que se disminuye el valor de $\delta$, este \textit{kink} se va desplazando hacia afuera. De este modo, puede verse que el c\'odigo ZEUS-3D predice un empalme continuo de las soluciones a un lado y a otro de la brecha. Es de destacar que cada una de estas soluciones, a\'un teniendo un \textit{kink}, son estacionarias. Es decir, al dejar transcurrir el tiempo en ZEUS-3D, luego de la convergencia, se observa que estas soluciones mantienen su forma. Eso implica que los \textit{kinks} en las leyes de velocidad pueden permanecer fijos a determinadas distancias de la estrella o, si las condiciones de ionizaci\'on cambiaran (modificando el par\'ametro $\delta$), estos \textit{kinks} podr\'ian desplazarse a lo largo del viento.
+\begin{figure}[!t]
+\centering
+\includegraphics[angle=270,width=0.9\columnwidth]{zeus-fast-slow.pdf}
+\caption{Leyes de velocidad obtenidas con el c\'odigo ZEUS-3D en el r\'egimen r\'apido ($0.0 \leq \delta \leq 0.2$) en l\'ineas continuas, y $\delta$-lento ($0.24 \leq \delta \leq 0.4$) en l\'ineas a trazos.}
+\label{vel-fast-slow}
+\end{figure}
+\begin{figure}[!t]
+\centering
+\includegraphics[angle=270,width=0.9\columnwidth]{zeus-gap.pdf}
+\caption{Nuevas leyes de velocidad obtenidas con el c\'odigo ZEUS-3D en la regi\'on de la brecha. Para comparaci\'on, se incluyen (en color gris) la última solución rápida ($\delta = 0.2$) y la primera $\delta$-lenta ($\delta = 0.24$), a ambos lados de la brecha.}
+\label{vel-gap}
+\end{figure}
+\begin{figure}[!t]
+\centering
+\includegraphics[angle=270,width=0.91\columnwidth]{zeus-all.pdf}
+\caption{Leyes de velocidad obtenidas con el c\'odigo ZEUS-3D para los distintos valores de $\delta$: r\'egimen r\'apido $0.0~\leq~\delta~\leq~0.2$ (azules), brecha $0.21~\leq~\delta~\leq~0.238$ (verdes), r\'egimen $\delta$-lento $0.24~\leq~\delta~\leq~0.4$ (rojos).}
+\label{vel-todas}
+\end{figure}
+
+\subsection{Perfiles de Si {\sc iv}}
+En la Fig.~\ref{perfiles} se muestran perfiles del doblete Si {\sc iv} $\lambda\lambda$1394 y 1403~\AA~en el UV, obtenidos para los reg\'imenes r\'apido (panel superior), en la brecha (medio) y $\delta$-lento (inferior). Se compara el perfil obtenido considerando un ensanchamiento Doppler, y un ensanchamiento Stark cuadr\'atico (que genera un perfil de Voigt). A pesar de presentar un cambio brusco en la pendiente de la ley de velocidad, no resulta evidente que estos \textit{kinks} produzcan una componente discreta. Sin embargo, resulta notorio el cambio en las componentes en emisi\'on de los perfiles P~Cygni, las cuales pr\'acticamente desaparecen en los perfiles Voigt. Aunque esto parecer\'ia descartar a los \textit{kinks} como generadores de las DACs, se puede mencionar que, en algunos reg\'imenes transitorios previos a la obtenci\'on de la soluci\'on estacionaria, fue posible observar la formaci\'on de estas componentes. Para que se produzcan componentes DACs, los \textit{kinks} deber\'ian ser considerablemente m\'as abruptos que los encontrados. Este comportamiento transitorio necesita ser explorado con m\'as detalle.
+
+\section{Conclusiones}\label{conclusiones}
+Adoptando la parametrizaci\'on de la teor\'ia m-CAK para la descripci\'on de los vientos impulsados por radiaci\'on en las estrellas masivas de baja o nula rotaci\'on, es posible encontrar soluciones hidrodin\'amicas r\'apidas y $\delta$-lentas. En este trabajo se explor\'o la regi\'on de transici\'on entre dichas soluciones, haciendo uso de un c\'odigo hidrodin\'amico dependiente del tiempo. As\'i se encontraron nuevas soluciones en dicha regi\'on, las cuales son estacionarias y presentan un quiebre o \textit{kink} en la ley de velocidad. Para las soluciones encontradas, se calcularon perfiles de l\'inea de Si {\sc iv} en el UV, adoptando un ensanchamiento Stark cuadr\'atico, mediante el c\'odigo de resoluci\'on de transporte radiativo MULITAS. Analizando los perfiles de l\'inea resultantes, los quiebres obtenidos en las soluciones hidrodin\'amicas no son suficientes para generar las DACs observadas en los espectros de las estrellas supergigantes B. Es importante mencionar que este es un primer intento de modelar el viento en las condiciones de la brecha, y de obtener observables (perfiles de l\'inea) bajo este r\'egimen mixto de viento. Resulta necesario extender este modelado a diferentes tipos de estrellas supergigantes para obtener conclusiones más generales. Este an\'alisis, junto con la obtención de perfiles de línea de otros elementos, permitirán una comparación más amplia con las observaciones, estableciendo rangos de aplicabilidad de estas nuevas soluciones hidrodinámicas en el viento de las supergigantes B.
+\begin{figure}[!t]
+\centering
+\includegraphics[angle=270,width=0.92\columnwidth]{comparaciones.pdf}
+\caption{Perfiles de l\'inea y leyes de velocidad obtenidos para cada r\'egimen del viento. \emph{Panel superior izq.:} soluci\'on r\'apida. \emph{Panel medio izq.:} soluci\'on que corresponde a la brecha. \emph{Panel inferior izq.:} soluci\'on $\delta$-lenta. Los perfiles de l\'inea se muestran en los paneles de la derecha.}
+\label{perfiles}
+\end{figure}
+
+
+\begin{acknowledgement}
+  MCF agradece el soporte de la Beca de Entrenamiento de la Comisi\'on de Investigaciones Cient\'ificas de la Provincia de Buenos Aires. 
+ROJV y LSC agradecen el apoyo financiero del Proyecto PIP 1337 (CONICET) y del Programa de Incentivos 11/G160 (UNLP). MC agradece el apoyo financiero brindado por el Centro de Astrofísica de Valparaíso. IA y MC agradecen al FONDECYT proyecto 1230131. % Se agradece por el uso de ZEUS-3D, desarrollado por D.A. Clarke en el ICA (www.ica.smu.ca) con apoyo financiero de NSERC. 
+%Use of ZEUS-3D, developed by D. A. Clarke at the ICA (www.ica.smu.ca) with financial support from NSERC, is acknowledged.
+Este proyecto recibió financiamiento de la Unión Europea en el marco del programa POEMS $``$Programme for Research and Innovation Horizon 2020 (2014-2020) under the Marie Sk\l{}odowska-Curie Grant Agreement No. 823734$"$.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{cites}
+ 
+\end{document}

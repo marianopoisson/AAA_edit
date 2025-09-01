@@ -1,0 +1,407 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, Figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Una aproximación a la cinemática de los cúmulos abiertos de la Vía Láctea}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Cinemática de los cúmulos abiertos de la Vía Láctea}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+L.A. Becerra\inst{1},
+M.L. Remaggi\inst{1,2}
+\&
+A.E. Piatti\inst{1,2}
+}
+
+\authorrunning{Becerra et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{lbecerra@est.fcen.uncu.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Exactas y Naturales, UNCuyo, Argentina \and   
+Instituto Interdisciplinario de Ciencias B\'asicas, CONICET--UNCuyo, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Los cúmulos abiertos de la Vía Láctea muestran una distribución perpendicular al plano galáctico que aumenta con la distancia galactocéntrica. Este resultado observacional no ha podido aún ser reproducido satisfactoriamente por los modelos y simulaciones numéricas existentes. En este trabajo, generamos e implementamos un código en lenguaje FORTRAN que permite integrar numéricamente las trayectorias de partículas de prueba en el potencial de nuestra Galaxia, con el fin de representar el comportamiento de los cúmulos abiertos. Para ello, consideramos condiciones iniciales adecuadas para los cúmulos abiertos de nuestra Galaxia, y analizamos la distribución en la coordenada perpendicular al plano galáctico de las trayectorias obtenidas con la finalidad de identificar los mecanismos que la producen.}
+
+\abstract{Open clusters in the Milky Way exhibit a distribution perpendicular to the galactic plane that increases with galactocentric distance. This observational finding has not yet been satisfactorily reproduced by existing models or numerical simulations. In this study, we develop and implement a FORTRAN code to numerically integrate the trajectories of test particles within within our Galaxy’s gravitational potential, aiming to capture the behavior of open clusters. To achieve this, we carefully choose initial conditions for the open clusters in our Galaxy and analyze the resulting distribution in the coordinate perpendicular to the galactic plane of trajectories to identify the underlying mechanisms.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{methods: numerical --- open clusters and associations: general --- Galaxy: kinematics and dynamics}
+
+\begin{document}
+
+\maketitle
+\section{Introducción} \label{Intro}
+
+La disposición espacial de los cúmulos abiertos (CA) en la Vía Láctea ha desconcertado a la comunidad científica al revelar una distribución en altura (perpendicular al plano galáctico) que aumenta con la distancia galactocéntrica, según se observa en las órbitas computadas por \cite{Tarricq} (ver Fig. \ref{fig:tarricq})  y en el catálogo de \cite{Dias}; desafiando así las expectativas teóricas y las simulaciones numéricas existentes (por ejemplo, \citeauthor{Martinez-Medina}, \citeyear{Martinez-Medina}), las cuales sugieren que los CA que alcanzan mayores alturas sobre el plano galáctico son aquellos con distancias galactocéntricas menores. Con el objetivo de encontrar una respuesta conciliadora, hemos desarrollado e implementado un código computacional en lenguaje FORTRAN, diseñado para integrar numéricamente las trayectorias de partículas de prueba en un modelo del potencial gravitatorio de nuestra Galaxia, para simular aquellas de los CA, especialmente su distribución en altura con respecto al plano Galáctico.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=\columnwidth]{distribucion_en_altura_tarricq.png}
+    \caption{Distribución en altura en función del semieje mayor de la órbita para los CA de la Vía Láctea, las cuales han sido computadas por \cite{Tarricq}.}
+    \label{fig:tarricq}
+\end{figure}
+
+Consideramos a la Vía Láctea constituida por un disco, un bulbo, y una estructura esferoidal o halo caracterizado por la presencia de gran cantidad de materia oscura. El disco galáctico es la componente de mayor tamaño, en la cual se forman CA que han desempeñado un papel fundamental en la comprensión de la dinámica galáctica y han sido trazadores fundamentales de sus propiedades globales, como puede verse en los trabajos de \cite{Monteiro} y \cite{cantat}. En este trabajo desarrollamos un código computacional capaz de simular la distribución espacio-temporal de los CA en la Vía Láctea. Hemos prestado particular atención en reproducir su distribución en altura sobre el plano galáctico, a partir de un cuidadoso análisis de las condiciones iniciales de nuestras simulaciones numéricas.
+
+El presente trabajo está estructurado en las siguientes secciones: la sección \ref{Metodo} describe en detalle la generación de condiciones iniciales y el método de integración de las trayectorias de partículas de prueba en el potencial gravitatorio de la Vía Láctea; en la sección \ref{Resultados} presentamos los resultados de las simulaciones numéricas, destacando la distribución espacial de los CA en relación con la distancia galactocéntrica y la altura sobre el plano galáctico; en la sección \ref{Errores} evaluamos la propagación de errores en las integraciones numéricas, identificando posibles fuentes de incertidumbre y limitaciones en nuestro enfoque; y finalmente la sección \ref{Conclu} sintetiza las contribuciones claves del trabajo, discutiendo la concordancia entre los resultados numéricos y las observaciones, así como las implicaciones para la comprensión de la formación y evolución de la Vía Láctea. A través de esta aproximación, aspiramos a enriquecer la comprensión de los mecanismos que subyacen a la distribución peculiar de CA en nuestra Galaxia, proporcionando un marco sólido para futuras investigaciones en este campo de la astrofísica.
+
+\section{Metodología}\label{Metodo}
+
+ Utilizamos como referencia el catálogo de 1743 CA de \cite{Dias} y el catálogo de 1382 CA con parámetros orbitales computados por \cite{Tarricq}. A partir de esa información, generamos en total cinco mil partículas de prueba en tres muestras distintas, dependiendo de la edad (tiempo de integración). De acuerdo a la distribución observada de edades de los CA, la primera muestra contiene el $75\%$ del total de CA simulados, la segunda contiene el $14\%$ y la tercera el $11\%$, y sus trayectorias se integraron por una cantidad de pasos en la variable temporal que representan $500~\mathrm{Myr}$, $1~\mathrm{Gyr}$ y $2~\mathrm{Gyr}$, para cada muestra respectivamente.
+
+\subsection{Modelo del potencial galáctico}\label{potencial}
+
+Modelamos la Galaxia con un potencial estático axisimétrico $\Phi$ constituido por tres componentes: bulbo, disco y halo de materia oscura de la forma:
+
+\begin{equation}
+    \Phi = \Phi_{\mathrm{b}} + \Phi_{\mathrm{d}} + \Phi_{\mathrm{h}} \;.
+\end{equation}
+
+Adoptamos potenciales de \cite{MiyamotoNagai} para el bulbo y el disco:
+
+\begin{equation}
+    \Phi_{\mathrm{b}} + \Phi_{\mathrm{d}} = \sum_{i=1}^{2} -\frac{GM_i}{\sqrt{R_{\mathrm{GC}}^{2}+\left(a_i+\sqrt{z^{2}+b_i^{2}}\right)^{2}}} \;,
+\end{equation}
+
+\noindent con $M_1 = 1.43 \cdot 10^{10} \, \mathrm{M_\odot}$, $a_1 = 0.0 \, \mathrm{kpc}$ y $b_1 = 0.3873 \, \mathrm{kpc}$ representando la masa y las dimensiones del bulbo, respectivamente, y $M_2 = 8.58 \cdot 10^{10} \, \mathrm{M_\odot}$, $a_2 = 5.3178 \, \mathrm{kpc}$ y $b_2 = 0.25 \, \mathrm{kpc}$ representando la masa y las dimensiones del disco galáctico, respectivamente, donde los parámetros corresponden a los utilizados por \cite{Allen_&_Santillan}.
+
+Adoptamos un potencial logarítmico para el halo
+
+\begin{equation}
+    \Phi_{\mathrm{h}} = \frac{v_0^{2}}{2}\ln{(R_{\mathrm{GC}}^{2}+z^{2}q^{-2}+d^{2})} \;,
+\end{equation}
+
+\noindent donde $v_0 = 186 \, \mathrm{km~s^{-1}}$ representa la velocidad de rotación en la región del halo, $q=1$ da la relación entre los ejes de las superficies equipotenciales y $d=12 \, \mathrm{kpc}$ es una longitud de escala \citep{Vande_Putte}. 
+
+Con este modelo de potencial calculamos las trayectorias de los CA tomando las posiciones y velocidades iniciales de \cite{Wu} y para cada una de ellas obtuvimos los siguientes parámetros orbitales: el semieje mayor $a$ y la altura máxima $z_{\mathrm{max}}$. En la Fig. \ref{fig:comparacion_de_parametros} se muestra una comparación entre estos parámetros obtenidos por \cite{Wu} y los calculados con el modelo utilizado en este trabajo. Se observa que para la mayoría de los CA los parámetros obtenidos son consistentes entre sí.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=\columnwidth]{combined_plots.png}
+    \caption{Comparación de la altura máxima (izquierda) y el semieje mayor (derecha) entre las órbitas obtenidas por \cite{Wu} y las del modelo utilizado en este trabajo.}
+    \label{fig:comparacion_de_parametros}
+\end{figure}
+
+\subsection{Condiciones iniciales}\label{condiniciales}
+
+Generamos condiciones iniciales realistas para las partículas de prueba con posiciones y velocidades en un sistema de coordenadas cilíndricas. La coordenada radial sigue un perfil de densidad de \cite{MiyamotoNagai} con los parámetros del disco galáctico descritos en la sección \ref{potencial} utilizando el método aceptación/rechazo de Von Neumann \citep{Numerical_Recipes}, ya que el perfil de densidad no es invertible. Los CA fueron generados dentro del intervalo $4~\mathrm{kpc} < R_{\mathrm{GC}} < 16~\mathrm{kpc}$, que es el intervalo dónde se tienen observaciones de CA con parámetros astrofísicos bien establecidos \citep{Dias}. La coordenada angular sigue una distribución uniforme. Con el objetivo de reproducir la distribución espacial observada (Fig. \ref{fig:tarricq}), propusimos para la coordenada $z$ inicial, condiciones distintas según la muestra. Estas fueron generadas con la consideración de que las estrellas más jóvenes del disco nazcan en regiones más cercanas al plano Galáctico, y con menos velocidad vertical \citep{ting2019vertical}. La primera muestra ($500~\mathrm{Myr}$) sigue una distribución gaussiana con media $\mu_z = 0$ y desviación estándar $\sigma_z = 0.01 \, \mathrm{kpc}$. La segunda ($1~\mathrm{Gyr}$) tiene media $\mu_z = 0$ y desviación estándar $\sigma_z = 0.02 \, \mathrm{kpc}$, mientras que la última ($2~\mathrm{Gyr}$) tiene $\mu_z = 0$ y desviación estándar $\sigma_z = 0.05 \, \mathrm{kpc}$. La velocidad angular sigue el perfil de la curva de rotación de la Galaxia \citep{Monteiro}, mientras que la velocidad radial es distinta para cada muestra, según \cite{Tarricq}: la primera muestra sigue una distribución gaussiana con media $\mu_{v_R} = 0$ y desviación $\sigma_{v_R} = 19.11~\mathrm{km~s^{-1}}$; la segunda sigue una media $\mu_{v_R} = 0$ y desviación $\sigma_{v_R} = 20.51~\mathrm{km~s^{-1}}$; y la última sigue una media $\mu_{v_R} = 0$ y desviación $\sigma_{v_R} = 26.86~\mathrm{km~s^{-1}}$. Para la velocidad vertical exploramos el caso en que la misma sea nula \citep{Martinez-Medina} y obtuvimos resultados que no se asemejan a la distribución observada. Por este motivo, realizamos pruebas considerando una distribución gaussiana para la componente vertical de la velocidad con diferentes dispersiones $\sigma_{v_z}$ para las tres muestras, hasta dar con aquellos parámetros que mejor replican la distribución observacional: $\mu_{v_z} = 0$ y $\sigma_{v_z} = 10~\mathrm{km~s^{-1}}$ para la muestra joven, $\mu_{v_z} = 0$ y $\sigma_{v_z} = 12~\mathrm{km~s^{-1}}$ para la muestra de edad intermedia y $\mu_{v_z} = 0$ y $\sigma_{v_z} = 17~\mathrm{km~s^{-1}}$ para la más vieja. Además, exploramos la posibilidad de considerar una distribución de velocidades uniforme para las tres muestras. Estas velocidades las obtuvimos considerando valores aproximados de $\sigma_{v_z}$, $2\sigma_{v_z}$ y $3\sigma_{v_z}$ para la muestra más vieja. Concretamente, realizamos simulaciones con velocidades de $15~\mathrm{km~s^{-1}}$ para la primera muestra, $30~\mathrm{km~s^{-1}}$ para la segunda y $50~\mathrm{km~s^{-1}}$ para la última, respectivamente. Para la integración numérica de las trayectorias de las partículas de prueba utilizamos el método Runge-Kutta de cuarto orden en coordenadas cartesianas en un código que genera las condiciones iniciales e integra numéricamente \citep{Numerical_Recipes}. 
+
+\section{Resultados}\label{Resultados}
+
+Obtuvimos las trayectorias de las partículas de prueba generadas, y analizamos las alturas máximas alcanzadas para períodos de integración de $500~\mathrm{Myr}$, $1~\mathrm{Gyr}$ y $2~\mathrm{Gyr}$, respectivamente.   
+
+Realizamos un análisis de comparación para la muestra de 2 Gyr entre nuestros resultados y los de \cite{Dias} y de \cite{Tarricq}. Para ello, nos restringimos únicamente a los CA de los catálogos con edades mayores a $1.5~\mathrm{Gyr}$. Un análisis de los CA más jóvenes se realizará en un trabajo posterior. Calculamos el promedio aritmético de la altura máxima alcanzada en función del semieje mayor, en intervalos de $2~\mathrm{kpc}$. Luego, a partir de un ajuste lineal, obtuvimos la pendiente $\beta$ de cada distribución. Obtuvimos $\beta = 0.040 \pm 0.022$ para \cite{Dias} (Fig. \ref{fig:promedio_dias}) y $\beta = 0.060 \pm 0.035$ para \cite{Tarricq} (Fig. \ref{fig:promedio_tarricq}).
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\columnwidth]{promedio_de_altura_dias.png}
+    \caption{Promedio de altura de CA para el catálogo de \cite{Dias}.}
+    \label{fig:promedio_dias}
+\end{figure}
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\columnwidth]{promedio_de_altura_tarricq.png}
+    \caption{Promedio de altura de CA para el catálogo de \cite{Tarricq}.}
+    \label{fig:promedio_tarricq}
+\end{figure}
+
+En las Fig. \ref{fig:prueba260} y \ref{fig:prueba255} graficamos el módulo de la altura máxima alcanzada $z_{\mathrm{max}}$ de cada órbita en función del semieje mayor $a$ para las simulaciones realizadas con velocidades gaussianas y uniformes, respectivamente. Calculamos el promedio de la altura alcanzada en función del semieje mayor en intervalos de $2~\mathrm{kpc}$ únicamente para la muestra de $2~\mathrm{Gyr}$ y obtuvimos $\beta = 0.026 \pm 0.004$ para el caso de velocidades gaussianas (Fig. \ref{fig:promedio_de_altura_260}) y $\beta = 0.047 \pm 0.007$ para el caso de velocidades uniformes (Fig. \ref{fig:promedio_de_altura_255}).
+
+\begin{figure}[!h]
+    \centering
+    \begin{minipage}{\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{prueba260_1.png}
+        \caption{Altura máxima alcanzada en función del semieje mayor de la órbita para $5000$ CA luego de la integración numérica para una distribución inicial de velocidades gaussianas.}
+        \label{fig:prueba260}
+    \end{minipage}
+    
+    \vspace{1em} % Ajusta el espacio vertical entre las dos Figuras
+    
+    \begin{minipage}{\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{promedio_de_altura_prueba_260.png}
+        \caption{Promedio de altura de los CA con distribución inicial de velocidades verticales gaussianas con edad de $2~\mathrm{Gyr}$.}
+        \label{fig:promedio_de_altura_260}
+    \end{minipage}
+\end{figure}
+
+
+
+\begin{figure}[!h]
+    \centering
+    \begin{minipage}{\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{prueba255_1.png}
+        \caption{Altura máxima alcanzada en función del semieje mayor de la órbita para $5000$ CA luego de la integración numérica para una distribución inicial de velocidades uniforme.}
+        \label{fig:prueba255}
+    \end{minipage}
+    
+    \vspace{1em} % Ajusta el espacio vertical entre las dos Figuras
+    
+    \begin{minipage}{\columnwidth}
+        \centering
+        \includegraphics[width=\columnwidth]{promedio_de_altura_prueba_255.png}
+        \caption{Promedio de altura de los CA con distribución inicial de velocidades verticales uniformes con edad de $2~\mathrm{Gyr}$.}
+        \label{fig:promedio_de_altura_255}
+    \end{minipage}
+\end{figure}
+
+\section{Análisis de errores}\label{Errores}
+
+Integramos las trayectorias orbitales de la muestra de 2 Gyr 
+100 veces, utilizando un muestreo de Monte Carlo de  las incertidumbres en las posiciones y velocidades, tomadas de \cite{Dias}, y asumimos distribuciones gaussianas. Adoptamos como incertidumbres de los parámetros orbitales obtenidos  las desviaciones estándar resultantes de dichas integraciones. La Fig. \ref{fig:errores} muestra las incertezas individuales calculadas para $10$ partículas de prueba elegidas aleatoriamente de la muestra de $2~\mathrm{Gyr}$ con velocidades gaussianas.
+
+\begin{figure}[!h]
+    \centering
+    \includegraphics[width=\columnwidth]{errores.png}
+    \caption{Incertezas para $10$ CA elegidos aleatoriamente.}
+    \label{fig:errores}
+\end{figure}
+
+\section{Resumen y Conclusiones}\label{Conclu}
+
+Generamos e implementamos un código en FORTRAN que permite integrar las trayectorias de CA bajo la acción del potencial de la Vía Láctea. Simulamos el comportamiento de partículas de prueba con condiciones iniciales capaces de representar CA y obtuvimos una distribución en altura (para la muestra que integramos durante $2~\mathrm{Gyr}$) que muestra un buen acuerdo con la distribución observacional correspondiente a los CA con edad mayor a $1.5~\mathrm{Gyr}$ de los catálogos de \cite{Dias} y \cite{Tarricq}, observando una altura máxima que aumenta con la distancia galactocéntrica.
+
+Para el caso en que la distribución de la componente vertical de las velocidades iniciales es gaussiana con una desviación de $17~\mathrm{km~s^{-1}}$, no se logra un buen ajuste lineal. Además, las alturas máximas alcanzadas por las partículas de prueba resultan menores que las obtenidas por \cite{Tarricq}. Esta diferencia parecería aumentar con la distancia galactocéntrica (ver figuras \ref{fig:promedio_tarricq} y \ref{fig:promedio_de_altura_260}), lo que sugiere una posible dependencia de $\sigma_{v_z}$ con $R$. Exploraremos esta posibilidad en futuros trabajos. 
+
+Los resultados indican un mejor ajuste para las simulaciones con distribución de velocidades uniforme, dando un buen acuerdo con los resultados de \cite{Dias} y \cite{Tarricq}.
+
+Por lo tanto, la distribución en altura observada de los CA, no explicada satisfactoriamente por ningún modelo hasta el presente, puede reproducirse bajo la simple consideración de una distribución de velocidades iniciales en la dirección vertical. Dado que el modelo utilizado no incluye efectos perturbativos, como brazos espirales o una barra, las partículas de prueba simuladas en este trabajo no tienen mecanismos para ganar energía que se traduzca en una componente vertical de velocidades. Sin embargo, esta distribución de velocidades en la dirección perpendicular al plano galáctico está de acuerdo con el escenario de formación del disco galáctico \citep[ver][]{burkert}: los CA más viejos se formaron en el disco grueso que colapsó hacia el disco fino, donde se formaron los CA más jóvenes. Por este motivo, los CA más viejos pueden tener componentes de velocidades en $z$ mayores que los más jóvenes, al mismo tiempo que se los puede encontrar a mayores alturas sobre el plano galáctico \citep[ver][]{Piatti}. Esto sugiere que, aunque los CA pueden haber nacido con estas velocidades, también es posible que las hayan adquirido a través de diferentes mecanismos dinámicos a lo largo de su vida.
+
+\begin{acknowledgement}
+Agradecemos los comentarios y sugerencias realizadas por el árbitro, que contribuyeron significativamente para mejorar la calidad de este trabajo. Este trabajo fue realizado con fondos del proyecto FONCYT PICT-2020-SERIEA-01914 y del Programa de Integración FCEN-UNCUYO.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

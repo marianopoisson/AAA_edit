@@ -1,0 +1,391 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{13 May 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Estudio espectrofotom\'etrico de cuatro c\'umulos abiertos \\de caracter\'isticas poco conocidas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Estudio integral de c\'umulos abiertos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{F.O. Simondi-Romero\inst{1,2}, A.V. Ahumada\inst{2,3},
+J.J. Clari\'a\inst{2,3}
+\&
+M.A. Oddone\inst{2}
+}
+
+\authorrunning{Simondi-Romero et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{federico.simondi.romero@unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Facultad de Matem\'atica, Astronom\'ia, F\'isica y Computaci\'on, UNC, Argentina \and Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{A partir de datos {\sl Gaia} y el ajuste de is\'ocronas te\'oricas de \'ultima generaci\'on, se derivan enrojecimiento, distancia, edad y metalicidad para cuatro c\'umulos abiertos de la V\'ia L\'actea de caracter\'isticas poco conocidas, a saber: ESO 559-SC02, Ruprecht 15, Ruprecht 38 y Teutsch 65. Estos par\'ametros fueron obtenidos no s\'olo a partir de diagramas color-magnitud construidos usando datos del cat\'alogo {\sl {Gaia}}, sino tambi\'en utilizando espectros integrados obtenidos en el CASLEO (Argentina). Como segundo resultado, usando movimientos propios, distancias y velocidades radiales, se determina por primera vez la \'orbita de ESO 559-SC02.}
+
+\abstract{Using {\sl Gaia} data and the fitting of most recent theoretical isochrones, reddening, distance, age and metallicity are derived for four Milky Way's open clusters of poorly known characteristics, namely: ESO 559-SC02, Ruprecht 15, Ruprecht 38 and Teutsch 65. These parameters were obtained both from color-magnitude diagrams constructed using data from the {\sl {Gaia}} catalog and also using integrated spectra obtained at CASLEO (Argentina). As a second result, based on proper motions, distances and radial velocities, the orbit of the open cluster ESO 559-SC02 is determined for the first time.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{open clusters and associations: general --- techniques: photometric --- techniques: spectroscopic}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}
+Los c\'umulos estelares (CEs) pueden considerarse bloques primordiales en la evoluci\'on gal\'actica, ya que sus estrellas se formaron pr\'acticamente en la misma \'epoca y con la composici\'on qu\'imica presente en la nube originaria \citep{J00}. Esto permite, en general, comparar los CEs con modelos te\'oricos de poblaciones estelares simples, ya que posibilita estudiar y modelar los procesos de evoluci\'on estelar \citep{SC05}. Conocer las propiedades f\'isicas (\textrm{v.g.}, edad, composici\'on qu\'imica), din\'amicas (\textrm{v.g.}, movimientos propios) y estructurales (\textrm{v.g.}, distribuci\'on de masa) de un sistema de CEs como el de la V\'ia L\'actea (VL), tanto como de aqu\'ellos ubicados en otras galaxias a elevados {\em redshift} \citep{BL24}, resulta fundamental para entender los procesos de formaci\'on y evoluci\'on de nuestra y otras galaxias \citep{GR11}. El estudio integrado de CEs en la era {\sl Gaia}, es decir, el an\'alisis conjunto de datos fotom\'etricos, espectrosc\'opicos y din\'amicos de los mismos, supone el pr\'oximo escal\'on para arribar a una mejor comprensi\'on de la formaci\'on y evoluci\'on de la VL y, por consiguiente, de otras galaxias similares.
+
+En este trabajo se determinan enrojecimiento, distancia, edad y metalicidad para cuatro c\'umulos abiertos (CAs) de la VL de caracter\'isticas poco conocidas y, a partir de datos cinem\'aticos, se calcula la \'orbita de uno de ellos. En la Sec.~\ref{s_2} se presenta la muestra seleccionada, mientras que en la Sec.~\ref{s_3} se comentan los m\'etodos empleados para determinar los par\'ametros astrof\'isicos. En la Sec.~\ref{s_4} se presentan los resultados y en la Sec.~\ref{s_5} se examina la din\'amica de uno de los c\'umulos de la muestra. Finalmente, en la Sec.~\ref{s_6} se resumen las principales conclusiones de este trabajo.
+
+\section{Datos}\label{s_2}
+La muestra de CAs seleccionada en este estudio (Fig.~\ref{fig1}) se presenta en la Tabla~\ref{tabla1}, junto con las coordenadas ecuatoriales absolutas y gal\'acticas y los di\'ametros angulares tomados de \cite{AH03} o \cite{K06}. Para el presente trabajo se descargaron datos fotom\'etricos y astrom\'etricos del {\em Data Release 3} \citep{B22} de la misi\'on {\sl Gaia} (\citealt{G16}) en regiones circulares centradas en cada objeto, usando los radios angulares de los mismos.
+Los espectros integrados de los cuatro CAs seleccionados se obtuvieron con el telescopio “Jorge Sahade” de $2.15~{\mathrm{m}}$ del CASLEO desplazando en declinaci\'on el telescopio a fin de colectar con la ranura $(2.25' \times 5'')$ del espectr\'ografo toda la luz proveniente del CA (\citealt{ACB07}). La reducci\'on de los espectros y posterior calibraci\'on en flujo se llev\'o a cabo usando distintas tareas de {\sc IRAF}.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.496\linewidth]{image1.png}~\hfill \includegraphics[width=0.496\linewidth]{image2.png}~\vfill \includegraphics[width=0.496\linewidth]{image3.png}~\hfill \includegraphics[width=0.496\linewidth]{image4.png}
+\caption{Im\'agenes de los c\'umulos abiertos estudiados obtenidas de Aladin. \emph{Panel sup. izq.:}\,ESO 559-SC02. \emph{Panel sup. der.:}\,Ru 15. \emph{Panel inf. izq.:}\,Ru 38. y \emph{Panel inf. der.:}\,Teu 65. Los c\'irculos celestes representan los di\'ametros angulares adoptados de cada objeto.}
+\label{fig1}
+\end{figure}
+
+\begin{table}[!t]
+\centering
+\caption{Coordenadas gal\'acticas, ecuatoriales absolutas y di\'ametro angular de los objetos de la muestra.}
+\begin{tabular}{lccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Objeto & \!\!l & \!\!b & \!\!$\alpha_{2000.0}$ & \!\!$\delta_{2000.0}$ & \!\!d \\ \!\! & \!\![°] & \!\![°] & \!\![h m s] & \!\![° '\,''] & \!\![']\\
+\hline\noalign{\smallskip}
+\!\!ESO 559-SC02 & \!\!232.5 & \!\!-2.7 & \!\!07 18 05.6 & \!\!-18 35 42 & \!\!1.2\\
+\!\!Ruprecht 15 & \!\!233.5 & \!\!-2.9 & \!\!07 19 31.7 & \!\!-19 37 48 & \!\!2.0\\
+\!\!Ruprecht 38 & \!\!237.6 & \!\!+3.2 & \!\!07 50 29.0 & \!\!-20 11 06 & \!\!2.0\\
+\!\!Teutsch 65 & \!\!266.2 & \!\!-1.5 & \!\!08 50 32.5 & \!\!-46 29 47 & \!\!2.1\\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+\section{M\'etodo}\label{s_3}
+\subsection{Fotometr\'ia}
+Para cada objeto seleccionado se construy\'o un diagrama color-magnitud (DCM) siguiendo el proceso descripto en \cite{B23}, el cual consiste en seleccionar estrellas cuyos errores en magnitud fueran inferiores a 0.022 en el filtro G (\citealt{G18}). Luego, se seleccionaron los posibles miembros de cada CA teniendo en cuenta los movimientos propios, la paralaje estelar y su error relativo de acuerdo al procedimiento descripto por \cite{P22}. En este trabajo se realiz\'o una segunda selecci\'on variando el di\'ametro angular de cada objeto de manera de incluir posibles miembros m\'as alejados del centro. Finalmente, la muestra se refin\'o seleccionando s\'olo aquellas estrellas que presentaban un error en sus paralajes (positivas) menor al 30$\%$ (\citealt{L18}). Para cada selecci\'on de estrellas, se construy\'o el correspondiente DCM $(G - G_\mathrm{RP},G)$ de los filtros G y $G_\mathrm{RP}$ de {\sl Gaia} y se ajustaron visualmente diferentes is\'ocronas te\'oricas para el sistema fotom\'etrico de {\sl Gaia}, todas obtenidas del c\'odigo {\sc PARSEC} (\citealt{Br12}) en su \'ultima versi\'on (CMD 3.7\footnote{\url{http://stev.oapd.inaf.it/cgi-bin/cmd_3.7}}). El mejor ajuste de la is\'ocrona de una determinada edad y metalicidad permiti\'o determinar con precisi\'on razonable el exceso de color $E[G - G_\mathrm{RP}]$ y el m\'odulo de distancia. Tanto para la manipulaci\'on de los datos como para la construcci\'on de los DCM, se utiliz\'o siempre el programa {\sc TopCat} ({\em Tool for OPerations on Catalogues And Tables}, \citealt{T17}).
+
+\subsection{Espectroscop\'ia integrada}
+La metodolog\'ia aplicada para la determinaci\'on espectrosc\'opica de enrojecimiento y edad consisti\'o en medir anchos equivalentes de las l\'ineas de Balmer para usarlos como primer indicador de edad y aplicar luego el “m\'etodo de ajuste de {\em templates}”, utilizando el {\em software} {\sc FISA} (\citealt{B12}) descripto en trabajos anteriores (\textrm{\textbf{v.g.}}, \citealt{C17}). En este proceso, se utilizaron las bases de {\em templates} de metalicidad solar de \cite{P02} y \cite{ACB07}. La elecci\'on final del {\em template} que mejor ajusta el espectro observado del c\'umulo se realiz\'o teniendo en cuenta el flujo residual calculado como $(F_\mathrm{c\acute{u}mulo} - F_\mathrm{template}) / F_\mathrm{c\acute{u}mulo}$, ya que de esta manera se tiene en cuenta el buen acuerdo logrado entre la profundidad de las líneas y la forma del continuo.
+
+\section{An\'alisis de datos}\label{s_4}
+
+A continuaci\'on, por razones de espacio, se presenta el an\'alisis detallado de dos CAs de la muestra: ESO 559-SC02 y Ruprecht 15, en tanto que los resultados derivados para toda la muestra se presentan en la Tabla~\ref{tabla2}.
+
+\subsection{ESO 559-SC02}
+En la Fig.~\ref{fig2}a se presenta el DCM de ESO 559-SC02 y las is\'ocronas del mejor ajuste. En dicho diagrama se representan con c\'irculos rojos todos los objetos dentro de la regi\'on observada, y aquellos que a partir de nuestro an\'alisis ser\'ian miembros, se presentan como c\'irculos negros. En rojo con borde negro se presentan los miembros proyectados dentro de la regi\'on observada, los que al ser tenidos en cuenta confieren mayor confianza a la determinaci\'on de los par\'ametros astrof\'isicos del objeto. El aporte de estas \'ultimas al espectro integrado depender\'a de su posici\'on en el DCM. En la Fig.~\ref{fig2}b se presenta en rojo el espectro integrado del c\'umulo, en azul el {\em template} ajustado  y en verde el flujo residual entre ambos espectros. Se han aplicado constantes para desplazar los mismos.
+
+ESO 559-SC02 resulta ser un CA de $2 \times 10^9$ a\~nos y metalicidad solar seg\'un su DCM, con $E[G - G_\mathrm{RP}] = 0.37$ y un m\'odulo de distancia de $14.45~\mathrm{mag}$ ($7.8~\mathrm{kpc}$), en buen acuerdo con la distancia estad\'istica de $8.0~\mathrm{kpc}$ obtenida a partir de la astrometr\'ia de {\sl Gaia}. N\'otese la presencia en el DCM de una estrella gigante roja brillante $(G = 12.9\, \mathrm{mag})$, la cual tambi\'en aporta al espectro integrado. Si se relajan las condiciones de pertenencia, los c\'irculos rojos en la regi\'on inferior del DCM que contin\'uan la tendencia de la is\'ocrona son posibles miembros del c\'umulo, mientras que los c\'irculos rojos en la regi\'on superior son claramente estrellas de primer plano. Estos \'ultimos objetos afectan ligeramente la regi\'on azul del espectro elevando el flujo total, como se aprecia en el flujo residual. El espectro integrado de ESO 559-SC02 se ajusta mejor con el {\em template} Ia de $10^9$ a\~nos y $E[B - V] = 0.35$.
+
+\cite{O18} determinaron tentativamente una edad de $(2 - 3) \times 10^9$ a\~nos para ESO 559-SC02, mientras que \cite{B19} s\'olo reportan este este objeto como un candidato a CA, sin determinar sus par\'ametros astrof\'isicos.
+
+\subsection{Ruprecht 15}
+En las Figs.~\ref{fig3}a y ~\ref{fig3}b se presentan el DCM de Ruprecht 15 y las is\'ocronas del mejor ajuste y el espectro integrado y su mejor ajuste, respectivamente. Los colores corresponden de la misma manera que para ESO 559-SC02.
+
+Ruprecht 15 es entonces un CA de $7 \times 10^8$ a\~nos y metalicidad solar seg\'un su DCM, con $E[G - G_\textrm{RP}] = 0.20$ y m\'odulo de distancia $12.4~\mathrm{mag}$ (3.0 kpc), mientras que la distancia estad\'istica es $2.7~\mathrm{kpc}$. Puede apreciarse a partir del DCM que, entre las estrellas consideradas miembros, las dos m\'as brillantes fueron observadas con aportes similares al espectro. Si se relajan las condiciones de pertenencia, los c\'irculos rojos en la regi\'on inferior del DCM que contin\'uan la tendencia de la is\'ocrona son potenciales miembros, aunque por supuesto puede existir contaminaci\'on por estrellas del campo responsables de algunas diferencias en el ajuste del espectro integrado. El mejor ajuste del espectro observado se logra con el {\em template} Yh de $5 \times 10^8$ a\~nos, adoptando $E[B - V] = 0.31$. Debe tenerse presente que las librer\'ias de espectros {\em templates} son discretas en edad y que el template que contin\'ua al antes mencionado corresponde a $10^9$ a\~nos, con el cual no se logra un buen ajuste.
+
+Usando datos del cat\'alogo {\sl 2MASS} (\citealt{S06}), \cite{T12} deriva para este c\'umulo $E[B - V] = 0.65$, un m\'odulo de distancia de $11.9~\mathrm{mag}$ y una edad de $5 \times 10^8$ a\~nos, con abundancia solar. \cite{K13}, por su parte, reportan $E[B - V] = 0.31$, un m\'odulo de distancia de $12~\mathrm{mag}$ y una edad de $6 \times 10^8$ a\~nos, mientras que \cite{P17} no lo considera un CA y \cite{L17} derivan $E[B - V] = 0.27$, $12.68~\mathrm{mag}$ y $10^9$ a\~nos, respectivamente.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.5\linewidth]{eso559-hrd.pdf}\includegraphics[width=.5\linewidth]{eso559_Ia.pdf}
+    \caption{Ajustes realizados sobre ESO 559-SC02. Panel izq.: DCM con las is\'ocronas propuestas como los mejores ajustes; Panel der.: espectro integrado corregido por enrojecimiento en rojo, {\em template} Ia en azul y flujo residual en verde.}
+    \label{fig2}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.5\linewidth]{ru15-hrd.pdf}\includegraphics[width=.5\linewidth]{rup15_yh.pdf}
+    \caption{Ajustes realizados sobre Ruprecht 15. Panel izq.: DCM con las is\'ocronas propuestas como los mejores ajustes; Panel der.: espectro integrado corregido por enrojecimiento en rojo, {\em template} Yh en azul y flujo residual en verde.}
+    \label{fig3}
+\end{figure}
+
+\section{Din\'amica}\label{s_5}
+En las Figs.~\ref{fig4} y \ref{fig5} se presentan proyecciones de la \'orbita de ESO 559-SC02 sobre distintos planos y la \'orbita completa del c\'umulo en tres dimensiones, respectivamente, esta \'ultima obtenida a partir de los datos estad\'isticos determinados con {\sc TopCat}, usando un potencial de \cite{M75} con par\'ametros de \cite{AS91}. Si bien existen nuevos par\'ametros en la bibliograf\'ia, este an\'alisis se encuentra en su etapa de prueba y espera poder ser ampliado en futuros trabajos.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.46\linewidth]{1.pdf}
+    \hfill
+    \includegraphics[width=.46\linewidth]{3.pdf}
+    \includegraphics[width=.46\linewidth]{2.pdf}
+    \hfill
+    \includegraphics[width=.46\linewidth]{blank.pdf}
+    \caption{Proyecciones de la \'orbita de ESO 559-SC02 sobre diferentes planos en violeta. Los peque\~nos c\'irculos negro y verde representan la posici\'on actual del c\'umulo y del Sol, respectivamente.}
+    \label{fig4}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=.71\linewidth]{4.pdf}
+    \caption{\'Orbita en tres dimensiones de ESO 559-SC02. Los peque\~nos c\'irculos negro y verde representan la posici\'on actual del c\'umulo y del Sol, respectivamente.}
+    \label{fig5}
+\end{figure}
+
+\begin{table*}[!t]
+\centering
+\caption{Par\'ametros derivados para los CAs de este trabajo.}
+\begin{tabular}{lcccccc}
+\hline\hline\noalign{\smallskip}
+\!\!Objeto & \!\!Edad is\'ocrona & \!\!Z is\'ocrona & \!\!$E[G - G_{RP}]$ & \!\!M\'odulo de distancia & \!\!Edad template & \!\!$E[B - V]$ \\
+\!\! & \!\!$\times 10^9$ a\~nos & \!\! & \!\! & \!\! & \!\!$\times 10^9$ a\~nos & \!\! \\
+\hline\noalign{\smallskip}
+\!\!ESO 559-SC02 & \!\! $2.0 \pm 0.1$ & \!\!$Z_{Solar}$ & \!\!$0.37 \pm 0.02$ & \!\!$14.45 \pm 0.02$ & \!\!1 & \!\!$0.35 \pm 0.02$\\
+\!\!Ruprecht 15 & \!\!$0.7 \pm 0.1$ & \!\!$Z_{Solar}$ & \!\!$0.20 \pm 0.02$ & \!\!$12.40 \pm 0.02$ & \!\!0.5 & \!\!$0.31 \pm 0.02$\\
+\!\!Ruprecht 38 & \!\!$2 \pm 1$ & \!\!$Z_{Solar}$ & \!\!$0.13 \pm 0.02$ & \!\!$12.68 \pm 0.02$ & \!\!2 & \!\!$0.00  \pm 0.02$\\
+\!\!Teutsch 65 & \!\!$1.2 \pm 0.2$ & \!\!$Z_{Solar}$ & \!\!$0.33 \pm 0.02$ & \!\!$12.65 \pm 0.02$ & \!\!0.4 & \!\!$0.25 \pm 0.02$\\
+\hline
+\end{tabular}
+\label{tabla2}
+\end{table*}
+
+\section{Conclusiones}\label{s_6}
+En la Tabla~\ref{tabla2} se presentan los par\'ametros aqu\'i determinados para los cuatro CAs seleccionados, de los cuales se desprenden las siguientes conclusiones.
+\begin{itemize}
+    \item Se determinaron par\'ametros astrof\'isicos de cuatro CAs a partir de dos t\'ecnicas diferentes, espectroscop\'ia y fotometr\'ia. Dado que en tres de los CAs analizados las edades calculadas son similares, se concluye que ambas t\'ecnicas resultan complementarias. Es decir, con el espectro integrado puede analizarse el objeto en su conjunto, en especial cuando dicho objeto no puede resolverse en estrellas individuales. Teu65 es un CA particular, el cual su estudio será profundizado en trabajos futuros.
+    \item En base al an\'alisis astrom\'etrico, fotom\'etrico y espectrosc\'opico del presente estudio es posible concluir que ESO 559-SC02 y Ruprecht 15 son CAs de aproximadamente $2 \times 10^9$ a\~nos y $7 \times 10^8$ a\~nos, respectivamente. Un an\'alisis similar sobre Ruprecht 38 y Teutsch 65 permite derivar los resultados consignados en la Tabla~\ref{tabla2}.
+    \item Si bien los par\'ametros determinados con datos {\sl Gaia} para objetos relativamente cercanos son verdaderamente precisos, en la actualidad no resultan suficientes para obtener resultados cient\'ificos confiables en objetos astron\'omicos m\'as distantes, tales como las Nubes de Magallanes. Por esta raz\'on, sigue siendo recomendable la aplicaci\'on de la t\'ecnica de espectroscop\'ia integrada para objetos extragal\'acticos.
+    \item Finalmente, la mejor comprensi\'on de los procesos a trav\'es de los cuales se form\'o la VL, y por ende otras galaxias similares, reside en el estudio de los gradientes actuales de metalicidad radial y perpendicular al plano Gal\'actico y en los denominados paleo-gradientes (\citealt{P95}). Con este prop\'osito, continuaremos determinando par\'ametros astrof\'isicos de CAs y utilizaremos los par\'ametros estad\'isticos calculados para integrar las \'orbitas de estos objetos y reconocer sus lugares de nacimiento para caracterizar la VL en metalicidad.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{acknowledgement}
+Based on data obtained at Complejo Astron\'omico El Leoncito (CASLEO), operated under agreement between the Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas de la Rep\'ublica Argentina and the National Universities of La Plata, C\'ordoba and San Juan.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}
+

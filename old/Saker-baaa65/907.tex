@@ -1,0 +1,372 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Determinación de tasas de acreción en enanas blancas DA con discos {\em debris}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Determinaci\'on de tasas de acreción en enanas blancas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+L. Saker\inst{1,2},
+L. Althaus\inst{3},
+\&
+E. Jofr\'e\inst{1,4}
+}
+
+\authorrunning{Saker et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{leilasaker88@unc.edu.ar} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Secretar{\'\i}a de Ciencia y Tecnolog{\'\i}a, UNC, Argentina
+\and
+Instituto de Astrof\'isica de La Plata, CONICET--UNLP, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En los \'ultimos años, el n\'umero de enanas blancas que acretan un disco de tipo {\em debris} ha aumentado significativamente. Dicho disco se forma mediante la destrucci\'on por efecto de marea de cuerpos rocosos menores que originalmente formaban un sistema planetario. La caracterizaci\'on de estos discos, por lo tanto, nos proporciona informaci\'on importante sobre el sistema planetario original. M\'as a\'un, la determinaci\'on de las tasas de acreci\'on nos permite estimar la masa de dicho sistema. En esta contribuci\'on, se realizan simulaciones num\'ericas utilizando el c\'odigo de evoluci\'on estelar LPCODE, con el objetivo de determinar las tasas de ca\'ida de material en una muestra de enanas blancas con atm\'osferas de hidr\'ogeno (DA) que tienen abundancias bien determinadas en la literatura. En las simulaciones, se tiene en cuenta el proceso f\'isico desestabilizante conocido como convecci\'on termohalina.}
+
+\abstract{In recent years, the number of white dwarfs accreting a debris disk has increased significantly. Such disk is formed by the tidal destruction of minor rocky bodies that originally formed a planetary system. The characterization of these disks, therefore, provides important information about the original planetary system. Moreover, the determination of the accretion rates allows us to estimate the mass of such a system. In this contribution, numerical simulations are performed using the LPCODE stellar evolution code to determine the material fall-out rates in a sample of white dwarfs with hydrogen atmospheres (DA) that have abundances well determined in the literature.  In the simulations, the destabilizing physical process known as fingering convection is taken into account.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ white dwarfs --- stars: abundances --- accretion, accretion disks}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}\label{S_intro}
+
+Al presente, está bien establecido que la presencia de planetas y cuerpos rocosos menores (como asteroides y
+cometas), es común alrededor de estrellas de secuencia principal. Más aún, se espera que estos sobrevivan a las
+distintas etapas de la evolución estelar \citep{2002ApJ...572..556D}. Teniendo en cuenta que las enanas blancas (EBs) son los
+remanentes estelares más comunes en la Galaxia, la búsqueda y caracterización de sistemas planetarios en estas
+estrellas ha sido sido objeto de considerable interés durante las últimas décadas.
+
+Se estima que entre el 25-50\% de las EBs con $T_{eff} \leq 2.5 \times 10^4$ K presentan elementos más pesados que He en sus atmósferas \citep{2003ApJ...596..477Z,2010ApJ...722..725Z,2014A&A...566A..34K}. Dado que las escalas de tiempo de sedimentación gravitatoria son mucho más cortas que el tiempo de enfriamiento evolutivo, estos elementos pesados detectados no pueden ser primordiales \citep{1986ApJS...61..197P}. Por otro lado, gracias a relevamientos llevados a cabo por misiones espaciales ({\sl Spitzer, WISE} y {\sl Gaia}) se conocen $\sim$60 EBs que además de tener metales en sus atmósferas, presentan excesos infrarrojos (IR) en sus distribuciones espectrales de energía \citep[SEDs,][]{2021MNRAS.508.3877G}. %Dicho exceso, se asoció a la presencia de un disco de polvo o tipo {\em debris}. Adicionalmente, se encontraron discos de gas en 20 de estas enanas blancas con discos {\em debris} (Gänsicke et al. 2006, 2007, 2008, Gentile-Fusillo et al. 2021) a través de la detección de líneas de emisión inusuales del triplete de Ca {\sc ii}.
+
+La detección de elementos pesados junto con los excesos IR en sus SEDs, se atribuyeron a la presencia de un disco de polvo o tipo {\em debris} que está siendo acretado por la estrella. Dicho disco se forma mediante la destrucción por efecto de marea de cuerpos rocosos menores que originalmente formaban un sistema planetario \citep{2003ApJ...584L..91J}. En los últimos años, la detección de planetesimales en desintegración alrededor de EBs con discos tipo {\em debris}, confirmó dicho modelo \citep{2015Natur.526..546V,2019Sci...364...66M,2020ApJ...897..171V}. Cabe destacar que la mayoría de los estudios espectroscópicos determinaron que los discos se formaron a partir de cuerpos rocosos cuya composición es en su
+mayoría similar a la composición global de la Tierra, siendo Fe, Mg, Si y O los elementos dominantes \citep{2014AREPS..42...45J,2019AJ....158..242X}.
+
+Por lo tanto, el estudio de las EBs contaminadas permite obtener la composición química de los planetesimales que orbitan a la estrella y comprender mejor los diversos procesos físicos que intervienen en la evolución de los sistemas planetarios. Más aún, la determinación de las tasas de acreción nos provee información acerca de la masa del sistema planetario original.
+
+Estimaciones previas de las tasas de acreción en EBs con discos {\em debris} asumen que el material acretado es mezclado homogéneamente en la zona de convección superficial, y luego difundido hacia el interior estelar \citep[{\em Mixing Length Theory, } ][] {1992ApJS...82..505D,2012MNRAS.424..464F,2014A&A...566A..34K}. Sin embargo, estas estimaciones no tienen en cuenta que el material acretado posee un peso molecular mayor al peso molecular de la atmósfera de la estrella. Este gradiente inverso en peso molecular produce turbulencias, las cuáles generan que el material acretado sea re-mezclado y diluido. Este proceso físico se conoce como {\em fingering convection} ó convección termohalina. Cabe señalar que sin la inclusión de este proceso físico, las tasas de acreción calculadas en EBs con envolturas de H son subestimadas en varios órdenes de magnitud \citep{2017A&A...601A..13W,2018ApJ...859L..19B,2019ApJ...872...96B}. 
+
+En esta contribución, realizamos simulaciones numéricas utilizando el código de evolución estelar LPCODE, con el objetivo de determinar tasas de caída de material en dos EBs de tipo espectral DA (atmósferas de H) con discos de polvo, y abundancias bien determinadas en la literatura.
+
+\section{Muestra analizada y LPCODE}
+
+Las estrellas fueron seleccionadas de la muestra de EBs que poseen un disco de polvo confirmado de la base de datos {\em Montreal White Dwarf Database (MWDD)}\footnote{\url{https://montrealwhitedwarfdatabase.org/home.html}}. Teniendo en cuenta que EBs con atmósferas de H desarrollan una envoltura convectiva a $T_{eff} \sim 1.5 \times 10^4$ K, elegimos dos objetos de tipo espectral DA, con temperaturas que permitieran asegurar la presencia de dicha envoltura y que tuvieran las abundancias de los elementos de interés bien determinadas en la literatura. Las características de G166$-$58 y PG 1541$+$651, las 2 EBs analizadas, se muestran en la Tabla \ref{tabla1}.
+
+\begin{table}[!t]
+\centering
+\caption{Características de las EBs analizadas, obtenidas
+de MWDD.}
+\begin{tabular}{lcccc}
+\hline\hline\noalign{\smallskip}
+\!\!EB & \!\!\!\!Tipo & \!\!\!\!$T_eff$& \!\!\!\! Masa & \!\!\!\!log g \!\!\!\!\\
+\!\! & \!\!\!\!Espectral & \!\!\!\![K]& \!\!\!\! [M$\odot$]& \!\!\!\ \\
+\hline\noalign{\smallskip}
+\!\!G166$-$58  &  DAZ & 11239 & 0.61 & 8.01 \\
+\!\!PG 1541$+$651  &  DAV & 7381 & 0.56 & 7.98 \\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+Para determinar las tasas de acreción, utilizamos el código de evolución estelar LPCODE \citep[ etc.]{2005A&A...435..631A,2015A&A...576A...9A,2016A&A...588A..25M}. Dicho código ha sido ampliamente probado y utilizado en diversos contextos de evolución estelar de estrellas de baja masa. \cite{2017A&A...601A..13W} adaptó LPCODE para poder simular los efectos de la caída de material tipo planetario sobre EBs:
+\begin{itemize}
+    \item Incorpora la convección termohalina, utilizando la teoría de la doble difusión desarrollada por \cite{1993ApJ...407..284G},
+    \item asume que la acreción es un proceso continuo y el material es distribuido uniformemente en la superficie de la estrella, 
+    \item permite seguir la evolución de elementos químicos que no se encontraban presentes en la versión original: Mg, Si, Ca y Fe,
+    \item permite establecer distintas abundancias para el material acretado
+\end{itemize}
+
+El código ha sido utilizado con éxito en la determinación de las tasas de acreción de WD 0307$+$077 y WD 2115$+$560, dos EBs con discos de polvo \citep[ver][]{2022JAE4...65..13L}.
+
+Para cada objeto, arrancamos con un modelo inicial de una EB de \cite{2010ApJ...717..183R} con una envoltura de H estándar (M$_H \sim 10^{-4}$ M$\odot$). Para G166$-$58 utilizamos un modelo inicial con una masa M $=$ 0.55 M$\odot$ y para PG 1541$+$651, M $=$ 0.60 M$\odot$. Dado que los modelos iniciales presentan temperaturas elevadas ($T_{eff} \sim 9 \times 10^4$ K), el primer paso fue enfriarlos, mientras se difundían sus elementos. Cuando la estrella llegó a una $T_{eff} \sim 5 \times 10^4$ K, agregamos los nuevos elementos con abundancias iniciales en proporciones solares. Finalmente, cuando el modelo llegó a la $T_{eff}$ de la estrella, detuvimos su enfriamiento y activamos la acreción. Dado que la mayoría de los estudios indican que la composición química del material acretado por EBs tiende a ser similar a la abundancia de distintos cuerpos rocosos del sistema solar, establecimos una abundancia tipo {\em bulk earth} para el material acretado \citep{2001E&PSL.185...49A}, y tomamos valores para las tasas de acreción entre $dM/dt = 10^6 - 10^{9.5} g/s$ \citep[ver][]{2022A&A...660A..30W}. Las opacidades radiativas que utilizamos, las obtuvimos de las tablas OPAL\footnote{\url{https://opalopacity.llnl.gov/existing.html}} para diferentes metalicidades.
+
+\section{Resultados obtenidos}
+La mejor aproximación a las abundancias obtenidas de la literatura para G166$-$58 y PG 1541$+$651, la obtuvimos con una tasa de acreción $dM/dt = 10^{6.2} g/s$ y $dM/dt = 10^9 g/s$, respectivamente. En la Tabla \ref{tabla2}, presentamos las abundancias reportadas en la literatura, y las abundancias obtenidas con nuestras simulaciones, para las tasas de acreción mencionadas. En el panel izquierdo de la Fig.~\ref{Figura1} se muestran los perfiles químicos internos obtenidos de los elementos H, He, O, Mg, Si, Ca, y Fe, para G166$-$58. En color rojo vemos la zona convectiva (CZ) donde el material es mezclado homogéneamente y por debajo de esta región observamos (en color azul) la zona de la convección termohalina (TCZ). Allí podemos ver que la abundancia de cada elemento disminuye ligeramente, debido al mezclado extra de material. 
+
+\begin{table*}
+\centering
+\caption{Abundancias de la literatura y obtenidas en este trabajo con el LPCODE para los objetos de la muestra.}
+\begin{tabular}{lccccc}
+\hline\hline\noalign{\smallskip}
+\!\!EB & \!\!\!\!$log(Mg/H)$ & \!\!\!\!$log(Si/H)$ & \!\!\!\!$log(Ca/H)$ & \!\!\!\!$log(Fe/H)$ & \!\!\!\!Ref.\\
+\hline\noalign{\smallskip}
+\!\!G166$-$58  & $-$8.1 & $<-$8.2 & $-$9.3 & $-$8.2 & \cite{2019AJ....158..242X} \\
+& $-$8.2 & $-$8.2 & $-$9.4 & $-$8.4 & este trabajo \\
+\!\!PG 1541$+$651  & $<-$6.5  &  $< -$5.70 & $-$7.4 & $<-$6.0 & \cite{2019AJ....158..242X} \\
+& $-$6.1 & $-$6.1 & $-$7.3 & $-$6.2 & este trabajo \\   
+\hline
+\end{tabular}
+\label{tabla2}
+\end{table*}
+
+ \begin{figure*}[!t]
+\centering
+\includegraphics[width=\columnwidth]{perfil-g166.pdf} %\\
+\includegraphics[width=\columnwidth]{tranlight-g166.pdf}
+\caption{\emph{Panel izquierdo:} Abundancia de los distintos elementos químicos analizados en función de la profundidad, para G166$-$58. En color rojo, se presenta la zona convectiva (CZ) y en azul la zona de la convección termohalina (TCZ). \emph{Panel derecho:} Evolución de la estructura estelar en función del tiempo, para G166$-$58. En color rojo, se presenta la zona convectiva y en azul la región de la convección termohalina.}
+\label{Figura1}
+\end{figure*}
+
+En el panel derecho de la Fig.~\ref{Figura1}, se presenta la evolución de la estructura estelar en función del tiempo para G166$-$58. Allí se puede ver que la zona de la TCZ crece rápidamente cuando comienza la acreción. Esto provoca que se diluyan los elementos pesados, y se reduzca la contaminación de la superficie.
+
+% \begin{figure*}[!t]
+%\centering
+%\includegraphics[width=\columnwidth]{tranlight-g166.pdf} %\\
+%\includegraphics[width=\columnwidth]{tranlight-pg1541.pdf}
+%\caption{Evolución de la estructura estelar en función del tiempo, para G166$-$58 (panel superior) y PG 1541$+$651 (panel inferior). En color rojo, se presenta la zona convectiva y en azul la región de la convección termohalina.}
+%\label{Figura2}
+%\end{figure*}
+
+\section{Síntesis y conclusiones}
+
+Para este trabajo determinamos las tasas de acreción en 2 EBs que tienen un disco de polvo
+confirmado, utilizando el código de evolución estelar LPCODE. Para nuestras simulaciones, tuvimos en cuenta el proceso físico conocido como convección termohalina y establecimos una abundancia tipo {\em bulk earth} para el material acretado.
+
+Como se puede ver en la Fig.~\ref{Figura1},  el mezclado extra del material debido a la convección termohalina implica que son necesarias tasas de acreción mayores a las reportadas en la literatura. Por lo tanto, los cuerpos rocosos que fueron destruidos y formaron el disco de polvo, tienen una masa mayor a la estimada sin tener en cuenta dicho proceso físico.
+
+ Con el objetivo de mejorar nuestro entendimiento de las etapas finales de los sistemas planetarios, seguiremos determinando las tasas de acreción en EBs con discos {\em debris} teniendo en cuenta todos los procesos físicos que afectan al material acretado. Para ello, obtendremos observaciones espectroscópicas (propias o de la literatura) de estrellas con discos confirmados que no tienen abundancias reportadas, o 
+ candidatas que presentan excesos IR en sus SEDs y no se les ha determinado aún la abundancia atmosférica.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

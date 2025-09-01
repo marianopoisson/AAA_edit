@@ -1,0 +1,369 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Modelado de discos de estrellas Be: efecto de truncamiento del disco en la serie de Brackett}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Modelado de discos de estrellas Be: efecto de truncamiento del disco en la serie de Brackett}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+Y.R. Cochetti\inst{1,2}, A. Granada\inst{3}, M.L. Arias\inst{1,2}, A.F. Torres\inst{1,2} \&
+C. Arcos\inst{4}
+}
+
+\authorrunning{Cochetti et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{cochetti@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astrof\'isica de La Plata, CONICET--UNLP, Argentina
+\and
+Departamento de Espectroscop\'ia, Facultad de Ciencias Astron\'omicas y Geof\'isicas, UNLP, Argentina
+\and
+Laboratorio de Investigaci\'on Cient\'ifica en Astronom\'ia, UNRN, Argentina
+\and
+Instituto de F\'isica y Astronom\'ia, Facultad de Ciencias, Universidad de Valpara\'iso, Chile
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{
+El espectro infrarrojo de las estrellas Be presenta numerosas l\'ineas de recombinaci\'on del hidr\'ogeno. El modelado de las mismas mediante los c\'odigos actualmente disponibles nos permite delimitar los par\'ametros del disco circunestelar (densidad central, exponente de la ley de densidad, tama\~no de la regi\'on emisora e inclinaci\'on), a partir de la comparaci\'on de los espectros sint\'eticos con los obtenidos observacionalmente. En este trabajo analizamos el efecto de la variaci\'on de los par\'ametros del disco sobre las primeras l\'ineas de la serie de Brackett, utilizando el c\'odigo {\sc hdust}. El modelado de discos de distintos tama\~nos nos permite estudiar los efectos observables en los espectros debido al truncamiento de las regiones de formaci\'on de las l\'ineas.
+}
+
+\abstract{The infrared spectra of Be stars present numerous hydrogen recombination lines. Modelling these lines using the available codes allows us to set some constraints to the circumstellar disc's parameters (central density, exponent of the density law, size of the emitting region and inclination), by comparing the synthetic spectra with the observational data. In this work, we analyse how the variation of the disc's parameters affects the first Brackett lines, using the {\sc hdust} code. Modelling discs with different sizes allows us to study the observable effects on the spectra due to the truncation of the emitting regions. 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{stars: emission-line, Be --- circumstellar matter --- techniques: spectroscopic}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+Los objetos con fen\'omeno Be son estrellas de tipo espectral B, no supergigantes, que presentan (o han presentado) emisi\'on en l\'ineas del Hidr\'ogeno \citep[ver, por ejemplo,][y sus referencias]{Rivinius2013}. El modelo actualmente adoptado para explicar las caracter\'isticas del fen\'omeno Be es el de un disco de decreci\'on viscosa. Este modelo incluye una estrella rotando r\'apidamente, que pierde masa y momento angular. Ese material perdido forma un disco en el ecuador en rotaci\'on cuasi-Kepleriana y se aleja lentamente de la estrella por procesos viscosos \citep{Lee1991,Okazaki2002}. 
+El modelado de diferentes observables, sobre todo en el rango \'optico del espectro, ha brindado informaci\'on relevante sobre los par\'ametros de estos discos. Por ejemplo, mediante el modelado de la l\'inea H$\alpha$ se ha encontrado que la regi\'on emisora de la misma alcanza las decenas de radios estelares  \citep{Miroshnichenko2003,Rivinius2013,Arcos2017}. 
+
+En las \'ultimas d\'ecadas, ha ganado importancia el estudio de la regi\'on espectral infrarroja (IR) en las estrellas Be. Las l\'ineas observadas en esta regi\'on se forman en las regiones m\'as internas del disco y presentan una contribución fotosf\'erica menor que las observadas en el rango \'optico. Debido a esto, su an\'alisis nos permite obtener informaci\'on sobre las propiedades f\'isicas y cinem\'aticas de la regi\'on del disco m\'as cercana a la estrella \citep{Hony2000, Lenorzer2002Diagrama, Mennickent2009, Granada2010, Sabogal2017}. Sin embargo, el modelado de las l\'ineas espectrales de la regi\'on IR es un campo en el que  aún resta mucho por hacer. En este trabajo, presentamos nuestra contribuci\'on sobre el modelado de  l\'ineas IRs del hidrógeno en estrellas Be, utilizando el código {\sc hdust} \citep{Carciofi2006,Carciofi2008}. 
+
+Como primer caso de estudio, comenzamos por analizar la serie de Brackett, desde Br$\alpha$ hasta Br$12$. Este grupo incluye la l\'inea Br$11$, que ha sido observada para un gran n\'umero de estrellas Be por el relevamiento APOGEE \citep{Chojnowski2015}, y cuyo modelado resulta entonces intr\'insecamente interesante para caracterizar un gran n\'umero de estrellas Be.
+
+En el trabajo de \citet{Cochetti2023} se analiz\'o la dependencia de las intensidades y formas de las primeras l\'ineas de la serie con los par\'ametros que describen la estructura del disco, pero manteniendo constante su radio. Para cada modelo, el radio elegido fue el mínimo que incluyera toda la posible región emisora de las líneas. De esta manera, se excluyó la posibilidad de que el disco estuviera truncado. Adem\'as,  se compararon tales  modelos con datos observacionales para las estrellas MX Pup y $\Pi$ Aqr. 
+
+En esta oportunidad, nos centraremos en analizar la dependencia con el tama\~no del disco, a fin de estudiar el efecto del truncamiento del mismo. 
+
+\begin{table*}[!t]
+\centering
+\caption{Radios máximos utilizados para cada combinaci\'on de $n$ y $\rho_0$. En todos los casos el radio m\'inimo y el paso fueron de 10 R$_\star$. }
+\begin{tabular}{cccccc}
+\hline\hline\noalign{\smallskip}
+$n$  	& $\rho_0=1\times10^{-12}$	& $\rho_0=5\times10^{-12}$	& $\rho_0=1\times10^{-11}$ & $\rho_0=5\times10^{-11}$ & $\rho_0=1\times10^{-10}$\\
+ & (g\,cm$^{-3}$) & (g\,cm$^{-3}$) & (g\,cm$^{-3}$) & (g\,cm$^{-3}$) &(g\,cm$^{-3}$) \\
+\hline\noalign{\smallskip}
+$2.5$ & 40 R$_\star$ & 50 R$_\star$ & --   & --  & --  \\
+$3.0$ & 30 R$_\star$ & 30 R$_\star$ & 40 R$_\star$ & 60 R$_\star$ & --  \\
+$3.5$ & 30 R$_\star$ & 30 R$_\star$ & 30 R$_\star$ & 40 R$_\star$ & 40 R$_\star$\\
+$4.0$ & 30 R$_\star$ & 30 R$_\star$ & 30 R$_\star$ & 30 R$_\star$ & 30 R$_\star$\\
+\hline
+\end{tabular}
+\label{models}
+\end{table*}
+
+\section{Metodolog\'ia}
+
+El c\'odigo {\sc hdust} resuelve las ecuaciones de transporte radiativo, equilibrio radiativo y equilibrio estad\'istico en una geometr\'ia 3D para diferentes distribuciones de velocidad y densidad en el disco. El mismo ha sido utilizado para modelar líneas de hidrógeno en la regi\'on \'optica del espectro (como por ejemplo H$\alpha$) y la distribuci\'on espectral de energ\'ia \citep{Klement2017,Marr2021}.
+
+Para la ley de densidad en el disco se utiliza una ley de potencias en la direcci\'on radial y una distribuci\'on Gaussiana en la vertical, seg\'un
+\begin{equation}
+\rho(r,z) = \rho_0 \left(\frac{r}{\rm{R}_{\star}}\right)^{-n}\,exp\left( -\frac{z^2}{2\rm{H}^2} \right),
+\end{equation}
+donde R$_{\star}$ es el radio estelar y H es la altura de escala correspondiente a un disco verticalmente isotermo. 
+
+Los par\'ametros que variamos para este trabajo fueron el exponente $n$, la densidad base $\rho_0$ y la extensi\'on del disco R para analizar los efectos del truncamiento. Seg\'un \citet{Vieira2017}, el valor del par\'ametro $n$ est\'a relacionado con diferentes estados del disco: un disco en disipaci\'on presenta una ca\'ida suave en la densidad, con valores $n\lesssim 3$; el rango $3\lesssim n \lesssim 3.5$ corresponde a discos estables; mientras que valores $n\gtrsim 3.5$ est\'an relacionados a discos en formaci\'on con una ca\'ida r\'apida en la densidad. 
+
+Para cada modelo, los espectros fueron simulados para inclinaciones en el rango 0--90° con un paso de 15°. Consideramos una estrella de masa M=10~M$_{\odot}$, radio polar R$_{\rm pole}$ = 5.5~R$_{\odot}$, luminosidad L=7500~L$_{\odot}$, y W=V$_{\rm rot}$/V$_{\rm orb}$= 0.7 (siendo V$_{\rm rot}$ la velocidad de rotaci\'on en el ecuador y V$_{\rm orb}$ la velocidad orbital Kepleriana). Esto corresponde a una estrella de tipo B temprana con T$_{\rm eff}\approx 24250$~K y V$_{\rm rot}\approx370$~km\,s$^{-1}$.
+
+En la Tabla \ref{models} se lista el radio m\'aximo del disco para cada combinaci\'on de parámetros utilizada en los modelos. En todos los casos, el radio m\'inimo y el paso fueron de 10~R$_\star$. 
+
+\section{Resultados}
+
+En la Fig. \ref{ejemplos} presentamos, a modo de ejemplo, los perfiles de l\'ineas para $\rho_0=1\times10^{-10}$~g\,cm$^{-3}$, $i=45$°, y para dos valores de $n$: 3.5 y 4. Vemos que el efecto del truncamiento depende tanto del par\'ametro $n$ como de la l\'inea. Para el menor $n$, podemos observar diferencias en las intensidades en todas las l\'ineas analizadas, mientras que para el mayor $n$, el efecto no es perceptible en los miembros m\'as altos de la serie. Para poder realizar una mejor comparaci\'on, medimos los flujos de cada l\'inea.  
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.99\columnwidth]{n3.50_rho1E-10_i45.pdf}
+\includegraphics[width=0.99\columnwidth]{n4.00_rho1E-10_i45.pdf}
+\caption{Perfiles de l\'ineas para $\rho_0=1\times10^{-10}$~g\,cm$^{-3}$, $i=45$°, y para dos valores de $n$: 3.5 (\emph{panel superior}) y 4 (\emph{panel inferior}).}
+\label{ejemplos}
+\end{figure}
+
+\begin{figure*} 
+\centering
+\includegraphics[width=0.9\textwidth]{fl_flRmax_i45_linea_legend.pdf}
+\caption{Cociente entre el flujo de l\'inea correspondiente a cada radio R y el obtenido considerando el radio m\'aximo de cada modelo. La l\'inea roja indica un 90\% del flujo correspondiente al radio m\'aximo.}
+\label{fl_flRmax_i45}
+\end{figure*}
+
+\begin{figure*} 
+\centering
+\includegraphics[width=0.9\textwidth]{flux_fluxBr12_i45_linea.pdf}
+\caption{Cociente entre el flujo de cada l\'inea y el correspondiente a Br12.}
+\label{flux_fluxBr12_i45}
+\end{figure*}
+
+
+En la Fig.~\ref{fl_flRmax_i45}, cada columna y fila de gr\'aficos corresponde a un valor de $\rho_0$ y $n$, respectivamente. Cada curva muestra el cociente entre el flujo obtenido en cada l\'inea para un dado valor R del radio del disco, y el flujo obtenido en esa misma l\'inea para el mayor radio considerado para esos $\rho_0$ y $n$. Aunque la Fig. ~\ref{fl_flRmax_i45} corresponde al caso $i=45$°, los comportamientos para otras inclinaciones resultan muy similares al mostrado. La l\'inea roja indica un valor del 90\% del flujo obtenido para el radio m\'aximo. Podemos observar que para los primeros miembros de la serie (Br$\alpha$, Br$\beta$, Br$\gamma$), la diferencia en los flujos para los distintos R es significativa para casi todos los modelos. En cambio, para los miembros m\'as altos modelados, la diferencia s\'olo es notoria en los casos con mayor densidad $\rho_0$ y/o menor $n$ (ca\'ida m\'as suave de la densidad). Esto est\'a de acuerdo con el hecho de que los primeros miembros de la serie se forman en regiones m\'as extensas, por lo que el truncamiento del disco afectar\'a significativamente al flujo emitido. En cambio, los miembros m\'as altos de la serie se forman en una regi\'on m\'as interna, por lo que el efecto del truncamiento no ser\'a tan importante. 
+
+Para analizar el comportamiento de los flujos a lo largo de la serie, tomamos como referencia el flujo de Br12 y hacemos el cociente fl/fl(Br12) (ver Fig.~\ref{flux_fluxBr12_i45}). De manera an\'aloga a la Fig.~\ref{fl_flRmax_i45}, cada gr\'afico corresponde a una combinaci\'on $\rho_0$ y $n$, y cada curva a un R considerado. En todos los casos hay un incremento en el cociente comenzando desde los miembros m\'as altos, y luego una ca\'ida marcada. Las diferencias en las curvas para cada R son relevantes solo para altos $\rho_0$ y/o bajos $n$. En esos casos, la ca\'ida del flujo es m\'as marcada para R menores. 
+
+
+\section{Conclusiones}
+
+Los diferentes efectos del truncamiento, seg\'un el estado evolutivo del disco, ser\'an los siguientes:
+
+\begin{itemize}
+\item Los discos estables o en disipaci\'on ser\'an los m\'as afectados por posibles truncamientos del disco. Esto es debido a que la densidad disminuye suavemente (tienen valores de $n$ menores), permitiendo que la regi\'on emisora de las l\'ineas llegue a una distancia mayor. Si ese disco es truncado, la cantidad de flujo perdida ser\'a significativa. Esto es a\'un m\'as relevante para densidades centrales $\rho_0$ mayores. 
+\item Los discos en formaci\'on se ver\'an afectados solamente si la densidad es lo suficientemente alta, ya que la densidad decae r\'apidamente (valores altos de $n$). Esto hace que el truncamiento solo elimine regiones del disco poco densas y con poca contribuci\'on en la emisi\'on de las l\'ineas.
+\end{itemize}
+
+Adem\'as, para una densidad dada $\rho_0$ y exponente $n$, el efecto del truncamiento afectar\'a m\'as a los primeros miembros de la serie. Esto se debe a que los mismos se forman en una regi\'on m\'as extensa, por lo que la reducci\'on de la regi\'on potencialmente emisora representa una p\'erdida de flujo significativa. 
+
+Actualmente nos encontramos trabajando en la incorporaci\'on de m\'as l\'ineas de la serie de Brackett, as\'i como tambi\'en l\'ineas de otras series observadas en el IR (Humphreys, Pfund y Paschen). Luego extenderemos nuestro estudio a estrellas B de otros subtipos espectrales. Esto nos permitir\'a avanzar en la caracterizaci\'on de las envolturas, a partir de la comparaci\'on de los espectros sint\'eticos con los obtenidos observacionalmente.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{acknowledgement}
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}). 
+CA agradece al proyecto Fondecyt Regular N 1230131. MLA y AFT agradecen financiamiento del Proyecto PIP 1337 (CONICET) y del Programa de Incentivos 11/G160 (UNLP). AG agradece al proyecto PIBAA 28720210100879CO. Este proyecto ha recibido financiaci\'on dentro del marco del Programa de Investigaci\'on e Innovaci\'on Horizonte 2020 (2014-2020) de la Uni\'on Europea en virtud del Acuerdo de subvenci\'on Marie Sk\l{}odowska-Curie No. 823734.
+Agradecemos al \'arbitro, Carlos Saffe, por la lectura del art\'iculo y las sugerencias realizadas.
+\end{acknowledgement}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{880}
+ 
+\end{document}

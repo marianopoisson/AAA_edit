@@ -1,0 +1,342 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Looking for molecular gas associated with the pulsar wind nebula 3C 58}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Looking for molecular gas associated with the pulsar wind nebula 3C 58}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A. Petriella\inst{1}
+}
+
+\authorrunning{A. Petriella}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{apetriella@iafe.uba.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El remanente de supernova 3C 58, ubicado en el Brazo de Perseo a una distancia de $2.0\pm0.3~\mathrm{kpc}$, es una nebulosa de viento alimentada por el púlsar PSR J0205$+$6449. Este remanente ha sido detectado en radio, rayos X, y rayos $\gamma$. Utilizando datos del $^{12}$CO(1--0) del Canadian Galactic Plane Survey, se identificó una estructura de gas molecular proyectada en dirección al remanente, que posee una distancia cinemática de $0.6 \pm 0.3~\mathrm{kpc}$.
+Debido a los movimientos no circulares del gas en esta región de la Galaxia, que ponen en duda el método cinemático para acotar distancias, no puede descartarse una asociación entre 3C 58 y dicha estructura. Se usarán nuevas observaciones moleculares para buscar evidencia de gas chocado por el remanente y determinar si existe una asociación física con el gas molecular. Los resultados de este estudio futuro se publicarán oportunamente.}
+
+\abstract{The supernova remnant 3C 58, located in the Perseus Arm at a distance $2.0\pm0.3~\mathrm{kpc}$, is a wind nebula powered by the pulsar PSR J0205$+$6449. This remnant has been detected in various wavelengths, including radio, X-rays, and $\gamma$-rays. Using data of the $^{12}$CO(1--0) emission from the Canadian Galactic Plane Survey, I identified a structure of molecular gas projected onto 3C 58, which has a kinematic distance of $0.6 \pm 0.3~\mathrm{kpc}$. Based on the non circular motions of the gas in this part of the Galaxy, which question the reliability of the kinematic method to obtain distances, I cannot discard the association between 3C 58 and the molecular structure. I will look for shocked gas using new molecular line observations to establish whether 3C 58 is physically associated with the molecular gas. This study will be conducted in the future and the results will be published anywhere.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ISM: supernova remnants --- ISM: individual objects: 3C 58 --- ISM: clouds ---  ISM: molecules}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+\label{S_intro}
+
+The supernova remnant (SNR) 3C 58 (G130.7$+$3.1) is a pulsar wind nebula (PWN) detected at radio and X-rays. The emission is powered by the pulsar PSR J0205$+$6449 located at the center of the nebula.
+So far, the shell of the remnant has not been observed at any spectral band. 
+\cite{abdo13} reported on the detection of GeV radiation with {\it Fermi}. They detected pulsed emission associated with the pulsar and off-peak emission from a point source, centered $\sim 1^{\prime}$ offset to the northeast with respect to the position of PSR J0205$+$6449. They concluded that the off-peak spectrum favors a leptonic origin from the PWN. The authors, however, did not discard that the GeV radiation could be produced by the parent SNR interacting with the surrounding medium through the hadronic mechanism. \cite{magic14} reported the detection of a TeV point source located $\sim 2^{\prime}$.2 offset from the pulsar’s position. Their spectral analysis pointed to a leptonic origin for this emission. A hadronic origin was ruled out by the authors because it requires a cosmic ray acceleration efficiency of almost $100\%$.  
+
+The distance to 3C 58 has been derived from different methods. The neutral hydrogen (HI) study presented by \cite{kothes13} revealed a shell of neutral gas in the velocity range between $-33$ and $-39~\mathrm{km\,s^{-1}}$, and absorption features at velocities corresponding to the Local Arm ($+1$ and $-7~\mathrm{km\,s^{-1}}$) and the Perseus Arm ($-34$ and $-41~\mathrm{km\,s^{-1}}$). Based on these findings, the author established a systemic velocity of $-36~\mathrm{km\,s^{-1}}$, and a distance of $2.0\pm0.3~\mathrm{kpc}$ using two independent approaches: the kinematic method adopting the Galactic rotation curve with spiral shocks of \cite{foster06}, and the possible association of 3C 58 with a nearby complex of SNR/HII regions in the Perseus Arm. The distance to the pulsar PSR J0205$+$6449, calculated from the dispersion measure (DM), is $2.8~\mathrm{kpc}$  \citep{yao17}\footnote{\cite{yao17} assigned a distance error of 0 to PSR J0205$+$6449 because the DM distance is within the uncertainties of the independent distance of $3.20\pm0.64~\mathrm{kpc}$, which is obtained from the association with 3C 58. Indeed, the authors used the pulsar as a calibrator for their electron-density model. It is worth noting that this is an out-of-date distance for 3C 58.}.
+
+The molecular gas toward 3C 58 has been poorly studied. Using CO data from the Milky Way Imaging Scroll Painting (MWISP), \cite{zhou23} reported on a large shell of molecular gas at velocity of $-2.5~\mathrm{km\,s^{-1}}$, which places it in the Local Arm at a distance of $0.5~\mathrm{kpc}$. This shell has a radius of $56^{\prime}$, corresponding to $80~\mathrm{pc}$. They also reported the presence of broad CO lines, which may indicate shocked gas. The authors discarded the association between the molecular shell and 3C 58 because the distances are incompatible. 
+
+3C 58 has historically been considered the remnant of the supernova SN 1181, but the association was not without problems because of the different age estimates of the PWN, the pulsar, and the supernova event (see \citealt{kothes17} for a general discussion). At present, the newly identified SNR Pa 30 (G123.1$+$4.6) appears as the most reliable candidate to be the remnant of SN 1181 \citep{fesen23}.
+
+I present a study of the molecular gas distribution in the direction of 3C 58 to look for material that may be associated  with the SNR.
+
+\section{Data}
+\label{S_data}
+
+For the molecular gas, I used data of the $^{12}$CO(J=1--0) emission from the Canadian Galactic Plane Survey (CGPS).
+Observations were obtained with the 14 m telescope of the Five College Radio Astronomy Observatory (FCRAO). The reduced CO data cube has spectral and angular resolutions of $0.82~\mathrm{km\,s^{-1}}$ and $100^{\prime\prime}$, respectively, and mean noise (root mean square) per channel $\sigma_{\mathrm{chan}} = 0.16~\mathrm{K}$.   
+To display the radio continuum emission of 3C 58, I  used the $1.4~\mathrm{GHz}$ image from the CGPS. TeV emission in direction of the SNR is displayed using the image available in the public repository of the MAGIC Telescope\footnote{Available at: \url{https://vobs.magic.pic.es/fits/}.}. 
+
+\section{Results}
+\label{S_results}
+
+Figure \ref{Fig1} shows the $^{12}$CO spectrum in the direction of 3C 58, extracted from a circular region of radius $20^{\prime}$ around the SNR. The shaded areas are the velocity intervals of the Local and Perseus Arms from \cite{peek22} and the vertical lines indicate the velocity of the HI absorption features identified by \citet{kothes13}. There are two components of molecular gas, centered at $\sim -7$ and $\sim 0~\mathrm{km\,s^{-1}}$, which correspond to the Local Arm. Figure \ref{Fig2} shows the $\sim -7~\mathrm{km\,s^{-1}}$ component, obtained after integrating the emission between $-5.6$ and $-9.7~\mathrm{km\,s^{-1}}$. The noise level of the map is $\sigma_{\mathrm{int}} = 0.32~\mathrm{K\,km\,s^{-1}}$. It was calculated from the expression $\sigma_{\mathrm{int}} = \sigma_{\mathrm{chan}} \times \Delta v \times \sqrt{N}$, where $\Delta v$ is the velocity resolution of the data cube and $N$ is the number of integrated channels. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.95\columnwidth]{fig1.pdf}
+\caption{$^{12}$CO spectrum extracted from a region of radius $20^{\prime}$ around 3C 58. The vertical lines are the HI absorption features identified by \cite{kothes13}. The shaded areas indicate the velocity interval of the Local and Perseus Arms from \cite{peek22}.}
+\label{Fig1}
+\end{figure}
+
+The molecular gas between $-5.6$ and $-9.7~\mathrm{km\,s^{-1}}$ is not regularly distributed. Most of the CO emission is detected in the northern and western directions with respect to 3C 58\footnote{North and west correspond to the up and right directions of the image, respectively.}. The SNR appears projected onto a void of molecular material. The distribution of the molecular material resembles a partial cavity, open to the east direction.   
+The molecular component centered at $\sim 0~\mathrm{km\,s^{-1}}$ is not analyzed in this work because it is made of small and dispersed condensations, questioning whether they are part of a real molecular feature related to the molecular structure of Fig. \ref{Fig2}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=0.9\columnwidth]{fig2.pdf}
+\caption{$^{12}$CO emission integrated between $-5.6$ and $-9.7~\mathrm{km\,s^{-1}}$. Color scale is in units of $\mathrm{K\,km\,s^{-1}}$ and contour levels are $1.2$ and $2.2~\mathrm{K \,km\,s^{-1}}$. The radio continuum emission of 3C 58 is shown with yellow contours (100, 200, 300, and $400~\mathrm{K}$) and TeV emission with red contours (corresponding to test statistics significance = 4, 5, and 6). The white cross indicates the position of PSR J0205$+$6449. Coordinates are Galactic.}
+\label{Fig2} 
+\end{figure}
+
+I obtained the kinematic distance of the molecular material centered at $-7~\mathrm{km\,s^{-1}}$ using the Galactic rotation model of \cite{reid13}. For the velocity-to-distance conversion I used the Kinematic Distance Calculation Tool\footnote{Available at \url{https://www.treywenger.com/kd/index.php}} at coordinates $l = 130^{\circ}.7$ and $b=3^{\circ}.1$.
+Considering the presence of non circular motions in the interstellar medium, with typical dispersion velocity of $\sim 10~\mathrm{km\,s^{-1}}$, the systemic velocity of the gas structure is $-7\pm5~\mathrm{km\,s^{-1}}$. Taking into account that there is not distance ambiguity in this direction, the kinematic distance is $0.6\pm0.3~\mathrm{kpc}$.
+
+For the purpose of estimating the physical parameters of the structure, I identified 4 condensations, labeled A, B, C, and D (see Fig. \ref{Fig2}). I calculated the molecular hydrogen (H$_2$) column density using the equation: $N_{\mathrm{H_2}}= X_{\mathrm{CO}} \times W(\mathrm{CO})$, where $X_{\mathrm{CO}} = 2 \times 10^{20}~\mathrm{cm^{-2}\,(K\,km\,s^{-1})^{-1}}$ is the CO-to-H$_2$ conversion factor and $W(\mathrm{CO})$ is the integrated line intensity. Typical uncertainties of this method are $30\%$\citep{bolatto13}.
+I obtained $W(\mathrm{CO})$ by integrating the emission within the $2.2~\mathrm{K\,km\,s^{-1}}$ contour level. I estimated the mass of H$_2$ using the relation $M = \mu m_{\mathrm H} A N_{\mathrm{H_2}}$, where $\mu = 2.8$ (taking into account a He abundance of 25\%), $m_{\mathrm H}$ represents the hydrogen mass, and $A$ is the area of the integration region (approximated with ellipses of semi-axis $a \times b$). Considering the approximation that the volume $V$ of the condensations is an ellipsoid with third axis equal to the mean between $a$ and $b$, I estimated the H$_2$ number densities using $n_{\mathrm{H_2}} = A N_{\mathrm{H_2}} V^{-1}$. 
+Taking into account the distance error (which propagates into $A$ and $V$), and the error in $N_{\mathrm{H_2}}$, the resulted masses and densities have uncertainties $\sim 60\%$.
+In Table \ref{Table1}, I summarize the results of the calculations.
+
+\begin{table}[h]
+\centering
+\caption{Physical parameters of the molecular condensations observed at $-7~\mathrm{km\,s^{-1}}$ in the $^{12}$CO(J=1--0) line emission (see Fig. \ref{Fig2}). $M$ and $n_{\mathrm{H_2}}$ are calculated for a distance of $0.6\,\mathrm{kpc}$ and have uncertainties $\sim 60\%$.}
+\begin{tabular}{cccc}
+\hline\hline\noalign{\smallskip}
+\!\!Name & \!\!\!\! Size ($a \times b$)      & \!\!\!\! $M$         & \!\!\!\! $n_{\mathrm{H_2}}$ \!\!\!\!\\
+& \!\!\!\! [arcmin$^{2}$] & \!\!\!\! [M$_{\odot}$]  & \!\!\!\! [cm$^{-3}$] \\
+\hline\noalign{\smallskip}
+\!\!A   & $11.0 \times 7.1$ & 105 & 100 \\
+\!\!B   & $7.0  \times 5.1$ & 50  & 100 \\
+\!\!C   & $5.1  \times 3.7$ & 20  & 150 \\
+\!\!D   & $4.4  \times 2.3$ & 10  & 180 \\
+\hline
+\end{tabular}
+\label{Table1}
+\end{table}
+
+\section{Discussion}
+\label{S_discussion}
+
+I reported on the detection of molecular gas in the direction of 3C 58 at a systemic velocity of $-7~\mathrm{km\,s^{-1}}$. The SNR appears projected onto a void of CO that is surrounded by a molecular structure to the northern and eastern directions. Using the Galactic rotation model of \cite{reid13}, I obtained a kinematic distance of $0.6\pm0.3~\mathrm{kpc}$, which places the molecular structure in the Local Arm. 
+Considering the distance $2.0\pm0.3~\mathrm{kpc}$ to 3C 58, the association of the remnant with the molecular material seems questionable. However, it is well known that the Perseus Arm is largely affected by bulk motions, which causes the gas velocity to differ from that predicted by the standard Galactic rotation curve \citep{burton71}. As a consequence, molecular clouds with velocities corresponding to the Perseus Arm may have distances that are not consistent with the distance of the Perseus Arm \citep{peek22}. Alternatively, clouds at the distance of the Perseus Arm may present significant non circular motions, causing their line-of-sight velocity to depart from the expected by a Galactic rotation curve with circular orbits at the distance of the Perseus Arm \citep{sakai19}.
+
+In light of these complexities, \cite{sakai19} obtained parallaxes and proper velocities of maser sources in the Perseus Arm and obtained a velocity gradient in the radial direction: sources in the interior side of the spiral arm are radially moving inward with mean velocity of $13~\mathrm{km\,s^{-1}}$ in the direction of the Galactic center, while sources in the exterior side present inward velocities of a few $\mathrm{km\,s^{-1}}$. They argued that this phenomenon is explained by the density-wave theory. When gas in circular orbits encounters slower rotating spiral arms, a shock is formed which triggers the formation of stars. These stars (and their parent clouds) should display the kinematic of the shock. In particular, \cite{sakai19} found that in the longitude range $l = 110^{\circ}-140^{\circ}$, the non circular velocities tend to be aligned in the line-of-sight and present non circular inward velocities $\sim 20-30~\mathrm{km\,s^{-1}}$. 
+
+Based on these findings, the molecular structure studied in this work may correspond to molecular gas in the Perseus Arm with line-of-sight velocity shifted by some tens of $\mathrm{km\,s^{-1}}$ to more positive velocities with respect to the velocity of the arm. 
+Then, the association of 3C 58 and the molecular structure deserves further study and a physical association between them could be established with evidence of the gas been affected by the shocks of the SNR.
+I did not find line broadening in the $^{12}$CO(1--0) spectra, which is considered a signal of SNR/cloud interaction \citep{kilpa16}.
+I will continue analyzing the molecular structure using new $^{12}$CO(3--2) and SiO(5--4) observations obtained in 2023 with the James Clerk Maxwell Telescope (JCMT, Hawai, project ID: M23BP003, PI: Alberto Petriella). I will look for signatures of molecular gas affected by the SNR, such as line broadening in the $^{12}$CO(3--2) spectra, high $^{12}$CO(3--2)/$^{12}$CO(1--0) line ratio values, and shock excited SiO(5--4) emission.
+
+Finally, regarding $\gamma$-ray emission, I did not find evidence supporting a hadronic contribution. The CO distribution analyzed in this work does not present a spatial correlation with the TeV emission. Indeed, 3C 58 appears projected onto a void of molecular gas.
+
+\begin{acknowledgement}
+This research has used data from the Canadian Galactic Plane Survey, a Canadian project with international partners, supported by the Natural Sciences and Engineering Research Council.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

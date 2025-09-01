@@ -1,0 +1,484 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+%\usepackage{subfigure}
+\usepackage{subcaption}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{8}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{19 April 2024}
+
+\newcommand{\be}{\begin{eqnarray}}
+\newcommand{\ee}{\end{eqnarray}}
+\newcommand{\beq}{\begin{equation}}
+\newcommand{\eeq}{\end{equation}}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{On the flavor composition of neutrinos from choked jets of gamma-ray bursts}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Flavor compostion of neutrinos from choked jets of GRBs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.M. Reynoso\inst{1,2} \& F.A. Deus\inst{1,2} }
+\authorrunning{M.M. Reynoso \& F.A. Deus}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{matiasreynoso@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Investigaciones F\'isicas de Mar del Plata, CONICET--UNMdP, Argentina \and Departamento de F{\'\i}sica, Facultad de Ciencias Exactas y Naturales, UNMdP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of -a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Gamma-ray bursts \textit{ahogados} (CGRBs, {por sus siglas en inglés}) se producen cuando un jet generado en el centro de una estrella masiva en colapso no puede emerger del envoltorio estelar, y por lo tanto los rayos gamma que puedan ser producidos en tales jets son absorbidos. Neutrinos, sin embargo, pueden escapar libremente y por lo tanto estas fuentes han sido propuestas como capaces de generar el flujo difuso de neutrinos observado por IceCube. En el presente trabajo, intentamos obtener el flujo de neutrinos de diferentes familias producidos en CGRBs usando valores t\'ipicos para parametros f\'isicos de la regi\'on de emisi\'on. Consideramos la inyecci\'on tanto de protones como de electrones que suponemos que son acelerados por choques internos en el jet, y que presentan una dependencia con la energ\'ia del tipo ley de potencia, con un \'indice $\alpha=1.8-2.2$. Resolviendo una ecuaci\'on de transporte en el estado estacionario, obtenemos las distribuciones de estas part\'iculas y adem\'as de piones y muones, dado que estas \'ultimas se generan por copiosas interacciones protón-fotón ($p\gamma$) en el contexto asumido. Considerando que los CGRBs se pueden relacionar con supernovas de colapso gravitacional, suponemos que la tasa de generaci\'on de estas fuentes es proporcional a la tasa de formación estelar y podemos integrar sobre el redshift para obtener el flujo difuso total de neutrinos de cada familia. La composici\'on de las tres familias a ser observada en la Tierra vemos que depende de la energ\'ia de los neutrinos como consecuencia de las p\'erdidas de energ\'ia que sufren los piones y muones. Este comportamiento podrá ser probado con instrumentos de nueva generaci\'on como IceCube-gen2.}
+
+\abstract{Choked gamma-ray bursts (CGRBs) are produced when the jet generated in the center of a massive collapsing star fails to emerge from the stellar envelope, and hence the gamma rays produced in such a jet get absorbed. Neutrinos, however, escape freely, and therefore these sources have been proposed as capable of generating the diffuse flux observed by IceCube. In the present work, we aim to obtain the neutrino fluxes of the different flavors corresponding to CGRBs adopting typical values for the physical parameters of the emission region. We then consider the injection of both protons and electrons, which are assumed to be accelerated by internal shocks in the jet and present power-law dependence on the energy with an
+index $\alpha =1.8-2.2$. By solving a steady-state transport equation, we obtain the particle distributions, including
+also pions and muons, since these particles are generated after copious proton-photon ($p\gamma$) interactions in the present context. Considering that CGRBs can be related to core collapse supernovae, we assume that the generation rate of these sources is proportional to the star formation rate, and we integrate on the redshift to obtain a total diffuse neutrino flux of each flavor. The flavor composition to be observed at the Earth is found to depend on the neutrino energy as a consequence of the losses suffered mainly by pions and muons. This will be probed with next generation neutrino instruments such as IceCube-gen2.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ radiation mechanisms: non-thermal --- neutrinos --- gamma-ray burst: general}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introduction}\label{S_intro}
+
+\begin{table*}[!t]
+\caption{Parameters of the CGRB model }              % title of Table
+\label{table:params}      % is used to refer this table in the text
+\centering                                      % used for centering table
+\begin{tabular}{c c c c}          % centered columns (4 columns)
+\hline\hline                        % inserts double horizontal lines
+input parameter &  description & values \\    % table heading
+\hline                                   % inserts single horizontal line
+    $L_0{\rm [erg\ s^{-1}]}$  &  isotropic power  & $(10^{49};10^{50})$\\      % inserting body of the table
+    $\alpha$  &  power-law index of injection  & $(1.8;2;2.2)$\\  
+    $t_{\rm j}$[s] &  duration of typical CGRB &  $10^3;10^4$ \\
+    $\epsilon_{\rm rel}$ & fraction of power in relativistic particles & 0.1 \\
+    $ a_{pe}$   & proton-to-electron ratio  & $100$ \\
+    $\Gamma$ & Lorentz factor of internal shock region & $100$ \\
+    $\delta t {\rm[s]}$ & variability timescale  & $0.01$ \\
+    $\epsilon_B$  & magnetic-to-kinetic energy ratio & $(0.01; 0.1; 1)$  \\
+%\hline\hline                        % inserts double horizontal lines
+%derived parameter &  description & values \\    % table heading
+%$B$ &  magnetic field in IS region   & \\
+\hline
+\end{tabular}
+\end{table*} 
+ 
+
+The neutrino observatory IceCube has accumulated events since 2014 allowing to stablish a flux of neutrinos of astrophysical origin, i.e., not produced by cosmic rays in the atmosphere, but it has not been possible to identify the specific sources. This mainly is due to a lack of correlation with known gamma-ray emitters. One possible type of sources are the so-called choked gamma-ray bursts (CGRBs) which cosnsist of a jet being launched inside a collapsing massive star that \textit{fails} to emerge from the stellar mantle, implying that the gamma rays produced get totally absorbed. It is expected that this scenario can be realized in some core-collapse supernovae (SNe), such as those of the types II \citep{macfadyen2001} and Ib/c. Although it is currently uncertain what fraction of such systems can harbour these choked jets \citep{piran2019}, the connection is envisaged similarly to the case of the one confirmed between several type Ib/c SNe and long GRBs with flat spectrum \citep{hjorth2011}.
+
+%detected a neutrino flux of astrophysical orignThe origin of a great majority of the observed astrophysical neutrinos cannot be identified yet, and it can only be recognized that the sources should be extragalactic, given that the incoming directions in the sky are consistent with an isotropic emission. Among the candidate sources, choked gamma-ray bursts (CGRBs) arise as an interesting possibility. A CGRB is generated when a jet launched inside a collapsing massive star fails to emerge from the stellar mantle, yielding no gamma-ray counterpart. This phenomenon is expected to take place in some core-collapse supernovae (SNe), such as those of the types II \citep{macfadyen2001} and Ib/c. Although the fraction of such sources presenting jets is still uncertain \citep{piran2019}, the link between SNe and CGRBs is conjectured in a similar manner to the case of the confirmed connection between type Ib/c SNe and long GRBs with flat spectrum after the observation of several SNe at the same location previously detected as long GRB \citep{hjorth2012}. 
+ %As for the link between SNe Ib/c with CGRBs, this is expected only for low power GRBs, i.e., those 
+ 
+ The proposed scenarios of neutrino production in GRB jets \citep[e.g.,][]{waxman1997}, have guided the study of CGRBs as hidden neutrino sources under different assumptions and approximations \citep{murase2013,senno2016,he2018,fasano2021}. % Althogh no significant correlation has yet been established between individual SNe Ib/c and the available neutrino data from IceCube, through statistical considerations it has been concluded that choked jets in SNe can still be the main contributors to the diffuse neutrino flux \citep{chang2022}. 
+ In our recent work \citep[][RD2023]{reynoso2023}, we have addressed in detail the process of neutrino production in CGRBs by applying a steady-state transport equation to obtain the particle distributions of primary protons ($p$), electrons ($e$) and also secondary pions ($\pi$), kaons, and muons ($\mu$), which are mainly produced after $p\gamma$ interactions. In particular, we accounted for the possibility that pions and muons can interact with the same soft photon target as the parent proton, as this aspect has not been previously considered.
+ In the present work, we focus on additional possibilities: a lower average jet luminosity and different values the injection index of the accelerated primary particles, $\alpha$. We present the corresponding results for the diffuse neutrino ($\nu$) flux and flavor ratios. 
+   
+\section{Basics of the model}
+%
+\begin{figure*}[!h]
+\centering
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering                          
+        \includegraphics[width=0.5\linewidth,trim= 130 40 210 60]{fig-p-rates-L49_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{50}{\rm erg/s}$} \label{fig4a:Ne50}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.48\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth,trim= 210 40 130 60]{fig-p-rates-L50_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{51}{\rm erg/s}$} \label{fig4b:Ne51}
+    \end{subfigure}
+\caption{{\emph{Left panel:} Acceleration and cooling rates for protons in CGRBs with $L_0=10^{49}{\rm erg \, s^{-1}}$.
+%Acceleration and cooling rates for protons in CGRBs for $L_0=10^{49}{\rm erg \, s^{-1}}$ and $L_0=10^{50}{\rm erg \, s^{-1}}$ on the left and right panels, respectively.
+\emph{Right panel:} The same as in left panel, but for $L_0=10^{50}{\rm erg \, s^{-1}}$. 
+ }} 
+%\cite{Hough_etal_BAAA_2020}.    
+\label{fig:prates}
+\end{figure*}
+Here we briefly describe the basics of the model, while the reader can refer to RD2023 for more details. We assume that the jet of a CGRB has a Lorentz factor $\Gamma\sim 100$, a half-opening angle $\theta_{\rm op}\approx 0.2 {\rm rad}$, and its power is $L_{\rm j}$, which corresponds to an isotropic equivalent power 
+\be 
+L_{0}= 2L_{\rm j}/(1-\cos\theta)= 10^{49-50}{\rm erg \ s^{-1}}. 
+\ee
+For a variability timescale $\delta t$, the distance from the central source to the position of the internal shocks in the jet is
+\be
+r_{\rm is}= 2\Gamma^2c\delta t\simeq 6\times 10^{12}{\rm cm}\ {\delta t_{-2}} \Gamma_{2},
+\ee
+where $\Gamma_2=\Gamma/100$ and $\delta t_{-2}=\delta t/(0.01 {\rm s})$.
+In that region, the comoving number density of cold protons is
+\be
+n'_{\rm j}= \frac{L_{0}}{4\pi\Gamma^2 r^2_{\rm is} m_p c^3} \simeq 4.9\times 10^{12}{\rm cm^{-3}}L_{0, 51}\Gamma_2^{-6}\delta t_{-2}^{-2}. 
+\ee
+The flow is magnetized, and the magnetic energy density is usually taken to be a fraction $\epsilon_{B}\approx 0.1$ of the kinetic energy density $m_p c^2 n'_{\rm j}$, i.e.
+\be
+B'=\sqrt{\frac{2 \,\epsilon_B L_{0}}{\Gamma^2 r^2_{\rm is}  c}}= 1.36\times 10^{5}{\rm G} \ \epsilon_{B,-1}^{{1}/{2}}L_{0,51}^{{1}/{2}} \Gamma_{2}^{-2} \delta t_{-2}^{-1}. 
+\ee
+
+We assume that both protons and electrons are accelerated by internal shocks with an acceleration rate
+\be
+t_{\rm acc}^{-1}(E'_i)=\eta\,\frac{  e\, B' \,c}{E'_i},
+\ee 
+where the efficiency factor is $\eta=0.1$. The main cooling processes for electrons are synchrotron and inverse Compton (IC) scattering, while $p\gamma$ is dominant for high energy protons. The detailed expressions for these and other processes involved can be found in RD2023, and they are plotted in Fig. \ref{fig:prates} for protons. The energy where the acceleration rate is balanced by the total losses is taken as the maximum particle energy $E'_{i,\rm max}$, with $i=\{e,p\}$ for primary electrons and protons. 
+Then, we take the injection of these particles as
+
+\be 
+Q'_i(E'_i) &= \frac{d\mathcal{N}_i}{dE'_i d\Omega'\,dV'dt'}
+= K_i{E'_i}^{-\alpha} \exp\left(-\frac{E'_i}{E'_{i,\rm max}}\right),
+\ee
+
+where $K_i$ is a normalizing constant which is fixed by considering that the total power injected in electrons and protons in the central source (CS) rest frame {is}
+\be
+\Delta V \int_{4\pi}d\Omega \int_{2\,m_i c^2}^{\infty}dE_i E_iQ_i(E_i)= L_i, 
+\ee
+where $\Delta V=4\pi r_{\rm is}^2(c\,\delta t)$. {The relevant target photons for $p\gamma$ interacctions here is the usually adopted one in these scenarios: the thermalized synchrotron and IC emissions produced by electrons accelerated at the shocked jet head, where the jet is actually stopped by the stellar mantle. A fraction of these photons escape into the region with internal shocks. In principle, also the synchrotron emission of electrons accelerated at the internal shocks could provide additional target photons, but these are relevant only if $a_{pe}=L_p/L_e\sim 1$, as obtained in RD2023, while in the present work we assume $a_{pe}=100$, a similar value as the derived from cosmic ray observations.
+%
+%In principle, the synchrotron emission by electrons can provide a relevant target for $p\gamma$ interactions if proton-to-electron ratio is $a_{pe}=L_p/L_e\sim 1$, as obtained in RD2023. However, in the present work we assume $a_{pe}=100$, similar to the value derived from cosmic ray observations, and therefore in such a case, the mentioned electron-synchrotron photons do not represent a significant target for $p\gamma$ interactions. Instead, the relevant target is the usually adopted one, which is due to electrons accelerated at the shocked jet head, where the jet is actually stopped by the stellar mantle. The synchrotron and IC emission of these electrons thermalizes due to a high optical depth, and a fraction of these photons escape into the region with internal shocks. 
+For particles in the region with internal shocks,} the equilibrium distributions are obtained by solving the steady-state transport equation,
+\be
+\frac{d\left[b'_{i,\rm loss}(E'_i) N'_i(E'_i)\right]}{dE'_i}+  \frac{N'_i(E'_i)}{T_{i,\rm esc}}= Q'_i(E'_i),\label{Eq_transport_i}  
+\ee
+where the $b'_{i,\rm loss}=- E'_i \sum_j t'^{-1}_{i,j}(E'_{i})$ is the total energy loss for particles of the type $i$, and $t'^{-1}_{i,j}$ are the cooling rates corresponding to each process $j$. In turn, $T_{i,\rm esc}$ is the escape timescale, which is typically longer than the dominant cooling rates. In the case of pions and muons, we replace $T_{i,\rm esc}\rightarrow T_{i,\rm dec}$ to obtain the particle distributions. 
+%
+\section{Results and discussion}\label{sec:results}
+%
+\begin{figure*}[h!]                            %l b  r  t
+%\centering
+\  \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering                          
+        \includegraphics[width=0.5\linewidth,trim= 130 40 210 50]{fig-Np-L49_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{50}{\rm erg/s}$} \label{fig4a:Ne50}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth,trim= 210 40 130 50]{fig-Np-L50_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{51}{\rm erg/s}$} \label{fig4b:Ne51}
+    \end{subfigure}
+    \caption{{\emph{Left panel:} Proton distributions for $L_0=10^{49}{\rm erg \, s^{-1}}$. {\emph{Right panel:} Proton distributions for $L_0=10^{50}{\rm erg \, s^{-1}}$}}}\label{fig:Nps}
+%\caption{Cooling and acceleration rates for electrons at the internal shocks of CGRBs.}
+\end{figure*}
+
+
+Following the method of calculation described in RD2023 and assuming the sets of parameters shown in Table \ref{table:params}, we obtain the relevant cooling rates and particle distributions. In Fig. \ref{fig:prates}, we show the cooling rates for protons in the cases of $L_0=10^{49}\rm erg\ s^{-1}$ and $L_0=10^{50}\rm erg\ s^{-1}$, where it can be seen that the maximum proton energy is higher in the latter case. This can be seen also in corresponding the proton distributions appearing in Fig. \ref{fig:Nps}. Due to the page limitation, we omitted the plots of the pion cooling and decay rates, which were similar in both cases of $L_0$ values, with the losses dominated by the $\pi\gamma$ process. In the case of muons, there is a slight difference in the IC cooling rate as can be seen in Fig. \ref{fig:mu-rates}, and this is due to the fact that the target photon distribution is somewhat different in each case: for $L_0=10^{49}{\rm erg\ s^{-1}}$ the temperature of the thermalized emission of electrons at the jet head is less than for $L_0=10^{50}{\rm erg\ s^{-1}}$, and this implies that the Klein-Nishina regime is reached for higher energies in the former case as compared to the latter case.
+
+Having obtained the pion and muon distributions, using the formulae of \cite{lipari2007}, as in RD2023, we can obtain the neutrino injections $Q_{\nu_e}$ and $Q_{\nu_\mu}$ in the CS frame. These are used to obtain the typical neutrino spectrum
+for a single CGRB as $
+ \frac{dN_{\nu,z}(E_{\nu,z})}{dE_{\nu,z}}= \Delta\Omega\, Q_{\nu,z}(E_{\nu,z})\Delta V\, t_{\rm j} \left(\frac{\Delta\Omega}{4\pi}\right).
+$ Assuming that the rate of generation of CGRBs is proportional to the star formation rate \citep{madau2014}, $R_{\rm CGRB}(z)=A_{\rm CGRB}\rho_*(z)$   
+as described in RD2023, it follows that the diffuse flux of flavor $\alpha$ on Earth is
+\begin{multline}
+ \varphi_{\nu_\alpha}(E_\nu)= \frac{c}{4\pi\,H_0}\int_{0}^{z_{\rm max}}\frac{dz \,R_{\rm CGRB}(z)}{\sqrt{\Omega_\Lambda+\Omega_{\rm m}(1+z)^3}}\\
+  \left[\frac{dN_{\nu_e,z}(E_\nu(1+z)}{dE_{\nu,z}}P_{e\alpha}+ \frac{dN_{\nu_\mu,z}(E_\nu(1+z)}{dE_{\nu,z}}P_{\mu\alpha} \right].
+\end{multline}
+Here, $P_{e\alpha}$ and $P_{\mu\alpha}$ are the probabilities of oscillations $\nu_e\rightarrow \nu_\alpha$ and $\nu_\mu\rightarrow \nu_\alpha$, respectively, which depend on the neutrino mixing matrix. The latter is determined by three mixing angles and a phase, and their values are extracted from global fits to neutrino experiments \citep{esteban2020}. The resulting muon neutrino fluxes are shown in Fig. \ref{fig:numu} fixing $A_{\rm CGRB}=8\times 10^{-7}M_\odot^{-1}$, consistent with a local rate of choked jet events $R_{\rm CGRB}(z=0)\approx 12\,{\rm yr^{-1}Gpc^{-3}}$, which is within the range of plausible values \citep[e.g.][]{he2018}. The flavor ratios as a function of the observed neutrino energy are shown in the left panel of Fig. \ref{fig:fFalpha}, and these are found to be independent of the injection index $\alpha$. It can be seen that a slight variation is obtained between the two cases of $L_0$ considered, and this is due to the higher IC cooling of high energy muons for $L_0=10^{49}{\rm erg\ s^{-1}}$ as compared to the case of $L_0=10^{50}{\rm erg \ s^{-1}}$. Finally, this effect is also present in flavor ratios obtained with the fluxes integrated over a minimum neutrino energy $E_{\nu,\rm min}$, as can be seen in the right panel of Fig.\ref{fig:fFalpha}.  Forthcoming work will allow us to explore other possibilities with different combination of the physical parameters of these choked jets. 
+
+\begin{figure*}[!h]                            %l b  r  t
+\centering
+\  \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering                          
+        \includegraphics[width=0.5\linewidth,trim= 130 40 210 65]{fig-mu-rates-L49_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{50}{\rm erg/s}$} \label{fig4a:Ne50}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth,trim= 210 40 130 65]{fig-mu-rates-L50_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{51}{\rm erg/s}$} \label{fig4b:Ne51}
+    \end{subfigure}
+%    
+    \caption{{\emph{Left panel:} Decay and cooling rates for muons for $L_0=10^{49}{\rm erg \ s^{-1}}$. \emph{Right panel:} The same as in left panel, but for $L_0=10^{50}{\rm erg \ s^{-1}}$.}}
+    \label{fig:mu-rates}
+%\caption{Cooling and acceleration rates for electrons at the internal shocks of CGRBs.}
+\end{figure*}
+
+
+
+
+
+\begin{figure*}[!h]
+\centering
+%\includegraphics[width=\columnwidth]{fig-numu-eB01.pdf}
+\  \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering                          
+        \includegraphics[width=0.5\linewidth,trim= 130 40 210 65]{fig-numu-eB01-L49_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{50}{\rm erg/s}$} \label{fig4a:Ne50}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth,trim= 210 40 130 65]{fig-numu-eB01-L50_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{51}{\rm erg/s}$} \label{fig4b:Ne51}
+    \end{subfigure}
+%    
+\caption{{\emph{Left panel:} Diffuse flux of muon neutrinos for different values of the proton injection index $\alpha$, setting $L_0=10^{49}{\rm erg\ s^{-1}}$. \emph{Right panel:} The same as in left panel, but for $L_0=10^{50}{\rm erg\ s^{-1}}$.}}
+\label{fig:numu}
+\end{figure*}
+
+
+\begin{figure*}[!h]
+\centering
+%\includegraphics[width=\columnwidth]{fig-numu-eB01.pdf}
+\  \centering
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering                          
+        \includegraphics[width=0.5\linewidth,trim= 130 30 210 60]{fig-falpha-eB01_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{50}{\rm erg/s}$} \label{fig4a:Ne50}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}[t]{0.47\textwidth}
+        \centering
+        \includegraphics[width=0.5\linewidth,trim= 210 30 130 60]{fig-FFalpha-eB01_v2.pdf} 
+        %\caption{Electron distributions for $L_0=10^{51}{\rm erg/s}$} \label{fig4b:Ne51}
+    \end{subfigure}
+%    
+\caption{\emph{Left panel:} Flavor ratios for neutrinos from CGRBs as a function of the neutrino energy. \emph{Right panel:} Flavor ratios of the integrated neutrino fluxes as a function of the minimum neutrino energy. In both panels, dashed curves correspond to $L_0=10^{49}{\rm erg\ s^{-1}}$ and solid ones to $L_0=10^{50}{\rm erg\ s^{-1}}$.}
+\label{fig:fFalpha}
+\end{figure*}
+%
+%\begin{figure}[]
+%\centering
+%\includegraphics[width=0.84\columnwidth]{fig-FFalpha-eB01.pdf}
+%\caption{Flavor ratios of integrated neutrino fluxes for $L_0=10^{49}{\rm erg\, s^{-1}}$ (dashed curves) and $L_0=10^{50}%{\rm erg\, s^{-1}}$ (solid curves).}
+%\label{fig:FFalfpha}
+%\end{figure}
+
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=\columnwidth]{fig-falpha-eB01.pdf}
+%\caption{Flavor ratios for neutrinos from CGRBs for different values of the proton injection %index $\alpha$.}
+%\label{Figura}
+%\end{figure}
+%
+\begin{acknowledgement}
+ We thank ANPCyT and Universidad Nacional de Mar del Plata for their financial support through grants PICT 2021-GRF-T1-00725 and EXA1214/24, respectively.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{897}
+ 
+\end{document}

@@ -1,0 +1,396 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Cosmic rays at the epoch of reionization}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Cosmic rays at the epoch of reionization}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+L. Carvalho\inst{1},
+G.J. Escobar\inst{2,3}
+\&
+L.J. Pellizza\inst{1}
+}
+
+\authorrunning{Carvalho et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{lautarocarvalho@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{ 
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+\and
+Dipartimento di Fisica e Astronomia Galileo Galilei, Università degli Studi di Padova, Italia
+\and
+Istituto Nazionale di Fisica Nucleare (INFN), Padova, Italia
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Uno de los problemas abiertos más importantes de la Cosmología actual es el de las fuentes responsables de la ionización y calentamiento del medio intergaláctico (MIG) durante el Amanecer Cósmico. La radiación de las primeras galaxias no sería suficiente para mantener la ionización del medio a gran escala, por lo que se han propuesto agentes de ionización complementarios, entre ellos los rayos cósmicos producidos en dichas galaxias. En este artículo mostramos nuestros primeros resultados sobre la ionización del MIG producida por cascadas electromagnéticas iniciadas por electrones, en un escenario estándar de reionización. Utilizando métodos numéricos simulamos el transporte de las partículas que componen las cascadas. Luego, calculamos la tasa de ionizaciones y la distribución de energía entre las partículas y el MIG al propagarse dichas cascadas. Nuestros resultados refuerzan y extienden aquellos previamente obtenidos por otros autores, en el sentido de que la contribución de la componente electrónica de rayos cósmicos a la ionización del MIG ocurre en dos etapas. Electrones con energía $\lesssim 10~\mathrm{keV}$ se enfrían completamente dentro de una distancia del orden de los miles de kiloparsecs, ionizando el medio. Por otro lado, electrones de energías $\gtrsim 100~\mathrm{keV}$ transportan la misma a distancias mas allá de un megaparsec. Además, mostramos por primera vez que los fotones secundarios producto de cascadas iniciadas por electrones de alta energía podrían contribuir significativamente a la ionización del MIG. Este resultado implica una tasa de ionización considerable en el MIG lejano que aún no ha sido explorada en detalle.}
+
+\abstract{One of the most important open problems in modern cosmology is that of the sources responsible for the ionization and heating of the intergalactic medium (IGM) during the Cosmic Dawn. Radiation from early galaxies would not have been enough to maintain the ionization of the IGM on a large scale. For this reason different complementary ionizing agents have been proposed, such as the cosmic rays produced by those galaxies. In this work we present our first results on the ionization of the IGM produced by electron-initiated electromagnetic cascades (EMC), for a standard reionization scenario. Using numerical methods we simulated the transport of the particles that compose the cascades. Then, we calculated the ionization rate and the energy distribution among the particles and the IGM as the cascades propagate through the latter. Our results reinforce and extend those of other authors, in the sense that the contribution of the electronic component of the cosmic rays to the ionization of the IGM occurs in two stages. Electrons with energies below $10~\mathrm{keV}$ cool down completely within a distance to the source on the order of thousands of kiloparsecs, ionizing the medium in the process. On the other hand, electrons with energies above $100~\mathrm{keV}$ transport most of their energy to distances beyond the megaparsec. Also, we show for the first time that secondary photons originated in cascades initiated by high-energy electrons could contribute significantly to the ionization of the IGM. This result implies a sizeable ionization rate in the deep IGM that is yet to be explored in detail.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{  astroparticle physics --- cosmic rays --- dark ages, reionization, first stars}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+
+With the birth of the first sources of stellar radiation at $z \sim 20$ \citep{Peacock1999}, the thermodynamic state of the primordial IGM started to change. As photons interacted with the neutral hydrogen and helium atoms, the IGM began to suffer a global phase transition characterized by a progressive increase of its ionization fraction. The period during which this transition occurred is known as the Epoch of Reionization (EoR), and the latest observations indicate that it would have ended by $z \sim 5.7$ \citep{Fan2006, Becker2015}. 
+
+It is currently understood that UV radiation emitted by the first stars was one of the main agents responsible for the reionization of the Universe \citep[e.g.][]{Robertson2010}. However, evidence suggests that the escape fraction of UV photons would not have been high enough for them to fully ionize the deep IGM, far from the sources \citep{Heckman2001, Ferrara2013, Mitra2013, Izotov2016}. 
+
+For these reasons, complementary sources and ionizing agents have been proposed. Some authors studied active galactic nuclei as candidates for heating and ionizing the IGM, although the demography of this objects at high redshift is still uncertain \citep[e.g.][]{Fan2001, Cowie2009, Madau2015}. Other authors have considered the contribution of X-ray photons originated from X-ray binaries \citep{Mirabel2011, Fragos2013, Jeon2014, Xu2014, Sazonov2017}, but some works suggest that their effects on the state of the IGM would have been marginal at best \citep[e.g.][]{Madau2017}. 
+
+
+Cosmic rays (CR) that escaped from galaxies have also been considered as alternative ionizing agents. Subatomic particles could have been accelerated in early supernova explosions, or inside the highly collimated jets associated to Pop III microquasars, transporting energy far away from their sources \citep{Heinz&Sunyaev2002, Sotomayor2019}. As they travel, CRs can interact with the matter, radiation and magnetic fields in the IGM, and deposit a significant fraction of their kinetic energy into it, favoring the reionization process. 
+
+Previous works have explored the contribution of CR electrons leaking from galaxies \citep{Tueros2014, Leite, Douna}. In this article, we improve upon these works taking into account cooling mechanisms not considered by these authors and expanding the electron energy range. We focus on the energy exchange between the electronic component of CRs and the IGM, and identify the most relevant channels of interaction through which electrons could affect the thermodynamic state of the medium during the EoR. To this aim, we designed and ran a set of Monte Carlo simulations of the injection of energy in the IGM through EMC, in order to estimate their contribution to the reionization process.
+ 
+
+\section{Method}
+
+The efficiency of the cooling processes that a CR electron could suffer while traversing the IGM strongly depends on the density of its ambient fields. To compute the energy losses produced by the interactions of CRs with the early IGM, we considered the latter as a partially ionized hydrogen gas. We analyzed the characteristic timescales of the interactions for a standard reionization scenario characterized by two parameters: the redshift $z$ and the neutral hydrogen ionization fraction $f_{\mathrm{ion}}$. We adopted the typical values at the beginning of the EoR ($z=10$ and $f_{\mathrm{ion}}=10^{-4}$) since most models favor a late starting and rapid process \citep{Greig2017}.
+
+To model the partially ionized hydrogen gas we considered the following four ambient fields: Two matter fields with densities $\rho_{\mathrm{e}} =0.025 \: \mathrm{cm}^{-3}$ and $\rho_{\mathrm{H}}=258.6 \: \mathrm{cm}^{-3}$, for the free electrons and the hydrogen atom fields, respectively; the radiation field of the cosmic microwave background (CMB) with density $\rho_{\mathrm{CMB}}=5.319\times 10^{11} \: \mathrm{cm}^{-3}$ and energy $E_{\mathrm{CMB}}=0.004  \;  \mathrm{eV}$; and a homogeneous magnetic field $B=10^{-16} \: \mathrm{G}$.
+
+
+
+\subsection{Characteristic Timescales}
+
+In Fig.\ref{Tiempos_Elect} we show the comparison between the cooling times (dashed lines), and the ionization equivalent times (i.e. the time that it takes for a cooling process to drain $13.6$~eV from an electron; dotted lines), for each interaction. We considered solely the processes that operate within the energy range of galactic CR ($E \lesssim 1\,\mathrm{PeV}$, i.e. below the knee of the observed energy spectrum). These being: collisional ionization (CI) (black), Coulomb interaction (red), inverse Compton (IC) scattering (yellow), Bremmsthralung (green) and synchrotron radiation (blue), for electrons.  
+
+
+We notice that the IC scattering with CMB photons and the CI seem to be the only efficient cooling mechanisms. For other interactions, it would take a time greater than the Hubble time to drain a significant fraction of the electron kinetic energy $K_{\mathrm{e}}$. Nonetheless, high energy electrons only need to deposit a small portion of their kinetic energy into its surroundings to make a relevant change in the thermodynamic state of the IGM. For this reason, we found necessary to consider other characteristic timescales in order to have a complete understanding of the energy deposition phenomena.
+
+Looking at the ionization equivalent times, we see that although the Coulomb interaction is not an efficient cooling mechanism for electrons, the energy depleted by it can be up to several times the hydrogen ionization potential $I_{\mathrm{H}} = 13.6 \, \mathrm{eV}$. In fact, even though the energy lost through this interaction is a small fraction of the total $K_{\mathrm{e}}$, for $K_{\mathrm{e}} > 10\,\mathrm{keV}$ these losses would be equivalent to thousands of ionization events per primary electron.
+
+In Fig.\ref{Tiempos_Foton} we show the mean interaction times for photons. In this case, that indicator is sufficient since these interactions imply the annihilation of the incident photon. We considered the following processes: photo-ionization (black dash-dotted line), Compton scattering (yellow dash-dotted line) and pair creation (green dash-dotted line). Only photo-ionization for photon energies up to $\sim 1~\mathrm{keV}$ is relevant since at higher energies, and for other processes, the timescales are greater than the Hubble time. 
+
+From the precedent analysis we conclude that the relevant interactions for the purposes of this work are the following: CI, Coulomb interaction, IC scattering, and photo-ionization produced by secondary photons.
+
+
+\begin{figure}[h!]
+\centering
+\includegraphics[width=\columnwidth, height=6cm,keepaspectratio]{Time_Cool+Ion_z_10.pdf}
+\caption{Energy-loss timescales normalized to the Hubble time for CR electrons. Cooling times (dashed lines) and ionization equivalent times (dotted lines) as functions of the kinetic energy of the electrons.
+}
+\label{Tiempos_Elect}
+\end{figure}
+
+\begin{figure}[h!]
+
+\includegraphics[width=\columnwidth, height=6cm,keepaspectratio]{Time_int_Foto_Z10.pdf}
+\caption{Photons interaction times normalized to the Hubble time  as a functions of their energy (dash-dotted lines). 
+}
+
+\label{Tiempos_Foton}
+\end{figure}
+
+\subsection{Numerical simulations}
+
+The evolution and propagation of an electromagnetic cascade involves the coupling of different types of particle populations. This renders the problem too complex to be properly solved by analytic means. Therefore, to model the interactions between CRs and the IGM we used the code \textsc{utopia} \citep[Understanding Transport Of Particles In Astrophysics;][]{Pellizza2010, Douna}. We ran a set of physical simulations spanning a spherical volume of radius $R = 1$ Mpc (typical distance between galaxies at $z= 10$)  centered around a point-like source of CR electrons, considering only the cooling processes we found to be relevant for reionization. 
+
+
+
+
+\section{Preliminary Results}
+
+As shown in  Fig.\ref{CDF}, we calculated the cumulative number of ionization events per primary electron, produced by electron-initiated EMC, as a function of the distance to the source and the kinetic energy of the primary electron. For primary electrons with $K_{\mathrm{e}} < 10$~keV we see that the curves reach a plateau once all the electrons in the cascade cool down below $I_{\mathrm{H}}$. On the other hand, for electrons with $K_{\mathrm{e}} > 10$ keV, the ionization counts keep increasing for all distance bins, indicating that they do not cool completely before reaching the spatial boundary of the simulation (1 Mpc). These results agree with those of \citet{Douna} for low energy electrons, and extend them to higher kinetic energies. They suggest that high energy electrons can transport a fraction of their energy far away from the CR source, opening a potential channel of deep IGM ionization, as we show in the remainder of this section. 
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth, height=6cm,keepaspectratio]{CDF_Ion_vs_Dist_100ev-10MeV_Z10.pdf}
+\caption{Ionization count per primary electron ($R_\mathrm{ion}$) as a function of the distance \textit{D} from the source, for different kinetic energy values of the primary electrons.}
+\label{CDF}
+\end{figure}
+
+
+
+
+
+
+In Fig.\ref{Espectro_IC} we show a simulated spectra of secondary photons produced by IC scattering, for different kinetic energy values of the primary electron. We see that secondary ionizing photons are originated when electrons with energies between $15-500$~MeV scatter against a CMB photon ($E_{\mathrm{CMB}} \sim 4.12 \times 10^{-3}$ eV). Electrons below that energy range produce photons with energies $E_{\mathrm{ph}}< 13.6$~eV (i.e. non-ionizing photons). Meanwhile, electrons with higher energy produce photons with $E_{\mathrm{ph}} > 1$~keV. These have a mean free path larger than the size of the simulated volume and we therefore disregard them. In conclusion, EMC initiated by electrons with $15 < K_{\mathrm{e}} < 500$~MeV are the ones expected to be of special relevance, due to the contribution of photo-ionization. 
+
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth, height=5cm,keepaspectratio]{Espectro_Simulado_IC.png}
+\caption{Normalized energy spectrum of the secondary photons produced by primary electrons via IC. The colors show different kinetic energies for the primary electrons. The two dashed vertical lines limit the region of interest for photon energies, from $13.6$~eV (\textit{left}) to $1$~keV (\textit{right}).}
+\label{Espectro_IC}
+\end{figure}
+
+In Fig.\ref{N_ion} we show the total number of ionization events per primary electron $N_{\mathrm{ion}}$ produced within $D$, as a function of the electron kinetic energy, for different sets of simulations. The first one includes only elastic and inelastic collisions (dashed blue line); the second one considers also IC interactions (dashed black line); and the third one additionally incorporates the photo-ionization of secondary photons (dashed red line). The plot distinguishes three energy ranges: low (green), intermediate (yellow) and high (red) kinetic energy regions.
+
+In the leftmost region there is no significant difference among the curves, $N_{\mathrm{ion}}$ grows linearly with the energy of the electron for all cases. First, low energy electrons lose most of their energy via CI, the rate of which heavily dominates over IC scattering at this regime. Second, the mean energy lost in each IC interaction is well below $I_{\mathrm{H}}$, and only generates non-ionizing secondary photons. Therefore, the effects of IC and photo-ionization on $N_{\mathrm{ion}}$ for low energy electrons is negligible.
+
+The middle region shows how the IC losses start to hinder the number of ionization events per primary electron. This occurs because the amount of energy lost with each interaction increases with the energy of the incident electron. For electrons with $K_{\mathrm{e}} > 10$ keV, the energy fraction lost through IC dominates over other losses. This tendency continues as we consider higher electron energy values, until we reach $K_{\mathrm{e}} = 15$~MeV (high energy regime). Then, for intermediate energy electrons, the incorporation of the IC scattering results in a significant decrease of the number of CI events they can produce.  
+
+Finally, electrons with $K_{\mathrm{e}} > 15$~MeV can produce, through IC scattering, secondary photons with energies above the ionization threshold. This allows photo-ionization to occur, permitting a significant portion of the energy losses due to IC to be reinserted into the medium as ionizations. This means that high energy electrons can produce a significant contribution to the ionization of the medium, specially on those regions far from the source where low energy ones  cannot reach.
+
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{N_Ion_Tot-con_y_con_IC.jpg}
+\caption{Ionization counts per primary electron with and without considering IC and photo-ionization contributions, as a function of the kinetic energy of the primary electrons.}
+\label{N_ion}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusions}
+
+We explored the physics of electron-initiated EMC propagating through the IGM for a standard reionization scenario that is consistent with the latest observational results \citep{Wise2019}. To this aim, we simulated all energy deposition mechanisms for electron cooling within a spherical volume of 1 Mpc centered on the CR source, and determined their effects over the IGM during the EoR. Summarizing:
+
+\begin{enumerate}
+
+    \item Both low energy ($K_{\mathrm{e}} < 100$ keV) and high energy ($K_{\mathrm{e}} > 15$ MeV) electrons can ionize efficiently.
+    
+    \item Intermediate energy electrons ($15$~MeV $> K_{\mathrm{e}} > 100$ keV) cool down rapidly via IC scattering, producing non-ionizing photons, which hinders their ionization efficiency.
+    
+    \item Escaping electrons carry away a large fraction of their initial energy, and are of interest as ionizing agents of the deep IGM.
+    
+    \item As suggested by previous works \citep{Douna}, the large scale reionization of the IGM mainly proceed in two steps: i) energy has to be carried far away from the source by high energy electrons and ii) those electrons have to be cooled to produce ionizations. 
+    
+\end{enumerate}
+
+Our future endeavours will focus on extending the spatial range of the simulations in order to have a better understanding of the reionization process beyond the megaparsec threshold. We are also working on the effects of magnetic fields over the propagation of the EMC, since the irregularities in these fields would give rise to a diffusive transport regime for the electrons, which could significantly impact their ionization capability. Additionally, we aim to incorporate hadronic-initiated cascades into our simulations to study the contribution of CR protons to the reionization process. This will allow us to study more physically accurate injections of CR particles, taking into account all relevant energy losses, and then scale the results to the demographics of the CR sources, as was done \cite{Douna}. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

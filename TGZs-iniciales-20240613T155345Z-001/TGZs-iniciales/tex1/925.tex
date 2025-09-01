@@ -1,0 +1,407 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\usepackage{placeins}
+\usepackage{pdfpages}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{S-PLUS: An atlas of integrated H$\alpha$ + [N {\sc ii}] fluxes for planetary nebulae in the Magellanic Clouds}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{S-PLUS: Integrated H$\alpha$ + [N II] Fluxes for PNe in the Magellanic Clouds}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+L.A. Gutiérrez-Soto\inst{1},
+A.R. Lopes\inst{1},
+A.V. Smith Castelli\inst{1,2},
+R. Faifer\inst{1,2}
+\&
+R. Haack\inst{1,2}
+}
+
+\authorrunning{Gutiérrez-Soto et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{gsotoangel@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina \and
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Presentamos un atlas de flujos integrados de H{$\alpha$} + [N {\sc ii}] para nebulosas planetarias de las Nubes de Magallanes (MC PNe) con mediciones del Southern Photometric Local Universe Survey (S-PLUS), una encuesta de imágenes de 12 bandas (7 estrechas y 5 anchas) que nos permite realizar un análisis espacial de la emisión de H{$\alpha$}. Se realizó fotometría de apertura en las imágenes con el continuo sustraído para extraer los flujos de H{$\alpha$} + [N {\sc ii}] de las MC PNe observadas por S-PLUS, enfatizando la fiabilidad del método a través de comparaciones espectroscópicas-fotométricas. Las representaciones visuales demostraron la fidelidad de los datos de S-PLUS en la captura de características espectrales. El trabajo en curso aborda refinamientos en las técnicas de análisis y aplicaciones más amplias de estos mapas de flujo para cálculos de distancia y temperatura.}
+
+\abstract{We present an atlas of integrated H{$\alpha$} + [N {\sc ii}] fluxes for planetary nebulae of the Magellanic Clouds (MC PNe) with measurements from the Southern Photometric Local Universe Survey (S-PLUS), a 12-band (7 narrow and 5 broad) imaging survey that allows us to perform a spatial analysis of the H{$\alpha$} emission. Aperture photometry on the continuum-subtracted images was performed to extract H{$\alpha$} + [N {\sc ii}] fluxes of the MC PNe observed by S-PLUS, emphasizing method reliability through spectroscopic-photometric comparisons. Visual representations showcased S-PLUS data fidelity in capturing spectral features. Ongoing work addresses refinements in analysis techniques and broader applications of these flux maps for distance and temperature calculations.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ planetary nebulae: general --- ISM: lines and bands --- surveys}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+The exploration of Planetary Nebulae (PNe) in the Magellanic Clouds has been ongoing for half a century, experiencing a revitalized focus in the last five years.
+This renewed interest can be credited to the emergence of new discovery surveys, comprehensive spectroscopic investigations, and a deeper understanding of
+the Magellanic Clouds themselves. These advancements have notably enriched our understanding of PNe within these celestial systems.
+
+Studying PNe in the Magellanic Clouds offers distinct advantages compared to studies of Galactic PN populations, as outlined by \citet{Jacoby:2002}
+and \citet{Shaw:2006}. Chief among these advantages is the known distance of these systems, facilitating detailed studies of large numbers of PNe
+and accurate determination of important physical parameters such as sizes and luminosities. Additionally, the average foreground extinction
+in both the Large Magellanic Cloud (LMC) and Small Magellanic Cloud (SMC) is low, enabling the acquisition of large, complete,
+flux-limited samples without severe selection biases present in the Galaxy. Moreover, both systems are among the most massive in the
+Local Group, with PN populations totaling hundreds of objects, allowing for the study of statistical properties of various subsamples.
+Consequently, Magellanic Cloud PNe have been successfully employed over the past few decades to investigate numerous astrophysical questions.
+
+The Small Magellanic Cloud (SMC) is a gas-rich late-type dwarf galaxy \citep{Bolatto:2007} with a gas-to-dust ratio 30 times higher than the
+Milky Way \citep{Stanimirovic:2000}. It is one of the closest and most prominent neighbors of the Milky Way, characterized
+by its low mass ($M_{\text{dyn}} \sim 2.4\times 10^{9}$M$\odot$; \citealp{Stanimirovi:2004}) and small size ($R_{*} \sim 3$ kpc).
+Classified as an irregular galaxy (ImIV$-$V), the SMC is at a distance of 60.6$\pm$3.8 kpc from the Galaxy.
+
+On the other hand, the Large Magellanic Cloud (LMC; \citealp{Meixner:2006}) is a satellite galaxy of the Milky Way and is the fourth-largest galaxy in the Local Group.
+It is located at a distance of approximately 50 kiloparsecs \citep{Feast:1999}. The LMC is characterized by its irregular shape and prominent bar feature.
+It contains a rich population of various astrophysical objects, including star clusters, supernova remnants, and, notably, planetary nebulae \citep{Elson:1987, Chu:1993, Leisy:1996}.
+
+
+There are two surveys currently mapping the sky in a systematic, complementary way, utilizing 5 broad and 7 narrow-band filters,
+including H$\alpha$: the Javalambre Photometric Local Universe Survey (J-PLUS; \citealp{Cenarro:2019}), covering the Northern celestial hemisphere,
+and the Southern-Photometric Local Universe Survey (S-PLUS; \citealp{Mendes:2019}), covering the southern sky. These two surveys allow leveraging H$\alpha$ emission lines in the context of PNe \citep{Gutierrez:2020}.
+
+This study presents an integrated H$\alpha$ flux atlas for Magellanic Cloud Planetary Nebulae (MC PNe) using S-PLUS imaging and
+spectroscopy, alongside literature data. Our methodology generated H$\alpha$ + [N {\sc ii}] flux maps for numerous MC PNe,
+highlighting method reliability through spectroscopic-photometric comparisons. Visual representations demonstrate S-PLUS data
+fidelity in capturing spectral features. Ongoing work focuses on refining analysis techniques and exploring broader applications of these flux maps for distance and temperature calculations.
+
+\section{Methodology}\label{sec:metho}
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{splus-filter-pn.pdf}
+\caption{Transmission curves of the S-PLUS filter set. The narrow-band filter
+      $J0660$ includes the H$\alpha$ + [N {\sc ii}] emission lines.  Over-plotted is a spectrum of typical Galactic PN.}%
+\label{fig:filter-PN}
+\end{figure}
+
+This manuscript utilizes data from the S-PLUS DR4, covering 3,000 square degrees of the southern sky. S-PLUS DR4 data can be accessed in the \texttt{S-PLUS Cloud} database (\url{https://splus.cloud/}). The survey is conducted by a dedicated 0.83m robotic telescope located at Cerro Tololo, Chile \citep{Mendes:2019}.
+
+
+As shown in Fig. \ref{fig:filter-PN}, S-PLUS employs the 12 filters from the Javalambre filter system \citep{Marin-Franch:2012}, spanning the wavelength range from 3000\AA\ to 10000\AA. These include seven narrow-band filters (\textit{J}0378, \textit{J}0395, \textit{J}0410, \textit{J}0430, \textit{J}0515, \textit{J}0660, and \textit{J}0861), and five broad-band Sloan-like filters \citep{Fukugita:1996}.
+
+The narrow-band $J0660$ filter used in S-PLUS has a central wavelength of approximately 6614~\AA\ and a width of about 147~\AA, covering both the H$\alpha$ and the doublet [N {\sc ii}] $\lambda\lambda 6548,6584$ spectral lines (see Fig. \ref{fig:filter-PN}) for sources up to a redshift of approximately 0.02 (Table 2 of \citealp{Mendes:2019}).
+
+Fig. \ref{fig:distr-PN} illustrates the distribution of planetary nebulae  in the Magellanic Clouds, showcasing the coverage of S-PLUS fields and the spatial arrangement of these PNe. S-PLUS DR4 comprehensively observes both Magellanic clouds, indicating extensive coverage of PNe in this region. It is worth noting that $\sim$100 PNe are cataloged in the SMC \citep{Jacoby:2002}, while the LMC currently hosts around 700 confirmed PNe \citep{Reid:2014}. Remarkably, more than 95\% of these PNe were observed by S-PLUS, indicating that they have corresponding data.
+
+We employed S-PLUS data to derive H$\alpha$ + [N {\sc ii}] fluxes for PNe in the Magellanic Clouds. This involved extracting fluxes using aperture photometry techniques and generating H$\alpha$ + [N {\sc ii}] maps from the S-PLUS data. The H$\alpha$ + [N {\sc ii}] flux for the planetary nebulae in the Magellanic Clouds, observed through the S-PLUS survey, was derived using two broad-band filters ($r$ and $i$) and one narrow-band filter ($J$0660) as described in Equation 3 by \citet{Vilella-Rojo:2015}. H$\alpha$ + [N {\sc ii}] maps were generated using a Python code developed by Lopes et al. (in preparation), based on the technique of Vilella-Rojo. At this stage of the study, we have measured the H$\alpha$ + [N {\sc ii}] fluxes for the PNe of the SMC, with the next step being the measurement of fluxes for the LMC ones. We have successfully measured the fluxes for 80 SMC PNe. 
+
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{galactic-coord-pn.pdf}
+\caption{The distribution of the planetary nebulae from the literature (green circles) in the Magellanic Clouds. The large gray squares indicate the S-PLUS fields that cover both the Large and Small Magellanic Clouds. Almost all the planetary nebulae are within the S-PLUS fields.}%
+\label{fig:distr-PN}
+\end{figure}
+
+
+\section{Results}\label{sec:results}
+
+\subsection{S-PLUS photometry and VLT/X-shooter spectra}\label{sec:splus-vlt}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=\columnwidth, trim=10 60 5 8, clip]{SMC-SMP-1_spectrum.pdf}
+\includegraphics[width=\columnwidth, trim=10 60 5 8, clip]{SMC-SMP-2_spectrum.pdf}
+\includegraphics[width=\columnwidth, trim=10 20 5 8, clip]{SMC-SMP-24_spectrum.pdf}
+\caption{S-PLUS photometry is represented by the colored points overlaid with VLT/X-shooter spectra of Magellanic Cloud planetary nebulae: (\textit{upper}) LHA 115-N 1, (\textit{middle}) SMP SMC 2, and (\textit{lower}) LHA 115-N 70.}
+\label{fig:spectra}
+\end{figure}
+
+The spectra used in this study were observed with VLT/X-Shooter under Director’s Discretionary Time programmes 108.MQ23.001 and 110.23Q7.001, with typical seeing of 0.4 arcsec. Slit widths were 1.3 arcsec, 1.2 arcsec, and 1.2 arcsec for the UVB (300–560 nm), VIS (550–1020 nm), and NIR (1020–2480 nm) arms, respectively, achieving spectral resolutions of $R = 4100$, $6500$, and $4300$ \citep{Paterson:2023}. S-PLUS observations for the Main Survey (MS) were conducted with each field observed under photometric conditions and seeing ranging from 0.8 arcsec to 2.0 arcsec per filter. To ensure optimal image quality, the survey avoids nights with seeing conditions worse than 2.0 arcsec \citep{Mendes:2019, Almeida:2022}.
+
+Fig.~\ref{fig:spectra} presents a comparison between the VLT/X-shooter spectra and S-PLUS photometry for three Magellanic Cloud planetary nebulae: LHA 115-N 1, SMP SMC 2, and LHA 115-N 70. This comparison highlights the remarkable agreement between the spectroscopic data and photometric observations, showcasing the consistency and reliability of the S-PLUS data in capturing essential spectral features crucial for planetary nebula characterization. The overlay of colored points representing S-PLUS photometry onto the VLT/X-shooter spectra visually demonstrates this consistency, illustrating the complementary nature of spectroscopic and photometric techniques in astrophysical studies.
+ 
+ 
+Fig.~\ref{fig:halpha-maps} shows the combined RGB image and  H$\alpha$ + [N {\sc ii}] flux maps for three planetary nebulae: LHA 115-N 1, SMP SMC 2, and LHA 115-N 70. Utilizing S-PLUS data, this visualization provides a detailed examination of the spatial distribution of ionized gas within these nebulae. By integrating multi-filter photometry with  H$\alpha$ + [N {\sc ii}] flux mapping, our methodology offers a comprehensive understanding of the emission properties and spatial characteristics of planetary nebulae in the Magellanic Clouds.
+
+\begin{figure}[h]
+\centering
+\begin{tabular}{l l}
+  \includegraphics[width=0.5\linewidth, trim=10 10 5 8, clip]{iDR4_3_MC0113_0054489-RGB.pdf}
+  \includegraphics[width=0.5\linewidth, trim=10 10 5 8, clip]{iDR4_3_MC0113_0054489_halpha_v1.pdf} \\
+  \includegraphics[width=0.5\linewidth, trim=10 10 5 8, clip]{iDR4_3_MC0093_0237121-RGB.pdf}
+  \includegraphics[width=0.5\linewidth, trim=10 10 5 8, clip]{iDR4_3_MC0093_0237121_halpha_v1.pdf} \\
+  \includegraphics[width=0.5\linewidth, trim=10 10 5 8, clip]{iDR4_3_MC0094_0183910-RGB.pdf}
+  \includegraphics[width=0.5\linewidth, trim=10 10 5 8, clip]{iDR4_3_MC0094_0183910_halpha_v1.pdf}
+  
+  \end{tabular}  
+  \caption{
+  The \emph{left panel} displays an RGB image composed from $r$, $J0660$, and $i$ filters, while the \emph{right panel} shows the corresponding  H$\alpha$ + [N {\sc ii}] flux map for the PN shown in Fig. \ref{fig:spectra}, respectively.}
+\label{fig:halpha-maps}
+\end{figure}
+    
+\subsection{Validating the  H$\alpha$ + [N {\sc ii}] flux maps}\label{sec:val}
+
+    
+To ensure the accuracy of the H$\alpha$ + [N {\sc ii}] flux maps derived from S-PLUS data, a validation process was undertaken. This process involved the following steps:
+
+- Pseudo Slit Creation:
+
+A pseudo slit was created using the H$\alpha$ + [N {\sc ii}] map generated from S-PLUS data. This pseudo slit provided a spatially resolved view of the emission line distribution within the PNe. The width of the slit was determined by selecting the region in the H$\alpha$ + [N {\sc ii}] images that includes pixels with a signal-to-noise ratio larger than 10. We found that a pseudo slit width of 10 pixels was appropriate, given the S-PLUS seeing conditions. With a telescope plate scale of 0.55 arcsec/pixel, the width of the slit corresponds to 5.5 arcsec, which is sufficient to encompass the flux distribution considering the typical seeing of 0.8 to 2.0 arcsec in S-PLUS data and ensuring minimal flux loss.
+
+- Summed Flux:
+
+The flux within the pseudo slit was calculated by summing the flux values along its length. This step allowed for the quantification of the total H$\alpha$ + [N {\sc ii}] emission from each PNe.
+
+- Spectroscopic Measurement:
+
+Spectroscopic measurements were conducted to directly capture the H$\alpha$ and [N {\sc ii}] emission lines from the spectra of the PNe. These measurements served as a comparative benchmark for assessing the accuracy of the flux values derived from the H$\alpha$ and [N {\sc ii}] flux maps. By undertaking these validation steps, we ensured the reliability and fidelity of the H$\alpha$ flux maps generated from S-PLUS data, thus enhancing confidence in the subsequent analyses and interpretations of the emission characteristics of the planetary nebulae. It is worth noting that our validation process initially utilized spectroscopic data from seven  VLT/X-shooter spectra. However, we have acquired additional spectra, which will be incorporated into our study to further bolster our findings.
+
+\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{compare-splus-spec.pdf}
+\caption{A comparison between integrated H$\alpha$ + [N {\sc ii}] fluxes obtained from spectroscopy and photometry for seven PNe of the SMC highlights both their consistencies and discrepancies. The error bars on the x-axis are smaller than the symbols. The mean error on the x-axis is around $4.37 \times 10^{-15}$.}%
+\label{fig:comp}
+\end{figure}
+
+
+Fig.~\ref{fig:comp} presents a comparison between integrated H$\alpha$ + [N {\sc ii}] fluxes obtained from spectroscopy and photometry for seven PNe of the Small Magellanic Cloud. Remarkably, the results demonstrate a high level of agreement between the two techniques, highlighting both consistencies and discrepancies. This direct comparison offers valuable insights into potential systematic variations or uncertainties between photometric and spectroscopic measurements, further enhancing our understanding of the emission characteristics of these PNe.
+
+
+
+
+\section{Final remarks}\label{sec:conclu}
+
+In this study, we have demonstrated the effectiveness of combining S-PLUS photometry with spectroscopic analysis to create comprehensive H$\alpha$ flux maps of PNe in the Magellanic Clouds. Our approach has provided valuable insights into the emission characteristics and spatial distribution of ionized gas within these nebulae. Utilizing spectroscopic data from seven PNe in our study, we have initiated the validation of our methodology. However, our aim is to further strengthen our analysis by incorporating additional spectra, enhancing the robustness of our findings. Additionally, we have applied the methodology developed by Amanda et al. to the PNe observed by S-PLUS in the SMC, ensuring consistency and reliability across our dataset.
+
+Our future work will prioritize measuring H$\alpha$ + [N {\sc ii}] fluxes for PNe in the LMC, while also correcting for [N {\sc ii}] and extinction effects in our data. We plan to refine our analysis by incorporating additional spectra and explore further applications of the H$\alpha$ flux maps. By continuing to refine our methodology and expand our dataset, we aim to deepen our understanding of the physical processes driving the emission properties of planetary nebulae and their implications for stellar evolution.
+
+\begin{acknowledgement}
+LAG-S acknowledges funding for this work from CONICET. We thank the referee for her/his report that helped to improve the content of this contribution.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{ref}
+
+
+\end{document}

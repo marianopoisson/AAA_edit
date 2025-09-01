@@ -1,0 +1,434 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Estudio preliminar de ciclos de actividad 
+en estrellas del tipo solar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Ciclos de actividad en estrellas de tipo solar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+P.D. Colombo\inst{1,2},
+A.P. Buccino\inst{1,2},
+C.G. Oviedo\inst{1},
+R. Ibañez Bustos\inst{3},
+C.F. Martinez\inst{1}
+\&
+P. Mauas\inst{1,2}
+}
+
+\authorrunning{Colombo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{priscilacolombo99@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Instituto de Astronomía y Física del Espacio, CONICET--UBA, Argentina
+\and   
+Departamento de Física, Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+\and
+Observatoire de la Côte d’Azur, Francia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{ Los estudios observacionales sistemáticos realizados hasta el momento dedicados principalmente a estrellas de tipo solar, en el rango F a K tempranas, han detectado ciclos de actividad magnética similares al ciclo solar, que se distribuyen de manera discreta en una serie de ramas (inactiva y activa). Sin embargo, el ciclo solar es un caso particular, ya que no pertenece a ninguna de ellas. El objetivo final de este trabajo fue aumentar la estadística de ciclos de actividad en estrellas de tipo solar, haciendo hincapié en aquellas estrellas con períodos de rotación similares a los solares, entre 20 y 30 días, donde hay un vacío de estrellas cíclicas. Del conjunto de 14 estrellas analizadas, se detectaron ciclos de actividad en 5 estrellas, mientras que el resto presentó un patrón de actividad irregular o constante. 
+}
+
+\abstract{Systematic observational studies carried out so far, mainly dedicated to solar-type stars, in the F to early K range, have detected cycles of magnetic activity similar to the solar cycle, which are discretely distributed in a series of branches (inactive and active). However, the solar cycle is a particular case, since it does not belong to any of them. The final objective of this work was to increase the statistics of  well-defined activity cycle in solar-type stars, focusing on those stars with solar rotation periods, between 20 and 30 days, where there is a lack of cyclic stars. Among the 14 stars analyzed, we detected  activity cycles in 5 stars, while the rest of the sample presented irregular or constant activity patterns.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{stars: activity --- stars: rotation --- stars: solar-type}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}\label{S_intro}
+\renewcommand{\figurename}{Fig.}
+
+En esta última década, los diagramas que relacionan la longitud de los ciclos de actividad con el período de rotación en estrellas de tipo solar han puesto en discusión una serie de puntos. Por un lado, surge el interrogante de qué tipo de dínamo pudiese estar operando en aquellas estrellas que presentan dos ciclos de actividad coexistentes \citep{BohmVitense07}. Por el otro, se plantea que la posición atípica del ciclo solar en estos diagramas podría indicar que el dinamo solar se encuentre en transición \citep{Metcalfe16}. Finalmente, se encontró que estrellas con períodos de rotación entre 23 y 30 días no fueron reportadas como cíclicas. 
+
+Con el fin de aportar evidencia observacional a esta discusión, en este trabajo realizamos un estudio preliminar de actividad estelar de largo plazo en una muestra 14 estrellas del tipo solar del hemisferio sur, con el fin de aumentar la estadística de ciclos estelares en enanas FGK con períodos de rotación similares a los solares. Para ello utilizamos espectros obtenidos del espectrógrafo REOSC en CASLEO en el marco del Proyecto HK$\alpha$ \citep{Mauas16}, con observaciones propias y del equipo de trabajo (428 espectros). Estos datos se complementan con  mediciones del \textit{índice de Mount Wilson}  reportados en \cite{Baum22} (1256 índices) y espectros de alta resolución obtenidos de la base pública del European Southern Observatory (ESO) (1140 espectros)\footnote{\url{https://archive.eso.org/wdb/wdb/adp/phase3_spectral/form}}.
+
+
+\section{Selección de la muestra}
+
+El Proyecto HK$\alpha$ ha observado sistemáticamente un conjunto de 150 estrellas F5V a M5.5V, dónde 118 estrellas son de tipo espectral F5V a K7V. Esta muestra de  estrellas presenta un alto rango de períodos de rotación que va desde 7.78 a 71.00 días (ver Tabla 2 en \citealt{Cincunegui07}).
+Además, la tasa de rotación de las estrellas de tipo solar pareciera estar correlacionada con la longitud del ciclo de actividad (\citealt{BohmVitense07,Metcalfe16}). 
+Con el objetivo de analizar la actividad de estrellas de tipo solar con períodos de rotación entre 20 y 50 días, en este trabajo estudiamos una muestra de estrellas con períodos de rotación en este rango y que hubiesen sido observadas repetidamente a lo largo del Proyecto HK$\alpha$. Por lo tanto, tomando como criterio los parámetros estelares, la  cadencia y lapso de observación, acotamos la muestra a 14 estrellas. En la Tabla \ref{resumen}, se lista la muestra de estrellas estudiada, sus parámetros principales, los datos observacionales de CASLEO y los resultados obtenidos a lo largo del trabajo. Los períodos de rotación de las estrellas de esta lista se toman únicamente de la literatura \citep{Cincunegui07}.
+
+
+\section{Indice de Mount Wilson, series temporales y análisis de largo plazo}
+
+En primer lugar, construimos un registro de actividad de largo plazo para la muestra de estrellas de la Tabla \ref{resumen} a partir de espectros propios, públicos y datos de la literatura. Utilizando el programa desarrollado en el grupo para este cálculo, ya aplicado en una serie de trabajos anteriores \citep{Ibanez19a,Ibanez19b,Ibanez20}, obtuvimos el \textit{índice de Mount Wilson} ($S$) \citep{Vaughan78}, para cada uno de los espectros observados en CASLEO.
+
+A fin de complementar el análisis se incluyen observaciones de la base de datos de ESO tomadas con los espectrógrafos HARPS y FEROS. Para estos espectros, calculamos el índice de actividad mediante el método ya comentado. Además incluimos compilaciones del índice $S$, para ciertas estrellas, disponibles en la literatura \citep{Baum22}.
+
+Luego de obtener los índices correspondientes, calibramos los índices de HARPS al $S$ con la calibración disponible en \cite{Lovis11}, y los espectros FEROS con el procedimiento utilizado en \cite{Jenkins08}. Finalmente, en todas las estrellas intercalibramos los índices de CASLEO con los $S$ de HARPS que se encuentran más cercanos en el tiempo.
+
+%Es importante aclarar que debido a las restricciones para la operación de CASLEO durante los aislamientos y distanciamientos sociales dispuestos en Argentina por la enfermedad COVID 19, se observan en algunas series temporales una ausencia de observaciones entre marzo 2020 y septiembre 2021. 
+
+A partir de las series temporales construidas se puede determinar si las variaciones de largo plazo tienen un patrón similar al ciclo solar. Para el análisis de las series temporales de datos, calculamos el periodograma \textit{Generalized Lomb-Scargle} (GLS) \citep{Zechmeister09} utilizado previamente por el grupo en \cite{Ibanez19a,Ibanez19b,Ibanez20}.
+
+Una vez obtenidos los periodogramas GLS, se puede clasificar a las estrellas en cíclicas o no cíclicas. Se entiende por estrellas cíclicas aquellas que poseen una variabilidad significativa con una periodicidad pronunciada, que se observa en los periodogramas como un pico con un FAP\footnote{FAP:
+False Alarm probability, es una métrica para expresar la significancia de un período.} menor al 10\%. Por otra parte, tomando en cuenta los criterios de \cite{Baliunas95} y escalándolos con la estrella HD9562, común entre nuestra muestra y la de \cite{Baliunas95}, las estrellas no cíclicas se pueden clasificar en: irregulares, que corresponde a una variabilidad significativa sin periodicidad pronunciada, con $<\sigma_S/S>$\footnote{$<\sigma_S/S>$:
+Proporción entre la desviación estándar ($\sigma_S$) de los índices calculados y su valor medio  $\ <S>$.} $\geq 7.3\%$ y constantes, para estrellas que no tienen variabilidad significativa donde $<\sigma_S/S> <$  7.3\%.
+
+\subsection{Estrellas cíclicas}
+
+A modo de ejemplo de las estrellas cíclicas se presenta HD26965, clasificada como una estrella K0V con una magnitud visual de $V$ = 4.43, cuyo período de rotación es $P_{rot}$ = 37.1 días \citep{Cincunegui07}, de edad (9.23 $\pm$ 4.84) Gyr.
+
+En la Fig. \ref{hd26965ST} se muestra la serie temporal del $S$ calculado mediante las 35 observaciones de CASLEO obtenidas entre 2000 y 2017 y las 209 observaciones de HARPS entre 2008 y 2020, promediadas mensualmente. Además incluimos los 456 índices extraídos del paper de \cite{Baum22}, que también promediamos mensualmente, entre 2001 y 2020.  Se puede observar que la forma funcional del ciclo es similar al ciclo solar, con subidas bruscas y bajadas más lentas.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.9\columnwidth]{HD26965.png}
+\caption{Índices $S$ de HD26965, entre 2000-2020. 
+%Para su construcción intercalibramos los índices obtenidos de las observaciones de CASLEO (en verde) con los índices calculados de las observaciones de HARPS (en rosa).
+}
+\label{hd26965ST}
+\end{figure}
+
+
+A partir de la Fig. \ref{hd26965ST} construimos el periodograma GLS que se presenta en la Fig. \ref{hd26965P}, donde se observa un pico significativo $P$=(3414.24 $\pm$ 114.05) días $\sim (9.35 \pm 0.31)$ años, con un FAP = 2.5$\times1$0$^{-16}$, en concordancia con el ciclo de (9.9 $\pm$ 0.1) años detectado en \cite{Baum22}.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.9\columnwidth]{HD26965_B.png}
+\caption{Periodograma GLS correspondiente a HD26965, que indica un ciclo de actividad de (3414.24 $\pm$ 114.05) días.}
+\label{hd26965P}
+\end{figure}
+
+Detectamos ciclos de actividad en 5 estrellas: HD3443, HD13445, HD26965, HD32147, HD219834.
+
+\subsection{Estrellas no cíclicas}
+
+\subsubsection{Estrellas constantes}
+
+En representación de las estrellas no cíclicas clasificadas como constantes observamos HD10700 ($\tau$-Ceti), una estrella de tipo espectral y clase de luminosidad G8V, con un período de rotación de 34.5 días \citep{Cincunegui07}. Según \cite{Tuomi13}, $\tau$ Ceti es un posible sistema con cinco planetas orbitantes. De acuerdo con \cite{Baum22} se clasifica como constante, reafirmando el resultado preliminar de \cite{Baliunas95}.
+
+En la Fig. \ref{hd10700ST} se muestra la serie temporal del $S$ obtenido de las 58 observaciones realizadas entre los años 2000 y 2022 en CASLEO y las 112 observaciones pertenecientes al espectrógrafo HARPS efectuadas entre 2012 y 2021, promediadas mensualmente. Nuevamente, incluimos los índices extraídos del paper de \cite{Baum22}, que fueron promediados mensualmente entre los años 2000 y 2020, 749 índices en este caso.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.9\columnwidth]{HD10700_1sigma.png}
+\caption{Índices $S$ de HD10700, entre 2000-2022. 
+%Para su construcción intercalibramos los índices obtenidos de las observaciones de CASLEO (en verde) con los índices obtenidos del espectrógrafo HARPS (en rosa). 
+La línea sólida indica el valor medio del índice $S$ y las líneas a trazos los niveles $\pm1\sigma_S$.}
+\label{hd10700ST}
+\end{figure}
+
+A partir de la serie temporal anterior, construimos la Fig. \ref{hd10700P} que corresponde al periodograma GLS, donde no se observa un pico significativo, lo que implica que esta estrella no tiene un ciclo definido. Además, $<\sigma_S/S>=3.8\%$, por lo tanto es constante. Esto concuerda con el resultado de \cite{Baum22}. 
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.9\columnwidth]{HD10700_B.png}
+\caption{Periodograma GLS correspondiente a HD10700.}
+\label{hd10700P}
+\end{figure}
+
+No detectamos variabilidad en 6 estrellas de la muestra: HD3795, HD9562, HD10700, HD43587, HD158614 y HD212330. 
+ 
+\subsubsection{Estrellas irregulares}
+
+Por último, presentamos a HD131977 como ejemplo de las estrellas no cíclicas clasificadas como irregulares. HD131977 es una estrella con un período de rotación $P_{rot}$ = 44.6 días \citep{Cincunegui07}, con una magnitud aparente $V$ = 5.72 y es de tipo espectral y clase de luminosidad K4V. 
+
+
+En la Fig. \ref{hd131977ST} se muestra la serie temporal del $S$ obtenido a partir de las 21 observaciones de CASLEO adquiridas entre 2000 y 2017 y 8 observaciones de HARPS realizadas entre 2005 y 2006, promediadas mensualmente.
+
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.9\columnwidth]{HD131977.png}
+\caption{Índices $S$ de HD131977, entre 2000-2017.
+%Para su construcción intercalibramos los índices obtenidos de las observaciones de CASLEO (en verde) con los índices obtenidos del espectrógrafo HARPS (en rosa).
+}
+\label{hd131977ST}
+\end{figure}
+
+A partir de esta serie temporal, construimos el periodograma GLS que se observa en la Fig. \ref{hd131977P}, donde no se presenta un pico significativo, lo que indica que esta estrella no tiene un ciclo de actividad existente. Además, $<\sigma_S/S>=10.2\%$ por lo que se puede clasificar como irregular.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=0.9\columnwidth]{HD131977_sinE.png}
+\caption{Periodograma GLS correspondiente a HD131977.}
+\label{hd131977P}
+\end{figure}
+
+Encontramos actividad irregular en 3 estrellas: HD128620, HD128621, HD131977. 
+
+%\begin{table}[!t]
+%\centering
+%\caption{Ejemplo de tabla. Notar en el archivo fuente el manejo de espacios a fin de lograr que la tabla no exceda el margen de la columna de texto.}
+%\begin{tabular}{lccc}
+%\hline\hline\noalign{\smallskip}
+%\!\!Date & \!\!\!\!Coronal $H_r$ & \!\!\!\!Diff. rot. $H_r$& \!\!\!\!Mag. clouds $H_r$\!\!\!\!\\
+%& \!\!\!\!10$^{42}$ Mx$^{2}$& \!\!\!\!10$^{42}$ Mx$^{2}$ & \!\!\!\!10$^{42}$ Mx$^{2}$ \\
+%\hline\noalign{\smallskip}
+%\!\!07 July  &  -- & (2) & [16,64]\\
+%\!\!03 August& [5,11]& 3 & [10,40]\\
+%\!\!30 August & [17,23] & 3& [4,16]\\
+%\!\!25 September & [9,12] & 1 & [10,40]\\
+%\hline
+%\end{tabular}
+%\label{tabla1}
+%\end{table}
+
+\begin{table*}[hbt!]
+    \centering
+    \begin{tabular}{lcccccccc}
+    \hline\hline\noalign{\smallskip}
+    %\rowcolor[HTML]{EF60BE}
+     \!\!\textbf{ID} &\textbf{Tipo espectral}&\textbf{Time proc} &\textbf{$\#$Obs} &\textbf{$P_{rot}$(d)} &\textbf{$P_{act}$(d)}& FAP & $<S>$ & $\sigma_S$\\
+     \hline\noalign{\smallskip}
+     \!\!\textbf{HD 3443}   &   K1 V  & 2001-2022 & 39 & 30.00 & $1042.96 \pm 34.81$ & $7 \times 10^{-3}$ & 0.186 & 0.016\\ 
+     \!\!\textbf{HD 3795}   &   K0 V  & 2000-2022 & 37 & 32.00 & - & - & 0.158 & 0.011 \\ 
+     \!\!\textbf{HD 9562}   &   G1 V  & 2000-2022 & 31 & 29.00 & - & - & 0.139 & 0.007 \\ 
+     \!\!\textbf{HD 10700}  &   G8 V  & 2000-2022 & 58 & 34.50 & - & - & 0.169 & 0.0006\\ 
+     \!\!\textbf{HD 13445}  &  K1.5 V & 2002-2022 & 28 & 30.00 & $6690.46 \pm 1593.54$ & $3 \times 10^{-2}$ & 0.261 & 0.022 \\ 
+     \!\!\textbf{HD 26965}  &   K0 V  & 2000-2017 & 35 & 37.10 & $3414.24 \pm 114.05$ & $2 \times 10^{-6}$ & 0.194 & 0.014 \\ 
+     \!\!\textbf{HD 32147}  &  K3+ V  & 2000-2015 & 35 & 47.40 & $4695.2 \pm 1066.3$ & $8.8 \times 10^{-6}$ & 0.274 & 0.029 \\ 
+     \!\!\textbf{HD 43587}  &   G0 V  & 2002-2014 & 26 & 20.00 & - & - & 0.159 & 0.008 \\ 
+     \!\!\textbf{HD 128620} &   G2 V  & 2002-2022 & 15 & 29.00 & - & - & 0.212 & 0.026 \\ 
+     \!\!\textbf{HD 128621} &   K1 V  & 2000-2022 & 18 & 42.00 & - & - & 0.195 & 0.038 \\ 
+     \!\!\textbf{HD 131977} &   K4 V  & 2000-2022 & 21 & 44.60 & - & - & 0.410 & 0.041 \\ 
+     \!\!\textbf{HD 158614} & G9 IV-V & 2000-2022 & 27 & 34.00 & - & - & 0.171 & 0.008 \\ 
+     \!\!\textbf{HD 212330} & G2 IV-V & 2000-2022 & 28 & 21.05 & - & - & 0.150 & 0.010\\ 
+     \!\!\textbf{HD 219834} & G8.5 IV & 2000-2022 & 30 & 42.50 & $7381.84 \pm 884.84$ & $7 \times 10^{-3}$ & 0.153 & 0.013  \\ \hline
+    \end{tabular}
+    \caption{Selección de estrellas del tipo solar del Proyecto HK$\alpha$ (con 20 días  $<P_{rot}<$ 50 días) sus parámetros principales, los años de observación en CASLEO, la cantidad de observaciones analizadas y los resultados de este trabajo. Los períodos de rotación fueron tomados únicamente de la literatura \citep{Cincunegui07}.}
+    \label{resumen}
+\end{table*}
+\section{Períodos de actividad en función del período de rotación.}
+
+A modo de resumen en la Tabla \ref{resumen} se sintetizan los resultados obtenidos en este trabajo para las estrellas de la muestra estudiada junto a sus principales características.
+
+
+
+Una vez determinados los períodos de rotación y actividad confiables del conjunto de estrellas de interés, realizamos una grafica donde se relaciona la longitud del ciclo de actividad con la tasa de rotación de la estrella, incluyendo datos de otros trabajos \citep{Saar99,Metcalfe10,Metcalfe13,Hall07,BohmVitense07}. Particularmente, \cite{BohmVitense07} encontró que la relación entre ambas cantidades no es unívoca, sino que se distribuye en 2 ramas diferentes. En la Fig. \ref{Metcalfe+hd} se muestra en rosa las estrellas pertenecientes a la rama activa (A) y en verde las de la rama inactiva (I). Las rectas rosa y verde punteadas son las obtenidas en \cite{BohmVitense07}, mientras que el Sol está indicado con el símbolo típico. Las líneas punteadas que unen los puntos corresponden a períodos de la misma estrella. La zona sombreada corresponde a los períodos de rotación para los cuales no se reportaron ciclos, mientras que en amarillo son los resultados obtenidos durante este trabajo, para las estrellas que presentaron un ciclo de actividad. Del conjunto de 14 estrellas analizadas, se detectaron ciclos de actividad en 5 estrellas: HD3443, HD13445, HD26965, HD32147, HD219834. En la mayoría de los casos los períodos de actividad detectados pertenecen a la rama inactiva del diagrama P$_{cyc}$-$P_{rot}$,  mientras que algunas estrellas cíclicas se incluyen en la franja donde sólo se había reportado el ciclo solar. En ningún caso pudimos detectar estrellas con 2 ciclos de actividad.
+
+\begin{figure}[hbt!]
+\centering
+\includegraphics[width=\columnwidth]{ciclicas1.png}
+\caption{Gráfico del período de actividad en función del período de rotación. Se muestra en rosa las estrellas pertenecientes a la rama activa (A) y en verde las de la rama inactiva (I). Las líneas punteadas que unen los puntos corresponden a períodos de la misma estrella. La zona sombreada corresponde a los períodos de rotación para los cuales no se reportaron ciclos, mientras que en amarillo son los resultados obtenidos durante este trabajo. Los ciclos y los períodos de rotación se obtuvieron de \cite{Saar99,Metcalfe10,Metcalfe13,Hall07,BohmVitense07}.}
+\label{Metcalfe+hd}
+\end{figure}
+
+
+En coincidencia con \cite{Metcalfe16}, de la muestra estudiada no detectamos ningún ciclo de actividad en la rama activa para estrellas con rotaciones solares o más lentas. No obstante, las estrellas HD3443 y HD13445 muestran evidencia de actividad cíclica no detectada previamente para estrellas con estos períodos de rotación, entre 23 y 31 días. Por otro lado,  HD32147 y HD26965 parecieran presentar ciclos de actividad pertenecientes a la rama inactiva, mientras que HD219834 y HD13445 pareciera no pertenecer a ninguna rama.
+
+Finalmente, existen dos posibles interpretaciones de estos resultados. Uno y el más discutido hasta el momento, entiende que el dínamo solar se encuentra en transición generando que tenga un ciclo de actividad atípico \citep{Metcalfe16}, lo que implicaría que HD13445 y HD3443 podrían encontrarse en una situación similar. Sin embargo, también si se observa con detenimiento la Fig. \ref{Metcalfe+hd} se puede notar la existencia de una tercera rama entre las estrellas que se encuentran entre ramas (el Sol, HD13445 y HD219834), no reportada hasta el momento. 
+
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

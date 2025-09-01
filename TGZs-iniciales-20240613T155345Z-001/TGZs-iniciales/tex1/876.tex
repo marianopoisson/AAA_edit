@@ -1,0 +1,383 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+% \usepackage{subcaption}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Stellar Activity or a Planet? Revisiting dubious planetary signals in M-dwarf systems}
+% A controversial planetary system: Reanalysis of GJ581
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Stellar Activity or a Planet? Revisiting dubious planetary signals in M-dwarf systems} %Revisiting RVs and stellar activity of GJ581
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+D.P. González\inst{1},
+N. Astudillo-Defru\inst{2},
+\&
+R.E. Mennickent\inst{1}
+}
+
+\authorrunning{González et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{dagonzalez2018@udec.cl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Departamento de Astronomía, Universidad de Concepción, Chile\and Departamento de Matemática y Física Aplicadas, Universidad Católica de la Santísima Concepción, Chile
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{GJ581, una estrella M3V, inicialmente se pensaba que albergaba seis planetas. Sin embargo, el periodo de rotación estelar recientemente determinado (132.3 $\pm$ 6.3 días), que es el doble y el cuádruple de los periodos orbitales de los dudosos planetas d ($P_{\mathrm{orb}}: 66.8$ días) y g ($P_{\mathrm{orb}}: 36.5$ días), respectivamente, introduce una incertidumbre respecto al origen de estas señales periódicas. Nuestro objetivo es confirmar o refutar la naturaleza planetaria de las señales de velocidad radial (RV) atribuidas a estos planetas analizando 718 puntos de datos de RV, que constituyen el conjunto de datos más extenso hasta la fecha, y los indicadores espectroscópicos de actividad estelar. Identificamos 4 señales periódicas mediante un análisis de frecuencias de las series temporales de: 5.37 d(planeta b), 12.9 d(planeta c), 66.3 d(planeta d), and 3.15 d(planeta e), que se modelan utilizando modelos Keplerianos, seguido de un análisis de estabilidad temporal que indica la presencia de una señal inducida por la actividad estelar con un período de 66.3 días. Para confirmar la naturaleza de esta señal periódica, debemos emplear un modelo kepleriano junto con procesos Gaussianos (GP) de manera simultánea. Adicionalmente, actualizamos el periodo de rotación estelar de GJ581 mediante un análisis de indicadores de actividad, empleando un modelo de GP, obteniendo un valor de $P_{\mathrm{rot}}=132^{+1.82}_{-1.71}$ días, mejorando la precisión respecto al valor de la literatura.}
+
+\abstract{GJ581, an M3V star, was initially thought to harbor six planets.However, the recently determined stellar rotation period (132.3 $\pm$ 6.3 days), being twice and four times the orbital periods of putative planets d ($P_{\mathrm{orb}}: 66.8$ days) and g ($P_{\mathrm{orb}}: 36.5$ days), respectively, introduces uncertainty regarding the origin of these periodic signals. Our aim is to confirm or refute the planetary nature of the radial velocity (RV) signals attributed to these planets by analyzing 718 RV data points, constituting the most extensive dataset to date, and the spectroscopic stellar activity indicators. We identify four periodic signals by performing a frequency analysis on the RV timeseries: 5.37 d(planet b), 12.9 d(planet c), 66.3 d(planet d), and 3.15 d(planet e). The RVs are modeled using Keplerian models, followed by a temporal stability analysis, which indicates the 66.3 d signal is induced by stellar activity. To confirm the nature of this periodic signal, we must employ a simultaneous Keplerian and Gaussian Process (GP) model. Additionally, we update the stellar rotation period of GJ581 through an analysis of activity indicators, employing GP regression modeling, obtaining a value of $P_{\mathrm{rot}}=132^{+1.82}_{-1.71}$ days, improving the accuracy compared to the literature value.}
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\keywords{stars: activity --- planets and satellites: detection --- techniques: radial velocities}
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+Stellar activity is one of the main causes of false positives in exoplanet detection. Specifically, the presence of magnetic fields affects the shape of spectral lines inducing periodic (or quasi-periodic) radial velocity (RV) variations that can mimic planetary signals in RV measurements. Some studies
+\citep{2011Boisse,PaulaGorrini} have shown that these activity signals tend to manifest at the stellar rotation period and its harmonics. Consequently, it becomes crucial to distinguish between these activity-induced signals and authentic planetary signatures in RV measurements, especially in cases where planetary orbital periods closely align with the stellar rotation period.
+
+GJ581 is an M3 dwarf with a reported stellar rotation period of approximately 132.5 ± 6.3 days \citep{SUAREZMASCAREÑO2017}.
+Initially, it was claimed that GJ581 hosted six planets: b ($P_{\mathrm{orb}}$: 5.37 days; \citealp{2005Bonfils}), c ($P_{\mathrm{orb}}:$ 12.9 days; \citealp{2007UDRY}), d ($P_{\mathrm{orb}}:$ 66.6 days; \citealp{2009Mayor}), e ($P_{\mathrm{orb}}:$ 3.15 days; \citealp{2009Mayor}), f ($P_{\mathrm{orb}}:$ 433 days; \citealp{2010AVogt}), and g ($P_{\mathrm{orb}}:$ 36.6 days; \citealp{2010AVogt}). Remarkably, planets d and g are harmonics of the stellar rotation period, this raises doubts as to whether these periodic signals are really planets or are an artifact of signals induced by stellar activity. In addition, previous independent studies have cast doubt on some of the number of detected exoplanets. \cite{2011Tuomi} analyse the combined RVs from HARPS and HIRES spectrographs using Bayesian tools and strongly supported only four companions, arguing against GJ581 f and g. However, \cite{2011Tuomi} acknowledge that it cannot be definitively concluded that the solution proposed by by \cite{2010AVogt} is not real.
+
+Furthermore, \cite{2014Robertson}, corrected the available radial velocity data for activity and suggested that the GJ581 d signal could be an artifact of stellar activity. 
+
+
+In this study, we reanalyze the RV data together with the stellar activity in order to confirm or rule out the planetary nature of the RV signature attributed to the GJ581 system.  Utilizing the most recent radial velocity measurements available, we present the details of the data employed in Section \ref{sec2}, while Section \ref{sec3} outlines the methodology used to determine the stellar rotation period. In section \ref{sec4} we analyze the radial velocity measurements by using periodograms, Keplerian models, and a temporal stability analysis of the signal. Finally, Section \ref{sec5} discusses the preliminary results obtained from this analysis.
+
+% ======================================================
+\section{Spectroscopic Data}\label{sec2}
+\subsection{Radial Velocities}
+We employed RV timeseries data from multiple spectrographs, including 412 RV datapoints from HIRES (High-Resolution Echelle Spectrometer, \citealp{2017Butler}), 54 RV datapoints from CARMENES (Calar Alto high-Resolution search for M dwarfs with Exoearths with Near-infrared and optical Echelle Spectrographs, \citealp{CARMENES}), and an additional 252 spectra from HARPS
+(High-Accuracy Radial velocity Planetary Searcher, \citealp{HARPS}). The RVs for HARPS were derived using NAIRA (New Algorithm to Infer RAdial-velocities; \citealp{2017bAstudillo}), which employs spectra to construct high signal-to-noise ratio (S/N) stellar and telluric templates, enabling precise RV computations for M dwarfs. In total, our dataset comprises 718 RV data points for GJ581.
+
+\subsection{Spectroscopic Activity Tracers}
+We also calculated spectroscopic activity indicators using the HARPS data. The S-index was computed following the methodology outlined in \cite{2017a-Astudillo}, H$\alpha$ index values were derived according to the method of \cite{2011GomesDaSilva}, and for the Na I D lines, we adopted the approach detailed in \cite{2017bAstudillo}. We use the S-index values provided by \cite{2017Butler} for the HIRES dataset. For the CARMENES dataset, we utilize the H$\alpha$ and Na I D index values provided by the \cite{CARMENES}.
+
+
+
+\section{Stellar Rotation Period}\label{sec3}
+
+The stellar rotation period can be derived by modeling spectroscopic activity indicators through Gaussian Process (GP) regression, employing a quasi-periodic kernel \citep[e.g.,][]{2015Rajpaul,2016Faria} given by:
+
+\begin{equation}
+    \Sigma_{ij} = \eta_1^2 \exp \left[ -\frac{|t_i-t_j|^2}{\eta_2^2} - \frac{\sin^2{\left( \frac{\pi |t_i-t_j|}{\eta_3^2}\right)}}{2\eta_4^2}
+    \right]
+\end{equation}
+Here, $\Sigma_{ij}$ represents the covariance matrix. There are four hyper-parameters typically linked to physical characteristics. $\eta_1$ correlates with the data points, $n_2$ is linked to an aperiodic timescale representing the active region lifetime on the stellar surface, $\eta_4$ is associated with the periodic timescale, representing the distribution of active regions on the stellar surface \citep{2023Camacho}. The final hyperparameter, $\eta_3$, refers to the quasi-periodicity of the kernel and represents the stellar rotation period.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\columnwidth]{GP-Halpha.png}
+    \caption{H$\alpha$ time series modeled with a GP using a quasi-periodic kernel. \textit{a)} Model showing the GP resulting from the median of the hyper-parameters’ posteriors (blue curve). The colored zone depicts the model 1-$\sigma$ confidence. \textit{b)} Residual of the fit.}
+    \label{fig:SRP}
+\end{figure}
+
+In our analysis, we use the Gaussian Process (GP) modeling capability of {\sc RadVel} \citep{2018RadVel} to model the H$\alpha$ timeseries obtained from HARPS and CARMENES data using a quasi-periodic kernel. This yields a estimate of GJ581's stellar rotation period, $P_{\mathrm{rot}}=132^{+1.82}_{-1.71}$, improving the accuracy compared to the literature value. The H$\alpha$ index timeseries with the GP models is shown in Fig. \ref{fig:SRP}.
+
+In addition, we applied GP modeling on the S-index timeseries obtained from HARPS and HIRES. Employing the same kernel and hyperparameter priors, this analysis yielded an estimate for the stellar rotation period of $P_{\mathrm{rot}} = 130^{+4.52}_{-3.75}$, which aligns well with the value derived from our H$\alpha$ modeling.
+
+%============================================================
+
+\section{Doppler measurements and orbital analysis}\label{sec4}
+
+\subsection{Identifying periodic signals}
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\columnwidth]{GLS-RVs.png}
+    \caption{GLS periodograms of GJ581 RV time series and residuals. The gray solid, dashed and dotted horizontal lines represent the 0.3\%, 4.6\%, and 31.7\% False Alarm Probability (FAP) levels corresponding to a 3$\sigma$, 2$\sigma$, and 1$\sigma$ detection threshold, respectively.}
+    \label{fig:gls}
+\end{figure}
+
+For the RV analysis, we employed the Generalized Lomb-Scargle (GLS) periodogram \citep{2009GLS} to the RVs and residuals, as depicted in Fig. \ref{fig:gls}. This analysis successfully identified periodic signals corresponding to planets b, c, and e, with orbital periods of 5.368862 $\pm$ 0.00007, 12.9181 $\pm$ 0.0014, and 3.14893 $\pm$ 0.00015 days, respectively. Furthermore, it was detected a periodic signal with an orbital period of 66.263 $\pm$ 0.098 days, attributed to planet d, which is of particular interest. Notably, the periodogram does not exhibit any additional significant signals that could be attributed to the other planetary candidates from the literature: f($P_{\mathrm{orb}}:$ 433d) and g($P_{\mathrm{orb}}:$ 36.6d), as shown in the last two panels of Fig. \ref{fig:gls}.
+% b ($P_{\mathrm{orb}}: 5.37$[d]), c ($P_{\mathrm{orb}}: 12.9$[d]), d ($P_{\mathrm{orb}}: 66.3$[d]), and e ($P_{\mathrm{orb}}: 3.14$[d])
+
+\subsection{Keplerian Models}
+
+We utilized a 3-Keplerian model to analyze the radial velocity data for the initial three planetary companions orbiting GJ581, employing the {\sc Pyaneti} software \citep{2022pyanetiII}. The model incorporates uniform priors for all orbital parameters, including orbital period ($P$), time of inferior conjunction ($T_{\text{conj}}$), parametrization of eccentricity ($ew_1$ and $ew_2$), argument of the periastron ($\omega$), and the semi-amplitude of the RV curve ($K$). To transform $K$ into the planetary masses we assume a stellar mass of 0.31 $\pm$ 0.02 $M_\odot$\footnote{\href{https://exoplanet.eu/catalog/gj\_581\_b--301/\#publication\_8432}{Encyclopaedia of exoplanetary systems}}. These parameters were fitted by using the Monte Carlo Markov Chain method included in {\sc Pyaneti}.
+
+In Figure \ref{fig:keplerian}, we present the phase-folded RV curves for the planets with orbital periods of 3.15 days, 5.37 days, and 12.9 days.
+
+Furthermore, Table \ref{tabla1} provides some of the orbital parameters for the respective planets within the GJ581 planetary system, derived from the Keplerian model applied to the combined RV dataset.
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\columnwidth]{keplerianfit.png}
+    \caption{\emph{Top Three Panels:} Phase-folded RV curves for planets b, c, and e in the GJ581 planetary system, derived from HARPS (blue circles), HIRES (green diamonds), and CARMENES (red squares) datasets. The black lines in each panel represent the best-fitting RV models. \emph{Bottom Panel:} Residual of the 3-Keplerian model.}
+    \label{fig:keplerian}
+\end{figure}
+
+\begin{table*}[!t]
+\centering
+\caption{Orbital period ($P$), Semiamplitude ($K$), eccentricity ($e$), and mass ($M_p$) values of each confirmed planet in the GJ581 system, derived from the 3-Keplerian model using the latest dataset.}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\!\!Parameter & \!\!\!\!\textbf{GJ581 b} & \!\!\!\!\textbf{GJ581 c}& \!\!\!\!\textbf{GJ581 e}\\
+\hline\noalign{\smallskip}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\!\!Period\,\,[days] & 5.36861 $\pm$ 0.00002 & 12.91800 $\pm$ 0.00042  & 3.14880 $\pm$ 0.00004 \\
+\!\!$K$\,\,[m/s] & 12.39 $\pm$ 0.07 & 3.49 $\pm$ 0.07 & 1.5 $\pm$ 0.1\\
+\!\!$e$\,\, & 0.0274 $\pm$ 0.0058 & 0.0601 $\pm$ 0.0235 & 0.3075 $\pm$ 0.0537\\
+\!\!$M_p\,\,(M_{\oplus})$ &15.5 $\pm$ 0.6 & 5.8 $\pm$ 0.2 & 1.56 $\pm$ 0.08 \\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table*}
+
+\subsection{Temporal Stability Analysis}
+
+\begin{figure}[htbp]
+  \centering
+    \includegraphics[width=\columnwidth]{sbgls-b.png}
+    \includegraphics[width=\columnwidth]{sbgls-d-raaa65.png}
+  \caption{\emph{Top:} sBGLS periodogram of the RV time series of GJ581 around 5.3 days. \emph{Bottom:} sBGLS periodogram of the third RV residuals around 68 days. The number of observations is plotted against period, with the color scale indicating the logarithm of the probability, where redder is more likely.}
+  \label{fig:sgls}
+\end{figure}
+
+We analyzed the temporal stability of the residual signal of the 3-Keplerian model using the stacked Bayesian Lomb-Scargle (sBGLS) periodogram, as introduced by \cite{2017SBGLS}. This analysis is based on the principle that stellar activity signals are variable and incoherent. The underlying concept is that the power or probability of a periodic signal being present in the data, particularly a planetary signal, should increase as more observations are added. The top panel of Figure \ref{fig:sgls} depicts the sBGLS periodogram of the RVs of GJ58 around the orbital period of planet b (5.3 days). As expected, the level of confidence in the detection of a planetary signal increases as more data is added.
+
+However, bottom panel of Fig.\ref{fig:sgls} shows the sBGLS periodogram of the residual signal from Fig. \ref{fig:keplerian}. Notably, the probability associated with the 66-day signal attributed to planet d does not consistently increase with the growing number of observations. Instead, an irregular pattern emerges, accompanied by another signal around 72 days, suggesting the presence of a signal induced by stellar activity.
+
+\section{Discussion and Future work}\label{sec5}
+
+
+While our analysis suggests that the periodic signal attributed to planet d may not originate from a planetary source, but rather indicates the presence of a signal induced by stellar activity, a conclusive determination requires further statistical analysis. Additionally, planets b, c, and e exhibit consistent and coherent signals in our analysis, aligning with planetary signals expectations, which supports their existence. The next step is to conduct a simultaneous Keplerian model and activity indicator analysis using Gaussian Process regression with a quasi-periodic kernel. This approach aims to discern whether the observed periodic signal d can be accurately described by stellar activity.
+
+
+
+\begin{acknowledgement}
+D.P.G and R.E.M. gratefully acknowledge support by the ANID BASAL project FB210003.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+\end{document}
+

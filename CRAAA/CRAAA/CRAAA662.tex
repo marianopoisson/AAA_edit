@@ -1,0 +1,65 @@
+\documentclass[
+	a4paper,
+  10pt,
+  twoside,
+  onesidepapers,
+  electronic,
+  binding=0mm,
+  papers=final,
+  paperselec=all,
+	linkcolor=blue,
+	colorheaders=black
+]{confproc}
+
+% > > > PACKAGES < < <
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{mathptmx}
+\usepackage{titlesec}
+\usepackage{microtype}                                                          
+\usepackage{afterpage}
+\usepackage[titles]{tocloft}
+\usepackage{titletoc}
+\usepackage{fancyhdr} % Paquete para modificar encabezado y pie de página
+\usepackage{lipsum}
+\usepackage[pdftex,breaklinks,linktocpage]{hyperref}
+
+% > > > BAAA STYLE < < <
+\setlength{\textwidth}{170mm}
+\setlength{\textheight}{237mm}
+\setlength{\oddsidemargin}{-5mm}
+\setlength{\evensidemargin}{-5mm}
+\setlength{\footskip}{47pt}
+\setlength{\hoffset}{0mm}
+\fancyfootoffset{0cm}
+
+\titleformat*{\section}{\bfseries}
+
+% Usamos fancyhdr para personalizar el pie de página
+\pagestyle{fancy}
+\fancyhf{} % Limpiar encabezados y pies de página anteriores
+\fancyfoot[C]{\thepage} % Centrar el número de página
+\renewcommand{\headrulewidth}{0pt} % Opcional: elimina la línea superior
+\renewcommand{\footrulewidth}{0pt} % Opcional: elimina la línea inferior
+
+\begin{document}
+\frontmatter
+\pagenumbering{roman}
+\setcounter{page}{1}
+
+%%% > > > PAGINAS DE PREAMBULO < < <
+% Aquí comienza el contenido de tu documento...
+
+\mainmatter
+\pagestyle{fancy}
+\setcounter{page}{1}
+
+%%% > > > PAPERS < < <
+% Aquí incluyes tus papers...
+\input{\PAPERPATH sessions}
+
+%%% > > > BACKMATTER < < <
+\backmatter
+\printindex
+
+\end{document}

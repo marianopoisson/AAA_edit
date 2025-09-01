@@ -1,0 +1,411 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{8}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{16 February 2024}
+\accepted{03 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Estudios numéricos de supernovas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Simulaciones de supernovas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M. Orellana\inst{1,2}
+}
+
+\authorrunning{M. Orellana}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{morellana@unrn.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Laboratorio de Investigación Científica en Astronomía, UNRN, Argentina\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{La evolución de las estrellas masivas constituye un campo muy activo de la astrofísica. Hay importantes implicancias en los finales de estas estrellas como explosiones de supernova: ellas forman objetos compactos a la vez que impulsan y enriquecen el medio interestelar. Los primeros datos pueden ayudar a comprender el entorno donde ocurre la explosión. Es por ello que las últimas décadas han visto florecer esfuerzos observacionales para descubrirlas, permitiendo detectarlas a épocas cada vez más tempranas. Ha crecido también el número de estudios y detecciones en otras bandas, más allá del rango visual, y se ha propuesto identificar nuevos tipos de transitorios. Cobra así relevancia el estudio de los casos peculiares: los hallazgos recientes incluyen, por ejemplo, nuevos casos de supernovas con dos máximos en la evolución del brillo siguiendo una morfología que puede desafiar al escenario más aceptado. Reconoceremos en esta charla los aportes que se realizan desde las técnicas de modelado hidrodinámico, tanto para poblaciones ahora mejor caracterizadas, como para algunas de las supernovas que se apartan de lo convencional. Los resultados que mostraré surgen de calcular en forma unidimensional la propagación de la onda de choque en el interior y capas estelares superiores, sumado al aporte energético del decaimiento de elementos radioactivos, o eventualmente la presencia de un objeto central, que puede brindar una importante contribución adicional de energía.}
+
+\abstract{The evolution of massive stars constitutes a very active field of astrophysics. There are important implications for the ends of these stars as supernovae explosions, where compact objects are formed, and the surrounding interstellar medium is mobilized and enriched. The first data can help understand the environment where the explosion occurs. This is why recent decades have seen to flourish the observational efforts to discover supernovae, allowing them to be detected at increasingly earlier times. The number of studies and detections in different bands, beyond the visual range, has also grown, and it has been proposed to identify new types of transients.
+The study of peculiar cases thus becomes relevant: recent findings include, for example, new cases of supernovae with two maxima in the evolution of brightness following a morphology that may challenge the most accepted scenario. In this talk we will recognize the contributions that are made from hydrodynamic modeling techniques, both for now better characterized populations, and for some of the supernovae that deviate from the conventional. The results that I will show arise from calculating in a one-dimensional way the propagation of the shock wave in the interior and upper stellar layers, added to the energy contribution of the decay of radioactive elements, or eventually the presence of a central object, which can provide an important contribution of additional energy.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{supernovae: general --- supernovae: individual (SN2005bf) --- stars: winds, outflows --- stars: magnetars}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+% YO:  (8 páginas), correspondiente a informe invitado, mesa redonda o premio.
+\section{Descubrimientos de supernovas}\label{S_intro}
+
+Notorios cambios de brillo en algunos puntos del cielo han sido observados, registrados y estudiados por los humanos durante casi 2000 años. Ahora entendemos que ciertos casos, de los que existe variada cantidad de documentación, como el del año 185 fueron explosiones de SuperNovas (SNs) que ocurrieron en nuestra propia galaxia. Estas han ocurrido mucho antes e influenciado de otras formas nuestro planeta (véase \citealt{2002Benitez} y trabajos que lo citan).
+\cite{2003Green} y \cite{2021Al}
+brindan una revisión de las llamadas SNs históricas: cada cientos de años se han registrado eventos tan violentos que aparecen repentinamente en el cielo y brillan durante varias semanas o meses.
+El caso más notorio, ocurrido en 1054, de acuerdo a registros chinos fue visible durante el día por 23 días y por la noche, más de 2 años. 
+Al expandirse, los restos de esta supernova formaron la nebulosa del Cangrejo ({\em Crab}, M1) que ha sido conocida en el óptico desde principios del siglo {\sc XVIII}.
+A solo 2~kpc de distancia, hoy es uno de los Remanentes de SuperNova (RSN) más estudiados, en todo el espectro electromagnético. Fue pronto merecedor de observaciones con los instrumentos de última generación como el {\sl James Webb Space Telescope} cuya resolución permite ver nuevos detalles como filamentos y grumos en el material del remanente.\\
+%\footnote{Por ejemplo la imagen \url{https://webbtelescope.org/contents/media/images/2023/137/01HBBNDST58J87YXWKXFR2DSPX} compuesta por exposiciones en los distintos filtros da cuenta de filamentos y grumos en el material del remanente.}
+
+Retomando sobre las SN, la explosión más reciente en nuestra galaxia se estima que ha ocurrido el año $\sim$1870, muy cerca de la dirección del centro de la galaxia por lo que resultó invisible en el óptico ya que esta zona está muy absorbida, y en cambio fue descubierta por la emisión en ondas de radio de su jóven remanente G1.9+0.3 \citep{1984Green}.
+Su forma distintiva ``con orejas'' e intensa emisión no-térmica en rayos X \citep{2008Reynolds} lo hacen un blanco interesante.
+Hay evidencia de que probablemente se trata del resultado de una explosión de SN tipo Ia \citep{2013Borkowski}, que es bastante diferente a las supernovas por colapso gravitatorio, que son a las que he podido aportar en algunos estudios detallados. \footnote{
+La referencia fundamental sobre la clasificación de las SNs es \cite{1997Filipenko}. Para actualización
+y fuente muy amplia de referencias, sugiero consultar el recientemente compilado {\em Handbook of Supernovae} \citep{handbook}. Vale la pena recordar las SNs Ia son supernovas que se relacionan a la ignición termonuclear del material que llega a la superficie de una estrella enana blanca.}\\
+
+En forma contemporánea a la que mencionamos, se detectó en 1885 la primer supernova extragaláctica, en M31, la galaxia de Andrómeda. \cite{1985DeV} brinda una revisión de los datos.
+Estas eran épocas modernas donde ya se trabajaba en observatorios con instrumental de registro y fue el inicio de un crecimiento que se volvería cuasi-exponencial en cuanto al descubrimiento de supernovas en función del tiempo, claro está, de la mano de mejoras instrumentales. En la charla mostré un gráfico tomado de \cite{2013Sullivan} donde ve claramente esa tendencia, coleccionando cerca de $20\,000$ descubrimientos en 130 años hasta 2013. 
+Se destacan algunos hitos que impulsaron el desarrollo de búsquedas sistemáticas. Entre ellos:
+\begin{itemize}
+\item Fritz Zwicky\footnote{El actual proyecto {\em Zwicky Transient Facility} cuyo campo visual alcanza los impresionantes $\sim$47 grados$^2$, se nombró en su honor. Para conocer más, véase \cite{2019Belm}. }, quien a mediados de los 1930 inició las primeras búsquedas sistemáticas que involucraron telescopios Schmidt, películas y binoculares, placas de vidrio y comparadores de parpadeo.
+\item La introducción de búsquedas robóticas en los 60's, elevó la tasa de descubrimiento hasta unas pocas decenas de eventos por año.
+\item Desarrollos y tecnología del dispositivo de carga acoplada ({\em CCD} por la sigla en inglés) de suma importancia para la fotografía digital.
+%En aplicaciones astronómicas de la fotografía CCD es necesario refrigerar los detectores para poderlos utilizar durante tiempos de exposición largos. 
+\item Interés por su aporte a la cosmología: gracias a la aplicabilidad de las SNs Ia para estimación de distancias extragalácticas, lo que más tarde resultó en la confirmación de la expansión acelerada del Universo, resultados que le valieron más tarde el Premio Nobel de Física de 2011 a los norteamericanos S. Perlmutter, A. Riess y B. Schmidt.
+\item SN1987A: hasta ahora inédita, esta fue la única SN de la que se detectaron neutrinos. Ocurrió en la Gran Nube de Magallanes y por su próximidad se pudo observar en forma muy detallada. Resulta también muy valioso como caso donde estamos siendo testigos de la transición que representa transformarse en Remanente de SN. La mayoría de los que conocemos tienen del orden de cien a miles de años.
+\end{itemize}
+Diferentes equipos y estrategias han demostrado ser apropiados para diferentes rangos de corrimiento al rojo (\citealt{2017Branch} aporta otras referencias). Salvo para las SNs más lejanas, el descubrimiento no requiere de los telescopios de mayor tamaño. 
+
+Para 2010 ya se superaba una tasa de mil descubrimientos de SNs o más por año; desde 2020 se ha estacionado en cerca de dos mil.
+Entre los observadores que hacen la búsqueda y para compartir la información de forma ágil, cobró suma importancia la página de la Unión Astronómica Internacional (UAI) dedicada al reporte oficial de fenómenos transitorios: {\em Transient Name Server}.
+Es una colección más específica y moderna de los famosos telegramas astronómicos.
+Los usuarios pueden  distribuir y recibir notificaciones sobre una amplia gama de temas, y recibir las {\em AstroNotes} donde, de confirmarse un descubrimiento, la UAI ha provisto su nomenclatura de acuerdo a un proceso estandarizado.
+Mayormente, se descubren asteroides u otros objetos que no son SNs.
+La tendencia de los últimos años es que, de los eventos transitorios que se detectan, son confirmados luego como SN alrededor del $10\%$. En su sección de estadísticas puede verse el listado de los grupos que más aportes han realizado y otro tipo de datos. Por ejemplo, en la Fig.~\ref{clase} obtenida del sitio, se ilustra la distribución de las SNs por clases, que se logra una vez se incorporan datos de espectros.
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{histo_mag_descuben_SN.png}
+\caption{Histograma de la magnitud que presentan las SNs al momento de descubrirlas. Este gráfico incorpora datos entre 2016 y febrero de 2024, hasta Mag.$< 30$. En la leyenda se detalla el número de objetos, el valor máximo y entre paréntesis, su desviación estándar. La imagen es de dominio público, tomada de \url{https://www.wis-tns.org/}}
+\label{clase}
+\end{figure}
+
+La enorme cantidad de datos ha vuelto indispensable el uso de herramientas de inteligencia artificial y el trabajo interdisciplinario con especialistas en informática. Hace pocos años comenzó la preparación del {\em broker} astrónomico de Aprendizaje Automático para la Rápida Clasificación de Eventos (ALeRCE por sus siglas en inglés, \url{https://alerce.science/}). Funcional desde 2017, es un desarrollo internacional encabezado en Chile, que hoy es el encargado de procesar los datos de alerta y hacer de intermediario entre dos tipos de telescopios \citep{2021Foster}. Los primeros que buscan objetos variables interesantes y los otros que, una vez identificado el caso, comienzan a operar de manera centrada en el objetivo. En este último tipo podemos encontrar a la colaboración POISE \cite{2021Burns}, acrónimo de {\em Precision Observations of Infant Supernova Explosions} con base en el Observatorio Las Campanas\footnote{Las Campanas es un observatorio de la {\em Carnegie Institution of Washington} que llevara a cabo el CSP-I, del que hablo en la Sección~\ref{csp}.}. El objetivo principal de POISE es obtener fotométricamente curvas de luz y series temporales de datos espectroscópicos de SNs recientemente descubiertas por otros equipos. La publicación de datos de POISE involucra un extenso equipo humano (ej. \citealt{2023Ertini}) que realiza el procesamiento, corrección e interpretación de los datos, a los que, de estar disponibles, se suman los datos de otras longitudes de onda, como el UltraVioleta.\\
+
+Como vemos, el crecimiento en las estrategias de observación de los relevamientos ópticos nos lleva a comprender que la astronomía transitoria permite en casos afortunados, identificar y estudiar las SNs desde sus primeras etapas. Dichas fases proveen valiosa información sobre la estrella que explota.
+En el caso excepcional de SN2016gkg se ha registrado un crecimiento tan rápido del brillo que solo resulta compatible con la llegada del frente de choque a la superficie estelar \citep{2018Bersten}. Esa iterpretación deriva de simulaciones numéricas que resultan así imprescindibles para apoyar la investigación observacional. 
+Con nuevos casos que se apartan de la media se encuentran desafíos que impulsan a mejorar los modelos y considerar nuevas ideas. % de a 1 los indivuos van formando una población
+
+\section{Restos del núcleo estelar}
+El núcleo estelar colapsado a enorme densidad, es lo que llamamos un objeto compacto (OC). 
+El RSN del {\em Crab} alberga como OC una estrella de neutrones (EN) magnetizada: PSR B0531+21 que es muy pequeña en comparación con la escala del remanente y se la ubica mejor en la imagen de rayos X.
+%\footnote{En nuestro país se realizan estudios de estrellas de neutrones, como venimos tomando noción en reuniones de la Asociación, ej.... tanto estudios del interior y estructura, como de NSs que por estar en un sistema binario acretan material y despliegan otros fenómenos.}
+La EN emite radiación colimada a lo largo de una dirección establecida por el campo magnético, vector cuya dirección normalmente no coincide con la de su eje de rotación. Es por ese motivo que la radiación se observa con intensidad variable, y no porque la EN realmente pulse, aunque, por razones históricas, a este tipo de objetos se los llama pulsares \citep{1968-pulsar}.\\
+
+En pulsares aislados\footnote{Caso diferente al de ENs con acreción, como puede ocurrir en sistemas binarios, como vimos para A0535+26 en \cite{2007Orellana}, o en otros que muestran fenómenos muy interesantes \cite{2019Gonzalez}.} el campo magnético es bastante constante (decae muy lentamente), mientras que el período de rotación ($P$) se alarga con una tasa medible ($\dot{P}$): es el frenado de la rotación lo que potencia al pulsar, pueden hacerse cálculos simplificados respecto de la conservación de energía, aunque el detalle es realmente más complejo, como han expuesto trabajos pioneros del área \citep{1969Goldreich}. 
+Incorporando valores estándar el valor del campo magnético dipolar resulta $B\propto (P\,\dot{P})^{1/2}$.
+Más adelante, mencionaremos ENs donde el campo magnético es al menos un orden de magnitud más intenso que en los pulsares ($\gtrsim 10^{13}$~G), y en cuyas cercanías pueden darse procesos que están dominados justamente por la presencia de ese campo magnético extremo, por lo que dichas ENs se conocen como magnetares. Muchos de los magnetares conocidos son fuentes de rayos $\gamma$ de baja energía. \cite{2018Mereghetti} resume el estudio de su evolución y la conexión con otras clases de estrellas de neutrones.\\
+%como la creación de pares por interacción fotón-campo magnético. 
+
+%La teoría de la nebulosa del viento de pulsar (Pulsar Wind Nebulae) se aleja del foco de esta charla pero deseo dejar una referencia \cite{}
+
+
+\section{Las simulaciones como herramienta}
+
+La física que rige al interior estelar durante los millones de años en los que funciona de forma estable una estrella establece también las ecuaciones que obedece la estructura perturbada por la explosión y propagación del frente de choque. A dichas ecuaciones conviene sumar algunas hipótesis que hagan abordable el problema. Si el estudio no pretende reproducir el rápido colapso de una estrella masiva a partir de primeros principios, se puede ignorar la parte central de la estrella salvo por su efecto gravitacional.
+Esto permite desacoplar el estudio de la expulsión de la envoltura \cite{1996Arnett}.
+La aproximación conocida como bomba términa consiste en depositar artificialmente energía interna cerca de la base del núcleo de hierro de la estrella progenitora para simular el inicio de la explosión de la SN.\\
+
+El otro ingrediente que se debe conocer para este tipo de estudios es la estructura de la estrella progenitora, ya sea que ha evolucionado vía cálculos numéricos (por ejemplo, solemos considerar las de \citealt{1988Ken}) o se asume como un gas con ecuación de estado conocido, tipo politrópica (ej \citealt{Martinez2019}). 
+Si no ha podido calcularse la nucleosíntesis explosiva que es la que produce los elementos más pesados que el hierro, es usual asumir la ubicación del material radiactivo, $^{56}$Ni cuyo decaimiento normalmente potencia la curva de luz de una SN días después del máximo.\\
+
+\subsection{Código hidrodinámico de \cite{Bersten2011}}
+Como herramienta básica de los estudios en los que colaboré se utilizan versiones del código hidrodinámico unidimensional inicialmente presentado en \cite{Bersten2011}.
+Este es un código lagrangiano, unidimensional que integra numéricamente las ecuaciones de la hidrodinámica suponiendo simetría esférica del gas autogravitante. El acoplamiento del transporte radiativo se realiza en la aproximación de difusión, lo que permite el cálculo de la evolución temporal de la luminosidad bolométrica de las SNs. 
+
+Además, las ecuaciones de la hidrodinámica se modifican mediante la inclusión de términos adicionales que simplifican en gran medida los procedimientos necesarios para la solución numérica de las ecuaciones en problemas que involucran ondas de choque. Por ejemplo, la viscosidad artificial en las ecuaciones de momento y energía se incluye siguiendo una formulación que se realizó en los años 50 \footnote{Oportunamente se ha aprovechado en la construcción del código la valiosa experiencia del Dr. Omar Benvenuto quien ha realizado muchos aportes al estudio de la evolución estelar. Algunos de sus estudios han formado parte de volumenes del Boletín de la Asociación Argentina de Astronomía.}
+
+
+\subsection{Mecanismos}\label{mech}
+
+Hoy se entiende que el mecanismo para reactivar el choque de una supernova que en teoría se puede haber ``estancado'', está íntimamente vinculado a la absorción de neutrinos en ciertas capas del material eyectado donde el calentamiento provisto por los neutrinos establece un gradiente de presión suficiente para empujar el material \citep{Bethe}. 
+\cite{2013ApJS..205....2N} y trabajos que lo citan, reportan avances en las investigaciones sobre la emisión de neutrinos en SNs. En el contexto de nuestras investigaciones, puede pensarse que esa captura de neutrinos es la que brinda la energía a la bomba térmica.\\
+
+Como alternativa se propone que pueden tener lugar efectos a gran escala (un mecanismo) magnetorotacional, esto es, el núcleo estelar en vías de colapso gravitatorio que ya contaba con impulso angular, producto de la evolución de una estrella rotante \citep{2009Maeder} desarrolla la expulsión de flujos en forma de chorros o {\em jets}. 
+\cite{2017Bear} impulsan un cambio de paradigma que brinde mayor importancia a los modelos de explosión impulsados de esta forma por {\em jets} que a los impulsados por el flujo de neutrinos. 
+Vale la pena notar otro tipo de avances recientes que consideran los efectos de la nucleosíntesis cuando la explosión involucra {\em jets}, como los estudios de \cite{2023Ober}. Sus resultados pueden ser de interés para modificaciones en el perfil del material radiactivo dentro de la estrella que explota como mencionaré más adelante.\\
+
+Las explosiones con la componente magnetorotacional comprenden a su vez otras propuestas interesantes. Podrían, en un caso, ir de la mano con estallidos de radiación gamma de establecerse {\em jets} poderosos alineados con la dirección de la visual, con fuertes efectos relativistas \cite{2021Aloy} . En nuestro grupo de investigación se ha comenzado a estudiar el tema de las SNs asociadas a GRBs por ejemplo en \cite{2023Roman}. Pero al contrario, puede suceder que los chorros no logren salir de la envoltura antes que la SN, en lo que se ha llamado el escenario de {\em jet} ahogado (\citealt{2016Senno} y trabajos que lo citan). Se emitirán también neutrinos en este caso, pero puede resultar mucho más importante la componente de neutrinos de altas energías que la térmica \cite{2023Reynoso}.\\
+
+\section{Casos extremos y casos extraños}
+
+Descubiertas hace relativamente poco, las supernovas superluminosas (SNSL) brillan entre 10 y 100 veces más que las SNs normales \citep{2007Smith,2019GalYam}. Si bien el origen físico de su extrema luminosidad permanece especulativo \citep{2019Wang}, uno de los mecanismos más populares invocados para explicarlas es el colapso de una estrella masiva para formar un magnetar. En \cite{Bersten2016} y \cite{2018Orellana} estudiamos el efecto de la propagación de la onda de choque potenciada por un magnetar como mecanismo central y sostenido en el tiempo de acuerdo a
+ \begin{equation}
+ L(t)\propto{\big(1+ t/t_{p}\big)^{-2}}.
+ \label{eq1}
+\end{equation}
+ La energía inyectada por el frenado del magnetar se termaliza en las partes internas de la envoltura y se suma a la de la explosión. En la Fig-\ref{choque} se muestra el avance del frente de choque en la estructura estelar en el caso que se incluye un magnetar caracterizado por alta energía rotacional inicial y una escala temporal de frenado $t_p=1$~d.\\
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{snIIp_M15_33_all.png}
+\caption{Evolución de algunas cantidades físicas en el interior de la estrella que explota como SN potenciada por un magnetar. Figura presentada en \cite{2018Orellana}} 
+\label{choque}
+\end{figure}
+
+
+En \cite{2016Orellana} mencionamos la necesidad de estudios detallados de los fenómenos que ocurren en la magnetósfera para ser considerada en forma consistente. En esa dirección han avanzado las simulaciones de \cite{2021Vurm}.
+Aún en el contexto más simplificado que nosotros consideramos, hemos podido continuar aportando al estudio de SNs inusuales como SN2020wnt encontrando los parámetros de un magnetar que puede explicar a grandes rasgos su curva de luz \citep{2022Gutierrez}. En la Fig.~\ref{20wnt} presento cálculos intermedios donde se exploró la respuesta ante el cambio de progenitor y de los parámetros del magnetar. Se trató de una SN de tipo I por lo que era adecuado elegir progenitores sin una capa externa de hidrógeno \cite{2016Fola}. En el mismo trabajo, comparando con la gran masa de $^{56}$Ni que alternativamente debe producirse para explicar esta SN2020wnt, se encontró un valor cerca de 4~M$_{\odot}$ que contrasta con los valores típicos de las SNs normales ($\sim 0.1$~M$_{\odot}$). En ninguno de los dos casos se establece en forma natural el quiebre que muestran los datos alrededor de 270~d, lo que amerita una discusión que también fue incluida en \cite{2022Gutierrez}.\\
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{comparaciones_2020wnt.png}
+\caption{Resultados intermedios en la búsqueda de un modelo que explique los datos de la SN 2020wnt \citep{2022Gutierrez}. Se incorporan distintas características del magnetar como así también, cambios en la estrella progenitora.} 
+\label{20wnt}
+\end{figure}
+
+
+Entre las SNs de brillo normal, hemos estudiado aquellas que resultan peculiares porque su curva de luz (CL) presenta dos máximos. En la literatura se encuentra que siguen diversas morfologías en sus CL.
+Muchas de ellas, cuando se las detecta con la luminosidad decreciendo en el tiempo, pueden explicarse por la interacción con material circumestelar (CSM) como es bastante frecuente con las SN de tipo IIb. 
+Pero hay formas que no pueden explicarse mediante ese escenario, mientras que sí es posible cuando se asume una distribución de la abundancia del $^{56}$Ni que sea bimodal en el interior de la estrella.
+La idea fue explorada anteriormente por \citep{Folatelli06} y \cite{Gutierrez2021} explicando sendos casos de SNs con una morfología atípica de la CL que muestra dos máximos claramente definidos, y los datos iniciales, con luminosidad en aumento, son previos al primer máximo.
+Recientemente retomamos el tema en forma sistemática, presentando resultados intermedios en este ámbito de reuniones nacionales \citep{2021baaa_mio,2023baaa_mio} y luego en \cite{2022Orellana}. En resumen, ampliamos la aplicación del escenario con una única descripción matemática del perfil de abundancia del $^{56}$Ni lo que permitió establecer comparaciones útiles y de aplicación relativamente sencilla.
+
+\section{SNs normales de tipo II, trabajo con una gran muestra de datos}\label{csp}
+
+Tuve oportunidad de colaborar en los estudios realizados por un tesista del grupo Simulaciones y Observaciones de Supernovas (SOS,\url{http://sos.fcaglp.unlp.edu.ar}) que tuvieron como objetivo principal el analizar las propiedades de las explosiones de SNs y de los progenitores comparando modelos de la CL y velocidades de expansión de la fotósfera con observaciones de una gran base de datos de excelente calidad y cobertura temporal. 
+Este arduo trabajo llevó a una serie de publicaciones y su tesis \citep{tesisLaurean}. Como paso preliminar se calcularon las estructuras evolucionadas de una grilla de estrellas utilizando el código {\sc MESA} \citep{paxton+11,paxton+19} bajo la hipótesis de evolución aislada.\\
+
+Primero se explicitó y puso a prueba el método de ajuste que requiere de estimar la CL bolométrica que se modelaría y luego implementar técnicas de {\em Monte Carlo Markov Chain} como método estadístico que busca las soluciones óptimas y permite ofrecer un conjunto de parámetros de ajuste junto con un valor estimado de la incerteza para cada uno \citep{Martinez2020}. Esto mejora la aproximación más tradicional donde se hace hincapié en otros problemas físicos y el ajuste se suele realizar mediante una minimización simple de $\chi^2$ (por ejemplo, en \citealt{2016Rojas} o \citealt{2018OrellanaBAAA}).\\
+
+La etapa siguiente consistió de la organización de los datos y definición de la muestra de SNs ricas en hidrógeno que sean de tipo IIP ó IIL. Se seleccionaron así 74 SNs con la cobertura deseada, muestra que está limitada por brillo \citep{2022Ma}.
+Los datos observacionales utilizados fueron adquiridos por el programa de seguimiento de SNs denominado Carnegie Supernova Project I (CSP-I, \citealt{2006Hamuy}). Cabe destacar que los mismos fueron procesados de la misma manera bajo un sistema fotométrico muy bien caracterizado, lo que hace a la homogeneidad de la muestra y disminuye las incertezas observacionales. 
+Se midieron los observables (por ejemplo duración de fases y sus pendientes) publicados en \cite{2022Mb} y a través del método de ajuste mencionado se obtuvieron las cantidades físicas de la explosión y de la estrella progenitora. En \cite{2022Mc} se estudiaron las correlaciones entre las distintas cantidades. En general, la diversidad en las propiedades de las SNs estudiadas pudo explicarse a través de diversidad en los parámetros que se variaron.\\ 
+
+Al poder establecer las masas iniciales de las estrellas progenitoras (en la comunmente conocida como {\em ZAMS} por {\em Zero Age Main Sequence}) se pudo realizar también una comparación con la propuesta por Salpeter en 1955. La función inicial de masa proporciona una manera conveniente de parametrizar el número relativo de estrellas en función de su masa, pretendiendo abarcar los orígenes y la evolución estelares (ver \citealt{2010Bastian} por contexto). En nuestros trabajos, que la distribución obtenida de los datos observacionales haya resultado más empinada nos llevó a discutir posibles implicaciones sobre las hipótesis realizadas por la metodología aplicada. Esto se encuentra muy bien detallado en \cite{tesisLaurean}.
+
+
+\section{Conclusión}
+
+En esta revisión me centré en brindar primero el contexto observacional actual de la búsqueda y seguimiento de SNs. Luego comenté brevemente sobre el código y técnicas que usamos para las simulaciones, y mencioné después varias de las aplicaciones en las que colaboré. El estudio y comprensión de las SNs tiene ciertamente un futuro promisorio.
+
+
+\begin{acknowledgement}
+Agradezco al Comité Organizador Científico el haberme considerado para proveer esta revisión, y al Comité Organizador Local por la excelente tarea y buena predisposición con la que llevaron a cabo la 65 Reunión Anual de la AAA en San Juan.
+Parte de mis investigaciones son actualmente solventadas por el PI UNRN 40B1039.
+Quiero agradecer también intercambios que me han brindado los últimos años de interacción a distancia con los demás colegas que conforman el grupo de investigación S.O.S.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

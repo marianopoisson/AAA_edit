@@ -1,0 +1,396 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Presentación mural / Poster                                            %
+%  2: Presentación oral / Oral contribution                                  %
+%  3: Informe invitado / Invited report                                      %
+%  4: Mesa redonda / Round table                                             %
+%  5: Presentación Premio Varsavsky / Varsavsky Prize contribution           %
+%  6: Presentación Premio Sahade / Sahade Prize contribution                 %
+%  7: Presentación Premio Sérsic / Sérsic Prize contribution                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : HEDA  - Historia, Enseñanza y Divulgación de la Astronomía
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{05 June 2024}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{How spectral fittings of stellar clusters are affected \\
+by the wavelength range used}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Population synthesis models}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+L.R. Vega-Neme\inst{1,2} \& A.V. Ahumada\inst{1,3}
+}
+
+\authorrunning{Vega \& Ahumada.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{luisveganeme@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Instituto de Astronom\'ia Te\'orica y Experimental, CONICET--UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Star clusters (SCs) are excellent laboratories to test stellar populations, as well as to determine their key properties such as age (t) and metallicity ([Fe/H]). For distant (extragalactic) SCs only integrated spectra are available, and one of the most powerful methods to study these properties is through synthesis modeling. Although this method is very useful, there are several limitations in the results of the models based on spectral synthesis. Here we apply this technique to spectra of Large Magellanic Cloud Star Clusters for different spectral coverage using the synthesis code {\tt Starlight}, in order to explore the dependence of the stellar population parameters with the wavelength ranges used.}
+
+\abstract{
+Los cúmulos estelares (CE) son excelentes laboratorios para estudiar las poblaciones estelares, y para determinar sus propiedades principales como edad (t) y metalicidad ([Fe/H]). Para CE distantes (extragalácticos) se dispone sólo de espectros integrados, y uno de los métodos más poderosos para estudiar estas propiedades es a través de la síntesis espectral. Aunque este método es de gran utilidad, existen varias limitaciones de los resultados basados en la síntesis espectral. Aplicamos esta técnica a espectros de cúmulos estelares de la Nube Mayor de Magallanes para diferentes regiones espectrales usando el código {\tt Starlight}, a fin de explorar la dependencia de los parámetros de las poblaciones estelares con el rango espectral adoptado.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{Magellanic Clouds --- galaxies: star clusters: general --- techniques: spectroscopic --- methods: data analysis}
+
+\begin{document}
+
+\maketitle
+
+\section{Background and Goals}
+
+Stellar clusters (SC) are among the most natural laboratories to study the evolution of stars and stellar populations. To infer their main properties such as age and metallicity, color-magnitude diagrams are very useful when individual stars are identified. On the other hand, integrated light could offer the opportunity of measure spectral indices and colors. The advent of evolutionary synthesis models allowed to fit the observed integrated spectra in all the spectral range available, thus differentiating from the methods which involved only certain wavelength or indices. This is a powerful technique since it is possible to infer the stellar populations involved as well as their global properties \citep{Cid}. Although the spectral synthesis was widely used to study the stellar populations of normal and active galaxies \citep{Tesis}, it was little used in SC spectra \citep{Andrea}.
+
+\
+
+Although its availability to study stellar populations, the spectral synthesis has a not-so-obvious limitation, related to the spectral range used, which could give false determinations of age, metallicity and/or extinction. The motivation for this behaviour is that for limited wavelength coverage the models with different metallicity could provide statistically indistinguishable fits \citep{CR2010a}. This situation is particularly critical when using only the blue spectral range, and becomes more important for older stellar populations.
+
+\
+
+To analyse this behaviour in detail, we apply spectral synthesis to a sample of SC spectra by varying the spectral coverage in the fittings. This way, we explore the dependence of the stellar population parameters with the wavelength ranges used. Here, we present our results of this methodology for the SC NGC 2136 located in the Large Magellanic Cloud (LMC).
+
+\section{Spectral Synthesis}
+
+We took spectra from the WiFeS Atlas of Galactic Globular cluster Spectra {\citep{WWAGGS},} which contains spectra of 64 Milky Way and 3 Fornax globular clusters, plus 14 LMC and 5 Small Magellanic Cloud (SMC) SC. WAGGS observations correspond to integrated spectra of the central 25x38 arcsec region of the clusters in 5 gratings at R=6800. We gathered all the spectral information into one single spectrum per object, resulting in a wavelength coverage of 3450 \AA\ - 7450 \AA. From these object, we choose NGC 2136 to apply our method. This is a SC located at the outskirts of the LMC (Figure \ref{image}).
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.76\columnwidth]{F1.png}
+\caption{Optical image of SC NGC 2136. North is up and East to the left. WAAGS FoV is marked by a red rectangle.}
+\label{image}
+\end{figure}
+
+\
+
+We use the spectral synthesis code {\tt STARLIGHT} \citep{Cid} which combines theoretical Simple Stellar Populations (SSP) to model the observed spectra. This robust code was widely used for recovering the star formation history of galaxies, but only few times was applied to star clusters. The free parameters to fit are {\it M$_\lambda$}, {\it t}, {\it A$_V$}, and {\it [Fe/H]}. The formal combination of SSPs is performed as
+
+\
+
+\begin{equation}
+\label{eq:Stl_02}
+M_\lambda = M_{\lambda_0} \left[\sum_{j=1}^{N_\star} x_j b_{j,\lambda}
+  r_\lambda \right] \otimes G(v_\star,\sigma_\star)
+\end{equation}
+
+\
+
+\
+
+
+where $M_{\lambda_0}$ is the modeled flux at normalization wavelength $\lambda_0$, $N_\star$ is the number of components in the base of SSPs, $x_j$ are the relative contributions of each SSP, $b_{j,\lambda} \equiv L_j(\lambda) / L_j(\lambda_0)$ is the spectrum of the $j^{th}$ SSP normalized at $\lambda_0$, $r_\lambda = 10^{-0.4(A_\lambda-A_{\lambda_0})}$ is the reddening term, $A_\lambda$ is the extinction law \citep{CCM}, and $G(v_\star,\sigma_\star)$ is a gaussian centered in velocity $v_\star$ with a velocity dispersion $\sigma_\star$. This latter term accounts for possible shift and broadening of the spectrum, but it is only important when dealing with massive systems (e.g. galaxies' bulges), which is not our case. The best model is found according to minimization:
+
+
+\begin{equation}
+\label{eq1}
+\chi^2 \equiv \sum_{\lambda_i}^{\lambda_f} [O(\lambda) - M(\lambda)]^2.\omega(\lambda)^2
+\end{equation}
+
+\
+
+where $O(\lambda)$ is the observed spectrum, $\omega(\lambda)$ is a weight term (a zero value is used for masking; see below), and $\lambda_i$ and $\lambda_f$ are the initial and final wavelengths to fit, respectively.
+
+\
+
+The most usual base of SSPs comprises 150 spectra corresponding to 25 ages and 6 metallicities (Base ``BC03"; after \citep{BC2003}), which was built to take into account all possible values of age (from 10$^5$ to 2$\times$10$^{10}$ yr) and metallicity (from -2.5 to 0.4). However, when dealing with SC, there is no need to include those SSP for which we know somehow they are not present. This is not an arbitrary decision: for instance, the inclusion of very young and/or metal-rich populations in globular clusters fittings would only oversample the SSPs and add erroneous estimates of the real properties of the object, besides being time-consuming runs. This sort of statistical noise could easily be avoided by using a sub-sample of BC03 base by choosing more ``astrophysically important" SSPs, based on the previous estimates of the SC available in WAGGS sample \citep{WAGGS}. We thus made a customized base comprising ages from 10$^6$ to 10$^9$ yr and with solar, LMC and SMC metallicities.
+
+\
+
+
+
+To explore the dependence of the stellar population parameters with wavelength, we fit the spectra in certain ranges, increasing the coverage at steps of 100 \AA\ from 3700 \AA\ to 7000 \AA, with a minimum initial range of 500 \AA, thus performing [29$\times$(29+1)/2] = 435 fits per cluster according to the following scheme:
+\\
+\\3700-4200 \\
+3700-4300 \hspace{0.5cm}	3800-4300 \\
+3700-4400 \hspace{0.5cm}	3800-4400 \hspace{0.5cm}	.   \\
+3700-4500 \hspace{0.5cm}	3800-4500 \hspace{0.5cm}	..  \\
+....      \hspace{1.6cm}		...	  \hspace{1.6cm}	..  \hspace{0.1cm}	6400-6900   \\
+3700-7000 \hspace{0.5cm}	3800-7000 \hspace{0.4cm}	..  \hspace{0.1cm}	6400-7000   \hspace{0.2cm}	6500-7000
+
+(29 fits)	  \hspace{0.5cm}	(28  fits)  \hspace{0.5cm}  ..	\hspace{0.5cm}    (2 fits)      \hspace{0.5cm}	(1 fit)
+
+\
+
+The selection of the spectral regions to fit are done by masking the wavelengths outside of these regions. For instance, when fitting 3700 \AA\ - 4400 \AA\ we actually mask all data in 3450 \AA\ - 3700 \AA\ and 4400 \AA\ - 7450 \AA\, as WAGGS spectra goes from 3450 \AA\ to 7450 \AA . This is done by properly selecting $\omega(\lambda)$=0 in Eq. \ref{eq1}.
+
+\
+
+Finally, for each spectral range we obtain the mean values of age and metallicity by averaging over the SSPs parameters involved in the fits, by performing
+
+\begin{equation}
+\label{eq2}
+<log (t)> \equiv \sum_{j=1}^{N} x_j \times (log (t_j))
+\end{equation}
+
+\begin{equation}
+\label{eq3}
+<[Fe/H]> \equiv \sum_{j=1}^{N} x_j \times ([Fe/H]_j).
+\end{equation}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.975\columnwidth]{F2a.png}
+\includegraphics[width=\columnwidth]{F2b.png}
+%\includegraphics[trim={1cm 13cm 1cm 4.5cm},clip,scale=0.43]{Fig_NGC2136_4000_5100.pdf}
+%\includegraphics[width=\columnwidth]{Fig.pdf}
+%\includegraphics[trim={1cm 13cm 1cm 4.5cm},clip,scale=0.43]{Fig_NGC2136_4000_6700.pdf}
+\caption{Examples of fits with {\tt Starlight} to the blue (\emph {uppper panel}) and to blue+red (\emph{bottom panel}) spectral regions.}
+\label{Blue}
+\end{figure}
+
+\
+
+\section{Results}
+
+We applied the strategy described in the former section to NGC 2136. Figure \ref{Blue} shows the fits with beginning wavelength in 4000\AA\ covering just the blue part and the red part of the spectrum, respectively, along with some data derived from the synthesis. The extension of the fits outside the range (to the blue and red limits of the models) are shown to visualize the quality of the global fit, which in some cases are far from the observed spectrum, giving large global residues, despite the (local) good fit.
+
+\
+
+Figure \ref{Plots} shows the behaviour of the age and [Fe/H] obtained for different ranges. The reference values (horizontal lines) for each parameter are taken from WAGGS. The colors denotes fittings with different starting wavelengths. Typical uncertainties are 0.1dex in log(age) and 0.2 in [Fe/H] \citep{CR2010b}. In these plots, the examples mentioned in Figure \ref{Blue} correspond to the blue line of Figure \ref{Plots}, i.e., $\lambda_i$=4000 \AA. For these fittings, the resulting mean age and metallicity show no appreciable variation, regardless the covering region as long as the blue part is included. For the SC of our example, when considering $\lambda_i$=4000 \AA\ the derived mean log(age)$\sim$7.8 and [Fe/H]$\sim$-0.15 are near and above the reference (literature) values, log(age)=7.8 and [Fe/H]=-0.37, respectively.
+\\
+
+On the other hand, the results are different for the red spectral region (Figure \ref{Red}): we  obtained that the mean age and metallicity could be severely underestimated when the blue range is not included. This is evident for instance in the fittings with $\lambda_i$=5500 \AA\ (red line) for which the mean log(age) and [Fe/H] decreases to $\sim$7 and $\sim$-0.6, respectively (see bottom right locii of Figure \ref{Plots}). Thus, we see that if only the red part is taken into account, some  age and [Fe/H] sensitive absorption features are not considered, such as H$\beta$ or Mg I lines: in this case the fit does not represent the global behavior despite the technical fact that the local residue is small.
+
+\begin{figure}[!ht]
+%\begin{figure}
+\centering
+\includegraphics[width=\columnwidth]{F3a.png}
+\includegraphics[width=\columnwidth]{F3b.png}
+%\includegraphics[trim={0cm 5.1cm 1cm 13cm},clip,scale=0.43]{Fig_Plot_NGC2136_Age_ai.pdf}
+%\includegraphics[trim={0.7cm 5cm 1cm 13cm},clip,scale=0.43]{Fig_Plot_NGC2136_Met_ai.pdf}
+\caption{Behaviour of mean log(age) (\emph {upper panel}) and [Fe/H] (\emph {bottom panel}) derived from {\tt Starlight} fits applied to different spectral regions of NGC 2136. Each line connect values from different spectral range, beginning with $\lambda_{i}$ and ending at $\lambda_f$, according to the scheme described in the text.}
+\label{Plots}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\columnwidth]{F4.png}
+%\includegraphics[trim={1cm 13cm 1cm 4.5cm},clip,scale=0.43]{Fig_NGC2136_5500_6800.pdf}
+\caption{Same as Figure \ref{Blue} but for red spectral region.}
+\label{Red}
+\end{figure}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

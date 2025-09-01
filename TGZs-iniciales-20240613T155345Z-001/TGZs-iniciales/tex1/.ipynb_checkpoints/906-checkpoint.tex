@@ -1,0 +1,370 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Determinaci\'on de par\'ametros astrof\'isicos\\ de c\'umulos abiertos a partir de fotometr\'ia de GAIA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Par\'ametros astrof\'isicos de cuatro c\'umulos abiertos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+A.R. Callen\inst{1,2},
+A.L. García\inst{1,2},
+A. Martinez-Bezoky\inst{1,2},
+J. Rapoport\inst{1,2},
+F.O. Simondi-Romero\inst{1,2},
+L.Y. Saker\inst{2,3},
+A.V. Ahumada\inst{2,3}
+\&
+L. Tapia\inst{2}
+}
+
+\authorrunning{Callen et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{federico.simondi.romero@unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Matem\'atica, Astronom\'ia, F\'isica y Computaci\'on, UNC, Argentina
+\and
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Como continuaci\'on de un proyecto en el marco de la materia {\em ``Astrof\'isica General''} (FaMAF, UNC), se presentan par\'ametros astrof\'isicos de 4 c\'umulos abiertos de la V\'ia L\'actea. Basados en datos fotom\'etricos {\sl Gaia} {\em DR3} y ajustando is\'ocronas te\'oricas en los diagramas color-magnitud $(G_{BP}-G_{RP}, G)$, se derivan edades, metalicidades, distancias y excesos de color $E(G_{BP}-G_{RP})$ para estos c\'umulos abiertos relativamente conocidos. Los datos fotom\'etricos permitir\'an, a partir de diagramas color-magnitud, analizar los mencionados agregados estelares de manera homog\'enea.}
+
+\abstract{As a continuation of a project within the framework of the General Astrophysics subject (FaMAF, UNC), astrophysical parameters of 4 open clusters of the Milky Way are presented. Based on Gaia DR3 photometric data and fitting theoretical isochrones in the color-magnitude diagrams $(G_{BP}-G_{RP}, G)$, ages, metallicities, distances and color excesses $E(G_{BP}-G_{RP}, G)$ are derived for these relatively well-known open clusters. The photometric data will allow, based on color-magnitude diagrams, to analyze the aforementioned stellar aggregates in a homogeneous manner.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{open clusters and associations: general --- open clusters and associations: individual (NGC\,2910, NGC\,5715, NGC\,6204, Pismis\,21) --- techniques: photometric --- astrometry}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}
+
+Los c\'umulos abiertos (CAs) son las herramientas ideales para estudiar y analizar diferentes aspectos relacionados con la estructura, composici\'on, formaci\'on, din\'amica y evoluci\'on del disco de la V\'ia L\'actea (VL) (ver, por ej., \cite{M16}). Esto se debe a que sus par\'ametros astrof\'isicos fundamentales, tales como edad, distancia, exceso de color y metalicidad, entre otros, pueden determinarse, en general, con mejor precisión que para estrellas individuales \citep{CG2020}.
+
+Continuando el estudio sistem\'atico de CAs de la VL, que fuera iniciado en \cite{B23}, enmarcado dentro de las actividades pr\'acticas de la materia {\em ''Astrof\'isica General''} (FaMAF, UNC), se presenta aqu\'i la segunda comunicaci\'on de esta serie. En este trabajo se presenta el estudio realizado de cuatro CAs ubicados en el cuarto cuadrante de la Galaxia, a saber: NGC\,2910, NGC\,5715, NGC\,6204 y Pismis\,21. Los mismos corresponden a un grupo de CAs de los que ya se poseen imágenes en los filtros B,V e I obtenidas desde la Estación Astrofísica de Bosque Alegre (OAC, UNC). Los datos acá analizados provienen de la misi\'on {\sl Gaia}, y si bien los mismos ya han sido analizados por diferentes autores (ver por ej., 
+\cite{Bossini2019}, \cite{Monteiro2020}), lo han hecho de manera automática. El procedimiento con el cu\'al se determinan los par\'ametros astrof\'isicos fundamentales de los cuatro objetos estudiados se presenta en la Sec.\,2. En la Sec.\,3 se encuentran los resultados de este trabajo, as\'i como tambi\'en los par\'ametros disponibles en bibliograf\'ia. Finalmente en la Sec.\,4 se presentan las conclusiones y perspectivas futuras.
+
+\section{Datos y análisis}
+La muestra de CAs (Fig.~\ref{fig1}) estudiada se presenta en la Tabla~\ref{tabla1}, junto con sus coordenadas ecuatoriales absolutas y gal\'acticas, los di\'ametros angulares y paralajes. Los datos fueron obtenidos del {\em Data Release 3} (DR3) \citep{G23} de la misi\'on {\sl Gaia} (\citep{G16}). {\sl Gaia} consta de dos dispersores llamados BP por {\em Blue Photometer} $(330 < \lambda < 680)~\mathrm{nm}$, y RP por {\em Red Photometer} $(640 < \lambda < 1050)~\mathrm{nm}$\footnote{\url{http://www.cosmos.esa.int/web/gaia/}}. En particular, se utilizaron datos fotom\'etricos ($G, G_{BP}$ y $G_{RP}$) y astrom\'etricos (coordenadas ecuatoriales, paralaje y movimientos propios). Utilizando el {\em software} {\sc TopCat} \citep{T05}, un graficador visual e interactivo que permite manipular tablas con una gran cantidad de datos, se realiz\'o un diagrama color-magnitud (DCM) restringiendo el conjunto de datos de cada CA para que contenga s\'olo aquellas estrellas pertenecientes al mismo, siguiendo el m\'etodo descripto en \cite{B23}. Para esto, se filtr\'o el conjunto original teniendo en cuenta el movimiento propio, la paralaje y su error relativo.
+
+Una vez construido el DCM para cada CA, se obtuvieron m\'ultiples is\'ocronas te\'oricas para el sistema fotom\'etrico de {\sl Gaia} descargadas de PARSEC (\citep{B12}) en su \'ultima versi\'on (CMD 3.7)\footnote{\url{http://www.stev.oapd.inaf.it/cmd/}}, tomando como curva de extinción la de \cite{ccm1989} y el valor $R_V = 3.1$. En primer lugar, se tom\'o como par\'ametro fij\'o a la metalicidad, siendo \'esta solar, y se vari\'o la edad de las mismas. Una vez elegida la is\'ocrona que mejor se ajust\'o a los datos, se descargaron nuevas is\'ocronas manteniendo como par\'ametro fijo la edad y variando la metalicidad para un ajuste m\'as fino. De este modo, se obtuvo un ajuste final (Fig.~\ref{fig2}) para cada CA determinando as\'i la edad y metalicidad de los mismos. De esta mejor selección, se derivaron el exceso de color $E(G_{BP}-G_{RP})$ que afecta a cada uno de los CAs a partir de desplazar las isócronas a lo largo del eje de color ($G_{BP}-G_{RP}$), en tanto que para obtener el módulo de distancia aparente ($G-M_G$) las isócronas se desplazaron a lo largo del eje de la magnitud ($G$). Vale destacar que estos desplazamientos no son independientes.
+
+\begin{table*}[!t]
+\centering
+\caption{Coordenadas celestes y parámetros básicos de los CAs estudiados.}
+\begin{tabular}{lcccccc}
+\hline\hline\noalign{\smallskip}
+\!\!C\'umulo & \!\!l & \!\!b & \!\!$\alpha_{2000.0}$ & \!\!$\delta_{2000.0}$ & \!\!d & \!\!$\omega$ \\ \!\! & \!\![°] & \!\![°] & \!\![h m s] & \!\![h m s] & \!\![arcmin] & \!\!${mas}$\\
+\hline\noalign{\smallskip}
+\!\!NGC 2910 & \!\!275.32 & \!\!-1.16 & \!\!09 30 34.3 & \!\!-52 54 47 & \!\!6.4 & \!\!0.746\\
+\!\!NGC 5715 & \!\!317.52 & \!\!2.09 & \!\!14 43 29.0 & \!\!-57 34 36 & \!\!8.0 & \!\!0.435\\
+\!\!NGC 6204 & \!\!338.55 & \!\!-1.05 & \!\!16 42 27.0 & \!\!-46 56 12 & \!\!5.0 & \!\!0.805\\
+\!\!Pismis 21 & \!\!320.35 & \!\!-1.79 & \!\!15 16 47.8 & \!\!-59 39 32 & \!\!3.0 & \!\!0.290\\
+\hline
+\multicolumn{7}{c}{\small Nota: los diámetros angulares y las paralajes medias}\\
+\multicolumn{7}{c}{\small corresponden a \citet{CG2020}.}\\
+\end{tabular}
+\label{tabla1}
+\end{table*}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=.495\columnwidth]{1.png}\hfill
+\includegraphics[width=.495\columnwidth]{2.png}\vfill
+\includegraphics[width=.495\columnwidth]{3.png}\hfill
+\includegraphics[width=.495\columnwidth]{4.png}
+\caption{Im\'agenes de los CAs: \emph{Panel superior izquierdo:} NGC\,2910; \emph{Panel superior derecho:} NGC\,5715; \emph{Panel inferior izquierdo:} NGC\,6204; y \emph{Panel inferior derecho:} Pismis\,21. Las tres primeras son im\'agenes adquiridas de \textit{Aladin} en color DSS2. La imagen de Pismis\,21 se obtuvo en la Estaci\'on Astrof\'isica de Bosque Alegre, OAC - UNC en los filtros \textit{U}, \textit{B} y \textit{V}. Norte hacia arriba, Este hacia la izquierda. (FoV: 9'x9’). Los círculos celestes corresponden a los di\'ametros adoptado para cada cúmulo.}
+\label{fig1}
+\end{figure}
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=.95\columnwidth, height=7.55cm]{NGC2910.png}\hfill
+\includegraphics[width=.95\columnwidth, height=7.55cm]{NGC5715.png}\vfill
+\vspace{0.5cm}
+\includegraphics[width=.95\columnwidth, height=7.55cm]{NGC6204.png}\hfill
+\includegraphics[width=.95\columnwidth, height=7.55cm]{pismis21.png}\vfill
+\caption{Ajustes finales realizados a los CAs. En azul la is\'ocrona adoptada, y en celeste punteada las m\'as pr\'oximas. \emph{Panel superior izquierdo:} NGC\,2910; \emph{Panel superior derecho:} NGC\,5715; \emph{Panel inferior izquierdo:} NGC\,6204; y \emph{Panel inferior derecho:} Pismis\,21.}
+\label{fig2}
+\end{figure*}
+
+\section{Resultados}
+Los valores de los parámetros determinados en este trabajo para los CAs analizados, se presentan en la Tabla \ref{tabla2}. Las incertezas indicadas en la determinación de edades, corresponden a las diferencias en los valores de las isócronas que más se asemejaban a la del ajuste definitivo, en tanto para los dos parámetros restantes, $G-M_G$ y $E(G_{BP}-G_{RP})$, los errores corresponden al mínimo valor que hubo que desplazar la isócrona seleccionada en ambos ejes del DCM para que se produjera un cambio apreciable. La distancia astrométrica indicada para cada CA se determinó a partir del promedio de distancias teniendo en cuenta solamente aquellas estrellas que presentaban un error en sus paralajes (positivas) menor al 20 \% \citep{luri2018}.
+
+\begin{table*}[!t]
+\centering
+\caption{Par\'ametros astrof\'isicos fundamentales determinados para los CAs de la muestra.}
+\begin{tabular}{lccccc}
+\hline\hline\noalign{\smallskip}
+\!\!C\'umulo & Distancia & \!\!Edad & \!\!Z & \!\!{$G-M_G$} & \!\!$E(G_{BP}-G_{RP})$ \\ \!\! & \!\![kpc] & \!\!$\times 10^6$ a\~nos & \!\! & \!\! & \!\!\\
+\hline\noalign{\smallskip}
+\!\!NGC\,2910 & $1.7\pm 0.8$ & \!\!$150 \pm 50$ & \!\!0.02 & \!\!$11.0 \pm 0.1$ & \!\!$0.30 \pm 0.02$\\
+\!\!NGC\,5715 & $2.1 \pm 0.8$ & \!\!$600 \pm 100$ & \!\!0.02 & \!\!$15.1 \pm 0.2$ & \!\!$1.30 \pm 0.20$\\
+\!\!NGC\,6204 & $1.3 \pm 0.3$ & \!\!$225 \pm 25$ & \!\!0.03 & \!\!$11.3 \pm 0.3$ & \!\!$0.55 \pm 0.30$\\
+\!\!Pismis\,21 & $3.0\pm0.5$ & \!\!$20 \pm 10$ & \!\!0.03 & \!\!$12.4 \pm 0.4$ & \!\!$1.30 \pm 0.02$\\
+\hline
+\end{tabular}
+\label{tabla2}
+\end{table*}
+
+\subsection{NGC\,2910}
+Este CA, catalogado también como BH\,71 \citep{BH1975}, se encuentra a una distancia de $(1.7 \pm 0.8)~\mathrm{kpc}$, mientras que \cite{G15} determinaron un valor $(1.3 \pm 0.1~\mathrm{kpc})$. A partir del ajuste de is\'ocronas se determinaron en este trabajo una metalicidad solar y una edad de $150 \times 10^6$ a\~nos, sin embargo \cite{G15} determinaron una edad de $6 \times 10^7$ a\~nos, aunque los autores expresan la dificultad de resolver la regi\'on superior de la secuencia principal. Al desplazar ambos ejes del DCM, se obtuvieron un exceso de color $E(G_{BP} - G_{RP}) = 0.30 \pm 0.02$, y un m\'odulo de distancia aparente $(m - M) = 11.0 \pm 0.1$.
+
+\subsection{NGC\,5715}
+NGC\,5715, también fue catalogado por \cite{BH1975} bajo BH\,163. El mismo se encuentra a $(2.1 \pm 0.8)~\mathrm{kpc}$ como se obtuvo a partir de {\sc TopCat}, en concordancia con la literatura, ya que \cite{C12} determinaron una distancia $(1.6 \pm 0.8)~\mathrm{kpc}$, y \cite{CG20} encontraron $2.3~\mathrm{kpc}$. La metalicidad del CA es solar, seg\'un la is\'ocrona del mejor ajuste, valor comparable al determinado por \cite{C12}. En cuanto a la edad, la is\'ocrona que mejor ajust\'o el DCM corresponde a $6 \times 10^8$ a\~nos. De los desplazamientos en ambos ejes del DCM, se obtuvo un enrojecimiento $E(G_{BP} - G_{RP}) = 1.30 \pm 0.20$, y un m\'odulo de aparente $(m - M) = 15.1 \pm 0.2$.
+
+\subsection{NGC\,6204}
+El CA NGC\,6402, BH\,196 \citep{BH1975} o Cr\,312 \citep{Cr1931}, se encuentra a una distancia $1.3 \pm 0.3$ kpc según se determinó mediante la estadística de {\sc TopCat}. Este valor no es muy diferente al encontrado por \cite{P22}, quienes resolvieron una distancia de $1.2$ kpc. Como resultado del ajuste de isócronas se obtuvo una metalicidad de $0.03$ y una edad de $225 \times 10^6$ a\~nos. El valor encontrado est\'a en concordancia con la literatura, ya que \cite{P22} determinaron una edad de $234 \times 10^6$ a\~nos. Del ajuste se derivaron también el enrojecimiento y el módulo de distancia aparente, siendo $E(G_{BP} - G_{RP}) = 0.55 \pm 0.03$ y $(m - M) = 11.3 \pm 0.3$, respectivamente. 
+
+\subsection{Pismis\,21}
+Pismis\,21, también conocido como BH\,171 \citep{BH1975}, es un CA bastante compacto. A partir de la estad\'istica de las paralajes individuales con {\sc TopCat} se determin\'o una distancia $(3.0 \pm 0.5)~\mathrm{kpc}$. Del ajuste de is\'ocronas, se obtuvieron una metalicidad solar y una edad de $2 \times 10^7$ a\~nos, valor en consonancia con $8 \times 10^7$ a\~nos, encontrado por \cite{A00}. Al ajustar los valores en el DCM, se obtuvieron un exceso de color $E(G_{BP} - G_{RP}) = 1.30 \pm 0.02$ y un m\'odulo de distancia aparente $(m - M) = 12.4 \pm 0.4$.
+
+
+\section{Resumen, conclusiones y trabajo futuro}
+Del presente trabajo se obtuvieron los siguienes resultados:
+\begin{itemize}
+    \item Se determinaron parámetros fundamentales para 4 CAs del cuarto cuadrante, presentados en la Tabla~\ref{tabla2}. Si bien, los datos de éstos ya han sido analizados, en este trabajo se ha realizado un estudio detallado de cada uno. Particularmente edades y abundancias químicas resultaron, en general, en concordancia con las encontradas en bibliograf\'ia.
+    
+    \item El c\'umulo m\'as joven de la muestra result\'o ser Pismis 21, con una edad de $2 \times 10^7$ a\~nos y un enrojecimiento comparable a un objeto joven, mientras que el objeto m\'as viejo result\'o ser NGC 5715 con una edad de $600 \times 10^6$ a\~nos.
+
+    \item Se puede observar que, en general, las distancias obtenidas a partir de las paralajes y de la que se deriva del módulo de distancia aparente al momento de ajustar isócronas, no son similares. Se estima que podría ser o bien por la selección de estrellas o por las isócronas seleccionadas, entre otros.
+        
+    \item Finalmente, se espera continuar con este proyecto, agregando a los datos de esta misión espacial, datos obtenidos desde la Estaci\'on Astrof\'isica de Bosque Alegre. Más allá de comparar los resultados obtenidos por uno y otro telescopio, se sabe que, si bien la calidad fotométrica no es comparable a la {\sl Gaia}, se podrían hacer monitoreos de estrellas particulares. Además, los estudiantes podrán adquirir herramientas observacionales certeras que les permitirán comprender y realizar todos los pasos involucrados para obtener datos obesrvacionales que puedan ser analizados con rigurosidad científica.
+\end{itemize}
+
+\begin{acknowledgement}
+Los autores agradecen a la FaMAF, al OAC y al COL por hacer posible la participaci\'on de los estudiantes de la Licenciatura en Astronom\'ia en la 65° RAAA. Desean adem\'as agradecer la labor de los editores del presente Bolet\'in, ya que dado que este trabajo fue de relevancia para ellos al permitirles analizar grandes vol\'umenes de datos de diferentes {\em surveys}, podr\'an interiorizarse en el trabajo cient\'ifico que desarrollar\'an en el futuro. Agradecemos también al referee por sus comentarios y sugerencias en pos de mejorar este trabajo.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

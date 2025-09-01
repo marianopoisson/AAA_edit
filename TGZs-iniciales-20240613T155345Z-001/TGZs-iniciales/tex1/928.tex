@@ -1,0 +1,440 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{The globular cluster system of nearby spirals through multi-band surveys: Improving the photometric catalogue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Globular clusters systems of nearby spirals}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+  J.P. Caso\inst{1,2,3}, A.I. Ennis\inst{4,5}, A.L. Chies-Santos\inst{6}, B.J. De B\'ortoli\inst{1,2,3}, R.S. de Souza\inst{7},
+  M. Canossa\inst{6}, P. Floriano\inst{6}, E. Godoy\inst{6}, P. Lopes\inst{6}, N.L. Miranda\inst{6} \& C. Bonato\inst{6}
+}
+
+\authorrunning{Caso et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{jpcaso@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+  Facultad de Ciencias Astron\'omicas y Geof\'isicas, UNLP, Argentina \and
+  Instituto de Astrof\'isica de La Plata, CONICET--UNLP, Argentina \and
+  Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina \and
+  Waterloo Centre for Astrophysics, University of Waterloo, Canada \and
+  Perimeter Institute for Theoretical Physics, Canada \and
+  Instituto de F\'isica, Universidade Federal do Rio Grande do Sul, Brasil \and
+  University of Hertfordshire, Reino Unido
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Los relevamientos fotom\'etricos multi-banda permiten estudiar
+los sistemas de c\'umulos globulares de un amplio n\'umero de galaxias cercanas en 
+forma homog\'enea. El procesamiento de estos datos y la construcci\'on de cat\'alogos
+fotom\'etricos, es crucial para determinar una muestra de candidatos a 
+partir de m\'etodos estad\'isticos. En el presente trabajo exploramos alternativas 
+al procedimiento de reducci\'on aplicado en trabajos previos de este proyecto, 
+que permiten mejorar el cat\'alogo de objetos puntuales.}
+
+\abstract{Photometric multi-band surveys are useful for studying the globular
+cluster systems for a large number of nearby galaxies in an homogeneous manner. 
+The data processing and further catalogues build-up are important in obtaining 
+a sample of likely candidates by means of statistical methods. In the present 
+work we test some alternatives to the photometrical procedure applied in 
+previous studies from this project, to improve the catalogue of point-sources.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ galaxies: star clusters: general --- galaxies: star clusters: individual --- galaxies: stellar content --- galaxies: groups: individual (M81)}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}
+\label{sec.intro}
+The Sloan Digital Sky Survey \citep{yor00} has represented a turning point for modern astronomy,
+which is entering an era dominated by large surveys. In particular, photometric multi-band 
+surveys, like the Large Synoptic Survey Telescope \citep{ive08} or the Javalambre Photometric 
+Local Universe Survey \citep[J-PLUS,][]{cen19}, provide useful data for a large variety of 
+astronomical topics with low telescope time. The amount of data released by these surveys allows 
+homogeneous studies of large samples of targets, but it also leads to challenges when processing
+the data that have to be addressed in an automated manner.
+
+In particular, the study of globular clusters (GCs) in nearby galaxies is relevant for our 
+knowledge of galaxy evolution. They are present in the majority of the galaxies with masses 
+above $\approx 10^9\,{\rm M_{\odot}}$, spanning different morphologies and environments
+\citep[e.g.][]{har15}. The formation and later evolution of GCs, as well as the build-up of 
+globular cluster systems (GCSs), are related to the mergers experienced by their host 
+galaxies \citep[e.g.][]{kru19,li19}, and their properties provide evidences about the host
+galaxy, including the amount of dark matter \citep[e.g.][]{hud14,for18}, the relevance of the 
+accretion processes \citep[e.g.][]{deb22}, and the mechanisms that rule the disruptions of
+substructure in the inner regions \citep[e.g.][]{cas24}.
+This article presents preliminary results from a project devoted to the study of the GCSs
+in nearby spirals, through observations from J-PLUS, and continues the 
+analysis carried by \citet{chi22} and \citet{cas23} of the M\,81 triplet, chosen as a test 
+bench for our project. Its distance \citep[$D\approx 3.6$\,Mpc,][]{tul13}, and the existence 
+of previous studies on the GCSs of M\,81 \citep{per95,nan10,nan11,ma17} make it an excellent
+target for our purposes. The triplet is conformed by the spiral M\,81, the dominant galaxy in 
+the group, the starburst spiral M\,82 and the irregular NGC\,3077. There is evidence of 
+interactions, including emission in HI \citep{deb18} and low surface-brightness substructure 
+in optical bands \citep{sme20} that seems to connect the galaxies. 
+
+\section{Observations and photometry}
+
+The dataset is conformed by processed images in twelve filters, from $u$ to $z$ (see 
+\citealt{cen19} for information about the filters system) for three pointings that cover 
+the entire region of the triplet, and span to the South. The images are publicly available 
+at the J-PLUS collaboration website\footnote{http://www.j-plus.es/datareleases/data\_release\_dr2}.
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{Fig1.pdf}
+  \caption{Stellarity index from S{\sc ource}E{\sc xtractor} against $r_0$ magnitude for
+  sources in the field containing M\,81. In the {\it left panel}, the detection of the 
+  sources and its stellarity index are obtained from the composite image described in 
+  Section\,\ref{sec.phot}. The {\it right panel} is analogue, but the detection and 
+  stellarity index are based on the $r$ image. The red circles correspond to sources with 
+  proper motions larger than 3 m.a.s. per year, from Gaia DR3, and assumed as Galactic 
+  stars. The green triangles correspond to confirmed GCs from the literature.}
+  \label{Fig1}
+\end{figure}
+
+\subsection{Photometry}
+\label{sec.phot}
+  In order to increase the signal-to-noise for faint sources, we perform the 
+  detection on a composite image, built from the addition of the images 
+  corresponding to broad bands $g$, $r$, $i$ and $z$, plus the narrow band 
+  images from filters $J0515$,  $J0660$ and $J0861$. Bluer filters are not
+  used to build the composite image, since the spectral energy distribution for old GCs drops in flux for wavelengths below 
+  $5000\,{\rm \AA}$ \citep[e.g.][]{bro06}. The aperture photometry in the 
+  twelve filters is carried using 
+  S{\sc ource}E{\sc xtractor} \citep{ber96} in dual mode, with the composite
+  image as the reference one, and using a Gaussian filter to classify the 
+  sources. The background is measured locally, with a mesh size of 32 pixels, 
+  large enough to not affect the photometry. Typically, the mean effective radii 
+  of extragalactic GCs is $\approx 3-4$\,pc \citep[e.g.][]{pen08,cas14}. 
+  Considering the distance to the triplet and the typical seeing in these 
+  images (above 1\,arcsec), GCs can be treated as point-sources. Finally, a 
+  selection of point sources is made based on the S{\sc ource}E{\sc xtractor} 
+  parameters, ${\rm FWHM}$ and stellarity index, obtained from the composite
+  image. This procedure allows us to reach fainter magnitudes, and to improve
+  the selection of sources (see Fig.\,\ref{Fig1}). Point sources lacking 
+  photometric measurements in more than one filter are excluded, as well as
+  those presenting uncertainties above 0.5\,mag in the broad bands (except for
+  the $u$ filter). Finally, the definite catalogue is matched with Gaia\,DR3 
+  \citep{gai21} to add information on proper motions.
+  
+\subsection{Photometric corrections}
+  The zero points for each filter are calculated from the crossmatch of the 
+  point sources with the J-PLUS photometric catalogue, for the corresponding
+  aperture radius. Besides, aperture corrections are obtained from several 
+  bright and isolated stars in different sections of the fields. In contrast
+  to what was performed in \citet{chi22}, the extinction corrections are 
+  calculated for each source with a $E_{B-V}$ map built from the extinction 
+  calculators of the NASA/IPAC Infrared Science 
+Archive\footnote{https://irsa.ipac.caltech.edu/applications/DUST/},
+  and used to correct the photometry of the extinction coefficients 
+  for the J-PLUS filters from \citet{lop19}. Figure\,\ref{Fig2} shows
+  the map with the gradient of colours representing increasing values of 
+  reddening, from 0.04\,mag (light yellow) to 0.14\,mag (dark blue). It 
+  should be emphasised that sources embedded in the disk of both spirals 
+  could still be affected by their intrinsic extinction.
+
+  \begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{Fig2.pdf}
+  \caption{Reddening map ($E_{B-V}$) for the three pointing included in
+  this analysis. It is built from the extinction calculators from the 
+  NASA/IPAC Infrared Science Archive and the extinction coefficients for
+  the J-PLUS filters. The colour gradient moves towards larger $E_{B-V}$
+  values, from light yellow to dark blue.}
+  \label{Fig2}
+\end{figure}
+
+\subsection{Exclusion of contaminants}
+The data publicly available from Gaia\,DR3 are useful to identify Galactic 
+stars in the photometric catalogue. This is particularly helpful for
+points sources brighter than $g=20.5$\,mag, for which more than 50 
+per-cent have proper motion measurements ($\mu$, and 90 per-cent if the 
+threshold is set at $g=19$\,mag). In \citet{chi22}, the criterion was to 
+reject all the sources with $\mu > 3.6\,{\rm mas\,yr^{-1}}$, based on 
+the proper motion measurements of confirmed GCs from the literature. In 
+Fig.\,\ref{Fig3} the proper motion measurements for confirmed GCs of M\,81 
+from the literature, and three times their corresponding uncertainties
+are shown . It is noticeable that, although many GCs present non-negligible 
+proper motions, the vast majority of them do not surpass the 
+$3\cdot \sigma$ value. A few GCs from \citet{per95} exceed this limit, 
+but they lack ACS photometry confirming their extended nature, and 
+their flux excess from Gaia (i.e., the ratio between the fluxes derived from
+the spectra of the object and its point-spread function in the astrometric CCD) 
+range $1.15-1.25$, which is expected for 
+point sources. Hence, our rejection criterion is $\mu > 3\cdot \sigma_{\mu}$.
+
+Finally, radial velocities from SDSS\,DR16 \citep{ahu20} are included,
+discarding those objects with heliocentric velocities $>1000\,{\rm km\,s^{-1}}$, 
+based on the heliocentric velocities of the galaxies of the triplet.
+The resulting catalogue has $\approx 11,900$ objects.
+
+
+  \begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{Fig3.pdf}
+  \caption{Proper motions from Gaia\,DR3 ($\mu$) and three times their
+  uncertainties, for confirmed GCs of M\,81. The red line represents the
+  identity relation.}
+  \label{Fig3}
+\end{figure}
+
+\section{Conclusion}
+ A better segregation of point-like sources in our photometry, plus more a restrictive
+ criterion for proper motion measurements, produce a final catalogue with fewer 
+ contaminants. Although it is limited to bright sources, the spectroscopic survey 
+ from SDSS\,DR16 is also helpful for this goal. This procedure is intended to provide
+ an improved input catalogue for statistical methods, as the one applied in \citet{chi22},
+ leading to a better selection of GC candidates. 
+
+
+\begin{acknowledgement}
+This work was funded with grants from Consejo
+Nacional de Investigaciones Científicas y Técnicas de la República
+Argentina, Agencia Nacional de Promoción Científica y Tecnológica,
+and Universidad Nacional de La Plata (Argentina). This research 
+was supported
+in part by Perimeter Institute for Theoretical Physics. Research
+at Perimeter Institute is supported by the Government of Canada
+through the Department of Innovation, Science and Economic 
+Development and by the Province of Ontario through the Ministry of
+Research and Innovation. ACS acknowledges funding from the Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq) and the Rio Grande
+do Sul Research Foundation (FAPERGS) through grants CNPq-
+403580/2016-1, CNPq-11153/2018-6, PqG/FAPERGS-17/2551-
+0001, FAPERGS/CAPES 19/2551-0000696-9, L’Oréal UNESCO
+ABC Para Mulheres na Ciência and the Chinese Academy of Sci-
+ences (CAS) President’s International Fellowship Initiative (PIFI)
+through grant 2021VMC0005
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{biblio}
+ 
+\end{document}

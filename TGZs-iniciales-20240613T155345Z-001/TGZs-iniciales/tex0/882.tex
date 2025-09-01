@@ -1,0 +1,400 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ************************** AVISO IMPORTANTE **************************     %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+% -No borre los comentarios en este archivo.                                 %
+% -No puede usarse \newcommand o definiciones personalizadas.                %
+% -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo   %
+%  asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/  %
+%  pdflatex) no arrojan errores en su terminal. Esta es la causa más         %
+%  frecuente de errores de envío. Los mensajes de "warning" en cambio son    %
+%  en principio ignorados por SiGMa.                                         %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ************************** IMPORTANT NOTE ******************************   %
+%                                                                            %
+% This is a help file for authors who are preparing manuscripts to be        %
+% considered for publication in the Boletín de la Asociación Argentina       %
+% de Astronomía.                                                             %
+%                                                                            %
+% The comments in this file give instructions about the manuscripts'         %
+% mandatory format, complementing the instructions distributed in the BAAA   %
+% web and in PDF. Please read them carefully                                 %
+%                                                                            %
+% -Do not delete the comments in this file.                                  %
+% -Using \newcommand or custom definitions is not allowed.                   %
+% -SiGMa does not accept articles with compilation errors. Before submission %
+%  make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex)  %
+%  do not produce errors in your terminal. This is the most frequent cause   %
+%  of submission failure. "Warning" messsages are in principle bypassed      %
+%  by SiGMa.                                                                 %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ******************** Paquetes Latex / Latex Packages *******************   %
+%                                                                            %
+% -Por favor NO MODIFIQUE estos comandos.                                    %
+% -Si su editor de texto no codifica en UTF8, modifique el paquete           %
+% 'inputenc'.                                                                %
+%                                                                            %
+% -Please DO NOT CHANGE these commands.                                      %
+% -If your text editor does not encodes in UTF8, please change the           %
+% 'inputec' package                                                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *************************** Idioma / Language **************************   %
+%                                                                            %
+% -Ver en la sección 3 "Idioma" para mas información                         %
+% -Seleccione el idioma de su contribución (opción numérica).                %
+% -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)     %
+%  DEBEN estar en el mismo idioma.                                           %
+%                                                                            %
+% -Select the language of your contribution (numeric option)                 %
+% -All parts of the document (title, text, figures, tables, etc.) MUST be    %
+%  in the same language.                                                     %
+%                                                                            %
+% 0: Castellano / Spanish                                                    %
+% 1: Inglés / English                                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *************** Tipo de contribución / Contribution type ***************   %
+%                                                                            %
+% -Seleccione el tipo de contribución solicitada (opción numérica).          %
+%                                                                            %
+% -Select the requested contribution type (numeric option)                   %
+%                                                                            %
+% 1: Artículo de investigación / Research article                            %
+% 2: Artículo de revisión invitado / Invited review                          %
+% 3: Mesa redonda / Round table                                              %
+% 4: Artículo invitado Premio Varsavsky / Invited report Varsavsky Prize     %
+% 5: Artículo invitado Premio Sahade / Invited report Sahade Prize           %
+% 6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ********************* Área temática / Subject area *********************   %
+%                                                                            %
+% -Seleccione el área temática de su contribución (opción numérica).         %
+%                                                                            %
+% -Select the subject area of your contribution (numeric option)             %
+%                                                                            %
+% 1 : SH  - Sol y Heliosfera / Sun and Heliosphere                           %
+% 2 : SSE  - Sistema Solar y Extrasolares / Solar and Extrasolar Systems     %
+% 3 : AE  - Astrofísica Estelar / Stellar Astrophysics                       %
+% 4 : SE  - Sistemas Estelares / Stellar Systems                             %
+% 5 : MI  - Medio Interestelar / Interstellar Medium                         %
+% 6 : EG  - Estructura Galáctica / Galactic Structure                        %
+% 7 : AEC  - Astrofísica Extragaláctica y Cosmología /                       %
+%       Extragalactic Astrophysics and Cosmology                             %
+% 8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /               %
+%       Compact Objetcs and High-Energy Processes                            %
+% 9 : ICSA - Instrumentación y Caracterización de Sitios Astronómicos        % 
+%       Instrumentation and Astronomical Site Characterization               %
+% 10 : AGE  - Astrometría y Geodesia Espacial                                %
+% 11 : ASOC - Astronomía y Sociedad                                          %
+% 12 : O   - Otros                                                           % 
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *************************** Título / Title *****************************   %
+%                                                                            %
+% -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.           %
+% -Para dividir un título largo en más líneas, utilizar el corte             %
+%  de línea (\\).                                                            %
+%                                                                            %
+% -It MUST NOT be capitalized (except for the first letter) and be concise.  %
+% -In order to split a long title across two or more lines,                  %
+%  please use linebreaks (\\).                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Chemical properties of galaxy baryons as a function of \\ halo mass 
+in a $\Lambda$CDM cosmology}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ******************* Título encabezado / Running title ******************   %
+%                                                                            %
+% -Seleccione un título corto para el encabezado de las páginas pares.       %
+%                                                                            %
+% -Select a short title to appear in the header of even pages.               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Chemical properties of galaxy baryons}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ******************* Lista de autores / Authors list ********************   %
+%                                                                            %
+% -Ver en la sección 3 "Autores" para mas información                        %  
+% -Los autores DEBEN estar separados por comas, excepto el último que        %
+%  se separar con \&.                                                        %
+% -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin      %
+%  comas ni espacios entre las iniciales).                                   %
+%                                                                            %
+% -Authors MUST be separated by commas, except the last one that is          %
+%  separated using \&.                                                       %
+% -The format MUST be: S.W. Hawking (initials followed by family name,       %
+%  avoid commas and blanks between initials).                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+Y.D. Burrafato\inst{1,2,3},
+M.E. De Rossi\inst{2,3},
+S.E. Grimozzi\inst{2,3},
+M.S. Nakwacki\inst{4},
+M.C. Tomasini\inst{1},
+L.J. Zenocratti\inst{5,6}
+\&
+M.C. Zerbo\inst{2,3,5}
+}
+
+\authorrunning{Burrafato et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% **************** E-mail de contacto / Contact e-mail *******************   %
+%                                                                            %
+% -Por favor provea UNA ÚNICA dirección de e-mail de contacto.               %
+%                                                                            %
+% -Please provide A SINGLE contact e-mail address.                           %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mariaemilia.dr@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ********************* Afiliaciones / Affiliations **********************   %
+%                                                                            %
+% -La lista de afiliaciones debe seguir el formato especificado en la        %
+%  sección 3.4 "Afiliaciones".                                               %
+%                                                                            %
+% -The list of affiliations must comply with the format specified in         %      
+%  section 3.4 "Afiliaciones".                                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Departamento de Física, Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+\and
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina
+\and
+Facultad de Ciencias Exactas y Naturales, UBA, Argentina
+\and
+Universidad de Buenos Aires, Argentina
+\and
+Facultad de Ciencias Astronómicas y Geofísicas, UNLP, Argentina
+\and
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% *************************** Resumen / Summary **************************   %
+%                                                                            %
+% -Ver en la sección 3 "Resumen" para mas información                        %
+% -Debe estar escrito en castellano y en inglés.                             %
+% -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos)  %
+%  caracteres, incluyendo espacios.                                          %
+%                                                                            %
+% -Must be written in Spanish and in English.                                %
+% -Must consist of a single paragraph with a maximum of 1500 (one thousand   %
+%  five hundred) characters, including spaces.                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las abundancias químicas de las componentes bariónicas de las galaxias codifican información crucial sobre la formación y evolución de las estructuras en el Universo. Mediante simulaciones numéricas cosmológicas, analizamos la evolución química de galaxias que habitan halos de diferentes masas, considerando diferentes modelos de {\em feedback} de supernovas (SN) y núcleos galácticos activos (AGN, por sus siglas en inglés). A corrimiento al rojo $z=0$, encontramos una correlación despreciable entre las masas de los halos y las abundancias químicas globales de los bariones contenidos en galaxias dentro de dichos halos. Por otro lado, las abundancias correspondientes a diferentes elementos químicos correlacionan fuertemente entre sí. Para halos de una masa dada, hay una evolución química significativa de las galaxias huéspedes con $z$, en el sentido de que los bariones contenidos en galaxias estaban menos enriquecidos químicamente en el pasado. Tal evolución química es más fuerte para halos de baja masa. Nuestros hallazgos sugieren que el {\em feedback} de SN y AGN puede tener un impacto significativo en las propiedades químicas de las estrellas y el gas dentro de las galaxias centrales de los halos.}
+
+\abstract{The chemical abundances of the baryonic components of galaxies encode crucial information about the formation and evolution of the structures in the Universe. By using numerical cosmological simulations, we analyse the chemical evolution of galaxies inhabiting halos of different masses, considering different models for supernova (SN) and active galactic nuclei (AGN) feedback.  At redshift $z=0$, we found a negligible correlation between the masses of halos and the global chemical abundances associated to galaxy baryons within such halos. On the other hand, abundances corresponding to different chemical elements strongly correlate with each other. At a given halo mass, there is a significant chemical evolution of galaxies with $z$, in the sense that galaxy baryons were less chemically enriched in the past. A stronger chemical evolution is obtained for low mass halos. Our findings suggest that SN and AGN feedback can have a significant impact on the chemical properties of stars and gas within halo central galaxies.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            % 
+% Seleccione las palabras clave que describen su contribución. Las mismas    %
+% son obligatorias, y deben tomarse de la lista de la American Astronomical  %
+% Society (AAS), que se encuentra en la página web indicada abajo.           %
+%                                                                            %
+% Select the keywords that describe your contribution. They are mandatory,   %
+% and must be taken from the list of the American Astronomical Society       %
+% (AAS), which is available at the webpage quoted below.                     %
+%                                                                            %
+% https://journals.aas.org/keywords-2013/                                    %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ galaxies: abundances --- galaxies: evolution --- galaxies: halos --- cosmology: theory}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{sec:intro}
+Given the complexity of the physical processes involved in the evolution of galaxies, it is not easy to elucidate the origin of the different populations of galaxies observed in the Universe. However, by contrasting observed galaxy properties with appropriate theoretical models, it could be possible to infer evolutionary scenarios for such systems. In this context, the chemical abundances of galaxies have been shown to be important tracers of the formation process and evolution of these objects. For this reason, the study of the chemical evolution of galaxies has become, currently, in a research area of great activity and growing interest (see, e.g., \citealt{finlator2017} and \citealt{maiolino2019}, for reviews).
+
+Despite the great diversity of physical mechanisms that can affect the general population of galaxies, observational and theoretical works agree that chemical abundances of the gaseous and stellar components of all of them, not only correlate with each other, but also present marked dependencies with other fundamental properties of these systems. And, even more, the characterization of such relationships, at different redshifts ($z$) and in different environments, has proven to be extremely useful in constraining the plausible evolutionary paths of different populations of galaxies. In particular, the relationship between the stellar mass ($M_\bigstar$) and the (gas-phase and stellar) metallicity (hereafter, MZR) of galaxies has been a matter of intense investigation during the last decades, both from the observational and theoretical points of view \citep[e.g.][]{tremonti2004, gallazzi2005, laralopez2010, derossi2017, maiolino2019, torrey2019}. At low masses,  supernova (SN) feedback and gas accretion seem to play a major role in shaping the MZR \citep[e.g.][]{zenocratti2022}, while the high-$M_\bigstar$ end of the relation can be significantly affected by galaxy mergers and active galactic nuclei (AGN) activity \citep[e.g.][]{zenocratti2020, derossi2023}. Environmental effects could also play a significant influence on the metal content of satellites orbiting massive dark matter halos \citep[e.g.][]{bahe2017}. In this sense, there are still many open issues regarding the main processes that determine the metal evolution of galaxy baryons in different environments.
+
+In this article, we present preliminary results of a project aimed at characterizing the global chemical evolution of galaxies as a function of their host halo mass. By using the Evolution and Assembly of GaLaxies and their Environments ({\sc{eagle}}) numerical cosmological simulations, we analyse the chemical evolution of galaxies inhabiting halos of different masses, considering different models for SN and AGN feedback. We pay particular attention to the connection between the metallicity of different baryonic phases in galaxies (e.g. stars vs. gas), and try to determine the existence of scaling relations between them.
+
+
+\section{Simulations and galaxy sample}
+
+The {\sc{eagle}} suite includes cosmological hydrodynamical simulations \citep{schaye2015, crain2015} which adopt a $\Lambda$CDM cosmology: $\Omega_{\Lambda} = 0.693$, $\Omega_{\rm m} = 0.307$, $\Omega_{\rm b} = 0.04825$
+and $h=0.6777$ \citep{planck2014}. They were run in cubic, periodic volumes of side-lengths ranging from 25 to
+100 comoving Mpc, including relevant physical processes affecting the evolution of galaxies, such as radiative cooling of gas, star formation, chemical enrichment of baryons, SN and AGN feedback, among others. Data generated with these simulations (both galaxy and particle catalogues) are publicly available{\footnote{{\url{https://icc.dur.ac.uk/Eagle/}}}}.
+
+
+In this work, we explore intermediate-resolution simulations within the {\sc{eagle}} suite, which adopt different feedback prescriptions.
+Simulations that evaluate variations in the AGN (SN) feedback implementation were {\em only} run within cubic boxes of side-lengths of $L=50$ ($L=25$) 
+comoving Mpc, considering $752^3$ ($376^3$) initial particles per type (i.e. baryonic or dark-matter particles).
+Models corresponding to weak, reference and strong SN feedback efficiency are tested with the so-called WeakFB-, Ref- and
+StrongFB-L25N376 simulations, respectively.  Models associated with no AGN, reference and a higher AGN
+feedback impact are explored with the so-called NoAGN-, Ref- and AGNdT9-L50N752 simulations. For
+the latter simulation, AGN feedback drives a higher gas temperature increase than for the reference model.
+The reference model is the only one calibrated to reproduce some observations, whereas other models are
+only used for studying feedback effects.
+For more details about this set of simulations, the reader is referred to \citet{schaye2015} and \citet{crain2015}.
+
+The identification of simulated galaxies was performed previously with the well-known {\sc Friends-of-Friends} ({\sc FoF}) technique (\citealp{Davis1985}) to find dark matter halos, combined with the {\sc{subfind}} algorithm (\citealp{Springel2005}; \citealp{Dolag2009}) to find subhalos that will host simulated galaxies. Several {\sc{subfind}} substructures can belong to a given {\sc FoF} group. The central galaxy of the latter is defined as the substructure that contains the particle with the lowest value of the gravitational potential, while the remaining ones are considered satellites. Unless otherwise specified, our sample includes both central and satellite galaxies with $M_\bigstar > 10^9~{{\rm M}_\odot}$.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Figura1_Ref-L50N752_L.png}
+	\caption{Correlation matrix of halo mass ($M_{200}$) and chemical abundances associated to galaxy baryons inside different halos. Results correspond to $z=0$ systems in the Ref-L50N752 simulation.}
+\label{fig:matrix}
+\end{figure}
+
+
+
+
+\section{Results}\label{sec:results}
+
+\subsection{Chemical abundances of galaxy baryons in halos of different masses}
+In this section, we evaluate the chemical properties of galaxies obtained from the {\sc{eagle}} reference model, which, as mentioned before, was calibrated to reproduce observational data (see \citealt{schaye2015}, for details).  For the sake of clarity, we focus on the simulation Ref-L50N752, which was run considering a larger cosmological volume (and, hence, leads to a more complete galaxy sample) than the simulation Ref-L25N376.  Nevertheless, we note that the trends predicted from both simulations are consistent.
+
+
+For each dark matter halo with virial mass $M_{200}$\footnote{The halo mass $M_h \equiv M_{200}$ is defined as the total mass within the radius $R_{200}$, which is the physical radius within which the mean internal density is 200 times the critical density of the Universe, centred on the dark matter particle of the corresponding {\sc FoF} halo with the minimum gravitational potential.}, we calculated the accumulated mass of different chemical elements (H, He, C, N, O, Ne, Mg, Si, Fe) within galaxies. Fig.~\ref{fig:matrix} shows the correlation matrix for the derived chemical abundances and $M_{200}$ at redshift $z=0$, in the particular case of Ref-L50N752 simulation.
+It is clear that there is a strong correlation between all chemical abundances, as expected. On the other hand, the  absolute values of the correlation coefficients between the considered chemical abundances and $M_{200}$ are low. Thus, at least at $z=0$, the chemical abundances associated to baryons within galaxies seem not to be determined by their host halo masses.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{Figura2_Ref-L50N752_L.pdf}
+	\caption{Metal enrichment of baryons within the galaxies of halos ($Z_{\rm b,halo}$, see text for details) as a function of the host halo mass, at different $z$. Results correspond to Ref-L50N752 simulation.}
+\label{fig:evolution}
+\end{figure}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=2\columnwidth]{junto.png}
+	\caption{Gas metallicity as a function of stellar metallicity of central galaxies for different feedback models. \emph{Left panel}: comparison between results of a Weak (blue) and Strong (orange) SN feedback model, corresponding to simulations WeakFB- and StrongFB-L25N376, respectively. \emph{Right panel}: comparison between results of a model without AGN feedback (blue) and a model associated with a stronger AGN feedback impact (orange), corresponding to simulations NoAGN- and AGNdT9-L50N752, respectively. The dashed black line depicts the identity relation. Median relations corresponding to the SF (NSF) gas are shown with solid (dashed) lines.}
+\label{fig:feedback}
+\end{figure*}
+
+In order to characterize the global chemical enrichment of galaxy baryons inside a given halo, we define the parameter $Z_{\rm b,halo}$ as the metallicity associated to the accumulated baryonic mass within galaxies inside such halo:
+
+\begin{equation}
+Z_{\rm b,halo} = \frac{{\sum}_{i} M_{{\rm b},Z,i}}{{\sum}_{i} M_{{\rm b},i}},  
+\end{equation}
+
+
+\noindent
+where $M_{{\rm b},Z,i}$ is the total mass in metals (i.e. in all chemical elements heavier than He) associated to a galaxy $i$ hosted by the halo and $M_{{\rm b},i}$ is the total baryonic mass corresponding to such galaxy $i$. The summation extends over all galaxies ($i$) located within a given halo.
+Fig.~\ref{fig:evolution} shows that the $M_{200} - Z_{\rm b,halo}$ relation evolves with time, both in shape and normalization.
+A stronger evolution is seen in less massive halos, which show an increase of $\sim 0.7$~dex since $z\approx3$ up to $z\approx0$.
+Interestingly, $Z_{\rm b,halo}$ tends to increase towards lower $M_{200}$ at all $z$, the causes of which are part of an on-going investigation.
+As noted before, no clear trend with $M_{200}$ is obtained at $z=0$. On the other hand, at $z\gtrsim1$, $Z_{\rm b,halo}$ seems to increase as $M_{200}$ increases in the range $\sim 10^{11.3-12.0}~{\rm M}_{\odot}$, with a stronger trend towards higher $z$.
+At lower $z$, $Z_{\rm b,halo}$ seems to flatten or even slightly decrease as $M_{200}$ increases above $\sim 10^{12.0}~{\rm M}_{\odot}$. Such decrease in the metal content of halos could be dominated by a decrease in the metal content of the baryons associated to the most massive central galaxies. As shown by \citet{derossi2017}, AGN feedback drives a metallicity decrease of most massive galaxies in {\sc{eagle}} simulations. 
+
+
+
+
+
+
+\subsection{The special case of central galaxies}
+In order to obtain more insights into the dominant physical process affecting simulated halos, we separated our galaxy sample in central and satellite systems. Here, we present our preliminary results for the former objects, while the analysis of satellites is part of an on-going work.
+
+Following \citet{derossi2017}, we analysed the metallicity of central galaxies with stellar masses $M_{\bigstar} > 10^9~{\rm M}_{\odot}$, considering three baryonic phases: the stellar metallicity ($Z_{\bigstar}$), the metallicity of the star-forming (SF) gas ($Z_{\rm SFgas}$) and the metallicity of the non star-forming (NSF) gas ($Z_{\rm NSFgas}$).\footnote{In {\sc{eagle}} simulations, the SF gas phase is defined by the gas particles that satisfy the conditions required for star formation, according to eq.~$1$ in \citet{schaye2015}.}.
+
+In the left panel of Fig.~\ref{fig:feedback}, we compare results from simulations WeakFB- and StrongFB-L25N376. In the right panel of Fig.~\ref{fig:feedback}, we compare results from simulations NoAGN- and AGNdT9-L50N752. It is clear that feedback processes strongly affect the metal content of central galaxies. Both, a stronger SN feedback or a higher AGN feedback impact, lead to a significant decrease in the global stellar and SF gas metallicity. On the other hand, the metallicity of the NSF gas seems to be more affected by SN feedback. In a future work, we will explore how such effects depend on the halo mass.
+
+
+\section{Conclusions}
+
+We studied the chemical enrichment of baryons within simulated galaxies residing in dark matter halos with different masses.
+
+Our main results can be summarized as:
+
+\begin{itemize}
+	\item At $z=0$, there is a negligible correlation between host halo masses and the considered global chemical abundances associated to galaxies inhabiting such halos.
+\item At a given halo mass, there is a significant chemical evolution of galaxies with $z$.
+\item SN and AGN feedback have a significant impact on the chemical properties of stars and gas within halo central galaxies.
+\end{itemize}
+
+At the moment, we are extending our analysis of feedback effects to satellite galaxies.
+We are also exploring the dependence of feedback effects on halo mass, trying to address if the lower metallicities associated to the most massive halos at $z=0$ can be associated to AGN feedback effects.
+
+
+{\em All authors contributed equally to this work.}
+
+\begin{acknowledgement}
+We thank the referee of this article for a constructive report.
+YDB thanks {\it Asociaci\'on Argentina de Astronom\'{\i}a} for having been awarded with a grant, which partially supported this project. 
+We acknowledge funding from {\it Agencia Nacional de Promoci\'on de la Investigaci\'on, el Desarrollo Tecnol\'ogico y la Innovaci\'on} (Agencia I+D+i, PICT-2021-GRF-TI-00290), Argentina. We acknowledge the Virgo Consortium for making their simulation data available. The {\sc{eagle}} simulations were performed using the DiRAC-2 facility at Durham, managed by the ICC, and the PRACE facility Curie based in France at TGCC, CEA, Bruy\`{e}res-le-Ch\^{a}tel. This work used the DiRAC@Durham facility managed by the Institute for Computational Cosmology on behalf of the STFC DiRAC HPC Facility (www.dirac.ac.uk). The equipment was funded by BEIS capital funding via STFC capital grants ST/P002293/1, ST/R002371/1 and ST/S002502/1, Durham University and STFC operations grant ST/R000832/1. DiRAC is part of the National e-Infrastructure.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ******************* Bibliografía / Bibliography ************************* %
+%                                                                           %
+% -Ver en la sección 3 "Bibliografía" para mas información.                 %
+% -Debe usarse BIBTEX.                                                      %
+% -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%  BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                           %
+% -BIBTEX must be used.                                                     %
+% -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+% file (without the .BIB extension).                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{document}

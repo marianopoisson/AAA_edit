@@ -1,0 +1,400 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{16 February 2024}
+\accepted{03 April 2024}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{El rol de las características y evolución de las regiones
+activas solares en la producción de fulguraciones y
+eyecciones coronales de masa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Características y evolución de regiones activas}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M. López Fuentes\inst{1}
+}
+
+\authorrunning{López Fuentes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{lopezf@iafe.uba.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astronomía y Física del Espacio, CONICET--UBA, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Eventos solares como las fulguraciones y eyecciones coronales de masa (ECM) son los fenómenos más energéticos que afectan al medio interplanetario en escalas temporales desde los minutos hasta unos pocos días. Con la motivación principal de establecer indicadores que puedan utilizarse en la predicción de fenómenos con potencial impacto en la meteorología espacial, ha habido en años recientes un fuerte interés en determinar qué características de las regiones activas (RAs) solares y su evolución las hacen más proclives a producir estos eventos. Para ello es necesario identificar y caracterizar los procesos de inyección de energía y helicidad magnética en las RAs y los mecanismos de desestabilización de las estructuras magnéticas que llevan a la liberación impulsiva de energía y la eyección de materia al espacio. Este tipo de estudio requiere la combinación de observaciones en distintas longitudes de onda, correspondientes a diferentes regímenes espaciales y temporales, con el uso de sofisticados modelos magnetohidrodinámicos. En este artículo repasamos y discutimos algunos avances recientes en el tema y presentamos ejemplos de análisis de la evolución magnética de RAs en relación a la producción de eventos energéticos impulsivos como fulguraciones y ECMs.}
+
+\abstract{Solar events such as flares and coronal mass ejections (CMEs) are the most energetic phenomena affecting interplanetary space in timescales from minutes to a few days. With the main aim of establishing parameters to be used in the prediction of phenomena with potential impact on space weather, there has been in recent years a strong interest in determining what characteristics of active regions (ARs) and their evolution make them more prone to produce these events. For that, it is necessary to identify and characterize the processes of energy and magnetic helicity injection in ARs and the mechanisms of destabilization of magnetic structures that lead to impulsive energy release and ejection of matter to space. This kind of study requires the combination of observations in different wavelengths, corresponding to distinct temporal and spatial regimes, with the use of sophisticated magnetohydrodynamic modeling. In this article we review and discuss some recent advances on the subject and we present examples of analysis of AR magnetic evolutions in relation with the occurrence of impulsive energetic events like flares and CMEs.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ Sun: activity --- Sun: coronal mass ejections (CMEs) --- Sun: flares --- Sun: magnetic fields}
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+\label{S_intro}
+
+Es conocido desde hace ya varias décadas el efecto que la actividad solar tiene sobre el medio interplanetario y el ambiente espacial y magnético terrestre \citep{temmer2021}. El estudio continuo de observaciones remotas e \textit{in situ} ha mostrado la existencia de una serie de fenómenos encadenados que, teniendo un origen impulsivo solar, evolucionan a través del espacio interplanetario alcanzando eventualmente la Tierra. Los eventos más energéticos, como las fulguraciones y eyecciones coronales de masa (ECMs), tienen su origen en las regiones activas (RAs), por lo que la génesis y evolución de las mismas, y en particular, las características que las hacen más o menos proclives a producir estos eventos, son una parte fundamental del estudio del problema \citep{toriumi2019}. Por esta razón, ha habido en años recientes un creciente interés por caracterizar las estructuras magnéticas que dan origen a las RAs, y conocer las condiciones que llevan a la acumulación y posterior liberación de energía y eyección de material al espacio asociadas a este tipo de fenómenos.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_1.pdf}
+\caption{(a): Imagen de disco completo en el continuo visible observada con el {\sl SDO/HMI}. El recuadro negro indica la ubicación de la RA bipolar cuya imagen amplificada se muestra en el panel (b). (c) Magnetograma del campo magnético en la dirección de la visual de la región del panel (b). Los campos positivos (hacia el observador) se representan en blanco y los negativos (hacia el interior solar) en negro. (d) Arcos magnéticos de una región bipolar sobre el limbo solar para ilustrar la configuración coronal de este tipo de regiones. (e) Esquema mostrando la configuración de los tubos de flujo emergentes desde el interior solar, que dan origen a las RA bipolares.}  
+\label{fig_1}
+\end{figure*}
+
+En este artículo de revisión introducimos algunos conceptos fundamentales en el estado de conocimiento del tema y describimos herramientas usuales utilizadas en el análisis de la evolución magnética de RAs. En la Sección~\ref{S_ars} discutimos sobre el origen y evolución de las RAs y qué características observacionales de las mismas se han identificado en relación a su mayor o menor capacidad de producir eventos energéticos eyectivos. En la Sección~\ref{S_activity} describimos la configuración magnética clásica asociada a eventos eruptivos y su evolución durante el desarrollo de fulguraciones y ECMs. En la Sección~\ref{S_evol} describimos dos metodologías usuales en el análisis cuantitativo de la evolución magnética de las RAs a partir de magnetogramas fotosféricos. Estas son, el cálculo de parámetros magnéticos globales y la estimación de la inyección de energía y helicidad magnética a través de la fotósfera. En la Sección~\ref{S_examples} ejemplificamos la aplicación de esta metodología con la descripción de dos casos analizados en trabajos propios recientes. Finalmente, en la Sección~\ref{S_conclusion} presentamos algunas conclusiones.
+
+\section{Regiones activas solares}
+\label{S_ars}
+
+Las regiones activas (RAs) solares se deben a la emergencia a través de la fotósfera de estructuras magnéticas en forma de tubos toroidales con origen en el interior solar. Estas estructuras se forman en la base de la zona convectiva como parte del proceso de generación y transformación del campo magnético solar debido al mecanismo de dínamo \citep{charbonneau2020}. Durante el ciclo solar este procesos transforma, gracias a la combinación de rotación diferencial y convección, parte de la componente dipolar del campo global del Sol en componente toroidal, acumulándola en la base de la zona convectiva. Alcanzado cierto umbral \citep{parker1979} inestabilidades magnetohidrodinámicas (MHD) producen la formación de tubos de flujo que ascienden por flotación magnética a lo largo de la zona convectiva, emergiendo finalmente a través de la fotósfera alcanzando la atmósfera solar.
+
+El resultado de este proceso es ilustrado en la Fig.~\ref{fig_1}, donde se muestra un caso típico de RA dipolar. El panel (a) corresponde a una imagen del disco solar completo en el visible obtenida con el {\sl Helioseismic Magnetic Imager} \citep[{\sl HMI},][]{scherrer2012}, a bordo del {\sl Solar Dynamics Observatory} ({\sl SDO}). Allí se identifica con un recuadro una RA. El panel (b) muestra una ampliación de esta región formada por dos manchas solares. En el panel (c) se muestra un magnetograma longitudinal, es decir, un mapa de la componente del campo magnético en la dirección de la visual, de la misma región. Allí se representa con blanco campos magnéticos positivos (hacia el observador) y con negro campos negativos (hacia el interior solar), indicando signos opuestos para cada mancha y sugiriendo la estructura en forma de tubo mostrada en el panel (e). En el panel (d) se muestra la estructura en forma de arcos coronales observada en el EUV, para una configuración magnética similar observada en el limbo solar.
+
+Modelos y observaciones muestran que las estructuras emergentes se encuentran deformadas torsionalmente, de modo que las líneas de campo rotan o se enrollan alrededor del eje principal de los tubos \citep{fan2021}. Este tipo de deformación corresponde a la llamada componente de {\sl twist} de la helicidad magnética. La helicidad magnética se define como la integral de volumen del producto interno entre el potencial vector y el campo magnético, y es un invariante en condiciones MHD ideales, por lo que el contenido de helicidad en las estructuras provee información sobre los procesos a los que fueron sometidas durante su evolución. Los modelos también muestran que esta torsión brinda a las estructuras la estabilidad necesaria para sobrevivir a los embates de la turbulencia convectiva durante su ascenso por el interior solar \citep{emonet1998}.
+
+La presencia de {\sl twist} se ve confirmada, luego de la emergencia de las RAs, por numerosas estructuras observadas en la fotósfera, cromósfera, corona y el espacio interplanetario \citep{demoulin2009}. Entre estas podemos destacar, manchas solares con estructura espicular en forma de vórtices, la deformación de la componente transversal del campo en magnetogramas vectoriales, arcos coronales de forma de sigmoides observados en el EUV y en rayos X, y la estructura de las llamadas nubes magnéticas observadas {\sl in situ} en el espacio interplanetario \citep{dasso2009}, entre otras. Debido a su origen en flujos direccionales de sentidos de rotación opuestos en ambos hemisferios solares, las estructuras magnéticas tienden a tener helicidad magnética negativa (rotación dada por la mano izquierda) en el hemisferio norte y positiva (mano derecha) en el hemisferio sur \citep{pevtsov2014}. Esto se ve confirmado por el análisis del sentido de rotación de las estructuras observadas.
+
+Una de las manifestaciones de torsión en la RAs son las llamadas lenguas magnéticas. Las mismas aparecen en magnetogramas fotosféricos como una deformación de las polaridades principales durante la primer etapa de emergencia de las RA dipolares, y se deben a la proyección en la dirección de la visual de la componente azimutal del campo magnético en los tubos de flujo emergentes. Las lenguas magnéticas fueron identificadas por primera vez por \citet{lopezfuentes2000} y estudiadas en detalle en varios trabajos posteriores \citep{luoni2011,poisson2015}. Debido a que deforman las polaridades principales de las regiones, las lenguas magnéticas tienen un efecto no despreciable en la determinación del ángulo de inclinación de los bipolos respecto al ecuador solar, o ángulo de {\sl tilt}, que cumple un rol importante en el reciclado magnético superficial asociado al mecanismo de dínamo global. La caracterización del efecto de las lenguas ha demostrado ser importante para la correcta determinación del ángulo de {\sl tilt} \citep{poisson2020a}.  
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig_2.pdf}
+\caption{(a): Imagen en luz blanca del {\sl SDO/HMI} mostrando una RA compleja formada por varias manchas solares, una de ellas, de configuración de tipo $\delta$, recuadrada en rojo. (b) Magnetograma longitudinal de la misma área representada en el panel (a). El recuadro rojo identifica el campo magnético de la mancha $\delta$, formado por polaridades opuestas muy próximas entre sí, como es característico en este tipo de configuraciones.}
+\label{fig_2}
+\end{figure}
+
+Hasta ahora hemos descripto las características generales de las RAs, en particular, las de configuración bipolar, clasificadas como tipo $\beta$ en observaciones en luz blanca y que constituyen la gran mayoría de los grupos de manchas solares. Sin embargo, se ha observado que las RAs que producen eventos activos en mayor cantidad y con mayor energía \citep[ver p. ej.,][]{toriumi2019} son aquellas que cumplen una o más de las siguientes características:
+\begin{itemize}
+
+\item Estructuras multipolares y complejidad magnética en general. La Fig.~\ref{fig_2} muestra un ejemplo de RA con estas características.
+\item Fuerte deformación magnética en líneas de inversión de polaridad (LIP). La alta deformación de algunos tubos de flujo emergente con helicidad de $\sl twist$ genera en estas zonas líneas de campo transversales con muy alta inclinación respecto de la dirección normal a la LIP. Estas deformaciones generan condiciones favorables para la reconexión magnética. 
+\item Las presencia de manchas de clase $\delta$ es particularmente propicia para el desarrollo de este tipo de configuraciones. En este tipo de manchas varias umbras de polaridades magnéticas opuestas ocupan la misma penumbra (ver ejemplo en la Fig.~\ref{fig_2}), generando altos gradientes de campo alrededor de la LIP.
+\item Estructuras bipolares post-emergentes. La emergencia de nuevo flujo magnético en una RA establecida produce perturbaciones en la estructura global que pueden llevar a inestabilidades que disparan la reconexión magnética y la reconfiguración del campo, con la consiguiente liberación impulsiva de energía.
+\item Estructuras magnéticas rotantes. Se ha observado que la rotación de manchas, bipolos y otras estructuras generan condiciones de desestabilización similares a la emergencia y cancelación de flujo.
+\end{itemize}
+
+En la Fig.~\ref{fig_2} se muestra como ejemplo una región multipolar que cumple globalmente con algunas de las características mencionadas. El cuadro rojo indica la presencia de una mancha de tipo $\delta$, donde puede observarse la próximidad de zonas de polaridad de signos opuestos dentro de una misma región de penumbra. Estas zonas son proclives a presentar una gran torsión del campo magnético transversal.
+
+\section{Fulguraciones y eyecciones coronales de masa}
+\label{S_activity}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{fig_3.pdf}
+\caption{Secuencia de imágenes en el EUV del {\sl SDO/AIA} en la banda de 304~\AA, correspondientes a la ECM observada el 31 de agosto de 2012 a partir de las 19:00 UT. La hora de observación de las imágenes se muestra en cada panel. (a) Al comienzo de la eyección se observa, indicado con la flecha verde, material filamentario en absorción, sostenido por la estructura magnética. (b) Al producirse la eyección la cuerda de flujo magnético que contiene el material es eyectada hacia la alta corona. (c) Por debajo de la estructura eyectada pueden identificarse los arcos post-fulguración (indicados con la flecha negra) y bandas brillantes en emisión en los pies de los arcos (indicadas con flechas verdes). (d) Imagen compuesta con datos del {\sl SDO/AIA} en el centro de la imagen y de los coronógrafos C2 (en rojo) y C3 (en azul) a bordo del {\sl Solar and Heliospheric Observatory (SOHO)}, mostrando la evolución posterior de la ECM.}
+\label{fig_3}
+\end{figure*}
+
+En la Fig.~\ref{fig_3} se muestra una fulguración y eyección típica en una serie de imágenes obtenidas con el {\sl Atmospheric Imaging Assembly} \citep[{\sl AIA}][]{lemen2012} a bordo del {\sl SDO}, en la banda de 304~\AA. Si bien la estructura eruptiva mostrada abarca un área mayor al tamaño típico de una RA individual, su gran tamaño nos permite ilustrar con claridad la configuración magnética básica de estos eventos. El panel (a) muestra, al comienzo de la eyección, un extenso filamento (indicado con la flecha verde) compuesto de material frío que aparece oscuro por absorción. La fecha y hora de las imágenes se muestran en los respectivos paneles. En el panel (b) el material es eyectado hacia la alta corona y pueden verse el abrillantamientos correspondientes a la fulguración en zona de la baja corona. En el panel (c) la mayor parte del material eyectado abandonó el área cubierta por la imagen y pueden identificarse claramente los llamados arcos post-fulguración (indicados con la flecha negra) y el correspondiente par de bandas brillantes a los pies de estos arcos (flechas verdes). Estas bandas son típicamente observadas en emisión cromosférica en H$\alpha$. Finalmente, en el panel (d) puede observarse la llegada del material a la alta corona, en imágenes en luz blanca dispersada obtenidas con los coronógrafos C2 (región en rojo) y C3 (región en azul) del {\sl Large Angle Spectroscopic Coronographs} \citep[{\sl LASCO},][]{brueckner1995}, a bordo del {\sl Solar and Heliospheric Observatory} ({\sl SOHO}).
+
+En la Fig.~\ref{fig_4} mostramos el esquema clásico de fulguración y eyección \citep[ver p. ej.,][]{forbes2000,shiota2005}, que corresponde a grandes rasgos al desarrollo del evento mostrado en la Fig.~\ref{fig_3}. Una estructura magnética de gran torsión, cuya componente de campo perpendicular a la LIP (indicada en verde) se encuentra representada por líneas en color gris, sostiene la cuerda de flujo que contiene el material denso y frío que constituye el filamento (en negro). La zona de alto gradiente de campo por debajo del mismo propicia el desarrollo de hojas de corriente (en naranja) que disparan el proceso de reconexión magnética, generando hacia abajo arcos calientes, llamados arcos post-fulguración (en color rojo), e impulsando la estructura de la cuerda de flujo hacia la corona produciendo la erupción del material. Dependiendo de la configuración magnética que envuelve a la estructura en erupción, el material es eyectado al espacio o queda confinado en la región coronal. Este último caso corresponde a las llamadas erupciones confinadas \citep[ver p. ej.,][]{chen2023}. Las denominadas bandas de la fulguración ({\sl flare ribbons}), observadas usualmente en la cromósfera (representadas en fucsia en la Fig.~\ref{fig_4}), son abrillantamientos debidos al calentamiento del plasma en la base de los arcos reconectados.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=0.8\textwidth]{fig_4.pdf}
+\caption{Esquema clásico de una fulguración eruptiva como la mostrada en la Fig.~\ref{fig_3}. Las líneas de campo en gris corresponden a la componente del campo perpendicular a la dirección de la línea de inversión de polaridad (en verde). Las flechas indican la dirección del campo en las líneas. En negro se representa la cuerda de flujo que sostiene el material denso que forma el filamento y que se encuentra inicialmente sostenido por el campo magnético de la configuración. La desestabilización producida por el desarrollo impulsivo de hojas de corriente (representadas con segmentos naranja), genera reconexión magnética que da lugar a arcos calientes (identificados en rojo), cuyas bases cromosféricas forman las bandas brillantes de la fulguración. Al mismo tiempo, la cuerda de flujo es impulsada hacia la corona superior produciendo la eyección del material. El esquema está inspirado en la representación brindada por \citet{shiota2005} de la configuración clásica dada, entre otros, por \citet{forbes2000}.}
+\label{fig_4}
+\end{figure*}
+
+\section{Evolución magnética de regiones activas}
+\label{S_evol}
+
+\subsection{Parámetros magnéticos}
+\label{S_parameters}
+
+La amplia disponibilidad de magnetogramas vectoriales con cadencia razonable con que se cuenta desde el lanzamiento del {\sl SDO} en 2010, brinda la posibilidad de calcular en forma sistemática parámetros magnéticos que ayuden a caracterizar la mayor o menor tendencia de las RAs a producir fulguraciones y ECMs \citep[ver p. ej.,][]{leka2007}. Con esta idea, \citet{bobra2014} incluyeron, como parte del paquete observacional {\sl Space-Weather HMI AR Patches} ({\sl SHARP}), una serie de parámetros globales de RAs calculados a partir de magnetogramas obtenidos con el {\sl HMI}. Los 16 parámetros incluidos en el paquete se relacionan con medidas globales de las RAs, como el flujo magnético total, gradientes superficiales de campo, densidades de corriente y helicidad de corriente y medidas varias del contenido de energía magnética libre. Estas cantidades pueden dar una medida cuantitativa de aquellas características de complejidad y contenido de energía y helicidad magnética que, como hemos visto en la Sec.~\ref{S_ars}, se suelen asociar observacionalmente con mayor actividad. El seguimiento de la evolución de estos, y otros parámetros, se está aplicando activamente en estudios estadísticos de RAs y su relación con la producción de fulguraciones y ECMs \citep[ver p. ej.,][]{georgoulis2021}. 
+
+\subsection{Inyección de energía y helicidad magnética}
+\label{S_helicity}
+
+Como hemos visto en la Sec.~\ref{S_ars} muchas de las características observacionales asociadas a las regiones más activas se deben a la deformación del campo en las estructuras magnéticas que les dan origen. Estas deformaciones aportan al contenido de energía magnética susceptible de ser liberada en los procesos de reconexión que ocurren durante los eventos eruptivos, como vimos en la Sec.~\ref{S_activity}. Dado que la helicidad magnética puede dar una medida cuantitativa de la deformación presente en estas estructuras y, por lo tanto, puede ser utilizada como referente de la mayor o menor capacidad de las RAs de producir fenómenos impulsivos de liberación de energía, ha habido un fuerte interés en los últimos años en desarrollar métodos para calcular el contenido de helicidad magnética en las regiones \citep{green2002,demoulin2009,thalmann2021}. 
+
+Existen básicamente dos familias de métodos para calcular el contenido de energía y helicidad magnética en RAs: métodos de cálculo en volúmenes finitos \citep{valori2016}, basados en el contenido medido en modelos de la estructura magnética de las RAs obtenidos a partir de la extrapolación de magnetogramas fotosféricos en el volumen coronal; y métodos basados en el cálculo de la inyección de energía y helicidad magnéticas a través de la fotósfera obtenido de la evolución de los magnetogramas fotosféricos \citep{pariat2005,liu2012}.
+
+Dado que la helicidad magnética en volúmenes abiertos, como es el caso de la atmósfera solar, no cumple con la llamada invariancia de gauge, \citet{berger1984} propuso una definición alternativa basada en la helicidad magnética relativa al campo potencial, que sí la cumple, y que además continúa siendo un cantidad conservada en MHD ideal. En estas condiciones, \citet{berger1984} demostró que la inyección de helicidad a través de la superficie $S$ (en este caso la superficie fotosférica) puede separararse en dos términos de acuerdo a la siguiente ecuación:
+
+\begin{eqnarray}
+\label{eq_helicity}
+\left.\frac{dH}{dt}\right|_{S} = 2 \int_{S}\left(\vec{A}_{p} \cdot \vec{B}_{t}\right)V_{\bot n}dS -
+\\ \nonumber
+2 \int_{S}\left(\vec{A}_{p}\cdot\vec{V}_{\bot t}\right)B_{n} dS,
+\end{eqnarray}
+
+\noindent donde el primer término del miembro derecho corresponde a la inyección por emergencia de campo magnético, mientras que el segundo corresponde a la inyección por movimientos transversales fotosféricos. En la Ec.~\ref{eq_helicity}, $H$ es la helicidad magnética relativa, $\vec{A}_p$ es el vector potencial del campo magnético potencial, $\vec{B}_{t}$ y $B_{n}$ son las proyecciones del campo en las direcciones tangencial y normal a la fotósfera obtenidas de los magnetogramas, y $\vec{V}_{\bot t}$ y $V_{\bot n}$ son las proyecciones en esas mismas direcciones de la velocidad perpendicular al campo magnético. Las cantidades magnéticas se obtienen directamente de los magnetogramas vectoriales. Para determinar las velocidades, uno de los métodos que se han desarrollado, llamado {\sl Differential Affine Velocity Estimator} \citep[{\sl DAVE4VM},][]{schuck2008}, se basa en la optimización de la correlación entre los términos de la ecuación de inducción:
+
+\begin{equation}
+\label{eq_induction}
+\frac{\partial B_z}{\partial t} + \nabla_t \cdot \left(V_n \vec{B}_t - \vec{V}_t B_n \right) = 0,
+\end{equation}
+
+\noindent donde $V_n$ y $\vec{V}_t$ son las componentes de la velocidad en las direcciones normal y tangencial a la fotósfera, de las cuales las variables $\vec{V}_{\bot t}$ y $V_{\bot n}$ que aparecen en la Ec.~\ref{eq_helicity} pueden obtenerse.
+
+\section{Casos de estudio}
+\label{S_examples}
+
+\subsection{Evolución de una RA con producción sucesiva de erupciones confinadas}
+
+Como ejemplo de aplicación de las técnicas de análisis descriptas en la Sec.~\ref{S_evol}, en esta sección describiremos el análisis de la evolución de una RA correspondiente a un trabajo enviado recientemente para su publicación en la revista Solar Physics (López Fuentes, Poisson \& Mandrini, 2024). La RA NOAA 11476 produjo, entre los días 9 y 10 de mayo de 2012, tres erupciones confinadas del tipo {\sl surge} acompañadas por fulguraciones de clase M de acuerdo a la clasificación en rayos X del {\sl Geostationary Operational Environmental Satellite} ({\sl GOES}). En trabajos previos \citep{lopezfuentes2018,poisson2020b} habíamos estudiado la evolución detallada de dos de estos eventos, mediante el uso de observaciones en varias longitudes de onda combinadas con modelos libres de fuerza del campo magnético coronal de la RA. El tercer evento fue estudiado por otros autores \citep{yang2018}. Los resultados mostraron que las erupciones fueron debidas a la eyección de minifilamentos que eran recurrentemente eyectados y vueltos a formarse en la LIP de un bipolo de menor escala que había emergido en medio de la polaridad positiva principal de la RA. Este bipolo fue observado rotar a lo largo de varias decenas de horas antes de producirse los eventos. 
+
+En López Fuentes, Poisson \& Mandrini (2024) analizamos, a partir de la evolución del campo magnético fotosférico observado en magnetogramas del {\sl HMI} a lo largo de varios días previos a los eventos, la evolución de una serie de parámetros magnéticos como los descriptos en la Sec.~\ref{S_parameters} y la inyección de helicidad magnética de acuerdo al procedimiento descripto en la Sec.~\ref{S_helicity}. El objetivo fue estudiar qué características de la evolución de la RA determinaron la ocurrencia de los eventos. De nuestros resultados concluímos que la rotación del bipolo fue la fuente principal de energía magnética y helicidad involucradas en la desestabilización y erupción de los minifilamentos.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig_5.pdf}
+\caption{(a) Evolución de la densidad total de energía magnética libre del bipolo en rotación observado en la RA 11476, entre el 7 y el 11 de mayo de 2012. El tiempo t = 0 h corresponde al 7 de mayo a las 00:00 UT. Las líneas verticales punteadas en verde indican los tiempos entre los cuales se observó la rotación del bipolo y las líneas verticales punteadas en rojo indican los tiempos de los eventos eruptivos analizados. (b) Similarmente al panel (a), para la evolución de la inyección de helicidad magnética acumulada. Las curvas cyan y fucsia corresponden, respectivamente, a las inyecciones por emergencia de flujo magnético y por movimientos fotosféricos ({\sl shear}). La curva azul corresponde a la suma de estos dos términos.}
+\label{fig_5}
+\end{figure}
+
+En el panel (a) de la Fig.~\ref{fig_5} mostramos, como ejemplo de evolución de los parámetros magnéticos analizados, la densidad total de energía magnética libre, definida por la fórmula:
+
+\begin{equation}
+\rho_{tot} \propto \sum \left(\vec{B} ^{Obs}-\vec{B} ^{Pot}\right)^{2}~dA,
+\end{equation}
+
+\noindent donde $\vec{B}^{Obs}$ y $\vec{B}^{Pot}$ son, respectivamente, el campo observado y el campo potencial correspondiente en cada pixel del magnetograma. La sumatoria está hecha sobre los pixeles que cubren el área del bipolo y $dA$ es el área de cada pixel. En ambos paneles de la Fig.~\ref{fig_5}, el eje de las abscisas corresponde al tiempo expresado en horas a partir del 7 de mayo de 2012 a las 00:00 UT. Las líneas punteadas verticales en verde indican el comienzo y el final del lapso de tiempo a lo largo del cual se observa rotar al bipolo. Las líneas punteadas verticales en rojo indican los tiempos en los que se produjeron los tres eventos eruptivos. La curva mostrada es similar a las de otros parámetros magnéticos analizados. Puede verse que la densidad de energía magnética comienza a aumentar tan pronto como comienza la rotación del bipolo y que la tasa de aumento se sostiene durante aproximadamente 40 h hasta que se produce el primero de los eventos. Luego de esto se observa la rápida caída debido a la liberación de energía durante los tres eventos. Este decaimiento disminuye levemente luego de los eventos y continúa tan pronto como cesa la rotación. Un análisis similar de los parámetros magnéticos aplicado a la RA completa no muestra tan fehacientemente las variaciones observadas en el análisis enfocado sólo en el área del bipolo. Esto sugiere que analizar los parámetros globales de las RAs puede no reflejar completamente la evolución asociada a eventos eruptivos, y que un análisis más detallado de zonas particulares de las regiones puede ser necesario.
+
+En el panel (b) de la Fig.~\ref{fig_5} mostramos la evolución de la helicidad magnética acumulada, es decir la suma de la helicidad inyectada en la zona del bipolo desde el comienzo del análisis (nuevamente, desde el 7 de mayo de 2012 a las 00:00 UT). Las líneas punteadas verticales indican lo mismo que en el panel (a). La curva cyan corresponde a la inyección de helicidad magnética por emergencia de flujo magnético (debida al primer término de la derecha en la Ec.~\ref{eq_helicity}) y la curva fucsia corresponde a la inyección por desplazamientos fotosféricos (o {\sl shear}, correspondiente al segundo término de la Ec.~\ref{eq_helicity}). Puede verse que la helicidad inyectada aumenta sostenidamente hasta que comienzan los eventos, para luego mantenerse constante y más tarde comenzar a disminuir, indicando un predominio de la inyección de helicidad negativa debida al termino de emergencia. El aumento de helicidad positiva observado durante la primera parte de la evolución está dominada por el término de {\sl shear}, debido a la rotación de las polaridades del bipolo en sentido horario. Este sentido de rotación puede interpretarse también como la emergencia de un tubo de flujo deformado con helicidad magnética de {\sl writhe} negativa. La componente de {\sl writhe} de la helicidad magnética se debe a la deformación global del eje principal del tubo de flujo, en contraposición con la de {\sl twist}, mencionada en la Sec.\ref{S_ars}, que corresponde a la deformación de las líneas de campo alrededor del eje principal del tubo. Por pertenecer al hemisferio norte solar, es esperable, de acuerdo a la regla hemisférica, que RA 11476 tenga helicidad magnética predominantemente negativa.
+
+\subsection{Evolución de largo plazo de una RA}
+
+En \citep{iglesias2020} se analizó la producción de fulguraciones y ECMs de una RA observada durante cinco rotaciones solares, entre julio y noviembre de 2010. Este análisis fue posible en parte debido a que, por tratarse de una época de mínima actividad en el ciclo solar, la RA estaba convenientemente aislada, permitiendo identificar con mayor facilidad los eventos activos producidos en ella. Por otra parte, la posición en cuadratura de instrumentos en órbita terrestre y las sondas del {\sl Solar-Terrestrial Relations Observatory} ({\sl STEREO}) permitió una cobertura casi completa de las distintas direcciones de propagación de las eyecciones.
+
+Como parte del estudio se analizó la evolución de algunos parámetros fotosféricos, como el flujo magnético, la helicidad de corriente e indicadores de la energía magnética libre como los descriptos en la Sec.~\ref{S_parameters}. El objetivo fue estudiar la relación de la evolución de estos parámetros con los períodos de mayor o menor producción de eyecciones. En este sentido, se identificaron lapsos de alta, baja y nula producción de eyecciones. Como resultado general, si bien se observó que algunos de los lapsos de mayor actividad estaban precedidos por cambios abruptos en el flujo magnético o la densidad de energía magnética libre, no se encontraron correlaciones claras definitivas que permitieran vincular la evolución de las propiedades magnéticas con una mayor o menor tendencia a producir eventos eyectivos. Se concluyó que una de las razones de esto podría ser el hecho de que los parámetros magnéticos analizados corresponden a valores globales promediados en toda la RA, mientras que los eventos activos involucran a zonas específicas de las regiones. Esta es una conclusión similar a la expuesta al final de la sección anterior en relación al bipolo en rotación de la RA 11476.
+
+\section{Conclusiones}
+\label{S_conclusion}
+
+En este artículo repasamos algunas de las características más relevantes de las RAs en relación a su tendencia a producir eventos eruptivos. Describimos también algunos métodos comunes de análisis y ofrecimos dos ejemplos de aplicación explorados en trabajos recientes. Como conclusión general podemos decir que los diferentes métodos, aplicados sobre las RAs globalmente, pueden no ser suficientes para proveer un pronóstico de la actividad, y que sería necesario entonces incluir en el análisis metodologías enfocadas en detalles particulares de las regiones \citep[ver p. ej.,][]{ji2023}. 
+
+Varios trabajos recientes parecen indicar también que para una descripción más completa es necesario el uso combinado de distintos métodos y descomposiciones \citep{thalmann2021, liokati2022, liu2023}. El uso de parámetros medidos directamente sobre magnetogramas vectoriales resulta sumamente conveniente desde el punto de vista operativo, teniendo en cuenta la amplia disponibilidad de datos y de técnicas de análisis estadístico progresivamente más eficaces (Kontogiannis 2023). Aunque, como vimos, debido a la naturaleza estocástica de los eventos eruptivos aún no se ha podido identificar un único parámetro como precursor definitivo, conjuntos crecientes de parámetros están siendo considerados en estudios estadísticos de gran escala \citep{leka2019}, en particular utilizando múltiples bases de datos y aplicando novedosas técnicas de {\sl machine learning} \citep{bobra2016,nishizuka2017,georgoulis2021}. Esta metodología podría mejorar en los próximos años la capacidad de predecir la ocurrencia y, eventualmente, la intensidad de los eventos eruptivos.
+
+\begin{acknowledgement}
+El autor es miembro de la Carrera de Investigador Científico del Consejo Nacional de Investigaciones Científicas y Técnicas. El autor desea agradecer la invitación y el apoyo recibido por parte de los Comités Organizadores de la 65$^{\circ}$ Reunión Anual de la Asociación Argentina de Astronomía, para participar en la misma como presentador invitado. Agradece, asimismo, al Dr. Hernán Muriel, Editor Invitado de este Boletín, por la revisión editorial del artículo. Parte de los datos presentados en este artículo fueron obtenidos con instrumentos a bordo del {\sl Solar Dynamics Observatory} de la {\sl National Aeronautics and Space Administration} de Estados Unidos. Para la visualización de los datos se utilizó la herramienta {\sl JHelioviewer} provista por la Agencia Espacial Europea. El autor contó con fondos de los proyectos PICT 2020-03214 (ANPCyT) y PIP 11220200100985 (CONICET).
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{mlopezfuentes_baaa65}
+ 
+\end{document}

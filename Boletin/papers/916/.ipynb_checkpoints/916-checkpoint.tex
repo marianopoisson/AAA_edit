@@ -1,0 +1,618 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{29 May 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\title{Favourable conditions for a planetary triplet\\ to be captured in the 1st-order 3P-MMR \\seen in K2-138}
+
+%\title{Capture in 1st-order 3P-MMRs as seen in K2-138}
+
+\title{K2-138 and the capture in 1st-order 3P-MMRs}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Macro BAAA65 con instrucciones de estilo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M. Cerioni\inst{1,2}
+\&
+C. Beaugé\inst{1,2}
+}
+
+\authorrunning{Cerioni \& Beaugé}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{matias.cerioni@unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Observatorio Astronómico de Córdoba, UNC, Argentina
+\and
+Instituto de Astronomía Teórica y Experimental, CONICET--UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En un estudio reciente presentamos evidencia dinámica en favor de la primera resonancia de movimientos-medios de 3 planetas (3P-MMR) de 1er-orden asociada a un sistema real: K2-138.
+En este trabajo, expandimos los resultados para mostrar que la región de captura es amplia y suave sobre el espacio de parámetros iniciales, y que acumula significativamente más capturas que la 3P-MMR de orden 0 por la que también cruzan los tripletes en su ruta de migración.
+Además, vemos que $i)$ planetas de períodos cortos, $ii)$ masas en el orden de las unidades terrestres, y $iii)$ masas similares entre el segundo y tercer planeta, favorecen la captura en la resonancia mencionada.
+La captura también es favorecida para $i)$ discos protoplanetarios menos densos, $ii)$ con un mayor gradiente de densidad, $iii)$ con una razón de aspecto mayor, y $iv)$ con una curvatura más pronunciada.
+}
+
+\abstract{In a recent study, we presented dynamical evidence in favour of the first 1st-order 3-planet mean-motion resonance (3P-MMR) associated with a real system: K2-138.
+In this work, we expand upon those results to show that the capture domain is wide and smooth over the space of initial parameters, and that it produces significantly more captures than the 0th-order 3P-MMR also encountered by the triplets in their migration path.
+Additionally, we see that $i)$ short period planets, $ii)$
+of a few Earth masses, and with $iii)$ similar masses between the second and third planet, favour a capture in the 1st-order 3P-MMR.
+This capture is also favoured by having a protoplanetary disk of $i)$ lower surface density, $ii)$ greater surface density gradient, $iii)$ greater aspect ratio, and $iv)$ greater flare. 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{planets and satellites: dynamical evolution and stability --- planets and satellites: formation --- planet--disk interactions}
+
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+%El sistema planetario K2-138 consta de 6 sub-neptunos y súper-tierras.
+%Los 5 planetas más internos se encuentran en una compacta y ordenada configuración, estando cerca de una cadena de resonancias de movimientos-medios de 2-planetas (2P-MMR) 3:2--3:2--3:2--3:2.
+%El sexto planeta está significativamente separado de dicha cadena, portando una razón de períodos con su planeta adyacente que es más del doble que la del par anterior \citep{christiansen.etal.2018,lopez.etal.2019,hardegree-ullman.etal.2021}.
+
+We have recently presented dynamical evidence suggesting that, during the protoplanetary disk age, the last planetary pair in K2-138 became captured in the 2-planet mean-motion resonance (2P-MMR) 3:1, which was immediately followed by a capture of the last planetary triplet into the 3P-MMR $(2,-4,3)$ \citep{cerioni.beauge.2023}.
+Such a scenario, followed by tidal interactions between the star and the planets, can precisely and naturally explain the observed separations between each of the 6 planets and the multiple involved 2P-MMRs, as well as being numerically reproducible with classical migration models (such as \citealp{tanaka.etal.2002}).
+%Recientemente hemos presentado evidencia dinámica que sugiere que, durante la etapa del disco protoplanetario, el último par planetario de K2-138 sufrió una captura en la resonancia de movimientos-medios (2P-MMR) 3:1, seguida inmediatamente por una captura del último triplete en la 3P-MMR $(2,-4,3)$ \citep{cerioni.Beauge.2023}.
+%Tal escenario, seguido por interacciones tidales entre la estrella y los planetas, puede explicar precisa y naturalmente las separaciones observadas entre los 6 planetas y las múltiples 2P-MMR involucradas, además de ser reproducible numéricamente con modelos clásicos de migración.
+
+The $(2,-4,3)$ capture marks the first time a 1st-order 3P-MMR (the order is given by the sum of the indexes) is identified in a real planetary system. 
+In theory, this 3P-MMR should be weaker than other 0th-order resonances which have been repeatedly found in other systems such as TRAPPIST-1, TOI-178 or Kepler-223 \citep{agol.etal.2021,leleu.etal.2021,huhn.etal.2021}.
+The magnitude of a $k$th-order 3P-MMR is proportional to the $k$th power of the eccentricities, so 1st-order resonances are generally thought to be too weak to impact real planetary systems.
+
+%La captura en la (2,-4,3) marcaría la primera 3P-MMR de orden 1 (por la suma de sus índices) identificada en un sistema planetario real, y es en teoría más débil que aquellas de orden 0 que han sido recurrentemente encontradas en sistemas tales como TRAPPIST-1, TOI-178 o Kepler-223 \citep{agol.etal.2021,leleu.etal.2021,huhn.etal.2021}.
+%La magnitud de una 3P-MMR de orden $k$ es proporcional a la $k$--ésima potencia de las excentricidades, por lo resonancias de orden 0 son en general más fuertes y por lo tanto recurrentes.
+
+Although in our previous study we provided 2 numerical integrations that tested different system parameters to show that the capture in the 1st-order resonance was plausible, it was still not clear if it was probable, or just a fortunate selection of finely tuned initial conditions.
+On the other hand, we know that the capture of the last two planets in the 3:1 2P-MMR could also enable a capture in the $(4,-7,3)$ 0th-order 3P-MMR.
+Why is it then that the triplet would end up being captured in the weaker resonance?
+What determines which 3P-MMR will the triplet converge to after the 3:1 capture?
+
+%Si bien en nuestro trabajo previo ilustramos la captura con dos integraciones numéricas que sondeaban distintos conjuntos de parámetros, cabe la duda de si la captura en la 3P-MMR de orden 1 es robusta o simplemente producto de sensibles condiciones iniciales.
+%Por otro lado, sabemos que la captura del último par en la 3:1 admite además la captura en la resonancia (4,-7,3), que es de orden 0.
+%¿Por qué es entonces que un triplete acabaría capturándose en la más resonancia débil?
+%¿Qué determina cuál de todas las resonancias atrapará al triplete al cruzar por la 3:1?
+
+In this work, we use simulation grids to explore the space of planetary and disk parameters and show which conditions favour a capture in the $(2,-4,3)$ or $(4,-7,3)$ 3P-MMRs.
+Such results will inform a future study that rigorously addresses why a triplet would choose one resonance over the other. 
+
+%En este trabajo utilizamos grillas de simulaciones para explorar el espacio de parámetros planetarios y de disco que propiciarían una captura en la resonancia (2,-4,3) o (4,-7,3).
+%Tales resultados informarán un futuro estudio que ataque rigurosamente por qué los tripletes eligen una resonancia sobre la otra.
+
+
+
+
+\section{The standard system}
+
+\subsection{Planetary and disk parameters}
+\label{subsec:estandar:param}
+
+In order to compare the results upon changing initial conditions, we are going to adopt a standard system of 3 planets with $m_i=(8,9,10)~\mathrm{M_\oplus}$ orbiting around a sub-solar star of $0.75~\mathrm{M_{\odot}}$.
+Additionally, we will fix the semimajor axis of the third planet at $1~\mathrm{AU}$. 
+Each grid cell fixes the initial relative separations, so the other two initial positions can be calculated.
+
+%A fin de poder comparar resultados ante cambios de parámetros, vamos a adoptar un sistema estándar de 3 planetas de $m_i=(8,9,10)~\mathrm{M_\oplus}$ orbitando alrededor de una estrella sub-solar de $0.75~\mathrm{M_{\odot}}$.
+%Además, fijamos el semieje inicial del tercer planeta en $1~\mathrm{AU}$, y debido a que cada celda de la grilla fija las separaciones relativas iniciales, podemos calcular el resto de las posiciones iniciales.
+
+For the protoplanetary disk we follow the one adopted in Set\#1 of \cite{cerioni.beauge.2023}, that is, a \cite{tanaka.ward.2004} --type disk parametrized by $\Sigma_0=100~\mathrm{gr\,cm^{-2}}$ and $(s,H_0,f) = (0.5,0.05,0)$, which respectively correspond to the surface density at $r=1~\mathrm{AU}$, the radius power of the surface density, the aspect ratio at $r=1~\mathrm{AU}$, and the disk flare.
+
+%Para el disco protoplanetario seguimos el modelo adoptado en Set\#1 de \cite{cerioni.Beauge.2023}, es decir, un disco tipo \cite{tanaka.ward.2004} parametrizado por $\Sigma_0=100~\mathrm{gr\,cm^{-2}}$ y $(s,H_0,f) = (0.5,0.05,0)$, que respectivamente corresponden a la densidad superficial del disco a $r=1~\mathrm{AU}$, la potencia radial de la distribución superficial, la razón de aspecto a $r=1~\mathrm{AU}$, y el flare.
+
+The effect of the gas disk on the planets will be that of circularization and orbital decay, i.e Type-I planetary migration.
+The reader can check the aforementioned works for the equations governing these effects.
+
+%El efecto del disco de gas sobre los planetas será el de circularización y decaimiento de semieje (migración planetaria), i.e migración planetaria Tipo-I.
+%Consultar tales ecuaciones en el trabajo anterior.
+
+
+\subsection{Simulation grid parameters}
+
+We used the parameters just described to run a grid of simulations in mean-motion-ratio space, i.e $(n_1/n_2 , n_2/n_3)$.
+In K2-138, the outer triplet goes through convergent migration towards the $(3/2\,,\,3/1)$ intersection from greater separations.
+For this reason, we create a grid of 10$\times$10 cells varying $n_1/n_2\in[1.54,1.65]$ and $n_2/n_3\in[3.3,3.8]$
+
+%Utilizamos los parámetros descritos anteriormente para realizar una grilla de simulaciones en el espacio de razón de movimientos-medios $(n_1/n_2 , n_2/n_3)$.
+%En K2-138, el triplete $efg$ migra convergentemente hasta la intersección $(3/2 , 3/1)$ desde separaciones mayores, por lo que vamos crear una grilla 10$\times$10 celdas variando $n_1/n_2\in[1.54,1.65]$ y $n_2/n_3\in[3.3,3.8]$.
+
+We evolve each simulation long enough so that the outer pair can either converge to the 3:1 2P-MMR and become captured in one of the 3P-MMRs, or continue past the 3:1 towards smaller separations.
+
+%Dejamos correr cada simulación el tiempo suficiente para que el par externo converja a la 3:1 y sea capturado en una 3P-MMR o continúe sin haber sido capturado.
+
+Lastly, we mention that for these simulations we employ a Bulirsch-Stoer integration scheme with variable timestep and a maximum allowed error of $10^{-11}$ per integration step \citep{Bulirsch1966}.
+
+%Por último mencionamos que para llevar a cabo estas simulaciones empleamos un integrador Bulirsch-Stoer con paso de tiempo variable y precisión $ll=12$ \citep{Bulirsch1966}.
+
+\section{Results}
+
+\subsection{Standard system grid}
+\label{subsec:result:estandar}
+
+In Fig. \ref{fig:modelo} we can see the evolution of the simulation grid.
+Colored boxes mark the initial separations of each system, and from them stem the respective migration routes in black.
+The diagonal curves that cross the $(3/2\,,\,3/1)$ intersection are the $(4,-7,3)$ (black) and $(2,-4,3)$ (dotted red) 3P-MMRs.
+White circles mark the final positions of those triplets that end up within plot limits.
+The colors in the boxes indicate the final destination of each triplet.
+A red box means that the triplet ended up being captured in the $(2,-4,3)$ 3P-MMR.
+A yellow one marks a capture in the $(4,-7,3)$.
+A blue one indicates that the triplet has crossed the 3:1 2P-MMR without being captured.
+Mixed-colors indicate a temporal capture towards the right-most color of the box.
+For example, [red $|$ blue] boxes correspond to a temporal capture in the $(2,-4,3)$ where the triplet eventually was let go to continue its migration path downwards and past the 3:1.
+
+%En la Fig. \ref{fig:modelo} vemos la evolución de la grilla de simulaciones.
+%Las cajas de colores marcan las separaciones iniciales de cada sistema, y de ellas salen las rutas de migración en negro.
+%Las curvas diagonales que cruzan la intersección (3/2,3/1) son las 3P-MMR (4,-7,3) (en negro) y (2,-4,3) (en rojo puntuado).
+%Los círculos blancos marcan las posiciones finales de los tripletes que terminan dentro de los límites del gráfico.
+%El color de las cajas indica el destino de cada triplete.
+%Una caja roja marca que el triplete acabó capturado en la 3P-MMR (2,-4,3).
+%Una amarilla marca una captura en la (4,-7,3).
+%Una azul indica que el triplete cruzó la resonancia sin ser capturado.
+%La caja de colores mixtos implica una captura temporal.
+
+Every triplet migrates to more compact systems (towards the lower left corner), until the inner pair bumps into the 3:2 resonance, although with a visible offset from the nominal position of the 2P-MMR.
+Even though the $n_1/n_2$ separation stays fixed at $\sim$1.51, the outer pair continues its convergent migration.
+In the space of separations, this means that the triplet moves vertically and downwards.
+
+%Todos los tripletes migran hacia configuraciones más compactas (hacia la esquina inferior izquierda), hasta que el par interno choca con la resonancia 3/2, aunque a cierta distancia de la posición nominal.
+%A pesar de que la separación $n_1/n_2$ se fija en $\sim$1.51, el par externo sigue migrando convergentemente.
+%En el plano de separaciones, esto se traduce a que los tripletes bajan verticalmente.
+
+This behaviour is expected from a triplet with masses that meet the condition for convergent migration \citep{beauge.cerioni.2022}.
+Given our adopted disk, this condition translates to outer planets being more massive than inner planets.
+For this work, we focus on the moment where triplets cross the $(4,-7,3)$ and $(2,-4,3)$ 3P-MMR, to check whether they get captured or continue their path past them.
+
+%Este comportamiento es el más esperado para un triplete cuyas masas cumplen la condición de migración convergente \citep{beauge.cerioni.2022}. 
+%Para el disco adoptado, esto es planetas externos con masas mayores que los internos.
+%Nuestro trabajo se enfoca en el momento en que los tripletes cruzan las 3P-MMR (4,-7,3) y la (2,-4,3), para saber si se capturan, o continúan su camino.
+
+We observe the following results from Fig. \ref{fig:modelo}.
+The grid cells can be divided into two camps.
+Out of the 100 total systems, 43 of them converged to the $(2,-4,3)$, at least temporarily, while the other 57 did not get captured in any of the 3P-MMRs.
+The red-colored domain suggests that a capture in the $(2,-4,3)$ resonance is the most expected outcome in some given region of the initial separation space, and not just a few scattered solutions resulting from finely tuned initial conditions.
+A determining factor for the capture seems to be the initial separation of the outer pair, which in this case has to be greater than $n_2/n_3\sim 3.6$.
+Lastly, we did not get any captures of the $(4,-7,3)$ 0th-order 3P-MMR.
+
+
+%Notamos conclusiones de la Fig. \ref{fig:modelo}.
+%Los sistemas se dividen principalmente en 43 sistemas que convergieron a la (2,-4,3) (al menos temporalmente), y 57 que no convergieron a ninguna 3P-MMR.
+%El dominio de celdas rojas sugiere que una captura en la (2,-4,3) es el destino más esperado en un dado dominio de separaciones iniciales, y no consecuencia de una elección fina de condiciones iniciales. Yendo más lejos, no encontramos ninguna captura en la 3P-MMR (4,-7,3) de orden 0.
+%El factor decisivo en la captura de la (2,-4,3) parece ser la separación inicial del par externo, habiendo una interfaz de capturas temporales alrededor de $n_2 / n_3 \sim 3.6$.
+
+The fact that a capture in the 1st-order 3P-MMR is more likely than the 0th-order one is striking, given that both can be a consequence of the $(3/2\,,\,3/1)$ 2P-MMR coupling.
+The reasons for this preference seem complex and will be further explored in a future study.
+
+Next, we present how these results change upon variations of planetary and disk parameters.
+
+%Otra vez llamamos la atención al hecho de que la 3P-MMR más probable es aquella de orden 1 y no la de orden 0, cuando ambas pueden ser consecuencia de un acople de 2P-MMRs (3/2,3/1).
+%Los motivos de tal comportamiento parecen complejos y serán explorados en un trabajo futuro. A continuación presentamos cómo varía este panorama ante cambios de parámetros planetarios y de disco.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{a3_1.png}
+\caption{Simulation grid for our standard system as described in Section \ref{subsec:estandar:param}.
+Boxes mark the initial conditions of the different simulations. 
+Their colors mark their final configuration (see text in Section \ref{subsec:result:estandar} for more details).
+From them stem the migration routes in black.
+Diagonal curves correspond to the $(4,-7,3)$ (black) and $(2,-4,3)$ (dotted red) 3P-MMRs.
+White circles mark the final positions of the triplets which ended within plot limits.}
+\label{fig:modelo}
+\end{figure}
+
+
+\subsection{Changing planetary parameters}
+
+Our adopted planetary migration rates, as modelled by \cite{tanaka.ward.2004}, depend upon planetary parameters as $m_i\,a_i^{(0.5-s-2f)}$.
+Meaning, for example, that a more massive planet would fall inwards more rapidly.
+In Section \ref{subsec:estandar:param} we adopted $(s,f)=(0.5,0)$, so we expect the planetary masses to be particularly decisive for the convergence and capture of the triplets.
+
+%La tasa de migración planetaria según el modelo de \cite{tanaka.ward.2004} que adoptamos para nuestro estudio tiene una dependencia de los parámetros planetarios como $m_i\,a_i^{(0.5-s-2f)}$.
+%Es decir, un planeta más masivo caerá más rápidamente.
+%En la Sección \ref{subsec:estandar:param} adoptamos $(s,f)=(0.5,0)$, por lo que esperamos que las masas planetarias sean particularmente decisivas para la convergencia del triplete.
+
+In Fig. \ref{fig:var_pl_params} we show grids analogous to that of the previous section, but this time changing initial conditions on planetary masses and semimajor axes.
+In the upper left plot we adopt planets with double the mass of those in our standard system (Fig. \ref{fig:modelo}), i.e (16,18,20) $\mathrm{M_\oplus}$.
+Migration rates will therefore be accelerated in comparison, though the \textit{relative} masses and migration rates should stay the same.
+Either way, we see that the red-colored convergence domain of the $(2,-4,3)$ has reduced to only 27 systems, pushing the interface upwards towards $n_2/n_3\sim 3.7$.
+This could be due to dynamical effects that depend on the absolute values of the masses, such as the resonant offset which separate planetary pair from the 3:2 2P-MMR.
+We also find some captures in the $(4,-7,3)$ resonance, marked by the yellow boxes.
+There is even a case which shows a temporal capture in the $(4,-7,3)$ followed by a capture in the $(2,-4,3)$ (the red and yellow box).
+
+
+%En la Fig. \ref{fig:var_pl_params} mostramos grillas análogas a las descritas en la sección anterior, pero variando condiciones iniciales de masas y semiejes planetarios.
+%En la esquina superior izquierda adoptamos planetas con el doble de masa que aquellos del sistema estándar (Fig. \ref{fig:modelo}), i.e (16,18,20) $\mathrm{M_\oplus}$.
+%La migración será acelerada en comparación con el sistema estándar, aunque las masas y tasas de migración \textit{relativas} deberían mantenerse.
+%Aún así, vemos que el dominio de convergencia a la (2,-4,3) se reduce (27 de 100 sistemas convergen a una 3P-MMR), empujando la interfaz hacia $n_2 / n_3\ \sim\ 3.7$.
+%Esto podría estar relacionado a efectos dinámicos que dependen de las masas absolutas, tal como el offset que separa a los pares planetarios de la 2P-MMR 3:2.
+%También encontramos algunas capturas en la (4,-7,3), marcadas por las celdas amarillas, e incluso un caso en que una captura temporal en la (4,-7,3) llevó a una captura en la (2,-4,3) (celda roja y amarilla).
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{planetary_params.png}
+\caption{Analogous to Fig. \ref{fig:modelo} but changing planetary parameters, as indicated in each legend.}
+\label{fig:var_pl_params}
+\end{figure}
+
+
+In the upper right plot we reduce the mass of the third planet to $m_3=9.5\,\mathrm{M_\oplus}$.
+The convergence of a resonant chain is specially sensitive to the mass of the last (and also the first) planet \citep{beauge.cerioni.2022}.
+For a Type-I migration scheme, a more massive planets favours the formation of a resonant chain, although not necessarily to the $(2,-4,3)$ resonance, as we can see in this case.
+When comparing it with \ref{fig:modelo}, we learn that having a less massive third planet produced more captures in the 1st-order 3P-MMR.
+Considering the lower left plot as well, which uses a more massive second planet, we conclude that an important factor for the 1st-order 3P-MMR capture is that the difference between $m_2$ and $m_3$ be small, while still meeting the convergence mass conditions.
+Additional testing showed that changes in the mass of the first planet do not affect the results as significantly as changes in the mass of the outer two.
+
+%En la esquina superior derecha tomamos un tercer planeta de $m_3=9.5\,\mathrm{M_\oplus}$, menos masivo que el del sistema estándar.
+%La convergencia de una cadena resonante es especialmente sensible a la masa del último (y primer) planeta \citep{beauge.cerioni.2022}.
+%En el esquema de migración Tipo-I, un tercer planeta más masivo propicia la formación de una cadena resonante, aunque no necesariamente a la (2,-4,3), como vemos en este caso.
+%Comparando con la Fig. \ref{fig:modelo}, vemos que tener un último planeta menos masivo produjo más capturas en la 3P-MMR de orden 1 (cada una precedida por la captura en la 3:1).
+%En conjunto con el gráfico inferior izquierdo, que adopta un segundo planeta más masivo, intuimos que un factor importante para la captura en la 3P-MMR de orden 1 es que la diferencia entre $m_2$ y $m_3$ sea pequeña, si bien convergente.
+%En pruebas adicionales, no notamos sensibilidades tan marcadas ante cambios de masa del primer planeta.
+
+
+On the other hand, we analyzed the lower right plot where we widen the orbits by fixing the initial value of $a_3$ at $1.2~\mathrm{AU}$.
+We recall that each cell fixes initial relative separations, so only one initial semimajor axis has to be assigned in order to calculate the rest.
+In this way, we are testing wider initial orbits.
+Contrary to our expectations at the beginning of this section, it seems that inidividual semimajor axes and the overall initial scale of the system do affect the capture domain.
+A slightly wider system appears to reduce considerably the amount of convergent systems.
+Because migration rates are, in theory, independent of semimajor axes, we suspect that the difference lies in mutual gravitational interactions, given that these are in fact smaller as the planets are farther from each other.
+
+
+%Por otro lado, análizamos el gráfico inferior derecho en donde fijamos $a_3$ en $1.2\ \mathrm{AU}$, es decir, en una órbita ligeramente mayor que la del sistema estándar.
+%Recordamos que cada celda fija las separaciones relativas iniciales, por lo que sólo debemos asignar un semieje para fijar los otros dos.
+%Al tomar un valor mayor para $a_3$, estamos sondeando un sistema de órbitas ligeramente más extensas.
+%A diferencia de lo intuido al inicio de la sección, parece que los semiejes individuales y la escala del sistema sí afectan al dominio de captura.
+%Un sistema ligeramente más extenso parece reducir considerablemente la cantidad de sistemas convergentes.
+%Dado que las tasas de migración son, en teoría, independientes de los semiejes, intuimos que la diferencia radica en las interacciones gravitacionales mutuas, ya que las distancias mutuas sí son diferentes para distintos semiejes iniciales $a_3$.
+
+Lastly, we observe that those systems which converged to the $(4,-7,3)$ 3P-MMR are few and scattered over a smooth red-colored domain in separation space in which the systems consistently converge to the higher orden 3P-MMR.
+Indeed, a capture in the $(2,-4,3)$ resonance appears significantly more probable than one in the $(4,-7,3)$ in our simulations.
+
+%Por último, notamos que los sistemas que convergen a la (4,-7,3) (i.e las celdas amarillas) son mínimos y esparcidos sobre un dominio de separaciones que llevan consistentemente a la 3P-MMR de orden mayor.
+%Efectivamente, la captura en la resonancia (2,-4,3) es significativamente más probable que en la (4,-7,3) en nuestras simulaciones.
+
+We ran further tests and saw that variations of \textit{other} planetary parameters, such as initial excentricities, mean anomalies and longitudes of node do not affect the migration paths presented.
+
+
+\subsection{Changing disk parameters}
+
+In Section \ref{subsec:estandar:param} we showed that the gas disk adopted in our simulations is parametrized by $(\Sigma_0,s,H_0,f)$.
+In Fig. \ref{fig:var_disk_params} we repeat the analysis of the previous section, this time varying disk parameters.
+
+%En la Sección \ref{subsec:estandar:param} mostramos que el disco de gas adoptado en nuestras simulaciones está parametrizado por $(\Sigma_0,s,H_0,f)$,
+%En la Fig. \ref{fig:var_disk_params} repetimos el análisis de la sección anterior, esta vez variando los parámetros del disco.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=1.025\columnwidth]{disk_params.png}
+\caption{Analogous to Fig. \ref{fig:modelo} but changing disk parameters, as indicated in each legend.}
+\label{fig:var_disk_params}
+\end{figure}
+
+
+We find that the convergence domain is highly sensitive to small changes in the disk.
+While other works in the literature often adopt $\Sigma_0$ values in the order of $\sim10^3~\mathrm{gr\,cm^{-2}}$\citep{Weidenschilling.1977,garaud.etal.2007,hirose.turner.2011}, we find that a small increase of $25~\mathrm{gr\,cm^{-2}}$ reduces significantly the amount of convergent systems (upper left plot).
+Additional testing with $\Sigma_0=150~\mathrm{gr\,cm^{-2}}$ result in no captures at all.
+It has been shown that higher disk densities lead to captures in ever more compact resonances \citep{kajtazi.etal.2023}, and in this case, it is crucial that the outer pair becomes captured in the rather wide configuration of the 3:1 2P-MMR.
+
+%Encontramos que el dominio de convergencia es altamente sensible a pequeños cambios en el disco.
+%Mientras que otros trabajos en la literatura suelen adoptar valores de $\Sigma_0$ en el orden de $\sim10^3~\mathrm{gr\,cm^{-2}}$\citep{Weidenschilling.1977,garaud.etal.2007,hirose.turner.2011}, nosotros encontramos que un pequeño aumento de $25~\mathrm{gr\,cm^{-2}}$ reduce considerablemente la cantidad de sistemas convergentes (gráfico superior izquierdo).
+%Pruebas adicionales con $\Sigma_0=150~\mathrm{gr\,cm^{-2}}$ no llegan a producir ninguna captura en la (2,-4,3).
+%Esto puede deberse a que densidades más altas de disco convergen a configuraciones más compactas \citep{kajtazi.etal.2023}, y en este caso es crucial que el par externo converja a una configuración más extensa, la 2P-MMR 3:1.
+
+Convergence seems to be even more sensitive to small changes in parameter $s$.
+The radius power of the surface density distribution is usually given values between $s\in[0.5,1.5]$ \citep{miotello.etal.2018}.
+In the upper right plot of Fig. \ref{fig:var_disk_params} we see that a value slightly greater than $s=0.5$ allows every single system to be captured in a 3P-MMR, although two of them do eventually escape.
+High sensitivity upon small changes in disk parameters is also observed in the lower plots, where we slightly increase the disk aspect ratio $H_0$ and flare $f$.
+
+%La convergencia de los sistemas parece ser incluso más sensible ante pequeños cambios en el parámetro $s$. 
+%La potencia radial de la distribución superficial de disco suele adoptar valores entre $s\in[0.5,1.5]$ \citep{miotello.etal.2018}.
+%En el gráfico superior derecho de la Fig. \ref{fig:var_disk_params} vemos que un valor ligeramente superior a $s=0.5$ permite que todos los sistemas sean capturados en la (2,-4,3), aunque 2 de los 100 sistemas lo hacen sólo temporalmente.
+%La sensibilidad ante cambios en el disco es también observada en los gráficos inferiores, donde variamos ligeramente la razón de aspecto $H_0$, y el flare $f$.
+
+Lastly, we once again find that captures in the $(4,-7,3)$ resonance are few and sparse, in stark contrast to the $(2,-4,3)$, which dominates the convergence domain in robust fashion.
+
+%Para terminar, encontramos una vez más que la convergencia a la (4,-7,3) es mínima y esporádica, mientras que la (2,-4,3) domina la región de convergencia de manera robusta.
+
+
+\section{Conclusions}
+
+We have recently presented dynamical evidence suggesting, for the first time, the effects of a 1st-order 3-planet mean-motion resonance in a real planetary system (K2-138, \citealp{cerioni.beauge.2023}).
+In this work, our goal was to analyze which conditions favour the capture in such a theoretically weak 3P-MMR.
+To this end, we studied the capture conditions of a planetary triplet of 8, 9 and 10 $\mathrm{M_\oplus}$ in the 1st-order 3P-MMR $(2,-4,3)$, which can take place after a migration process which carries the planets towards an intersection of 3:2 and 3:1 2P-MMRs between the inner and outer pair, respectively.
+This migration story is believed to have happened among the K2-138 $e$, $f$ and $g$ planets.
+
+%En este trabajo estudiamos la captura de un triplete planetario de 8, 9 y 10 $\mathrm{M_\oplus}$ en la 3P-MMR de orden 1 (2,-4,3), que puede ocurrir luego de un proceso de migración planetaria que lleve los planetas a la intersección de resonancias 3/2 y 3/1 entre el par interno y externo, respectivamente.
+%El objetivo es analizar qué condiciones propician su captura.
+
+To this end, we ran a grid of simulations with different initial separations between the planets.
+Then, we used these results as a comparison standard with which we can determine how small changes in planetary and disk parameters affect the capture in the 3P-MMR.
+
+%Para ello adoptamos un modelo de disco protoplanetario para inducir decaimiento orbital e integramos una grilla de simulaciones variando las separaciones relativas iniciales (Fig. \ref{fig:modelo}).
+%Luego utilizamos tales resultados como estándar de comparación para analizar cómo afectan a la captura los cambios en parámetros planetarios (Fig. \ref{fig:var_pl_params}) y del disco (Fig. \ref{fig:var_disk_params}).
+
+As a result, we observed the following general trends. 
+On one hand, the capture does depend on initial relative separations, being particularly sensitive to that of the outer planetary pair.
+On the other hand, we find that the $(2,-4,3)$ resonance dominates the convergence region, in contrast to the $(4,-7,3)$, which accumulates sparse captures with no visible structure in mean-motion-ratio space, in spite of being a lower order 3P-MMR which can also result from the (3/2,3/1) 2P-MMR coupling.
+Additionally, we find that the capture in the 1st-order 3P-MMR is specially sensitive to even small changes in the disk.
+
+%Como tendencia general observamos, por un lado, que la captura sí depende de las separaciones relativas iniciales, siendo especialmente sensible a aquella entre el par planetario externo.
+%Además, encontramos que la resonancia (2,-4,3) domina la región de convergencia, a diferencia de la (4,-7,3) cuyas capturas son escasas y no presentan ninguna estructura en el plano de separaciones, a pesar de ser de orden menor.
+%Por otro lado, encontramos que la captura en la (2,-4,3) es especialmente sensible a pequeños cambios en los parámetros del disco.
+
+Furthermore, we find that the $(2,-4,3)$ capture is favoured by:
+
+\begin{itemize}
+    \item a greater initial separation between the outer planetary pair.
+    
+    \item small planetary masses, as long as they meet the convergence mass conditions. 
+    This trend is only valid down to a few Earth masses. A test of (8,9,10) $\mathrm{M_{mars}}$ resulted in very few captures.
+    
+    \item similar masses between the second and third planet, as long as they meet the convergence mass conditions.
+    Although a high mass on the third planet gives better odds for forming a resonant chain \citep{beauge.cerioni.2022}, it actually prevents the capture in the $(2,-4,3)$ resonance specifically. 
+    
+    \item small initial semimajor axes.
+
+    \item a smaller disk surface density at $r=1~\mathrm{AU}$ $\Sigma_0$.
+
+    \item a greater disk radius surface density power $s$.
+    
+    \item a greater disk aspect ratio at $r=1~\mathrm{AU}$ $H_0$.
+    
+    \item a greater disk flare $f$ value.
+\end{itemize}
+
+
+%Profundizando en la captura en la (2,-4,3), encontramos que ésta es favorecida por:
+
+Our results spark other questions such as why is the initial separation between the planets such a determining factor for the $(2,-4,3)$ capture even when every system crosses the $(n_1/n_2,n_2/n_3)=(3/2,3/1)$ intersection? 
+What's more, why do these triplets get captured in the 1st-order 3P-MMR rather than the 0th-order one which is also associated with that intersection?
+Although these questions exceed the scale of this work, one hypothesis could be related to the different topology found in both resonances \citep{petit.2021}.
+
+
+
+
+
+%Nuestros resultados invitan otras preguntas tales como por qué es la separación inicial entre los planetas un factor determinante en la captura de la (2,-4,3) si todos ellos cruzan la intersección $(n_1/n_2,n_2/n_3)=(3/2,3/1)$, o por qué es que un triplete se captura en la 3P-MMR de orden 1 en lugar de la de orden 0.
+%Tales preguntas exceden la escala de esta publicación y serán abordadas en profundida en un trabajo futuro.
+
+
+
+
+
+
+
+\begin{acknowledgement}
+The authors would like to thank IATE for providing the necessary computing power that carried the presented simulations.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

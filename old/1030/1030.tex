@@ -1,0 +1,467 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[spanish]{babel}
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\usepackage{threeparttable}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Caracterización espectral del cúmulo estelar NGC\,2030 y su relación con el remanente de supernova N63A}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Espectroscopía integrada del sistema NGC~2030/N63A}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{C.M. Rodríguez-Buss\inst{1,2}, A.V. Ahumada\inst{2,3} \& G. Castelletti\inst{3,4}
+}
+
+\authorrunning{Rodríguez-Buss et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{catalina.rodriguez@mi.unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Matemática, Astronomía, Física y Computación, UNC, Argentina
+\and
+Observatorio Astronómico de Córdoba, UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina
+\and
+Instituto de Astronomía y Física del Espacio, CONICET--UBA, Argentina
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{
+Presentamos nuevas 
+%En el contexto del desarrollo del Trabajo Espacial para adquirir el título de grado de Lic. en Astronomía, aquí}} se presentan 
+observaciones espectroscópicas en el rango óptico obtenidas con el telescopio de 2,15~m del CASLEO (Argentina) hacia  NGC~2030, un cúmulo estelar muy joven embebido en una región H\,{\sc ii} de la Nube Mayor de Magallanes (LMC, por sus siglas en inglés).
+Asociado con este cúmulo se encuentra N63A,
+%Este cúmulo está asociado con N63A, 
+uno de los remanentes de supernova (RSN) más brillantes en la LMC. En este estudio, investigamos las propiedades de NGC~2030 y examinamos cómo una fuente energética como N63A influye en las características del cúmulo anfitrión.}
+
+\abstract{We present new optical spectral observations obtained with the 2.15~m telescope at CASLEO (Argentina) toward  NGC~2030,  a very young star cluster embedded in an H\,{\sc ii} region of the Large Magellanic Cloud (LMC). Associated with this star cluster is N63A, one of the brightest supernova remnants (SNR) in the LMC. In this study, we investigate the properties of NGC~2030 and examine how an energetic source like N63A influences its host cluster.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{galaxies: individual (LMC) --- galaxies: star clusters: general --- techniques: spectroscopic --- ISM: supernova remnants
+}
+
+\begin{document}
+
+\maketitle
+\section{Introducción}
+\label{S_intro}
+Los cúmulos estelares (CEs) son fundamentales para comprender
+la formación y evolución de las galaxias, ya que reflejan sus propiedades físicas, dinámicas y estructurales \citep{Berek+2023}. 
+Por otro lado, los remanentes de supernova (RSNs) desempeñan un papel clave en la evolución del medio interestelar (MIE), enriqueciendo el gas con elementos pesados y alterando sus condiciones físicas mediante poderosas ondas de choque. 
+El estudio conjunto de estos objetos permite analizar cómo los RSNs afectan las propiedades dinámicas y químicas de los CEs anfitriones, así como el impacto de los CEs  en la evolución de los RSNs dentro de sus entornos \citep{Santos+1995}.
+Los RSNs se caracterizan por emitir en todo el espectro electromagnético. En el rango óptico, presentan líneas prominentes como H$\alpha$, [O\,{\sc i}], [O\,{\sc ii}], [O\,{\sc iii}], [S\,{\sc ii}] y [N\,{\sc ii}]. 
+En particular, el cociente [S\,{\sc ii}]/H$\alpha$ $\geq 0,4$ se utiliza como criterio diagnóstico para identificar nebulosas ópticas asociadas con RSNs \citep{fesen1985}.
+
+La Nube Mayor de Magallanes 
+(LMC, por sus siglas en inglés), debido a su relativa cercanía 
+$(49.59\pm^{0.09}_{(0.54)}$~kpc; \citealt{Pietryzy+2019}) y metalicidad ($-0.42\pm0.04$; \citealt{Choundhury+2021}), 
+%baja metalicidad \textbf{\textcolor[RGB]{255,99,71}{($-0.42 \pm 0.04$)}} y relativa cercanía \textbf{\textcolor[RGB]{255,99,71}{($49.6 \pm 0.6$) kpc \citep{Pietryzy+2019, Choundhury+2021}}}, 
+constituye un laboratorio único para investigar las interacciones entre los RSNs, los CEs y el MIE circundante. En la LMC se han identificado $\approx{3100}$ CEs \citep{Bica+2008} y 73 RSNs \citep{Bozzetto+2023}. Sin embargo, las asociaciones directas entre ambos son poco comunes, lo que podría deberse a limitaciones observacionales que dificultan la detección simultánea de CEs y RSNs, especialmente cuando están inmersos en regiones H\,{\sc ii} densas y complejas.
+
+%Este estudio se centra en la espectroscopía integrada, una técnica que ha sido aplicada con éxito al análisis de CEs en la NMM \citep{Ahumada+2019}. Nuestro objeto de estudio es el cúmulo NGC~2030, un CE joven que se encuentra asociado al RSN~N63A, ambos inmersos en la región H\,{\sc ii} conocida como N63 \citep{Laval+1986}. Cabe destacar que, aunque N63A ha sido objeto de numerosos estudios previos (por ejemplo, \citealt{karagoz2023}),  los trabajos en el óptico son particularmente escasos.
+
+En el presente trabajo se analiza la espectroscopía integrada del cúmulo NGC~2030 en la LMC, asociado al RSN~N63A. Ambos objetos se encuentran inmersos en la región H\,{\sc ii} N63 \citep{Laval+1986}. La técnica observacional y el análisis realizados han demostrado ser efectivos en trabajos previos, como el de \citet{Ahumada+2019}. Cabe destacar que, aunque N63A ha sido objeto de numerosos estudios anteriores (por ejemplo, \citealt{karagoz2023}), los trabajos enfocados en el rango óptico siguen siendo escasos.
+
+
+\section{Observaciones}
+La Tabla~\ref{T1} resume lo parámetros principales del CE NGC~2030 y el RSN~N63A, así como detalles de las zonas observadas. Estas observaciones forman parte de un relevamiento espectroscópico realizado en el Complejo Astronómico El Leoncito (CASLEO, Argentina), utilizando el telescopio Jorge Sahade\footnote{\url{https://casleo.conicet.gov.ar/js/}} de 2,15~m, durante las noches del 26 y 27 de febrero de 2023 (IP: A.~V. Ahumada). 
+La configuración instrumental utilizada fue similar a la descrita por \citet{Rodriguez-Buss+2024}. Las observaciones se realizaron desplazando el telescopio a lo largo de los objetos en dirección norte-sur para obtener una muestra adecuada tanto del CE como del RSN, garantizando una cobertura uniforme de las regiones estudiadas. Las zonas relevadas se ilustran en la Fig.~\ref{F1}.
+La reducción de datos, necesaria para obtener los espectros finales, se realizó utilizando {\sc pyraf}, una herramienta que integra el paquete de análisis {\sc iraf} (\textit{Image Reduction and Analysis Facility}) en un entorno de Python. Se siguieron los procedimientos estándar de reducción descritos por \citet{Tapia-Reina_2023}, los cuales incluyen corrección de sesgo, sustracción del cielo, calibración en longitud de onda y corrección por sensibilidad relativa.
+
+En la Fig.~\ref{F2} se presenta el espectro integrado final del CE~NGC~2030 junto con el espectro individual integrado del RSN~N63A. En dicha figura, se observa claramente que el flujo del cúmulo domina sobre el del RSN. Además, se identifican las líneas de emisión características tanto del RSN como de la región H\,{\sc ii}~N63, incluyendo H$\alpha$, [O\,{\sc iii}], [S\,{\sc ii}] y [N\,{\sc ii}]. También se observa la línea en emisión próxima a 4500 \AA, la cual no corresponde al objeto observado, sino que es una línea de cielo.
+
+\begin{table*}[!t]
+\centering
+\begin{threeparttable}
+\caption{Propiedades del CE NGC~2030 y el RSN N63A, analizados espectroscópicamente en el rango óptico mediante observaciones con el telescopio de 2,15m en  CASLEO. }
+%\vspace{0.3cm}
+\begin{tabular}{lcccc}
+\noalign{\smallskip}\hline\hline\noalign{\smallskip}
+%\hline\hline\noalign{\smallskip}
+\!\! Objetos & \!\!\!\! $\alpha_{2000}$ & \!\!\!\!$\delta_{2000}$ & \!\!\!\! Dimensiones &\!\!\!\! Tiempo de exposición \\
+\!\! & \!\!\!\![h m s] & \!\!\!\![$^{\circ}$ $^{\prime}$ $^{\prime\prime}$ ] & \!\!\!\!  & \!\!\!\![Nº rendijas $\times$ s] \\
+\hline\noalign{\smallskip}
+\!\! NGC~2030$^{\ast}$ & 05 35 33,6 & $-$66 02 26 & $1,^{\prime}70 \times 1,^{\prime}$70 & $14 \times 1800$ \\
+%\!\! NGC~2030\tablefootmark{~$\ast$} & 05 35 33,6 & -66 02 26 & 1,70' x 1,70' & 14 x 1800 \\
+\!\! N63A & 05 35 43,8 & $-$66 02 13 & $35^{\prime\prime} \times 27^{\prime\prime}$ & $5 \times 1800$ \\
+\hline
+%\multicolumn{4}{l}{Referencias: (a) \citet{NGC}, (b) \citet{KMHK}, (c) \citet{SL}}\\
+%\hline
+%\hline
+\end{tabular}
+\label{T1}
+%\tablefoot{
+%\tablefoottex{~$\ast$}{NGC~2030 es también referenciado en la literatura con los nombres KMHK~1113 \citep{KMHK} y SL~595 \citep{SL}.}
+%}
+\begin{tablenotes}\footnotesize
+   \item[*] NGC~2030 es también referenciado en la literatura con los nombres KMHK~1113 \citep{KMHK} y SL~595 \citep{SL}.
+    \end{tablenotes}
+    \end{threeparttable}
+\end{table*}
+
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.49\textwidth]{CE+RSN.png}
+\caption{
+Mapa fotométrico digitalizado de la región del CE NGC~2030, creado con ©Aladin a partir de observaciones del relevamiento DSS2 (Digitized Sky Survey 2).
+%Imagen  del relevamiento DSS2 (Digitized Sky Survey 2) creada con ©Aladin, que corresponde a un mapa fotográfico digital del cielo. 
+Se indican el CE NGC~2030 (óvalo a trazos blanco) y el RSN~N63A (círculo a trazos negro). El símbolo magenta señala el centro del CE, ubicado en $\alpha_{2000}$=05h 35m 33,6s y $\delta_{2000}$=$-$66$^{\circ}$ 02$^{\prime}$ 26$^{\prime\prime}$.
+}
+\label{F1}
+\end{figure}
+
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{Ambos+líneas.png}  % 80% del ancho total de la página
+\caption{Espectros integrados del CE NGC~2030 (magenta) y del RSN~N63A (celeste), calibrados en unidades de flujo. Se destacan las principales líneas de emisión identificadas en cada caso.
+}
+\label{F2}
+\end{figure*}
+
+
+\section{Metodología}
+
+\subsection{Determinación de parámetros}
+
+%El método de ajuste por \textit{templates} 
+El ajuste mediante espectros patrones (en adelante, \textit{templates}) es una técnica poderosa para estudiar de manera integral y detallada el espectro de un CE. 
+%Este análisis considera no sólo los perfiles espectrales y sus intensidades, sino también las pendientes de los continuos \citep{Ahumada+2019}.
+Este método no sólo considera los perfiles espectrales y sus intensidades, sino también las pendientes de los continuos \citep{Ahumada+2019}.
+
+Un \textit{template} %, o espectro patrón, 
+se construye combinando espectros integrados de CEs que comparten características astrofísicas similares, como la edad y la  metalicidad.
+La clave de este enfoque radica en que, al conocer las propiedades astrofísicas de los \textit{templates}, es posible derivar estas mismas propiedades para otros CEs. Para ello, se compara el espectro
+integrado del CE con un conjunto de \textit{templates} predefinidos, seleccionando aquel que proporciona el mejor ajuste en términos de características observacionales, variando simultáneamente el exceso de color \(E(B-V)\).
+
+En este trabajo, utilizamos la biblioteca de \textit{templates} desarrollada por \citet{Santos+1995}, basada en CEs de las Nubes de Magallanes (NMs). Para identificar el mejor ajuste entre el \textit{template} y el espectro integrado observado, empleamos la 
+herramienta computacional {\sc fisa } (\textit{Fast Integrated Spectra Analyzer};   \citealt{Benitez-Lambay}), que permite realizar comparaciones iterativas entre espectros integrados y \textit{templates} predefinidos.
+Este procedimiento no sólo proporciona rango de edades para los CEs, sino que también permite determinar simultáneamente el exceso de color \(E(B-V)\).
+
+
+\subsection{Análisis del sistema compuesto por NGC~2030 y N63A}
+
+ En primer lugar, se analizó el espectro integrado del CE NGC~2030 separando el componente asociado al RSN~N63A del espectro combinado (CE+RSN). Este proceso fue esencial para aislar las características espectrales propias del CE, permitiendo un ajuste más preciso con los \textit{templates} disponibles. 
+ 
+ El mejor ajuste obtenido para NGC~2030, corregido por un \(E(B-V)\)= 0,10, se presenta en la Fig.~\ref{F3}. Este ajuste muestra que el \textit{template} ``YA\_SG\_LMC" (3-5$\times$10$^{6}$ años) reproduce adecuadamente la pendiente del continuo, atribuida a la presencia de estrellas jóvenes y azules en el CE. Sin embargo, el \textit{template} no logra replicar completamente la intensidad de las líneas de emisión observadas en el espectro integrado de NGC~2030, ya que estas líneas son generadas por la región H\,{\sc ii} que rodea al cúmulo.
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{CE-RSN+líneas.jpg}  
+% Imagen ajustada al ancho total de la página
+\caption{Comparación entre el espectro integrado del CE NGC~2030, sin la contribución del RSN~N63A, y un \textit{template} correspondiente a un rango de edad (3-5 $\times$ 10$^{6}$~años), ajustado con un exceso de color $E(B-V) = 0,10\pm 0,05$ \citep{Santos+1995}. 
+}
+\label{F3}
+\end{figure*}
+
+
+
+%    \item \textbf{Análisis del RSN N63A}  
+
+ Dado que el RSN~N63A está asociado a NGC~2030, se realizaron extracciones espectrales para obtener exclusivamente el espectro del RSN. Este espectro fue comparado con el  \textit{template}  disponible en la biblioteca de \cite{Santos+1995}, que corresponde al espectro integrado de una combinación de flujos provenientes de un porcentaje menor de la región del RSN~N63A, el CE NGC~2030 y la región H\,{\sc ii}~N63 (``HII\_CL\_SNR.LMC"). 
+ Es importante señalar que dicho \textit{template} cubre un rango espectral muy limitado (3500-4700~$\text{Å}$) y que la edad asignada al mismo corresponde a la de la región H\,{\sc ii}. 
+ En la Fig.~\ref{F4} se muestra la similitud entre el espectro observado, corregido por enrojecimiento (\(E(B-V)\)= 0,20), y el \textit{template}, en términos de distribución del continuo y líneas de emisión. 
+ Las líneas [O\,{\sc ii}], H$\lambda$, [S\,{\sc ii}] y [Ne\,{\sc ii}] están presentes en ambos espectros, a pesar de algunas discrepancias, debido a que el \textit{template} representa una síntesis de los flujos de las distintas componentes del sistema.
+
+
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=0.7\textwidth]{RSN+líneas.jpg}  % Imagen ajustada al ancho total de la página
+\caption{Comparación entre el espectro integrado del 
+RSN~N63A y un \textit{template} con un rango de edad (3-5$\times$10$^{6}$~años) y un \(E(B-V) = 0,20\pm 0,05\) \citep{Santos+1995}.
+}
+\label{F4}
+\end{figure*}
+
+%\end{itemize}
+
+\subsection{Diagrama de diagnóstico}
+Para completar el análisis, se utilizó el diagrama de diagnóstico (DD) de \cite{Frew+2010}, basado en los anchos equivalentes (AEs) de diferentes líneas de emisión en el óptico. Este diagrama permite clasificar objetos astronómicos según su naturaleza, a través de cocientes específicos de AEs. 
+
+En particular, el DD relaciona los logaritmos de los cocientes de AEs de H$\alpha$/[S\,{\sc ii}] y H$\alpha$/[N\,{\sc ii}]. Estos cocientes permiten separar distintas poblaciones de objetos astronómicos, como regiones de formación estelar, nebulosas planetarias y RSNs, debido a las diferencias en los mecanismos físicos que producen sus emisiones. 
+
+A partir de las intensidades de las líneas espectrales observadas, se calcularon los cocientes antes mencionados para el RSN~N63A:
+log(H$\alpha$/[S\,{\sc ii}]) = 0,11, 
+log(H$\alpha$/[N\,{\sc ii}]) = 0,74. 
+Al ubicar estos valores en el DD, se observó que N63A coincide con la región donde se agrupan los RSNs de las NMs, confirmando la naturaleza del objeto (Fig.~\ref{F5}).
+Este resultado refuerza las clasificaciones previas en literatura y destaca la utilidad del DD como herramienta complementaria en el análisis de espectros integrados. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.7\columnwidth]{Frew.jpg} 
+\caption{Adaptación del diagrama de diagnóstico presentado por \cite{Frew+2010}, mostrando la posición del RSN~N63A (cruz naranja). Los diferentes símbolos representan diversas poblaciones de objetos astronómicos:  nebulosas planetarias galácticas (puntos rojos), regiones \textit{Herbig-Haro} (asteriscos negros), RSNs galácticos (triángulos azules llenos),  RSNs pertenecientes a las NMs (triángulos azules vacíos), regiones H\,{\sc ii} galácticas (cuadrados negros grandes) y regiones H\,{\sc ii} extragalácticas (cuadrados negros pequeños). Las líneas de trazo continuo marcan los límites empíricos para el campo de las nebulosas planetarias.
+}
+\label{F5}
+\end{figure}
+
+
+\section{Sumario}
+En este trabajo se presentó el primer espectro integrado en el rango óptico, cubriendo gran parte de la extensión del CE NGC~2030 y utilizando una región espectral superando  en un factor de tres el análisis previamente publicado en \citet{Santos+1995}. 
+El estudio realizado ha permitido discriminar las propiedades espectroscópicas del CE y del RSN N63A en su interior. Mediante el ajuste de \textit{templates}, la edad estimada para el CE es  3-5 $\times$ 10$^{6}$~años, lo cual es consistente con el resultado obtenido por \citet{Laval+1986} utilizando  
+métodos fotométricos ($\sim 4\times$10$^{6}$ años). Además, se  determinaron excesos de color para N63A y NGC~2030, con valores $E(B-V)$= 0,20 y 0,10, respectivamente. Estos resultados respaldan la interpretación de una asociación física entre el RSN y el CE. 
+La naturaleza de N63A como RSN fue confirmada en el óptico, mostrando características similares a las de otros RSNs que se encuentran en las NMs. 
+
+El estudio espectroscópico realizado será de utilidad no sólo para el estudio de otros CE jóvenes y  RSNs en las NMs, sino también en galaxias %tan 
+distantes, donde sólo es posible estudiar las características astrofísicas %a partir de 
+mediante técnicas integradas.
+
+
+
+%A partir del estudio espectroscópico integrado de NGC~2030 y %%de 
+%N63A, se determinó, mediante el ajuste de espectros %%patrones, la edad del CE (3-5 x10$^{6}$ años). 
+%\textcolor{magenta}{patrón, que la edad del CE es 3-5 $\times$ 10$^{6}$~años. }
+%%Esta edad es similar a la derivada por \cite{Laval+1986} a partir de 
+%\textcolor{magenta}{Este resultado es consistente con la edad derivada por \citet{Laval+1986} mediante } métodos fotométricos (4$\times$10$^{6}$ años). 
+%%, en tanto los excesos de color $(E(B-V))$ determinados son similares en el CE y en el RSN. 
+%\textcolor{magenta}{Además, los excesos de color $(E(B-V))$ determinados para el CE y el RSN son similares. }
+%%Se pudo confirmar en el óptico la naturaleza de N63A como RSN con 
+%\textcolor{magenta}{La naturaleza de N63A como RSN fue confirmada en el óptico, mostrando características similares a las de otros RSNs que se encuentran en las NMs.  } \textcolor{magenta}{El trabajo incluye, también, la presentación de los}
+%%Finalmente, se presentan los 
+%primeros espectros integrados en el rango óptico de \textcolor{magenta}{N63A y NGC~2030, que serán}
+%%, como así también de NGC\,2030, los que serán 
+%de utilidad no sólo para el estudio de otros CE jóvenes y de RSNs en las NMs, sino \textcolor{magenta}{también} en galaxias %%tan 
+%distantes, donde sólo es posible estudiar las características astrofísicas %%a partir de 
+%mediante técnicas integradas.
+
+%%%lo que permite una caracterización precisa de este remanente y su comparación con modelos teóricos.
+%Finalmente, los resultados obtenidos serán de gran utilidad para el análisis de CEs jóvenes asociados a RSNs en galaxias distantes, donde el estudio detallado solo es posible mediante técnicas de espectroscopía integrada.
+
+%\section{Referencias cruzadas}\label{ref}
+
+%Su artículo debe emplear referencias cruzadas utilizando la herramienta  {\sc bibtex}. Para ello elabore un archivo (como el ejemplo incluido: {\tt bibliografia.bib}) conteniendo las referencias {\sc bibtex} utilizadas en el texto. Incluya el nombre de este archivo en el comando \LaTeX{} de inclusión de bibliografía (\verb|\bibliography{bibliografia}|). 
+
+%Recuerde que la base de datos ADS contiene las entradas de {\sc bibtex}  para todos los artículos. Se puede acceder a ellas mediante el enlace ``{\em Export Citation}''.
+
+%El estilo de las referencias se aplica automáticamente a través del archivo de estilo incluido (baaa.bst). De esta manera, las referencias generadas tendrán la forma co\-rrec\-ta para un autor \citep{hubble_expansion_1929}, dos autores \citep{penzias_cmb_1965,penzias_cmb_II_1965}, tres autores \citep{navarro_NFW_1997} y muchos autores \citep{riess_SN1a_1998}, \citep{Planck_2016}.
+
+%\begin{acknowledgement}
+%Los agradecimientos deben agregarse usando el entorno correspondiente (\texttt{acknowledgement}).
+%\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

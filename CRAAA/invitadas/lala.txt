@@ -1,0 +1,142 @@
+,contriblanguage,contribtype,thematicarea,title,author,abstract,keywords,subtitle,num_authors,npages
+1111,Spanish,Informe invitado,SSE. Sistemas Solar y Extrasolares,El N\'ucleo Argentino de Investigaci\'on en Astrobiolog{\'\i}a: integrando la astronom{\'\i}a con diversas \'areas de la ciencia para la b\'usqueda de vida en el universo,"{'name_000': 'X.', 'surname_000': 'Abrevaya'}","La capacidad de nuestra especie para explorar el cosmos se ha expandido
+exponencialmente en los últimos 100 años, y junto con ello la
+posibilidad de buscar pruebas o indicios de la existencia de seres vivos
+fuera de la Tierra, en otros cuerpos planetarios. Así fue como a lo
+largo de las últimas décadas la astrobiología comenzó a delinearse como
+un área de la ciencia específicamente dedicada al estudio sobre el
+origen, evolución, y distribución de vida en el universo. En Argentina
+la astrobiología se ha desarrollado lentamente en consonancia con las
+temáticas preponderantes de la época en la disciplina a nivel mundial,
+que se iniciaron con SETI (Search for Extraterrestrial Intelligence) y
+posteriormente se ampliaron hacia otras vertientes como los estudios de
+habitabilidad planetaria. Por otro lado, el trabajo en este campo trae
+consigo la posibilidad de emprender investigaciones de forma
+interdisciplinaria, que aportan un valor agregado distintivo. En
+concordancia con ello, el Núcleo Argentino de Investigación en
+Astrobiología (Astrobio.ar), surge hace varios años basado en una labor
+colaborativa interdisciplinaria que involucra e integra diversas áreas
+de la ciencia, como la astronomía, la biología, y la geología, entre
+otras. Además de ello se constituye como una estructura asociativa de
+tipo interinstitucional, ya que no sólo involucra investigadores de
+distintas áreas del conocimiento sino también pertenecientes a distintos
+institutos y organismos de CyT de Argentina, a los que se suman
+colaboradores extranjeros. En esta charla brindaré una breve reseña
+sobre los orígenes del área de la astrobiología en nuestro país y haré
+una puesta al día sobre las investigaciones en el campo de esta
+disciplina llevadas a cabo por nuestro Núcleo de Investigación.",{'key_000': ''},,2,1
+1222,Spanish,Informe invitado,ASOC. Astronomía y Sociedad,Aspectos epistemol\'ogicos de la observaci\'on astron\'omica,"{'name_000': 'M.', 'surname_000': 'Bozzoli'}","En esta conferencia presentaré una breve introducción a la problemática
+filosófica vinculada con la noción de observación científica. Para ello,
+consideraré algunos enfoques de autores sensibles a las prácticas
+observacionales y experimentales. El concepto de observación, tanto en
+la astronomía como en la astrofísica, se ha desarrollado
+considerablemente en las últimas décadas. Por esta razón, dicha noción
+se ha sofisticado de tal manera que ha perdido la capacidad de reflejar
+matices sutiles de relevancia para la reflexión epistemológica. Así, las
+técnicas actuales de observación, las cuales dependen en gran parte del
+desarrollo tecnológico del instrumental disponible, configuran nuevas
+concepciones, tanto científicas como filosóficas, de lo que es una
+observación. En concreto, mencionaré algunos resultados alcanzados en
+mis investigaciones de los últimos años. Además, con el objetivo de
+rescatar el importante rol que poseen las investigaciones
+interdisciplinarias, aludiré a perspectivas recientes relacionadas a
+temas de filosofía de la astronomía contemporánea.",{'key_000': ''},,2,1
+1333,Spanish,Informe invitado,SE. Sistemas Estelares,Huellas de la evoluci\'on de las galaxias en sus sistemas de c\'umulos globulares,"{'name_000': 'J.P.', 'surname_000': 'Caso'}","Los cúmulos globulares (CGs) representan el extremo masivo de la función
+de masa de los cúmulos estelares, conteniendo entre decenas de miles y
+millones de estrellas. Se hallan presentes en prácticamente todas las
+galaxias del Universo Local con masas estelares mayores a $10^9$
+M$_\odot$ abarcando una gran variedad de morfologías y ambientes, lo
+cual permite contrastar las propiedades de los sistemas de CGs entre
+galaxias disímiles entre sí. Más aún, su brillo intrínseco y compacidad
+permiten, a partir de las nuevas facilidades astronómicas, estudiarlos
+en galaxias distantes varios cientos de Megaparsecs. Sus edades, en
+torno a los $8-12 \times 10^9$ años, los convierten en remanentes de
+épocas tempranas, cuando la eficiencia de formación estelar estaba en su
+punto máximo, volviéndose relevantes para los modelos de evolución de
+galaxias. Puesto que la formación y supervivencia de los CGs hasta el
+día de hoy están estrechamente relacionadas con los procesos de fusión
+experimentados por sus galaxias anfitrionas, las propiedades actuales de
+los sistemas de CGs ofrecen información valiosa sobre la historia de
+fusión de las mismas. Además, su extensa distribución espacial los
+convierte en trazadores del halo de materia oscura. La cantidad de
+sistemas de CGs estudiados hasta la fecha, principalmente en galaxias de
+tipo temprano, ha dado lugar en años recientes a varios análisis de
+relaciones de escala entre propiedades de los mismos y sus galaxias
+huésped, que se revisarán en esta contribución.",{'key_000': ''},,2,1
+1444,Spanish,Informe invitado,SH. Sol y Heliosfera,Pulsaciones cuasi-peri\'odicas en fulguraciones solares: claves para desentra\~nar la liberaci\'on de energ{\'\i}a solar,"{'name_000': 'M.', 'surname_000': ""C\\'ecere""}","Las fulguraciones solares son los eventos más energéticos de nuestro
+sistema solar, pero los mecanismos físicos que impulsan y transportan
+esta liberación de energía aún no se comprenden completamente. Una
+característica crucial de estas fulguraciones es la alta variabilidad de
+su emisión en escalas de tiempo que van desde subsegundos hasta minutos,
+a menudo manifestándose como pulsaciones cuasi-periódicas (QPPs). Estas
+características también se observan en fulguraciones estelares, lo que
+nos ofrece una oportunidad invaluable para profundizar en la física de
+las fulguraciones solares a través de la analogía solar-estelar,
+beneficiando tanto a la astrofísica como a la heliofísica. En esta
+presentación se expondrá la investigación sobre los mecanismos físicos
+que generan el comportamiento cuasi-periódico de la emisión en fenómenos
+solares asociados a fulguraciones. Este análisis permite examinar las
+condiciones del plasma y la topología del campo magnético que facilitan
+la producción de dichas firmas, proporcionando una mejor comprensión de
+los procesos subyacentes en la liberación de energía solar.",{'key_000': ''},,2,1
+1555,Spanish,Informe invitado,AE. Astrofísica Estelar,Estrellas y sistemas de estrellas como fuentes de alta energ{\'\i}a,"{'name_000': 'M. V.', 'surname_000': 'del Valle'}","Estrellas y sistemas estelares tienen la capacidad de modificar sus
+entornos a través de sus campos de radiación, de la eyección de masa, de
+sus campos magnéticos y sus vientos. Las estrellas masivas producen
+vientos poderosos que inducen ondas de choques en el sistema viento +
+medio interestelar. En estos choques, partículas pueden ser aceleradas
+hasta alcanzar energías relativistas. Estrellas en formación
+(protoestrellas) también cuentan con los mecanismos capaces de acelerar
+partículas; en el caso de protoestrellas de alta masa en sus jets y en
+el caso de protoestrellas de baja masa (estrellas T-Tauri) mediante
+mecanismos relacionados a la intensa actividad magnética presente en
+estas fuentes. Las partículas aceleradas producen emisión no térmica al
+interactuar con el entorno, localmente o en su propagación en medio
+interestelar. Esta radiación no-térmica puede ser detectable en las
+energías más bajas (ondas de radio) o en las energías más altas del
+espectro electromagnético (rayos gamma). En esta charla discutiré los
+mecanismos físicos involucrados en el proceso de aceleración de
+partículas y de emisión no-térmica en estrellas y sistemas de estrellas.
+También presentaré evidencias observacionales que confirman la capacidad
+de estos sistemas de ser fuentes de altas energías. Finalmente comentaré
+sobre las perspectivas observacionales para el futuro, específicamente
+en el rango energético de los rayos gamma.",{'key_000': ''},,2,1
+1666,Spanish,Informe invitado,OCPAE. Objetos Compactos y Procesos de Altas Energías,Acreci\'on en objetos compactos: un enfoque espectro-temporal desde los rayos X,"{'name_000': 'F.', 'surname_000': ""Garc{\\'\\i}a""}","En sistemas binarios de rayos X, los objetos compactos, ya sean
+estrellas de neutrones o agujeros negros, atraen materia de sus
+compañeras cercanas, formando un disco de acreción. A medida que el
+material espirala hacia el objeto compacto, se calienta y emite rayos X,
+mostrando variabilidad en un amplio rango de frecuencias. La emisión
+térmica del disco es Comptonizada por una corona de electrones calientes
+que, a su vez, ilumina nuevamente al disco, dando lugar a una componente
+de reflexión. La estructura de esta componente depende de la composición
+química del disco y está caracterizada por líneas de emisión cuyos
+perfiles son alterados por efectos relativistas. Utilizando técnicas de
+análisis de Fourier en la banda de rayos X, los estudios espectro-
+temporales combinan información espectral con variabilidad temporal,
+permitiendo medir retardos, amplitudes y coherencia de la señal en
+diferentes rangos de energía. Su importancia radica en el hecho de que
+las escalas temporales asociadas a ciertas frecuencias revelan detalles
+cruciales sobre la geometría de la emisión y la propagación de la
+radiación en las proximidades de estos objetos, ayudando a inferir
+propiedades del material acretado y eyectado mediante modelos físicos.
+En esta charla introduciré la fenomenología de la acreción en objetos
+compactos, explicaré los fundamentos y ventajas de los estudios
+espectro-temporales, y compartiré algunos de los resultados más
+recientes de nuestro grupo y colaboradores en el estudio de estos
+sistemas.",{'key_000': ''},,2,1
+1777,Spanish,Informe invitado,AGE. Astrometría y Geodesia Espacial,Astrometr{\'\i}a y Geodesia con VLBI en banda K,"{'name_000': 'M.E.', 'surname_000': ""G\\'omez""}","VLBI es una técnica espacial muy poderosa en el ámbito de la Astrometría
+y la Geodesia porque no sólo contribuye a la realización del Sistema de
+Referencia Terrestre (ITRS), sino que es la única técnica que
+materializa el Sistema de Referencia Celeste (ICRS) como así también los
+parámetros de orientación de terrestre, que vinculan a ambos marcos. Por
+mucho tiempo, en estas dos áreas se han utilizado observaciones en banda
+S/X para materializar ambos sistemas. No obstante, la última realización
+del ICRS (el ICRF3) contempla observaciones en frecuencias S/X, X/Ka y
+K, y a futuro se espera mantener la multifrecuencia. En el último tiempo
+han surgido distintos proyectos como JUMPING JIVE o The K-band AstroGeo
+VLBI Project, con el objetivo de obtener no sólo coordenadas de
+radiofuentes en banda K, sino posiciones de radiotelescopios en esta
+frecuencia. Como parte de éstos, también se han realizado sesiones
+especiales para analizar la viabilidad y fiabilidad de determinaciones
+de parámetros de orientación. El objetivo de la charla es ampliar sobre
+estos proyectos que cada vez toman más envergadura y de los cuales
+formamos parte.",{'key_000': ''},,2,1

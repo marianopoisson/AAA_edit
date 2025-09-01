@@ -1,0 +1,417 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{99}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{16 February 2024}
+\accepted{03 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Aplicaciones cosmológicas de cuásares con efecto lente gravitatoria recientemente descubiertos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Macro BAAA65 con instrucciones de estilo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+V. Motta\inst{1}
+}
+
+\authorrunning{Motta}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{editor.baaa@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de F\'{\i}sica y Astronom\'{\i}a, Facultad de Ciencias, Universidad de Valpara\'{\i}so, Chile 
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Los sistemas lentes gravitatoria son una herramienta útil para examinar temas astrofísicos tales como el contenido y la cinemática del Universo. Como fuentes variables, los AGN permiten mediciones de los retrasos temporales entre imágenes, que pueden usarse para estimar distancias absolutas (es decir, una técnica alternativa para restringir el valor de la constante de Hubble). Presentamos los resultados de una extensa campaña de la colaboración {\em Time Delay Cosmography} para encontrar nuevos cuásares (el tipo más brillante de AGN) con efecto lente, para producir modelos de masa y retrasos temporales confiables.}
+
+\abstract{Strong gravitational lensing is a useful technique for examining astrophysical issues such as the general content and kinematics of the Universe. As variable sources, AGNs enable measurements of the time delays between images, which can be used to estimate absolute distances (i.e. an alternative technique to constrain the value of the Hubble constant).  We present the results of an extended campaign of the Time Delay Cosmography collaboration to find new lensed quasars (brightest kind of AGNs), to  produce reliable mass models and time delays.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{cosmology: cosmological parameters --- cosmology: distance scale --- gravitational lensing: strong --- gravitational lensing: micro}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}
+
+Aunque el denominado modelo cosmológico estándar, {\em $\Lambda$ Cold Dark Matter} ($\Lambda$CDM), logra explicar la mayor parte de los datos cosmológicos disponibles, todavía se desconoce la naturaleza de sus principales componentes. 
+Para dos de esos ingredientes, la materia oscura  \citep[DM,][]{rubin1970,trimble1987} y la energía oscura  \citep[DE,][]{riess1998,perlmutter1999}, la evidencia física proviene de observaciones astrofísicas. 
+
+En los \'ultimos a\~nos, el aumento de la sensibilidad instrumental ha evidenciado  tensiones entre los diferentes conjuntos de datos cosmológicos que son interesantes porque, si no se deben a errores sistemáticos, podrían indicar un fracaso del modelo $\Lambda$CDM  \citep{efstathiou2021}. Las anomal\'{\i}as m\'as notables aparecen cuando se comparan las mediciones del sat\'elite Planck \citep{planck2020} de las anisotropías del Fondo Cósmico de Microondas (CMB) con datos de bajo desplazamiento al rojo. En particular, hay tensiones entre las estimaciones de la constante de Hubble ($H_0$) obtenida por Planck y por datos del universo tardío \citep[e.g.][]{riess2021}. El motivo para enfocarse en  la tensión en $H_0$ es porque estadísticamente es la más significativa y  persistente, con un desacuerdo de $4\sigma$ a $6\sigma$ dependiendo de los conjuntos de datos considerados \citep[ver Fig \ref{fig0},][]{divalentino2021}.  
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\columnwidth]{fig_H0whisker.pdf}
+	\caption{Gr\'afico de valores de $H_0$ con nivel de confianza del 68\% usando distintos conjuntos de datos astron\'omicos. La banda vertical cyan corresponde al valor obtenido por SH0ES banda vertical rosada representa el valor de la colaboraci\'on Planck.  Figura realizada con el c\'odigo \url{https://github.com/lucavisinelli/H0TensionRealm} \citep{divalentino2021}.  
+	}
+	\label{fig0}
+\end{figure}
+
+
+
+El valor de $H_0$ que obtiene Planck usando un modelo plano $\Lambda$CDM es $H_0 = 67.27 \pm 0.60 \mathrm{km\, s}^{-1} \mathrm{Mpc}^{-1}$ con un nivel de confianza (CL) del 68\%  \citep{planck2020}. Por otro lado, para medir $H_0$ localmente se utiliza la relaci\'on distancia-desplazamiento al rojo, que se obtiene construyendo una “escalera de distancias”. El primer escal\'on es geom\'etrico (por ejemplo, usando paralaje) y se utiliza para calibrar las luminosidades de cierto tipo de estrellas (e.g., variables Cefeidas pulsantes y supernovas del tipo Ia o SNIa) que se pueden ver a grandes distancias donde sus desplazamientos al rojo miden la expansión cósmica. La \'ultima medici\'on de la colaboraci\'on {\em Supernovae and H0 for the Equation of State of dark energy}  \citep[SH0ES,][]{riess2021} entrega un valor $H_0 = 73.2 \pm 1.3 \mathrm{km\, s}^{-1} \mathrm{Mpc}^{-1}$ a un CL de 68\%.
+
+Los intentos de resolver esta tensi\'on en la medici\'on de $H_0$ siguen dos caminos: (i) la b\'usqueda de nuevos conjuntos de datos (para detectar posibles errores sistem\'aticos) y (ii) modelos alternativos a $\Lambda$CDM para explicar DE \citep{motta2021}. En el primer camino, el retraso temporal observado entre im\'agenes de cu\'asares con efecto lente puede usarse para medir $H_0$ con suposiciones independientes de las utilizadas con SNIa.
+
+
+\section{El efecto lente gravitatoria}
+
+El efecto lente gravitatoria se produce cuando la luz es desviada de su trayectoria rectil\'{\i}nea por un campo gravitatorio, por lo tanto, las distribuciones de masa (e.g galaxias) actúan como una lente óptica sobre la luz. Einstein predijo que el ángulo de desviación $\hat{\alpha}=4 G M/ \xi  c^2$, donde $G$ es la constante de gravitación universal, $M$ la masa de la lente, $\xi$ el parámetro de impacto y $c$ la velocidad de la luz. 
+Como la cantidad de deflexión que experimenta la luz depende sólo de la masa total (sin necesidad de suponer equilibrio virial o cierta proporci\'on entre materia bari\'onica y DM), las lentes gravitatorias son una valiosa herramienta  para determinar la distribución de masa de las galaxias y los cúmulos de galaxias.  Por otro lado, como el efecto lente implica una amplificaci\'on o magnificaci\'on de la fuente, significa que podemos usarlas para estudiar objetos lejanos que de otro modo serían demasiado débiles \citep{caminha2022,katz2023}. 
+
+El efecto lente gravitatoria no es s\'olo un fen\'omeno est\'atico, la dependencia temporal tambi\'en tiene aplicaciones importantes. Por ejemplo, el retraso temporal (ver \ref{S_potencial}) nos permite medir la constante de Hubble \citep{refsdal1964} y las fluctuaciones en el brillo de las im\'agenes (efecto microlente), producida por el movimiento de estrellas en la galaxia lente, puede usarse para estudiar la distribución de las estrellas y objetos compactos en nuestra galaxia \citep{paczynski1986} o en galaxias lente \citep{chang1979}.
+
+
+\subsection{La ecuaci\'on de la lente}
+
+En el caso de galaxias lejanas actuando como lentes, su tama\~no es mucho menor que las distancias entre la fuente, la lente y el observador ($D_S$ y $D_L$, respectivamente). Por lo tanto, podemos hacer la aproximaci\'on de lente delgada en la dirección perpendicular al rayo de luz, es decir, que la desviaci\'on ocurrir\'a en el plano de la lente (ver Fig. \ref{fig1}).  
+La trayectoria aproximada puede describirse como la luz propagándose en línea recta hasta una distancia m\'{\i}nima de la lente ($\vec{\xi}$) donde su dirección cambia (\'angulo de deflexi\'on $\hat{\vec{\alpha}}$), para proseguir nuevamente en línea recta hasta el observador. 
+En ausencia de la lente, la fuente se ver\'{\i}a en la posición angular $\vec{\beta}$ en el plano de la fuente, pero debido a la deflexi\'on la observamos en $\vec{\theta}$ (i.e. son ``espejismos" de la fuente). 
+
+Debido a que los ángulos involucrados son pequeños, la relación entre ellos es $\vec{\beta}=\vec{\theta}-D_{LS} \hat{\vec{\alpha}}(\vec{\xi})/D_S$ y se conoce como ecuaci\'on de la lente. Para simplificar esta ecuaci\'on, es común definir el \'angulo de deflexi\'on reducido $\vec{\alpha}(\vec{\theta})=D_{LS} \hat{\vec{\alpha}}(\vec{\theta})/D_S$,   usando que $\vec{\xi}=D_L \vec{\theta}$.  Entonces, la ecuaci\'on de la lente se puede escribir como $\vec{\beta}=\vec{\theta}-\vec{\alpha}(\vec{\theta})$. 
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\columnwidth]{fig_lente.pdf}
+	\caption{Esquema del efecto lente gravitatoria. Los rayos de  luz provenientes de un cuásar ({\em source}) son desviados por el campo gravitatorio de la galaxia ({\em lens}) y produciendo imágenes múltiples ({\em observer}).  
+	}
+	\label{fig1}
+\end{figure}
+
+\subsection{Potencial gravitatorio y retraso temporal} \label{S_potencial}
+
+Se puede definir el potencial gravitatorio ($\psi$) o de deflexi\'on de la lente  (que ser\'a axisim\'etrico para distribuciones de masa axialmente sim\'etricas) como 
+$\vec{\alpha}(\vec{\theta})=\nabla^2 \psi = 2 \kappa (\vec{\theta})=2 \Sigma(\vec{\theta})/\Sigma_{crit}$, donde 
+\begin{equation}
+ \kappa(\vec{\theta})=\frac{\Sigma(\vec{\theta})}{\Sigma_{crit}}= \frac{4 \pi G}{c^2} \frac{D_{LS} D_L}{D_S} \Sigma(\vec{\theta})
+\end{equation}
+es la convergencia o la densidad superficial de masa adimensional y 
+\begin{equation}
+	\Sigma(\vec{\theta})=\frac{c^2}{4 \pi G} \frac{D_S}{D_{LS} D_L}, 
+\end{equation}
+es la densidad superficial de masa crítica. Esta definici\'on nos permite reescribir la ecuación de lente como
+\begin{equation}
+	\nabla \left[ \frac{1}{2} |\vec{\theta} - \vec{\beta}|^2 - \psi (\vec{\theta}) \right]=0. 
+\end{equation}
+Esto significa que, para una fuente ubicada en $\vec{\beta}$, los extremos de la funci\'on nos entrega la posici\'on de  las im\'agenes (``espejismos") de la fuente que estar\'an  situadas en $\vec{\theta}$. Esta función escalar se conoce como potencial de Fermat definido por
+\begin{equation}
+	\tau (\vec{\theta};\vec{\beta})= \frac{1}{2} |\vec{\theta} - \vec{\beta}|^2 - \psi (\vec{\theta})
+\end{equation}
+Esta funci\'on est\'a relacionada con el retraso temporal que experimenta la luz a lo largo de su trayectoria. En presencia de un campo gravitatorio, la luz se retrasa en relaci\'on a su trayectoria no perturbada por dos motivos: (i) la trayectoria desviada es m\'as larga que la no perturbada, lo que produce un retraso temporal geométrico $\Delta t_{geom}$ y (ii) el tiempo se dilata a lo largo de la trayectoria de la luz, lo que da el retraso temporal gravitatorio $\Delta t_{Shapiro}$ \citep[discutido por primera vez por][]{shapiro1964}. 
+En el caso de campo gravitatorio d\'ebil, podemos aproximarlos como (i) el retraso temporal geom\'etrico es igual a la longitud del camino desviado dividido por la velocidad de la luz y (ii) el retraso temporal gravitatorio a lo largo del camino no perturbado:
+\begin{eqnarray}
+	\Delta t_{geom}  &=&  \frac{1+z_L}{2c} \frac{D_L D_{LS}}{D_S}  |\vec{\theta}-\vec{\beta}|^2 \\
+	\Delta t_{Shapiro} & =&  -(1+z_L) \frac{D_S D_L}{D_{LS}} \psi(\vec{\theta})
+\end{eqnarray}
+donde $z_L$ es el desplazamiento al rojo de la lente. El retraso temporal total es
+\begin{eqnarray}
+\Delta t &= &\frac{1+z_L}{c}  \frac{D_S D_L}{D_{LS}} \left[ \frac{1}{2} |\vec{\theta}-\vec{\beta}|^2  - \psi(\vec{\theta}) \right] \\ 
+&=& \frac{D_{\Delta t}}{c} \tau (\vec{\theta}; \vec{\beta})
+\end{eqnarray}
+donde la distancia de retraso temporal es  $D_{\Delta t}=(1+z_L) D_L D_{S}/D_{LS}$. Como la distancia di\'ametro angular depende de $H_0$ y del modelo seleccionado para el Universo \citep{hogg1999}, $D_{\Delta t} \propto 1/H_0$. El retraso temporal ($\Delta t$) entre im\'agenes puede medirse utilizando curvas de luz (ver \ref{S_curvaluz})). La Fig. \ref{fig2} muestra las curvas de luz para un sistema observado por la colaboraci\'on {\em COSmological MOnitoring of GRAvItational Lenses} (COSMOGRAIL\footnote{\url{https://www.epfl.ch/labs/lastro/scientific-activities/cosmograil/}}). 
+Usando la configuración y la morfolog\'{\i}a de las im\'agenes se puede modelar la distribución de masa de la lente para determinar el potencial de la lente ($\xi(\vec{\theta)}$) y la posici\'on no perturbada de la fuente ($\vec{\beta}$).
+Por lo tanto, modelando la distribuci\'on de masa de la lente (asociada con $ \tau (\vec{\theta}; \vec{\beta})$) y midiendo el retraso temporal entre im\'agenes de cu\'asares, se puede calcular  $D_{\Delta t}$ y $H_0$.
+
+
+\begin{figure}[!t]
+	\centering
+	\includegraphics[width=\columnwidth]{fig_curva_luz.pdf}
+	\caption{Curva de luz (magnitud aparente vs. tiempo) observada para el sistema lente gravitatoria cu\'adruple HE$0435-1223$. La variaci\'on en flujo para cada im\'agen del cu\'asar es representada por las letras $A$, $B$, $C$, $D$. Algunas curvas han sido desplazadas en magnitud para distinguirlas (la cantidad desplazada en magnitud se indica en cada curva).  Tomado de la p\'agina web de la colaboraci\'on COSMOGRAIL.  }
+	\label{fig2}
+\end{figure}
+
+\subsection{Incertidumbres en la distribuci\'on de masa}
+
+La primera y principal fuente de error del modelado  se debe a la transformada de hoja de masa \citep[{\em mass sheet transform}, MST,][]{falco1985}. Es una degeneraci\'on matem\'atica que deja los observables de lente sin cambios, mientras reescala el retraso temporal absoluto y, por lo tanto, el $H_0$ inferido. Transforma la ecuaci\'on de la lente en $\lambda \vec{\beta}=\vec{\theta} - \lambda \vec{\alpha}(\vec{\theta}) - (1-\lambda)\vec{\theta}$ (donde $\lambda$ es el factor multiplicativo), la convergencia $\kappa_{\lambda}(\theta)=\lambda \kappa(\theta)+(1-\lambda)$, el retraso temporal  $\Delta t_{\lambda}= \lambda \Delta t$ y la constante de Hubble  $H_{0 \lambda}=\lambda H_0$ \citep{birrer2020}. La degeneraci\'on se puede levantar mediante (i) el uso de trazadores independientes del potencial gravitatorio, como por ejemplo, el uso de la cinem\'atica estelar en la galaxia lente o (ii) mediante la suposici\'on de un perfil de densidad de masa \citep[por ejemplo, una ley de potencias para las estrellas y un perfil de][para el halo de materia oscura]{navarro1997}. 
+
+La pendiente de la distribuci\'on radial de masa de la lente y la distancia de retraso temporal tienen influencia directa en los observables: dado un retraso temporal, una galaxia con una pendiente pronunciada produce un $D_{\Delta t}$ m\'as bajo que el de una con una pendiente menor. La pendiente radial de la galaxia lente puede medirse en la posici\'on de las im\'agenes usando fuentes extendidas \citep[e.g.  la galaxia anfitriona del cu\'asar con efecto lente,][]{suyu2012}.
+
+Por otro lado, las estructuras a lo largo de la l\'{\i}nea de visi\'on tambi\'en afectan los retrasos temporales observados. Las masas externas y los vac\'{\i}os provocan un enfoque y desenfoque adicional en los rayos de luz, respectivamente. Se asume que el efecto de las estructuras en la l\'{\i}nea de visi\'on pueden caracterizarse por un s\'olo par\'ametro, la convergencia externa $\kappa_{ext}$, con valores positivos para sobredensidades y negativos para subdensidades \citep{keeton2003}. Excepto en el caso de las galaxias muy cercanas a la lente, la contribuci\'on $\kappa_{ext}$ de las estructuras en la l\'{\i}nea de visi\'on a la lente es constante a lo largo del sistema.
+Un modelo de masa que no considere la convergencia externa conduce a una predicción insuficiente o excesiva de $D_{\Delta t}$ para perturbaciones en la l\'{\i}nea de visi\'on que sean sobre- o subdensos. El $D_{\Delta t}$ verdadero se relaciona con el que modela mediante la ecuaci\'on $D_{\Delta t}= D^{model}_{\Delta t}/(1- \kappa_{ext})$. 
+
+La forma de resolver estas degeneraciones son (i) utilizar informaci\'on de la cinem\'atica estelar de la galaxia lente \citep[e.g.][]{treu2002} para hacer una estimaci\'on independiente de la masa de la lente y (ii) estudiar el entorno de la lente \citep[e.g.][]{keeton2004}  para estimar $\kappa_{ext}$ directamente.
+
+
+
+\section{Medici\'on de $H_0$ usando retraso temporal} 
+
+Para lograr una medici\'on precisa de $H_0$ usando retraso temporal, es necesario: (i)  realizar mediciones rigurosas de los retrasos temporales relativos en el tiempo de llegada de im\'agenes m\'ultiples de cu\'asares; (ii) comprender la distorsi\'on a gran escala  a lo largo de la l\'{\i}nea de visi\'on; y (iii) un modelo preciso de la distribuci\'on de masa dentro de la galaxia lente.
+
+El primer problema se resuelve con un monitoreo fotom\'etrico de gran cadencia y alta precisión \citep[e.g.][]{courbin2018}, que a su vez es validado mediante simulaciones.  
+Para el segundo punto se hace una correcci\'on estad\'{\i}stica del efecto en la línea de visión de lentes gravitacionales fuertes en comparaci\'on con simulaciones num\'ericas cosmol\'ogicas \citep[e.g.][]{suyu2013}. \cite{millon2020} demostraron que los residuos de la correcci\'on en la l\'{\i}nea de visi\'on son m\'as peque\~nos que los errores generales. 
+El tercer problema se enfrenta analizando im\'agenes de alta calidad de la galaxia anfitriona de los cu\'asares con efecto lente, que provee resoluci\'on espacial para restringir los modelos de lentes \citep[e.g.][]{suyu2009}.  En estos casos, el acceso a datos con miles de pixeles (tanto para la fuente como para la lente) permite el uso de modelos m\'as complejos y flexibles en lugar de utilizar s\'olo las posiciones y flujos de las im\'agenes del cu\'asar.  
+
+
+\subsection{Medici\'on del retraso temporal} \label{S_curvaluz}
+
+Los n\'ucleos activos de galaxias ({\em Active Galactic Nuclei}, AGN) son fuentes ideales para el monitoreo porque muestran una variabilidad temporal intr\'{\i}nseca a distintas longitudes de onda y la amplitud de la variabilidad aumenta con la escala temporal. Idealmente se necesitan campa\~nas de seguimiento peri\'odicas y prolongadas, pero en la práctica est\'an limitadas por el n\'umero de noches de observaci\'on disponibles y por la falta de una cadencia uniforme.  La mayor precisi\'on en los retrasos temporales se deben a las campañas de monitoreo en observatorios dedicados a un monitoreo a largo plazo. 
+
+La colaboraci\'on COSMOGRAIL ha logrado temporadas de 8 a 12 meses de duraci\'on durante 9 a\~nos, con un promedio de intervalos de 3 a 4 d\'{\i}as \citep{treu2016}. Adem\'as, aplican la deconvoluci\'on simult\'anea de las im\'agenes fotom\'etricas individuales, utilizando un modelo puntual para las im\'agenes lente del cu\'asares y uno extendido para representar la galaxia lente y la galaxia anfitriona del AGN. La combinaci\'on de mediciones de seis sistemas lente permite obtener $H_0 =73.3^{+1.7}_{-1.8} \mathrm{km\, s}^{-1} \mathrm{Mpc}^{-1}$, una precisi\'on del 2,4\% de $H_0$ \citep{wong2020}.
+
+\subsection{Efectos en la l\'{\i}nea de visi\'on}
+
+El problema consiste en c\'omo incorporar la informaci\'on sobre las posiciones de las galaxias en la l\'{\i}nea de visi\'on que perturban los rayos de luz de la fuente sin introducir sesgos adicionales por las suposiciones sobre c\'omo se distribuye su materia oscura y c\'omo contribuye el resto de la masa en el vecindario de la lente.
+
+\cite{suyu2010} propusieron una soluci\'on para este problema que consiste en comparar la distribuci\'on num\'erica de galaxias en B$1608+656$ con distribuciones similares extra\'{\i}das de la simulaci\'on {\em Millennium}. Los efectos en la l\'{\i}nea de visi\'on se modelaron con un \'unico par\'ametro de convergencia externo. 
+
+
+\subsection{Modelado de la distribuci\'on de masa}
+
+Im\'agenes fotom\'eticas con suficiente profundidad y resoluci\'on son capaces de separar la componente puntual (n\'ucleo del AGN) de su galaxia anfitriona (con menor brillo superficial) y revelar, en muchos casos, arcos extendidos que conectan las im\'agenes puntuales.
+Idealmente, dado que estos arcos cubren miles de pixeles, se podr\'{\i}a usar la informaci\'on sobre la variaci\'on del \'angulo de deflexi\'on en cada punto para obtener el potencial gravitatorio con gran precisi\'on. 
+En la práctica, el an\'alisis est\'a limitado por la presencia de ruido y  resolución limitada.  Sin embargo, observaciones con {\em Full Width at Half Maximum} (FWHM) de 0.1'' a 0.2'' generan buenos resultados si hay un modelo adecuado para la {\em Point Spread Function} (PSF) del instrumento utilizado. 
+
+El modelo matem\'atico utilizado debe describir tres componentes: (i) el brillo superficial de la fuente, (ii) el brillo superficial de la lente, (iii) el potencial gravitatorio de la lente. En principio, cada componente puede describirse mediante funciones simples (como el perfil de S\'ersic o el elipsoide singular isotermo) o combinado con modelos m\'as complicados.  
+Es importante mantener un equilibrio entre la necesidad de imponer restricciones y la flexibilidad para obtener una estimaci\'on realista, el primero puede dar lugar a errores subestimados y el segundo a una p\'erdidad de precisi\'on.
+
+
+
+\section{B\'usqueda de nuevos sistemas lente}
+
+Una de las mayores limitaciones que enfrenta la estimaci\'on de $H_0$ mediante el uso del efecto lente gravitatoria es el n\'umero relativamente peque\~no de sistemas a los que se puede aplicar. Hasta 2015 se conoc\'{\i}a alrededor de 200 sistemas lente cu\'asar, recopilados por la colaboraci\'on {\em CfA-Arizona Space Telescope LEns Survey} (CASTLES\footnote{\url{https://lweb.cfa.harvard.edu/castles/}}). Sin embargo, no todos los sistemas son adecuados para estimar el retraso temporal (e.g. pares de im\'agenes cercanas dif\'{\i}ciles de resolver con telescopios de 2-4~m, configuraciones sim\'etricas que dan lugar a retrasos temporales de $\lesssim 5$ d\'{\i}as), restringiendo el estudio a unas pocas decenas de objetos. 
+
+Dos criterios necesarios para considerar un objeto como lente gravitatoria son: (i) im\'agenes m\'ultiples claramente identificadas y (ii) que la configuraci\'on de las im\'agenes sea reproducida por un modelo simple. El segundo criterio es importante porque nos permite eliminar contaminantes tales como regiones HII, cu\'asares binarios con colores diferentes.  Con un seguimiento posterior, el desplazamiento al rojo de la fuente y la lente son necesarios para establecer el modelo lente.
+
+
+La aparici\'on de una nueva generaci\'on de relevamientos de gran campo propici\'o la b\'usqueda de nuevos sistemas lente. Por ejemplo, la colaboraci\'on {\em STRong lensing Insights into Dark Energy Survey} \cite[STRIDES\footnote{\url{http://strides.astro.ucla.edu}},][]{treu2018} utiliz\'o el {\em Dark Energy Survey} (DES) para buscar nuevos sistemas cu\'asares con efecto lente.  M\'as recientemente, la colaboraci\'on {\em Time Delay Cosmography} (TDCosmo\footnote{\url{https://obswww.unige.ch/~lemon/tdcosmo-master/index.html}}), que engloba STRIDES y COSMOGRAIL, ha descubierto $\approx 200$ nuevos sistemas. 
+Para las estimaciones de retraso temporal, se prefiere los cuádruples porque proporcionan mejores restricciones (la posibilidad de arcos producidos por la galaxia anfitriona del cu\'asar) y tres retrasos temporales por sistema (en lugar de uno producido por un sistema doble). Sin embargo, esta configuraci\'on es un evento raro y por eso la importancia de que TDCosmo haya triplicado el n\'umero de cu\'adruples conocido  \citep[agregando 30 sistemas a los 15 conocidos,][]{shajib2019, schmidt2023}. 
+
+\section{Comentarios finales}
+
+Como mencionamos anteriormente, la mayor limitaci\'on para la estimaci\'on de $H_0$ a partir de cu\'asares con efecto lente es el tama\~no de la muestra. Se necesita un aumento significativo, que probablemente se obtenga en esta d\'ecada gracias a grandes relevamientos. Aquellos en el dominio temporal (como el Observatorio Rubin\footnote{\url{https://rubinobservatory.org}}) tendr\'an la ventaja de proporcionar retrasos temporales, aunque todav\'{\i}a ser\'a necesario el seguimiento espectrosc\'opico para obtener el desplazamiento al rojo de la fuente y de la lente e investigar la contribuci\'on de materia en la l\'{\i}nea de visi\'on a la lente, as\'{\i} como im\'agenes fotom\'etricas profundas y de alta resoluci\'on para obtener un modelo lente de precisi\'on. 
+
+La posibilidad de tener $10\,000$ candidatos a sistema lente gravitatoria \citep{treu2010}, pone de relieve la necesidad de automatizar el modelado y de priorizar estrategias para el posterior seguimiento (espectrosc\'opico y de alta resoluci\'on). 
+
+
+
+
+
+\begin{acknowledgement}
+La autora agradece a los organizadores de la 65ta Reuni\'on Anual de la Asociaci\'on Argentina de Astronom\'{\i}a por su invitaci\'on a presentar este informe y a los Editores de este Bolet\'{\i}n por su paciencia con la autora durante la preparaci\'on de este manuscrito.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

@@ -1,0 +1,417 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{07 June 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{The multipurpose interferometric array [MIA] and the development of its technological demonstrator}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Multipurpose Interferometric Array [MIA]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+G. Gancio\inst{1},
+G.E. Romero\inst{1},
+P. Benaglia\inst{1},
+J.M. González\inst{1},
+E. Rasztocky\inst{1},
+H. Command\inst{1},
+G. Valdez\inst{1},
+E. Tarcetti\inst{1},
+F. Hauscarriaga\inst{1},
+P. Alarcón\inst{1},
+F. Aquino\inst{1},
+M. Alí\inst{1},
+L.F. Cabral\inst{1},
+D. Capuccio\inst{1},
+M. Contreras\inst{1},
+E. Díaz\inst{1},
+N. Duarte\inst{1},
+L.M. García\inst{1},
+D. Perilli\inst{1},
+P. Otonello\inst{1} \&
+S. Spagnolo\inst{1}
+}
+
+\authorrunning{Gancio et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{ggancio@iar-conicet.gov.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto Argentino de Radioastronomía, CONICET--CICPBA--UNLP, Argentina}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Presentamos una propuesta para la construcción y desarrollo de un nuevo instrumento para observaciones radioastronómicas basado en técnicas interferométricas, que proporcionará alta resolución angular en la banda de 21 cm, con la intención de mejorar y ampliar las prestaciones actuales de los instrumentos utilizados en el Instituto Argentino de Radioastronomía. Esto permitirá realizar investigación científica competitiva a nivel internacional y adquirir conocimientos científicos y tecnológicos de vanguardia en las técnicas mencionadas, posibilitando mediciones interferométricas y el desarrollo de técnicas de línea de base muy larga o VLBI. El proyecto se denomina MIA por sus siglas en inglés ``Multipurpose Interferometric Array''.
+Para el desarrollo de este instrumento,  actualmente se esta construyendo un pathfinder de tres antenas con sus etapas de  diseño mecánico, control de posicionamiento, sistemas de radiofrecuencia, adquisición y procesamiento.
+En este trabajo se detallará el estado de cada etapa, junto al plan a corto plazo y el soporte financiero.}
+
+\abstract{We present a proposal for the construction and development of a new instrument for radio astronomical observations based on interferometric techniques, that will provide high angular resolution in the 21 cm band, with the intention of improving and extending the current performance of the instruments used at the Argentine Institute of Radio Astronomy. This will allow internationally competitive scientific research and the acquisition of cutting-edge scientific and technological know-how in the aforementioned techniques, enabling interferometric measurements and the development of very long baseline or VLBI techniques. This project is called MIA, an acronym for ``Multipurpose Interferometric Array''.
+For the development of this instrument, a three-antenna pathfinder with its mechanical design, positioning control, radio frequency systems, acquisition and processing stages is currently under development.
+This paper will detail the status of each stage, together with the short-term plan and financial support.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ techniques: interferometric --- instrumentation: interferometers }
+\begin{document}
+\maketitle
+\section{Multipurpose Interferometric Array, the big picture}
+\label{sec:intro}
+Interferometry is a method of observing celestial sources based on the principle of wave interference, where radio signals picked up by multiple antennas are combined and processed to form detailed images of astronomical sources. By adding or subtracting the signals in phase, interference patterns can be obtained that reveal information about the structure and location of the observed sources.
+
+The Multipurpose Interferometric Array (MIA) is a groundbreaking radio astronomical instrument in South America, designed to offer high angular resolution in the 21 cm band. By using interferometric techniques, where signals from multiple antennas are combined to synthesize a single, high-resolution astronomical image, MIA aims to enhance scientific research capabilities at the Argentine Institute of Radio Astronomy, fostering international collaboration and advancing expertise in interferometry within Argentina.
+
+Initially a low-cost setup, MIA will grow with time in different phases. Phase-0 will be a pathfinder built at IAR to prove the technology. Phase-1 will consist of 16 antennas, and consecutive phases could potentially grow up to 64 antennas. All the antennas are linked to a central processing unit for data analysis. Its high sensitivity enables precise detection of faint radio sources across a frequency range of 1 GHz to 2.3 GHz, facilitating diverse scientific investigations including transient phenomena, pulsar timing, and X-ray binary studies.
+
+MIA's broad scientific potential encompasses research on gamma-ray bursts, fast radio bursts, magnetar flares, and unidentified gamma-ray sources. It also enables studies on active galactic nuclei variability, supernova remnants morphology, and cosmological HI line observations, offering insights into the reionization epoch and interstellar medium dynamics.
+
+Furthermore, MIA supports investigations into ionized hydrogen regions, OH maser variability in star-forming regions, and extended star-forming regions, shedding light on their dynamics and physical characteristics. Collaborative ventures with international observatories are facilitated, leveraging MIA's sensitivity and unique South American location to enrich astrophysical research both locally and globally, thus contributing to our understanding of the Universe.
+
+\begin{figure}[!t]
+  \includegraphics[width=\columnwidth]{star_16.png}
+  \caption{\emph{View of 16 antennas in a star-shaped proposal.}}
+  \label{fig:16-ant}
+\end{figure}
+
+Figure~\ref{fig:16-ant} shows one of the possible configurations under study for the location of the Phase-1 sixteen antennas; with this configuration, using a simulation software called The Friendly Virtual Radio Interferometer\footnote{\url{https://crpurcell.github.io/friendlyVRI/}}, we can evaluate the response to an observation shown in Figure~\ref{fig:sim16}.
+
+\begin{figure}[!t]
+  \includegraphics[width=\columnwidth]{simu_res_3.png}
+  \caption{\emph{Response of 16 antennas in the layout proposed in Figure~\ref{fig:16-ant}. The left image represents the astronomical object to observe, the middle plot shows the u-v coverage for the simulated observation, and the right image shows the resulting image. The remaining plots illustrate the synthesized beam process.}}
+  \label{fig:sim16}
+\end{figure}
+
+
+\section{Road to Construction and Financial Support}
+\label{sec:construction}
+
+The MIA project is strategically designed to be cost-effective, leveraging local manufacturing and assembly to support the regional economy and create employment opportunities. Collaboration with international partners is sought to secure financial backing for various project phases, including antenna construction, central node installation, and data processing systems, ensuring project success and sustainability.
+
+Local institutions are invited to participate, particularly in site selection, to ensure optimal interferometer functionality by considering factors like accessibility, existing infrastructure, and radio interference. Lessons learned from previous projects and similar instruments such as the Deep Synoptic Array 110 (DSA-110) and the Karoo Array Telescope (KAT-7) have been incorporated, tailoring systems specifically for MIA while addressing project-specific requirements and characteristics.
+
+The technical summary of the MIA project includes a total of 16 antennas for Phase 1, each with a diameter of 5 m and an alt-azimuth mount. The minimum baseline for the antennas is approximately 50 meters, while the maximum baseline is 55 km. The interferometer has a minimum angular resolution of 1.5 arcsec at 1420 MHz / 50 km and a receiver temperature of less than 50 K.
+
+The MIA project operates in the frequency range of 1 to 2.3 GHz and digitizes the signals received in each antenna. The final bandwidth of the system is 1000 MHz and the correlation of the signals takes place in a central node. In addition, the interferometer has the capability to add antennas to both the central core and the external antennas, allowing for future expansion and development of the system.
+
+The full technical summary is presented below:
+\begin{itemize}
+    \item Number of antennas for Phase 1: 16.
+    \item Diameter of each antenna = 5 m (with alt-azimuth mount).
+    \item Minimum baseline = 50 m.
+    \item Maximum baseline = 55 km.
+    \item Minimum angular resolution = 1.5 arcsec at 1420 MHz / 50 km.
+    \item Receiver temperature = 65K.
+    \item Operating frequency = 1 to 2.3 GHz.
+    \item Digitization in each antenna.
+    \item Final bandwidth of 1000 MHz.
+    \item Correlation in a central node.
+    \item Ability to add antennas both to the central node and beyond the external antennas.
+\end{itemize}
+
+\section{Short term plan}
+\label{sec:plan}
+
+
+The short-term plan for the MIA project, which is currently underway, is to design and build a pathfinder instrument consisting of three antennas to be installed in the IAR, with multiple objectives as a technology demonstrator, human resource training, and scientific data validation. The primary goal is to develop the technical skills necessary to build a larger interferometer, which will include the development and testing of interferometric observing techniques and the creation of data acquisition and processing programs.
+
+ For the Pathfinder we applied the same kind of simulation to understand their response using a 100~m baseline; Fig.~\ref{fig:mia3sim} shows the results of the simulation while  Fig.~\ref{fig:mia3site} shows the proposed location of the elements to be installed at IAR.
+
+\begin{figure}[!t]
+  \centering
+  \includegraphics[width=\columnwidth]{mia_3_sim_3.png}
+  \caption{\emph{Simulated response of the pathfinder. The left image represents the astronomical object to observe, the middle plot shows the u-v coverage for the simulated observation, and the right image shows the resulting image. The remaining plots illustrate the synthesized beam process.}}
+  \label{fig:mia3sim}
+\end{figure}
+
+\begin{figure}[!t]
+  \includegraphics[width=\columnwidth]{mia_3_site_2.jpg}
+  \caption{\emph{Proposed location for Pathfinder antennas within the IAR.}}
+  \label{fig:mia3site}
+\end{figure}
+
+
+The short-term plan for MIA includes training new technical and scientific talent through university internships, graduate theses, and Ph.D. programs in engineering and astronomy. This initiative aims to cultivate skilled professionals who can contribute to the project's success and future expansion.
+
+Scientifically, the short-term objective is to validate the data collected by the MIA interferometer, emphasizing reproducibility and verification by the scientific community.
+
+Funding for the Pathfinder project is secured through CONICET-PUE\footnote{\url{https://convocatorias.conicet.gov.ar/proyectos-de-investigacion-de-ue-conicet/}} program for research centers, primarily allocated for the development of the complete system, including antennas, front-end and back-end systems, digitizers, and processing units.
+
+Key requirements for MIA Pathfinder involve designing and constructing the antenna structure at the IAR, featuring a 5 m parabolic dish with Alt-Azimuth movements. Front-end and back-end systems, designed and built at the IAR, operate within a frequency range of 1 GHz to 2 GHz, with linear polarization and RF link via analog fiber optic.
+
+Digitizers and processing systems utilize CASPER tools, employing SNAP boards with a total bandwidth of 1500 MHz across three antennas and two polarizations. Data processing involves CPU/GPU systems, with transmission facilitated over a 10 Gbps network.
+
+The personnel involved in the MIA Pathfinder project include a Ph.D. student for antenna distribution and optimization, IAR technical staff for electronics, mechanics, IT, and Electronic Engineering students from the La Plata National University, whose thesis on related topics such as RF systems, digitizers, and correlation, with the aid of scientific researchers.
+
+\section{Current Status}
+\label{sec:status}
+The MIA project has made significant progress up to its current state, and included several critical components in the design, test, and integration process. Especially, in the design of its radio frequency front-end, which is currently being tested for functionality and integration with the telemetry electronics. This front-end design is a critical component of the MIA-Phase 1 signal processing chain as it receives incoming signals from the 16 antennas and converts them to digital signals for processing. The antenna feed is designed as a board antenna called Vivaldi, which has two linear polarizations. The RF stages consist of low noise amplifiers and bandwidth limiting filters and the RFoF modules, all designed, integrated and tested at the IAR.
+
+Figure~\ref{fig:antcai} shows the Vivaldi antenna being tested in the IAR anechoic chamber.
+
+\begin{figure}[!t]
+  \includegraphics[width=\columnwidth]{vivaldi_1.png}
+  \caption{\emph{Measurement of the Vivaldi antenna at IAR anechoic chamber (2023).}}
+  \label{fig:antcai}
+\end{figure}
+
+The MIA project has reached a major milestone with the construction of the first 5-m parabolic dish. This task represents a significant step forward in the development of the Pathfinder. The technical staff has used its expertise to design the antenna structure and perform simulations using CAD models. The results of these simulations were used to guide the construction phase Fig.~\ref{fig:complete}. In addition, the mount and support structure for the dish are currently under development. An alt-azimuth mount has been incorporated into the dish design to allow precise pointing and tracking of astronomical sources. The project is focused on developing and perfecting the control systems for the dish to ensure optimal performance.
+
+The digitizer unit is pivotal to both the MIA system and its Pathfinder, facilitating the acquisition and processing of astronomical data. It functions by converting analog signals from antennas into digital format for correlation. Utilizing a SNAP CASPER board, featuring a Field Programmable Gate Array (FPGA), enables real-time digital signal processing with high data throughput.
+
+Programmable via CASPER toolflow, the FPGA executes custom signal processing algorithms tailored to MIA's requirements. Operating within a bandwidth of 1500 MHz across three antennas and two polarizations, the digitizer transmits data over a 10 Gbps network to the correlator for image production.
+
+Efforts are directed towards optimizing the digitizer's performance by refining CASPER firmware and FPGA resource allocation to enhance processing speed and minimize power consumption. Additionally, software tools are under development to analyze acquired data, identifying and mitigating noise or interference. Overall, the digitizer unit is integral to the success of the MIA system.
+
+\begin{figure}[!t]
+  \includegraphics[width=\columnwidth]{ant_mia_assembed.png}
+  \caption{\emph{View of the first complete parabolic aluminum dish (2023).}}
+  \label{fig:complete}
+\end{figure}
+
+\section{Future development}
+Once the design has been validated, it is planned to continue with the development of the 16 antenna MIA (MIA-16). A site selection campaign is planned for MIA-16. The campaign will involve a general survey of the site, such as existing infrastructure, power lines, access, etc. In addition, measurements of electromagnetic interference at the frequency of interest will be carried out with portable equipment. The development of this project is of great importance and strategic for the development of radio astronomy in Argentina. Thus, it is possible to achieve remarkable scientific-technological results.
+
+\section{Summary}
+\label{sec:Summary}
+We have started the development of a new instrument for radio astronomy research with the aim of expanding the actual scientific capabilities of the IAR.
+We are currently studying antenna distribution and optimal array configuration, and in the process of verifying the first electronic modules and system parts of the Pathfinder, such as the front-end, back-end, digitizers, etc. The enterprise will permit us in principle the following:
+\begin{itemize}
+\item To acquire new know-how on radio interferometry from a technical point of view to add it to our current experience on single dish astronomy; 
+\item To increase the know-how and the possibilities for technology transfer;
+\item To build a competitive instrument for Argentina and the Latin American scientific community.
+\end{itemize}			
+In conclusion, the MIA project is a unique and innovative initiative aimed at promoting scientific and technological research in Argentina. The project has been designed to be low cost and to allow the participation of local companies and institutions, which will contribute to the local economy and create opportunities for knowledge exchange. With its high angular resolution and advanced technical capabilities, MIA is expected to make significant contributions to various fields of astrophysics and advance our understanding of the universe.
+
+\begin{acknowledgement}
+We extend our gratitude to the entire staff of IAR for their effort and dedication towards the successful execution of the project objectives. We acknowledge the crucial financial backing provided by the CONICET grants of the program PUE 2020 assigned to the IAR, which has enabled the realization of the present work.
+\end{acknowledgement}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure} ... \end{figure}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

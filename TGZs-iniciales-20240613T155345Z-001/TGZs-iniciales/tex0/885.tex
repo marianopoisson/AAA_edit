@@ -1,0 +1,358 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Neural calibration of imaging Stokes polarimeters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Neural calibration of imaging Stokes polarimeters}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+F.A. Iglesias\inst{1,2},
+A. Asensio Ramos\inst{3,4},
+M. Sanchez\inst{1}
+\&
+A. Feller\inst{5}
+}
+
+\authorrunning{Iglesias et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{franciscoaiglesias@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Grupo de Estudios en Heliofísica de Mendoza, Universidad de Mendoza, Argentina\and   
+Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina
+\and
+ Instituto de Astrofísica de Canarias, España
+\and
+Departamento de Astrofísica, Universidad de La Laguna, España
+\and
+MPI für Sonnensystemforschung, Alemania
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Las técnicas actuales de calibración polarimétrica derivan la matriz de modulación del instrumento ajustando numéricamente un modelo instrumental a las mediciones de un conjunto de vectores de Stokes de calibración. Estas técnicas suelen estar limitadas a un error en la recuperación de los parámetros Stokes Q, U y V normalizados, en el rango de $1\times10^{-2}$ a $1\times10^{-3}$. Este error suele aumentar cuando la respuesta del instrumento varía considerablemente a lo largo de su campo de visión y/o cuando existen efectos instrumentales que no están incluidos en el modelo de calibración asumido, como la no linealidad de la cámara. En este trabajo, proponemos una nueva técnica para calibrar polarímetros basada en un modelo compuesto por redes neuronales multicapa (NN). Este modelo está entrenado para aprender la matriz de modulación del instrumento dada una serie de parámetros de entrada, utilizando los mismos datos de calibración que se adquieren para las técnicas actuales. La principal ventaja de nuestro enfoque basado en NN es su flexibilidad para incorporar efectos instrumentales para los que no se dispone de un modelo preciso y, posiblemente mediante la fusión de datos de otros tipos de calibraciones relevantes, obtener una respuesta del instrumento más precisa. Presentamos un resultado preliminar del rendimiento de nuestro modelo utilizando datos sintéticos, donde se conoce la verdadera respuesta del instrumento.}
+
+\abstract{Current polarimetric calibration techniques derive the instrument modulation matrix by numerically fitting an instrumental model to measurements of a set of calibration Stokes vectors. These techniques are typically limited to an error on the retrieved normalized Stokes Q, U and V parameters, in the $1\times10^{-2}$ to $1\times10^{-3}$ range. This error commonly increases when the instrument response varies considerably across its field of view and/or when instrumental effects are present, which are not included in the assumed calibration model, such as camera non-linearity. We propose a new technique to calibrate Stokes polarimeters based on a model composed of fully-connected, multi-layer neural networks (NN's). This model is trained to learn the instrument modulation matrix given a set of input parameters, using the same calibration data that is acquired for the current techniques. The main advantage of our NN-based approach is its flexibility to incorporate instrumental effects for which no accurate model is available and, possibly through the fusion of data from other types of relevant calibrations, obtain a more accurate instrument response. We present a preliminary result of our model performance using synthetic data, where the ground truth is known.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ instrumentation: polarimeters --- Sun: magnetic fields --- instrumentation: high angular resolution}
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+During polarimetric calibration, we aim at obtaining the instrument transfer function, commonly given by its polarimetric modulation matrix ($O$), such that the modulated intensities ($\hat{I}_l$) registered for an input Stokes vector ($\hat{S}_l$) are: $\hat{I}_l = OS_l$. The matrix $O$ is of dimensions $4xM$ for a polarimeter with $M$ modulation states and, once measured ($\hat{O}$), it can be used to demodulate science data by doing $\hat{S}_l = \hat{O}^{-1}\hat{I}_l$. During calibration, a polarization state generator (PSG) is placed in front of the polarimeter to produce a set of different input Stokes vectors. The vector generated during the $l-th$ measurement can be written in matrix form as $S_{psg,l} = M_{psg}(\delta_l,\Phi_l,\Theta_l)[I_{src,l}\,0\,0\,0]^T$, where $M_{psg}(\delta_l,\Phi_l,\Theta_l)$ and $I_{src,l}$ are the PSG Mueller matrix, PSG retarder retardance and position angle, the PSG polarizer position angle, and the PSG input intensity level, respectively. Multiple calibration inputs are generated with the PSG to form a set of simultaneous equations. The current approaches derive an estimation of $O$, $\hat{O}$, from such a calibration data via Least Squares Minimization (LSM). If only $\hat{O}$ is a free parameter, the problem is linear and can be solved using the pseudo-inverse of $\hat{I}S_{psg}$ \citep{collados1999}. If one also include as unknowns $\delta_l$, $\Phi_l$, and $I_{src,l}$, the problem becomes non-linear and is solved using an appropriate minimization algorithm (e.g. Levenberg-Marquardt). The current approaches are: \\
+
+\begin{itemize}
+    \item[a)] Modeled modulation matrix \citep{collados1999}: The matrix $\hat{O}$ is modeled with few free parameters that are found, possibly along with parameters in $M_{psg}$, by LSM of $E_{s1} = \hat{O}^{-1}\hat{I}_l - S_{psg,l}$ or $E_I = \hat{O}^{-1} - S_{psg,l}$. \\
+    \item[b)] Modulation matrix \citep{beck2005}: All the $4xM$ elements of $\hat{O}$ (or $\hat{O}^{-1}$, possibly along with parameters in $M_{psg}$, are found by LSM of $E_{s1}$ or $E_Ih$. This is the most widespread method. \\
+    \item[c)] Response Matrix \citep{ichimoto2008}: A known theoretical demodulation matrix $O_{mod}^{-1}$ is used to fit only the $4x4$ elements of a response matrix, $\hat{X}$, by LSM of $E_{S2} = \hat{X}O_{mod}^{-1} \hat{I_l} - S_{psg,l}$. \\
+\end{itemize}
+
+The fits are typically done independently per pixel using binned calibration data, to reduce the influence of noise and still fit the variation of $\hat{O}$ across the instrument Field of View (FOV). The main limitations of these approach are:
+
+\begin{itemize}
+    \item[i.] In case of $\delta_l$, $\Phi_l,$ and $I_{src,l}$ vary across the FOV, the PSG rotation couples the calibration equations of the different pixels. Performing the fit of all the pixels simultaneously is computationally very expensive for large size detectors. \\
+    \item[ii.] The calibration model and the scaling of the computational complexity do not favour the simultaneous fitting of various data sources that may benefit from it. For example, in a dual beam polarimeter, the correct approach is to simultaneously fit a single $M_{psg}$ and two $\hat{O}$, one per channel. \\
+    \item[iii.] The minimum values reached on the normalized $E_{S1}$ (or $E_{S2}$) are limited to the $10^{-2}$ to $10^{-3}$ range, even when photon noise in the calibration measurements is an order of magnitude lower. This is most likely due to features and/or artefacts no considered in the polarization model, such as camera non-linearity. Including such effects via detail modeling is a laborious and heavily instrument dependent.\\
+\end{itemize}
+
+To tackle this limitations, we propose a new technique to calibrate imaging Stokes polarimeters based on a model composed of multi-layer neural networks (NN's).
+
+
+
+\section{Instrument and calibration measurements simulation}
+
+We developed a numeric simulation code {\sc(SUSIM)} that models the polarimetric aspects of the Sunrise Ultraviolet Spectropolarimeter and Imager (SUSI, see \citealt{Feller2020}) using the Mueller matrices of all the optical components in the beam path. {\sc SUSIM} also incorporates a simple camera model, including sensor bias, conversion gain, noise and non-linearity. The {\sc SUSIM} model parameters can be set to vary across the FOV to study the polarimetric effects of various instrumental artifacts. SUSI is a scanning slit-spectrograph that includes a dual-beam polarimeter, see Fig.~\ref{fig:susi_layout}. We produced two types of synthetic data sets to assess the neural calibration accuracy and compare it to the calibration method (b):
+
+\begin{itemize}
+    \item Polarimetric calibration: A total of $40$ different $S_{psg,l}$ are generated for each calibration simulation, by changing the nominal PSG position angles, $\Phi_l$, $\Theta_l$. We use 10 values of $\Theta=\{0,90,135,255\}$deg.\\
+    \item Science measurements: We input to SUSIM synthetic full-Stokes images of the Solar photosphere obtained with the MSP/University of Chicago Radiactive MHD code (MURaM, see \citep{Przybylski2022}.
+\end{itemize}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=\columnwidth]{susi_layout.png}
+    \caption{Optical layout of SUSI narrow-band channel}
+    \label{fig:susi_layout}
+\end{figure}
+
+\section{Neural calibration model}
+
+We model the main quantities involved in the calibration by implicit representations using simple NN's, wich are trained to learn the polarimeter $\hat{O}$ ($\text{NN}_O$), and errors in the PSG $\delta_l (\text{NN}_\delta)$, $\Phi (\text{NN}_\Phi$), and $I_{src,l} (\text{NN}_l$), see Fig.~\ref{fig:dataflow_diagram}. The input and outputs of $\text{NN}_O$ are the pixels coordinates $\{x,y\}$ and the $4xM$ elements of $\hat{O}$, respectively. We have tested a more general model, where instead of $\text{NN}_O$ there is a NN using realistic calibration data. This is because the PSG's used in practice produce only totally polarized light, limiting the training dataset to only a small subset of possible inputs, i.e., the surface of the Poincare sphere. The three NN's outputting quantities that vary with the PSG configuration have as input the measurement index, $l$, or the corresponding rotated pixel coordinates $\{x',y'\}$. We implemented our model in PyTorch, other details are specified in Fig.~\ref{fig:dataflow_diagram}.
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{dataflow_diagram.png}
+    \caption{Block diagram showing the data flow and main components of the proposed neural calibration model. Input data, NNs and computation steps are shown in orange, green, and blue boxes, respectively. The text inside the NN boxes specifies the input, hidden layer, and output dimensions. In this implementation, we use fully-connected, multi-layer perceptrons with ELU activation functions for all NNs. We train the model for $\approx$3k epochs, with each batch consisting of $8\times8\,\text{px}^2$ patches taken randomly from input calibration images. Moreover, we adopt the Adam minimization algorithm and the CosineAnnealingRL scheduler for the learning rate.}
+    \label{fig:dataflow_diagram}
+\end{figure*}
+
+\section{Preliminary results}
+As a basic test of the neural approach, we produce two simulations. First a calibration measurement simulation where the exact behavior of the PSG is known, thus, $\text{NN}_\delta$, $\text{NN}_\Phi$ and $\text{NN}_I$ are not included in the neural model. The obtained calibration errors are shown in Fig.~\ref{fig:true_measured_diff} and  \ref{fig:neural_true_measured_diff}, showing a similar performance of both methods. Second, we used the calibration results to demodulate simulated solar measurements. The known input of the solar measurement simulation is a synthetic Stokes spectrogram obtained with the MPS/University of Chicago Radiative MHD ({\sc MURAM}) code, including both quiet-Sun and a pore region around the 365~nm region. The different between simulate and true solar signals are shown in  Fig.\ref{fig:stokes_error} and \ref{fig:neural_stokes_error}.
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{true_measured_diff.png}
+    \caption{True ($\text{S}_{true}$) and measured ($\text{S}_{meas}$) calibration Stokes parameters \emph{(see the panels titles)} for method (b), along with their difference \emph{(Diff., see the legend)}. For all quantities we plot the average over the image area for all the 40 calibration inputs (PSG position). Stokes Q, U and V are normalized with Stokes I and Stokes I is normalized to its value for the first calibration input.}
+    \label{fig:true_measured_diff}
+\end{figure*}
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{neural_true_measured_diff.png}
+    \caption{Same as Fig.~\ref{fig:true_measured_diff} for the neural calibration method. Note that the difference is larger than for method (b), however is well below the $1\times10^{-3}$ achieved in real cases.}
+    \label{fig:neural_true_measured_diff}
+\end{figure*}
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{stokes_error.png}
+    \caption{Difference between true and measured Stokes parameters \emph{(see horizontal axes label in each panel)} for the simulated solar measurement, versus Stokes signal level. These errors were obtained using calibration method (b).}
+    \label{fig:stokes_error}
+\end{figure*}
+
+\begin{figure*}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{neural_stokes_error.png}
+    \caption{Same as Fig.~\ref{fig:stokes_error} for the neural calibration. The error levels are similar, to method (b), except for a slightly better performance in Stokes V. This, despite the neural approach having a larger calibration error, see Fig.~\ref{fig:neural_true_measured_diff}.}
+    \label{fig:neural_stokes_error}
+\end{figure*}
+
+The future steps to improve the model flexibility to account for more realistic calibration scenarios are (a) Simulate unknowns in the PSG to assess $\text{NN}_\delta$, $\text{NN}_\Phi$ and $\text{NN}_I$ performance, (b) Study using penalties in the loss function to enforce the physicality of $O$, (d) Simulate a more realistic calibration, e.g., including camera NL and straylight, to evaluate the flexibility of the neural architecture to incorporate other sources of calibration data.
+
+\begin{acknowledgement}
+%Los agradecimientos deben agregarse usando el entorno correspondiente 
+FAI and MS are supported by The Max Planck Partner Group between the University of Mendoza and the Max Planck Institute for Solar System Research in Germany.
+\end{acknowledgement}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{iglesias}
+ 
+\end{document}

@@ -1,0 +1,360 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Instrumentos resguardados por el Museo del OAC: \\ Divisor pupilar de Platzeck}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Divisor pupilar de Platzeck}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+S. Paolantonio\inst{1}
+}
+
+\authorrunning{Paolantonio S.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{spaolantonio@unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Museo del Observatorio Astronómico de Córdoba, UNC, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El “Divisor Pupilar de Platzeck” es uno de los elementos más singulares de la colección de instrumentos del Museo del Observatorio Astronómico de Córdoba (MOA). Este dispositivo, ideado y construido por el célebre óptico Ricardo Platzeck en los talleres del Observatorio Nacional Argentino, fue pensado para trabajar en conjunto con el Espectrógrafo Estelar I, instalado en el telescopio de 1,54 m de la Estación Astrofísica de Bosque Alegre. Su objeto era aumentar las prestaciones del instrumento al menos en un factor 3. Aunque se pudo emplear exitosamente en la década de 1950, obteniéndose cientos de espectros, su existencia prácticamente ha caído en el olvido. A excepción de escuetas descripciones, no se encuentran publicaciones con detalles sobre su diseño y forma de montaje. La investigación en curso, llevada adelante utilizando documentación original, un croquis constructivo recientemente identificado por el autor y el análisis del dispositivo, ha permitido determinar las circunstancias en que se dio el desarrollo y realizar una descripción del mismo, a la vez de plantear una hipótesis sobre las causas de la interrupción de su empleo. Este es un singular debido a que su generalización hubiera resultado sumamente beneficiosa para el desarrollo de la espectroscopia estelar. Faltan precisar la forma de montaje en el espectrógrafo, el funcionamiento del orientador y la técnica de observación empleada. El Divisor Pupilar, obra cumbre de Ricardo Platzeck, debe ubicarse entre los grandes logros de la ciencia y la tecnología nacional.}
+
+\abstract{The “Platzeck´s Pupillary Splitter”  is one of the most singular elements in the instrument collection of the Córdoba Astronomical Observatory Museum (MOA). This device, designed and built by the famous optician Ricardo Platzeck in the workshops of the Argentine National Observatory, was designed to work together with the Stellar Spectrograph I, installed on the 1.54 m telescope of the Bosque Alegre Astrophysical Station. Its aim was to increase the performance of the instrument by at least a factor of 3. Although it could be used successfully in the 1950s, obtaining hundreds of spectra, its existence has practically fallen into oblivion. Except for brief descriptions, there are no publications with details about its design and assembly. The ongoing research, carried out using original documentation, a construction sketch recently identified by the author and the analysis of the device, has made it possible to determine the circumstances under which the development occurred and to make a description of it, while at the same time posing a hypothesis on the causes of the interruption of its use. This was a singular fact because its generalization would have been extremely beneficial for the development of stellar spectroscopy. The way it is mounted in the spectrograph, the operation of the orienteer and the observation technique used remain to be specified. The Pupillary Splitter, Ricardo Platzeck's masterpiece, must be placed among the great achievements of national science and technology.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ history and philosophy of astronomy --- instrumentation: miscellaneous }
+
+\begin{document}
+
+\maketitle
+\section{Desarrollo del dispositivo}\label{S_intro}
+
+Al año siguiente de la inauguración de la Estación Astrofísica de Bosque Alegre, ocurrida el 5 de julio de 1942, entró en servicio con muy buenos resultados el Espectrógrafo Estelar I, diseñado y fabricado en el Observatorio Nacional Argentino \citep{Paolantonio2023}. Poco más tarde, el óptico Ricardo Platzeck \citep{Paolantonio2016} comenzó a imaginar un dispositivo que permitiera aumentar el rendimiento del instrumento. 
+
+El 21 de septiembre de 1947, en ocasión de la 10\textsuperscript{ma} Reunión de la Asociación Física Argentina (AFA) realizada en la ciudad de La Plata,  Platzeck planteó su intención y expuso un breve adelanto del trabajo que estaba realizando:
+\\
+\\
+\textit{“Sólo una pequeña parte de la imagen estelar producida por un reflector grande entra en la ranura de un espectrógrafo …. En Bosque Alegre las imágenes tienen en promedio más de 3"  de diámetro y la abertura óptima de la ranura del espectrógrafo I (40 Å/mm) es de 0,7". Se ha ideado un dispositivo que permite abrir la ranura hasta 5 veces más, sin modificar la calidad del espectro... Se ha diseñado y construido un dispositivo tal …”} \citep{1948Platzeck}
+\\
+\\
+De acuerdo a la descripción que realiza, el dispositivo consistía en dos juegos de prismas, el primero interceptaba la luz proveniente del telescopio dividiéndola en un cierto número de haces de secciones rectangulares, desviándolos de manera de proyectar sobre la ranura una serie de imágenes alineadas y equidistantes. El segundo sistema de prismas, colocado sobre la ranura, orientaba a cada haz con respecto al colimador. Lamentablemente, no se incluye ningún esquema explicativo de la disposición del conjunto de prismas\footnote{No se han podido encontrar documentos adicionales sobre este aparato, tampoco los prismas.}.
+
+Platzeck continuó el desarrollo del aparato y en 1949, siendo Director del Observatorio, en la 14\textsuperscript{a} Reunión de la AFA, señala que había construido un segundo y un tercer divisor de imágenes, el último era una versión simplificada que constaba de cuatro pares de prismas de cuarzo en lugar de catorce. Destaca que la calidad de los espectros era similar a los obtenidos sin el dispositivo, empleando un tercio del tiempo de exposición, aunque reconoce que aún subsistían algunos problemas \citep{1951Platzeck_a}. El físico Fidel Alsina, en su biografía de Platzeck, afirma que el primer conjunto de prismas se ubicaba un metro antes de la ranura del espectrógrafo y que se empleaban piezas ópticas muy pequeñas que requerían una técnica especial para su construcción. Todo esto implicaba para ser ajustado correctamente una habilidad manual notable \citep{1983Alsina}.
+
+En los ensayos realizados, Platzeck se da cuenta que, como consecuencia de la deformación del espejo principal del reflector \footnote{Deformaciones ocasionadas por los soportes que retenían  el espejo en la celda, los que en 1953 fueron modificados exitosamente de acuerdo a una propuesta de Platzeck, quien supervisó los cambios realizados por el Jefe de Taller Ángel Gómara.}, los espectros no eran satisfactorios a pesar que las pruebas de laboratorio resultaban excelentes. Para estudiar este problema, ideó un sistema de prismas que permitían analizar el espejo del telescopio en condiciones de trabajo \citep{1951Platzeck_b}.
+ 
+A pesar de este inconveniente, el óptico no se de\-sa\-len\-tó. Cambió de estrategia, reemplazando los prismas por pequeños espejos de vidrio aluminizados, cuyas posiciones podían regularse por medio de tornillos (Figura ~\ref{Figura1}). Por aproximaciones sucesivas se ajustaban los espejitos hasta obtener la distribución de las imágenes deseada  \citep{1953Platzeck}. A nivel de la ranura se encontraba una pequeña pieza, a la que Platzeck denominó orientador, de la cual no se ha podido encontrar una explicación de su funcionamiento (Figura ~\ref{Figura2}). De este modo, el divisor de imágenes se transformó de refractor a reflector. Para su construcción, el 27 de junio de 1951, Ángel Gómara realizó un croquis constructivo para posteriormente elaborar las piezas necesarias (Figura ~\ref{Figura3}).
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig1.jpg}
+\caption{Dos vistas del Divisor Pupilar de Platzeck (Museo OAC).}
+\label{Figura1}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig2.jpg}
+\caption{El orientador, fotografía de 1968. Se incluye un lápiz para dar idea de tamaño (Gentileza Gabriel R. Platzeck).}
+\label{Figura2}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig3.jpg}
+\caption{Detalles del croquis constructivo del Divisor Pupilar, realizado por Ángel Gómara el 27 de junio de 1951 (Museo OAC).}
+\label{Figura3}
+\end{figure}
+
+Este dispositivo es el que se encuentra actualmente resguardado en el MOA y se describe en la sección 2. El orientador no se ha podido encontrar.
+
+Con el nuevo Divisor se obtuvieron unos 100 espectros, con exposiciones 3 veces menores que las necesarias sin el aparato. Se destaca que a medida que empeoraban las condiciones atmosféricas, la ventaja del empleo del dispositivo aumentaba \citep{1953Platzeck}. El diseño había madurado al punto de poder utilizarse en forma efectiva. 
+
+En 1952, Platzeck concurrió a la 8\textsuperscript{a} reunión de la Unión Astronómica Internacional realizada en Roma. En esa oportunidad, el Dr. Livio Gratton, del Observatorio Astronómico de La Plata \footnote{En ese momento Observatorio Astronómico Eva Perón. Platzeck fue empleado de este observatorio entre 1937 y 1939.}, comunicó en la Comisión de Velocidades Radiales Estelares, que Platzeck había construido exitosamente un aparato que incrementaba la velocidad del espectrógrafo un factor de 3 \citep{1954IAU}. Alsina afirma que se le ofreció a Platzeck instalar el dispositivo en el telescopio Shane de 3 metros de diámetro del Lick Observatory, el que rechazó consciente de que aún requería mejoras que evitaran la necesidad de frecuentes ajustes \citep{1983Alsina}. 
+
+En julio de 1956, el Dr. Jorge Landi Dessy, en ese momento Director del observatorio cordobés, ajustó el alineador de imágenes en el Espectrógrafo Estelar I, y obtuvo un gran número de espectros con notables ventajas. Ese año, publicó en Revista Astronómica un espectro de L2 Puppis obtenido con esta técnica \citep{1956Landi}.
+
+A pesar que Platzeck renuncia al Observatorio Nacional Argentino  en 1956, para ocupar un puesto en el Instituto de Física San Carlos de Bariloche, continuó trabajando en el divisor. Se ha ubicado en el Archivo del MOA una carta de Landi Dessy fechada el 12 de diciembre de 1968, en la que le envía fotografías del dispositivo y espectros obtenidos con el mismo, destinadas a una futura publicación. Sin embargo, hasta el momento no se ha podido encontrar tal artículo, el que seguramente nunca se concretó. 
+
+Platzeck intentó eliminar los tornillos con el objeto de evitar la necesidad de los ajustes frecuentes, pero aparentemente no lo logró. 
+
+\section{Descripción del Divisor Pupilar}
+
+El Divisor Pupilar consta de 20 espejos planos rectangulares aluminizados de tres tamaños distintos, cuyas dimensiones totales son de 57 x 78 mm. Este tamaño es ligeramente mayor al necesario para cubrir, estando ubicado a 45º, la sección del haz de luz que emerge del foco Cassegrain, cerca de la placa de soporte del telescopio de 1,54 metros de la Estación Astrofísica de Bosque Alegre. 
+
+Todos los espejos tienen un largo medido con calibre de 19,4 mm, y anchos de 10,9; 12 y 13,5 mm, valores que coinciden muy aproximadamente con los indicados en el croquis constructivo de 1951: 19,35 mm y 10,8; 12,24 y 13,68 mm, ubicándose los mayores en los vértices y en el centro del dispositivo (Figura ~\ref{Figura3}). No se ha encontrado documentación que aclare las razones por las que el diseño del divisor contempla diferentes anchos de los espejos. 
+
+Los espejos se encuentran montados sobre planchuelas de bronce, cada una de las cuales está sostenida por medio de tres tornillos de 1/16 pulgadas (1,6 mm) de diámetro y una bolita de acero a una plancha de aluminio, la que, a su vez, es soportada por una base triangular, también de aluminio, destinada al montaje del conjunto, que cuenta con tres tornillos niveladores (Figura ~\ref{Figura4}). 
+
+El divisor, que tiene las siguientes dimensiones generales: 88,7 x 67 x 42 mm, se encuentra guardado en una caja de madera.
+ 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig4.jpg}
+\caption{Detalles del montaje de los espejitos y del sistema de tornillos de ajustes. \emph{Imagen superior:} se aprecian diversas marcas que permitían ubicar correctamente el dispositivo y facilitar la alineación de los espejos (Museo OAC).}
+\label{Figura4}
+\end{figure}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[scale=0.4]{fig5.jpg}
+\caption{Detalle del espectro obtenido con el Divisor Pupilar de Platzeck de la estrella Eta Carinae el 20/3/1951, posiblemente por R. Platzeck, con 37 minutos de exposición y una placa 103a-O. La digitalización se realizó con el Microscopio Confocal del Laboratorio de Microscopía Electrónica y Análisis por Rayos X (LAMARX) perteneciente a la Facultad de Matemática, Astronomía, Física y Computación de la Universidad Nacional de Córdoba, utilizando un aumento de 5 y luz blanca, operación a cargo de la Bib. Sofía Lacolla (placa gentileza G. R. Platzeck).}
+\label{Figura5}
+\end{figure*}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig6.jpg}
+\caption{Divisor pupilar y caja en la que se encuentra guardado (Museo OAC).}
+\label{Figura6}
+\end{figure}
+
+\section{Conclusiones}
+
+El divisor pupilar, rebanador de imágenes, divisor de imágenes o alineador de imágenes, denominaciones que se le asignó a lo largo del tiempo al dispositivo ideado por Platzeck, fue utilizado exitosamente y su generalización temprana hubiera sido sumamente beneficiosa para el desarrollo de la espectroscopia estelar. 
+
+Sin embargo esto no ocurrió, posiblemente por la intención de su inventor de perfeccionarlo y por falta de una publicación técnica en una revista internacional. 
+
+Luego del fallecimiento del Dr. Ricardo Platzeck, el aparato cayó prácticamente en el olvido y solo se han encontrado referencias breves sobre el mismo, realizadas por el Dr. Luis Milone en 1972 \citep{Milone} y el Dr. Fidel Alsina en 1983 \citep{1983Alsina}.
+
+La investigación llevada adelante sobre este dispositivo, permitió detallar la historia de su desarrollo y sus características generales, faltando precisar la forma de montaje en el conjunto telescopio-espectrógrafo y cómo se utilizaba, aspectos aún en estudio.
+
+En cuanto a la calidad de los espectros obtenidos con el Divisor, más allá de los testimonios de aquellos que lo usaron en la década de 1950, que los ponderan similares a los realizados sin el aparato, fue posible inspeccionar varias placas originales, confirmando en principio estas afirmaciones. Las placas fueron digitalizadas con el fin de realizar un estudio más exhaustivo, investigación que se encuentra en curso.
+
+El Divisor Pupilar de Ricardo Platzeck fue la obra cumbre de este célebre óptico y sin dudas se ubica entre los grandes logros de la ciencia y la tecnología nacional.
+
+
+\begin{acknowledgement}
+Al Dr. Gabriel R. Platzeck, por facilitar invaluable documentación sobre el divisor, al Dr. David Merlo, por facilitar el acceso a los depósitos del Museo del Observatorio Astronómico de Córdoba, a la Bib. Sofía Lacolla, por la digitalización de las placas de los espectros.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{870}
+ 
+\end{document}

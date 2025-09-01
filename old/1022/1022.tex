@@ -1,0 +1,395 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{2}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\title{Síntesis poblacional de discos protoplanetarios: comparación entre teroría %Comparación de modelos de disco y observaciones}
+
+\title{ Síntesis poblacional de discos protoplanetarios: un puente entre modelos y observaciones} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Síntesis poblacional de discos protoplanetarios}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+J.L. Gomez\inst{1,2}, O.M Guilera\inst{1,2}, M.M. Miller Bertolami\inst{1,2} \& M.P. Ronco\inst{1,2}
+}
+
+\authorrunning{Gomez et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{josepluis21@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astrof{\'\i}sica de La Plata, CONICET--UNLP, Argentina
+\and
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \resumen{Los discos protoplanetarios son los lugares de formación de los planetas. Por este motivo, sus propiedades físicas determinan el proceso de formación planetaria. Una correcta modelización de los discos protoplanetarios es, en consecuencia, clave para comprender la formación planetaria. En este trabajo presentamos un estudio de síntesis de poblaciones de discos que pretende reproducir los datos observacionales disponibles sobre discos protoplanetarios. Consideramos que los discos evolucionan por acreción viscosa y fotoevaporación interna. Las condiciones iniciales, como las masas y tamaños de los discos, siguen distribuyendo estadísticas inferidas a partir de observaciones. Analizamos el impacto de variar la masa estelar mínima observada, la tasa de formación estelar y la eficiencia en la acreción, sobre la fracción de estrellas con discos y las tasas de acreción. A partir de nuestros modelos, obtenemos una vida media del disco de $\sim$ 4.2 Ma, lo que muestra una muy buena concordancia con las observaciones. También encontramos que para reproducir la correlación tasa de acreción-masa estelar es necesario una correlación entre la viscosidad del disco y la masa estelar.}
+
+\resumen{Los discos protoplanetarios son los ambientes donde se forman los planetas, y sus propiedades físicas desempeñan un papel crucial en la determinación de los procesos de formación planetaria. Por lo tanto, una modelización precisa de los mismos es fundamental para comprender este fenómeno. Presentamos un estudio de síntesis poblacional de discos protoplanetarios, cuyo objetivo es reproducir los datos observacionales disponibles sobre estos objetos astrofísicos. Encontramos que los modelos de discos que evolucionan por acreción viscosa y fotoevaporación de la estrella central son capaces de reproducir los tiempos de vida característicos de los discos, como también las tasas de acreción de masas, considerando una tasa de formación estelar extendida con escala de tiempo de 1 millón de años y una correlación positiva de la viscosidad con la masa estelar. 
+}
+
+
+\abstract{Protoplanetary disks are the environments where planets form, and their physical properties play a crucial role in determining the processes of planetary formation. Therefore, accurate modeling of these disks is essential to understand this phenomenon. We present a population synthesis study of protoplanetary disks aimed at reproducing the available observational data on these astrophysical objects. We find that models of disks evolving by viscous accretion and photoevaporation of the central star are able to reproduce characteristic disk lifetimes, as well as mass accretion rates, considering an extended star formation rate with a time scale of 1 million years and a positive correlation of viscosity with stellar mass.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ Protoplanetary disks -- Accretion disks -- Planets and satellites: formation
+}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+En general, la comunidad acepta que la formación planetaria tiene lugar en el interior de los discos protoplanetarios \citep[e.g.][]{Venturini20Review}, por lo que estudiar su evolución en torno a objetos estelares y subestelares jóvenes resulta clave para comprender cómo se forman los planetas. Entender la diversidad planetaria y sistemas planetarios requiere, por ende, entender las propiedades y evolución de los discos protoplanetarios. Actualmente, las observaciones de regiones de formación estelar permiten inferir características de los discos en distintas etapas de su evolución y realizar estimaciones sobre sus tiempos de vida.
+
+Los primeros estudios sobre la dispersión de los discos protoplanetarios indicaban que estos se disipaban entre 1 y 10 millones de años (Ma), con un tiempo de vida medio cercano a $ \approx 3$  Ma \citep{haisch2001disc, MamajekE}. Trabajos posteriores como los de \cite{Pfalzner_2022} y \citet{2024ApJPfalzner} sugieren que estos primeros trabajos están sesgados como consecuencia de que en muchos casos las estrellas m\'as brillantes y masivas son favorecidas en los conteos. Estos trabajos encuentran que, cuando se tiene en cuenta la distancia a los cúmulos, los tiempos de vida de los disco se distribuyen entre 1 y 20 Ma, y que la mayoría de los discos alrededor de estrellas de baja masa (estrellas M) se disipan después de 5 Ma.
+
+El objetivo principal de este trabajo es reproducir las características observadas de los discos protoplanetarios. En particular, buscamos replicar las fracciones de estrellas con discos observadas en múltiples regiones de formación estelar con diferentes edades \citep{MamajekE, Pfalzner_2022} y las tasas de acreción estelar de los sistemas, tanto como función de la masa estelar como de la masa de los discos. Para ello, consideramos tanto los rangos de valores reportados como la marcada correlación con la masa estelar, que sigue aproximadamente una relación cuadrática \citep{Muzerolle_2000, manara2023ASPC}. Por último, también nos proponemos obtener la correlación entre las tasas de acreción estelar y las masas de los discos. 
+
+
+\vspace{-.25 cm}
+
+\section{Modelo de disco}
+
+En este trabajo consideraremos que los discos protoplanetarios evolucionan viscosamente y que están sujetos a la irradiación de su estrella central. Utilizaremos un modelo de disco $\alpha$ \citep{shakura1973black} no isotermo y con simetría axial \citep[ver][para los detalles del modelo]{OctavioMarcelo2017Codigo, OGuilera2019MNRASb}. El disco se modela mediante una estructura radial y una estructura vertical, usualmente conocido como un modelo 1D+1D.
+
+
+\subsection{Estructura vertical y evolución temporal}
+
+En el enfoque aquí utilizado primero se calcula la estructura vertical del disco, resolviendo las ecuaciones de transporte y estructura considerando al disco en equilibrio hidrostático, y a la viscosidad y a la irradiación de la estrella central como fuentes de calor. Una vez resuelta la estructura vertical, los valores de las principales variables termodinámicas en el plano medio del disco son utilizados para calcular la evolución temporal de la densidad superficial del mismo. 
+
+
+Computar la evolución temporal del disco consiste en resolver una ecuación de difusión para su densidad superficial $\Sigma_{\text{g}}$ \citep[v.g][]{pringle1981accretion} a la que se le incorpora un término que representa un sumidero de material correspondiente a la fotoevaporaci\'on debida a la estrella central ($\dot{\Sigma}_W $),
+\begin{equation} 
+  \frac{\partial \Sigma_{\text{g}}} {\partial t}= \frac{3}{r}\frac{\partial}{\partial r} \left[ r^{1/2} \frac{\partial}{\partial r} \left( \nu \Sigma_{\text{g}} r^{1/2}  \right) \right] + \dot{\Sigma}_W (r),
+\label{eq:disk_evol}
+\end{equation}
+donde $\Sigma_g$ es la densidad superficial (integrada verticalmente) del disco y $\nu = \alpha H c_{s}$ es la viscosidad del disco, siendo $H$ la escala de altura del disco, $c_{s}$ la velocidad local isoterma, y $\alpha$ un par\'ametro adimensional que regula la magnitud del transporte de momento angular en el disco \citep{shakura1973black}.
+
+La perdida de masa por fotoevaporaci\'on ($\dot{\Sigma}_W $) considera la suma de las componentes de fotoevaporaci\'on debido a radiación ultravioleta lejana --FUV-- \citep{kunitoma2021tasas} y por rayos X --RX-- \citet{owen2010implementationfoto} de la estrella central \citep[ver][para más detalles]{Ronco2021, Ronco2024}.
+
+
+\vspace{-.25 cm}
+
+
+\section{Condiciones iniciales para las síntesis poblacionales}
+
+Para comparar nuestros resultados con las observaciones generamos tres síntesis poblaciones de 10000 sistemas estrella--disco cada una. En todos los casos, consideramos la densidad superficial inicial de gas de los discos definida a partir de las observacionales \citep{Andrews_2010}:
+\begin{align}
+    \Sigma_{g} = \Sigma_{g}^{0} \left(\frac{r}{r_c}\right)^{-\gamma} e^{-(r/r_c)^{2-\gamma}},
+    \label{eq:densi_inicial}
+\end{align}
+en donde $\Sigma_{g}^{0}$ es una constante de normalización que depende de la masa inicial del disco, $r_{c}$ es el radio característico y $\gamma$ es el exponente asociado al gradiente radial de densidad superficial \citep[en todos los casos adoptamos $\gamma$= 0.9 inferido de las observaciones][]{Andrews_2010}. Además, el resto de las condiciones iniciales siguen distribuciones inferidas de las observaciones:  %y dadas por:% en los que las condiciones iniciales de los mismos siguen distribuciones inferidas de las observaciones.
+
+\begin{itemize}
+
+\item para nuestras poblaciones estelares --y subestelares-- consideramos el rango de masas entre 0.04--1.4 $\text{M}_{\odot}$, las cuales obedecen la función inicial de masa de \cite{kroupa2001};
+
+\item las masas de los discos siguen la distribución observada por \cite{tychoniec2018vla}, la cual es una distribución log-normal con valores de media $\mu= -1.49$, y dispersión $\sigma=0.35$ \citep{Emsenhuber_2021}; 
+
+\item los radios característicos de los discos $r_{c}$ son función de las masas iniciales de los mismos siguiendo la relación inferida de las observaciones por \cite{Andrews_2010},
+\begin{align}
+    \frac{{M}_{\text{gas}}}{2 \times 10^{-3} {M}_{\odot}} = \left( \frac{r_{c}}{10~\text{ua}}\right)^{1.6}; 
+    \label{eq:rc_md}
+\end{align}
+
+\item para el parámetro $\alpha$ asociado a la viscosidad consideramos tres casos para el trabajo: una población para la cual $\alpha$ sigue una distribución uniforme en el rango $\log \alpha$ entre -4 y -2 \citep[ver el reciente review de][para los valores estimados de $\alpha$ por distintos métodos]{2023Rosotti}, y dos poblaciones en las que, motivados por estudios previos \citep{Gorti_2009}, consideramos dependencia de la viscosidad con la masa estelar. Para contemplar dependencia de la viscosidad con la masa estelar el parámetro $\alpha$ sigue una correlación con la masa estelar de la forma
+
+\begin{align}
+    \alpha = \alpha_0 \times  \left(\frac{{M}_{*}}{M_{\odot}}\right)^{1.8}.
+    \label{ec:corr}
+\end{align}
+Exploramos el efecto de considerar dos distribuciones para $\log \alpha_0$ : una distribución uniforme y una lineal, de manera que para una masa estelar dada haya una mayor probabilidad de tener discos más viscosos en el rango $\log \alpha_0$ entre -3.5 y -1.5. En la Fig. \ref{fig:refdistrlineal} se presenta la función de densidad de probabilidad lineal para  $\alpha_{0}$ y el histograma de una muestra;
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\columnwidth]{Distribucionalfa0lineal.png}%\hsize
+    \caption{Densidad de probabilidad proporcional al valor del $\log \alpha_{0}$.}
+    \label{fig:refdistrlineal}
+\end{figure}
+
+\item por \'ultimo, y debido a que las estrellas no se forman todas al mismo tiempo, consideramos una tasa de formación estelar (TFE) siguiendo el trabajo de \cite{coleman2022dispersal},
+%\begin{align}
+%    \mathrm{TFE} \propto \mathrm{TFE}_{0} \times \left \{
+%      \begin{array}{rcl}
+%          & 1 & t <  {1 \text{Ma}} \\ 
+%         & \exp \left[ \frac{-(t- {1 \text{Ma}})^{2}}{t^{2}_{d}} \right] & t \geq {1 \text{Ma}}
+%      \end{array}
+%   \right.;
+%    \label{eq:TFE}
+%\end{align}
+
+
+\begin{align}
+    \mathrm{TFE} \propto \mathrm{TFE}_{0} \times 
+    \begin{cases}
+        \begin{aligned}
+            &1 && t < 1\,\text{Ma} \\ 
+            &\exp \left[ \frac{-(t-1\,\text{Ma})^{2}}{t^{2}_{d}} \right] && t \geq 1\,\text{Ma}
+        \end{aligned}
+        ;
+    \end{cases}    
+    \label{eq:TFE}
+\end{align}
+
+en donde consideramos que la formación estelar se extiende durante 1 Ma en nuestras poblaciones, por lo tanto, $t_{d}=1$ Ma. 
+
+\end{itemize}
+
+\section{Resultados}
+
+%%% Fig 1
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=1.\textwidth]{referencia.png}
+\caption{Resultado para la población con $log ~ \alpha $ uniforme. La \emph{columna izquierda} muestra la fracción de discos en función de la edad del c\'umulo. Los puntos celestes y la línea roja corresponden a resultados inferidos de las observaciones de \cite{Pfalzner_2022}. La línea negra corresponde a los resultados obtenidos por \cite{MamajekE}. Las líneas discontinuas representan los resultados de nuestra síntesis poblacional, los colores amarillo, verde y azul corresponden a las masas estelares mínimas $M_{*,m}=0.04,\,0.1$ y 1.0 M$_{\odot}$, respectivamente. \emph{Columna centro} y \emph{columna derecha:} muestran la tasa de acreción como función de la masa de los discos y tasas de acreción como función de la masa estelar respectivamente. Los rect\'angulos de colores rojo muestran las tasas de acreción observadas en diferentes regiones de \cite{manara2023ASPC}. El gradiente de color indica el n\'umero de discos por pixel resultado de nuestra síntesis de población. La fila superior corresponde con la población con TFE localizada, mientras que la fila inferior corresponde a la población considerando TFE con $t_{d} = 1$ Ma. Ver el texto para más explicaciones. }
+\label{Figura:resultado1}
+\end{figure*}
+
+%%% Fig 2
+\begin{figure*}[!ht]
+\centering
+\includegraphics[width=1.\textwidth]{Resultadoscompletos.png}
+\caption{Similar a Fig \ref{Figura:resultado1}. La fila de paneles superiores muestra el resultado de considerar una distribución $\log(\alpha_0)$ uniforme y la inferior una distribución proporcional, ambas en el rango -3.5 a -1.5. 
+}
+\label{Figura:resultado2}
+\end{figure*}
+
+La Fig. \ref{Figura:resultado1} muestra los resultados correspondientes a los tres observables más relevantes al analizar el caso en el que $\log \alpha$ sigue una distribución de probabilidad uniforme en el rango de -4 a -2. Los paneles superiores presentan los tiempos de vida y las tasas de acreción (en función de las masas de los discos en el panel central, y en función de la masa estelar en el panel de la derecha) bajo la hipótesis de una tasa de formación estelar localizada en el tiempo. Por otro lado, los paneles inferiores ilustran el efecto de suponer una tasa de formación que se extiende durante 1 Ma. Los resultados obtenidos, al considerar en nuestros modelos solo estrellas con masas 
+superiores a $1.0~{M}_{\odot}$ muestran un buen acuerdo con los tiempos de vida ajustados por \cite{MamajekE} (línea negra continua) cuando se considera una tasa de formación estelar localizada en el tiempo. Sin embargo, al suponer una tasa de formación extendida por 1 Ma, se observa un incremento en la fracción de estrellas con discos en los primeros ~4 Ma, debido a la continua aparición de sistemas jóvenes en los primeros millones de años. No obstante, el introducir una tasa de formación estelar no permite reproducir aún los resultados reportados por \cite{Pfalzner_2022} (línea roja continua), ya que la fracción de estrellas con discos, cuando se considera toda la población estelar, resultante es menor en comparación con los valores observados, especialmente después de los ~5Ma.
+
+En lo que respecta a las tasas de acreción, en los paneles centrales, las lineas negras muestran las tasas de acreción limite para para diferentes edades. Se observa que considerar una tasa de formación extendida permite obtener más discos de baja masa con altas tasa de acreción, más en acuerdo con las observaciones. Este incremento en la tasa de acreción de los discos de baja masa es debido a la aparición continua de sistemas jóvenes que en los primeros millones de años introduce discos de baja masa con altas tasas de acreción. En los paneles de la derecha, la curva amarilla muestra la correlación observada entre las tasas de acreción y la masa estelar y la curva gris es la curva representativa de nuestros datos obtenida a partir de un ajuste de mínimos cuadrados. En este caso, ninguna de las síntesis poblaciones es capaz de reproducir la correlación $\dot{M} - M_*$ observada y tampoco se reproducen las altas tasas de acreción observadas en las estrellas de alta masa.
+
+
+%\subsection{Efecto de correlación $\alpha - M_{*}$ en las poblaciones de discos}
+\vspace{-.3cm}
+
+\subsection{El impacto de la de correlación $\alpha - M_{*}$}
+
+La Fig.~\ref{Figura:resultado2} muestra los resultados de considerar una correlación entre el parámetro $\alpha$ y la masa estelar. Los paneles superiores muestran los resultados de considerar la distribución de probabilidad de $\log\alpha_0$ uniforme y los paneles inferiores el resultado de considerar la distribución de probabilidad lineal $\log\alpha_0$, en donde en ambos casos consideramos una TFE extendida durante 1 Ma. 
+
+Considerar la correlación dada por la Ec.~\ref{ec:corr} permite reproducir la correlación observada entre $\dot{M} - M_{*}$ \citep{manara2023ASPC}. En el panel superior se observa que la distribución $\log \alpha_0 $ uniforme permite reproducir los tiempos de vida de los discos, sin embargo las tasas de acreción como función de las masas de los discos presentan discrepancia con las observaciones. Las tasas de acreción como función de las masas estelares muestran órdenes de magnitud similares a las observadas pero, con una distribución uniforme de $\log\alpha_0$ no es posible reproducir la correlación  $\dot{M} - M_{*}$ observada. Los modelos más masivos subestiman las tasas de acreción. Este último resultado es la principal motivación para proponer una distribución de $\log \alpha_0$ lineal en la que se privilegian los valores altos en el rango -3.5 a -1.5. Los resultados de considerar esta distribución lineal se observan en los paneles inferiores de la Fig.\ref{Figura:resultado2}. El panel izquierdo muestra que nuestros resultados reproducen satisfactoriamente la fracción de estrellas con discos para cúmulos con distancias menores a 200pc, mientras que considerar masa limite de $M_{m}=1M_{\odot}$ permite reproducir el ajuste obtenido por \cite{MamajekE}. %La correlación permite que sistemas estrellas-discos, con estrellas de baja masa, por ende con discos de baja viscosidades, permite que los tiempo de vida de los discos se extiendan por periodos de tiempo de 5 a 20 Ma reproduciendo las observaciones. 
+También, esta distribución conduce a una mejora significativa en la correlación observada $\dot{M}-M_*$, logrando un gran acuerdo con las observaciones y reproduciendo la correlación  $\dot{{M}}\propto {M}_{*}^{1.8}$.
+
+Como resultado general, encontramos que para ambas distribuciones de $\log \alpha_0$ mejoras significativas para poder reproducir la correlación observada de $\dot{M} - M_{*}$. Sin embargo, en ambos casos no es posible reproducir discos de baja masa y altas tasas de acreción, como sugieren las observaciones. 
+
+
+\section{Conclusiones} \label{ref}
+
+Nuestros estudios muestran que, para discos protoplanetarios que evolucionan por acreción viscosa y fotoevaporación asociada únicamente a la estrella central, es fundamental incluir una correlación entre la viscosidad del disco y la masa estelar para reproducir la correlación observada entre las tasas de acreción y las masas estelares.
+Además, para explicar las altas tasas de acreción observadas, es necesario considerar una distribución de probabilidad que favorezca discos con alta viscosidad. Esto puede lograrse utilizando una distribución de probabilidad lineal para el $\log \alpha_0$. También es crucial incorporar una tasa de formación estelar extendida durante aproximadamente un millón de años para poder reproducir las altas tasas de acreción asociadas a estrellas masivas en cúmulos de alrededor de 1--2 Ma. Asimismo, incluir una tasa de formación es esencial para explicar las altas tasas de acreción en discos de baja masa.
+Por último, encontramos que los discos cuya viscosidad está correlacionada con la masa estelar son capaces de reproducir las edades estimadas de los discos protoplanetarios, comprendidas entre 1 y 20 Ma. Este intervalo de tiempo es suficiente para permitir la formación planetaria dentro de los mismos.
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

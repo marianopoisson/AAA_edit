@@ -1,0 +1,435 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{3}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\mmmb}[1]{\textcolor{teal}{[M3B: #1]}}
+
+
+\title{Explorando el impacto de los gradientes químicos en
+los procesos de mezcla del interior estelar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Macro BAAA66 con instrucciones de estilo}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.M. Ocampo\inst{1,2},
+M.M. Miller Bertolami\inst{1,2},
+L.G. Althaus\inst{1,2} \& F.C. Wachlin\inst{2}
+}
+
+\authorrunning{Ocampo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mocampo@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{Instituto de Astrof\'isica de La Plata, CONICET--UNLP, Argentina
+\and
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Durante las diferentes etapas de evolución estelar se forman diversas zonas convectivas que alteran la estratificación química de las estrellas. Usualmente, en astrofísica se utiliza la denominada teoría de la longitud de mezcla (MLT, según sus siglas en inglés) para tratar el transporte de calor y, normalmente, se utiliza en conjunto con el criterio de inestabilidad de Schwarzschild, el cual desprecia el impacto de los gradientes de composición química en el desarrollo de la convección. Sin embargo, hacia el final de la quema del helio en el núcleo y durante los pulsos térmicos en la Rama Asintótica de las Gigantes, se producen procesos de estratificación en los cuales ocurren inversiones del gradiente químico, que producirían inestabilidades adicionales a las predichas por el criterio de Schwarzschild. Estas inestabilidades  alterarían el perfil químico resultante en las estrellas enanas blancas y pre-enanas blancas respecto del predicho por la MLT, teniendo consecuencias observables en los modos de pulsación de dichos objetos. En el presente trabajo exploraremos una extensión de la MLT en la cual consideraremos las inestabilidades químicas como generadoras de inestabilidades convectivas y no convectivas. Esta teoría será aplicada en modelos de evolución estelar, en conjunto con la MLT estándar y con una tercera teoría de longitud de mezcla doblemente difusiva, y compararemos los resultados obtenidos, discutiendo los beneficios y dificultades de cada una.}
+
+\abstract{During the various steps of stellar evolution are formed convectives zones that alter the chemical stratification in stars. Usually, in astrophysics is used the Mixing Length Theory (MLT) for modeling the convective movement and, in general, it is used with the Schwarzschild instability criterion, which neglects the impact of chemical composition gradients in the development of convection. However, towards the end of central helium burning and during the thermal pulses in the Asymptotic Giant Branch (AGB) are produced stratification processes with inversions in the chemical gradient that would produce instabilities beyond the ones predicted by the Schwarzschild criterion. These instabilities would alter the chemical profile in the white dwarfs, with respect to the one predicted by MLT, having observable consequences in the pulsational modes of such objects. In the present work we will explore an extension of MLT in which we will consider the chemical instabilities as generators of convectives and non-convectives instabilities. This theory will be applied in stellar evolution models in comparison with standard MLT and a double diffusive mixing theory, discussing the benefits and shortcomings of each one.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ hydrodynamics ---stars: AGB and post-AGB  --- stars: interiors}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+%Las estrellas constituyen los pilares sobre los cuales el Universo está construido y, como tal, su
+%estudio ha ganado interés a lo largo de los años. En particular, las estrellas enanas blancas,
+%objetos longevos y extremadamente densos del tamaño de la Tierra, no son la excepción. Al constituir el estado evolutivo final para más del 95\% de todas las
+%estrellas, 
+Las enanas blancas, objetos longevos y extremadamente densos ($\bar\rho\sim10^6\mbox{--}10^{7}\text{g}/\text{cm}^3$) del tamaño de la Tierra, consituyen el estado evolutivo final para más del 95\% de todas las estrellas. Por ende, juegan un rol de gran importancia en nuestro entendimiento de la formación
+y evolución estelar, la evolución de sistemas planetarios y la historia de nuestra Galaxia misma.
+El estudio de las enanas blancas por lo tanto resulta de relevancia central en una amplia variedad
+de tópicos de la astrofísica moderna \citep{2010A&ARv..18..471A,2016NewAR..71....9F,2018PhyS...93d4002S}. 
+%\textcolor{red}{La presente población
+%de enanas blancas guarda un registro detallado de la formación estelar temprana de nuestra
+%Galaxia, por lo tanto funciones de luminosidad de enanas blancas son usadas para inferir la edad,
+%estructura y evolución del disco Galáctico y de los cúmulos estelares más cercanos (Bedin et al.
+%2009; García-Berro et al. 2010; Kilic et al. 2017). En un contexto diferente, nuevos estudios
+%revelan que numerosas enanas blancas albergan remanentes de sistemas planetarios, ofreciendo
+%una oportunidad única de inferir la composición química de planetas extrasolares (Gaensicke et al.
+%2012, Hollands et al. 2018).}\textbf{CAPAZ SE PUEDE VOLAR TODO ESTO PARA AHORRAR ESPACIO}
+
+
+La estructura química de una enana blanca está directamente relacionada al canal evolutivo que
+llevó a su formación \citep{2019A&ARv..27....7C}. Por esto, mejoras en el modelado de estrellas enanas
+blancas requieren de secuencias evolutivas basadas en una descripción actualizada de los
+procesos invoclucrados en la formación y evolución de la estructura química tanto antes y durante la
+etapa de enana blanca. El estudio de estos procesos responsables de cambios químicos
+internos y su impacto en la evolución de las enanas blancas son de fundamental importancia a la
+hora de obtener determinaciones de edades de poblaciones estelares en base a sus enanas
+blancas, tasas de acreción de planetesimales, propiedades pulsaciones y magnéticas de las
+enanas blancas y propiedades de partículas elementales.
+
+La mezcla de elementos en el interior estelar es, usualmente, tratada mediante la teoría de longitud de mezcla (MLT, por sus siglas en inglés). Sin embargo, esta teoría no tiene en cuenta la convección inducida por los gradientes químicos negativos\footnote{Un gradiente químico negativo implica un crecimiento del peso molecular hacia el exterior de la estrella.} ni los procesos doblemente difusivos, como la mezcla termohalina y la semiconvección \citep{Kipphenhahn2013}. Esta descripción puede resultar insuficiente durante la evolución en la Rama Asintótica de las Gigantes (AGB, por sus siglas en inglés) y, en particular, durante los pulsos térmicos en los cuales se producen inversiones en el gradiente químico. Una teoría que tiene en cuenta tanto las inestabilidades Rayleigh-Taylor (a partir de ahora RT) como los procesos doblemente difusivos es, por ejemplo, la desarrollada en \cite{1993ApJ...407..284G,1996MNRAS.283.1165G} (GNA en adelante). Sin embargo, esta teoría no considera el efecto de la degeneración electrónica en el medio, que se vuelve considerable en el interior profundo de las estrellas AGB y enanas blancas. A su vez, las ecuaciones que describen esta teoría son significativamente más complejas y numéricamente más inestables que aquellas correspondientes a MLT, lo que genera problemas adicionales al incluirlas en un código de evolución estelar en etapas ya de por sí inestables. Recientemente, \cite{2024ApJ...969...10C} desarrollaron una versión doblemente difusiva de la MLT que sí contempla el escenario de degeneración electrónica. Sin embargo, esta teoría ha sido desarrollada en el marco de una mezcla de dos componentes y para casos en los cuales el flujo químico es impuesto por un agente externo a los movimientos convectivos. Por lo tanto, no es directamente aplicable a la evolución estelar en general.
+
+El objetivo del presente trabajo es introducir una extensión simple, desde el punto de vista matemático, de MLT que contemple las inestabilidades RT y la mezcla termohalina, con vistas a ser generalizada posteriormente a casos que contemplen materia degenerada. 
+
+\section{Teoría de mezcla y estrellas AGB}
+
+Como se mencionó en la Sección \ref{S_intro}, en astrofísica se suele usar la MLT junto con el llamado criterio de inestabilidad de Schwarzschild para el tratamiento de la convección en los interiores estelares. A continuación repasaremos ambos conceptos y cómo se extienden a un caso más general, siguiendo {\cite{Kipphenhahn2013}}. Luego exploraremos las ecuaciones que regirán la dinámica de las inestabilidades RT en dicho enfoque. 
+
+En este trabajo nos concentraremos en estudiar el impacto de estos procesos en la estructura química de las estrellas en la AGB.
+
+
+\subsection{Criterio de Ledoux, MLT y un poco más}
+
+Consideremos un elemento de materia que se desplaza de su posición original. Si el entorno es dinámicamente estable, el elemento de materia será forzado a volver a su posición original. En cambio, si es inestable, la teoría de longitud de mezcla nos dice que el elemento se desplazará una longitud típica, denominada longitud de mezcla (\textit{mixing length}), y se disolverá, mezclándose con el nuevo entorno.
+
+Un análisis de estabilidad de los elementos de material en el interior de la estrella nos dice que los desplazamientos radiales son estables frente a la estratificación de temperatura si se cumple
+\begin{equation}
+    \nabla < \nabla_\text{e} + \frac{\varphi}{\delta}\nabla_\mu,
+\end{equation}
+donde
+\begin{eqnarray}
+    \nabla\equiv \bigg(\frac{\rm d\ln T}{\rm d\ln P}\bigg)_\text{s},   \nabla_\text{e}\equiv \bigg(\frac{\rm \rm d\ln T}{\rm d\ln P}\bigg)_\text{e}, \nabla_\mu \equiv \bigg(\frac{\rm d\ln \mu}{\rm d\ln P}\bigg)_\text{s},
+    %\nonumber \\  
+%    \nabla_\mu &\equiv& \bigg(\frac{d\ln \mu}{d\ln P}\bigg)_\text{s},
+\end{eqnarray}
+ los subíndices e y s indican elemento o entorno \textit{(surrounding)}, respectivamente, y
+\begin{equation}
+    \varphi \equiv \bigg (\frac{\partial\ln \rho}{\partial \ln \mu}\bigg)\bigg|_{T,P} , \ \ \delta\equiv -\bigg(\frac{\partial\ln\rho}{\partial\ln T}\bigg)\bigg|_{P,\mu},
+\end{equation}
+siendo $T$ la temperatura, $P$ la presión, $\rho$ la densidad y $\mu$ el peso molecular. 
+%\mmmb{Yo no pondria la explicación de la notación termodinámica, se supone que el lector sabe física.}
+%\textcolor{blue}{A su vez, $|_{T,P}$ y $|_{P,\mu}$ indican que la temperatura y la presión (o la presión y el peso molecular) se mantien constantes}. 
+
+Podemos establecer dos límites al criterio de estabilidad. Primero, podemos suponer que el elemento se desplaza de forma adiabática, es decir, $\nabla_\text{e}=\nabla_\text{ad}$. A su vez, en el caso límite en el que toda la energía es transportada por la radiación $\nabla=\nabla_\text{rad}$. La combinación de ambas suposiciones resulta en la siguiente expresión
+\begin{equation}
+    \nabla_\text{rad} < \nabla_\text{ad}  + \frac{\varphi}{\delta}\nabla_\mu,
+\end{equation}
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=0.35]{critledoux.png}
+\caption{Criterio de Ledoux (en rojo, el límite) y las diferentes regiones de inestabilidad, donde $\Pi_\mu\equiv\frac{\varphi}{\delta}\nabla_\mu$. A su vez, la línea vertical $\nabla_\text{rad}=\nabla_\text{ad}$ corresponde al límite del criterio de Schwarzschild. La región convectiva se puede separar en dos subregiones: cuando $\nabla_\text{rad}>\nabla_\text{ad}$ la región además de ser inestable según Ledoux es inestable según Schwarzschild, y se denomina convección térmica. Sin embargo, cuando $\nabla_\text{rad}<\nabla_\text{ad}$ aparece una nueva región convectiva, dominada por los gradientes químicos. Señalizamos también las dos regiones de inestabilidad doblemente difusivas, correspondientes a la semiconvección y al régimen termohalino.}
+\label{FigLedoux}
+\end{figure}
+la cual se conoce como el \textit{criterio de Ledoux}. Despreciando el efecto de los gradientes químicos se obtiene el \textit{criterio de Schwarzschild}, normalmente usado en conjunto con la MLT,
+\begin{equation}
+    \nabla_\text{rad}<\nabla_\text{ad} .
+\end{equation}
+Al usar el criterio de Ledoux, en cambio, aparece una nueva región de inestabilidad convectiva, debida al impacto de los gradientes químicos (ver Fig. \ref{FigLedoux}). Esta nueva región convectiva corresponde a un tipo de inestabilidad de RT \citep{2020mdps.conf...13G}. Al mismo tiempo desaparece una región convectiva que, al tener en cuenta la doble difusión, es reemplazada por la semiconvección \citep{Kipphenhahn2013}. En este trabajo la semiconvección no será considerada en nuestra extensión de MLT, tomando dichas regiones como convectivas usando MLT estándar y el criterio de Schwarzschild.
+
+Adicionalmente, debemos considerar la mezcla doblemente difusiva conocida como termohalina \citep{Kipphenhahn2013}. La combinación de las inestabilidades RT junto con la mezcla termohalina, tiene como consecuencia que, si $\nabla_\mu<0$ la región será inestable y deberá producirse algún tipo de mezcla, dinámica o doble difusiva según corresponda, como puede observarse en la Fig. \ref{FigLedoux}.
+
+Nosotros exploraremos una extensión simple de MLT, difiriendo únicamente del desarrollo estándar en que consideraremos $\nabla_\mu\neq 0$ y el criterio de Ledoux para las regiones RT, además de incluir una parametrización para la mezcla termohalina, y la denominaremos como MLT\#. Haciendo un análisis similar al presentado por \cite{Kipphenhahn2013} para MLT estándar, es posible obtener la siguiente expresión para la velocidad de mezcla:
+
+\begin{equation}
+    v^2=g\delta(\nabla-\nabla_\text{e}-\frac{\varphi}{\delta}\nabla_\mu)\frac{l_m^2}{8H_P},
+\end{equation}
+siendo $g$ la aceleración gravitatoria, $l_m$ la longitud de mezcla de la teoría. Por su parte $H_P\equiv-dr/d\ln P$ se denomina altura de escala de la presión. Notar que la única diferencia entre esta expresión y la velocidad de mezcla en MLT está dada por el término $\frac{\varphi}{\delta}\nabla_\mu$. Luego, pueden obtenerse las siguientes ecuaciones para determinar $\nabla$ y $\nabla_\text{e}$:
+
+\begin{equation}
+    \nabla_\text{e}-\nabla_\text{ad}=2U\frac{\nabla-\nabla_\text{e}}{\sqrt{\nabla-\nabla_\text{e}-\frac{\varphi}{\delta}\nabla_\mu}},
+\end{equation}
+y
+\begin{equation}
+    \nabla-\nabla_\text{e}=\frac{8}{9}U\frac{\nabla_\text{rad}-\nabla}{\sqrt{\nabla-\nabla_\text{e}-\frac{\varphi}{\delta}\nabla_\mu}},
+\end{equation}
+donde
+\begin{equation}
+    U\equiv\frac{3acT^3}{c_P\rho^2\kappa l_m^2}\sqrt{\frac{8H_P}{g\delta}},
+\end{equation}
+siendo $a$ la constante de radiación, $c$ la velocidad de la luz, $c_P$ el calor específico a presión constante y $\kappa$ la opacidad. Notar nuevamente que, si eliminamos el gradiente químico de estas expresiones, retomamos las ecuaciones usadas en MLT estándar.
+
+
+Como ingrediente final para nuestro modelo es importante considerar la difusión térmica que da lugar a la mezcla termohalina. Al ser un proceso no dinámico, es una mezcla mucho más lenta que la inestabilidad convectiva. A pesar de eso, las escalas de tiempo de la mezcla son suficientemente rápidas para ser de importancia en la estrucura estelar, como veremos más adelante. 
+%De todas formas, es el proceso dominante durante la mezcla de elementos en los pulsos térmicos. 
+Este proceso se puede parametrizar de manera simple con la siguiente velocidad de mezcla \citep{1980A&A....91..175K}
+
+\begin{equation}
+    v_T=\frac{4acT^3}{c_P\rho^2\kappa}\frac{\frac{\varphi}{\delta}\nabla_\mu}{(\nabla-\nabla_\text{ad})} .
+\end{equation}
+
+
+
+\subsection{Estrellas AGB y pulsos térmicos}
+
+
+Durante la evolución estelar, al final de la quema de helio en el núcleo, las estrellas con masas iniciales $(\rm M_\text{in}<8-10 \ \rm M_\odot)$ se ubican en la AGB en el diagrama de Hertzsprung-Russell. Estas estrellas poseen un núcleo inerte de carbono y oxígeno rodeado por dos capas concéntricas donde se van quemando el helio y el hidrógeno.
+%que no variará considerablemente hacia su evolución final como enana blanca. En las capas superiores, sin embargo, existirán una capa de helio y una de hidrógeno que se irán quemando y (no es taaan cierto que el nucleo no cambie, de hecho estamos estudiando eso)
+A medida que estas capas van
+avanzando hacia el exterior de la estrella, la capa que quema helio se volverá inestable, dando lugar a los denominados pulsos térmicos. Para una descripción detallada de los procesos involucrados durante un pulso térmico remitimos a la sección 34.3 de \cite{Kipphenhahn2013}.
+%, que describiremos brevemente a continuación. (creo que no es necesario decir esto en un texto, el que lee lo puede ver)
+
+%Durante un pulso térmico, la capa que quema helio se vuelve muy delgada e inestable, produciendo un embalamiento térmico \textbf{(también conocido como fuga térmica o \textit{ thermal runaway} en inglés)} en la misma \citep{Kipphenhahn2013}. \textbf{Debido a que las tasas de reacciones nucleares involucradas en la quema del helio son altamente sensibles a la temperatura}, un pequeño incremento en la misma produce un gran aumento en la tasa de la reacción. La luminosidad de helio $L_\text{He}$ se incrementa en varios órdenes de magnitud, sin embargo, sin aumentar la luminosidad total de la estrella. Esto es debido a que la mayoría de la energía liberada expande las capas superiores a la de la quema del helio, incluyendo a la capa que quema hidrógeno. Esta expansión enfría la capa de hidrógeno, reduciendo considerablemente su luminosidad $L_\text{H}$. Al haberse expandido, la capa de quema de helio no es más inestable, y toda la región comienza a contraerse nuevamente, encendiendo nuevamente la quema de hidrógeno. Luego de contraerse lo suficiente, todo el sistema recupera asintóticamente su estado original. Luego de un período de estabilidad de miles o decenas de miles de años, la capa que quema helio vuelve a tornarse inestable 
+%y ocurre el siguiente pulso térmico. 
+%Durante los \textbf{\textit{flashes}} de helio se forma una zona convectiva intermedia, entre el núcleo de carbono-oxígeno y la envoltura convectiva. Esta zona draga elementos del núcleo hacia capas superiores. Normalmente, la intensidad de los \textbf{\textit{flashes}} de helio irá aumentando en los sucesivos pulsos térmicos. Cuando esta intensidad sea lo suficientemente alta, la capa de hidrógeno se apaga por completo y la envoltura convectiva es capaz de penetrar en las zonas ricas en carbono y oxígeno, dragándolos y enriqueciéndose de metales en lo que se conoce como tercer \textit{dredge-up}.
+
+Cada pulso térmico deja como remanente estratificaciones químicas muy marcadas, con forma de ``picos'' en los perfiles de carbono-oxígeno. Esto se traduce en inversiones del gradiente químico que, considerando el criterio de Ledoux y la doble difusión, deberían ser inestables. Sin embargo, en esta región, $\nabla_\text{rad}<\nabla_\text{ad}$, por lo que las mismas son estables según el criterio de Schwarzschild y, por ende, cuando los cálculos se realizan con la MLT estándar, las mismas no se mezclan.
+%MLT no las mezcla. 
+En la Sección \ref{sec:simulaciones} describiremos las simulaciones realizadas para comparar los perfiles químicos resultantes considerando MLT, MLT\# y GNA.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\linewidth]{pulsoo.png}
+    \caption{Perfiles químicos inmediatamente antes (a), durante (b), y luego del noveno pulso térmico (c y d) de la secuencia con $\rm M_\text{in}=1.5 \ \rm \rm M_\odot$, usando MLT y MLT\#. Observar la formación del nuevo pico en el panel c y el suavizado en el panel d del pico producido en el pulso anterior.}
+    \label{figpulso}
+\end{figure}
+
+%sigo en un rato, me tengo que ir.
+\section{Simulaciones}\label{sec:simulaciones}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[width=\textwidth]{todasAGB.png}
+
+\caption{Abundancias químicas $X_i$ de estrellas de 1 $\rm M_\odot$ \textit{(panel izquierdo)}, 1.5 $\rm M_\odot$ \textit{(panel medio)} y 3 $\rm M_\odot$ \textit{(panel derecho)} en la etapa final de la AGB, usando MLT, MLT\# y GNA, donde las líneas sólidas representan la abundancia de carbono, las líneas a trazos la abundancia de oxígeno y las punteadas indican helio. Observamos que MLT\# y GNA producen el mismo efecto de mezcla y suavizado en los perfiles químicos. En el caso de 1 $\rm M_\odot$ la mezcla es menor. Notar la diferencia de escala en los ejes correspondientes a la coordenada $m(r)$, debida a las distintas masas de los modelos.} 
+\label{Figura}
+\end{figure*}
+
+Los cálculos de las secuencias fueron efectuados usando \texttt{LPCODE} \citep{2016A&A...588A..25M,2020A&A...633A..20A}. Presentamos en este artículo los resultados obtenidos para estrellas de  1 $\rm M_\odot$, 1.5 
+ $\rm M_\odot$ y 3 $\rm M_\odot$. Con el objetivo de eliminar incertezas numéricas, y sabiendo que el interés del presente trabajo se enfoca en comparar los efectos de las diferentes teorías de mezcla en la AGB, toda la secuencia principal y quema central del helio es calculada de la misma manera, usando MLT junto al criterio de Schwarzschild. Durante la AGB, al usar MLT\# se considera el criterio de Ledoux y al usar GNA los criterios de estabilidad propios de dicha teoría.
+
+En todas las secuencias se consideró una metalicidad inicial de Z=0.015 y longitud de mezcla $l_m=1.822$, mientras que el resto de la física considerada coincide con la descrita en la Sección 2 de \cite{2016A&A...588A..25M}. Esta elección permite replicar varios observables de la secuencia principal hasta la fase de enana blanca.  
+
+%{\bf mirar que se puede poner en relcion con mi trabjo en la eleccion de parametros}
+
+Durante cada pulso térmico se forma una discontinuidad en el perfil químico de la estrella, que se puede observar en forma de ``picos'' en la Fig. \ref{Figura}. Sin embargo, puede permaneceer un remanente de helio que estabilice la región. Una vez que este remanente de helio se queme, el gradiente químico se invertirá. Al usar MLT\# y GNA esa región se mezclará y los picos se suavizan en los siguientes pulsos, como se puede observar en la Fig. \ref{figpulso}.   MLT, por su parte, no mezcla estas regiones ya que las mismas no son inestables según el criterio de Schwarzschild. A su vez, el efecto de MLT\# y GNA se ve suprimido en la secuencia de 1 $\rm M_\odot$, al no quemarse el remanente de helio luego de los cuatro pulsos que tuvo la simulación, resultando en una zona más estable. 
+%¿Quizas así?:
+ En el caso de la secuencia de 3 $\rm M_\odot$ puede notarse una diferencia adicional en el caso del modelo calculado con la GNA. El mismo muestra un núcleo un poco más grande, que se manifiesta en un corrimiento hacia la derecha de los perfiles químicos mostrados en la Fig.  \ref{Figura}. Esto se debe a que la GNA incluye el tratamiento de las regiones semiconvectivas, lo que atenúa el efecto del tercer \textit{dredge-up}, dando lugar a un mayor crecimiento del núcleo.
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Conclusiones}
+
+En el presente trabajo se analizaron las inestabilidades producidas por el impacto de los gradientes químicos en los interiores estelares. Para el caso de gradiente químico negativo siempre se tiene algún tipo de inestabilidad, ya sea dinámica o doble difusiva (Fig. \ref{FigLedoux}). Exploramos una forma simple de extender MLT para que la misma contemple el escenario de las inestabilidades de RT. Esto, en combinación con la mezcla termohalina fue introducido en el código de evolución estelar \texttt{LPCODE} bajo el nombre de MLT\# para analizar la evolución de los perfiles químicos en los interiores de las estrellas en la AGB. Paralelamente, se corrieron simulaciones usando el equema estándar de MLT y la teoría doble difusiva denominada GNA. Observamos (Fig. \ref{Figura}) que, al introducir las inestabilidades químicas, el perfil resultante es diferente al predicho por MLT, encontrándose suavizado al haberse mezclado los picos formados en cada pulso térmico. A futuro se analizará el impacto de estas diferencias en los modos normales de oscilación de las estrellas GW Vir \citep{2019A&ARv..27....7C}.
+
+\begin{acknowledgement}
+Este trabajo fue parcialmente financiado por CONICET y Agencia I+D+i a través de los subsidios PIP-2971
+y PICT 2020-03316.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

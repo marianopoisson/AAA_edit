@@ -1,0 +1,436 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+\usepackage{bm}
+\newcommand{\hii}{H\textsc{ii}}
+
+\def\ks{km s$^{-1}$}
+\def\s{$^{\prime\prime}$}
+\def\k{K km s$^{-1}$}
+
+%\hypersetup{colorlinks=true, urlcolor=blue}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Presentación mural / Poster                                            %
+%  2: Presentación oral / Oral contribution                                  %
+%  3: Informe invitado / Invited report                                      %
+%  4: Mesa redonda / Round table                                             %
+%  5: Presentación Premio Varsavsky / Varsavsky Prize contribution           %
+%  6: Presentación Premio Sahade / Sahade Prize contribution                 %
+%  7: Presentación Premio Sérsic / Sérsic Prize contribution                 %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : HEDA  - Historia, Enseñanza y Divulgación de la Astronomía
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Catalogando y estudiando pilares en el medio interestelar: un proyecto
+de Ciencia Popular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Proyecto Ciencia Popular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{T. Heberling\inst{1},
+S. Paron\inst{1},
+\& M.E. Ortega\inst{1}
+}
+
+\authorrunning{Heberling, T. et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{tamaraheberling1@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astronomía y Física del Espacio, CONICET--UBA, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{ 
+Los Dres. Sergio Paron y Martín Ortega (IAFE) a fines del año 2022 lanzaron una convocatoria al
+público en general para realizar un trabajo en el contexto de lo que se conoce como ciencia ciudadana (Ciencia Popular
+fue llamada en este caso). Se recibieron cerca de cuarenta muestras de interés, y se realizaron encuentros y
+entrevistas con varias personas previamente seleccionadas. De ellas, Tamara Heberling, fue la que más avanzó
+en el trabajo propuesto, generando resultados sumamente interesantes. Dicho trabajo consistió en catalogar
+estructuras del medio interestelar conocidas como pilares, generar imágenes que combinan distintas longitudes de
+onda en el infrarrojo para estudiar su morfología, y buscar evidencias de formación estelar en sus puntas. Se presentan algunos resultados de dicho trabajo, el cual más allá de su carácter de ciencia ciudadana, puede
+considerarse un trabajo plenamente científico. De esta manera no sólo se presentan resultados interesantes en lo
+que respecta al estudio del medio interestelar, sino que también se destaca el interés que la Astronomía despierta en personas con profesiones no afines a la ciencia que pueden colaborar eficientemente en las tareas científicas cotidianas.
+}
+
+\abstract{
+At the end of 2022, Drs. Sergio Paron and Martín Ortega (IAFE) launched a call to the
+general public to carry out a work in the context of what it is known as citizen science (it was called Popular Science
+in this case). Nearly forty persons answered the call, and some meetings were held
+with several previously selected people. From all this people, Tamara Heberling, was the one who advanced the most
+in the proposed work, generating very interesting results. This work consisted in cataloguing
+structures in the interstellar medium known as pillars, generating images that combine different wavelengths in the infrared bands, studying the morphology of the structures, and looking for evidence of star formation at its tips. Some results of this work are presented, 
+which beyond its citizen science character, can
+be considered as a genuinely scientific work. In this way, interesting results are not only presented regarding
+the study of the interstellar medium, but we also highlight the interest that Astronomy generates
+in people with non-scientific professions, who can collaborate efficiently in the daily scientific work.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ISM: general --- HII regions --- ISM: structure} 
+
+\begin{document}
+
+\maketitle
+
+\section{Introducción}
+
+El \href{https://ec.europa.eu/newsroom/dae/document.cfm?doc_id=4122}{\it Green Paper on Citizen Science} de la Unión Europea menciona que la Ciencia Ciudadana es ``el compromiso del público general en actividades de investigación científica; (...) cuando los ciudadanos contribuyen activamente a la ciencia con su esfuerzo intelectual o dando soporte al conocimiento con sus herramientas o recursos''. 
+Desde la Secretaría de Articulación Científico Tecnológica\footnote{\href{https://www.argentina.gob.ar/ciencia/sact/ciencia-ciudadana/que-entendemos-por-ciencia-ciudadana}{https://www.argentina.gob.ar/ciencia/sact/ciencia-ciudadana/que-entendemos-por-ciencia-ciudadana}} del Ministerio de Ciencia y Tecnología de Argentina se menciona que ``la Ciencia Ciudadana es una manera de producir nuevo conocimiento científico a través de un proyecto estructurado de investigación colectiva, participativa y abierta, impulsado por distintos tipos de actores y actoras, quienes no necesariamente se desempeñan dentro de los ámbitos académicos''. De esta forma, no caben dudas de que generar proyectos de Ciencia Ciudadana, es apuntar a estrechar los lazos entre la sociedad y la ciencia.
+
+En el Grupo de Medio Interestelar, Formación Estelar y Astroquímica del Instituto de Astronomía y Física del Espacio (CONICET-UBA) iniciamos un proyecto de Ciencia Ciudadana para catalogar e investigar estructuras del medio interestelar. En esta primer etapa, si bien muchas personas inicialmente se contactaron demostrando su interés, como prueba piloto de nuestro proyecto, que lo denominamos Ciencia Popular, trabajamos con una de ellas. La Lic. Tamara Heberling, quien proviene de las ciencias médicas (Lic. en Kinesiología y Fisiatría), obtuvo resultados preliminares muy interesantes, generando la motivación para expandir dicho proyecto.
+Cabe destacar que los resultados de este trabajo se han presentado en
+una primer instancia en formato de póster en la 65 Reunión de la Asociación Argentina de Astronomía.
+
+\begin{table*}
+\centering
+\caption{Catálogo de regiones seleccionadas de la inspección de la Galaxia a través del {\sc ESASky 5.1.1}.}
+\label{tab}
+%\tiny
+\begin{tabular}{cccl}
+\hline\hline
+\noalign{\smallskip}
+Región	&	$l$ ($^\circ$) &	$b$  ($^\circ$) & Comentarios sobre las estructuras llamativas de la regiones.\\ 
+\hline 
+1 & 269.158 & $-$01.468 & forma redondeada, orientación hacia abajo, en la zona superior de la reg. \hii. \\ 
+2 &	006.056   & $-$01.440 & forma de pilar, orientación hacia arriba, hacia la izquierda de la reg. \hii.\\ 
+3 &	321.148 & $-$00.528 & forma de pirámide trunca, fuente brillante en su interior, zona inferior de la reg.\hii.\\ 
+4 &	024.850  &  $+$00.085 & forma bacilar, punta redondeada, zona lateral derecha de la reg. \hii. \\ 
+5 & 079.560  & $-$00.771 & forma de filamento curvado hacia la derecha, zona superior de la reg. \hii.\\ 
+6 & 024.850	& $+$00.085  & forma de pilar con punta irregular, zona inferior de la reg. \hii.\\
+7 & 009.928 & $-$00.748 &	forma redondeada-abultada, zona lateral derecha de la reg. \hii.\\
+8 & 353.162 & $+$00.835 &	forma de L con bordes redondeados, zona izquierda de la reg. \hii.\\
+9 &	353.012 & $+$00.812 &	grumo pequeño con punta redondeada, zona derecha de la reg. \hii.\\
+10 & 269.158 & $-$01.468	& varios pilares con puntas redondeadas interiores a la reg. \hii.\\
+11 & 081.307 & $+$01.048	& forma de pirámide con punta redondeada, zona lateral derecha de la reg. \hii.\\
+12 & 209.101 & $-$19.811	& forma de pirámide truncada con punta ondulada, zona inferior de la reg. \hii.\\
+13 & 332.794 & $-$00.830	& forma abultada, zona inferior de la reg. \hii.\\
+14	& 321.148	& $-$00.528 &	forma triangular con punta redondeada, zona izquierda de la reg. \hii.\\
+15	& 320.980	& $-$00.782 & varias estructuras para analizar y consultar.\\
+16	& 320.980	& $-$00.303 &	filamento fino y largo desde la zona inferior de la región.\\
+17	& 337.675	& $-$00.340 &	grumo pequeño con punta redondeada, zona derecha de la reg. \hii.\\
+18	& 336.448	& $+$00.030  & pequeño pilar con punta redondeada, zona inferior derecha de la reg. \hii.\\
+19	& 079.560	& $-$00.771 &	filamento irregular serpenteante con estructura interna, zona inferior de la región.\\
+20	& 030.507	& $-$00.301 &	grumo con punta redondeada, zona derecha de reg. \hii.\\
+21	& 326.705	& $-$00.604  & forma de pilar con punta muy curvada, zona lateral izquierda de la región.\\ 
+\hline 
+\end{tabular}
+\end{table*}
+
+
+El medio interestelar (MIE), particularmente los filamentos y nubes gaseosas que lo conforman, posee diversas estructuras generadas y moldeadas por la actividad
+de estrellas masivas. Las burbujas interestelares y regiones \hii~se expanden en el MIE, y en sus bordes, interfaces entre el gas ionizado y molecular, puede generarse el nacimiento de nuevas estrellas. Realizar una búsqueda de burbujas o regiones \hii, inspeccionar sus bordes, encontrar y catalogar estructuras en forma de pilares, resulta importante para la investigación del MIE. De esta manera, el trabajo propuesto fue buscar este tipo de estructuras a lo largo de la galaxia, catalogarlas y presentarlas en distintas longitudes de onda. A parte de la utilidad en sí misma de la búsqueda y del aprendizaje que ello genera, conformar una lista de regiones, de las cuales muchas de ellas pueden no haber sido catalogadas previamente, resulta  necesario para planear futuras investigaciones. A continuación se presenta la metodología del trabajo y los resultados que este ha generado. 
+
+
+
+\section{Metodología}
+
+Utilizando la herramienta {\sc ESASky 5.1.1} desarrollada por la European Space Agency (ESA) y que se encuentra en línea (\href{https://sky.esa.int/}{https://sky.esa.int/}) se inspeccionaron visualmente diversas regiones de la Galaxia. Se utilizaron imágenes en el infrarrojo cercano y medio y del milimétrico en busca de estructuras interestelares en forma de pilares. 
+Luego de ``recorrer'' la Galaxia a través de su plano, se seleccionaron 21 regiones y se generó un ``catálogo'' con sus características principales. Este catálogo, presentado en el \href{https://drive.google.com/file/d/1jPkcz38K4z3n5LWQfzG0_lRuLYAq73Kx/view}{\it poster}, se muestra en la Tabla\,\ref{tab}. En la misma, se numeran arbitrariamente las regiones seleccionadas, se incluyen sus coordenadas galácticas, y se incluyen algunos de los comentarios de las apreciaciones hechas por la participante sobre estructuras llamativas de las regiones seleccionadas.
+
+
+Luego, hacia cada una de estas regiones se adquirieron datos públicos multiespectrales de las bases de datos de los siguientes relevamientos: 
+
+\begin{itemize}
+\item Infrarrojo medio. Del relevamiento Galactic Legacy Infrared Mid-Plane Survey Extraordinaire (GLIMPSE) \citep{benjamin2003}, generado por el satélite {\it Spitzer}, se obtuvieron datos en  8.0, 4.5, y 3.6 \(\mu\)m, cuya resolución angular es 1$.\!\!^{\prime\prime}$7.
+
+\item Submilimétrico. Del relevamiento APEX Telescope Large Area Survey of the Galaxy  (ATLASGAL) \citep{schuller2009} se obtuvieron datos en continuo submilimétrico a 0.87 mm con una resolución angular de 19$.\!\!^{\prime\prime}$2.
+
+\item Continuo de radio. De la base de datos Multi-Array Galactic Plane Imaging Survey (MAGPIS) \citep{helfand2006} se obtuvieron datos en continuo de radio a 20 cm con resolución angular de 5\arcsec.
+\end{itemize}
+
+Habiendo adquirido el conocimiento del manejo de las bases de datos, se aprendió a trabajar con las imágenes científicas en formato FITS y a manejar el programa SAOimageDS9. Con dicho programa se generaron imágenes compuestas de las emisiones en las distintas longitudes de onda con el objetivo de analizar la física de cada una de las regiones.
+
+
+
+\section{Resultados}
+
+La presentación de los resultados generados en este trabajo la dividimos en una descripción de los resultados estrictamente científicos (Sect.\,\ref{rc}) y en una presentación de los resultados relacionados a la difusión y enseñanza de la astronomía, incluyendo la ``colaboración ciudadana'' en el trabajo científico (Sect.\,\ref{rp}).
+
+\subsection{Resultados científicos}
+\label{rc}
+
+Para cada una de las 21 regiones seleccionadas, la participante del proyecto realizó distintos tipos de imágenes combinando las bandas 8, 4.5, y 3.6 $\mu$m, el continuo de radio a 20 cm y la emisión en el submilimétrico a 0.87 mm. En todos los casos se buscó la presencia de pilares, de grumos de polvo frío y regiones de gas ionizado. Como muestra, a continuación se presentan algunas de estas imágenes para ilustrar el trabajo realizado. Adicionalmente, la participante, basándose en la literatura científica que le fue suministrada (capítulos introductorios de tesis desarrolladas en el grupo, por ej. \citealt{mariela,belen}), analizó  información  de la física que dichas imágenes aportaban e investigó la posible evidencia de formación estelar.
+
+La Fig.\,\ref{figura1} muestra la combinación de las emisiones en 8.0, 4.5 y 3.6 \(\mu\)m (en rojo, verde y azul) hacia una región \hii~en cuyo interior pueden observarse varias estructuras en forma de pilares. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8.5cm]{Imagen1b.png}
+\caption{Combinación de las emisiones en 8.0, 4.5 y 3.6 \(\mu\)m (rojo, verde y azul, respectivamente) de la región ubicada en $l=269.158$, $b=-01.468$ (región\,10 del catálogo presentado en la Tabla\,\ref{tab}).}
+\label{figura1}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=4.1cm]{Imagen2b.png}
+\includegraphics[width=4cm]{Imagen3.png}
+\caption{{\it Izquierda}: combinación de las emisiones en 8.0, 4.5 y 3.6 \(\mu\)m (rojo, verde y azul, respectivamente).
+{\it Derecha}: emisiones en 8.0 \(\mu\)m (rojo) y 0.87 mm (verde). 
+Se observan grumos de polvo frío (ver estructuras representadas en verde). Región ubicada en $l=6.056$, $b=-01.440$ (región\,3 del catálogo presentado en la Tabla\,\ref{tab}).}
+\label{figura2}
+\end{figure}
+
+
+\begin{figure}[h]
+\includegraphics[width=4.2cm]{Imagen4b.png}
+\includegraphics[width=4.05cm]{Imagen5.png}
+\caption{{\it Izquierda}: combinación de las emisiones en 8.0, 4.5 y 3.6 \(\mu\)m (rojo, verde y azul, respectivamente).
+{\it Derecha}: emisiones en 8.0 \(\mu\)m (rojo) y 0.87 mm (verde). Se observan grumos de polvo frío (ver estructuras en representadas en verde). Región ubicada en $l=321.148$, $b=-00.528$ (región\,14 del catálogo presentado en la Tabla\,\ref{tab}).}
+\label{figura3}
+\end{figure}
+
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=7cm]{Imagen8b.png}
+\caption{Combinación de las emisiones en 8.0 \(\mu\)m (rojo), 0.87 mm (verde) y continuo de radio a 20 cm (azul). Se observa una nube de borde brillante con acumulación de gas ionizado (ver pilar interno casi en el centro de la imagen). Región ubicada en $l=24.850$, $b=00.085$ (región\,6 del catálogo presentado en la Tabla\,\ref{tab}).  }
+\label{figura4}
+\end{figure}
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=8.5cm]{Imagen6b.png}
+\caption{Combinación de las emisiones en 8.0, 4.5 y 3.6 \(\mu\)m (rojo, verde y azul, respectivamente). En la punta del pilar se observa una región extendida brillante en verde (EGO) marcando una posible estrella en formación. Región ubicada en $l=79.560$, $b=-00.771$ (región\,19 del catálogo presentado en la Tabla\,\ref{tab}). }
+\label{figura5}
+\end{figure}
+
+
+
+En todos los casos se buscó evidencia de sitios de formación estelar a través de la presencia de grumos de polvo frío, gas ionizado acumulándose en bordes de los pilares y regiones extendidas en 4.5 $\mu$m (en verde en las figuras que combinan las emisiones a 8.0, 4.5 y 3.6 \(\mu\)m).
+
+Los grumos de polvo frío son regiones propicias de formación estelar y se pueden detectar en el espectro submilimétrico. En la Fig.\,\ref{figura2} y Fig.\,\ref{figura3} se observan en color verde grumos de polvo frío ubicados en los pilares.
+
+Las regiones \hii~son ionizadas por el campo de radiación de estrellas masivas. El gas ionizado suele detectarse en el continuo de radio, por lo tanto a través de la emisión a 20 cm, buscamos acumulación de gas ionizado en los pilares dentro de las regiones \hii~(para un ejemplo ver la Fig.\,\ref{figura4}). Estas regiones, en particular las puntas de los pilares en donde el gas ionizado se acumula y comprime al gas neutro, también son propicias para que se formen nuevas estrellas.
+
+Por otro lado, en ciertas regiones se han observado fuentes extendidas en la banda de 4.5 \(\mu\)m, a las cuales se las conoce como {\it Extended Green Objects} (EGOs), ya que en las imágenes de GLIMPSE compuestas de tres colores, habitualmente se representa a la banda de 4.5 \(\mu\)m en color verde (ver \citealt{cyga08}). Dichos objetos representan estrellas en formación. La Fig.\,\ref{figura5} muestra un ejemplo de un EGO encontrado en la punta de un pilar.
+
+
+\subsection{Resultados de la enseñanza, difusión y ``colaboración ciudadana'' de la Astronomía} 
+\label{rp}
+
+Los resultados de este proyecto piloto de ciencia ciudadana ciertamente fueron superlativos. Por parte de los profesionales científicos se llevó adelante una actividad de enseñanza y difusión de la astronomía, particularmente de su área de investigación, con una gran profundidad, cosa que es muy difícil de alcanzar a través de otras modalidades y en otros ámbitos. Incluso gracias a la excelente comunicación y recepción por parte de la participante se pudieron perfeccionar técnicas en la transmisión de conocimientos científicos. Todo el trabajo realizado por la participante es de gran valor ya que el catálogo de regiones, muchas de ellas muy interesantes, será usado para futuras investigaciones más detalladas.
+
+Desde el punto de vista de la participante, la colaboración en este proyecto ha sido muy enriquecedora, ya que brindó la oportunidad de poder experimentar en primera persona y de la mano de investigadores, cómo se desarrolla la investigación científica en todas sus etapas. Esto es desde el planteo de una hipótesis de trabajo hasta la publicación de los resultados. Este proyecto permite acercar el mundo de la investigación astronómica, que parece alejado, inaccesible y a veces misterioso, a la población general, dando cuenta de que el trabajo en conjunto nos nutre recíprocamente.
+
+\section{Conclusiones y trabajo futuro}
+
+Partiendo de nuestro convencimiento  de que la ciencia es un bien y un quehacer que no debe quedarse puertas adentro, que su difusión y enseñanza son sumamente necesarias, y que existen muchas personas, sin formación necesariamente científica, que pueden participar con un rol activo en ella, creamos este proyecto que denominamos Ciencia Popular. 
+
+En esta experiencia piloto realizada con solo una participante pudimos comprobar la capacidad del grupo de investigación de llevar adelante este tipo de trabajos (testear, evaluar y mejorar el diálogo entre científicos y personas no científicas). 
+
+Ha quedado demostrado que los resultados científicos fueron muy valiosos, y mucho más los resultados obtenidos de la interacción en el trabajo. En base a ello, hemos iniciado una segunda etapa en el proyecto de Ciencia Popular en el cual participan cuatro personas investigando la astroquímica de una muestra de 36 regiones de formación estelar. Este trabajo se encuentra en desarrollo y se esperan obtener resultados importantes. Estos resultados no sólo serán comunicados a través de presentaciones y/o artículos sobre difusión y educación de la astronomía, sino también se buscará publicarlos como un artículo científico en revistas especializadas. 
+
+En conclusión, estamos convencidos de que trabajos como estos son valiosos para nuestra comunidad científica, ya que generan un diálogo y una interacción con la sociedad muy profundo. En nuestra web se van incluyendo los resultados de este proyecto: \href{https://interestelariafe.wixsite.com/mediointerestelar/cienciapop}{Ciencia Popular}.
+
+\begin{acknowledgement}
+Se agradece al referee anónimo/a y a la editora por todos los comentarios útiles para mejorar este artículo. El grupo de investigación se encuentra actualmente financiado por los proyectos PIP 2021 11220200100012 y PICT 2021-GRF-TII-00061 otorgados por CONICET y ANPCYT.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{refBolTam}
+
+
+
+\end{document}

@@ -1,0 +1,423 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Ultra Diffuse Galaxy formation constraints and possible detection in S-PLUS images}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{UDGs formation constraints and detection in S-PLUS images}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+P. Astudillo Sotomayor\inst{1},
+N.W.C. Leigh\inst{1,2},
+R. Demarco\inst{3},
+A.V. Smith Castelli\inst{4,5},
+R.F. Haack \inst{4,5},\\
+A.R. Lopes \inst{4} \&
+L.A. Gutierrez Soto \inst{4}
+}
+
+\authorrunning{Astudillo Sotomayor et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{pastudillo2018@udec.cl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Departamento de Astronomía, Universidad de Concepción, Chile\and 
+Department of Astrophysics, American Museum of Natural History, USA \and
+Instituto de Astrofísica, Facultad de Ciencias Exactas, Universidad
+Andr\'es Bello, Sede Concepci\'on, Talcahuano, Chile \and
+Instituto de Astrofísica de La Plata, CONICET-UNLP, Argentina \and
+Facultad de Ciencias Astronómicas y Geofísicas, UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Presentamos trabajo preliminar asociado a la identificación de posibles escenarios de formación para las denominadas Galaxias Ultra Difusas (UDGs, por sus siglas en inglés) y sus sistemas de cúmulos globulares (GCs, por sus siglas en inglés). Para ello, ajustamos la función de luminosidad de los GCs, la cual se espera sea afectada por varios escenarios de formación. También presentamos nuestro plan de profundizar en el pasado colisional de las UDGs, estudiando las escalas de tiempo de fricción dinámica para acotar el tiempo transcurrido desde una posible interacción galaxia-galaxia. Por último, presentamos trabajo actualmente en desarrollo relacionado a la detectección de UDGs a la distancia del cúmulo de galaxias de Fornax en imágenes de la colaboración S-PLUS.}
+
+\abstract{We present preliminary work constraining possible formation scenarios for the formation of Ultra Diffuse Galaxies (UDGs) and the unique Globular Cluster (GC) populations some UDGs have. For this, we fit the GC luminosity function which is expected to be affected by several formation scenarios. We also present our plans to further delve into the collisional past of the UDGs, studying the GC dynamical friction timescale to constrain the time elapsed since a galaxy-galaxy interaction if this one occurred. We finally present our ongoing work attempting to detect UDGs at the Fornax cluster distance in images obtained by the S-PLUS collaboration.
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{galaxies: dwarf --- galaxies: star clusters: general --- galaxies: formation --- galaxies: luminosity function, mass function --- galaxies: kinematics and dynamics }
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+%New intro more concise
+
+Ultra diffuse galaxies (UDGs), as characterized by \cite{VanDokkum2015a}, exhibit a distinctive combination of traits: low surface brightness ($\mu_{\rm e}=24-28$ mag arcsec$^{-2}$) akin to dwarf galaxies, coupled with significantly larger effective radii ($1.5 - 5$ kpc). They have been extensively observed across various environments, including galaxy clusters such as Coma and Virgo, as well as in groups and the field \citep{VanDokkum2015a, vanDokkum2015b, Yagi2016, koda2015, Mihos2015, Gonzalez2018, Jones2023}. These galaxies, characterized by old stellar populations and minimal ongoing star formation, typically reside on the red sequence of the color-magnitude diagram, with stellar masses ranging from $10^7$ to $10^8 \,\textrm{M}_\odot$ \citep{koda2015}.
+
+The origins of UDGs falls into two broad categories: in-situ and ex-situ processes. In the case of in-situ processes there's been numerous mechanism proposed such as stellar feedback and gas outflows \cite{Dicintio_feedback,Chan_feedback}, high momentum rotation of their haloes \citep{ amoriscoloeb_highmomentum,Benavides2023_highmomentumhalo}. Conversely, ex-situ mechanisms, predominant in dense environments like galaxy clusters, involve external forces such as ram-pressure stripping and tidal interactions, which strip galaxies of their gas reservoirs \citep{martin2019_tidalheating}. Other scenarios propose UDGs to be "failed galaxies" with Milky Way-like dark matter haloes but stellar masses corresponding to the dwarf galaxy range \citep[e.g.][]{Janssens2022,toloba2023_failedgalaxies}.
+
+\cite{Carleton_2019_UDGtidal} proposed that the tidal stripping of dwarf galaxies with cored halos better reproduces observed UDG properties, particularly in cluster environments. However, discrepancies remain, particularly in explaining extremely large UDGs and those experiencing significant mass loss. Recent studies, including those by \cite{vanderBurg_abundanceUDG} and \cite{Carleton_2021_tidal}, suggest an increase in UDG abundance with host cluster mass, indicative of a correlation with environment. Notably, observations of globular clusters in UDGs like NGC1052-DF2 and NGC1052-DF4  (hereafter DF2 and DF4) support a top-heavy GC Luminosity Function (GCLF) in various environments.
+
+Our study aims to bring hints to which formation mechanism is more likely to create UDGs by studying their GCs populations in different environments. We present an initial sample from diverse environments and outline our methodology for studying GC populations. Additionally, we discuss the implications of our work in the broader context of the S-PLUS Fornax Project (S+FP; \citealp{SC2024}).
+
+
+
+\begin{table*}[]
+    \centering
+    \begin{tabular}{ccccccccc}
+        \hline \hline
+         Galaxy & Filters & \textrm{N}$_{\mathrm{gc}}$&M$_{*}$       & r$_{\rm e}$&  $<\mu>_{\rm e,F814W}$    &n &Env. &ref \\
+                &         &         & ($\mathrm{M}_{\odot}$)  & ($\mathrm{kpc}$)  & ($\mathrm{mag\, arcsec}^{-1}$)   & & &  \\
+            (1)    &  (2)       &    (3)     &        (4)        &   (5)     &           (6)            & (7)  &   (8)   &  (9) \\
+         \hline
+         NGC1052-DF2& F606W, F814W& 14 &$2.0\times 10^{8} $  &$2.20 $ &$25.24 $ & $0.55$& Group & (a),(b) \\
+         NGC1052-DF4& F606W, F814W& 11 &$1.5\times 10^{8} $  &$1.60 $ &$25.06 $ & $0.79$& Group & (c),(d) \\
+         DF07       &F475W, F814W & 17 &$2.8\times 10^{8} $  &$3.74 $ &$24.69 $ & $0.81$&Cluster & (e) \\
+         DF08       &F475W, F814W & 10 &$0.6\times 10^{8} $  &$3.07 $ &$25.61 $ & $0.88$&Cluster & (e) \\
+         DF17       &F475W, F814W & 24 &$1.4\times 10^{8} $  &$3.75 $ &$25.34 $ & $0.65$&Cluster & (e) \\
+         DF44       &F475W, F814W & 22 &$2.1\times 10^{8} $  &$4.21 $ &$25.08 $ & $0.77$&Cluster & (e) \\
+         DFX1       &F606W, F814W & 19 &$1.5\times 10^{8} $  &$3.73 $ &$25.10 $ & $0.92$&Cluster & (e) \\
+         SMDG1251014& F475W, F814W& 30 &$4.9\times 10^{8} $  &$5.06 $ &$25.20 $ & $1.01$&Cluster*& (e) \\
+         DGSAT-I    & F606W, F814W& 12 &$3.3\times 10^{8} $  &$4.70 $ &$25.00 $ & $0.38$&Isolated** & (f) \\
+         \hline
+    \end{tabular} 
+    \caption{UDGs parameters obtained from the literature.Column (2) present the filters in which the UDGs were observed, column (3) shows the number of GCs in each UDG, column (4) presents the stellar mass in solar masses, in column (5) we show the effective radius, column (6) lists the effective surface brightness in magnitudes per arcsecond, and columns (7) and (8), the Sérsic index and the environment where the UDG is located, respectively. * indicates that the galaxy is located in the outskirts of the Coma cluster. ** indicates that the galaxy is located in a filament of the Pisces-Perseus Supercluster, but isolated from groups or clusters. The references from which the listed values were obtained are shown in column (9) and are as follows: 
+    (a)\cite{Montes_2021_DF2},(b) \cite{vanDokkum2018_df2}, (c) \cite{Montes_2021_DF4}, (d)\cite{vanDokkum2019_df4}, (e)\cite{Saifollahi2022}, (f) \cite{Janssens2022}.}
+    \label{Sample}
+\end{table*}
+
+
+\section{Methodology and Results}\label{sec:methods}
+We use publicly available catalogs of GCs in the UDGs and properties of the host galaxies reported in the literature, such as effective radius, stellar mass, S\'ersic index and mean surface brightness in the F814W filter to perform our analysis in the GCs populations. This parameters are listed in Table\,\ref{Sample}. All the other parameters are derived or estimated as explained in the subsequent sub-sections. In Section\,\ref{subsec:gclf} we show the fit of skewed gaussian functions to the GCLF of the UDGs. In Section\,\ref{subsec:radial}, we calculate the radial profiles for mass, density and velocity dispersion fitting observable parameters to theoretical functions. In Section\,\ref{subsec:ml} we estimate the effective mass-to-light ratio using a function dependent in log $\sigma$ and log I$_\text{e}$ (see \citealt{Zaritsky2022_mass_estimation}). Finally, in Section\,\ref{subsec:DF} we calculate dynamical friction timescales for all GCs in the UDGs.
+
+
+
+\subsection{Globular Cluster Luminosty Function}\label{subsec:gclf}
+The GCLF has been historically described as a gaussian with a near universal peak at M$_{\textrm{V}}\approx -7.5$ \cite{harris_gclf}
+First, we fit skewed Gaussian functions to the GCLF histograms of each UDG. For this, we build a kernel density estimation of the data using the python package \textsc{scikit-learn} \citep{scikit-learn}, opting for a Gaussian kernel. After this, we retrieve the parameters for a skewed Gaussian probability density function (\textsc{scipy};\citealt{2020SciPy-NMeth}) using the negative log-likelihood function.
+Most UDGs like those in the Coma cluster and DGSAT-I show a turnover magnitude (M$_{\rm 0}^{\rm T}$) consistent with the Universal peak M$_{\rm I,0} \approx -8.4$ mag described by \cite{harris_gclf}. DF2 and DF4 are the only outliers to this universal property pointing to the idea that they should have a formation scenario completely different from other UDGs.
+We summarize the skewed Gaussian parameters in Table\,\ref{tab:table2}. 
+\begin{table}[]
+    \centering
+    \begin{tabular}{cccc}
+    \hline \hline 
+        Galaxy & M$_{\text{0}}^{\text{T}}$  & $\sigma$ & $\alpha$  \\ 
+         & [mag]& & \\
+        (1) & (2)& (3) &(4) \\\hline\\
+        DF2 & $-9.32 \pm 0.01$ & $0.77 \pm 0.20$ & 1.13   \\ 
+        DF4 & $-9.33 \pm 0.00$ & $0.80\pm 0.24 $ & 1.29   \\ 
+        DF07        & $-8.61 \pm 0.03$ & $0.92 \pm 0.22$ & -0.30  \\ 
+        DF08        & $-8.16 \pm 0.02$ & $0.69 \pm 0.22$ & -0.18  \\ 
+        DF17        & $-7.99 \pm 0.02$ & $0.84 \pm 0.17$ & -2.50  \\ 
+        DF44        & $-7.65 \pm 0.03$ & $1.13 \pm 0.24$ & -5.18  \\ 
+        DFX1        & $-8.12 \pm 0.03$ & $0.65 \pm 0.15$ & -1.19  \\ 
+        SMDG1251014 & $-8.34 \pm 0.03$ & $0.90 \pm 0.17$ & -1.90  \\ 
+        DGSAT-I     & $-8.22 \pm 0.06$ & $1.33 \pm 0.38$ & -2.81  \\ \hline
+    \end{tabular}
+    \caption{ Results from fitting a skewed Gaussian function to the GCLF of the UDGs in the sample presented in Table\,\ref{Sample}. Columns (2), (3) and (4) are the skewed Gaussian parameters obtained from the fitting of the GCLF in the filter F814W. They are, from left to right, the peak magnitude, the standard deviation and the skewness parameter, respectively.}
+    \label{tab:table2}
+\end{table}
+
+
+\subsection{Radial profiles}\label{subsec:radial}
+To calculate the dynamical friction timescales for all GCs in our UDGs,  first we need to compute numerically the mass, density and velocity dispersion profiles.
+The mass enclosed within a radius $r$ is required to calculate the density and velocity dispersion profiles. This is done by fitting observational parameters such as the Sérsic index, $n$, and the effective surface brightness, $I_e$. 
+Following \cite{Leigh_Fragione} and \cite{Terzic_Graham}, we define:
+
+\begin{equation}
+    \rho_0 = \frac{\sqrt{\pi}}{4R_{\textrm{e}}}\Upsilon_0 I_{\textrm{e}} b^{n(1-p)},
+\end{equation}
+
+\noindent where $\Upsilon_0$ is the mass-to-light ratio. The variables b and p are approximated as:
+
+\begin{equation}
+    b = 1.9992n-0.3271 
+\end{equation}
+\begin{equation}
+    p = 1 - \frac{0.6097}{n} + \frac{0.055}{n^2}.
+\end{equation}
+
+\noindent The mass profile is equation (A2) from \cite{Terzic_Graham}:
+\begin{equation}
+    M(r) =  4 \pi \rho_0 R_{\textrm{e}}^3 n b^{n(p-3)} \gamma(n(3-p),z)
+\end{equation}
+For the density profile, we assume an isotropic and spherical distribution of mass:
+\begin{equation}
+    \rho(r) = \frac{M(r)}{4/3 \pi r^3}.
+\end{equation}
+Finally, the velocity dispersion profile follows equation (A5) from \cite{Terzic_Graham} which is the numerical solution of:
+\begin{equation}
+    \sigma^2_{\mathrm{s}}(r) = \frac{G}{\rho(r)} \int_r^{\infty} \rho(\bar r) \frac{M(\bar r)}{\bar r^{2}} d\bar r.
+\end{equation}
+
+\subsection{Mass-to-light ratio estimation}\label{subsec:ml}
+The mass-to-light ratios are estimated using the following equation, with parameters $a=0.198$, $b=0.140$, $c=0.192$, $d=-0.923$, $e=-0.108$ and $f=1.306$ obtained by \cite{Zaritsky2022_mass_estimation} from fitting elliptical and dwarf elliptical galaxies, UDGs, dwarf spheroidal and ultra-faint satellites of the Milky Way and M31, and compact dwarf galaxies: %and a compilation of UDGs 
+\begin{align}
+        \text{log} \, \Upsilon_{\textrm{e}} &= a\, (\text{log} \, \sigma)^2 + b\, \text{log} \,\sigma + c \,(\text{log} \,I_{\textrm{e}})^2 + \nonumber
+        \\ & d \, \text{log} \,I_{\textrm{e}} \,+ e\, \text{log} \,I_{\textrm{e}} \,\text{log} \,\sigma \,+ \,f.
+\end{align}
+
+
+\subsection{Dynamical friction timescales }\label{subsec:DF}
+Following the treatment performed by \cite{Leigh_Fragione} for DF2 and DF4, we study the past collisional evolution of observed GC populations, starting with the calculation of the dynamical friction (DF) timescales of each GC. DF timescales shorter than a Hubble time will motivate formation scenarios where the GC populations have had sufficient time to have their orbits become more centrally concentrated.   The present-day positions of the GCs are in such cases not where they formed in their host galaxy. 
+
+The DF timescale ($\tau_{\textrm{DF}}$) assuming circular orbits is given by \citep{binney_tremaine_1987,gnedin_df}:
+
+\begin{equation}
+    \tau_{\textrm{DF}} = \frac{1.17 \, M(r) \, r}{\ln \Lambda \, m_{\textrm{GC}} \, \sigma(r)}
+\end{equation}
+As seen in Fig. \ref{fig:DFtimescales}, all GCs within $r\lesssim 3$ kpc for the UDGs in the sample, display DF timescales shorter than a Hubble time. \cite{Janssens2022} found the GC system of DGSAT-I to be more compact than the galaxy $R_{\textrm{GC}}/R_{\textrm{e}}=0.7$. The compact GC system of DGSAT-I is consistent with what we find.
+This could be explained by the low DF timescales, such that the spatial distribution of the GC population in DGSAT-I was normal at birth, in comparison to the ones of other galaxies in our sample.
+
+\begin{figure}[!ht]
+    \centering
+    \includegraphics[width=0.85\columnwidth]{dynamical_friction_timscales.png}
+    \caption{DF timescales (in years) as a function of projected galactocentric distance (in kpc). Circles represent GCs in UDGS in the Coma cluster, triangles represent GCs in the isolated UDG DGSAT-I and stars show GCs in NGC1052-DF2 and NGC1052-DF4. The solid horizontal line depicts a Hubble time.}
+    \label{fig:DFtimescales}
+\end{figure}
+
+
+
+\section{Ultra Diffuse Galaxies in the Fornax Cluster using S-PLUS}\label{sec:splus}
+
+In order to better constrain our previous results, we look for significantly enlarge our sample of GCs in UDGs placed in dense environments. To that aim, we have been able to detect UDGs, previously observed in the context of the {\it Systematically Measuring Ultra Diffuse Galaxies} (SMUDGes) project  (\citealt{Zaritsky_2019_SMUDGes,Zaritsky2023}), in S-PLUS images that are being analyzed as part of the S-PLUS Fornax Project (S+FP; \citealt{SC2024}) (Fig.\,\ref{LSBs_Fornax}). The S+FP aims at studying the galaxy  and GC populations in the Fornax cluster and its surroundings, using 106 S-PLUS fields ($1.4 \times 1.4 \textrm{ deg}^2$) which cover an area of $\approx 208 \textrm{ deg}^2$. With this coverage, the S+FP reaches up to $5\times \textrm{R}_{\textrm{vir}}$ in RA.
+Previous studies focused on low surface brightness (LSB) galaxies and UDGs in Fornax, such as those performed by the Next Generation Fornax Survey (NGFS; \cite{Munioz2015}) and the Fornax Deep Survey (FDS;  \citealt{Venhola2017,Venhola2022}), have mostly been concentrated in the inner region of the cluster ($\approx1~\textrm{R}_{\textrm{vir}}$). However, SMUDGes, encompassing $\approx 14,000$ deg$^2$ of the sky, provides us with UDG candidates covering, in projection, all S+FP fields. The well-populated sample of already known UDGs  in Fornax, will allow us to significantly extend our study of the UDGs' GC systems in a rich nearby cluster.  
+It is worth noticing that S-PLUS will only allow us to study the bright end of the GCLF (see Section 3.11.1 in \citealt{SC2024}). However, considering that for most UDGs (with exception of DF2 and DF4) the GCLF is consistent with the expected reuniversal GCLF, at least in peak magnitude, we will still be able to  reconstruct their GCLF. We are starting to deepen in such an analysis and we expect to submit a paper with the results soon.  
+
+
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=0.9\columnwidth]{udgs_splus.png}
+    \caption{Three UDGs previously identified by SMUDGes in the Fornax cluster, that have been recently detected with SExtractor in S-PLUS images. The
+left panel shows the galaxy images obtained from the DESI Legacy Imaging Survey and, the right panel, the detection by SExtractor using RUN\,2 from \cite{Haack2023} }
+    \label{LSBs_Fornax}
+\end{figure}
+
+
+
+\begin{acknowledgement}
+We acknowledge funding from ANID, Chile via Millenium Nucleus NCN23\_002 (TITANs) and BASAL FB210003
+NWCL gratefully acknowledges the generous support of a Fondecyt General grant 1230082, as well as support from Núcleo Milenio NCN2023\_002 (TITANs) and funding via the BASAL Centro de Excelencia en Astrofisica y Tecnologias Afines (CATA) grant PFB-06/2007.  NWCL also thanks support from ANID BASAL project ACE210002 and ANID BASAL projects ACE210002 and FB210003. RD also gratefully acknowledges support by the ANID BASAL project FB210003. A.V.S.C., R.F.H., A.R.L. and L.A.G.S. acknowledge financial support from CONICET, Agencia I+D+i (PICT 2019-03299) and Universidad Nacional de La Plata (Argentina). S-PLUS is an international collaboration founded by Universidade de Sao Paulo, Observatório Nacional,
+Universidade Federal de Sergipe, Universidad de La Serena and Universidade Federal de Santa Catarina.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

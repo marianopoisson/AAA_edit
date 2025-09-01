@@ -1,0 +1,388 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{7}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{La corriente estelar de Sagitario inmersa en un halo de materia oscura fermiónica}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Corriente estelar de Sgr}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{S. Collazo\inst{1,2}, M.F. Mestre\inst{2} \& C.R. Argüelles\inst{2,3}
+}
+
+\authorrunning{Collazo et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{scollazo@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astronómicas y Geofísicas, UNLP, Argentina
+\and
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina
+\and
+International Center for Relativistic Astrophysics Network, Italia
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Bajo el supuesto de que la materia oscura es una partícula fermiónica neutra distribuida a escalas galácticas según el modelo Ruffini-Arg\"uelles-Rueda (RAR), se evaluó si un modelo de física de primeros principios como este es capaz de reproducir las observaciones 6D de la corriente estelar de Sagitario que orbita en la Vía Láctea. La predicción de esta corriente estelar (es decir, brazo anterior, brazo posterior y cuerpo principal) se realizó utilizando un algoritmo de \textit{spray}, dentro del cual se definieron los componentes bariónicos y de materia oscura tanto del huésped como del progenitor. En un escenario como este, se demuestra que un modelo de halo fermiónico en simetría esférica es capaz de reproducir las características principales de la corriente estelar.}
+
+\abstract{Under the assumption that dark matter is a neutral fermionic particle distributed on galactic scales according to the Ruffini-Argüelles-Rueda (RAR) model, it was evaluated whether a first principle physics model of this kind is capable of reproducing the 6D observations of the stellar stream of Sagittarius orbiting the Milky Way. The prediction of this stellar stream (i.e. leading arm, trailing arm and main body) was carried out using a \textit{spray} algorithm, within which the baryonic and dark mass components of the host and progenitor were defined. Under a scenario like this, it is demonstrated that such a spherically symmetric fermionic-halo model is capable of reproducing the main features of the stream.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{dark matter --- Galaxy: halo --- galaxies: individual (Milky Way, Sagittarius dSph)
+}
+
+\begin{document}
+\maketitle
+
+\section{Introducción}
+
+Las corrientes estelares son excelentes trazadoras del potencial gravitatorio de la Galaxia. Esto se debe, en parte, a que desde hace casi dos décadas se posee acceso a un conjunto completo de datos en el espacio de fases $6D$ de las estrellas que los componen, incluyendo posiciones en la esfera celeste, movimientos propios, velocidades radiales y distancias \citep[ver e.g.][]{Ibata2020, Mateu2023}. A su vez, debido a la trayectoria de algunos progenitores, las estrellas eyectadas pueden tener distancias apocéntricas que exceden a aquellas asociadas a los trazadores de la curva de rotación Galáctica, incluso fuera del plano del disco, convirtiendo a las corrientes estelares en buenas trazadoras del potencial gravitatorio de la Vía Láctea a grandes escalas. En particular, la corriente de Sagitario, desde su primer detección en todo el plano del cielo en \cite{2003ApJ...599.1082M}, ha sido un trazador fundamental para poner restricciones a distintos modelos de materia oscura. Estos incluyen desde variantes de modelos provenientes de simulaciones cosmológicas dentro del paradigma de la materia oscura fría \citep{2005ApJ...619..807L}, hasta modelos puramente fenomenológicos con simetría triaxial \citep{Law2010}, entre otros.
+
+Sin embargo, como fue remarcado en \cite{Law2010}, existe una dificultad clara en reconciliar los modelos triaxiales que mejor ajustan los datos con aquellos asociados a la materia oscura fría, limitando el acceso a una comprensión de la naturaleza y masa de esta última. Así, en este trabajo y por primera vez en la literatura, se modelizará la corriente de Sagitario utilizando un modelo de materia oscura basado en física de primeros principios cuyos perfiles de densidad dependen de la masa del candidato de materia oscura e incluyen la naturaleza cuántica de la misma. Este modelo se denomina en la literatura como el modelo RAR~\citep{Ruffini2015}, en particular su versión extendida~\citep{Arguelles2018, Arguelles2021}, el cual modeliza los halos de materia oscura como un sistema autogravitante de fermiones neutros en el marco de la Relatividad General. Muy poca investigación ha sido desarrollada en esta dirección a la fecha, pudiendo citar el trabajo de materia oscura bosónica de \cite{2015ApJ...810...99R} el cual estudió efectos de marea en galaxias enanas hipotéticas como satélites de nuestra Galaxia, sin contrastar con datos reales.
+
+%Por otro lado, como es sabido, nuestra galaxia es bien modelada a través de una componente de disco, un bulbo central y un halo de materia oscura. Con respecto a esta última, se ha estudiado la posibilidad de que este sea modelado a través de un sistema autogravitante de fermiones neutros en un marco general relativista \citep{Ruffini2015, Arguelles2018, Arguelles2021}, el cual es conocido como modelo RAR extendido. Este modelo presenta una novedosa alternativa a los modelos fenomenológicos tradicionales de halos de materia oscura \citep[ver e.g.][]{Einasto1965, Burkert1995, Navarro1997}. Su naturaleza mecánico estadística permite estudiar fácilmente la estabilidad de dichos halos y la extensa variedad de soluciones que se presentan \citep{Arguelles2019}. La mayoría de estas soluciones se presentan en formato `núcleo-halo', en donde el núcleo se sostiene en contra de la gravedad a través del principio de exclusión de Pauli que hace efecto sobre los fermiones y el halo se sostiene por la presión térmica que ejercen tales partículas.
+
+La solución mas general para los perfiles RAR presentan una morfología del tipo \textit{núcleo compacto}--\textit{halo diluido}, donde el núcleo compacto y denso está gobernado por degeneración fermiónica y puede funcionar como alternativa a los agujeros negros supermasivos en los centros galácticos \citep{Arguelles2018,Arguelles2019}. Siendo un perfil semi-analítico proveniente de la integración de ecuaciones de equilibrio, estos halos fermiónicos cubren escalas radiales que van desde fracción de miliparsec (donde los fermiones están en un regímen degenerado) hasta el borde galáctico. El modelo RAR  ha sido aplicado a la Vía Láctea, explicando su curva de rotación \citep{Arguelles2018, Arguelles2023} y al mismo tiempo, por medio del núcleo compacto de materia oscura, ha podido reproducir las órbitas de las estrellas S que orbitan SgrA* en el centro de nuestra Galaxia \citep{BecerraVergara2021}. En este trabajo se mostrará que este modelo de halo de materia oscura, en conjunto con una componente bariónica, pueden reproducir las características principales de la corriente estelar de Sagitario que orbita nuestra Galaxia.
+% así como explicar diversas relaciones universales en galaxias \citep{2023ApJ...945....1K}
+% Esto permite que el modelo RAR sea puesto a prueba en una gran variedad de escenarios astrofísicos diferentes, cubriendo en varios órdenes de magnitud la curva de rotación de la Vía Láctea.
+% y de predecir la precesión del periapsis de la órbita de la estrella S2 \citep{Arguelles2022}
+
+%En la Sec. \ref{sec:observaciones} se detallarán los datos utilizados en este trabajo para contrastar las predicciones. En la Sec. \ref{sec:modelo} se explicará el modelo teórico con el que se busca predecir la corriente estelar de Sagitario. Por último, se finalizará el trabajo en la Sec. \ref{sec:discusion_y_conclusiones} con una breve discusión y las conclusiones.
+
+\section{Observaciones}\label{sec:observaciones}
+
+Las observaciones utilizadas en este trabajo fueron tomadas de \cite{Ibata2020} y constan de un mapa 6D de las estrellas que componen la corriente estelar eyectada por la galaxia esferoidal enana de Sagitario (Sgr dSph). En el espacio de las velocidades, los datos se componen de las dos componentes del movimiento propio y una componente de velocidad en dirección radial. Los datos correspondientes al espacio de las configuraciones corresponden a las coordenadas cartesianas de 3500 estrellas RR Lyrae. En \cite{Ibata2020} se utilizaron los datos de Gaia \textit{DR2} y se redujeron con la ayuda del algoritmo STREAMFINDER~\citep{Malhan2018}. El número de estrellas filtradas resultó ser de $\sim 2\times 10^5$. Posteriormente, a la distribución de estrellas en el espacio de las velocidades le ajustaron una función analítica para representar los movimientos propios y las velocidades radiales \citep[ver Ec. (1) de ][]{Ibata2020}.
+
+Los datos de las estrellas filtradas se representaron en el sistema de coordenadas heliocéntrico de Sgr, con longitudes y latitudes $(\Lambda_{\odot}, B_{\odot})$, respectivamente. Este sistema se propuso originalmente en \cite{Majewski2003}, aunque en \cite{Ibata2020} se utilizo la convención sugerida por \cite{Koposov2012} de invertir el eje de las latitudes respecto a la definición original. Como resultado, el plano ecuatorial de este sistema de coordenadas tiene como polo norte aquel punto con coordenadas galactocéntricas $(l,b)=(93.8^{\circ},13.5^{\circ})$. Por otro lado, se ha elegido la convención de longitudes positivas en la dirección del brazo anterior de la corriente de estrellas, mientras que el origen de las longitudes coincide con el centro del perfil de King ajustado al cuerpo principal del progenitor.
+
+\section{Potencial galáctico y algoritmo de \textit{spray}}\label{sec:modelo}
+
+Se modelará el potencial gravitatorio de la Vía Láctea a través de una componente bariónica y una de materia oscura. La primera está compuesta de un bulbo central tipo esfera de Plummer y dos discos de Miyamoto-Nagai \citep{Miyamoto1975},  correspondientes a un disco fino y un disco grueso. Las fórmulas vienen dadas, respectivamente, por las expresiones:
+
+\begin{equation}
+    \Phi_{\mathrm{P}}(r) = - \frac{GM_{\mathrm{P}}}{\sqrt{r^{2} + b_{\mathrm{P}}^{2}}},
+\end{equation}
+
+\begin{equation}
+    \Phi_{\mathrm{MN}}(R,z) = - \frac{GM_{\mathrm{MN}}}{\sqrt{R^{2} + \left(a_{\mathrm{MN}} + \sqrt{z^{2} + b_{\mathrm{MN}}^{2}}\right)^{2}}}.
+\end{equation}
+En las fórmulas anteriores, $r$ es la distancia galactocéntrica, $R$ es la distancia radial galactocéntrica, $z$ es la coordenada perpendicular al plano galactocéntrico y $a_{\mathrm{MN}}$, $b_{\mathrm{MN}}$ y $b_{\mathrm{P}}$ son factores de escala. Por otro lado $M_{\mathrm{P}}$ y $M_{\mathrm{MN}}$ son las masas del bulbo y del disco, respectivamente. Todos los parámetros libres de la componente bariónica fueron tomados de \cite{Pouliasis2017}.
+
+Con respecto al halo de materia oscura, se seguirá el modelo enunciado en la introducción (modelo RAR extendido), que consiste en la suposición de que esta componente está formada de un sistema autogravitante de fermiones neutros en un marco general relativista. La descripción detallada del mismo puede seguirse de \cite{Arguelles2018}. Lo más importante a destacar es que es un modelo basado en física de primeros principios el cual utiliza un enfoque mecánico estadístico y la definición de una función de distribución del espacio de las fases de granulado grueso para describir el sistema de partículas. Esta función es del tipo Fermi-Dirac e incluye la física del principio de exclusión de Pauli y la evaporación de partículas del sistema. Las ecuaciones a resolver son la ecuación de Tolman-Oppenheimer-Volkoff (TOV) en conjunto con ecuaciones de estado que resultan de integrar la función de distribución en el espacio de momentos. Así, el modelo RAR depende de 4 parámetros libres, que son la masa $m$ del fermión y tres parámetros que describen las propiedades termodinámicas del sistema, a ser el parámetro de degeneración $\theta_{0}$, el parámetro de energía corte $W_{0}$ y el parámetro de temperatura $\beta_{0}$.
+
+El halo de materia oscura de la Vía Láctea consistirá en el modelo RAR ajustado en \cite{BecerraVergara2020, BecerraVergara2021} con una masa del fermión de $m= 56$ keV, cuyo perfil de materia oscura, que puede verse en la Fig. \ref{fig:density_profiles}, desarrolla una morfología tipo \textit{núcleo denso}--\textit{halo diluido}. El núcleo denso y compacto, que reemplaza a la suposición tradicional de un agujero negro supermasivo, es capaz de reproducir las órbitas de las estrellas del cúmulo S ubicadas en la región de Sgr A* \cite{BecerraVergara2021}. A su vez, el halo diluido es capaz de reproducir la curva de rotación de la Galaxia.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{density.png}
+    \caption{Perfil de densidad de materia oscura para el halo de la Vía Láctea y el correspondiente a la galaxia de Sagitario, según se indica en el texto principal. En ambos casos, se puede ver la misma morfología, un núcleo compacto de materia oscura en la escala del miliparsec que decae abruptamente para dar lugar al halo diluido. Luego, ambos perfiles caen de manera politrópica en el límite del sistema. La región sombreada corresponde a los límites en donde se mueve el progenitor de la corriente estelar.}
+    \label{fig:density_profiles}
+\end{figure}
+
+Por otro lado, se ha demostrado en \cite{Gibbons2014} que la presencia del campo gravitatorio del progenitor en las estrellas eyectadas es necesaria para reproducir correctamente a la corriente de estrellas de Sgr. Por ello, modelaremos al campo gravitatorio del progenitor como el ejercido por una componente bariónica y un halo de materia oscura RAR. El agregar una componente oscura adicional a los bariones fue sugerido en \cite{Vasiliev2020}, ya que discuten sobre el hecho de que una componente bariónica sola no es suficiente para poder reproducir todas las observaciones. Así, se utilizará una esfera de Plummer de $M_{\mathrm{P}, \mathrm{Sgr}} = 10^{8}\ \mathrm{M}_{\odot}$ y una longitud de escala de $b_{\mathrm{Sgr}} = 0.3$ kpc para modelar a la componente bariónica del progenitor. 
+%
+Con respecto a la distribución de materia oscura del satélite, se considerarán dos puntos del perfil de masa acumulada para ajustar al progenitor una distribución de materia oscura RAR. Estos son $(1.2\pm 0.6)\cdot 10^{8}\ \mathrm{M}_{\odot}$ a $1.55$ kpc del centro de Sgr y $(4.5 \pm 0.67) \cdot 10^{8}\mathrm\ \mathrm{M}_{\odot}$ a $4$ kpc. El primer dato fue tomado de \cite{Walker2009}, mientras que el segundo de \cite{Vasiliev2020}.
+%
+Los valores de los parámetros libres del modelo están detallados en la Tabla \ref{tab:rar_best_fit_parameters}, implicando una masa total del progenitor de $\approx 9\times10^8 M_\odot$.
+
+El algoritmo a utilizar para generar la predicción de la corriente estelar de Sgr será un algoritmo estilo \textit{spray},  el cual es un generador de condiciones iniciales en el espacio de las fases para las estrellas eyectadas del satélite, a medida que este recorre su órbita en torno a la galaxia huésped. La referencia de dicho algoritmo es \cite{Gibbons2014}. Se modelará la eyección de las estrellas desde los puntos L1 y L2 de Lagrange, la posición de los cuales, a su vez, será aproximada a una distancia $r_{t}$ desde el centro del progenitor, en la dirección de la recta que une el centro del satélite con el centro de la Vía Láctea. La variable $r_{t}$ se conoce como \textit{radio de marea}, y su expresión será tomada del trabajo de \cite{Gajda2016}. Las estrellas serán eyectadas con una velocidad muestreada aleatoriamente de una distribución gaussiana multivariable, con media igual a la velocidad instantánea del satélite al momento de la eyección, y como dispersión se tomará al tensor de dispersión de velocidades del progenitor, el cual será tomado como isotrópico.
+% Habiendo definido el campo gravitatorio que sentirán las estrellas eyectadas del satélite, se puede describir
+
+\begin{table}
+    \centering
+    \begin{tabular}{c|c|c}
+        \hline
+        \textbf{Parámetro} & \textbf{RAR - Vía Láctea} & \textbf{RAR - Sgr} \\
+        \hline
+        $mc^{2}$ [keV] & $56$ & $56$ \\
+        $\theta_{0}$ & $37.766$ & $31.611$ \\
+        $W_{0}$ & $66.341$ & $56.065$ \\
+        $\beta_{0}$ & $1.198\cdot 10^{-5}$ & $2.436\cdot 10^{-8}$ \\
+        \hline
+    \end{tabular}
+    \caption{Parámetros libres de los modelos RAR. En el caso del halo de la Vía Láctea, son los parámetros que ajustan las observaciones de las trayectorias de las estrellas del cúmulo S \citep{BecerraVergara2020, BecerraVergara2021}. Con respecto a Sgr, estos son los parámetros que ajustan el halo a las mediciones mencionadas en esta sección.}
+    \label{tab:rar_best_fit_parameters}
+\end{table}
+
+Para llevar a cabo el proceso de eyección, se debe integrar la órbita del progenitor hacia atrás en el tiempo para luego hacerla evolucionar nuevamente hacia el presente, pero esta vez liberando un par de estrellas desde los puntos de Lagrange cada un intervalo fijo de tiempo. Las condiciones iniciales en posición y velocidad del satélite para la integración hacia el pasado fueron tomadas de \cite{Gibbons2014} y \cite{Vasiliev2020}. Posteriormente, la órbita de cada estrella liberada es integrada por el algoritmo, en el potencial conjunto de la Vía Láctea y el satélite en movimiento. Se liberarán $\sim 10^{5}$ estrellas a lo largo de todo el recorrido, cuyas órbitas serán integradas hasta el presente. La configuración final que presenten todas las estrellas eyectadas será la que se analizará en la siguiente sección.
+
+\section{Resultados y conclusiones}\label{sec:discusion_y_conclusiones}
+
+La corriente estelar eyectada por la galaxia esferoidal enana de Sgr se puede ver en las Figs. \ref{fig:xz} a \ref{fig:velocity}. En todas ellas, la barra de color codifica los tiempos de eyección de cada estrella, correspondiendo el $0$ al tiempo actual.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{xz.png}
+    \caption{Corriente estelar de Sgr proyectada en el plano $xz$ del sistema de coordenadas galactocéntrico.}
+    \label{fig:xz}
+\end{figure}
+
+Lo más importante a destacar es la capacidad de los halos esféricos de materia oscura fermiónica, en reproducir las características más importantes de la corriente de estrellas, y al mismo tiempo explicar la dinámica de las estrellas S que orbitan el centro Galáctico y la curva de rotación Galáctica. En el espacio de las configuraciones (Figs. \ref{fig:xz} y \ref{fig:distance}), se puede distinguir que la distribución de estrellas eyectadas sigue la misma tendencia que las observaciones. Además, si bien hay algunas diferencias, hay que recordar que el número de estrellas RR Lyrae es mucho menor al de estrellas eyectadas con el algoritmo de spray.
+
+Con respecto al espacio de las velocidades, se puede ver en las Figs. \ref{fig:mubeta}--\ref{fig:velocity} como el brazo anterior de la corriente ($\Lambda_{\odot} > 0$) es bien reproducido por el modelo de potencial gravitatorio. Este entra dentro de los límites de $2\sigma$ de probabilidad de pertenencia (región sombreada) de las imágenes correspondientes. Por otro lado, el brazo posterior ($\Lambda_{\odot} < 0$) no logra ser reproducido en su totalidad con ninguna de las tres variables. Esto se debe, según fue ampliamente estudiado en el pasado, a que halos en simetría esférica no logran reproducir de manera completa la corriente de Sgr  \citep{Helmi2004, Johnston2005, Law2010}, no siendo el halo fermiónico la excepción.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{distance_lambda.png}
+    \caption{Corriente estelar de Sgr representada en el espacio de la distancia como función de la longitud.}
+    \label{fig:distance}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{mubeta_lambda.png}
+    \caption{Componente $B_{\odot}$ del movimiento propio de las estrellas eyectadas como función de la longitud $\Lambda_{\odot}$. La línea sólida negra representa las observaciones descriptas en la Sec. \ref{sec:observaciones}.}
+    \label{fig:mubeta}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{mulambda_lambda.png}
+    \caption{Componente $\Lambda_{\odot}$ del movimiento propio de las estrellas eyectadas como función de la longitud $\Lambda_{\odot}$. La línea sólida negra representa las observaciones descriptas en la Sec. \ref{sec:observaciones}.}
+    \label{fig:mulambda}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=\columnwidth]{velocity_lambda.png}
+    \caption{Velocidad en la línea de la visual de las estrellas eyectadas como función de la longitud $\Lambda_{\odot}$. La línea sólida negra representa las observaciones descriptas en la Sec. \ref{sec:observaciones}.}
+    \label{fig:velocity}
+\end{figure}
+
+Como conclusión, en este trabajo se ha demostrado que un modelo de halo de materia oscura fermiónica, basado en física de primeros principios, es capaz de reproducir, en buena medida, observables de la Vía Láctea en todas las escalas. Esto no se ha logrado antes por ningún otro modelo. El éxito (parcial) del modelo RAR utilizado en este trabajo, se debe a que la masa total encerrada entre $\sim 12$ kpc y $\sim 80$ kpc se condice con los valores inferidos en el trabajo de \cite{Gibbons2014} obtenidos de reproducir la distancia apocéntrica observada de los brazos posterior y anterior junto con el ángulo de precesión.
+
+Como contraparte, resta perfeccionar el modelo de potencial gravitatorio bajo el cual está sujeta la corriente de estrellas, siendo el paso a seguir más relevante, el de incorporar la presencia de la Nube Mayor de Magallanes, según se demostró en \cite{Vasiliev2021}.
+% Si bien nuestro modelo no puede incorporar una simetría no esférica como morfología del halo
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\bibliographystyle{baaa}
+\bibliography{bibliografia}
+
+\end{document}
+
+

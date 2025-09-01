@@ -1,0 +1,386 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{\em Teacher Training Program (TTP)\\ desarrollado por NAEC Argentina}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\titlerunning{TTP NAEC Argentina}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M.A. Corti\inst{1,2,3},
+I. Bustos Fierro\inst{1,4},
+D.C. Merlo\inst{1,4,5},
+M.S. De Biasi\inst{1,2,6},
+S. Paolantonio\inst{1,5},
+N.E. Camino\inst{1,7},
+B. Bravo\inst{8}
+\&
+M.P. \'Alvarez\inst{9}
+}
+
+\authorrunning{Corti et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mariela@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Coordinaci\'on Nacional de Educaci\'on en Astronom\'ia (NAEC Argentina), Comisi\'on Nacional de Astronom\'ia, Office of Astronomy for Education, International Astronomical Union \and
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina \and   
+Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina
+\and
+Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Museo del Observatorio Astron\'omico de C\'ordoba, UNC, Argentina
+\and
+Instituto de Astrof\'isica de La Plata, CONICET--UNLP, Argentina \and
+Complejo Plaza del Cielo, CONICET--FHCS--UNPSJB, Argentina \and
+Facultad de Ingenier\'ia, CONICET--UNCPB, Argentina \and
+Facultad de Ciencias Exactas y Naturales, UNMDP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{En 2023, la Oficina de Astronom\'ia para la Educaci\'on (OAE) de la Uni\'on Astron\'omica Internacional (IAU) lanz\'o su primera convocatoria del Programa de Formaci\'on Docente (TTP) entre las aproximadamente 120 Coordinaciones Nacionales de Educaci\'on en Astronom\'ia (NAEC) del mundo para financiar una formaci\'on docente de impacto en sus respectivos pa\'ises o regiones.  NAEC Argentina particip\'o y fue uno de los 21 ganadores de esta propuesta, cuya finalidad ha sido la adquisici\'on de conocimiento sobre temas de astronom\'ia y la habilidad para su ense\~nanza por parte de los docentes participantes y su posterior implementaci\'on en el aula.  El TTP argentino se desarroll\'o en formato taller en tres locaciones: en la ciudad de San Juan (intensivo del 19 al 22 septiembre), en Esquel (entre septiembre y octubre) y en A\~natuya (intensivo del 2 al 3 noviembre). Los destinatarios fueron profesores de F\'isica y alumnos avanzados del Profesorado de F\'isica.  Los objetivos de esta capacitaci\'on se enfocaron en reforzar los fundamentos te\'oricos de los conceptos astron\'omicos m\'as importantes ense\~nados en el nivel Secundario, especialmente ligados a la astrof\'isica (propiedades de la luz, fotometr\'ia y espectroscop\'ia) Asimismo,  los participantes construyeran dispositivos de bajo costo basados en los conceptos mencionados, siempre fortaleciendo la discusi\'on sobre la Did\'actica de la Astronom\'ia.  Se presentan las caracter\'isticas y resultados obtenidos en las tres experiencias.}
+
+\abstract{In 2023, the Office of Astronomy for Education (OAE) of the International Astronomical Union (IAU) launched its first call for the Teacher Training Program (TTP) among approximately 120 National Astronomy Education Coordinators, (NAECs) around the world to fund impactful teacher training in their respective countries or regions. NAEC Argentina was one of the 21 winners of this initiative, which aimed to enhance the acquisition of astronomy knowledge and skills by teachers, to be later implemented in the classroom. The Argentine TTP was carried out in a workshop format at three ocations: in the city of San Juan (intensive from September 19 to 22), in Esquel (between September and October), and in A\~natuya (intensive from November 2 to 3). The recipients were physics teachers and advanced students from the Physics Secondary School Teacher Program. The goals of this training focused on reinforcing the theoretical foundations of the most important astronomical concepts taught at the Secondary School level, especially those related to astrophysics (properties of light, photometry, and spectroscopy). Additionally, participants built low-cost devices based on these concepts, strengthening always the discussion on the Didactics of Astronomy. This article presents the characteristics and outcomes from the three training experiences.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{Education --- Sociology of astronomy --- Miscellaneous}
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+En el transcurso del a\~no 2020 la Comisi\'on Nacional de Astronom\'ia (CNA) conform\'o la National Astronomy Education Coordinators (NAEC) Argentina, la cual forma parte de la Office of Astronomy for Education (OAE) de la International Astronomical Union (IAU). Entre los objetivos generales planteados al momento de generar al NAEC se encontraba el vincular las acciones propias de la OAE, de la Asociaci\'on Argentina de Astronom\'ia (AAA) y de la CNA con la Educaci\'on en Astronom\'ia, en todo el territorio de Argentina. La finalidad era fortalecer as\'i, los v\'inculos de la comunidad de astr\'onomos profesionales con la comunidad educativa a trav\'es de m\'ultiples y diversas acciones sobre Educaci\'on en Astronom\'ia. 
+En el 2023 la OAE (IAU) lanz\'o su primera convocatoria del Programa de Formaci\'on Docente (TTP) entre los aproximadamente 120 equipos NAECs del mundo para financiar una formaci\'on docente de impacto en sus respectivos pa\'ises o regiones. NAEC Argentina fue uno de los 21 ganadores de esta propuesta, cuya finalidad ha sido la adquisici\'on de conocimientos sobre temas de Astronom\'ia y la habilidad para su ense\~nanza por parte de los docentes participantes\footnote {https://www.iau.org/news/announcements/detail/\-ann24007/}. A esta capacitaci\'on asistieron profesores de F\'isica de educaci\'on secundaria y estudiantes avanzados y docentes de Profesorados de F\'isica de Nivel Terciario. Los alumnos del TTP no tuvieron que pagar ni inscripci\'on al mismo, ni materiales empleados en los talleres ya que, con el financiamiento proporcionado por la OAE y parte del dinero obtenido con el Proyecto de Investigaci\'on Plurianual (PIP) del Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas (CONICET) 2021-2023 "Fortalecimiento de la Ense\~nanza de la Astronom\'ia en el Nivel secundario de Argentina", se cubrieron todos los gastos ocasionados para su realizaci\'on.
+
+\section{Objetivos}
+
+El objetivo general fue la construcci\'on de un v\'inculo activo con los docentes encargados de espacios relacionados con la Astronom\'ia, tanto en escuelas secundarias como en la formaci\'on docente de F\'isica en la Rep\'ublica Argentina. Este objetivo apunta a fortalecer la discusi\'on sobre la Did\'actica de la Astronom\'ia, con el fin de que ella tenga caracter\'isticas din\'amicas y colaborativas en tiempo real, para ser proyectada a la pr\'actica docente cotidiana.
+
+Los objetivos espec\'ificos son los que se presentan a continuaci\'on:
+\begin{itemize}
+\item Acceder a una instancia concreta para fortalecer los fundamentos te\'oricos sobre temas de gran importancia para la Astronom\'ia a nivel secundario, especialmente ligados a la Astrof\'isica, tales como: propiedades de la luz, fotometr\'ia y espectroscop\'ia.
+\item Dimensionar el universo en el que vivimos, especialmente en lo que respecta a la medici\'on de distancias, temperaturas y tama\~nos, as\'i como las formas de clasificaci\'on de objetos y procesos derivados de ellos.
+\item Dise\~nar, construir y utilizar dispositivos de bajo costo basados en los fundamentos mencionados, discutiendo su uso en aulas de nivel secundario.
+\item Promover el uso del sitio web educativo, espec\'ificamente dise\~nado por los autores de esta presentaci\'on, para la Did\'actica de la Astronom\'ia en niveles secundario y Terciario, Argonavis.ar (https://argonavis.ar)\citep{Camino2023}, por parte de docentes de todo el pa\'is. Este sitio, {\bf con una media de 20 visitas mensuales,} es de uso libre y apunta a la formaci\'on de una red de aprendizaje colaborativo virtual en la ense\~nanza de la Astronom\'ia.
+\end{itemize}
+
+\section{Desarrollo del TTP}
+
+En Argentina no existe una carrera profesional dedicada a la ense\~nanza de Astronom\'ia, siendo s\'olo los profesores de F\'isica quienes tienen la incumbencia espec\'ifica para ense\~nar esta materia en las escuelas secundarias \citep{Camino2021,Camino2022}. Por esta raz\'on, las clases se dise\~naron para el grupo compuesto por profesores de F\'isica que trabajan en escuelas secundarias o en carreras de nivel terciario que formen profesores de F\'isica. Tambi\'en participaron estudiantes avanzados del Profesorado de F\'isica (que a\'un no se hayan graduado). Adem\'as, en el grupo destinatario se incluyeron investigadores en educaci\'on en Astronom\'ia, disciplina cient\'ifica que a\'un se encuentra en sus primeros pasos en Argentina.
+
+El TTP se desarroll\'o en formato taller en las ciudades de San Juan, Esquel y A\~natuya, en cuyas respectivas provincias los dise\~nos curriculares jurisdiccionales de educaci\'on secundaria incluyen Astronom\'ia \citep{Camino2021,Corti2022}. Los temas presentados fueron:
+\begin{itemize}
+\item[-] Fundamentos epistemol\'ogicos de la Astronom\'ia.
+\item[-] Elementos de Astrof\'isica en la escuela secundaria: \'optica geom\'etrica, espectroscop\'ia y fotometr\'ia.
+\item[-] Medici\'on de par\'ametros solares: di\'ametro y constante solar.
+\end{itemize}
+\vskip 0.1 cm
+Las fechas de realizaci\'on de los mismos en cada una de las localidades fueron: 
+\begin{itemize}
+\item[-] San Juan (San Juan) del 19 al 22 septiembre, de 17 a 20 hs.
+\item[-] Esquel (Chubut) los d\'ias martes de los meses de septiembre y octubre en el horario de 20:40 a 22:40 hs.
+\item[-] A\~natuya (Santiago del Estero) los d\'ias 2 y 3 de noviembre de 14 a 18 hs.
+\end{itemize}
+\vskip 0.1 cm
+El curso fue muy interactivo, con un desarrollo te\'orico b\'asico, para luego comenzar el proceso de construcci\'on de los dispositivos y, posteriormente, su uso. Se concluy\'o con una instancia final de discusi\'on sobre lo trabajado y su potencial de aplicaci\'on con estudiantes de Secundario y Terciario. 
+
+El tratamiento te\'orico de los fundamentos, conceptos y m\'etodos astrof\'isicos, se abord\'o principalmente en clases plenarias mediante presentaciones digitales. Todos los registros fotogr\'aficos y audiovisuales fueron tomados tanto por los docentes como por los participantes, utilizando los tel\'efonos m\'oviles propios. Todas ellas, as\'i como muchos comentarios, fueron luego compartidos a trav\'es de un grupo de mensajer\'ia y video llamadas. Los dispositivos construidos durante el taller y los materiales entregados a los participantes fueron:
+
+\begin{itemize}
+\item[-] C\'amara oscura (tubos de cart\'on, papel aluminio y l\'aminas transparentes milimetradas).
+\item[-] Espectroscopios (plantillas de cart\'on, piezas de CD/DVD, algunos participantes recibieron tambi\'en un espectroscopio impreso en 3D).
+\item[-] Fot\'ometros (pantalla impresa en 3D o de cart\'on; no se entregaron l\'amparas de bajo costo ni cables de extensi\'on el\'ectrica).
+\item[-] Gafas con filtros solares y vidrios DIN14.
+\end{itemize}
+
+
+
+\subsection{TTP-San Juan}
+El primer taller de capacitaci\'on docente se realiz\'o en la Facultad de Filosof\'ia, Humanidades y Arte de la Universidad Nacional de San Juan (FFHA UNSJ) y fue reconocida como capacitaci\'on en servicio por el Ministerio de Educaci\'on de la provincia de San Juan.  A la capacitaci\'on asistieron 28 personas de las cuales 25 eran profesores de Astronom\'ia en el nivel secundario, algunos gu\'ias de astroturismo del Complejo Astron\'omico El Leoncito (CASLEO) y otros pocos profesores del Profesorado de F\'isica, todos ellos habitantes de la ciudad de San Juan. Los otros 3 alumnos fueron un Profesor de F\'isica de Neuqu\'en capital, uno de C\'ordoba capital y el restante de Corrientes capital. Cabe mencionar que en el transcurso de esa semana, en un horario previo al de la capacitaci\'on, se realiz\'o la 65 Reuni\'on Anual de la Asociaci\'on Argentina de Astronom\'ia. En la Fig. \ref{SanJuan}a se muestra el afiche empleado para dar difusi\'on sobre la realizaci\'on del TTP. En las Figs. \ref{SanJuan}b -- f se muestran ejemplos del desarrollo de todas las actividades realizadas en San Juan. 
+
+\begin{figure*}
+\centering
+\includegraphics[width=1.5\columnwidth,angle=0]{TodoSanJuanA.pdf}
+\caption{a) Afiche de difusi\'on del TTP realizado en San Juan capital. b) Desarrollo de una clase. c) Trabajo con el fot\'ometro de Bunsen (idea tomada de \citet{Garcia2020}). d) Espectro de fuente de luz artificial. e) Espectroscopio construido en clase (idea tomada de \citet{Garcia2018}). f) Observaci\'on del Sol efectuada por sus c\'amaras oscuras.}
+\label{SanJuan}
+\end{figure*}
+
+\subsection{TTP-Esquel}
+El segundo taller se desarroll\'o en Esquel, como parte de una asignatura anual optativa (Did\'actica de la Astronom\'ia en Nivel secundario) de la carrera de formaci\'on de profesores de F\'isica para el nivel secundario del Instituto Superior de Formaci\'on Docente (ISFD) N$^{\circ}$804. El taller se imparti\'o para el \'ultimo a\~no de la misma. La asignatura fue ofrecida por la instituci\'on a todos los docentes de nivel secundario como una actividad de formaci\'on continua (una c\'atedra abierta), reconocida por el Ministerio de Educaci\'on de la provincia de Chubut. Las Figs. \ref{EspectroEsq} a y b muestran parte de las experiencias realizadas. Fue una experiencia con impacto positivo para los docentes de Esquel (tres profesores de F\'isica y un estudiante avanzado), ya que era la primera vez que formaban parte de un equipo que desarrollaba un taller para otros estudiantes y colegas argentinos.
+% de diversas ciudades de Argentina.
+%Cuatro de los participantes en Esquel actuaron como colaboradores del Dr. Camino durante la Parte C del Taller en A\~natuya, realizado en noviembre.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{ExperiEsquel.pdf}
+\caption{Esquel: a) Espectro de luz artificial con su correspondiente medida. b) Fot\'ometro de Bunsen y los alumnos.}
+\label{EspectroEsq}
+\end{figure}
+
+\subsection{TTP-A\~natuya}
+El tercer taller se desarroll\'o en la localidad de A\~natuya como parte de la Reuni\'on de Ense\~nanza de la F\'isica (REF XXIII) de car\'acter internacional. Las REFs son reconocidas por los Ministerios de Educaci\'on de cada provincia argentina como actividades de formaci\'on en servicio para los docentes participantes provenientes de las mismas. Al taller asistieron 14 participantes, 10 de ellos profesores de F\'isica de nivel secundario y 4 estudiantes avanzados de la carrera de Formaci\'on de Profesores de F\'isica. Adem\'as, algunos ense\~naban en nivel terciario y estaban desarrollando investigaciones en Educaci\'on en Astronom\'ia. Las Figs. \ref{AnatuyaCO} a y b muestran a los alumnos posicionando las c\'amaras oscuras y la imagen del Sol obtenida por proyecci\'on en el papel milimetrado para luego, con los c\'alculos matem\'aticos correspondientes, estimar el di\'ametro del Sol. En las Figs. \ref{Dispositivos} a y b se muestran los espectroscopios realizados con impresora 3D por los alumnos de A\~natuya y los elementos necesarios para armar el fot\'ometro de Bunsen. Las Figs. \ref{AnatuyaTrab} a y b tienen fotos de los alumnos con el espectroscopio. 
+
+\section{{\bf Resultado y Conclusiones}}
+
+\begin{itemize}
+\item En diciembre de 2023 se envi\'o a la OAE un informe detallado en los aspectos acad\'emicos y administrativos, el cual ya ha sido aprobado. Toda la informaci\'on sobre este TTP est\'a disponible en nuestro sitio web Argonavis.
+\item Mediante una encuesta realizada en la finalizaci\'on de cada taller, los alumnos comunicaron que los conceptos aprendidos y las actividades que desarrollaron en los mismos, les resultaron de gran ayuda para entender los temas abordados. Comentaron que todo ello luego fue empleado en el transcurso de sus clases.
+\item Se desea destacar que en el TTP realizado en San Juan se cont\'o con la presencia de alumnos que se desempe\~nan como docentes en las ciudades de C\'ordoba, Neuqu\'en y Corrientes, lo que demuestra el inter\'es de los docentes de contar con recursos novedosos para la ense\~nanza de la Astronom\'ia.
+\item Los docentes participantes en la capacitaci\'on, quedaron conectados con todos los profesores que estuvieron a cargo de la misma. Una clara muestra de ello fue la paticipaci\'on que algunos tuvieron en la primera Escuela ENIGMAs "Did\'actica de la Astronom\'ia: Pr\'actica e Investigaci\'on''. Esta fue organizada por el grupo de docentes/investigadores en la Fac. de Ciencias Astron\'omicas y Geof\'isicas de la UNLP en el mes de septiembre del a\~no siguiente.
+\item Finalmente, se cree necesario revalorizar y fomentar las capacitaciones en tem\'aticas astron\'omicas, principalmente en aquellas jurisdicciones educativas provinciales que promueven la ense\~nanza de las ciencias en general, y de la Astronom\'ia en particular. La subvenci\'on de capacitaciones docentes de estas caracter\'isticas es un problema adicional a resolver ya que si se contara con la misma, el impacto de esta propuesta podr\'ia replicarse en m\'as provincias. 
+\end{itemize}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{COsAnatuya.pdf}
+\caption{A\~natuya: a) Posicionando las c\'amaras oscuras. b) Imagen proyectada del Sol en papel milimetrado.}
+\label{AnatuyaCO}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{DispositAnatuya.pdf}
+\caption{Dispositivos realizados en A\~natuya. a) Espectroscopios y b) Fot\'ometro de Bunsen. }
+\label{Dispositivos}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=0.9\columnwidth]{TrabajoAnatuya.pdf}
+\caption{A\~natuya: a) Armado de espectr\'ogafo. b) Uso de un espectroscopio con una fuente luminosa artificial.}
+\label{AnatuyaTrab}
+\end{figure}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Para figuras de dos columnas use \begin{figure*} ... \end{figure*}         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{acknowledgement}
+\texttt{A la Lic. Carolina Garay por colaborar en la organizaci\'on del TTP en San Juan capital y compartir una clase de su autor\'ia. A los cuatro participantes de Esquel que colaboraron con el Dr. Camino durante el Taller en A\~natuya. PIP CONICET 2021-2023 GI 11220200100289CO y OAE por financiar parcialmente el TTP desarrollado en las tres localidades. Finalmente, al \'arbitro de este trabajo por favorecer que se destacara su contenido con las sugerencias propuestas.}
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia.bib}
+ 
+\end{document}

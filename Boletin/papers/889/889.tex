@@ -1,0 +1,434 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{9}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{22 April 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Science with the Multipurpose Interferometer Array [MIA]}
+
+%The Multipurpose Interferometric Array instrument and its scientific objectives
+%Science with the Multipurpose Interferometer Array [MIA]}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Science with MIA}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+P. Benaglia\inst{1},
+G.E. Romero\inst{1,2},
+\&
+G. Gancio\inst{1}
+}
+
+\authorrunning{Benaglia et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{pben.radio@gmail.com}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina
+\and
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El Instituto Argentino de Radioastronomía está construyendo el prototipo de un arreglo interferométrico de antenas denominado Multipurpose Interferometric Array (MIA), que estará compuesto por elementos de unos 5~m de diámetro de disco y receptores digitales de 1.4~GHz con un ancho de banda final de 1000~MHz. En su configuración media -pero escalable-, MIA incluirá 16 de estos elementos, para alcanzar una resolución angular del arcosegundo. Los objetivos científicos que motivan el desarrollo de MIA se presentan en esta contribución; los mismos abarcan desde estudios de temporización de púlsares, fuentes transitorias, ráfagas rápidas de radio, hasta estudios de líneas y continuo asociados al universo temprano y fuentes no térmicas en general.}
+
+\abstract{The Instituto Argentino de Radioastronomía is building the prototype of an interferometric antenna array, called the Multipurpose Interferometric Array (MIA), which will be composed of elements of about 5-m disk diameter and 1.4~GHz digital receivers with a final bandwidth of 1000~MHz. In its medium – but expandable – configuration, MIA will include 16 of such elements, to achieve an angular resolution of an arcsecond. The scientific objectives motivating the development of MIA are presented in this paper, ranging from timing studies of pulsars, transient sources, fast radio bursts, to line and continuum studies related to the early universe and non-thermal sources in general, among others.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ instrumentation: high angular resolution --- pulsars: general --- early universe }
+
+\begin{document}
+
+\maketitle
+\section{Introduction}\label{S_intro}
+
+%ver keywords en \url{https://journals.aas.org/keywords-2013/}
+% ejemplo de hyperlink a pagina web:
+%\href{http://sigma.fcaglp.unlp.edu.ar/docs/SGM_docs_v01/Surf/index.html}\footnote{\url{{https://www.aanda.org/for-authors/latex-issues/typography}}}.
+
+At the end of 2023, the future of radio astronomy in Argentina looks promising. There are two deep space stations with a diameter of 35~m, built and operated by the European Space Agency (DS3 in Malargüe, Mendoza, since 2012) and the Chinese Launch and Tracking Central (CLTC-CONAE-NEUQUÉN in Bajada del Agrio, Neuquén, since 2018). Backends have been specially built at IAR for them, to take advantage of the percentage of observing time open to the community, to perform radio science experiments. The China-Argentina Radio Telescope (CART) is expected to be fully assembled in 2024: a 45-m dish that will operate from a few to about 50~GHz. The Large Latin American Millimeter Array (LLAMA) radiometer, with a 12-m dish in the region of La Puna, at almost 5000~m a.s.l., is also expecting to be erected during 2024 and will cover the (50 -- 950)-GHz range. The two 30-m radio telescopes at IAR, which were completely refurbished in 2018, are continuously recording data for pulsar and magnetar timing projects. They are single-dish instruments that reach a maximum angular resolution, in the lowest frequency bands (L, S), of several arcminutes.
+
+At low frequencies, radio instruments with medium to high angular resolution are essential to study a plethora of phenomena that occur in sources of very different types, from star forming regions to black holes and cosmology. However, observations at low frequencies can be severely affected by radio frequency interference (RFI). RFI is highly problematic, and its importance has been steadily increasing. 
+%especially along the last decade. 
+This is demonstrated by satellite missions such as the Fast On-Orbit Recording of Transient Events\footnote{{\sl FORTE} spacecraft was designed and built by Los Alamos and Sandia National Labs (P.I. A.~R. Jacobson), and operates up to 300~MHz.}, which provided the image shown in Fig.~\ref{fig:rfi131mhz}, taken from \citet{haggerty2010}; see also
+\citet {light2020}. 
+%Katie Haggerty, "Adverse Influence of Radio Frequency Background on Trembling Aspen Seedlings: Preliminary Observations", International Journal of Forestry Research, vol. 2010, Article ID 836278, 7 pages, 2010. https://doi.org/10.1155/2010/836278
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=\columnwidth]{benaglia-fig1.png}
+\caption{Background radiation at 131~MHz, as a measure of radio frequency interference \citep[taken from][their Fig.~9]{haggerty2010}. Scale: 0 to 0.016~mv\,m$^{-1}$. Data were collected from the FORTE spacecraft; 
+%(P.I.: A.~R. Jacobson); 
+Creative Commons Attribution License. 
+}
+\label{fig:rfi131mhz}
+\end{figure}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=17cm]{benaglia-fig2.png}
+\caption{Geolocalization of instruments  with (some) similar characteristics to MIA. CHIME: Canadian Hydrogen Intensity Mapping Experiment; DSA10/110: Deep Synoptic Array 10/110; LOFAR: Low Frequency Array; KAT7: Karoo Array Telescope; HERA: Hydrogen Epoch of Reionization Array; MeerKAT: `more of' KAT; FAST: Five-hundred meter aperture spherical radio telescope; MWA: Murchinson Widefield Array. Planisphere provided by the Instituto Geográfico Nacional, Ministerio de Defensa, Argentina; \url{www.ign.gob.ar/images/MapasWeb/PLANISFERIO/PLANISFERIO-2016.jpg}.  }
+\label{fig:niche}
+\end{figure*}
+
+Argentina has large areas of sparsely populated land and, according to Fig.~\ref{fig:niche}, offers one of the most important niches for the location of an instrument operating with high sensitivity and angular resolution at low frequencies.
+
+  
+\section{Technical specifications of MIA}
+
+The Multipurpose Interferometer Array is a radio interferometer project consisting of modular ensembles of elements formed by 5-m radio antennas. The receivers will operate between 100 and 2000 MHz with an instantaneous bandwidth of 250~MHz, expandable to 1000~MHz. The development is planned in three steps: (i) the first antenna will be a technology demonstrator (TD) to be completed in early 2024; (ii) a 3-element pathfinder located at the IAR (MIA-P); (iii) a 16-element instrument, MIA-16, with a maximum baseline of 55~km, sensitivity equivalent to a 36-m diameter dish, field of view of 4~degrees, angular resolution down to 1~arcsecond, to be deployed at an interference-free site in western Argentina. This instrument will be upgradeable to MIA-32/64. The astronomical exploration of the universe in the low frequency bands is very challenging because man-made radio noise, which constitutes the bulk of RFI, is a major problem. Therefore, instruments must be placed in very remote locations.
+
+
+Table~\ref{tab:miaparameters} lists the basic properties of  MIA. A full description can be found in \citet{gancio2024}.
+
+
+\begin{table}[!h]
+\centering
+\caption{Main parameters of MIA.}
+\begin{tabular}{lr}
+\hline\hline\noalign{\smallskip}
+\!\!Parameter & Value \\
+\hline\noalign{\smallskip}
+Number of antennas Pathfinder / MIA-16 & 3 / 16\\
+Mounting & azimuthal\\
+Dish diameter & 5~m\\
+Minimum baseline & 50~m\\
+Maximum baseline & 5~km\\
+Maximum angular resolution at L-band & $1.5''$\\
+Temperature of receivers & 50~K\\
+Final bandwidth & 1000~MHz\\
+\hline
+\end{tabular}
+\label{tab:miaparameters}
+\end{table}
+
+Figure~\ref{fig:antenamia} shows the prototype antenna to be replicated, Antenna 0, which is under construction. Given Argentina's geographic longitude range, it will be able to track an event during intervals of the day when it is invisible to other instruments.   
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5.5cm]{benaglia-fig3.png}
+\caption{MIA antenna/element design; Antenna 0. Details of their design are available in \citet{gancio2024}.}
+\label{fig:antenamia}
+\end{figure}
+
+
+\section{Science with MIA}
+
+The four key areas where MIA can make significant scientific contributions are presented in what follows. 
+
+\subsection{Transient sources}
+Because of its ability to process signals in a high-resolution (timing) system analysis mode, MIA will be able to:
+
+\begin{itemize}
+\item Detect and measure pulses in magnetars;
+\item Detect the radio counterparts of Gamma Ray Bursts, produced by high-energy events (e.g., hypernovae, radio flares, mergers of compact binary systems);
+\item Observe giant flares from magnetars;
+\item Detect Fast Radio Bursts, investigate their origin, monitor repeaters, launch and follow up alerts from similar instruments at other Earth distances (Fig.~\ref{fig:frb181112});
+\item Discover pulsars, study known pulsars, analyze glitches and starquakes, compile data to search for variations in their periods, and contribute to the NANOGrav project and other Pulsar Timing Arrays for gravitational wave detection.
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=8.cm]{benaglia-fig4.jpeg}
+\caption{Artist's impression of the fast radio burst (FRB) 181112, ESO public images, eso.org. Credit: ESO/M.~Kornmesser.}
+\label{fig:frb181112}
+\end{figure}
+
+
+\subsection{Non-thermal sources}
+
+The 2-GHz coverage will make it possible to: 
+
+\begin{itemize}
+\item Search for, observe and study possible radio counterparts of unidentified/unassociated gamma-ray sources, both from recent catalogs and from the thousands of sources expected to be detected by new instruments such as the Cherenkov Telescope Array;
+\item Study active galactic nuclei and their variability, participate in multi-frequency studies, respond rapidly to alerts of changing intensity phenomena \citep[e.g., the radio galaxy Cygnus A as imaged by][in their Fig.~1]{perley1984}\footnote{see also \url{https://www.nrao.edu/archives/items/show/33385}};
+\item Perform time-resolved radio-spectral studies of compact binary systems such as X-ray binaries;
+\item Study the morphology and spectral distribution of supernova remnants;
+\item Map extended non-thermal continuum sources;
+\item Search for Pevatron counterparts.
+\end{itemize}
+
+%\begin{figure}[!h]
+%\centering
+%\includegraphics[width=7.5cm]{benaglia-fig5.png}
+%\caption{Contnuum image of the radio galaxy Cygnus A, from multiconfiguration VLA observations at 6~cm \citep{perley1984}.}
+%\label{fig:cygnusA}
+%\end{figure}
+
+
+\subsection{Neutral hydrogen}
+
+MIA will cover the range of the 21-cm line, for close sources and up to high redshifts; this will allow:
+
+\begin{itemize}
+\item Study the HI at cosmological distances, contributing to efforts  to characterize the epoch of reionization; 
+\item Study nearby or extended galaxies (e.g., Fig.~\ref{fig:circinus}); 
+\item Conduct investigations of the interstellar medium at high angular resolution.
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7.5cm]{benaglia-fig5.jpeg}
+\caption{HI distribution (\emph{left panel}) and velocity field (\emph{right panel}) of the radio galaxy Circinus. ATCA HI image by B. Koribalski (ATNF, CSIRO), K. Jones, M. Elmouttie (University of Queensland) and R. Haynes (ATNF, CSIRO), \url{www.narrabri.atnf.csiro.au/public/images/circ/}; see also \citet{koribal2018}.}
+\label{fig:circinus}
+\end{figure}
+
+\subsection{Astrophysical plasmas}
+
+The expected high range, spectral resolutions and sensitivity, together with the nearly 2-GHz coverage, will make it possible to: 
+
+\begin{itemize}
+\item Contribute to the characterization of the physics and kinematics of HI regions (e.g., Figure~\ref{fig:lagoonneb});
+\item Study the variability of OH masers in star-forming regions and in evolved massive stars;
+\item Study of star-forming regions in general; 
+\item Study the emission from Jupiter and the Sun.
+\end{itemize}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=7.5cm]{benaglia-fig6.jpeg}
+\caption{Lagoon nebula, VLT Survey Telescope. Credit: ESO/VPHAS+ team.}
+%\footnote{\url{https://www.eso.org/public/images/eso1403a/}}}
+%, CC BY 4.0, \url{https://commons.wikimedia.org/w/index.php?curid=30759954}
+%}
+\label{fig:lagoonneb}
+\end{figure}
+
+\section{MIA prospects}
+
+Building an instrument like MIA is a great challenge for the IAR and for Argentina. It will be the first radio interferometer completely designed, tested and integrated in the country. Its technology is cutting-edge and has only recently been mastered by IAR engineers, thanks to the upgrades of the two main radio telescopes in use at the Institute and the ongoing collaboration with several international partners. In particular, work on the new ultra-high-bandwidth digital cards for the Next Generation Event Horizon Telescope and collaboration with the CASPER developers have allowed our experts to gain insight into new technologies.
+
+The biggest challenge, however, is obtaining the necessary funding for such a project. In the first stages of the design and construction of the first engineering model, we made use of an institutional grant (Proyecto de investigación de Unidad Ejecutora or PUE) from CONICET, and funds from our technology transfer and services activities.
+%  The grant from CONICET was supposed to cover the entire Pathfinder with its 3 telescopes and all the electronics. Unfortunately, inflation has eroded the hard currency funding with its consequent impact on the project. 
+We are now applying for new grants from international agencies to complete the Pathfinder.
+
+For the final instrument, MIA-16/32/64, we will need an international partner. We know that this type of instrument is an excellent opportunity for several of our frequent international associates. In the next few years, the final design of MIA will give way to the construction of the actual instrument, ushering in a new era of IAR and radio astronomy from South America.
+ 
+\begin{acknowledgement}
+The authors are grateful to all the people at IAR that contribute, in a variety of ways, to fostering the Multipurpose Interferometric Array undertaking, and acknowledge support by CONICET PUE 22920200100024CO. 
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{benaglia889-poster}
+ 
+\end{document}

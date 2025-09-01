@@ -1,0 +1,425 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Comparison of N-body simulations with Gaia DR3 data from OB associations}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Comparison of simulations with observational data}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+M. Bascuñán\inst{1},
+S. Ortega\inst{1},
+S. Villanova\inst{1}
+\&
+P. Assmann\inst{1}
+}
+
+
+\authorrunning{Bascuñán et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{mbascunan2017@udec.cl}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Universidad de Concepción, Chile
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{A lo largo de los años, los estudios de asociaciones OB han aumentado debido a que las estrellas más masivas permiten un
+mayor conocimiento de la formación estelar. 
+De esta forma, se han desarrollado diferentes simulaciones con el objetivo de 
+comprender mejor las principales características de estos grupos y analizar las diferentes teorías sobre la formación de
+estas asociaciones. Por este motivo, en este trabajo se han utilizado simulaciones de N cuerpos, considerando la expulsión de gas,
+para luego comparar los datos teóricos con los observados, específicamente de la asociación Vela OB2.
+Para esto se realizaron 3 simulaciones donde se consideró una eficiencia de formación estelar de $0.1$ y una distribución fractal. En cada simulación se consideró una masa estelar de $2500, 3000$ y $6000~\mathrm{M_{\odot}}$. Luego, al evolucionar el cúmulo se obtuvo temperatura y luminosidad de cada una de las estrellas, se transformaron estos valores para obtener un diagrama Hertzsprung-Russell  y así poder comparar con los datos obtenidos con Gaia DR3. 
+Se encontró que a los $10~\mathrm{Myr}$, los datos de las simulaciones varían bastante de los observacionales al considerar las estrellas de baja masa, lo que podría indicar que la corrección bolométrica aplicada para obtener las magnitudes absolutas está entregando valores con errores bastante grandes o también podría deberse al cálculo de $G_{BP}-G_{RP}$ que se obtiene con las temperaturas de las estrellas.}
+
+\abstract{Over the years, studies of OB associations have increased due to the fact that more massive stars allow for a better understanding of star formation.
+ Thus, different simulations have been developed with the aim to better understand the main characteristics of these groups and to analyze the different theories about the formation of these associations.
+ For this reason, in this work we have used N-body simulations, considering gas ejection,
+in order to compare the theoretical data with the observed data, specifically of the Vela OB2 association.
+For this purpose, 3 simulations were performed where a star formation efficiency of 0.1 and a fractal distribution were considered. In each simulation a stellar mass of $2500, 3000$ and $6000~\mathrm{M_{\odot}}$ was considered. Then, as the cluster evolved, temperature and luminosity were obtained for each of the stars, and these values were transformed to obtain a Hertzsprung-Russell diagram to compare with the data obtained with Gaia DR3. 
+It was found that at $10~\mathrm{Myr}$, the data from the simulations vary quite a lot from the observational data when considering low mass stars, which could indicate that the bolometric correction applied to obtain the absolute magnitudes is giving values with quite large errors or it could also be due to the calculation of $G_{BP}-G_{RP}$ that is obtained with the temperatures of the stars.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{open clusters and associations: general --- stars: evolution --- methods: numerical --- methods: observational}
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+OB associations are stellar groups containing a large number of massive and young stars. Thus, the study of these associations has increased in recent years thanks to the progress of astronomical instruments that now allow us to penetrate into the regions of star formation and to know all the physical processes involved in order to find the common characteristics between these groups that have not yet been fully studied \citep{wright}. 
+
+Among the main characteristics of OB associations is the size of these regions, which can range from $10$ to $500~\mathrm{pc}$ \citep{M2020}. In addition, these groups have a mass between $10^3~\mathrm{M_{\odot}} $ - $10^4~\mathrm{M_{\odot}} $  and a density less than $0.1 ~\mathrm{M_{\odot}\, pc^{-3}}$ \citep{wright}.
+Since these regions are not very dense and have a large number of massive stars, many studies have focused on the origin of these groups and what were the processes that led to see them as they are today. 
+There are two theories on the formation of these associations. The first one consists of the monolithic model, which explains that the associations are an evolutionary stage of open clusters \citep{lada}, which fall apart due to different physical processes during their evolution. On the other hand, the hierarchical model points out that the formation of these clusters occurs in different regions of the molecular cloud without following any pattern \citep{kru}, only regions of high density are needed to generate stars.
+
+Therefore, both observational and theoretical studies have been carried out to understand the initial parameters that gave way to the formation of these groups, with N-body simulations being one of the main ones to test the monolithic model \citep{brown} since it is possible to study the effect of gas expulsion from the natal gas cloud \citep{byk}. 
+
+This is why in our galaxy, several OB associations have been studied in depth using both observational and theoretical tools. 
+One of the associations that has been studied for its characteristics is Vela OB2. This association is located at a distance of approximately 410 pc \citep{zari} and contains an approximate mass between $1300~\mathrm{M_{\odot}} $ \cite{am} - $2330~\mathrm{M_{\odot}} $ \citep{cantat}.
+
+During the last time, the observational study of this association has greatly increased, especially thanks to the new Gaia data \citep{gaia}, which have allowed finding new members, specifically low-mass stars. 
+With these new data it has been possible to study the age of the association and to relate them to nearby open clusters, which has made it possible to establish certain limits of the association, although they are still not very clear. 
+
+One of the main characteristics found in this association is that it has different populations, so these groups have been studied in order to understand the movements and if there is any common pattern.
+On the other hand, Vela is known for its like-ring structure \citep{sahuS}
+and it is believed that this distribution could be due to the expansion of the Vela shell \citep{cantat}. 
+
+Therefore, it is interesting to find the physical processes that could lead to the formation of associations such as Vela. For this reason, in this work we study the effects of gas expulsion, assuming that this association is the evolutionary stage of a cluster by adjusting different initial parameters that allow us to create a possible model of formation. Thus, these data are compared with the updated Gaia DR3 data.
+
+
+Section 2 shows all the adjustment of the simulations and mentions how these data will be transformed in order to be able to compare them with the observed data. On the other hand, section 3 explains the procedure to obtain the Gaia DR3 data. Section 4 gives the preliminary results of the comparisons and then discusses ways to further refine the results in Section 5.
+
+
+\section{Simulations}
+\subsection{Codes}
+To evolve a cluster with similar characteristics to Vela OB2, the {\sc{McLuster}} \citep{mcluster} code was emplyed to generate the initial conditions of the cluster
+distribution. In this way, the mass of the cluster was varied by generating different amounts of stars which were distributed in a homogeneous sphere to which fractality was applied, in order to obtain a random distribution and thus simulate the filaments and overdensities where star formation occurs. The output of this code provides the masses, positions and velocities of the particles.
+These parameters are then entered into the Nbody6++ code \citep{nbody6} and allows precise integration of many bodies, so that clusters can be evolved to study the models that allows us to understand the stellar systems today.
+With Nbody6++ it is possible to fit a static background potential, which in this study is simulating the potential of the natal gas molecular cloud. For this, we assume the procedure used by \cite{farias}, where this gas is determined by the star formation efficiency. This gas remains static until a certain time, when it will start to eject simulating the first supernova explosions depending on the mass of the massive stars, assuming in this case a time of 4.5 Myr . Although this case is ideal, since there are many factors that can affect the gas during the evolution of the cluster, it allow us a first approximation to the possible paths for the formation of OB associations.
+Therefore, 3 sets of simulations were performed, fitting 3 different masses of the clusters: $2500~\mathrm{M_{\odot}}$, $3000~\mathrm{M_{\odot}}$ and $6000~\mathrm{M_{\odot}}$. A Kroupa IMF, a binary percentage of $10 \%$ and an initial half-mass radius of $1~\mathrm{pc}$ were assumed.
+
+\section{Data conversion}
+In order to compare the data from the simulations with those observed from Vela OB2, it is necessary to transform temperatures and luminosities of each star into magnitudes and color.
+For this, first of all, in order to relate temperatures to color, a $1~\mathrm{Myr}$ and solar metallicity isochrone was used \citep{iso}, to obtain the $G_{BP}- G_{RP}$ color obtained by the different bands (blue $G_{BP}$, red $G_{RP}$) used by the Gaia mission.Then, the temperatures were arranged in ascending order to obtain a fit considering up to $45000~\mathrm{K}$ since the dispersion of the values after that temperature was very high, then temperatures up to $52000~\mathrm{K}$ were added by extrapolating the curve. With this, it would be possible to obtain the color depending on the temperature of the stars in the simulations.
+On the other hand, to find the absolute magnitude of the stars, it is necessary to apply the bolometric correction. For this purpose, the bolometric correction function (BC) of Gaia \footnote{\url{https://gitlab.oca.eu/ordenovic/gaiadr3\_bcg}} was obtained. This function considers 4 parameters: surface temperature, gravity, iron abundance [Fe/H] and alpha enhancement [alpha/Fe]. In this case, average values were taken to make the calculations more efficient.
+As Gaia only considers temperatures between $2500~\mathrm{K}<~\mathrm{T}<  25000~\mathrm{K}$, it was necessary to fit another curve to reach the higher temperatures. For this reason, the bolometric correction curve found by \cite{flower} was adjusted for higher temperatures in order to make a complete fit of the corrections at all temperatures.
+
+Finally, to obtain the magnitudes we first calculated the bolometric magnitude and then, applying the bolometric correction, we obtained the absolute magnitudes.
+
+
+\section{Observational data}
+To perform the comparison with the data obtained from the simulation, new Gaia DR3 data were taken from Vela OB2 using the characteristic values of each group of the association used by \cite{cantat}. For each group, the data were taken considering 1 degree around the center of each group. In this way, members were chosen by means of parallax ranges and proper motions. The number of members found in each group is shown in Table \ref{tabla1} and Figure \ref{Figura} shows the distribution of the groups.
+
+
+\begin{table}[!t]
+\centering
+\caption{Coordinates of the different groups present in the Vela 0B2 association and the number of members found.}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+\!\!Component & \!\!\!\! $\alpha$ & \!\!\!\! $\delta$ & Members  \!\!\!\!\\
+\!\! & \!\!\!\! [deg] & \!\!\!\! [deg] &  \!\!\!\!\\
+\hline\noalign{\smallskip}
+\!\!A  &  122.4 & -47.4 & 146\\
+\!\!B& 122.0& -47.4 & 77 \\
+\!\!C & 119.7 & -49.4 & 127\\
+\!\!D& 117.4 & -46.4 &177 \\
+\!\!E  &  112.9 & -47.0 & 13\\
+\!\!F& 125.0& -49.5 & 27 \\
+\!\!G & 126.3 & -40.9 & 51\\
+\!\!H& 126.9 & -34.7 & 18\\
+\!\!I& 127.1& -48.0 & 50\\
+\!\!J & 120.1 & -50.5 & 36\\
+\!\!K& 123.4 & -36.3 & 44\\
+
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{distribution.png}
+\caption{Distribution of 11 groups found in Vela OB2 obtained from Gaia EDR3.}
+\label{Figura}
+\end{figure}
+
+\section{Results}
+First, the data from the 3 simulations were taken at a time of $10~\mathrm{Myr}$ in order to compare with the data analyzed in \cite{cantat} where $10$ and $32~\mathrm{Myr}$ isochrones were used.
+By performing the Hertzsprung-Russell (HR) diagram of the simulations it is possible to see that they are quite similar for low mass stars. In figure \ref{Figura1} all the curves can be seen. Only in bright stars there is a small variation.
+The number of stars with different absolute magnitude ranges was calculated for comparison with those previously found. A summary of all the values found for each simulation is given in Table \ref{tabla2}.
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[scale=0.6]{cmd_sim.png}
+\caption{HR diagrams obtained from the simulations. \emph{Left panel:} simulation of $2500~\mathrm{M_{\odot}}$. \emph{Center panel:} simulation of $3000~\mathrm{M_{\odot}}$. \emph{Right panel:} simulation of $6000~\mathrm{M_{\odot}}$. }
+\label{Figura1}
+\end{figure*}
+
+\begin{table}[!t]
+\centering
+\caption{Number of stars of each simulation in each absolute magnitude range.The first row corresponds to the values obtained by \citep{cantat}}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+\!\!  & \!\!\!\! $M_G < 1 $ & \!\!\!\! $1 < M_G < 6 $ & $ M_G > 6 $  \!\!\!\!\\
+\hline\noalign{\smallskip}
+\!\! Reference & 72 & 1018  & 2120 \\
+\!\!Sim 2500 $M_{\odot}$& 106 & 516 & 3683 \\
+\!\!Sim 3000 $M_{\odot}$& 95 & 687 & 4540  \\
+\!\!Sim 6000 $M_{\odot}$& 206 & 1429  & 9648 \\
+
+
+\hline
+\end{tabular}
+\label{tabla2}
+\end{table}
+
+The $3000~\mathrm{M_{\odot}}$ simulation shows the closest approach to the number of stars with magnitudes less than 1, although there is a discrepancy in the other ranges. When considering stars with magnitudes greater than 6, it is observed that the simulations contain a large number of less massive stars, which could suggest that there are still many more stars within the associations that have not been observed.
+
+On the other hand, taking the data obtained from Gaia DR3, an HR diagram was constructed with all the groups found in the association, to which an isochrone of 10 Myr was added. 
+This can be seen in Figure \ref{Figura3}, where the dashed line corresponds to the isochrone mentioned above.
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{cmd_total.png}
+\caption{HR Diagram of data taken from Gaia DR3. The points correspond to the members found and the dashed line corresponds to the 10 Myr isochrone, Av = 0.2.}
+\label{Figura3}
+\end{figure}
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{gaia_sim.png}
+\caption{HR Diagram of observational data and simulations. The red dots indicate the members of Vela OB2. The blue curve shows the values found in the simulations.}
+\label{Figura4}
+\end{figure}
+
+{The selection and the data previously obtained by \cite{cantat} agree, as they are within the same magnitude ranges.}
+
+Finally, in order to check if the aforementioned adjustments would be in agreement with the observational data of Vela, an HR diagram was made with observational data and including those obtained in the simulations. 
+
+Figure \ref{Figura4} shows that the results obtained by the simulation only agree for magnitudes less than 6 when the magnitude is set to a value, $C = -1$.
+As previously mentioned, for low-mass stars the 3 simulations overlap, so that only one curve is displayed. 
+It is possible that the inconsistency in the data is due to the fit that allows us to find the absolute magnitudes, since assuming averages increases the error in the data.
+
+\section{Conclusions}
+We conclude that the simulations have almost no variation in shape for different mass ranges at 10 Myr, so in this case, only the number of stars with different magnitudes are necessary values to compare with those obtained observationally.
+
+On the other hand, when analyzing the data from the simulations we see that the $3000~\mathrm{M_{\odot}}$ simulation agrees best with the number of stars with magnitude less than 1 present in the Vela OB2 association, which also indicates that it is likely that there is a larger number of low-mass stars that have not yet been recognized as members of the association.
+Even so, it is necessary to add more initial parameters to obtain a better model, since having N-body simulations is leaving out the true functioning of the gas within the cluster and the continuous star formation within the evolution of these.
+One of the main conclusion of this research is that, although it is possible to transform the characteristics of each of the stars into magnitudes, it is necessary to improve each of the steps for this process, since we see that when calculating the magnitude of the stars, it is essential to increase the precision of the  bolometric correction and thus avoid using an adjustment that may cause an increase in the errors of the data or it may also be a cause of the calculation of $G_{BP}-G_{RP}$.
+
+\begin{acknowledgement}
+S.V. and M.B. gratefully acknowledge the support provided by ANID BASAL project FB210003 and Fondecyt regular n. 1220264.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

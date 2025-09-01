@@ -1,0 +1,411 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{11}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Instrumentos resguardados por el Museo del OAC: \\ Espectrógrafo Estelar Gaviola}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Espectrógrafo Estelar Gaviola}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+S. Paolantonio\inst{1} \&
+M. Bozzoli\inst{1,2,3}
+}
+
+\authorrunning{Paolantonio y Bozzoli}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{spaolantonio@unc.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Museo del Observatorio Astronómico de Córdoba, UNC, Argentina
+\and
+Facultad de Filosofía y Humanidades, UNC, Argentina
+\and
+Consejo Nacional de Investigaciones Científicas y Técnicas, Argentina
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El Espectrógrafo Estelar I es uno de los numerosos instrumentos de la colección del Museo del Observatorio Astronómico de Córdoba (MOA). Este instrumento fue diseñado y construido en el Observatorio a comienzos de 1940, el primero en su tipo con óptica totalmente reflectante. Este aparato, destinado a servir al telescopio de 1.54 metros de la Estación Astrofísica de Bosque Alegre, se constituyó en uno de los logros más notables de la óptica instrumental astronómica argentina. Fue utilizado exitosamente durante varias décadas y posibilitó llevar adelante significativas investigaciones en astronomía estelar. A pesar de su importancia, no se ha encontrado una publicación técnica que trate sobre su historia y diseño, únicamente se realizaron en la época de su construcción algunos pocos artículos con descripciones y comentarios parciales. La investigación desarrollada en el MOA a partir de documentos originales y del análisis del mismo instrumento, ha permitido fijar las razones de su construcción y la historia de su desarrollo, así como varias de sus características constructivas y ópticas, que eran desconocidas hasta ahora.}
+
+\abstract{The Stellar Spectrograph I is one of the several instruments that belongs to the collection of the Córdoba Astronomical Observatory Museum (MOA). This instrument was designed and built at the Observatory in the early 1940s; it was the first with fully reflective optics. This device, intended to work with the 1.54 meter telescope of the Bosque Alegre Astrophysical Station, represented one of the most notable achievements of Argentine astronomical instrumental optics. It was used successfully during many decades; it made it possible to carry out significant research about stellar astronomy. However, no technical publication has been found that deals with its history and design; only a few articles with partial descriptions and comments were made at the time of its construction. The research carried out at the MOA, based on original documents and the analysis of the instrument itself, helped to establish the reasons for its construction, the history of its development, and many of its constructive and optical characteristics, which until now were almost unknown.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ history and philosophy of astronomy --- instrumentation: spectrographs }
+
+\begin{document}
+
+\maketitle
+\section{Introducci\'on}\label{S_intro}
+
+A fines de 1936, el entonces director interventor Ing. Félix Aguilar solicitó al ministerio del cual dependía el Observatorio Nacional Argentino (ONA) un crédito para la compra del instrumental que serviría al telescopio de 1.54 metros de la Estación Astrofísica de Bosque Alegre, que se esperaba entrara en funciones a la brevedad. El pedido de los espectrógrafos y las cámaras, imprescindibles para el aprovechamiento del gran reflector, fue repetido en varias oportunidades por el siguiente director, Juan José Nissen, sin resultados positivos \footnote{Correspondencia. 26/9/1938 J. J. Nissen al Presidente del Consejo de Observatorios Dr. Fortunato J. Devoto, Córdoba; 13/10/1938 Fortunato J. Devoto a J. J. Nissen, Buenos Aires; 17/3/1939 J. J. Nissen al Ministro de Justicia e Instrucción Pública Jorge E. Coll, Córdoba;  19/03/1939 J. J. Nissen a Jorge E. Coll, Córdoba. Archivo MOA.}. 
+
+Finalmente, el Dr. Enrique Gaviola, quien en enero de 1940 reemplazó a Nissen luego de su renuncia presentada ante la falta de apoyo de las autoridades, convencido de que no lograría la partida necesaria para adquirir los instrumentos faltantes antes de la puesta en servicio del telescopio, tomó la decisión de construirlos en el observatorio, lo que fue comunicado al Ministro en el mes de febrero siguiente\footnote{Correspondencia. 19/2/1940 E. Gaviola a Jorge E. Coll, Córdoba. Archivo MOA.} \citep{cordobaestelar}.
+
+\section{Diseño y construcción}
+
+El espectrógrafo estaría destinado a ser instalado en el foco Cassegrain del telescopio y sería utilizado para el estudio estelar. Fue diseñado con óptica de reflexión, ranura y el registro en placas fotográficas (Fig. ~\ref{Figura1}). 
+
+El colimador está formado por un sistema Cassegrain invertido, con la singularidad de que el espejo cóncavo es hiperbólico en lugar de parabólico. Esto se realizó con el fin de corregir las aberraciones de la cámara, descripta por Gaviola como tipo “Schmidt sin lente correctora”.
+
+Como elemento dispersor se adquirió una red plana de reflexión, fabricada por Robert Wood en la Johns Hopkins University de Baltimore, EE.UU., uno de los más reconocidos fabricantes de la época \citep{dieke}, por un valor de 350 dólares (Fig. ~\ref{Figura2}). La red llegó al país a mediados de 1940 \footnote{Correspondencia. 19/2/1940 E. Gaviola a Robert W. Wood, Córdoba; 13/05/1940 E. Gaviola al Ministro J. E. Coll, Córdoba; 14/05/1940 E. Gaviola a R. W. Wood, Córdoba; 18/09/1940 E. Gaviola al Ministro Guillermo Rothe; 23/10/1940 E. Gaviola al Banco Central de la Rep. Argentina. Archivo MOA.}.
+
+Todas las piezas ópticas fueron elaboradas en el Taller de Óptica del ONA (edificio hoy demolido) por el Dr. Ricardo Platzeck y David McLeish, a excepción del espejo menor del colimador, el que por su reducido tamaño debió ser encargado al Taller de Óptica de Puerto Belgrano, dirigido por el Almirante Helio López \footnote{Correspondencia. 5/11/1940 E. Gaviola a Helio López, Córdoba; 24/12/1940 E. Gaviola a Helio López, Córdoba. Archivo MOA.}.
+
+Cómo indicativo de la calidad de estas piezas, pude mencionarse que el espejo hiperbólico del colimador, configurado por McLeish, difería de la superficie teórica en sólo 0.04 longitudes de onda \citep{gaviola1942a} \footnote{Cuaderno del taller de óptica, páginas 173 y siguientes. Archivo MOA}. El espejo fue controlado por el método de la cáustica, ideado pocos años antes por Platzeck y Gaviola, que consiste en el control de la envolvente de los rayos de luz reflejados, con lo que se lograba una mayor precisión de la medición \citep{Platzeck:39}.
+
+Los espejos del colimador fueron tallados en bloques de vidrio Pyrex\textsuperscript{®} de bajo coeficiente de dilatación, cuyo uso  en astronomía se estaba generalizando. Para el espejo de la cámara, de mayor tamaño, se utilizaron dos discos de vidrio St. Gobain de 23 mm de espesor. Con el propósito de formar un nuevo disco de mayor espesor, fueron fundidos en el Observatorio en un horno eléctrico a 660°C y enfriados a lo largo de 4 días para evitar tensiones internas. Terminado el espejo, fue cortado formando una faja de 12 cm simétrica al centro óptico, con la intención de alivianar el peso del instrumento. Estos trabajos fueron llevados adelante por McLeish y Platzeck \citep{gaviola1942a}.
+
+La ranura, celdas de espejos, soportes, arco de hierro y demás elementos estructurales del instrumento se realizaron en el Taller Mecánico del Observatorio que se encontraba a cargo de Ángel Gómara. Los elementos se dispusieron en una mesa en las posiciones que debían quedar y, a partir de las medidas obtenidas se diseñaron y fabricaron los moldes necesarios para la carcasa. Las piezas fueron fundidas en aluminio especial en la Fábrica Militar de Aviones de Córdoba\footnote{Ángel Gómara, comunicación personal, 2002.}. Con un espesor de paredes de 2.5 mm, reforzadas con nervaduras, la fundición de la carcasa resultó ser de excelente calidad. 
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig01.jpg}
+\caption{Espectrógrafo I del Observatorio Nacional Argentino, tal como se terminó a fines de 1943 (de los autores. Imagen base, gentileza G. P. Platzeck).}
+\label{Figura1}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=0.35]{fig02.jpg}
+\caption{Red Wood original (Ø 4”). Tiene grabada la leyenda en inglés, “Red por R. Wood y Wilbur Perry 1940, 15.000 líneas por pulgada, Johns Hopkins” (de los autores).}
+\label{Figura2}
+\end{figure}
+
+
+\section{Descripción del instrumento}
+
+La consulta de diversos documentos existentes en los archivos del MOA, publicaciones de la época de la construcción (citadas en las referencias), así como las mediciones realizadas por los autores, han permitido determinar la mayor parte de los parámetros del espectrógrafo, los que se resumen en la Tabla \ref{tabla1} y la Fig. ~\ref{Figura3}.
+
+\begin{table}[!t]
+\centering
+\caption{Resumen de los principales parámetros del telescopio y el Espectrógrafo Estelar}
+\begin{tabular}{lccc}
+\hline\hline\noalign{\smallskip}
+\!\!\emph{Telescopio} & Foco\\
+\!\!  & Cassegrain\\
+\!\!Diámetro espejo primario & 154 cm\\
+\!\!Distancia focal equivalente & 31.5 m\\
+\!\!Relación focal & 20.5\\
+\!\!Escala en plano focal & 6.6 ''/mm\\
+\hline\noalign{\smallskip}
+\!\!\emph{Colimador} & Cassegrain\\
+\!\!  &  invertido\\
+\!\!Distancia focal equivalente & 2100 mm\\
+\!\!Relación focal & 20.75\\
+\!\!Diámetro espejo primario & 24 mm\\
+\!\!Distancia focal espejo primario & 301.5 mm\\
+\!\!Diámetro espejo secundario & 101.2 mm\\
+\!\!Distancia focal espejo secundario & 500 mm\\
+\hline\noalign{\smallskip}
+\!\!\emph{Cámara} & “Schmidt sin\\
+\!\!  & lente correctora"\\
+\!\!Diámetro espejo & 320 mm\\
+\!\!Radio de curvatura & 800 mm\\
+\hline\noalign{\smallskip}
+\!\!\emph{Red de difracción} & Plana reflectante\\
+\!\!  & aluminizada\\
+\!\!Diámetro & 4 pulgadas (102 mm)\\
+\!\!Área rayada & 60.5 x 79.2 mm\\
+\!\!Líneas x pulgada & 15000 (590 l/mm)\\
+\hline
+\end{tabular}
+\label{tabla1}
+\end{table}
+
+\begin{figure*}[!t]
+\centering
+\includegraphics[scale=0.35]{fig03.jpg}
+\caption{Esquema óptico del Espectrógrafo Estelar I (de los autores).}
+\label{Figura3}
+\end{figure*}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig04.jpg}
+\caption{Ejemplo de placas obtenidas con el Espectrógrafo I en 1946 y 1947. En los archivo del Observatorio se encuentran archivadas miles de estas placas (Biblioteca OAC).}
+\label{Figura4}
+\end{figure}
+
+Para el Espectrógrafo Estelar se emplearon placas fotográficas delgadas cortadas a una medida de 7 a 8.5 mm de ancho por unos 119 mm de largo. El espesor de las placas era variable, entre los 0.7 y 0.95 mm. Las medidas realizadas dan un valor usual de 0.8 mm (Fig. ~\ref{Figura4}). En una misma placa, el espesor podía variar de un extremo al otro de 0.8 a 0.85 mm \citep{1946RvAst..18..243G}. 
+
+Debido a la gran curvatura del campo, era frecuente que las placas se rompieran, en especial si el corte no era bueno. Pronto se analizó el problema y se comprobó que someterlas durante unos 30 segundos a una flexión mayor, de 350 mm de radio de curvatura, antes de cargarlas en el porta placa, disminuía las roturas. Platzeck también se percató de que en las noches húmedas se producía un mayor número de quiebres que en las secas, por lo que se ensayó con éxito el secado de las placas a una temperatura de 5 a 10°C mayor que la ambiente, reduciéndose las roturas a menos del 10 \% \citep{1946RvAst..18..243G}.
+
+Se obtenían espectros de unos 100 mm de longitud, hasta los 290 nm y una dispersión de 420 nm/mm \citep{1942RvA....14..207G}.
+
+En una fecha cercana a 1950, con el propósito de aislarlo térmicamente, el espectrógrafo se recubrió con placas de madera contrachapada, revestidas a su vez con aluminio, y se le incorporó un termostato para mantener su temperatura lo más constante posible. Años más tarde, la red Wood fue reemplaza por otra de similares características y mejores prestaciones, de 600 l/mm, cuadrada, por lo que se le debió colocar un diafragma circular.
+
+En 1966, el Dr. Luis Milone realizó un estudio de la estabilidad del espectrógrafo para las mediciones de velocidades radiales, determinando que existían algunos problemas relacionados con los espectros de comparación, inconveniente que posteriormente fue corregido\citep{milone}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[scale=0.18]{fig05.jpg}
+\caption{El Espectrógrafo Estelar I montado en el foco Cassegrain del telescopio de 1.54 m de la Estación Astrofísica de Bosque Alegre, junto a Martín Dartayet. La barra en la parte inferior (señalada), es el comando del movimiento fino en declinación agregado en 1944, necesario para lograr un correcto guiado del instrumento (Archivo OAC).}
+\label{Figura5}
+\end{figure}
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=\columnwidth]{fig06.jpg}
+\caption{Espectrógrafo I en la actualidad (de los autores).}
+\label{Figura6}
+\end{figure}
+
+
+\section{Utilización del espectrógrafo}
+
+El Espectrógrafo Estelar fue instalado a fines de 1943, momento desde el cual la obtención de espectros fue la principal actividad inicial llevada adelante con el telescopio de 1.54 m, junto a la toma de fotografías directas en el foco newtoniano (Fig. ~\ref{Figura5}). 
+
+El primer logro obtenido no fue por un espectro, sino por la observación a través del ocular de campo. El 9 de enero de 1944, mientras Gaviola operaba el instrumento, con la intención de realizar un espectro a la variable Eta Carinae, descubrió que la estrella estaba rodeada por una nebulosidad, descubrimiento que pasó a la historia como el “homúnculo” \citep{2023BAAA...64..320P}.
+
+El estudio de los espectros obtenidos con este instrumento derivó en numerosas publicaciones, siendo sus usuarios, entre otros: Enrique Gaviola, Ricardo Platzeck, Jorge Sahade, Livio Gratton, Jorge Landi Dessy, Carlos Lavagnino, Adela Ringuelet, Carlos Jaschek y Luis Milone. 
+
+Con el Espectrógrafo Estelar I se llevó adelante el “Atlas de espectros estelares de red en mediana dispersión” de Jorge Landi Dessy, Mercedes Corvalan y Carlos Jaschek, publicado en 1971, que permitió superar las limitaciones del sistema de clasificación espectral estelar de Morgan y Keenan \citep{1977agss.book.....L}.
+
+También se estudiaron, ocasionalmente, algunos cometas, tal el caso del 1947n, trabajo realizado por Jorge Sahade \citep{1948ApJ...108..159S}.
+
+El Espectrógrafo dejó de utilizarse a fines de la década de 1970, quedando depositado en la Estación Astrofísica de Bosque Alegre, y actualmente forma parte de la colección de instrumentos del MOA (Fig. ~\ref{Figura6}).
+
+
+\section{Concluisones}
+
+La investigación realizada permitió precisar detalles históricos y técnicos sobre el diseño, la construcción y la posterior utilización del Espectrógrafo Estelar I. 
+
+Este instrumento se destaca por su innovador diseño, con óptica exclusivamente de reflexión, algo que nunca se había realizado hasta ese momento, así como por la gran calidad de sus elementos ópticos y precisión de las piezas mecánicas. Más allá de los ajustes que fueron necesarios luego de su construcción, lo que es usual en cualquier prototipo, la exitosa utilización a lo largo de muchos años, permite aseverar que el Espectrógrafo Estelar I es uno de los logros más notables de la óptica instrumental astronómica argentina. 
+
+Si bien se lo conoce usualmente como el espectrógrafo “de Gaviola”, su diseñador y gestor, no deben olvidarse sus constructores, que sin dudas influyeron en la configuración final del aparato, tal el caso David McLeish y Ángel Gómara, y en particular del célebre óptico Dr. Ricardo Platzeck.
+
+Las limitaciones de espacio no han permitido incluir algunos detalles históricos y, en especial, constructivos del Espectrógrafo, por lo que los autores quedan a disposición de los lectores para las consultas que se deseen realizar.
+
+
+\begin{acknowledgement}
+Los autores agradecen al Coordinador del Museo del OAC, Dr. David Merlo, a la encargada de la Biblioteca del OAC, Bib. Verónica Lencina y al profesor Dr. Carlos Valotto, por facilitar el acceso al material de estudio.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{871}
+ 
+\end{document}

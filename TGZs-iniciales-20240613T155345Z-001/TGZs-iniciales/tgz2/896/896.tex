@@ -1,0 +1,379 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{5}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{09 February 2024}
+\accepted{17 July 2024}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Study of the substructure of two high-mass molecular clumps}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{N.L. Isequilla et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{N.L. Isequilla\inst{1}, A.D. Marinelli\inst{1} \& M.E. Ortega\inst{1}}
+
+\authorrunning{Isequilla et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{nisequilla@iafe.uba.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{El estudio de la formación de las estrellas de alta masa incluye la caracterización de la estructura interna de los grumos moleculares de alta masa. En este trabajo se presenta un estudio de la subestructura de las fuentes ATLASGAL G020.761$-$00.062 y G033.133$-$00.092, a partir de la base de datos del interferómetro Atacama Large Millimeter Array (ALMA) y de observaciones propias realizadas con el Karl G. Jansky Very Large Array (JVLA). Ambos grumos moleculares de alta masa muestran evidencia de fragmentación con la presencia de varios núcleos moleculares en su interior, algunos de ellos activos. La detección de fuentes de radio podría sugerir la presencia de regiones HII jóvenes embebidas en ambos grumos mostrando que la formación estelar de alta masa ha tenido lugar en su interior. Teniendo en cuenta las moléculas detectadas en dirección a ambos grumos moleculares, en un trabajo futuro se caracterizará el estado evolutivo y la masa de los diferentes fragmentos observados.}
+
+
+
+
+\abstract{The study of the formation of high-mass stars includes the characterisation of the internal structure of high-mass molecular clumps. This work presents a study of the substructure of the sources ATLASGAL G020.761$-$00.062 and G033.133$-$00.092, based on data from archival of the Atacama Large Millimeter Array (ALMA) interferometer and own observations carried out with the Karl G. Jansky Very Large Array (JVLA). Both massive molecular clumps show evidence of fragmentation with the presence of several molecular cores, some of them active. The detection of a radio source could suggest the presence of young HII regions embedded in both clumps showing that high-mass star formation has taken place inside them. From the different molecules detected towards the molecular cores, it is intended, in the future, to characterise the evolutionary stage and mass of the different fragments.}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{stars: formation --- ISM: molecules --- stars: protostars}
+
+\begin{document}
+
+\maketitle{}
+
+\section{Introduction} 
+\label{S_intro} 
+
+Star formation proceeds in dense regions of the molecular clouds. In particular, the formation of massive stars ($>$8 M$_\odot$) occurs in massive molecular clumps. These molecular clumps fragment and collapse gravitationally, giving rise to multiple molecular cores. These cores can be massive enough to form massive stars \citep{McKee2002}, or instead, they may generate low-mass cores that eventually form massive stars through competitive accretion \citep{Bonnell2008, Sanhueza2019}. Therefore, the mass distribution and number of cores detected depend on the process that regulates fragmentation, as well as the evolutionary stage of the cloud \citep{Moscadelli2021, Palau2018, Kainulainen2013}. The characterisation of molecular cores embedded in massive clumps is important for understanding the formation of high-mass stars.
+
+
+We present a continuation of the study carried out by \citet{Marinelli22} of the molecular clumps AGAL G020.761$-$00.062 (hereafter G20.76) and AGAL G033.133$-$00.092 (hereafter G33.13). We used high angular resolution and sensitivity data, obtained from the Atacama Large Millimeter Array (ALMA) archival database, and our own radio continuum observations from the Karl G. Jansky Very Large Array (JVLA).\footnote{The NRAO is a facility of the National Science Foundation operated under cooperative agreement by Associated Universities, Inc.} \citet{Marinelli22} showed evidence of fragmentation towards both molecular clumps. In particular, from the CH$_3$CN emission, detected towards some of the fragments,  the authors estimated temperatures above 100~K for some of the cores, which indicate that active star formation is occurring inside them \citep{Remijan2004}.
+ Moreover, we have detected many more interesting molecules towards these cores, characterizing them through  these molecules will give us a better understanding of the processes occurring in the region (to be published in a forthcoming paper, Isequilla et al., in prep). Therefore, as an example, we present the spatial distribution of one of them (C$^{17}$O).
+
+On the other hand, we present images of radio continuum at 10 GHz from our JVLA observations to unveil the presence of more evolved massive sources, which may have already begun to ionise their surroundings as compact HII regions.
+
+
+In this work, we present a preliminary characterisation of two massive dust condensations at clump (G20.76 and G33.13) and core scale as part of a larger study aimed at determining the evolutionary state and mass of all the molecular cores in the region. This is in order to contrast the two main scenarios of high-mass star formation.
+
+
+
+\begin{figure*} [!t]
+\centering
+\includegraphics[width=8.3cm]{G20GE-d.eps}
+\includegraphics[width=7.6cm]{G33Gesc.eps}
+\caption{ A three color image with \textit{Spitzer} data at 8 and  24 $\mu$m in green and red, respectively, and JVLA data at 1.4 GHz in blue. The white contours represent the ATLASGAL continuum emission at 870 $\mu$m. Levels are at 0.25 (3$\sigma$), 0.45, 0.65, and 0.9 Jy beam$^{-1}$ for G20.76 (left panel) and  at 0.11 (3$\sigma$), 0.19, 0.4, and 0.8 Jy beam$^{-1}$ for G33.13 (right panel). The green squares highlight the regions studied in this work.}
+\label{Gescala}
+\end{figure*}
+
+
+\section{Data}
+
+Data cubes were obtained from the ALMA Science Archive\footnote{http://almascience.eso.org/aq/}, project 2015.1.01312 (PI: Fuller, G). The single pointing observations for the targets were carried out using the following telescope configuration with L5BL/L80BL(m): 42.6/221.3, in the 12 m array. The observed frequency range and the spectral resolution are 224.24 – 242.75 GHz (band 6) and 1.3 MHz, respectively. The angular resolution of this dataset is about 0$\arcsec$.7. The rms noise is 1.5 and 0.05 mJy beam$^{-1}$ for the line emission and the continuum, respectively. 
+
+Observations with the JVLA\footnote{https://data.nrao.edu} interferometer were carried out at X-band, covering the frequency range from 8 to 12 GHz. The observations were taken on May 18, 2022, in the A configuration (Project 22A-063, PI: Ortega, M.). The rms noise level and synthesised beam obtained were 6 $\mu$Jy beam$^{-1}$ and $0.\arcsec6 \times 0.\arcsec2$ towards G20.76, and 0.1 mJy beam$^{-1}$ and $0.\arcsec4 \times 0.\arcsec2$ towards G33.13. Both ALMA and JVLA data were calibrated and analysed using the Common Astronomy Software Applications package \citep[CASA,][version 4.7.2]{McMullin2007}. 
+
+Additionally, we used 870 $\mu$m data extracted from ATLASGAL \citep{Schuller2010}, and \textit{Spitzer} data at 8 and 24 $\mu$m extracted from GLIMPSE \citep{benjamin2003}, and MIPSGAL \citep[]{carey2009}, respectively.
+
+
+
+\section{Characterizing the ATLASGAL sources and their substructure}
+
+
+Figure \ref{Gescala} shows three-color images towards the G20.76 (left panel) and G33.13 (right panel) sources. These images show the \textit{Spitzer} data at 8 and 24 $\mu$m in green and red, respectively, and JVLA data at 1.4 GHz in blue. The white contours represent the ATLASGAL emission at 870 $\mu$m. Both images show the presence of several dust condensations at 870 $\mu$m. The complexes G20.76 and G33.13 have associated systemic velocities of approximately 57 km s$^{-1}$ and 76 km s$^{-1}$ \citep{Wienen2012}, corresponding to kinematic distances of about 4.12 kpc and 9.37 kpc, respectively \citep{Wienen2015}.
+
+
+From the dust continuum emission at 870 $\mu$m extracted from ATLASGAL catalogues, we estimated the mass of the two molecular clumps, following \cite{Kauffmann2008}
+
+\begin{align*}
+\label{mass-1}
+{\rm M_{gas}=0.12~M_\odot \left[\rm exp\left(\frac{1.439} {(\lambda/mm)(T_{dust}/10~K)}\right)-1\right]} \\ \nonumber {\rm \times\left(\frac{\kappa_{\nu}}{0.01~cm^2~g^{-1}}\right)^{-1}\left(\frac{S_{\nu}}{Jy}\right)\left(\frac{d}{100~pc}\right)^2\left(\frac{\lambda}{mm}\right)^3}.
+\end{align*}
+For $\kappa_{\nu}$, the dust opacity per gram of matter at $\lambda=$ 870 $\mu$m, we adopted the value 0.0185~cm$^2$g$^{-1}$ \citep{Csengeri2017}. Assuming a typical dust temperature T$_{\mathrm{dust}}$=20 K \citep{Wienen2012}, along with integrated flux densities S$_{v}=$1.76 Jy and 8.08 Jy for G20.76 and G33.13, respectively, as estimated by \citet{Csengeri14}, we derived masses of 173 $\pm$ 51 M$_\odot$ for the clump G20.76 at a distance d= 4.12 kpc and 4106 $\pm$ 1231 M$_\odot$ for the clump G33.13 at a distance d= 9.37 kpc. These results confirm that both ATLASGAL sources are indeed massive molecular clumps, which makes them interesting objects for studying the fragmentation and formation of high-mass stars. 
+
+It has previously been mentioned that \citet{Marinelli22} found evidence of fragmentation towards both molecular clumps. As part of a continuation of that work, and based on a preliminary analysis of ALMA data, we have found many interesting molecules towards the molecular cores in which both clumps G20.76 and G33.13 have been fragmented. These molecular lines provide crucial information about the physical and chemical conditions of the cores embedded in the molecular clumps. For instance, we have detected molecules such as CN, C$^{17}$O, C$^{34}$S, CH$_{3}$OH, H$_{2}$CO, which exhibit extended emission beyond the cores, along with other molecules like HDO, CH$_{3}$CN \citep[analysed in][]{Marinelli22}, CH$_{3}$CCN, HC$_{3}$N, which show localised emission towards specific cores. In this work, we only show the spatial distribution of the C$^{17}$O molecule, which is one of the most common molecules in the interstellar medium.
+
+
+Figure \ref{C17O} shows in grayscale the integrated emission of the C$^{17}$O J=2--1 line towards G20.76 (top panel) and G33.13 (bottom panel). The green contours represent the ALMA continuum emission at 1.3 mm. The molecular cores, in which both clumps have fragmented, are labelled with mm\#. Figure \ref{C17O} (top panel) exhibits a shell-like morphology extending to the south of the dust cores's complex. This shell-like feature encompasses the position of the cores mm1 and mm2, while core mm3 seems to be outside the structure. Figure \ref{C17O} (bottom panel) displays the C$^{17}$O J=2--1 emission, revealing two prominent molecular condensations coinciding with the positions of the dust cores mm3 and mm4. Additionally, extended emission surrounding all the cores is visible. 
+
+Unlike the CH$_{3}$CN (J=13--12) line emission,  which traces denser and hotter (E$_u$ above 100~K)\footnote{Excitation energy of the upper level.}
+gas towards molecular hot cores \citep[see][]{Marinelli22}, the C$^{17}$O (J=2--1) transition traces less dense and cooler (E$_u$ $\sim$ 20~K) gas of the external layer of the envelope in which the cores are embedded \citep{Fontani2005}. The kinematic analysis of the C$^{17}$O (J=2--1) emission helps us to investigate how the fragmentation processes have occurred inside the molecular clumps, given that this molecule can trace the ambient gas connecting the cores that remains after the process of fragmentation (e.g. filaments).
+
+
+Figure \ref{VLA} shows, in grayscale, the JVLA radio continuum emission at 10 GHz towards G20.76 (top panel) and G33.13 (bottom panel), which were previously catalogued as radio sources according to the survey carried out by \cite{Purcell2013}. In G20.76 it can be appreciated a radio source towards the south of the molecular core complex. The radio source exhibits extended structure and it is associated with what would appear to be the remains of an ancient molecular core. We are investigating the connection between this radio source and the C$^{17}$O molecular shell (Isequilla et al., in prep).
+
+
+In G33.13 appears an intense radio source located between the molecular cores mm2 and mm3. Conspicuous extended emission seems to extend eastwards towards the position of the core mm2, suggesting a spatial connection between this radio source and the distribution of molecular gas. However, further analysis is required to confirm this possibility.
+
+Subsequent studies of spectral index towards these radio sources  will allow us to determine their nature, however given their morphology it is reasonable to assume that the radio continuum emission is ionised gas linked to young and compact HII regions. If this is the case, they would be evidence that high-mass star formation has taken place in both massive molecular clumps. 
+
+
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=7.5cm]{C170-M0G20-boletin.pdf}
+\includegraphics[width=7.3cm]{G33-C170-Bol-19Jun.pdf}
+\caption{Grayscale shows the zero moment maps of C$^{17}$O (J=2--1) towards G20.76 (top panel) and G33.13 (bottom panel) integrated between 52 and 62 km s$^{-1}$ and between 71 and 81 km s$^{-1}$, respectively. The grayscale is in Jy beam$^{-1}$ km s$^{-1}$. The green contours represent the ALMA continuum emission at 1.3 mm. Levels are at 0.7, 1.2, 1.9, 4, 7, and 13 mJy beam$^{-1}$ and at 3, 6.7, 12, 20, and 50 mJy beam$^{-1}$ for G20.76 and G33.13, respectively. The labels mm\# indicate the core names. The beams are showed at the bottom right corner.}
+\label{C17O}
+\end{figure}
+
+ 
+\begin{figure}[!t]
+\centering
+\includegraphics[width=7.5cm]{G20-VLA-19Jun.pdf}
+\includegraphics[width=7.6cm]{G33-VLA-19Jun.pdf}
+\caption{Grayscale radio images showing the two sources detected with the JVLA at 10 GHz: G20.76 (top) and G33.13 (bottom). The green contours (the same as in Fig. \ref{C17O}) trace the dust continuum emission at 1.3 mm. The beams are indicated in the bottom right corner of each image, in black JVLA and green ALMA.}
+\label{VLA}
+\end{figure}
+
+
+\section{Summary and future work }
+
+We presented a preliminary study of the internal structure of the ATLASGAL sources G20.76 and G33.13 (massive clumps) based on the analysis of high resolution and sensitivity archival ALMA data and new JVLA observations. The main results are:
+
+\begin{itemize}
+
+\item Both ATLASGAL sources are massive dust clumps $\sim$ 173 M$_\odot$ and $\sim$ 4106 M$_\odot$ for G20.76 and G33.13, respectively, which makes them interesting objects for analysing the fragmentation processes and the subsequent high-mass star formation,  
+\item The ALMA continuum emission at 1.3 mm shows evidence of fragmentation towards both clumps, 
+\item  The C$^{17}$O (J=2--1) integrated emission map towards G20.76 shows a fragmented shell-like structure extending to the south of the dust cores’s complex,
+\item The JVLA radio continuum emission maps at 10 GHz suggest the presence of two young and compact HII regions, one within each clump, indicating that high-mass star formation has already occurred within both,
+\item The JVLA radio source towards G20.76 could be related to the molecular shell-like feature found in the C$^{17}$O (J=2--1) emission,
+\item The JVLA radio source towards G20.76 seems to be related to the remains of an ancient core (the more evolved one in the clump) weakly detected with our ALMA observations, while  the JVLA radio source towards G33.13 seems to be related to the core mm2. However, a more in-depth study is required to be conclusive. 
+
+\end{itemize}
+
+The study will continue with a comprehensive characterisation of all the molecular cores identified in both clumps, based on a deep analysis of the ALMA (line and continuum) and JVLA observations (continuum), and complemented with near-infrared public data. The analysis of the molecular lines detected towards both clumps will allow us to determine the evolutive stage and the mass of the still present molecular cores.
+The fundamental objective of this study will be to contrast the two main scenarios of high-mass star formation: monolithic accretion and competitive collapse.   
+
+
+\begin{acknowledgement}
+N.L.I and M.O. are members of the Carrera del Investigador Científico of CONICET, Argentina. A.M. is a doctoral fellows of CONICET, Argentina. This work was partially supported by the Argentinian grants PIP 2021 11220200100012 and PICT 2021-GRF-TII-00061 awarded by CONICET and ANPCYT. 
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+
+
+
+
+
+ 
+\end{document}
+
+
+
+
