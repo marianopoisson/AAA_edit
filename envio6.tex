@@ -1,0 +1,386 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+%                                                                            %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%                                                                            %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%                                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%                                                                            %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%                                                                            % 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%                                                                            %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%                                                                            %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%                                                                            %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%                                                                            %
+%  -Select the requested contribution type (numeric option)                  %
+%                                                                            %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%                                                                            %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                      %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial
+% 11 : ASOC  - Astronomía y Sociedad                                             %
+% 12 : O     - Otros
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%                                                                            %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\title{Sobre la estructura y forma de los cúmulos abiertos binarios}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%                                                                            %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Sobre la estructura y forma de los cúmulos abiertos binarios}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%                                                                            %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\author{J.V. González\inst{1}, A. Otro\inst{2,3}, M.V. Tercero\inst{4,5} \& R.E. Cuarto\inst{5,6} }
+%\authorrunning{González et al.}
+
+\author{Carlos Feinstein\inst{1,2,5}, Gustavo Baume\inst{1,2,5},Tali Palma\inst{3,5} \& Valeria Coenda\inst{3,4,5}}
+
+\authorrunning{Feinstein et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%                                                                            %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{cfeinstein@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%                                                                            %
+%  -The list of affiliations must comply with the format specified in        %          
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astronómicas y Geofísicas, UNLP, Argentina \and Instituto de Astrofísica de La Plata  - CONICET--UNLP, Argentina 
+\and  Observatorio Astronómico de Córdoba, UNC, Argentina \and  Instituto de Astronomía Teórica y Experimental, CONICET--UNC, Argentina \and  Consejo Nacional de Investigaciones Científicas, Argentina }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%                                                                            %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{
+En este trabajo examinamos  propiedades estructurales de los cúmulos binarios genéticos. La palabra “genéticos'' en este contexto se refiere a cúmulos binarios donde ambos cúmulos parecen ser similares en edad, población, distancia y movimiento propio. Para esta tarea, utilizamos datos del Catálogo de Cúmulos Abiertos Binarios y Agrupados. 
+Estos datos nos proporcionan información detallada sobre los cúmulos, su entorno y  sobre otros posibles cúmulos en su vecindad. En este trabajo estudiamos si algunos de los cúmulos abiertos binarios podrían resultar de una formación estelar dominada por una  dimensión fractal baja, la cual aún puede ser medida. Esta dimensión fractal baja se ha relacionado con la estructura de las nubes moleculares originales y, probablemente, con la turbulencia del gas.
+Si esta suposición es correcta, las componentes de los cúmulos binarios genéticos deberían heredar su estructura y fisonomía. De los datos podemos medir la elipticidad de varios cúmulos binarios catalogados y analizar su forma. En particular, nos enfocamos en la orientación del eje mayor de cada componente del sistema binario y estudiamos su comportamiento estadístico basándonos en los datos de muy alta precisión astrométrica de {\sl Gaia}. }
+
+\abstract{
+We examine structural properties of the genetic binary clusters. The word {\it genetic} in this context refers to binary clusters that are  similar in age, population, distance and proper motion. For the task we use data from the Binary and Grouped Open Cluster Catalogue.
+These data provides us with comprehensive information about the clusters, their surroundings, and details about possible clusters in their vicinity. We study whether some of the binary open clusters could result from stellar formation dominated by a low fractal dimension, which can still be measured. This low fractal dimension is  related to the structure of the original molecular clouds and probably to the gas turbulence. If this assumption is true, the components of the genetic binary clusters are going to inherit its structure and shape.  We measured the ellipticity of several pairs of already cataloged binary clusters and analyzed their shape. In particular, we focused on the orientation of the major axis of each component of the binary system and studied their statistical behavior based on the high precision astrometric {\sl Gaia}  data. 
+
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                                                            %
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%                                                                            %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%                                                                            %
+%  https://journals.aas.org/keywords-2013/                                   %
+%                                                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{ galaxies: star clusters: general --- galaxies: star formation  --- (Galaxy:) open clusters and associations: general}
+
+\begin{document}
+
+\maketitle
+
+
+\section{Introducción}
+\label{S_intro}
+
+Los cúmulos binarios pueden ser el resultado de un sistema multicomponente que se ha formado al mismo tiempo en la misma nube primordial \citep{Priyatikanto16}. En este caso, los componentes tendrían características similares (edad, composición química, distancia y movimientos propios). Estos grupos de cúmulos binarios son considerados en la literatura como cúmulos binarios genéticos o también llamados cúmulos gemelos. Otro caso es la formación de una secuencia, en la cual la evolución estelar de uno de los cúmulos induce el colapso de una nube cercana, ya sea por vientos estelares o por shock de supernova \citep{Goodwin97}. 
+\noindent  Otra posibilidad es cuando uno de los cúmulos captura a otro por fuerzas de marea \citep{vandenBergh96} o captura resonante \citep{DehnenBinney98}. En este escenario, ambos cúmulos se formaron por separado y, por lo tanto, podrían tener características muy diferentes. 
+Pero hay otro caso a considerar: la nube molecular original puede tener una estructura fractal creada por su turbulencia interna \citep{Elmegreen}, las estrellas pueden heredar esa estructura y, por ende, los cúmulos resultantes contienen estrellas distribuidas con una geometría fractal. Si la dimensión fractal es menor que $D=2$, modelos como los de \cite{Cartwright04} y \cite{Cartwright09} muestran cúmulos con estructuras alargadas o fragmentadas (Feinstein, 2025 en preparación). 
+
+\noindent Cuanto menor sea la dimensión, más fragmentadas serán las estructuras. Estos fragmentos crean subestructuras, y estas subestructuras mantienen la dirección de elongación de la configuración global. En particular, esta propiedad es observable (Feinstein, 2025 en preparación) en los modelos y debería ser también medible en los cúmulos reales. Por lo cual,  nuestro objetivo comprende estudiar la geometría a partir de una muestra de objetos seleccionada de este catálogo.
+%Los datos de los cúmulos se tomaron del catálogo de  \cite{Palma2025} en el cual ya se encuentran clasificados una cantidad considerable de cúmulos binarios.  De ese catálogo  seleccionamos candidatos  con alta probabilidad de ser  binarios genéticos y analizamos la geometría del ambas componentes del par.
+ %trabajo, seleccionamos candidatos con alta probabilidad de ser binarios genéticos y analizamos la geometría de ambos componentes del par. Presentamos los valores obtenidos para el ángulo de proyección del eje mayor de cada cúmulo y discutimos su relación con el ángulo del compañero correspondiente.}
+  
+\section{Datos}
+
+\subsection{Catálogo}
+
+\noindent Utilizamos la muestra de cúmulos abiertos publicada por \cite{Palma2025}, que es una compilación de objetos individuales, binarios y múltiples basada en el trabajo de \cite{Hunt2024}. Este último trabajo incluye más de 7000 cúmulos estelares basados en observaciones de {\sl Gaia}  DR3 \citep{Gaia2021}. Este catálogo incluye los parámetros estimados (distancias, edades, extinciones, entre otros parámetros) para cada cúmulo y también proporciona la probabilidad de membresía de las estrellas en cada una de las agrupaciones.   
+En cambio el catálogo de \cite{Palma2025} es un estudio amplio de los grupos, sistemas binarios y cúmulos solitarios.  Este  incluye los cúmulos binarios y a los genéticos como un sub-grupo. De este catálogo se seleccionaron los  candidatos a binarios genéticos. 
+
+%\noindent Se consideró sólo a los cúmulos que ya se fueron declarados binarios en este trabajo  para tener una selección de los cúmulos y sus estrellas con criterios uniformes. Como criterio de selección selección de la muestra de  cúmulos gemelos consideramos sólo aquellos donde la diferencia de edad entre los pares sea menor a 0.5 Ma, en las edades determinadas por \cite{Hunt2024}.   Las posiciones de las estrellas individuales de cada cúmulo se tomaron también del catálogo de \cite{Hunt2024}. La muestra final fue de 100 sistemas binarios, la cual fue dividida en dos grupos. Estos son:\\
+
+\noindent  %\textbf{Se consideraron únicamente los cúmulos clasificados como binarios en este trabajo, 
+Con el fin de obtener una selección basada en criterios uniformes, se incluyeron sólo aquellos pares cuya diferencia de edad fuera menor a 0.5 Ma, según las edades determinadas por \cite{Hunt2024}.  Las posiciones de las estrellas individuales de cada cúmulo se tomaron también del catálogo de \cite{Hunt2024}. La muestra final fue de 100 sistemas binarios, la cual fue dividida en dos grupos.
+Estos son:\\
+
+
+\noindent Sistemas jóvenes: menos de 8.0 Ma\\
+\noindent  Sistemas viejos: más de 8.0 Ma\\
+
+
+\begin{figure}[]
+\centering
+%\includegraphics[width=0.95\linewidth,keepaspectratio]{figures/angulos_cumulos.png} 
+\includegraphics[width=0.95\linewidth]{angulos_cumulos.pdf} 
+\caption{Esquema de como se realiza la medición de los ángulos. Los puntos llenos simulan un cúmulo y su compañero.  Las rectas paralelas horizontales van en la dirección Este-Oeste.  $\theta_{1}$ y $\theta_{2}$ son los ángulos medidos hacia el Este del eje mayor de los cúmulos mientras que  $\omega$ es el ángulo de la línea de base del sistema binario, es decir la línea que une los dos centros de los cúmulos. }
+\label{fig:bender}
+\end{figure}
+
+\noindent  Para todos los sistemas binarios, se midió el ángulo de proyección del eje mayor de cada cúmulo con el fin de caracterizar  la dirección de la estructura elíptica de cada cúmulo ($\theta_{1}$ y $\theta_{2}$, respectivamente, para cada cúmulo del par). Para ello se usó el método PCA (Principal Component  Analysis) con el fin de obtener información de todas las estrellas del cúmulo. También se midió  el ángulo de la línea base que conecta los centros de los cúmulos ($\omega$) en cada uno de los pares. Así que para cada sistema obtenemos tres parámetros angulares (ver Fig. 1). Con estos datos, estudiamos sus comportamientos estadísticos para la muestra global de pares de cúmulos y las sub-muestras seleccionadas por edad.  En particular, construimos las correspondientes distribuciones de las diferencias de estos ángulos.  La diferencia entre los ángulos de ambas componentes nos dará información sobre si estos sistemas están alineados, mientras que la diferencia con él ángulo de base del sistema con la forma del cumulo estará relacionado con, por ejemplo, fuerzas de marea. Es decir, si la fuerza de marea es dominante es probable que este ángulo de la base del sistema sea similar al  de las orientaciones de las componentes del sistema. Con respecto a la medida de estas diferencias de ángulos, dado que sólo pueden tomar ángulos entre 0 y 180 grados, por norma se consideró el menor de los ángulos suplementarios. 
+
+
+%\begin{center}\vspace{1cm}
+%\includegraphics[scale=0.5]{figures/angulos_cumulos.png}\qquad
+%\captionof{figure}{Pepe}
+%\end{center}\vspace{1cm}
+
+
+%----------------------------------------------------------------------------------------
+%	RESULTS 
+%----------------------------------------------------------------------------------------
+
+\section{Resultados}
+    
+
+\subsection{Sistemas binarios jóvenes}
+
+
+\begin{figure}[]
+\centering
+\includegraphics[scale=0.35]{Young_delta_theta.pdf}
+\includegraphics[scale=0.35]{Young_diff_baseline.pdf}
+\captionof{figure}{\emph{Panel superior:} La figura muestra el histograma de la diferencia de los ángulos del eje mayor proyectado en el cielo para cada par de cúmulos en el caso de los objetos jóvenes. Los errores  corresponden a una distribución de Poisson. \emph{Panel inferior:} La figura muestra el histograma de la diferencia del ángulo de la línea de base y el eje mayor para cada cúmulo de la muestra de objetos jóvenes.}
+\label{fig:young}
+\end{figure}
+
+\noindent  \textbf{En el} panel superior de la fig. \ref{fig:young} se observa que una población significativa de pares de cúmulos está alineada. Sin embargo, el panel inferior de la fig. \ref{fig:young} indica que la línea base entre los cúmulos y el ángulo del eje mayor no parece mostrar esta característica en absoluto.
+
+
+\subsection{Sistemas binarios viejos}
+
+
+\begin{figure}[]
+\centering
+\includegraphics[scale=0.35]{Mean_age_delta_theta.pdf}
+\includegraphics[scale=0.35]{Mean_age_diff_baseline.pdf}
+\captionof{figure}{Igual a la Fig. \ref{fig:young} pero para la muestra de los cúmulo más antiguos.}
+\label{fig:middle}
+\end{figure}
+
+\noindent  La fig. \ref{fig:middle} (superior) muestra que la alineación del eje mayor de los cúmulos todavía existe, aunque parece no ser tan fuerte como en el caso de los más jóvenes. Por otro lado, la fig. \ref{fig:middle} (inferior) indica que hay una correlación débil con la orientación de la línea base.
+
+\begin{figure}[]
+\centering
+
+\includegraphics[scale=0.35]{Total_diff_angle.pdf}
+\includegraphics[scale=0.35]{Total_diff_baseline.pdf}
+\captionof{figure}{Igual a la  Fig. \ref{fig:young} pero para toda la muestra completa, sin distinguir sistemas jóvenes o viejos.}
+\label{fig:all}
+\end{figure}
+
+\subsection{Todos los sistemas}
+
+\noindent  La fig. \ref{fig:all} es igual a la fig. \ref{fig:young}, pero ahora para toda la muestra. El histograma indica que algunos cúmulos aún muestran una preferencia por la alineación de su eje mayor para todas las edades. 
+
+
+
+
+%\begin{center}\vspace{1cm}
+%\includegraphics[width=0.9\linewidth]{wojtak}
+%\captionof{figure}{Perfil del corrimiento hacia el azul en las fronteras de los c\'umulos gal\'acticos en funci\'on de la distancia al centro del c\'umulo R. Se grafica para Relatividad General (GR) en rojo y para las teor\'ias de gravedad modificada en azul (de corrido \textit{f(R)}, punteado TeVeS). TeVeS es la que se aleja m\'as de los resultados apuntados por la GR.}
+%\end{center}\vspace{1cm}
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSIONS
+%----------------------------------------------------------------------------------------
+
+\section{Conclusiones}
+\begin{itemize}
+\item En este trabajo en progreso, mostramos que el análisis de los datos muestra una tendencia en los cúmulos binarios genéticos a tener una forma alargada con orientaciones similares en ambas componentes del par.
+\item Estos resultados parecen ser independientes de la edad del sistema de cúmulos; además, esta correlación se observa en la muestra en su conjunto. Para los cúmulos jóvenes y la muestra completa, no encontramos ninguna correlación entre el ángulo de la línea base que cruza el centro de los cúmulos y su forma. Sin embargo, para los cúmulos de edad media y avanzada, la relación no es tan clara. Aunque se necesita una muestra más grande para obtener un resultado estadísticamente válido. Las fuerzas de marea entre ambos objetos pueden ser las provocadoras del efecto.
+
+\item La conclusión principal sugiere que un número significativo de cúmulos muestra orientaciones similares. Esta propiedad podría deberse a la estructura fractal que dio origen al sistema, y en muchos casos podría preservarse a lo largo del tiempo debido a la acción de fuerzas de marea entre las componentes.
+\item Nuestros resultados se encuentran estadísticamente en el rango de 2$\sigma$ a 3$\sigma$; se necesita una muestra más grande para obtener mejores estadísticas de los datos. Sin embargo, el fenómeno parece ser real. A medida que se logre observar objetos más débiles o más lejanos, y que la astrometría continúe mejorando en precisión, será posible refinar los resultados estadísticos obtenidos. Así que sería interesante entender si estas características de los pares provienen de su formación, probablemente en un contexto de una dimensión fractal baja inicial, o si son creadas y mantenidas por las fuerzas gravitacionales de marea a medida que evolucionan en el tiempo.
+ \end{itemize}
+\vspace{5cm} 
+\begin{acknowledgement}
+Este trabajo ha sido financiado parcialmente por el Consejo Nacional de Investigaciones Científicas y Técnicas (CONICET, PIP112-202101-00714), y el Programa de Incentivos (proyecto: 11/G182) de la Universidad Nacional de La Plata.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{biblio}
+ 
+\end{document}

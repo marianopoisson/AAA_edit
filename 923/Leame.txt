@@ -1,0 +1,50 @@
+
+*******************************************************************
+*******************************************************************
+Los archivos de estilo y macros para la edicion 56 del Boletin 
+de la Asociacion  Argentina de Astronomia son distribuidos en 
+el archivo BAAA2013.tar
+
+*******************************************************************
+*******************************************************************
+
+
+CONTENIDO DEL PAQUETE
+--------------------------------------------------------
+
+El archivo BAAA2013.tar contiene el paquete de estilo del BAAA 
+que incluye los siguientes archivos:
+
+Leame.txt:  Este archivo
+instructivo-baaa-2013.pdf: instructivo para la presentacion de 
+                           trabajos en el BAAA
+instructivo-baaa-2013.tex: archivo fuente del instructivo, 
+                           macro para la preparacion de contribuciones al BAAA
+biblio.bib: archivo de bibliografia de ejemplo para BibTeX
+baaa.bst: archivo de estilo de referencias bibliograficas con BibTeX
+baaa2013.sty: archivo de estilo del Boletin
+natbib.sty: archivo necesario para usar BibTeX
+figure1a2.eps: Figura de ejemplo
+figure1b2.eps: Figura de ejemplo
+font_7b.eps: Figura de ejemplo
+font_8b.eps: Figura de ejemplo
+M_lr_sm_big_hres.eps: Figura de ejemplo
+M_lr_sm_big_lres.ps: Figura de ejemplo
+M_lr_sm_small_hres.eps: Figura de ejemplo
+M_lr_sm_small_lres.ps: Figura de ejemplo
+
+
+
+
+
+COMPILACION
+--------------------------------------------------------
+
+Para compilar el macro de ejemplo y generar el archivo PDF se puede proceder de la siguiente manera:
+
+latex instructivo-baaa-2013
+bibtex instructivo-baaa-2013
+latex instructivo-baaa-2013
+latex instructivo-baaa-2013
+dvipdf instructivo-baaa-2013.dvi instructivo-baaa-2013.pdf
+

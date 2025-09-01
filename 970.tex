@@ -1,0 +1,407 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** AVISO IMPORTANTE **************************    %
+%                                                                            %
+% Éste es un documento de ayuda para los autores que deseen enviar           %
+% trabajos para su consideración en el Boletín de la Asociación Argentina    %
+% de Astronomía.                                                             %
+% Los comentarios en este archivo contienen instrucciones sobre el formato   %
+% obligatorio del mismo, que complementan los instructivos web y PDF.        %
+% Por favor léalos.                                                          %
+%  -No borre los comentarios en este archivo.                                %
+%  -No puede usarse \newcommand o definiciones personalizadas.               %
+%  -SiGMa no acepta artículos con errores de compilación. Antes de enviarlo  %
+%   asegúrese que los cuatro pasos de compilación (pdflatex/bibtex/pdflatex/ %
+%   pdflatex) no arrojan errores en su terminal. Esta es la causa más        %
+%   frecuente de errores de envío. Los mensajes de "warning" en cambio son   %
+%   en principio ignorados por SiGMa.                                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ************************** IMPORTANT NOTE ******************************  %
+%                                                                            %
+%  This is a help file for authors who are preparing manuscripts to be       %
+%  considered for publication in the Boletín de la Asociación Argentina      %
+%  de Astronomía.                                                            %
+%  The comments in this file give instructions about the manuscripts'        %
+%  mandatory format, complementing the instructions distributed in the BAAA  %
+%  web and in PDF. Please read them carefully                                %
+%  -Do not delete the comments in this file.                                 %
+%  -Using \newcommand or custom definitions is not allowed.                  %
+%  -SiGMa does not accept articles with compilation errors. Before submission%
+%   make sure the four compilation steps (pdflatex/bibtex/pdflatex/pdflatex) %
+%   do not produce errors in your terminal. This is the most frequent cause  %
+%   of submission failure. "Warning" messsages are in principle bypassed     %
+%   by SiGMa.                                                                %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[baaa]{baaa}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************** Paquetes Latex / Latex Packages *******************  %
+%                                                                            %
+%  -Por favor NO MODIFIQUE estos comandos.                                   %
+%  -Si su editor de texto no codifica en UTF8, modifique el paquete          %
+%  'inputenc'.                                                               %
+%  -Please DO NOT CHANGE these commands.                                     %
+%  -If your text editor does not encodes in UTF8, please change the          %
+%  'inputec' package                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+\usepackage[pdftex]{hyperref}
+\usepackage{subfigure}
+\usepackage{enumerate}
+\usepackage{natbib}
+\usepackage{helvet,soul}
+\usepackage[font=small]{caption}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Idioma / Language **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Idioma" para mas información                        %
+%  -Seleccione el idioma de su contribución (opción numérica).               %
+%  -Todas las partes del documento (titulo, texto, figuras, tablas, etc.)    %
+%   DEBEN estar en el mismo idioma.                                          %
+%  -Select the language of your contribution (numeric option)                %
+%  -All parts of the document (title, text, figures, tables, etc.) MUST  be  %
+%   in the same language.                                                    %
+%  0: Castellano / Spanish                                                   %
+%  1: Inglés / English                                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contriblanguage{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************** Tipo de contribución / Contribution type ***************  %
+%                                                                            %
+%  -Seleccione el tipo de contribución solicitada (opción numérica).         %
+%  -Select the requested contribution type (numeric option)                  %
+%  1: Artículo de investigación / Research article                           %
+%  2: Artículo de revisión invitado / Invited review                         %
+%  3: Mesa redonda / Round table                                             %
+%  4: Artículo invitado  Premio Varsavsky / Invited report Varsavsky Prize   %
+%  5: Artículo invitado Premio Sahade / Invited report Sahade Prize          %
+%  6: Artículo invitado Premio Sérsic / Invited report Sérsic Prize          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contribtype{1}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Área temática / Subject area *********************  %
+%                                                                            %
+%  -Seleccione el área temática de su contribución (opción numérica).        %
+%  -Select the subject area of your contribution (numeric option)            %
+%                                                                            %
+%  1 : SH    - Sol y Heliosfera / Sun and Heliosphere                        %
+%  2 : SSE   - Sistema Solar y Extrasolares  / Solar and Extrasolar Systems  %
+%  3 : AE    - Astrofísica Estelar / Stellar Astrophysics                    %
+%  4 : SE    - Sistemas Estelares / Stellar Systems                          %
+%  5 : MI    - Medio Interestelar / Interstellar Medium                      %
+%  6 : EG    - Estructura Galáctica / Galactic Structure                     %
+%  7 : AEC   - Astrofísica Extragaláctica y Cosmología /                     %
+%              Extragalactic Astrophysics and Cosmology                      %
+%  8 : OCPAE - Objetos Compactos y Procesos de Altas Energías /              %
+%              Compact Objetcs and High-Energy Processes                     %
+%  9 : ICSA  - Instrumentación y Caracterización de Sitios Astronómicos      %
+%              Instrumentation and Astronomical Site Characterization        %
+% 10 : AGE   - Astrometría y Geodesia Espacial                               %
+% 11 : ASOC  - Astronomía y Sociedad                                         %
+% 12 : O     - Otros                                                         %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\thematicarea{EG}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Título / Title *****************************  %
+%                                                                            %
+%  -DEBE estar en minúsculas (salvo la primer letra) y ser conciso.          %
+%  -Para dividir un título largo en más líneas, utilizar el corte            %
+%   de línea (\\).                                                           %
+%  -It MUST NOT be capitalized (except for the first letter) and be concise. %
+%  -In order to split a long title across two or more lines,                 %
+%   please use linebreaks (\\).                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dates
+% Only for editors
+\received{\ldots}
+\accepted{\ldots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{Dark Matter Spikes around Schwarzschild Black Holes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Título encabezado / Running title ******************  %
+%                                                                            %
+%  -Seleccione un título corto para el encabezado de las páginas pares.      %
+%  -Select a short title to appear in the header of even pages.              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\titlerunning{Fermionic DM spikes}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Lista de autores / Authors list ********************  %
+%                                                                            %
+%  -Ver en la sección 3 "Autores" para mas información                       % 
+%  -Los autores DEBEN estar separados por comas, excepto el último que       %
+%   se separar con \&.                                                       %
+%  -El formato de DEBE ser: S.W. Hawking (iniciales luego apellidos, sin     %
+%   comas ni espacios entre las iniciales).                                  %
+%  -Authors MUST be separated by commas, except the last one that is         %
+%   separated using \&.                                                      %
+%  -The format MUST be: S.W. Hawking (initials followed by family name,      %
+%   avoid commas and blanks between initials).                               %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\author{
+V. Crespi\inst{1,2},
+C.R. Argüelles\inst{1,2,3}
+\&
+J.A. Rueda Hernandez\inst{3,4}
+}
+
+\authorrunning{Crespi et al.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** E-mail de contacto / Contact e-mail *******************  %
+%                                                                            %
+%  -Por favor provea UNA ÚNICA dirección de e-mail de contacto.              %
+%  -Please provide A SINGLE contact e-mail address.                          %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\contact{valentinacrespi@fcaglp.unlp.edu.ar}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ********************* Afiliaciones / Affiliations **********************  %
+%                                                                            %
+%  -La lista de afiliaciones debe seguir el formato especificado en la       %
+%   sección 3.4 "Afiliaciones".                                              %
+%  -The list of affiliations must comply with the format specified in        %
+%   section 3.4 "Afiliaciones".                                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\institute{
+Facultad de Ciencias Astron\'omicas y Geof{\'\i}sicas, UNLP, Argentina\and   
+Instituto de Astrofísica de La Plata, CONICET--UNLP, Argentina \and
+%Instituto Argentino de Radioastronom\'ia, CONICET--CICPBA--UNLP, Argentina \and
+%Instituto de Astronom{\'\i}a y F{\'\i}sica del Espacio, CONICET--UBA, Argentina \and
+%Observatorio Astron\'omico de C\'ordoba, UNC, Argentina \and
+%Instituto de Astronom\'ia Te\'orica y Experimental, CONICET--UNC, Argentina \and
+%Consejo Nacional de Investigaciones Cient\'ificas y T\'ecnicas, Argentina \and
+ICRANet, Piazza della Repubblica 10, I-65122 Pescara, Italia \and
+Dipartimento di Fisica e Scienze della Terra, Universita degli studi di Ferrara, Italia
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *************************** Resumen / Summary **************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Resumen" para mas información                       %
+%  -Debe estar escrito en castellano y en inglés.                            %
+%  -Debe consistir de un solo párrafo con un máximo de 1500 (mil quinientos) %
+%   caracteres, incluyendo espacios.                                         %
+%  -Must be written in Spanish and in English.                               %
+%  -Must consist of a single paragraph with a maximum  of 1500 (one thousand %
+%   five hundred) characters, including spaces.                              %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\resumen{Durante los últimos años se ha ido aceptando la concepción de que la materia oscura (DM) se reacomoda alrededor de un objeto compacto, formando un pico de sobredensidad (\textit{spike}). Es de interés en este trabajo estudiar cuáles son las distintas morfologías de estas sobre-densidades en los centros galácticos, y cómo alteran la dinámica de las estrellas centrales. Dentro del marco de la Relatividad General, calculamos la redistribución de partículas luego de que un agujero negro supermasivo (BH) creció adiabáticamente en el centro de un halo de DM. Para esto, utilizando la conservación de la acción radial y momento angular de partículas de DM individuales, integramos numéricamente la correspondiente función distribución. Contrastamos distintos comportamientos de spikes, asumiendo como halo de DM diferentes modelos en la literatura. En particular estudiamos en detalle los perfiles que se obtienen cuando el halo original está modelado con partículas fermiónicas descritas según el modelo RAR. En este caso, cuando se aplica a la dinámica orbital de estrellas en el centro galáctico, se pueden obtener cotas para la masa de la partícula de DM.}
+
+\abstract{During the last years it has been adopted the notion that dark matter (DM) rearranges around a compact object, forming an overdensity (\textit{spike}). It is of interest in this work to study what are the different morphologies of these spikes in galactic centers, and how they alter the dynamics of central stars. Within the framework of General Relativity, we calculate the redistribution of particles after a supermassive black hole (BH) grows adiabatically in the center of a DM halo. We numerically integrate the corresponding distribution function, making use of the radial action and angular momentum conservation of DM particles.
+We contrast different spike behaviors, assuming as DM halo different models in the literature. In particular, we study in detail the profiles obtained when the original halo is modeled with fermionic particles described according to the RAR model. In this case, when applied to the orbital dynamics of stars in the galactic center, it is possible to obtain boundary values for the mass of the DM particle.}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  Seleccione las palabras clave que describen su contribución. Las mismas   %
+%  son obligatorias, y deben tomarse de la lista de la American Astronomical %
+%  Society (AAS), que se encuentra en la página web indicada abajo.          %
+%  Select the keywords that describe your contribution. They are mandatory,  %
+%  and must be taken from the list of the American Astronomical Society      %
+%  (AAS), which is available at the webpage quoted below.                    %
+%  https://journals.aas.org/keywords-2013/                                   %  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\keywords{black hole physics --- galaxies: nuclei --- dark matter}
+
+\begin{document}
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** Introduction ********************  %
+\section{Introduction}\label{sec:intro}
+
+Since the early works of \cite{1972ApJ...178..371P} and \cite{young1980numerical} it has been well established that an arrange of particles conglomerates around a compact object forming an overdensity at the center. 
+Later on, \cite{gondolo1999dark} (G\&S) applied these ideas to dark matter (DM), adopting as host halos initial power-law cusps and naming for the first time the central over-densities as DM spikes. 
+The authors recovered previous results for cored DM profiles, where an enhancement that goes as $r^{-3/2}$ is found. The main insights of that work however, is performed for cuspy DM power-law halos, where for initial distributions $\rho_i(r)\propto r^{-\gamma}$ with $0<\gamma<2$, an enhancement of $\rho_f(r)\propto r^{-\gamma_{sp}}$ with $2.25<\gamma_{sp}<2.5$ is found. 
+To compute these spikes, G\&S performed the calculus in the Newtonian regime, and assumed \textit{ad-hoc} integration limits to incorporate the effects of gravitational capture by the central BH.
+In \citet{sadeghian2013dark} a generalization using a general relativistic treatment was performed. This lead to important corrections in the innermost part of the DM spike.
+The boundary radius where the spike vanishes is $2R_{\rm sch}$ (instead of $4R_{\rm sch}$ as in G\&S), where $R_{\rm sch}$ is the Schwarzschild radius. Consequently, the peak hight is significantly increased.
+In this work, we center in the characterization of DM spikes around Supermassive Black Holes (SMBH), when the host DM halo is given by the Ruffini-Argüelles-Rueda (RAR) model \citep{2015MNRAS.451..622R}, in its extended version \citep{2018PDU....21...82A} which includes escape of particles effect. Adopting this halo model, we allow for a self-consistent inclusion of the nature and mass of the DM particle, key for determining the behavior, structure and distribution of DM in galaxies. 
+The RAR DM model postulates fermionic, spin 1/2, neutral particles of order $\mathcal{O}(\sim 10^1-10^2)$ keV. The halos conformed by these particles are in agreement with the large scale structure of the Universe as well as DM halo formation \citep{2021MNRAS.502.4227A,Arguelles:2023nlh}. 
+They present a core-halo morphology, i.e., a compact degenerated core in which fermions behave in a fully degenerate regime, surrounded by a diluted halo where fermions behave like Boltzmannian particles. 
+These general equilibrium configurations are proven to be stable in cosmological timescales \citep{2021MNRAS.502.4227A} and explain a variety of galactic observables, e.g., the flatness of the outer halo rotation curves \citep{2018PDU....21...82A,2023ApJ...945....1K}, the phase-space data of the GD-1 stellar stream \cite{2024arXiv240419102M}, galaxy universal relations \citep{2019PDU....24..278A,2023ApJ...945....1K}, and the motion of the innermost stars near the Milky Way's center \citep{2020A&A...641A..34B,2021MNRAS.505L..64B,2022MNRAS.511L..35A}. 
+The outline of this work consists of a theoretical description of the fermionic DM model, as well as the methodology to obtain the DM over-densities in the fully relativistic treatment, in section \ref{sec:the method}.
+The resulting DM spikes for several particle masses and central BH masses are shown in section \ref{sec:results}, together with a comparison of the ones obtained in the literature. In section \ref{sec:application} we test with the publicly available S2-star data, possible limits for the fermionic spikes. In section \ref{sec:conclusions} we close with the conclusions of this work.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** Method ********************  %
+\section{Framework}\label{sec:the method}
+
+%  **************** RAR model ********************  %
+\subsection{Extended RAR DM model}\label{subse:RAR}
+
+It describes self-gravitating DM galactic halos, composed of neutral, spin $1/2$, massive fermions in hydrostatic and thermodynamic equilibrium. It postulates DM as a perfect fluid within the GR framework, where the equations of state account for tidal truncation of particles with large momenta through a cutoff parameter. The distribution function (DF) governing the behavior of the particles is of the  Fermi-Dirac type, which is given in space of energies by 
+
+\begin{equation}\label{eq:DF}
+    f(\mathcal{E}) =\frac{2}{h^3}
+        \frac{1-\exp{[(\mathcal{E} - \mathcal{E}_c)/(\sqrt{g_{00}(r)}\beta(r))]}}{1+\exp{[(\mathcal{E}/\sqrt{g_{00}(r)} - \alpha(r))/\beta(r)}]}
+\end{equation}
+%
+where $h$ is Planck's constant, $g_{00}(r)$ is the $00$ component of the metric tensor and $\mathcal{E}$, $\beta(r)$, $\alpha(r)$ are the particle's total energy, temperature and relativistic chemical potential per unit rest mass.
+The cut-off energy $\mathcal{E}_c$, sets an upper limit for tidal truncation, i.e. $f(\mathcal{E}>\mathcal{E}_c)=0$. 
+
+The above Fermi-Dirac-like DF results from a maximum entropy production principle (MEPP) for fermions, which was applied within collisionless relaxation process for DM halos in \citep{chavanis1998degenerate,chavanis2004generalized,chavanis2015models}. 
+%These DM halos are proved to be stable, long-lived and of astrophysical interest as shown for the first time in \cite{2021MNRAS.502.4227A}, within a cosmological framework. 
+The model equilibrium equations consist of the Tolman-Oppenheimer-Volkoff equations \citep{Oppenheimer:1939ne}, where the mass-energy source is given by a perfect fluid with 4-parametric equations of state, together with the Tolman and Klein conditions, which are a generalization of the zero and first laws of thermodynamics in GR \citep{1949RvMP...21..531K}; and a cutoff condition from energy conservation along a geodesic. 
+%A more detailed description and the model equations can be found in \cite{2018PDU....21...82A,2019PDU....24..278A,2021MNRAS.502.4227A}.
+
+The most general solution leads to a DM density radial profile characterized by a degenerate compact core (governed by Pauli degeneracy pressure), surrounded by an extended and diluted halo (governed by thermal pressure). The particular case of low degeneracy at the center of the configuration, implies the relativistic analog of the King model of a diluted fermi gas with cutoff \citep{2023ApJ...945....1K}. 
+
+%  **************** Adiabatic growth ********************  %
+\subsection{Spike DM profile}\label{subse:adiabatic}
+
+We performed the approach adopted by G\&S for the computation of the mass density profile after a central SMBH has adiabatically formed in the center of a DM halo. We follow the fully relativistic treatment of this procedure generalized by \cite{sadeghian2013dark} for the growth of a Schwarzschild BH. The metric under this spacetime for a BH of mass $M_{\rm BH}$ is
+%
+\begin{subequations}
+    \begin{align}\label{eq:ds2}
+    &ds^2 = g_{00}(r) dt^2 +  g_{11}(r) dr^2 - r^2 (d\theta^2 - \sin\theta d\phi^2) \\
+    &g_{00}(r) = - g_{11}(r)^{-1} = \left(1-\frac{2M_{\rm BH}}{r}\right)
+\end{align}
+\end{subequations}
+%
+The mass density results from integrating the DF in phase space according to kinetic theory, although it is convenient to change variables to constants of motion, making explicit the dependence on the angular momentum $L$ of the particles, to account for the BH capture effects.
+The DM mass density profile becomes
+
+\begin{equation} \label{eq:rho}     
+    \rho(r) = \frac{4\pi m^4}{r^2 \sqrt{g_{00}}} \int_{\mathcal{E}_{1}}^{\mathcal{E}_{2}} \mathcal{E} d\mathcal{E} \int_{L_{1}}^{L_{2}}\frac{f(\mathcal{E},L)\ L\ dL}{\sqrt{\mathcal{E}^2 - g_{00}(1+\frac{L^2}{r^2})}}
+\end{equation}
+%
+where $\mathcal{E}$ and $L$ are the particle's conserved energy and angular momentum per unit rest mass (along the geodesic). 
+For the appropriate derivation of the integral limits, see \cite{sadeghian2013dark}.
+One of the main hypothesis of the method is for the initial BH seed to grow adiabatically in time. This is the case when the changes in the BH's gravitational potential occur on slow timescales compared to dynamical periods of particles in regions where the BH dominates. 
+Indeed, this is true for central orbits in a galaxy with periods $t_{{\rm dyn}} \lesssim 10^4$ yr, whereas the SMBH growth timescale assuming Eddington accretion is $t_{{\rm BH}}=M_{\rm BH}/\dot{M} \sim 10^7$ yr.
+The DF  in Eq. \ref{eq:rho}, $f(\mathcal{E},L)$, which describes the distribution of DM particles under the influence of the grown BH, is \textit{a priori} unknown. However, under the assumption of adiabatic growth of the SMBH, the final form of the DF can be related to the known initial DF for particles orbiting in a self-gravitating DM halo. We get the conservation
+
+\begin{equation}
+    f_i(\mathcal{E}_i,L_i)=f_f(\mathcal{E}_f,L_f)
+\end{equation} 
+%
+Over the course of this adiabatic growth, the action variables of the particles remain constant, allowing to relate the initial and final states in energy and angular momentum of the DM orbits. Invariance of angular actions implies conservation of angular momentum $L_i = L_f$, and the invariance of the radial action allows us to numerically relate the original and final energies as $\mathcal{E}_i = \mathcal{E}_i(\mathcal{E}_f,L)$. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** Results ********************  %
+\section{Results}\label{sec:results}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\columnwidth]{BHgrowth_RAR_300keV_time.pdf}
+    \caption{Evolution of the mass density profile in blue palette, resulting from the adiabatic growth of a central BH. The black dotted line corresponds to the original DM core-halo with fermion mass of $m=300$ keV.}
+    \label{fig:RAR-BHs}
+\end{figure}
+%
+We have computed the dynamical rearrangement of DM particles, assuming a SMBH has grown adiabatically in the center of a RAR-DM halo within $\sim 10^7$ yr. These fermionic configurations share the same outer halo (total mass and size), but they differ in the central core compacity, which increases with higher fermion mass. \\
+In Fig. \ref{fig:RAR-BHs}, we present the evolution of the spike density profile that arises in a RAR core-halo configuration, as the central mass of the SMBH grows. In dotted black, the original host halo of $m=300$ keV fermions is shown. 
+In particular, for this 300 keV halo, we find that the spike when the central BH mass is below $\lesssim 2\times 10^6 M_\odot$ shows an extended power law behavior along its peak, with index $\gamma = 3/2$. For larger BH masses, the spike gradually shrinks.
+The same trend of the DM spike evolution holds for all DM particle masses, although the shrinking of the spike highly depends on its value. 
+For sufficiently high BH mass ($\sim 10^7M_\odot$), the remaining DM particles have a low degeneracy parameter ($\theta(r)<0$), leading to their behavior in a Boltzmannian regime. This leads to a resemblance of the spikes, independently of the fermion mass,
+tending to the spike predicted by the non-singular isothermal sphere (NSIS) profile (this latter shown in Fig. \ref{fig:degeneracy}, solid blue).
+
+
+Fig. \ref{fig:degeneracy} compares the sizes and scales of three different DM spikes for the same central BH. We set the value to $M_{\rm BH}=4\times 10^6 M_\odot$ in order to compare with the spike of G\&S and other works.
+For two of the spikes, we adopt as host halo the RAR model for $m=100$ keV fermions, differing in the central degeneracy parameter value. For $\theta_0=39$, the original profile is of the core-halo family, whereas for $\theta_0=-33$, the profile is that of (relativistic) NSIS with cutoff. 
+For the remaining spike, we adopt as the original DM halo a Navarro-Frenk-White (NFW) profile \citep{navarro1997universal}. 
+We consider in this case, for the sake of comparison with G\&S, a minimum value for the angular momentum given by $L=2R_{\rm sch}$, which leads to a spike vanishing at $4R_{\rm sch}$ instead of $2R_{\rm sch}$.
+In the case of RAR configurations with low central degeneracies (where the fermions behave in a Boltzmannian regime, $\theta_0 \ll -1$), we recover the spike found by G\&S and other authors, where the density goes with $r^{-3/2}$, as expected for models with finite cores.
+%
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\columnwidth]{BHgrowth_RAR_100keV_4p075e6_degeneracy.pdf}
+    \caption{Density profiles corresponding to original DM halos with fermion mass of $m=100$ keV. In purple for a core-halo solution with a high central degeneracy parameter of $\theta_0=39$, in blue for a low central degeneracy solution with $\theta_0=-33$, corresponding to the Boltzmannian regime. For comparison, the DM spike of G\&S is shown in solid green line. 
+    The latter spike is obtained from a typical NFW halo, shown in dotted green. 
+    The chosen central BH mass in all cases is $M_{\rm BH}=4 \times 10^6 M_\odot$.}
+    \label{fig:degeneracy}
+\end{figure}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** Applications ********************  %
+\section{Application: S2 orbit}\label{sec:application}
+
+\begin{figure}[t]
+    \centering
+    \includegraphics[width=\columnwidth]{Orbit_BHplusSpike_4p075e6.pdf}
+    \caption{Projected S2 star orbit in the plane of the sky. The available data are from \cite{do2019relativistic}. }
+    \label{fig:orbit}
+\end{figure}
+
+To constrain the amount of DM present in galactic centers, and in particular in the Milky Way galaxy, a commonly used astrophysical test is the orbital fit of the S2 star around Sgr A* \citep{2018A&A...619A..46L,GRAVITY:2021xju,GRAVITY:2023cjt}. 
+In Fig. \ref{fig:orbit}, we show the observational and theoretical orbits in the plane of the sky, where the data were taken from \cite{do2019relativistic}.
+For the orbital model we performed a Post Newtonian approximation to first order, that takes into account relativistic corrections for the gravitational redshift and the precession of pericenter \citep{2008ApJ...674L..25W}. The equation of motion for the real orbit (in geometric units) is given by
+
+\begin{equation}
+    \ddot{r}=-\frac{M_r}{r^2}\hat{r}+\frac{4M_r^2}{r^3}\hat{r}-\frac{M_r}{r^2}v^2\hat{r}+\frac{4M_r}{r^2v^2}(\hat{r}\cdot \hat{v})\hat{v}
+\end{equation}
+%
+where $M_r$ is the total mass enclosed at radius $r$. For an indication of the goodness of fit, we minimize a $\chi^2$ as a function of the 6 orbital parameters, plus the galactocentric distance $R_\odot$. In Fig. \ref{fig:orbit} we show the best fit of four theoretical orbits given by the system of $M_{\rm BH}$ and the resulting spike mass for fermion masses of $mc^2=100, 250,300,350$ keV; and an only SMBH case. 
+The corresponding $\chi^2$ values are given in Table \ref{tab:chi2}. As the SMBH mass gets higher, the surrounding spike mass decreases, improving the orbital fit. For fermions of $mc^2 \gtrsim 300$ keV, the $\chi^2$ fit is equivalent as the SMBH only case. Both values are achieved for a $M_{\rm BH}=4.2\times 10^6 M_\odot$ and $R_\odot = 8.27$ kpc. In the case of 300 keV fermions the enclosed DM spike mass inside S2 apocenter is $M_{\rm DM}(r_a)\simeq 10^4 M_\odot$, in accordance with the findings of \cite{do2019relativistic} for an uppermost extended mass inside S2 apocenter within 2$\sigma$.
+
+\begin{table}[t]
+    \centering
+    \begin{tabular}{|c|c|c|c|c|c|} \hline
+     $mc^2$ [keV] & 100 & 250 & 300 & 350 & SMBH \\ \hline
+     $\chi^2$ & 58.9 & 11.9 & 9.829 & 9.835 & 9.834 \\ \hline
+    \end{tabular}
+    \caption{Best fit minimization of $\chi^2$ function for a 7 parameter space, given by the galactocentric distance and the S2 star orbital parameters. The central BH mass and the corresponding extended spike mass change with the DM particle mass.}
+    \label{tab:chi2}
+\end{table}
+
+
+% in principle, S stars located further out than S2 would be more suited to probe the extended DM distribution for which the mass increases with radius. However, this comes at the price of longer periods.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** Conclusions ********************  %
+\section{Conclusions}\label{sec:conclusions}
+
+In this work, we computed the density distributions of DM spikes made of massive, neutral fermions in a fully relativistic framework. We have obtained the initial DM profiles given by the RAR model, which adopts the fermion gas at finite temperatures in hydrostatic and thermodynamic equilibrium. 
+We contrasted different states of central degeneracy of the fermions, as well as different particle masses.  
+In this approach, the spikes are formed and evolve adiabatically within a self-gravitating DM halo, from a negligible BH seed (possibly of baryonic origin).
+The main findings of this work can be summarized in:
+\begin{enumerate}
+    \item For a fixed SMBH mass, the fermionic spike profile crucially depends on the mass of the DM particle and its state of degeneracy.
+    \item For a given fermion mass, there is a specific mass of the central SMBH above which there is no density enhancement, but a depletion (see Fig. \ref{fig:RAR-BHs}).
+    \item For RAR-DM halos in which the central fermions are in a state of low degeneracy ($\theta_0 \ll -1$), we recover the resulting DM spike of $\rho \propto r^{-3/2}$ typical of cored halos, as found in \cite{gondolo1999dark}.
+\end{enumerate}
+
+The present DM enhancement framework, can be applied to various astrophysical probes. In particular, the formation of DM spikes toward the center can have a relevant impact, on stellar dynamics. Here, we have focused on the DM spikes around BHs of large masses. It remains an interesting topic to assess whether or not DM also forms spikes around stellar-mass BHs or compact stars like neutron stars. 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  **************** Agradecimientos / Acknowledgements ********************  %
+
+\begin{acknowledgement}
+This work used computational resources from CCAD $-$ Universidad Nacional de Córdoba (\href{https://ccad.unc.edu.ar/}{https://ccad.unc.edu.ar/}), which are part of SNCAD - MinCyT, República Argentina. \\
+V. Crespi thanks financial support from CONICET, Argentina.
+\end{acknowledgement}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  ******************* Bibliografía / Bibliography ************************  %
+%                                                                            %
+%  -Ver en la sección 3 "Bibliografía" para mas información.                 %
+%  -Debe usarse BIBTEX.                                                      %
+%  -NO MODIFIQUE las líneas de la bibliografía, salvo el nombre del archivo  %
+%   BIBTEX con la lista de citas (sin la extensión .BIB).                    %
+%                                                                            %
+%  -BIBTEX must be used.                                                     %
+%  -Please DO NOT modify the following lines, except the name of the BIBTEX  %
+%  file (without the .BIB extension).                                       %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\bibliographystyle{baaa}
+\small
+\bibliography{bibliografia}
+ 
+\end{document}

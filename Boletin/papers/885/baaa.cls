@@ -721,7 +721,7 @@ M.C. Vieytes, A.P. Buccino, C.E. Boeris \& M. Poisson} %
       \hsize=45cc
       \renewcommand{\tabcolsep}{0pt}
       \begin{tabular}{L{0.65\textwidth} R{0.35\textwidth}}
-      \small{{\journalacronym}, Vol. {\journalvol}, {\journalyear}} & 
+      \small{{\journalacronym}, Vol, {\journalvol}, {\journalyear}} & 
          \setlength{\unitlength}{1pt}
          \begin{picture}(0,0) \put(-10,-43){\usebox{\mygraphic}} \end{picture}
      \small{Bolet\'in de la} \\
@@ -1340,9 +1340,6 @@ M.C. Vieytes, A.P. Buccino, C.E. Boeris \& M. Poisson} %
  \def\ftype@table{2}
  \def\ext@table{lot}
 % \def\fnum@table{\tablename~\thetable}
-
-
-
  \def\fnum@table{\tablaname~\thetable}
  \newenvironment{table}
                 {\small\@float{table}}
@@ -1368,18 +1365,17 @@ M.C. Vieytes, A.P. Buccino, C.E. Boeris \& M. Poisson} %
  
  \newdimen\figcapgap\figcapgap=5pt
  \newdimen\tabcapgap\tabcapgap=10pt
-
-\AtBeginDocument{% 
- \@ifundefined{floatlegendstyle}{\def\floatlegendstyle{\bfseries
-   % style for legend titles (Fig., Table, ...)
+ 
+ \@ifundefined{floatlegendstyle}{\def\floatlegendstyle{
+   \bf % style for legend titles (Fig., Table, ...)
  }}{}
  \def\floatcounterend{.} % separator for legend titles
  
  \long\def\@caption#1[#2]#3{\par\addcontentsline{\csname
-   ext@#1\endcsname}{#1} \nobreakspace {\protect\numberline{\csname
+   ext@#1\endcsname}{#1}{\protect\numberline{\csname
    the#1\endcsname}{\ignorespaces #2}}\begingroup
      \@parboxrestore
-     \@makecaption{\csname \nobreakspace fnum@#1\endcsname}{\ignorespaces #3}\par
+     \@makecaption{\csname fnum@#1\endcsname}{\ignorespaces #3}\par
    \endgroup}
  
  \def\capstrut{\vrule\@width\z@\@height\topskip}
@@ -1388,19 +1384,19 @@ M.C. Vieytes, A.P. Buccino, C.E. Boeris \& M. Poisson} %
  }}{}
  
  \long\def\@makecaption#1#2{%
+ \ifx\@captype\fig@type
    \vskip\figcapgap
-   \setbox\@tempboxa\hbox{{\small\floatlegendstyle #1\floatcounterend}
-   \small\capstrut #2}%
+   \setbox\@tempboxa\hbox{{\floatlegendstyle #1\floatcounterend}
+   \capstrut #2}%
    \ifdim \wd\@tempboxa >\hsize
-     {\small\floatlegendstyle #1\floatcounterend} \small\capstrut #2\par
+     {\floatlegendstyle #1\floatcounterend} \capstrut #2\par
    \else
      \hbox to\hsize{\leftlegendglue\unhbox\@tempboxa\hfil}%
    \fi
-}
-
-\renewcommand{\fnum@figure}{Fig. \thefigure}
-}
-
+ \else
+   {\floatlegendstyle #1\floatcounterend} \capstrut #2\par
+   \vskip\tabcapgap
+ \fi} 
 
 %}}}
 
