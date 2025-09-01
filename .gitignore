@@ -1,0 +1,16 @@
+# Ignorar todo por defecto
+*
+
+# No ignorar directorios (para que se pueda recorrer la estructura)
+!*/
+
+# No ignorar archivos .py
+!*.py
+!*.ipynb
+!*.tex
+!*.txt
+!logoAAA.pdf
+!*.csv
+
+# Opcional: no ignores el propio .gitignore
+!.gitignore
