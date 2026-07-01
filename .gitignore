@@ -2,15 +2,15 @@
 *
 
 # No ignorar directorios (para que se pueda recorrer la estructura)
-!*/
+!./Boletin2026/*
 
 # No ignorar archivos .py
-!*.py
-!*.ipynb
-!*.tex
-!*.txt
-!logoAAA.pdf
-!*.csv
+#!*.py
+#!*.ipynb
+#!*.tex
+#!*.txt
+#!logoAAA.pdf
+#!*.csv
 
 # Opcional: no ignores el propio .gitignore
-!.gitignore
+#!.gitignore

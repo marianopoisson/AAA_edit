@@ -96,6 +96,7 @@
 %}}}                    
 \renewcommand{\proccfoot}{\color{black} \thepage}
 
+
 % CONFPROC SETTINGS
 %{{{
 \author{\procpdfauthor}
@@ -103,7 +104,7 @@
 \date{\today}
 
 %%% > > > PAPERPATH < < <
-\renewcommand{\PAPERPATH}{../invitadas/}
+\renewcommand{\PAPERPATH}{../tex_revisados/}
 %}}}
 
 
@@ -119,8 +120,8 @@ rea-li-za-do re-pre-sen-ta-ti-vi-dad si-mi-li-tu-des va-ria-bles}
 
 \begin{document}
 \frontmatter
-\pagenumbering{roman}
-\cfoot{\makebox[\textwidth][c]{\thepage}}
+\pagenumbering{Roman}
+\cfoot{\makebox[\columnwidth][c]{\thepage}}
 \setcounter{page}{-2}
 
 %%% > > > PORTADA < < <
@@ -139,7 +140,7 @@ rea-li-za-do re-pre-sen-ta-ti-vi-dad si-mi-li-tu-des va-ria-bles}
 
 \newpage \phantom{.} \newpage
 
-\pagenumbering{roman}
+\pagenumbering{Roman}
 \setcounter{page}{7}
 \otherpagestyle
 
@@ -150,11 +151,24 @@ rea-li-za-do re-pre-sen-ta-ti-vi-dad si-mi-li-tu-des va-ria-bles}
 
 \newpage \pagenumbering{gobble} \phantom{.} \newpage
 
-\pagenumbering{roman}
+\pagenumbering{Roman}
 \setcounter{page}{9}
 \otherpagestyle
 
 
+\thispagestyle{empty}
+
+\newpage \pagenumbering{gobble} \phantom{.} \newpage
+
+\pagenumbering{roman}
+\setcounter{page}{11}
+\otherpagestyle
+{{{
+\invisiblesection{Agradecimiento Fundación Williams}
+
+La organización agradece el apoyo de: Fundación Williams; Consejo Nacional de Investigaciones Científicas y Técnicas; Air Force Office of Scientific Research -- Southern Office of Aerospace Research \& Development; Agencia de Innovación, Ciencia y Tecnología de Mendoza; Universidad Maza; Universidad Nacional de Cuyo -- Facultad de Cs. Exactas y Naturales; e Instituto Tecnológico de Buenos Aires.
+}}}
+\newpage
 \thispagestyle{empty}
 
 %%%%\newpage \pagenumbering{gobble} \phantom{.} \newpage
@@ -184,9 +198,8 @@ rea-li-za-do re-pre-sen-ta-ti-vi-dad si-mi-li-tu-des va-ria-bles}
 \mainmatter
 
 \markboth{}{}
-%\pagestyle{myheadings}
-%\otherpagestyle
-\cfoot{\makebox[\textwidth][c]{ \thepage }}
+\pagestyle{myheadings}
+\cfoot{ {\vskip -4em} \noindent \makebox[\columnwidth][c]{ \thepage }}
 \setcounter{page}{1}
 
 
